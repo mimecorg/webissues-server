@@ -1,0 +1,13 @@
+/* fix the fieldset background color bleed bug in IE <= 8 */
+
+fieldset.form-fieldset {
+  position: relative;
+  margin: 1.5em 0 0.8em;
+  padding: 0.7em;
+}
+
+fieldset.form-fieldset legend {
+  position: absolute;
+  top: -0.8em;
+  left: 0.5em;
+}

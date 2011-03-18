@@ -1,0 +1,71 @@
+body {
+  font: 8pt Verdana, Helvetica, Sans-Serif;
+  color: #494949;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-family: Verdana, Helvetica, Sans-Serif;
+}
+
+h1 {
+  font-size: 150%;
+  line-height: 130%;
+  margin-bottom: 0.75em;
+}
+
+h2 {
+  font-size: 130%;
+  line-height: 130%;
+  margin-bottom: 0.75em;
+}
+
+h3 {
+  font-size: 120%;
+  line-height: 130%;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 100%;
+  line-height: 130%;
+  margin-bottom: 0.3em;
+}
+
+p {
+  margin: 0.8em 0;
+  padding: 0;
+  text-align: justify;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+table.grid {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-bottom: 1px solid #cccccc;
+  font: 8pt Verdana, Helvetica, Sans-Serif;
+}
+
+table.grid th {
+  margin: 0;
+  padding: 0.4em 0.25em;
+  background: #eeeeee;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  vertical-align: top;
+  text-align: left;
+}
+
+table.grid td {
+  margin: 0;
+  padding: 0.4em 0.25em;
+  border-top: 1px solid #dddddd;
+  vertical-align: top;
+}

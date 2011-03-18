@@ -1,0 +1,86 @@
+WebIssues Server
+Version 1.0-alpha4 (2011-03-15)
+
+Server and Web Client for the WebIssues team collaboration system.
+
+WebIssues is an open source, multi-platform system for issue tracking
+and team collaboration. It can be used to store, share and track issues
+with various attributes, comments and file attachments. The system
+is easy to install and use but has many capabilities and is highly
+customizable.
+
+NOTE: THIS IS AN ALPHA RELEASE, USE IT FOR TESTING PURPOSES ONLY.
+IT IS NOT POSSIBLE TO UPDATE AN OLDER VERSION OF THE SERVER TO THIS VERSION
+AND IT WILL NOT BE POSSIBLE TO UPDATE THIS VERSION TO A NEWER ONE
+IN THE FUTURE.
+
+
+Copyrights
+==========
+
+Copyright (C) 2006 Michał Męciński
+Copyright (C) 2007-2011 WebIssues Team
+
+Icons based on the KDE Crystal theme copyright (C) 2002 and following
+years KDE Artists
+
+Includes PHPMailer copyright (C) 2004-2009 Andy Prevost
+
+Includes jQuery JavaScript Library copyright (C) 2010 John Resig
+
+Includes jQuery UI copyright (C) 2010 jQuery UI Authors
+
+
+License
+=======
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+WebIssues Team
+==============
+
+Authors:
+ * Michał Męciński (mimec at mimec org)
+
+Contributors:
+ * Francine LAI DOO WOO (fldw.fladsc at orange fr)
+    - Supporting Web Client developer, French translation
+ * Patrick Matthäi (patrick.matthaei at web de)
+    - Debian packaging, patches
+ * Azevedo Filipe (pasnox at gmail com)
+    - OS X packaging, patches
+ * Alex Bekhtin (alexbekhtin at gmail com)
+    - Firebird database engine
+ * Flávio Veras (flaviove at gmail com)
+    - Portuguese translation
+
+
+Resources
+=========
+
+Website
+    http://webissues.mimec.org/
+
+Online Documentation
+    http://doc.mimec.org/webissues/server/
+
+Forum
+    http://webissues.mimec.org/forum/general
+
+Bugs & Requests
+    http://webissues.mimec.org/forum/tracker
+
+Development
+    http://wiki.mimec.org/wiki/WebIssues

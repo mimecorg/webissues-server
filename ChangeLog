@@ -1,0 +1,80 @@
+1.0-alpha4 (2011-03-15)
+    * moving and deleting issues
+    * editing and deleting comments and attachments
+    * deleting non-empty projects and folders
+    * allow expressions in initial values of attributes
+    * better password hashing; user must change password option (task #432)
+    * improved site configuration and layout of files (task #419)
+    * added support for IE6 and IE7 (task #428)
+    * fixed unsupported server version error when downloading attachment (bug #497)
+
+1.0-alpha3 (2010-12-14)
+    * tracking read state of issues
+    * alerts and email notifications
+
+1.0-alpha2 (2010-08-26)
+    * configuration of views and view settings
+    * fixed instalation with PHP 5.3 and MySQL (bug #265)
+    * login and password made optional during installation (bug #270)
+
+1.0-alpha1 (2010-05-28)
+    * created initial version of the application framework
+    * created initial version of the Web Client and Administration Panel
+    * extended attribute type definitions
+    * added localized number and date formats
+    * added Polish and French translations
+    * changed license to GNU AGPL version 3.0
+
+0.8.4 (2009-03-11)
+    * updated user's manual and created new style
+
+0.8.4-rc1 (2009-02-03)
+    * added: prepared statements for myqsli to optimize large queries
+    * fixed: parsing command line optimized and fixed for long strings
+    * fixed: use mbstring extension if available to check encoding
+
+0.8.4-beta2 (2009-01-10)
+    * added: sending e-mails using external SMTP server
+    * added: support for Firebird database
+
+0.8.4-beta1 (2008-11-18)
+    * added: handling features and user preferences
+    * added: sending e-mail notifications
+
+0.8.3-2 (2008-01-18)
+    * fixed: using non-standard port or socket path for mysqli
+
+0.8.3-1 (2007-08-15)
+    * fixed: validation of USER attributes in pgsql and mssql
+    * fixed: show error when configuration file is missing
+
+0.8.3 (2007-07-03)
+    * added: support for SQL Server
+    * added: support for the mysqli extension
+    * added: documentation in HTML format
+    * added: server status page
+    * added: header with server version
+    * added: new .htaccess file
+    * fixed: improved the setup and update scripts
+    * fixed: improved error logging and enabled it by default
+    * fixed: checking if log and storage directories are writable
+    * fixed: changed include file extension to .inc.php
+    * fixed: renamed the config file to config-template
+    * fixed: binary collation for some columns in MySQL
+
+0.8.2 (2007-02-12)
+    * added: storing attachments as files
+    * added: script for updating the database
+    * fixed: show error message when connecting to pgsql database failed
+
+0.8.1 (2006-10-02)
+    * added: support for PostgreSQL
+    * added: versioning of database schema to make updating possible
+    * fixed: database schema reviewed for consistency and compatibility
+    * fixed: setup script now uses database.inc
+
+0.8.0 (2006-09-19)
+    * first alpha release
+
+0.1.1 (2005-11-08)
+    * initial, unofficial prototype version

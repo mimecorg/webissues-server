@@ -1,0 +1,52 @@
+Requirements
+============
+
+ * Web server with PHP version 5.2.1 or newer (http://php.net/)
+
+ * The following PHP extensions:
+
+     * mbstring (required)
+     * mysqli (required when using MySQL database)
+
+ * One of the following database servers:
+ 
+     * MySQL version 4.1 or newer
+     * SQL Server 2005 or newer (supported on Windows only)
+
+The system is being tested with Apache and IIS servers. Other web servers
+may also work, but are not officially supported.
+
+
+Quick Steps
+===========
+
+NOTE: THIS IS AN ALPHA RELEASE, USE IT FOR TESTING PURPOSES ONLY.
+IT IS NOT POSSIBLE TO UPDATE AN OLDER VERSION OF THE SERVER TO THIS VERSION
+AND IT WILL NOT BE POSSIBLE TO UPDATE THIS VERSION TO A NEWER ONE
+IN THE FUTURE.
+
+1. Unpack the entire WebIssues Server package to the web server's document
+   root directory.
+
+2. Create a database and a user account with sufficient privileges to create
+   tables in that database.
+
+3. Make sure that the data/ subdirectory is writable for the web server.
+
+4. Point your browser to the admin/setup/install.php page and follow
+   the instructions.
+
+IMPORTANT: Make sure that the data/ and common/data/ directories are
+not accessible to unauthorized users. You can use the accompanying .htaccess
+files or configure your web server manually to forbid access to these
+directories.
+
+
+Additional Information
+======================
+
+Installation Guide
+    http://wiki.mimec.org/wiki/WebIssues/Installation
+
+Configuration Guide
+    http://wiki.mimec.org/wiki/WebIssues/Configuration

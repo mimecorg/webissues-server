@@ -1,0 +1,115 @@
+<?php
+/**************************************************************************
+* This file is part of the WebIssues Server program
+* Copyright (C) 2006 Michał Męciński
+* Copyright (C) 2007-2011 WebIssues Team
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+**************************************************************************/
+
+if ( !defined( 'WI_VERSION' ) ) die( -1 );
+
+class Common_PageLayout extends System_Web_Component
+{
+    protected function __construct()
+    {
+        parent::__construct();
+    }
+
+    protected function execute()
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $this->isAuthenticated = $principal->isAuthenticated();
+        $this->isAdministrator = $principal->isAdministrator();
+        $this->userName = $principal->getUserName();
+
+        $application = System_Core_Application::getInstance();
+
+        $this->siteName = $this->tr( 'WebIssues' );
+        try {
+            if ( $application->getConnection()->isOpened() ) {
+                $serverManager = new System_Api_ServerManager();
+                $server = $serverManager->getServer();
+                $this->siteName = $server[ 'server_name' ];
+            }
+        } catch ( Exception $ex ) {
+            $application->handleException( $ex );
+        }
+
+        $this->pageTitle = $this->view->getSlot( 'page_title', $this->tr( 'Untitled page' ) );
+
+        if ( $this->request->isRelativePathUnder( '/client' ) ) {
+            $homeUrl = '/client/index.php';
+            $homeName = $this->tr( 'Web Client' );
+        } else if ( $this->request->isRelativePathUnder( '/admin' ) && $principal->isAdministrator() ) {
+            $homeUrl = '/admin/index.php';
+            $homeName = $this->tr( 'Administration Panel' );
+        }
+
+        $parents = $this->view->getSlot( 'breadcrumbs' );
+        $this->breadcrumbs = array();
+
+        if ( isset( $homeUrl ) && $this->pageTitle != $homeName ) {
+            $home[ 'url' ] = new System_Web_RawValue( $this->url( $homeUrl ) );
+            $home[ 'name' ] = $homeName;
+            $this->breadcrumbs[] = $home;
+        }
+
+        if ( !empty( $parents ) ) {
+            foreach ( $parents as $url => $name ) {
+                $parent[ 'url' ] = new System_Web_RawValue( $this->url( $url ) );
+                $parent[ 'name' ] = $name;
+                $this->breadcrumbs[] = $parent;
+            }
+        }
+
+        $scriptFiles = $this->view->getSlot( 'script_files' );
+
+        $this->scriptFiles[] = '/common/js/jquery.js';
+        $this->scriptFiles[] = '/common/js/main.js';
+
+        if ( !empty( $scriptFiles ) ) {
+            foreach ( $scriptFiles as $file )
+                $this->scriptFiles[] = $file;
+        }
+
+        $cssFiles = $this->view->getSlot( 'css_files' );
+
+        $this->cssFiles[] = '/common/theme/ui/jquery.ui.core.css';
+        $this->cssFiles[] = '/common/theme/ui/jquery.ui.theme.css';
+
+        if ( !empty( $cssFiles ) ) {
+            foreach ( $cssFiles as $file )
+                $this->cssFiles[] = $file;
+        }
+
+        $this->cssFiles[] = '/common/theme/style.css';
+
+        $this->cssConditional[ 'lt IE 8' ] = '/common/theme/ie7.css';
+        $this->cssConditional[ 'lt IE 9' ] = '/common/theme/ie8.css';
+
+        $inlineCode = $this->view->getSlot( 'inline_code' );
+        if ( !empty( $inlineCode ) )
+            $this->inlineCode = new System_Web_RawValue( "    $( function() {" . join( '', $inlineCode ) . "\n    } );\n" );
+
+        $this->icon = '/common/images/webissues.ico';
+
+        if ( $application->isDebugInfoEnabled() && $application->getFatalError() == null ) {
+            $this->errors = array();
+            foreach ( $application->getErrors() as $exception )
+                $this->errors[] = $exception->__toString();
+        }
+    }
+}
