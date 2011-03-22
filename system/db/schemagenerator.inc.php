@@ -57,6 +57,9 @@ class System_Db_SchemaGenerator
             case 'mysqli':
                 $this->engine = new System_Db_Mysqli_SchemaEngine();
                 break;
+            case 'pgsql':
+                $this->engine = new System_Db_Pgsql_SchemaEngine();
+                break;
             case 'mssql':
                 $this->engine = new System_Db_Mssql_SchemaEngine();
                 break;

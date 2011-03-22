@@ -264,6 +264,9 @@ class Admin_Setup_Install extends System_Web_Component
         if ( function_exists( 'mysqli_connect' ) )
             $engines[ 'mysqli' ] = 'MySQL';
 
+        if ( function_exists( 'pg_connect' ) )
+            $engines[ 'pgsql' ] = 'PostgreSQL';
+
         if ( @class_exists( 'COM', false ) )
             $engines[ 'mssql' ] = 'SQL Server';
 

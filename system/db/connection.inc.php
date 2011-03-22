@@ -96,6 +96,9 @@ class System_Db_Connection
             case 'mysqli':
                 $this->engine = new System_Db_Mysqli_Engine();
                 break;
+            case 'pgsql':
+                $this->engine = new System_Db_Pgsql_Engine();
+                break;
             case 'mssql':
                 $this->engine = new System_Db_Mssql_Engine();
                 break;
