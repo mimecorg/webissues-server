@@ -38,13 +38,9 @@ class System_Core_SetupException extends System_Core_Exception
     */
     const SiteConfigNotFound = 1;
     /**
-    * The database was not yet updated.
-    */
-    const DatabaseNotUpdated = 2;
-    /**
     * The database has an incompatible version which cannot be updated.
     */
-    const DatabaseNotCompatible = 3;
+    const DatabaseNotCompatible = 2;
 
     /**
     * Constructor.

@@ -35,6 +35,7 @@ class Admin_Setup_Install extends System_Web_Component
             $locale = new System_Api_Locale();
             $this->languageOptions = $locale->getAvailableLanguages();
             $this->engineOptions = $this->getDatabaseEngines();
+            $this->dataOptions = $this->getDataOptions();
 
             $this->form = new System_Web_Form( 'install', $this );
             $this->form->addViewState( 'page', 'language' );
@@ -48,6 +49,8 @@ class Admin_Setup_Install extends System_Web_Component
             $this->form->addPersistentField( 'serverName' );
             $this->form->addPersistentField( 'adminPassword' );
             $this->form->addPersistentField( 'adminConfirm' );
+            $this->form->addPersistentField( 'initialData' );
+            $this->form->addPersistentField( 'prefix085' );
 
             if ( $this->form->loadForm() )
                 $this->processForm();
@@ -107,9 +110,12 @@ class Admin_Setup_Install extends System_Web_Component
                 case 'connection':
                     $this->page = 'site';
                     break;
-                case 'new_site':
+                case 'server':
                 case 'existing_site':
                     $this->page = 'connection';
+                    break;
+                case 'new_site':
+                    $this->page = 'server';
                     break;
             }
         }
@@ -126,6 +132,10 @@ class Admin_Setup_Install extends System_Web_Component
                     if ( $this->openConnection() )
                         $this->testConnection();
                     break;
+                case 'server':
+                    if ( $this->openConnection() )
+                        $this->testImport();
+                    break;
             }
         }
 
@@ -133,7 +143,7 @@ class Admin_Setup_Install extends System_Web_Component
             switch ( $this->page ) {
                 case 'new_site':
                     if ( $this->openConnection() ) {
-                        if ( $this->installDatabaseTables() ) {
+                        if ( $this->installDatabase() ) {
                             if ( $this->writeSiteConfiguration() ) {
                                 $this->startSession();
                                 $this->page = 'completed';
@@ -176,11 +186,12 @@ class Admin_Setup_Install extends System_Web_Component
                 $this->form->addTextRule( 'prefix', System_Const::NameMaxLength, System_Api_Parser::AllowEmpty );
                 break;
 
-            case 'new_site':
+            case 'server':
                 $this->form->addTextRule( 'serverName', System_Const::NameMaxLength );
                 $this->form->addTextRule( 'adminPassword', System_Const::PasswordMaxLength );
                 $this->form->addTextRule( 'adminConfirm', System_Const::PasswordMaxLength );
                 $this->form->addPasswordRule( 'adminConfirm', 'adminPassword' );
+                $this->form->addItemsRule( 'initialData', $this->dataOptions );
                 break;
         }
     }
@@ -273,6 +284,16 @@ class Admin_Setup_Install extends System_Web_Component
         return $engines;
     }
 
+    private function getDataOptions()
+    {
+        $options = array();
+
+        $options[ '' ] = $this->tr( 'Do not install any initial data' );
+        $options[ 'import' ] = $this->tr( 'Import data from WebIssues Server 0.8.5' );
+
+        return $options;
+    }
+
     private function openConnection()
     {
         $connection = System_Core_Application::getInstance()->getConnection();
@@ -298,34 +319,57 @@ class Admin_Setup_Install extends System_Web_Component
         $connection = System_Core_Application::getInstance()->getConnection();
 
         try {
-            if ( !$this->checkPrerequisites() ) {
-                $connection->close();
-                return;
-            }
+            if ( $this->checkPrerequisites() ) {
+                if ( !$connection->checkTableExists( 'server' ) ) {
+                    $this->page = 'server';
+                } else {
+                    $query = 'SELECT server_name, server_uuid, db_version FROM {server}';
+                    $this->server = $connection->queryRow( $query );
 
-            if ( !$connection->checkTableExists( 'server' ) ) {
-                $this->page = 'new_site';
-
-                $connection->close();
-            } else {
-                $this->page = 'existing_site';
-
-                $query = 'SELECT server_name, server_uuid, db_version FROM {server}';
-                $this->server = $connection->queryRow( $query );
-
-                if ( $this->server[ 'db_version' ] != WI_VERSION ) {
-                    $this->invalidVersion = true;
-                    $this->disableInstall = true;
-
-                    $connection->close();
+                    if ( $this->server[ 'db_version' ] == WI_DATABASE_VERSION ) {
+                        $this->page = 'existing_site';
+                    } else {
+                        $this->form->setError( 'connection', $this->tr( 'The existing version of the database cannot be used with this version of WebIssues Server.' ) );
+                    }
                 }
             }
         } catch ( System_Db_Exception $e ) {
-            $connection->close();
-
             $this->page = 'connection';
             $this->form->setError( 'connection', $this->tr( 'Could not retrieve information from the database.' ) );
         }
+
+        $connection->close();
+    }
+
+    private function testImport()
+    {
+        $connection = System_Core_Application::getInstance()->getConnection();
+
+        try {
+            if ( $this->initialData == 'import' ) {
+                $connection->setPrefix( $this->prefix085 );
+
+                if ( !$connection->checkTableExists( 'server' ) ) {
+                    $this->form->setError( 'prefix085', $this->tr( 'No data tables were found in the database.' ) );
+                } else {
+                    $query = 'SELECT server_name, server_uuid, db_version FROM {server}';
+                    $this->server = $connection->queryRow( $query );
+
+                    if ( $this->server[ 'db_version' ] == '0.8.5' ) {
+                        $this->page = 'new_site';
+                    } else {
+                        $this->form->setError( 'prefix085', $this->tr( 'The existing version of the database cannot be imported.' ) );
+                    }
+                }
+            } else {
+                $this->page = 'new_site';
+            }
+        } catch ( System_Db_Exception $e ) {
+            $this->page = 'connection';
+            $this->form->setError( 'connection', $this->tr( 'Could not retrieve information from the database.' ) );
+        }
+
+        $connection->close();
     }
 
     private function checkPrerequisites()
@@ -366,37 +410,18 @@ class Admin_Setup_Install extends System_Web_Component
         return true;
     }
 
-    private function installDatabaseTables()
+    private function installDatabase()
     {
         $connection = System_Core_Application::getInstance()->getConnection();
 
         try {
-            $generator = new System_Db_SchemaGenerator();
-            $generator->loadEngine( $this->engine );
+            $installer = new Admin_Setup_Installer( $connection );
 
-            $queries = $generator->getDatabaseSchema();
+            $installer->installSchema();
+            $installer->installData( $this->serverName, $this->adminPassword );
 
-            foreach ( $queries as $query )
-                $connection->execute( $query );
-
-            $serverManager = new System_Api_ServerManager();
-            $uuid = $serverManager->generateUuid();
-
-            $query = 'INSERT INTO {server} ( server_name, server_uuid, db_version ) VALUES ( %s, %s, %s )';
-            $connection->execute( $query, $this->serverName, $uuid, WI_VERSION );
-
-            $passwordHash = new System_Core_PasswordHash();
-            $hash = $passwordHash->hashPassword( $this->adminPassword );
-
-            $query = 'INSERT INTO {users} ( user_login, user_name, user_passwd, user_access, passwd_temp ) VALUES ( %s, %s, %s, %d, 0 )';
-            $connection->execute( $query, 'admin', $this->tr( 'Administrator' ), $hash, System_Const::AdministratorAccess );
-
-            $settings = System_Core_IniFile::parse( '/common/data/setup/settings.ini' );
-            $settings[ 'language' ] = $this->language;
-
-            $query = 'INSERT INTO {settings} ( set_key, set_value ) VALUES ( %s, %s )';
-            foreach ( $settings as $key => $value )
-                $connection->execute( $query, $key, $value );
+            if ( $this->initialData == 'import' )
+                $installer->importData( $this->prefix085 );
 
             return true;
         } catch ( System_Db_Exception $e ) {

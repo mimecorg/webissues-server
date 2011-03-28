@@ -9,15 +9,15 @@
 
 <table class="info-list">
 <tr>
-<td><?php echo $this->tr( 'Version:' ) ?></td>
+<td><?php echo $this->tr( 'Database Version:' ) ?></td>
 <td><?php echo $server[ 'db_version' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Name:' ) ?></td>
+<td><?php echo $this->tr( 'Server Name:' ) ?></td>
 <td><?php echo $server[ 'server_name' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Unique ID:' ) ?></td>
+<td><?php echo $this->tr( 'Unique Identifier:' ) ?></td>
 <td><?php echo $server[ 'server_uuid' ] ?></td>
 </tr>
 </table>

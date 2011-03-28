@@ -38,6 +38,11 @@ define( 'WI_VERSION', '1.0-alpha4' );
 define( 'WI_PROTOCOL_VERSION', '1.0-alpha4' );
 
 /**
+* Current version of the WebIssues database schema.
+*/
+define( 'WI_DATABASE_VERSION', '1.0.001' );
+
+/**
 * The full physical path of the entry script.
 */
 define( 'WI_SCRIPT_PATH', System_Bootstrap::getScriptPath() );

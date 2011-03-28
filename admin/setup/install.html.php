@@ -117,7 +117,7 @@ case 'connection': ?>
 </fieldset>
 
 <?php break;
-case 'new_site': ?>
+case 'server': ?>
 
 <p><?php echo $this->tr( 'Please enter the parameters of the new server.' ) ?></p>
 
@@ -141,33 +141,54 @@ case 'new_site': ?>
 
 </fieldset>
 
+<fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Initial Data' ) ?></legend>
+
+<p><?php echo $this->tr( 'Select the initial data installed on this server:' ) ?></p>
+
+<?php $form->renderRadioGroup( 'initialData', $dataOptions ) ?>
+
+<p><?php echo $this->tr( 'When importing data, enter an optional prefix for source table names.' ) ?></p>
+
+<?php $form->renderText( $this->tr( 'Source prefix:' ), 'prefix085', array( 'size' => 40 ) ) ?>
+
+</fieldset>
+
 <?php break;
+case 'new_site':
 case 'existing_site': ?>
 
-<?php if ( !empty( $invalidVersion ) ): ?>
-<p><?php echo $this->tr( 'The database is already configured. It is not compatible with this version of WebIssues Server.' ) ?></p>
+<?php if ( $page == 'new_site' ): ?>
+<p><?php echo $this->tr( 'The new server will be installed in the database.' ) ?></p>
+<?php if ( $initialData == 'import' ): ?>
+<p><?php echo $this->tr( 'Data will be imported from the following server:' ) ?></p>
+<?php else: ?>
+<p><?php echo $this->tr( 'No initial data will be installed.' ) ?></p>
+<?php endif ?>
 <?php else: ?>
 <p><?php echo $this->tr( 'The database is already configured. It will not be modified during the installation.' ) ?></p>
 <?php endif ?>
 
+<?php if ( !empty( $server ) ): ?>
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Server Information' ) ?></legend>
 
 <table class="info-list">
-<td><?php echo $this->tr( 'Version:' ) ?></td>
-<td><?php echo !empty( $invalidVersion ) ? '<span class="error">' . $server[ 'db_version' ] . '</span>' : $server[ 'db_version' ] ?></td>
+<td><?php echo $this->tr( 'Database Version:' ) ?></td>
+<td><?php echo $server[ 'db_version' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Name:' ) ?></td>
+<td><?php echo $this->tr( 'Server Name:' ) ?></td>
 <td><?php echo $server[ 'server_name' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Unique ID:' ) ?></td>
+<td><?php echo $this->tr( 'Unique Identifier:' ) ?></td>
 <td><?php echo $server[ 'server_uuid' ] ?></td>
 </tr>
 </table>
 
 </fieldset>
+<?php endif ?>
 
 <?php break;
 endswitch ?>
@@ -190,7 +211,6 @@ endswitch ?>
 </div>
 
 <?php $form->renderFormClose() ?>
-
 
 <?php if ( $showInstall ): ?>
 <div id="progress" style="display: none">

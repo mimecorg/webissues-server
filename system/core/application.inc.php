@@ -313,7 +313,7 @@ abstract class System_Core_Application
         $serverManager = new System_Api_ServerManager();
         $server = $serverManager->getServer();
 
-        if ( $server[ 'db_version' ] != WI_VERSION ) {
+        if ( $server[ 'db_version' ] != WI_DATABASE_VERSION ) {
             $this->connection->close();
 
             throw new System_Core_SetupException( 'Database version ' . $server[ 'db_version' ] . ' is not compatible with server version ' . WI_VERSION,

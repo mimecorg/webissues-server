@@ -56,6 +56,7 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 * The backend engine must implement a System_Db_IEngine interface.
 * The following back-end engines are currently supported:
 *  - mysqli
+*  - pgsql
 *  - mssql
 *
 * The connection is automatically initialized by System_Core_Application based
@@ -68,6 +69,8 @@ class System_Db_Connection
 {
     private $engine = null;
     private $opened = false;
+
+    private $engineName = null;
 
     private $prefix = '';
 
@@ -88,11 +91,13 @@ class System_Db_Connection
 
     /**
     * Load a back-end engine.
-    * @param $engine Name of the engine to load.
+    * @param $engineName Name of the engine to load.
     */
-    public function loadEngine( $engine )
+    public function loadEngine( $engineName )
     {
-        switch ( $engine ) {
+        $this->engineName = $engineName;
+
+        switch ( $engineName ) {
             case 'mysqli':
                 $this->engine = new System_Db_Mysqli_Engine();
                 break;
@@ -103,7 +108,24 @@ class System_Db_Connection
                 $this->engine = new System_Db_Mssql_Engine();
                 break;
             default:
-                throw new System_Db_Exception( "Unknown database engine '$engine'" );
+                throw new System_Db_Exception( "Unknown database engine '$engineName'" );
+        }
+    }
+
+    /**
+    * Create an instance of the System_Db_SchemaGenerator for this database.
+    */
+    public function getSchemaGenerator()
+    {
+        switch ( $this->engineName ) {
+            case 'mysqli':
+                return new System_Db_Mysqli_SchemaGenerator( $this );
+            case 'pgsql':
+                return new System_Db_Pgsql_SchemaGenerator( $this );
+            case 'mssql':
+                return new System_Db_Mssql_SchemaGenerator( $this );
+            default:
+                throw new System_Db_Exception( "Unknown database schema engine" );
         }
     }
 
