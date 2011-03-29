@@ -226,6 +226,8 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
     public function getParameter( $key )
     {
         switch ( $key ) {
+            case 'server':
+                return $this->connection->Properties[ 'DBMS Name' ];
             case 'version':
                 return $this->connection->Properties[ 'DBMS Version' ];
             default:

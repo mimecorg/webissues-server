@@ -150,6 +150,8 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
     public function getParameter( $key )
     {
         switch ( $key ) {
+            case 'server':
+                return 'PostgreSQL';
             case 'version':
                 $version = pg_version( $this->connection );
                 return $version[ 'server' ];

@@ -20,26 +20,22 @@
 
 if ( !defined( 'WI_VERSION' ) ) die( -1 );
 
-class Admin_Setup_Config extends System_Web_Component
+class Admin_Info_Server extends System_Web_Component
 {
-    private $values = null;
-
-    protected function __construct( $values )
+    protected function __construct()
     {
         parent::__construct();
-
-        $this->values = $values;
     }
 
     protected function execute()
     {
-        $this->config = array();
-        foreach ( $this->values as $key => $value )
-            $this->config[ $key ] = new System_Web_RawValue( addcslashes( $value, '\\\'' ) );
+        $serverManager = new System_Api_ServerManager();
+        $this->server = $serverManager->getServer();
 
-        $site = System_Core_Application::getInstance()->getSite();
-        $this->siteName = new System_Web_RawValue( $site->getSiteName() );
-
-        $this->date = date( 'Y-m-d' );
+        if ( $this->request->isRelativePathUnder( '/admin/info' ) ) {
+            $this->toolBar = new System_Web_ToolBar();
+            $this->toolBar->addFixedCommand( '/admin/info/renameserver.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Server' ) );
+            $this->toolBar->addFixedCommand( '/admin/info/generateuuid.php', '/common/images/edit-modify-16.png', $this->tr( 'Generate New Unique ID' ) );
+        }
     }
 }

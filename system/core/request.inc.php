@@ -186,6 +186,14 @@ class System_Core_Request
         return isset( $_SERVER[ 'REQUEST_URI' ] ) ? $_SERVER[ 'REQUEST_URI' ] : null;
     }
 
+    /**
+    * Return the name and version of the web server.
+    */
+    public function getServerSoftware()
+    {
+        return isset( $_SERVER[ 'SERVER_SOFTWARE' ] ) ? $_SERVER[ 'SERVER_SOFTWARE' ] : null;
+    }
+
     private static function stripSlashesDeep( $value )
     {
         if ( is_array( $value ) )

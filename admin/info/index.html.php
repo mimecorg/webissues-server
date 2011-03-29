@@ -1,24 +1,28 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
+<?php $this->insertComponent( 'Admin_Info_Server' ) ?>
+
+<?php $this->insertComponent( 'Admin_Info_Site', $form ) ?>
+
 <fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Server Information' ) ?></legend>
+<legend><?php echo $this->tr( 'Database' ) ?></legend>
 
-<div style="float: right">
-<?php $toolBar->render() ?>
-</div>
-
-<table class="info-list">
+<table class="info-list info-indent">
 <tr>
-<td><?php echo $this->tr( 'Database Version:' ) ?></td>
-<td><?php echo $server[ 'db_version' ] ?></td>
+<td><?php echo $this->tr( 'Database server:' ) ?></td>
+<td><?php echo $dbServer . ' ' . $dbVersion ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Server Name:' ) ?></td>
-<td><?php echo $server[ 'server_name' ] ?></td>
+<td><?php echo $this->tr( 'Host name:' ) ?></td>
+<td><?php echo $dbHost ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Unique Identifier:' ) ?></td>
-<td><?php echo $server[ 'server_uuid' ] ?></td>
+<td><?php echo $this->tr( 'Database name:' ) ?></td>
+<td><?php echo $dbDatabase ?></td>
+</tr>
+<tr>
+<td><?php echo $this->tr( 'Table prefix:' ) ?></td>
+<td><?php echo $dbPrefix ?></td>
 </tr>
 </table>
 
@@ -27,17 +31,17 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Cron Job' ) ?></legend>
 
-<p><?php echo $this->tr( 'The cron job is required for the email notifications to work.' ) ?></p>
+<table class="info-list info-indent">
+<tr>
+<td><?php echo $this->tr( 'Cron is running:' ) ?></td>
+<td><?php echo !empty( $cronCurrent ) ? $this->tr( 'yes' ) : $this->tr( 'no' ) ?></td>
+</tr>
+<tr>
+<td><?php echo $this->tr( 'Cron last run:' ) ?></td>
+<td><?php echo !empty( $cronLast ) ? $cronLast : $this->tr( 'never' ) ?></td>
+</tr>
+</table>
 
-<?php if ( empty( $cronLast ) && empty( $cronCurrent ) ): ?>
-<p class="error"><?php echo $this->tr( 'The cron job was never started.' ) ?></p>
-<?php elseif ( !empty( $cronOld ) ): ?>
-<p class="error"><?php echo $this->tr( 'The cron job was not started within the last 24 hours.' ) ?></p>
-<?php else: ?>
-<p>
-<?php if ( !empty( $cronCurrent ) ) echo $this->tr( 'The cron job is currently running.' ) . ' ' ?>
-<?php if ( !empty( $cronLast ) ) echo $this->tr( 'The last cron job was started on %1.', null, $cronLast ) ?>
-</p>
-<?php endif ?>
+<?php $form->renderError( 'cron' ) ?>
 
 </fieldset>

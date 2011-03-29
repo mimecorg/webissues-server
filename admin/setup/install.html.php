@@ -39,47 +39,7 @@ case 'site': ?>
 
 <p><?php echo $this->tr( 'This wizard will help you configure the WebIssues Server.' ) ?></p>
 
-<p><?php echo $this->tr( 'NOTE: THIS IS AN ALPHA RELEASE, USE IT FOR TESTING PURPOSES ONLY.' ) ?></p>
-
-<fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Site Information' ) ?></legend>
-
-<table class="info-list">
-<tr>
-<td><?php echo $this->tr( 'Site name:' ) ?></td>
-<td><?php echo $siteName ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Base URL address:' ) ?></td>
-<td><?php echo WI_BASE_URL . '/' ?></td>
-</tr>
-</table>
-
-</fieldset>
-
-<fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Site Status' ) ?></legend>
-
-<table class="info-list">
-<tr>
-<td><?php echo $this->tr( 'Configuration file:' ) ?></td>
-<td><?php echo !empty( $configError ) ? "<span class=\"error\">$configError</span>" : $this->tr( 'ok' ) ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Storage directory:' ) ?></td>
-<td><?php echo !empty( $storageError ) ? "<span class=\"error\">$storageError</span>" : $this->tr( 'ok' ) ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Debugging log file:' ) ?></td>
-<td><?php echo !empty( $debugError ) ? "<span class=\"error\">$debugError</span>" : ( $debug ? $this->tr( 'ok' ) : $this->tr( 'disabled' ) ) ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Debugging information:' ) ?></td>
-<td><?php echo $debugInfo ? $this->tr( 'enabled' ) : $this->tr( 'disabled' ) ?></td>
-</tr>
-</table>
-
-</fieldset>
+<?php echo $site ?>
 
 <?php break;
 case 'connection': ?>
@@ -112,7 +72,7 @@ case 'connection': ?>
 
 <p><?php echo $this->tr( 'You can enter an optional prefix for table names. This allows installing multiple servers using the same database.' ) ?></p>
 
-<?php $form->renderText( $this->tr( 'Prefix:' ), 'prefix', array( 'size' => 40 ) ) ?>
+<?php $form->renderText( $this->tr( 'Table prefix:' ), 'prefix', array( 'size' => 40 ) ) ?>
 
 </fieldset>
 
@@ -122,7 +82,7 @@ case 'server': ?>
 <p><?php echo $this->tr( 'Please enter the parameters of the new server.' ) ?></p>
 
 <fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Server Configuration' ) ?></legend>
+<legend><?php echo $this->tr( 'Server Information' ) ?></legend>
 
 <p><?php echo $this->tr( 'Enter the name of this server.' ) ?></p>
 
@@ -142,9 +102,9 @@ case 'server': ?>
 </fieldset>
 
 <fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Initial Data' ) ?></legend>
+<legend><?php echo $this->tr( 'Initial Configuration' ) ?></legend>
 
-<p><?php echo $this->tr( 'Select the initial data installed on this server:' ) ?></p>
+<p><?php echo $this->tr( 'Select the initial configuration of this server:' ) ?></p>
 
 <?php $form->renderRadioGroup( 'initialData', $dataOptions ) ?>
 
@@ -155,40 +115,28 @@ case 'server': ?>
 </fieldset>
 
 <?php break;
-case 'new_site':
+case 'new_site': ?>
+
+<p><?php echo $this->tr( 'The new server will be installed in the selected database.' ) ?></p>
+
+<?php if ( $initialData == 'import' ): ?>
+
+<p><?php echo $this->tr( 'Existing data will be imported from the following server:' ) ?></p>
+
+<?php $this->insertComponent( 'Admin_Info_Server' ) ?>
+
+<?php else: ?>
+
+<p><?php echo $this->tr( 'No issue types will be created on this server.' ) ?></p>
+
+<?php endif ?>
+
+<?php break;
 case 'existing_site': ?>
 
-<?php if ( $page == 'new_site' ): ?>
-<p><?php echo $this->tr( 'The new server will be installed in the database.' ) ?></p>
-<?php if ( $initialData == 'import' ): ?>
-<p><?php echo $this->tr( 'Data will be imported from the following server:' ) ?></p>
-<?php else: ?>
-<p><?php echo $this->tr( 'No initial data will be installed.' ) ?></p>
-<?php endif ?>
-<?php else: ?>
-<p><?php echo $this->tr( 'The database is already configured. It will not be modified during the installation.' ) ?></p>
-<?php endif ?>
+<p><?php echo $this->tr( 'The server is already configured. It will not be modified during the installation.' ) ?></p>
 
-<?php if ( !empty( $server ) ): ?>
-<fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Server Information' ) ?></legend>
-
-<table class="info-list">
-<td><?php echo $this->tr( 'Database Version:' ) ?></td>
-<td><?php echo $server[ 'db_version' ] ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Server Name:' ) ?></td>
-<td><?php echo $server[ 'server_name' ] ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Unique Identifier:' ) ?></td>
-<td><?php echo $server[ 'server_uuid' ] ?></td>
-</tr>
-</table>
-
-</fieldset>
-<?php endif ?>
+<?php $this->insertComponent( 'Admin_Info_Server' ) ?>
 
 <?php break;
 endswitch ?>

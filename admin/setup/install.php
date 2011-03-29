@@ -62,6 +62,7 @@ class Admin_Setup_Install extends System_Web_Component
 
                 case 'connection':
                     $this->validateConnection();
+                    break;
             }
 
             $this->showRefresh = $this->disableNext || $this->disableInstall;
@@ -215,25 +216,11 @@ class Admin_Setup_Install extends System_Web_Component
 
     private function validateSite()
     {
-        $site = System_Core_Application::getInstance()->getSite();
+        $siteComponent = System_Web_Component::createComponent( 'Admin_Info_Site', null, $this->form, $this->view );
 
-        $this->siteName = $site->getSiteName();
+        $this->site = new System_Web_RawValue( $siteComponent->run() );
 
-        $siteDir = $site->getPath( 'site_dir' );
-        $this->configError = $this->checkDirectory( $siteDir );
-
-        $storageDir = $siteDir . '/storage';
-        $this->storageError = $this->checkDirectory( $storageDir );
-
-        $this->debug = $site->getConfig( 'debug_level' );
-        if ( $this->debug ) {
-            $debugFile = $site->getPath( 'debug_file' );
-            $this->debugError = $this->checkFile( $debugFile );
-        }
-
-        $this->debugInfo = $site->getConfig( 'debug_info' );
-
-        if ( !empty( $this->configError ) || !empty( $this->storageError ) || !empty( $this->debugError ) )
+        if ( $this->form->hasErrors() )
             $this->disableNext = true;
     }
 
@@ -243,29 +230,6 @@ class Admin_Setup_Install extends System_Web_Component
             $this->form->setError( 'engine', $this->tr( 'No supported database engines are available in this PHP installation.' ) );
             $this->disableNext = true;
         }
-    }
-
-    private function checkFile( $path )
-    {
-        $pos = strrpos( $path, '/' );
-        $dir = substr( $path, 0, $pos );
-        $file = substr( $path, $pos + 1 );
-
-        if ( !System_Core_FileSystem::isValidFileName( $file ) )
-            return $this->tr( "Invalid file name '%1'.", null, $file );
-
-        return $this->checkDirectory( $dir );
-    }
-
-    private function checkDirectory( $path )
-    {
-        if ( !System_Core_FileSystem::isDirectory( $path, true ) )
-            return $this->tr( "Directory '%1' does not exist.", null, $path );
-
-        if ( !System_Core_FileSystem::isDirectoryWritable( $path ) )
-            return $this->tr( "Directory '%1' is not writable.", null, $path );
-
-        return null;
     }
 
     private function getDatabaseEngines()
@@ -288,7 +252,7 @@ class Admin_Setup_Install extends System_Web_Component
     {
         $options = array();
 
-        $options[ '' ] = $this->tr( 'Do not install any initial data' );
+        $options[ '' ] = $this->tr( 'Do not install any issue types' );
         $options[ 'import' ] = $this->tr( 'Import data from WebIssues Server 0.8.5' );
 
         return $options;
@@ -323,8 +287,8 @@ class Admin_Setup_Install extends System_Web_Component
                 if ( !$connection->checkTableExists( 'server' ) ) {
                     $this->page = 'server';
                 } else {
-                    $query = 'SELECT server_name, server_uuid, db_version FROM {server}';
-                    $this->server = $connection->queryRow( $query );
+                    $serverManager = new System_Api_ServerManager();
+                    $this->server = $serverManager->getServer();
 
                     if ( $this->server[ 'db_version' ] == WI_DATABASE_VERSION ) {
                         $this->page = 'existing_site';
@@ -334,11 +298,11 @@ class Admin_Setup_Install extends System_Web_Component
                 }
             }
         } catch ( System_Db_Exception $e ) {
+            $connection->close();
+
             $this->page = 'connection';
             $this->form->setError( 'connection', $this->tr( 'Could not retrieve information from the database.' ) );
         }
-
-        $connection->close();
     }
 
     private function testImport()
@@ -352,8 +316,8 @@ class Admin_Setup_Install extends System_Web_Component
                 if ( !$connection->checkTableExists( 'server' ) ) {
                     $this->form->setError( 'prefix085', $this->tr( 'No data tables were found in the database.' ) );
                 } else {
-                    $query = 'SELECT server_name, server_uuid, db_version FROM {server}';
-                    $this->server = $connection->queryRow( $query );
+                    $serverManager = new System_Api_ServerManager();
+                    $this->server = $serverManager->getServer();
 
                     if ( $this->server[ 'db_version' ] == '0.8.5' ) {
                         $this->page = 'new_site';
@@ -365,11 +329,11 @@ class Admin_Setup_Install extends System_Web_Component
                 $this->page = 'new_site';
             }
         } catch ( System_Db_Exception $e ) {
+            $connection->close();
+
             $this->page = 'connection';
             $this->form->setError( 'connection', $this->tr( 'Could not retrieve information from the database.' ) );
         }
-
-        $connection->close();
     }
 
     private function checkPrerequisites()

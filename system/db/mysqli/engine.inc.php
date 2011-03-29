@@ -183,6 +183,8 @@ class System_Db_Mysqli_Engine implements System_Db_IEngine
     public function getParameter( $key )
     {
         switch ( $key ) {
+            case 'server':
+                return 'MySQL';
             case 'version':
                 return $this->connection->server_info ;
             case 'have_innodb':

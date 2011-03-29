@@ -32,8 +32,20 @@ class Admin_Info_Index extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'General Information' ) );
 
+        $this->form = new System_Web_Form( $this, 'info' );
+
+        $connection = System_Core_Application::getInstance()->getConnection();
+
+        $this->dbServer = $connection->getParameter( 'server' );
+        $this->dbVersion = $connection->getParameter( 'version' );
+
+        $site = System_Core_Application::getInstance()->getSite();
+
+        $this->dbHost = $site->getConfig( 'db_host' );
+        $this->dbDatabase = $site->getConfig( 'db_database' );
+        $this->dbPrefix = $site->getConfig( 'db_prefix' );
+
         $serverManager = new System_Api_ServerManager();
-        $this->server = $serverManager->getServer();
 
         $current = $serverManager->getSetting( 'cron_current' );
         if ( $current != null )
@@ -45,12 +57,8 @@ class Admin_Info_Index extends System_Web_Component
             $this->cronLast = $formatter->formatDateTime( $last, System_Api_Formatter::ToLocalTimeZone );
         }
 
-        if ( $current == null && $last != null && time() - $last > 86400 )
-            $this->cronOld = true;
-
-        $this->toolBar = new System_Web_ToolBar();
-        $this->toolBar->addFixedCommand( '/admin/info/renameserver.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Server' ) );
-        $this->toolBar->addFixedCommand( '/admin/info/generateuuid.php', '/common/images/edit-modify-16.png', $this->tr( 'Generate New Unique ID' ) );
+        if ( $current == null && ( $last == null || time() - $last > 86400 ) )
+            $this->form->setError( 'cron', $this->tr( 'The cron job was not started within the last 24 hours.' ) );
     }
 }
 

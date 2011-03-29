@@ -60,14 +60,39 @@ class System_Core_FileSystem
     */
     public static function isDirectoryWritable( $path )
     {
-        $tempFile = $path . '/' . md5( uniqid( mt_rand(), true ) ) . '.tmp';
+        $tempFile = sprintf( '%s/test_%04x.tmp', $path, mt_rand( 0, 0xffff ) );
 
-        if ( !( $fp = @fopen( $tempFile, 'a' ) ) )
+        if ( !self::isFileWritable( $tempFile ) )
             return false;
 
-        fclose( $fp );
         @unlink( $tempFile );
 
         return true;
+    }
+
+    /**
+    * Check if the specified file is writable.
+    */
+    public static function isFileWritable( $path )
+    {
+        if ( !self::isDirectory( dirname( $path ), true ) )
+            return false;
+
+        if ( !( $fp = @fopen( $path, 'a' ) ) )
+            return false;
+
+        fclose( $fp );
+
+        return true;
+    }
+
+    /**
+    * Convert path to native separators (slash on Unix, backslash on Windows).
+    */
+    public static function toNativeSeparators( $path )
+    {
+        if ( strtoupper( substr( PHP_OS, 0, 3 ) ) == 'WIN' )
+            return str_replace( '/', '\\', $path );
+        return $path;
     }
 }
