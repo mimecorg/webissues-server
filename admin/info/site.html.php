@@ -3,7 +3,7 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Site Configuration' ) ?></legend>
 
-<table class="info-list info-indent">
+<table class="info-list info-align">
 <tr>
 <td><?php echo $this->tr( 'Site name:' ) ?></td>
 <td><?php echo $siteName ?></td>
@@ -18,11 +18,11 @@
 </tr>
 <tr>
 <td><?php echo $this->tr( 'Debugging log file:' ) ?></td>
-<td><?php echo $debugLevel > 0 ? $debugFile : $this->tr( 'disabled' ) ?></td>
+<td><?php echo $debugLevel > 0 ? $debugFile : $this->tr( 'disabled', 'log file' ) ?></td>
 </tr>
 <tr>
 <td><?php echo $this->tr( 'Debugging information:' ) ?></td>
-<td><?php echo $debugInfo ? $this->tr( 'enabled' ) : $this->tr( 'disabled' ) ?></td>
+<td><?php echo $debugInfo ? $this->tr( 'enabled', 'debug info' ) : $this->tr( 'disabled', 'debug info' ) ?></td>
 </tr>
 </table>
 
@@ -33,7 +33,7 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Environment' ) ?></legend>
 
-<table class="info-list info-indent">
+<table class="info-list info-align">
 <tr>
 <td><?php echo $this->tr( 'PHP version:' ) ?></td>
 <td><?php echo $phpVersion ?></td>

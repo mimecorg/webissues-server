@@ -9,7 +9,7 @@
 </div>
 <?php endif ?>
 
-<table class="info-list info-indent">
+<table class="info-list info-align">
 <tr>
 <td><?php echo $this->tr( 'Database version:' ) ?></td>
 <td><?php echo $server[ 'db_version' ] ?></td>

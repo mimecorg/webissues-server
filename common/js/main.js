@@ -44,7 +44,7 @@ WebIssues.autofocus = function() {
         else
             toHighlight = $( ':input:enabled' );
 
-        toHighlight.each( function ( i ) {
+        toHighlight.each( function() {
             if ( $( this ).is( ':text,:password,:radio:checked,:checkbox,select,textarea' ) ) {
                 this.focus();
                 return false;
@@ -53,6 +53,23 @@ WebIssues.autofocus = function() {
     }
 }
 
+WebIssues.autoalign = function() {
+    var info = $( '.info-align' );
+    if ( info.length > 0 ) {
+        var maxW = 0;
+        info.each( function() {
+            var w = $( this ).find( 'td' ).first().width();
+            if ( maxW < w )
+                maxW = w;
+        } );
+        info.each( function() {
+            $( this ).find( 'td' ).first().css( 'width', maxW );
+        } );
+    }
+}
+
+
 $( function() {
     WebIssues.autofocus();
+    WebIssues.autoalign();
 } );

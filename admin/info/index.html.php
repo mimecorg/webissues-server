@@ -7,7 +7,7 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Database' ) ?></legend>
 
-<table class="info-list info-indent">
+<table class="info-list info-align">
 <tr>
 <td><?php echo $this->tr( 'Database server:' ) ?></td>
 <td><?php echo $dbServer . ' ' . $dbVersion ?></td>
@@ -31,7 +31,7 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Cron Job' ) ?></legend>
 
-<table class="info-list info-indent">
+<table class="info-list info-align">
 <tr>
 <td><?php echo $this->tr( 'Cron is running:' ) ?></td>
 <td><?php echo !empty( $cronCurrent ) ? $this->tr( 'yes' ) : $this->tr( 'no' ) ?></td>
