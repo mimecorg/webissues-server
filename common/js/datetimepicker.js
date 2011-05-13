@@ -18,6 +18,16 @@
 **************************************************************************/
 
 ( function( $ ) {
+    $.datepicker._gotoToday = function( id ) {
+        var target = $( id );
+        var inst = this._getInst( target[ 0 ] );
+        this._selectDate( id, '[' + this._get(  inst, 'currentText' ) + ']' );
+    };
+    $.datepicker._updateDatepickerOrig = $.datepicker._updateDatepicker;
+    $.datepicker._updateDatepicker = function( inst ) {
+        this._updateDatepickerOrig( inst );
+        inst.dpDiv.find( '.ui-datepicker-current' ).removeClass( 'ui-priority-secondary' ).addClass( 'ui-priority-primary' );
+    };
     $.widget( "ui.datetimepicker", {
         options: {
             withTime: false,
@@ -32,16 +42,22 @@
                 buttonImage: self.options.buttonImage,
                 buttonImageOnly: true,
                 showAnim: '',
+                showButtonPanel: true,
                 monthNamesShort: self.options.monthNamesShort,
                 dayNames: self.options.dayNames,
                 dayNamesMin: self.options.dayNamesMin,
                 firstDay: self.options.firstDay,
                 nextText: self.options.nextText,
                 prevText: self.options.prevText,
+                currentText: self.options.currentText,
+                closeText: self.options.closeText,
                 changeMonth: true,
                 changeYear: true,
                 dateFormat: self.options.dateFormat,
-                constrainInput: self.options.constrainInput || self.options.withTime,
+                constrainInput: !self.options.showButtonPanel && !self.options.withTime,
+                showButtonPanel: self.options.showButtonPanel,
+                showOtherMonths: true,
+                selectOtherMonths: true,
                 beforeShow: function( input ) {
                     if ( self.options.withTime ) {
                         if ( input.value.length != 0 && ( ( pos = input.value.indexOf( ' ' ) ) >= 0 ) )
@@ -49,7 +65,7 @@
                     }
                 },
                 onSelect: function() {
-                    if ( self.options.withTime )
+                    if ( self.options.withTime && this.value.length >= 1 && this.value[ 0 ] != '[' )
                         this.value += oldTime;
                 }
             } );

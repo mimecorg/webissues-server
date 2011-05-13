@@ -59,9 +59,9 @@ class System_Web_JavaScript extends System_Web_Base
     */
     const WithTime = 1;
     /**
-    * Allow entering custom values in the field.
+    * Include 'Today' button in the date picker.
     */
-    const FreeInput = 2;
+    const WithToday = 2;
     /*@}*/
 
     /**
@@ -141,8 +141,10 @@ class System_Web_JavaScript extends System_Web_Base
                 firstDay: " . $locale->getSetting( 'first_day_of_week' ) . ",
                 nextText: " . $this->escape( $this->tr( 'Next' ) ) . ",
                 prevText: " . $this->escape( $this->tr( 'Previous' ) ) . ",
+                currentText: " . $this->escape( $this->tr( 'Today' ) ) . ",
+                closeText: " . $this->escape( $this->tr( 'Close' ) ) . ",
                 dateFormat: '" . $this->getDateFormat( $locale->getSettingFormat( 'date_format' ) ) . "',
-                constrainInput: " . ( ( $flags & self::FreeInput ) ? 'false' : 'true' ) . ",
+                showButtonPanel: " . ( ( $flags & self::WithToday ) ? 'true' : 'false' ) . ",
                 withTime: " . ( ( $flags & self::WithTime ) ? 'true' : 'false' ) . ",
                 zeroTime: '" . $formatter->convertTime( '00:00' ) . "' } );" );
     }

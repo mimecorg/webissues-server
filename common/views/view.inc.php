@@ -344,7 +344,7 @@ class Common_Views_View extends System_Web_Component
     {
         switch ( $info->getType() ) {
             case 'DATETIME':
-                $this->javaScript->registerDatePicker( $selector, System_Web_JavaScript::FreeInput );
+                $this->javaScript->registerDatePicker( $selector, System_Web_JavaScript::WithToday );
                 break;
 
             case 'ENUM':

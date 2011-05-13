@@ -225,7 +225,7 @@ class Admin_Types_Attribute extends System_Web_Component
         switch ( $this->type ) {
             case 'DATETIME':
                 $javaScript = new System_Web_JavaScript( $this->view );
-                $flags = System_Web_JavaScript::FreeInput;
+                $flags = System_Web_JavaScript::WithToday;
                 if ( $this->time != 0 )
                     $flags |= System_Web_JavaScript::WithTime;
                 $javaScript->registerDatePicker( $this->form->getFieldSelector( 'defaultValue' ), $flags );
