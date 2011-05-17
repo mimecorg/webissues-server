@@ -302,6 +302,10 @@ table.info-list tr td {
   color: #aaaaaa;
 }
 
+.unread {
+  font-weight: bold;
+}
+
 table.grid {
   width: 100%;
   margin: 0;

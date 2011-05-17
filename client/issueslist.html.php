@@ -24,7 +24,7 @@
 ?>
 </tr>
 <?php foreach ( $issues as $issueId => $issue ): ?>
-<?php $grid->renderRowOpen( $issueId ) ?>
+<?php $grid->renderRowOpen( $issueId, ( $issue[ 'read_id' ] < $issue[ 'stamp_id' ] ) ? array( 'unread' ) : array() ) ?>
 
 <?php foreach ( $columns as $column => $name ): ?>
 <td>
