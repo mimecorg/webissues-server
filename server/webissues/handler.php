@@ -185,7 +185,7 @@ class Server_WebIssues_Handler implements Server_IHandler
 
         $this->response->setCustomHeader( 'X-WebIssues-Version', WI_PROTOCOL_VERSION );
 
-        $this->response->setContentType( 'text/plain' );
+        $this->response->setContentType( 'text/plain; charset=UTF-8' );
         $this->response->setContent( $content );
     }
 
@@ -202,7 +202,7 @@ class Server_WebIssues_Handler implements Server_IHandler
 
         $this->response->setCustomHeader( 'X-WebIssues-Version', WI_PROTOCOL_VERSION );
 
-        $this->response->setContentType( 'application/octet-stream' );
+        $this->response->setContentType( 'application/octet-stream; charset=binary' );
         $this->response->setAttachment( $attachment );
     }
 
