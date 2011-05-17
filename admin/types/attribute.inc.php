@@ -404,7 +404,7 @@ class Admin_Types_Attribute extends System_Web_Component
     private function validateValue( $propertyName )
     {
         try {
-            $this->$propertyName = $this->parser->normalizeString( $this->$propertyName, System_Const::ValueMaxLength, $this->required ? 0 : System_Api_Parser::AllowEmpty );
+            $this->$propertyName = $this->parser->normalizeString( $this->$propertyName, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
             if ( $this->$propertyName !== '' && !$this->form->hasErrors() ) {
                 $expressionHelper = new System_Web_ExpressionHelper();
                 $value = $expressionHelper->parseExpression( $this->type, $this->definition, $this->$propertyName );

@@ -398,7 +398,8 @@ class System_Api_Validator
                 break;
         }
 
-        $this->checkFilterValue( $info, $default );
+        if ( $default != '' )
+            $this->checkFilterValue( $info, $default );
     }
 
     /**
