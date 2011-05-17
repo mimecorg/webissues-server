@@ -124,9 +124,9 @@ class Client_Alerts_Index extends System_Web_Component
                 $read += $count;
         } 
 
-        $row[ 'alert_status' ] = $this->tr( '%1 new, %2 modified, %3 total issues', null, $unread, $modified, $unread + $modified + $read );
         $row[ 'alert_unread' ] = $unread;
         $row[ 'alert_modified' ] = $modified;
+        $row[ 'alert_total' ] = $unread + $modified + $read;
     }
 }
 

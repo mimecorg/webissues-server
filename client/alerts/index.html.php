@@ -11,7 +11,9 @@
 <table class="grid">
 <tr>
 <?php $grid->renderHeader( $this->tr( 'Name' ), 'name' ) ?>
-<?php $grid->renderHeader( $this->tr( 'Status' ) ) ?>
+<?php $grid->renderHeader( $this->tr( 'Total' ) ) ?>
+<?php $grid->renderHeader( $this->tr( 'Unread' ) ) ?>
+<?php $grid->renderHeader( $this->tr( 'Modified' ) ) ?>
 <?php if ( $emailEngine ): ?>
 <?php $grid->renderHeader( $this->tr( 'Email Type' ) ) ?>
 <?php endif ?>
@@ -33,7 +35,9 @@
         $image, $alert[ 'view_name' ] );
 ?>
 </td>
-<td><?php echo $alert[ 'alert_status' ] ?></td>
+<td<?php echo $alert[ 'alert_total' ] > 0 ? ' class="unread"' : '' ?>><?php echo $alert[ 'alert_total' ] ?></td>
+<td<?php echo $alert[ 'alert_unread' ] > 0 ? ' class="unread"' : '' ?>><?php echo $alert[ 'alert_unread' ] ?></td>
+<td<?php echo $alert[ 'alert_modified' ] > 0 ? ' class="unread"' : '' ?>><?php echo $alert[ 'alert_modified' ] ?></td>
 <?php if ( $emailEngine ): ?>
 <td><?php echo $alert[ 'alert_email' ] ?></td>
 <?php endif ?>
