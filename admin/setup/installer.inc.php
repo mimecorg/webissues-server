@@ -76,7 +76,7 @@ class Admin_Setup_Installer extends System_Web_Base
                 'issue_id'          => 'INTEGER ref-table="issues" ref-column="issue_id" on-delete="cascade"',
                 'change_type'       => 'INTEGER size="tiny"',
                 'stamp_id'          => 'INTEGER',
-                'attr_id'           => 'INTEGER null=1 ref-table="attr_types" ref-column="attr_id" on-delete="set-null"',
+                'attr_id'           => 'INTEGER null=1 ref-table="attr_types" ref-column="attr_id" on-delete="cascade"',
                 'value_old'         => 'VARCHAR length=255 null=1',
                 'value_new'         => 'VARCHAR length=255 null=1',
                 'from_folder_id'    => 'INTEGER null=1 ref-table="folders" ref-column="folder_id" on-delete="set-null" trigger=1',

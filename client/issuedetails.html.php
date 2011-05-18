@@ -156,8 +156,7 @@
     case System_Const::ValueChanged:
         $from = ( $change[ 'value_old' ] == '' ) ? $this->tr( 'empty' ) : '"' . $change[ 'value_old' ] . '"';
         $to = ( $change[ 'value_new' ] == '' ) ? $this->tr( 'empty' ) : '"' . $change[ 'value_new' ] . '"';
-        $name = ( $change[ 'attr_name' ] == '' ) ? $this->tr( 'Unknown Attribute' ) : $change[ 'attr_name' ];
-        echo $name . ': ' . $from . ' &rarr; ' . $to;
+        echo $change[ 'attr_name' ] . ': ' . $from . ' &rarr; ' . $to;
         break;
     endswitch;
 ?>
