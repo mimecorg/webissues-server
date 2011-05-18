@@ -87,7 +87,9 @@ class System_Api_HistoryProvider
     */
     public function generateSelectQuery( $itemType = null )
     {
-        $this->arguments = array( $this->issueId, System_Const::CommentAdded, System_Const::FileAdded );
+        $principal = System_Api_Principal::getCurrent();
+
+        $this->arguments = array( $this->issueId, System_Const::CommentAdded, System_Const::FileAdded, $principal->getUserId() );
 
         $query = 'SELECT ch.change_id, ch.change_type, ch.stamp_id,'
             . ' sc.stamp_time AS created_date, uc.user_id AS created_user, uc.user_name AS created_by,'
@@ -105,8 +107,12 @@ class System_Api_HistoryProvider
             . ' JOIN {users} AS um ON um.user_id = sm.user_id';
         if ( $itemType == null ) {
             $query .= ' LEFT OUTER JOIN {attr_types} AS a ON a.attr_id = ch.attr_id'
-                . ' LEFT OUTER JOIN {folders} AS ff ON ff.folder_id = ch.from_folder_id'
-                . ' LEFT OUTER JOIN {folders} AS tf ON tf.folder_id = ch.to_folder_id';
+                . ' LEFT OUTER JOIN {folders} AS ff ON ff.folder_id = ch.from_folder_id';
+            if ( !$principal->isAdministrator() )
+                $query .= ' AND ff.project_id IN ( SELECT project_id FROM {rights} WHERE user_id = %4d )';
+            $query .= ' LEFT OUTER JOIN {folders} AS tf ON tf.folder_id = ch.to_folder_id';
+            if ( !$principal->isAdministrator() )
+                $query .= ' AND tf.project_id IN ( SELECT project_id FROM {rights} WHERE user_id = %4d )';
         }
         if ( $itemType == null || $itemType == System_Const::CommentAdded ) {
             if ( $itemType == null )
