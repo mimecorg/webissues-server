@@ -32,8 +32,10 @@ class Client_Index extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_ThreePanes' );
 
         $itemId = (int)$this->request->getQueryString( 'item' );
-        if ( $itemId )
-            $this->findItem( $itemId );
+        if ( $itemId ) {
+            $helper = new Client_Tools_ItemHelper();
+            $helper->findItem( $itemId );
+        }
 
         $issueManager = new System_Api_IssueManager();
         $projectManager = new System_Api_ProjectManager();
@@ -52,43 +54,6 @@ class Client_Index extends System_Web_Component
 
         if ( $issueId )
             $this->bottomPaneClass = 'Client_IssueDetails';
-    }
-
-    private function findItem( $itemId )
-    {
-        $issueManager = new System_Api_IssueManager();
-
-        $issueId = $issueManager->findItem( $itemId );
-
-        if ( $itemId == $issueId )
-            $this->response->redirect( $this->appendQueryString( '/client/index.php', array( 'issue' => $issueId ) ) );
-
-        $issue = $issueManager->getIssue( $issueId );
-
-        $historyProvider = new System_Api_HistoryProvider();
-        $historyProvider->setIssueId( $issueId );
-
-        $connection = System_Core_Application::getInstance()->getConnection();
-
-        $query = $historyProvider->generateSimpleSelectQuery();
-        $history = $connection->queryPageArgs( $query, $historyProvider->getOrderBy(), System_Const::INT_MAX, 0, $historyProvider->getQueryArguments() );
-
-        $index = -1;
-        foreach ( $history as $i => $item ) {
-            if ( $item[ 'change_id' ] == $itemId ) {
-                $index = $i;
-                break;
-            }
-        }
-
-        if ( $index < 0 )
-            throw new System_Api_Error( System_Api_Error::ItemNotFound );
-
-        $page = floor( ( $index + 1 ) / 20 ) + 1;
-        if ( $page == 1 )
-            $page = null;
-
-        $this->response->redirect( $this->appendQueryString( '/client/index.php', array( 'issue' => $issueId, 'hpg' => $page ) ) . '#item' . $itemId );
     }
 }
 

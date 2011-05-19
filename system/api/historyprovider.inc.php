@@ -78,7 +78,7 @@ class System_Api_HistoryProvider
     {
         $this->arguments = array( $this->issueId );
 
-        return 'SELECT change_id FROM {changes} WHERE issue_id = %d';
+        return 'SELECT ch.change_id FROM {changes} AS ch WHERE ch.issue_id = %d';
     }
 
     /**
