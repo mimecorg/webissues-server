@@ -1,6 +1,6 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<p><?php echo $this->tr( 'Enter the identifier of an issue, comment or file.' ) ?>
+<p><?php echo $this->tr( 'Enter the identifier of an issue, comment or attachment.' ) ?>
 
 <?php $form->renderFormOpen(); ?>
 
