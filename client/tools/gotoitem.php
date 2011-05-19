@@ -62,7 +62,7 @@ class Client_Tools_GoToItem extends System_Web_Component
             $value = $parser->normalizeString( $this->itemId );
             if ( $value[ 0 ] == '#' )
                 $value = substr( $value, 1 );
-            $parser->checkDecimalNumber( $value, 0 );
+            $parser->checkDecimalNumber( $value, 0, 1, System_Const::INT_MAX );
             $helper->findItem( (int)$value );
         } catch ( System_Api_Error $ex ) {
             $this->form->getErrorHelper()->handleError( 'itemId', $ex );
