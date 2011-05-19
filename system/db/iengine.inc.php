@@ -77,6 +77,11 @@ interface System_Db_IEngine
     public function getPagedQuery( $query, $orderBy, $limit, $offset );
 
     /**
+    * Return the name of collation used for case-insensitive ordering.
+    */
+    public function getLocaleCollation();
+
+    /**
     * Create a System_Core_Attachment from a binary result field value.
     * @param $data Database-specific value of a binary field.
     * @param $size Size of data in bytes.

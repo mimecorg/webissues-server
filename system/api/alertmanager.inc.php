@@ -125,7 +125,7 @@ class System_Api_AlertManager extends System_Api_Base
             . ' FROM {views} AS v'
             . ' LEFT OUTER JOIN {alerts} AS a ON a.view_id = v.view_id AND a.user_id = %1d AND a.folder_id = %2d'
             . ' WHERE v.type_id = %3d AND ( v.user_id = %1d OR v.user_id IS NULL ) AND a.alert_id IS NULL'
-            . ' ORDER BY v.view_name';
+            . ' ORDER BY v.view_name COLLATE LOCALE';
 
         $views = $this->connection->queryTable( $query, $principal->getUserId(), $folderId, $typeId );
 
@@ -142,7 +142,7 @@ class System_Api_AlertManager extends System_Api_Base
     public function getAlertsColumns()
     {
         return array(
-            'name' => 'view_name'
+            'name' => 'view_name COLLATE LOCALE'
         );
     }
 

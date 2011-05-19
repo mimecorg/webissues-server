@@ -224,6 +224,37 @@ class System_Api_QueryGenerator
         if ( $pos !== false )
             $expression = substr( $expression, 0, $pos );
 
+        switch ( $column ) {
+            case System_Api_Column::Name:
+            case System_Api_Column::CreatedBy:
+            case System_Api_Column::ModifiedBy:
+                $expression .= ' COLLATE LOCALE';
+                break;
+
+            default:
+                if ( $column > System_Api_Column::UserDefined ) {
+                    $attribute = $this->attributes[ $column ];
+                    $info = System_Api_DefinitionInfo::fromString( $attribute[ 'attr_def' ] );
+
+                    switch ( $info->getType() ) {
+                        case 'TEXT':
+                        case 'ENUM':
+                        case 'USER':
+                            $expression .= ' COLLATE LOCALE';
+                            break;
+
+                        case 'NUMERIC':
+                            $expression = "CAST( $expression AS decimal(14,6) )";
+                            break;
+
+                        case 'DATETIME':
+                            $expression = "CAST( $expression AS datetime )";
+                            break;
+                    }
+                }
+                break;
+        }
+
         return $expression;
     }
 

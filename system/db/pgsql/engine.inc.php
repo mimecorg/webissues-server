@@ -119,6 +119,11 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
         return "$query ORDER BY $orderBy LIMIT $limit";
     }
 
+    public function getLocaleCollation()
+    {
+        return '';
+    }
+
     public function createAttachment( $data, $size, $fileName )
     {
         return new System_Core_Attachment( pg_unescape_bytea( $this->connection, $data ), $size, $fileName );

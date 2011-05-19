@@ -184,6 +184,11 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
         return "SELECT $select FROM ( SELECT TOP $top ROW_NUMBER() OVER (ORDER BY $orderBy) AS row_num, $query ) AS t WHERE t.row_num > $offset";
     }
 
+    public function getLocaleCollation()
+    {
+        return '';
+    }
+
     public function createAttachment( $data, $size, $fileName )
     {
         $path = tempnam( sys_get_temp_dir(), 'wi_' );

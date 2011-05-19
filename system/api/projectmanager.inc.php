@@ -63,7 +63,7 @@ class System_Api_ProjectManager extends System_Api_Base
         } else {
             $query = 'SELECT p.project_id, p.project_name, %2d AS project_access FROM {projects} AS p';
         }
-        $query .= ' ORDER BY p.project_name';
+        $query .= ' ORDER BY p.project_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::AdministratorAccess );
     }
@@ -109,7 +109,7 @@ class System_Api_ProjectManager extends System_Api_Base
         if ( !$principal->isAdministrator() )
             $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %d';
         $query .= ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
-            . ' ORDER BY f.folder_name';
+            . ' ORDER BY f.folder_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query, $principal->getUserId() );
     }
@@ -377,7 +377,7 @@ class System_Api_ProjectManager extends System_Api_Base
     */
     public function getProjectsColumns()
     {
-        return array( 'name' => 'p.project_name' );
+        return array( 'name' => 'p.project_name COLLATE LOCALE' );
     }
 
     /**
@@ -427,7 +427,7 @@ class System_Api_ProjectManager extends System_Api_Base
         $query = 'SELECT f.folder_id, f.folder_name, t.type_name FROM {folders} AS f'
             . ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
             . ' WHERE f.project_id = %d'
-            . ' ORDER BY f.folder_name';
+            . ' ORDER BY f.folder_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query, $projectId );
     }

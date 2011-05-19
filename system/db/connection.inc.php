@@ -434,6 +434,11 @@ class System_Db_Connection
         $query = str_replace( '{', $this->prefix, $query );
         $query = str_replace( '}', '', $query );
 
+        $collation = $this->engine->getLocaleCollation();
+        if ( $collation != '' )
+            $collation = ' COLLATE ' . $collation;
+        $query = str_replace( ' COLLATE LOCALE', $collation, $query );
+
         // don't use the regular expression if not necessary
         if ( strpos( $query, '%' ) === false )
             return $query;

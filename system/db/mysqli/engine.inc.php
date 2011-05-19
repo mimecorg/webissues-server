@@ -154,6 +154,11 @@ class System_Db_Mysqli_Engine implements System_Db_IEngine
         return "$query ORDER BY $orderBy LIMIT $limit";
     }
 
+    public function getLocaleCollation()
+    {
+        return 'utf8_unicode_ci';
+    }
+
     public function createAttachment( $data, $size, $fileName )
     {
         return new System_Core_Attachment( $data, $size, $fileName );

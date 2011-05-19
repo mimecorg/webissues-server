@@ -141,7 +141,7 @@ class System_Api_ViewManager extends System_Api_Base
     public function getViewsColumns()
     {
         return array(
-            'name' => 'view_name'
+            'name' => 'view_name COLLATE LOCALE'
         );
     }
 
@@ -218,7 +218,7 @@ class System_Api_ViewManager extends System_Api_Base
         $query = 'SELECT view_id, view_name, ( CASE WHEN user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
             . ' FROM {views}'
             . ' WHERE type_id = %d AND ( user_id = %d OR user_id IS NULL )'
-            . ' ORDER BY view_name';
+            . ' ORDER BY view_name COLLATE LOCALE';
 
         $views = $this->connection->queryTable( $query, $typeId, $principal->getUserId() );
 

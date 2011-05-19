@@ -137,8 +137,8 @@ class System_Api_UserManager extends System_Api_Base
     public function getUsersColumns()
     {
         return array(
-            'name' => 'user_name',
-            'login' => 'user_login',
+            'name' => 'user_name COLLATE LOCALE',
+            'login' => 'user_login COLLATE LOCALE',
             'access' => 'user_access'
             );
     }
@@ -181,7 +181,7 @@ class System_Api_UserManager extends System_Api_Base
     public function getMembersColumns()
     {
         return array(
-            'name' => 'u.user_name',
+            'name' => 'u.user_name COLLATE LOCALE',
             'access' => 'r.project_access'
         );
     }

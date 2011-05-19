@@ -53,7 +53,7 @@ class System_Api_TypeManager extends System_Api_Base
     */
     public function getIssueTypes()
     {
-        $query = 'SELECT type_id, type_name FROM {issue_types} ORDER BY type_name';
+        $query = 'SELECT type_id, type_name FROM {issue_types} ORDER BY type_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query );
     }
@@ -79,7 +79,7 @@ class System_Api_TypeManager extends System_Api_Base
     */
     public function getAttributeTypes()
     {
-        $query = 'SELECT attr_id, type_id, attr_name, attr_def FROM {attr_types} ORDER BY attr_name';
+        $query = 'SELECT attr_id, type_id, attr_name, attr_def FROM {attr_types} ORDER BY attr_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query );
     }
@@ -192,7 +192,7 @@ class System_Api_TypeManager extends System_Api_Base
         if ( isset( self::$attributeTypes[ $typeId ] ) ) {
             $attributes = self::$attributeTypes[ $typeId ];
         } else {
-            $query = 'SELECT attr_id, attr_name, attr_def FROM {attr_types} WHERE type_id = %d ORDER BY attr_name';
+            $query = 'SELECT attr_id, attr_name, attr_def FROM {attr_types} WHERE type_id = %d ORDER BY attr_name COLLATE LOCALE';
 
             $attributes = $this->connection->queryTable( $query, $typeId );
 
@@ -455,7 +455,7 @@ class System_Api_TypeManager extends System_Api_Base
     public function getIssueTypesColumns()
     {
         return array(
-            'name' => 'type_name'
+            'name' => 'type_name COLLATE LOCALE'
         );
     }
 }

@@ -172,7 +172,7 @@ class System_Api_IssueManager extends System_Api_Base
             . ' FROM {attr_types} AS a'
             . ' LEFT OUTER JOIN {attr_values} AS v ON v.attr_id = a.attr_id AND v.issue_id = %d'
             . ' WHERE a.type_id = %d'
-            . ' ORDER BY a.attr_name';
+            . ' ORDER BY a.attr_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query, $issueId, $typeId );
     }
