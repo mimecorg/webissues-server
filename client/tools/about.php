@@ -20,7 +20,7 @@
 
 require_once( '../../system/bootstrap.inc.php' );
 
-class Client_Tools_GoToItem extends System_Web_Component
+class Client_Tools_About extends System_Web_Component
 {
     protected function __construct()
     {
@@ -30,39 +30,26 @@ class Client_Tools_GoToItem extends System_Web_Component
     protected function execute()
     {
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'Go To Item' ) );
+        $this->view->setSlot( 'page_title', $this->tr( 'About WebIssues' ) );
 
         $breadcrumbs = new System_Web_Breadcrumbs( $this );
         $breadcrumbs->initialize( System_Web_Breadcrumbs::Tools );
 
         $this->form = new System_Web_Form( 'tools', $this );
-        $this->form->addField( 'itemId', '' );
+
+        $donateUrl = 'http://webissues.mimec.org/donations';
+
+        $javaScript = new System_Web_JavaScript( $this->view );
+        $javaScript->registerExternalLink( $this->form->getSubmitSelector( 'donate' ), $donateUrl );
 
         if ( $this->form->loadForm() ) {
-            if ( $this->form->isSubmittedWith( 'cancel' ) )
+            if ( $this->form->isSubmittedWith( 'ok' ) )
                 $this->response->redirect( $breadcrumbs->getParentUrl() );
 
-            $this->form->validate();
-
-            if ( $this->form->isSubmittedWith( 'ok' ) && !$this->form->hasErrors() )
-                $this->submit();
-        }
-    }
-
-    private function submit()
-    {
-        $parser = new System_Api_Parser();
-        $helper = new Client_Tools_ItemHelper();
-        try {
-            $value = $parser->normalizeString( $this->itemId );
-            if ( $value[ 0 ] == '#' )
-                $value = substr( $value, 1 );
-            $parser->checkDecimalNumber( $value, 0, 1, System_Const::INT_MAX );
-            $helper->findItem( (int)$value );
-        } catch ( System_Api_Error $ex ) {
-            $this->form->getErrorHelper()->handleError( 'itemId', $ex );
+            if ( $this->form->isSubmittedWith( 'donate' ) )
+                $this->response->redirect( $donateUrl );
         }
     }
 }
 
-System_Bootstrap::run( 'Common_Application', 'Client_Tools_GoToItem' );
+System_Bootstrap::run( 'Common_Application', 'Client_Tools_About' );

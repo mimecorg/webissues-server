@@ -162,6 +162,20 @@ class System_Web_Base
     }
 
     /**
+    * Create an image and text label.
+    * @param $source The source of the image (absolute or relative to
+    * WI_BASE_URL).
+    * @param $text Text of the alt attribute.
+    * @param $attributes Optional array of attributes to be added
+    * to the @c img tag.
+    * @return The image and text label.
+    */
+    protected function imageAndText( $source, $text, $attributes = array() )
+    {
+        return $this->image( $source, $text, $attributes ) . "\n" . $text;
+    }
+
+    /**
     * Create an HTML link containing an image.
     * @param $url The URL the link points to (absolute or relative to
     * WI_BASE_URL).
@@ -180,7 +194,7 @@ class System_Web_Base
     }
 
     /**
-    * Create an HTML link containing an image and text lable.
+    * Create an HTML link containing an image and text label.
     * @param $url The URL the link points to (absolute or relative to
     * WI_BASE_URL).
     * @param $source The source of the image (absolute or relative to

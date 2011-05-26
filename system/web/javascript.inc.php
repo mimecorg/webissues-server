@@ -245,6 +245,11 @@ class System_Web_JavaScript extends System_Web_Base
             ] ); ' );
     }
 
+    /**
+    * Register blocking the UI when a button is clicked.
+    * @param $triggerSelector The jQuery selector of the submit button.
+    * @param $messageSelector The jQuery selector of the message box to display.
+    */
     public function registerBlockUI( $triggerSelector, $messageSelector )
     {
         $this->registerScripts( array( 'blockui' ) );
@@ -254,6 +259,20 @@ class System_Web_JavaScript extends System_Web_Base
                 $.blockUI( {
                     message: $( '$messageSelector' )
                 } );
+            } );" );
+    }
+
+    /**
+    * Register opening a link in new window when a button is clicked.
+    * @param $triggerSelector The jQuery selector of the submit button.
+    * @param $url The absolute or relative URL to open.
+    */
+    public function registerExternalLink( $triggerSelector, $url )
+    {
+        $this->registerCode( "
+            $( '$triggerSelector' ).click( function() {
+                window.open( " . $this->escape( $this->url( $url ) ) . " );
+                return false;
             } );" );
     }
 
