@@ -48,7 +48,7 @@ class Admin_Settings_Helper extends System_Web_Base
             try {
                 $validator->checkSetting( $key, $value );
             } catch ( System_Api_Error $ex ) {
-                $this->form->getErrorHelper()->handleError( $field, $ex );
+                $this->page->form->getErrorHelper()->handleError( $field, $ex );
             }
             $values[ $key ] = $value;
         }
