@@ -49,7 +49,7 @@ class Admin_Setup_Install extends System_Web_Component
             $this->form->addPersistentField( 'serverName' );
             $this->form->addPersistentField( 'adminPassword' );
             $this->form->addPersistentField( 'adminConfirm' );
-            $this->form->addPersistentField( 'initialData' );
+            $this->form->addPersistentField( 'initialData', 'default' );
             $this->form->addPersistentField( 'prefix085' );
 
             if ( $this->form->loadForm() )
@@ -208,6 +208,8 @@ class Admin_Setup_Install extends System_Web_Component
             if ( $this->serverName === null )
                 $this->serverName = $this->tr( 'My WebIssues Server' );
 
+            $this->dataOptions = $this->getDataOptions();
+
             return true;
         }
 
@@ -253,6 +255,7 @@ class Admin_Setup_Install extends System_Web_Component
         $options = array();
 
         $options[ '' ] = $this->tr( 'Do not install any issue types' );
+        $options[ 'default' ] = $this->tr( 'Install the default set of issue types' );
         $options[ 'import' ] = $this->tr( 'Import data from WebIssues Server 0.8.5' );
 
         return $options;
@@ -384,8 +387,15 @@ class Admin_Setup_Install extends System_Web_Component
             $installer->installSchema();
             $installer->installData( $this->serverName, $this->adminPassword );
 
-            if ( $this->initialData == 'import' )
-                $installer->importData( $this->prefix085 );
+            switch ( $this->initialData ) {
+                case 'default':
+                    $installer->installDefaultTypes();
+                    break;
+
+                case 'import':
+                    $installer->importData( $this->prefix085 );
+                    break;
+            }
 
             return true;
         } catch ( System_Db_Exception $e ) {

@@ -270,6 +270,249 @@ class Admin_Setup_Installer extends System_Web_Base
             $this->connection->execute( $query, $key, $value );
     }
 
+    public function installDefaultTypes()
+    {
+        $types = array(
+            array(
+                $this->tr( 'Forum' ),
+                array(),
+                array(),
+                array()
+            ),
+            array(
+                $this->tr( 'Bugs' ),
+                array(
+                    'assigned-to' => array(
+                        $this->tr( 'Assigned To', 'bug' ),
+                        'USER',
+                        array(
+                            'members' => 1
+                        )
+                    ),
+                    'status' => array(
+                        $this->tr( 'Status', 'bug' ),
+                        'ENUM',
+                        array(
+                            'items' => array( $this->tr( 'Active', 'bug' ), $this->tr( 'Resolved', 'bug' ), $this->tr( 'Closed', 'bug' ) ),
+                            'required' => 1,
+                            'default' => $this->tr( 'Active', 'bug' )
+                        )
+                    ),
+                    'reason' => array(
+                        $this->tr( 'Reason' ),
+                        'ENUM',
+                        array(
+                            'items' => array( $this->tr( 'Fixed' ), $this->tr( 'Obsolete' ), $this->tr( 'Duplicate' ),
+                                $this->tr( 'As Designed' ), $this->tr( 'Unable To Reproduce' ), $this->tr( 'Test Failed' ) )
+                        )
+                    ),
+                    'severity' => array(
+                        $this->tr( 'Severity', 'bug' ),
+                        'NUMERIC',
+                        array(
+                            'min-value' => '1',
+                            'max-value' => '3',
+                            'required' => 1,
+                            'default' => '2'
+                        )
+                    ),
+                    'version' => array(
+                        $this->tr( 'Version' ),
+                        'TEXT',
+                        array()
+                    )
+                ),
+                array( 'assigned-to', 'status', 'severity' ),
+                array(
+                    array(
+                        $this->tr( 'Created By Me', 'bug' ),
+                        array( 'assigned-to', 'status', 'severity' ),
+                        array(
+                            System_Api_Column::CreatedBy, 'EQ', '[Me]'
+                        )
+                    ),
+                    array(
+                        $this->tr( 'Active Bugs' ),
+                        array( 'assigned-to', 'severity' ),
+                        array(
+                            'status', 'EQ', $this->tr( 'Active', 'bug' )
+                        )
+                    ),
+                    array(
+                        $this->tr( 'My Active Bugs' ),
+                        array( System_Api_Column::CreatedDate, System_Api_Column::CreatedBy, 'severity' ),
+                        array(
+                            'assigned-to', 'EQ', '[Me]',
+                            'status', 'EQ', $this->tr( 'Active', 'bug' )
+                        )
+                    ),
+                    array(
+                        $this->tr( 'Unassigned Bugs' ),
+                        array( System_Api_Column::CreatedDate, System_Api_Column::CreatedBy, 'severity' ),
+                        array(
+                            'assigned-to', 'EQ', '',
+                            'status', 'EQ', $this->tr( 'Active', 'bug' )
+                        )
+                    ),
+                    array(
+                        $this->tr( 'Resolved Bugs' ),
+                        array( 'assigned-to', 'reason', 'severity' ),
+                        array(
+                            'status', 'EQ', $this->tr( 'Resolved', 'bug' )
+                        )
+                    )
+                )
+            ),
+            array(
+                $this->tr( 'Tasks' ),
+                array(
+                    'assigned-to' => array(
+                        $this->tr( 'Assigned To', 'task' ),
+                        'USER',
+                        array(
+                            'members' => 1
+                        )
+                    ),
+                    'status' => array(
+                        $this->tr( 'Status', 'task' ),
+                        'ENUM',
+                        array(
+                            'items' => array( $this->tr( 'Active', 'task' ), $this->tr( 'Implemented', 'task' ), $this->tr( 'Closed', 'task' ) ),
+                            'required' => 1,
+                            'default' => $this->tr( 'Active', 'task' )
+                        )
+                    ),
+                    'priority' => array(
+                        $this->tr( 'Priority', 'task' ),
+                        'NUMERIC',
+                        array(
+                            'min-value' => '1',
+                            'max-value' => '3',
+                            'required' => 1,
+                            'default' => '2'
+                        )
+                    ),
+                    'progress' => array(
+                        $this->tr( 'Progress' ),
+                        'NUMERIC',
+                        array(
+                            'min-value' => '0',
+                            'max-value' => '100',
+                        )
+                    ),
+                    'due-date' => array(
+                        $this->tr( 'Due Date' ),
+                        'DATETIME',
+                        array()
+                    )
+                ),
+                array( 'assigned-to', 'status', 'priority' ),
+                array(
+                    array(
+                        $this->tr( 'Created By Me', 'task' ),
+                        array( 'assigned-to', 'status', 'priority' ),
+                        array(
+                            System_Api_Column::CreatedBy, 'EQ', '[Me]'
+                        )
+                    ),
+                    array(
+                        $this->tr( 'Active Tasks' ),
+                        array( 'assigned-to', 'priority', 'progress', 'due-date' ),
+                        array(
+                            'status', 'EQ', $this->tr( 'Active', 'task' )
+                        )
+                    ),
+                    array(
+                        $this->tr( 'My Active Tasks' ),
+                        array( 'priority', 'progress', 'due-date' ),
+                        array(
+                            'assigned-to', 'EQ', '[Me]',
+                            'status', 'EQ', $this->tr( 'Active', 'task' )
+                        )
+                    ),
+                    array(
+                        $this->tr( 'Unassigned Tasks' ),
+                        array( 'priority', 'due-date' ),
+                        array(
+                            'assigned-to', 'EQ', '',
+                            'status', 'EQ', $this->tr( 'Active', 'task' )
+                        )
+                    ),
+                    array(
+                        $this->tr( 'Completed Tasks' ),
+                        array( 'assigned-to', 'priority' ),
+                        array(
+                            'status', 'EQ', $this->tr( 'Completed', 'task' )
+                        )
+                    )
+                )
+            )
+        );
+
+        foreach ( $types as $type ) {
+            $query = 'INSERT INTO {issue_types} ( type_name ) VALUES ( %s )';
+            $this->connection->execute( $query, $type[ 0 ] );
+
+            $typeId = $this->connection->getInsertId( 'types', 'type_id' );
+
+            $attributeIds = array();
+
+            foreach ( $type[ 1 ] as $attributeKey => $attribute ) {
+                $info = new System_Api_DefinitionInfo();
+                $info->setType( $attribute[ 1 ] );
+                foreach ( $attribute[ 2 ] as $key => $value )
+                    $info->setMetadata( $key, $value );
+
+                $query = 'INSERT INTO {attr_types} ( type_id, attr_name, attr_def ) VALUES ( %d, %s, %s )';
+                $this->connection->execute( $query, $typeId, $attribute[ 0 ], $info->toString() );
+
+                $attributeIds[ $attributeKey ] = $this->connection->getInsertId( 'attr_types', 'attr_id' );
+            }
+
+            if ( !empty( $attributeIds ) ) {
+                $query = 'INSERT INTO {view_settings} ( type_id, set_key, set_value ) VALUES ( %d, %s, %s )';
+                $this->connection->execute( $query, $typeId, 'attribute_order', join( ',', array_values( $attributeIds ) ) );
+            }
+
+            $columns = array( System_Api_Column::ID, System_Api_Column::Name, System_Api_Column::ModifiedDate, System_Api_Column::ModifiedBy );
+            foreach ( $type[ 2 ] as $attributeKey )
+                $columns[] = is_int( $attributeKey ) ? $attributeKey : System_Api_Column::UserDefined + $attributeIds[ $attributeKey ];
+
+            $info = new System_Api_DefinitionInfo();
+            $info->setType( 'VIEW' );
+            $info->setMetadata( 'columns', join( ',', $columns ) );
+            $info->setMetadata( 'sort-column', System_Api_Column::ID );
+
+            $query = 'INSERT INTO {view_settings} ( type_id, set_key, set_value ) VALUES ( %d, %s, %s )';
+            $this->connection->execute( $query, $typeId, 'default_view', $info->toString() );
+
+            foreach ( $type[ 3 ] as $view ) {
+                $columns = array( System_Api_Column::ID, System_Api_Column::Name, System_Api_Column::ModifiedDate, System_Api_Column::ModifiedBy );
+                foreach ( $view[ 1 ] as $attributeKey )
+                    $columns[] = is_int( $attributeKey ) ? $attributeKey : System_Api_Column::UserDefined + $attributeIds[ $attributeKey ];
+
+                $filters = array();
+                for ( $i = 0; $i < count( $view[ 2 ] ); $i += 3 ) {
+                    $info = new System_Api_DefinitionInfo();
+                    $info->setType( $view[ 2 ][ $i + 1 ] );
+                    $info->setMetadata( 'column', is_int( $view[ 2 ][ $i ] ) ? $view[ 2 ][ $i ] : System_Api_Column::UserDefined + $attributeIds[ $view[ 2 ][ $i ] ] );
+                    $info->setMetadata( 'value', $view[ 2 ][ $i + 2 ] );
+                    $filters[] = $info->toString();
+                }
+
+                $info = new System_Api_DefinitionInfo();
+                $info->setType( 'VIEW' );
+                $info->setMetadata( 'columns', join( ',', $columns ) );
+                $info->setMetadata( 'sort-column', System_Api_Column::ID );
+                if ( !empty( $filters ) )
+                    $info->setMetadata( 'filters', $filters );
+
+                $query = 'INSERT INTO {views} ( type_id, user_id, view_name, view_def ) VALUES ( %d, NULL, %s, %s )';
+                $this->connection->execute( $query, $typeId, $view[ 0 ], $info->toString() );
+            }
+        }
+    }
+
     public function importData( $prefix )
     {
         $this->generator->setIdentityInsert( 'users', true );
