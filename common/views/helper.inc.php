@@ -408,8 +408,16 @@ class Common_Views_Helper extends System_Web_Base
     {
         $result = array();
 
-        foreach ( $this->conditions as $condition )
-            $result[] = $this->columns[ $condition[ 'column' ] ] . ' ' . $this->conditionOperators[ $condition[ 'type' ] ] . ' ' . $condition[ 'value' ];
+        foreach ( $this->conditions as $condition ) {
+            $column = $this->columns[ $condition[ 'column' ] ];
+            $operator = $this->conditionOperators[ $condition[ 'type' ] ];
+            $value = $condition[ 'value' ];
+            if ( $value == '' )
+                $value = $this->tr( 'empty' );
+            else
+                $value = '"' . $value . '"';
+            $result[] = $column . ' ' . $operator . ' ' . $value;
+        }
 
         return $this->formatToString( $result, ' ' . $this->tr( 'AND' ) . ' ', $maxLength );
     }
