@@ -78,4 +78,24 @@ class Common_Application extends System_Web_Application
 
         $this->response->send();
     }
+
+    public function getManualUrl()
+    {
+        $language = $this->translator->getLanguage( System_Core_Translator::UserLanguage );
+
+        while ( $language != '' ) {
+            $url = '/doc/' . $language . '/index.html';
+
+            if ( file_exists( WI_ROOT_DIR . $url ) )
+                return $url;
+
+            $pos = strrpos( $language, '_' );
+            if ( $pos === false )
+                break;
+
+            $language = substr( $language, 0, $pos );
+        }
+
+        return '/doc/en/index.html';
+    }
 }

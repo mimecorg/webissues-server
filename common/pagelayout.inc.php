@@ -106,6 +106,8 @@ class Common_PageLayout extends System_Web_Component
 
         $this->icon = '/common/images/webissues.ico';
 
+        $this->manualUrl = $application->getManualUrl();
+
         if ( $application->isDebugInfoEnabled() && $application->getFatalError() == null ) {
             $this->errors = array();
             foreach ( $application->getErrors() as $exception )
