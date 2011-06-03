@@ -8,5 +8,5 @@
 <dt><?php echo $this->imageAndTextLink( '/client/tools/preferences.php', '/common/images/preferences-16.png', $this->tr( 'User Preferences' ) ) ?></dt>
 <dd><?php echo $this->tr( 'Configure your user preferences.' ) ?></dd>
 <dt><?php echo $this->imageAndTextLink( '/client/tools/about.php', '/common/images/about-16.png', $this->tr( 'About WebIssues' ) ) ?></dt>
-<dd><?php echo $this->tr( 'Display information about WebIssues.' ) ?></dd>
+<dd><?php echo $this->tr( 'Show information about WebIssues.' ) ?></dd>
 </dl>
