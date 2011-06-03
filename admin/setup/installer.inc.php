@@ -377,7 +377,7 @@ class Admin_Setup_Installer extends System_Web_Base
                         $this->tr( 'Status', 'task' ),
                         'ENUM',
                         array(
-                            'items' => array( $this->tr( 'Active', 'task' ), $this->tr( 'Implemented', 'task' ), $this->tr( 'Closed', 'task' ) ),
+                            'items' => array( $this->tr( 'Active', 'task' ), $this->tr( 'Completed', 'task' ), $this->tr( 'Closed', 'task' ) ),
                             'required' => 1,
                             'default' => $this->tr( 'Active', 'task' )
                         )
