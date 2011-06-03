@@ -343,7 +343,7 @@ class Admin_Setup_Install extends System_Web_Component
     {
         switch ( $this->engine ) {
             case 'mysqli':
-                if ( !$this->checkDatabaseVersion( '4.1.2' ) )
+                if ( !$this->checkDatabaseVersion( '5.0.15' ) )
                     return false;
 
                 $connection = System_Core_Application::getInstance()->getConnection();
@@ -352,6 +352,11 @@ class Admin_Setup_Install extends System_Web_Component
                     $this->form->setError( 'connection', $this->tr( 'Database does not support InnoDB storage which is required by WebIssues Server.' ) );
                     return false;
                 }
+                break;
+
+            case 'pgsql':
+                if ( !$this->checkDatabaseVersion( '8.0' ) )
+                    return false;
                 break;
 
             case 'mssql':
