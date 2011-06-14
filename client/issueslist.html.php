@@ -1,12 +1,14 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<div style="float: right">
+<div style="float: right; max-width: 75%; text-align: right; line-height: 20px">
 <?php $toolBar->render() ?>
 </div>
 
 <h2><?php echo $folderName ?></h2>
 
-<div style="float: right">
+<div style="clear: both"></div>
+
+<div style="float: right; line-height: 20px">
 <?php $viewToolBar->render() ?>
 </div>
 
