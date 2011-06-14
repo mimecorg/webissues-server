@@ -139,7 +139,8 @@ class Common_Tools_Preferences extends System_Web_Component
         $fields[ 'summary_days' ] = 'summaryDays';
         $fields[ 'summary_hours' ] = 'summaryHours';
 
-        $this->days = System_Web_LocaleHelper::getDaysOfWeek();
+        $helper = new System_Web_LocaleHelper();
+        $this->days = $helper->getDaysOfWeek();
         foreach ( $this->days as $numericDay => $textDay ) {
             $fieldName = 'day' . $numericDay;
             $this->form->addField( $fieldName, false );
