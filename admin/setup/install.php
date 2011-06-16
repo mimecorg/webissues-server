@@ -182,7 +182,7 @@ class Admin_Setup_Install extends System_Web_Component
                 $this->form->addItemsRule( 'engine', $this->engineOptions );
                 $this->form->addTextRule( 'host', System_Const::NameMaxLength );
                 $this->form->addTextRule( 'database', System_Const::NameMaxLength );
-                $this->form->addTextRule( 'user', System_Const::LoginMaxLength, ( $this->engine == 'mssql' ) ? System_Api_Parser::AllowEmpty : 0 );
+                $this->form->addTextRule( 'user', System_Const::LoginMaxLength, System_Api_Parser::AllowEmpty );
                 $this->form->addTextRule( 'password', System_Const::PasswordMaxLength, System_Api_Parser::AllowEmpty );
                 $this->form->addTextRule( 'prefix', System_Const::NameMaxLength, System_Api_Parser::AllowEmpty );
                 break;

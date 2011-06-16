@@ -119,7 +119,11 @@ case 'new_site': ?>
 
 <p><?php echo $this->tr( 'The new server will be installed in the selected database.' ) ?></p>
 
-<?php if ( $initialData == 'import' ): ?>
+<?php if ( $initialData == 'default' ): ?>
+
+<p><?php echo $this->tr( 'The default set of issue types will be created.' ) ?></p>
+
+<?php elseif ( $initialData == 'import' ): ?>
 
 <p><?php echo $this->tr( 'Existing data will be imported from the following server:' ) ?></p>
 
