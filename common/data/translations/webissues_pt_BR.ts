@@ -219,64 +219,64 @@
         <translation>Informação Geral</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.php" line="52"/>
-        <source>Rename Server</source>
-        <translation>Renomear o Servidor</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/info/index.php" line="53"/>
-        <source>Generate New Unique ID</source>
-        <translation>Gerar uma Nova ID Única</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/info/index.html.php" line="4"/>
-        <source>Server Information</source>
-        <translation>Informações do Servidor</translation>
+        <location filename="../../../admin/info/index.html.php" line="8"/>
+        <source>Database</source>
+        <translation>Banco de Dados</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="12"/>
-        <source>Version:</source>
-        <translation>Versão:</translation>
+        <source>Database server:</source>
+        <translation>Servidor de banco de dados:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="16"/>
-        <source>Name:</source>
-        <translation>Nome:</translation>
+        <source>Host name:</source>
+        <translation>Nome do host:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="20"/>
-        <source>Unique ID:</source>
-        <translation>ID Única:</translation>
+        <source>Database name:</source>
+        <translation>Nome do Banco de Dados:</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="28"/>
+        <location filename="../../../admin/info/index.html.php" line="24"/>
+        <source>Table prefix:</source>
+        <translation>Prefixo da tabela:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="32"/>
         <source>Cron Job</source>
         <translation>Cron Job</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="30"/>
-        <source>The cron job is required for the email notifications to work.</source>
-        <translation>O cron job é necessário para as notificações de e-mail trabalharem.</translation>
+        <location filename="../../../admin/info/index.html.php" line="36"/>
+        <source>Cron is running:</source>
+        <translation>Cron esta em execução:</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="33"/>
-        <source>The cron job was never started.</source>
-        <translation>O cron job nunca foi inicializado.</translation>
+        <location filename="../../../admin/info/index.html.php" line="37"/>
+        <source>yes</source>
+        <translation>sim</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="35"/>
+        <location filename="../../../admin/info/index.html.php" line="37"/>
+        <source>no</source>
+        <translation>não</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="40"/>
+        <source>Cron last run:</source>
+        <translation>Cron última execução:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="41"/>
+        <source>never</source>
+        <translation>nunca</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="61"/>
         <source>The cron job was not started within the last 24 hours.</source>
         <translation>O cron job não foi inicializado nas últimas 24 horas.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/info/index.html.php" line="38"/>
-        <source>The cron job is currently running.</source>
-        <translation>O cron job está atualmente rodando.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/info/index.html.php" line="39"/>
-        <source>The last cron job was started on %1.</source>
-        <translation>O último cron job foi inicializado em %1.</translation>
     </message>
 </context>
 <context>
@@ -308,6 +308,126 @@
     </message>
 </context>
 <context>
+    <name>Admin_Info_Server</name>
+    <message>
+        <location filename="../../../admin/info/server.inc.php" line="37"/>
+        <source>Rename Server</source>
+        <translation>Renomear o Servidor</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/server.inc.php" line="38"/>
+        <source>Generate New Unique ID</source>
+        <translation>Gerar uma Nova ID Única</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/server.html.php" line="4"/>
+        <source>Server Information</source>
+        <translation>Informações do Servidor</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/server.html.php" line="14"/>
+        <source>Database version:</source>
+        <translation>Versão do Banco de Dados:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/server.html.php" line="18"/>
+        <source>Server name:</source>
+        <translation>Nome do Servidor:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/server.html.php" line="22"/>
+        <source>Unique identifier:</source>
+        <translation>Identificador Único:</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Info_Site</name>
+    <message>
+        <location filename="../../../admin/info/site.inc.php" line="53"/>
+        <location filename="../../../admin/info/site.inc.php" line="55"/>
+        <source>Cannot access directory &apos;%1&apos;.</source>
+        <translation>Não é possível acessar diretório &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.inc.php" line="57"/>
+        <source>Cannot access file &apos;%1&apos;.</source>
+        <translation>Não é possível acessar arquivo &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="4"/>
+        <source>Site Configuration</source>
+        <translation>Configuração do Site</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="8"/>
+        <source>Site name:</source>
+        <translation>Nome do Site:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="12"/>
+        <source>Base URL address:</source>
+        <translation>Endereço URL Base:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="16"/>
+        <source>Site directory:</source>
+        <translation>Diretório do Site:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="20"/>
+        <source>Debugging log file:</source>
+        <translation>Depuração de arquivo de log:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="21"/>
+        <source>disabled</source>
+        <comment>log file</comment>
+        <translation>desabilitado</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="24"/>
+        <source>Debugging information:</source>
+        <translation>Iinformações de depuração:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="25"/>
+        <source>enabled</source>
+        <comment>debug info</comment>
+        <translation>habilitado</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="25"/>
+        <source>disabled</source>
+        <comment>debug info</comment>
+        <translation>desabilitado</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="34"/>
+        <source>Environment</source>
+        <translation>Ambiente</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="38"/>
+        <source>PHP version:</source>
+        <translation>Versão PHP:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="42"/>
+        <source>Web server:</source>
+        <translation>Servidor Web:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="46"/>
+        <source>Operating system:</source>
+        <translation>Sistema Operacional:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="50"/>
+        <source>Host name:</source>
+        <translation>Nome do Host:</translation>
+    </message>
+</context>
+<context>
     <name>Admin_Settings_Index</name>
     <message>
         <location filename="../../../admin/settings/index.php" line="33"/>
@@ -315,53 +435,53 @@
         <translation>Configurações do Servidor</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="73"/>
-        <location filename="../../../admin/settings/index.php" line="81"/>
+        <location filename="../../../admin/settings/index.php" line="69"/>
+        <location filename="../../../admin/settings/index.php" line="76"/>
         <source>%1 kB</source>
         <translation>%1 kB</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="75"/>
+        <location filename="../../../admin/settings/index.php" line="71"/>
         <source>%1 MB</source>
         <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="79"/>
+        <location filename="../../../admin/settings/index.php" line="74"/>
         <source>Never</source>
         <translation>Nunca</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="82"/>
+        <location filename="../../../admin/settings/index.php" line="77"/>
         <source>Always</source>
         <translation>Sempre</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="87"/>
+        <location filename="../../../admin/settings/index.php" line="81"/>
         <source>%1 minutes</source>
         <translation>%1 minutos</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="88"/>
+        <location filename="../../../admin/settings/index.php" line="82"/>
         <source>1 hour</source>
         <translation>1 hora</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="90"/>
+        <location filename="../../../admin/settings/index.php" line="84"/>
         <source>%1 hours</source>
         <translation>%1 horas</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="93"/>
+        <location filename="../../../admin/settings/index.php" line="87"/>
         <source>1 day</source>
         <translation>1 dia</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="95"/>
+        <location filename="../../../admin/settings/index.php" line="89"/>
         <source>%1 days</source>
         <translation>%1 dias</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="98"/>
+        <location filename="../../../admin/settings/index.php" line="92"/>
         <source>Use cron job</source>
         <translation>Cron job do usuário</translation>
     </message>
@@ -386,62 +506,62 @@
         <translation>Tamanho máximo do anexo:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="19"/>
+        <location filename="../../../admin/settings/index.html.php" line="18"/>
         <source>Attachment Storage</source>
         <translation>Armazenar Anexo</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="21"/>
+        <location filename="../../../admin/settings/index.html.php" line="20"/>
         <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
         <translation>O tamanho máximo (em bytes) de arquivos que serão armazenados no banco de dados. Os arquivos maiores serão armazenados no sistema de arquivos.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="23"/>
+        <location filename="../../../admin/settings/index.html.php" line="22"/>
         <source>Maximum database storage size:</source>
         <translation>O tamanho máximo de armazenamento de banco de dados:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="29"/>
+        <location filename="../../../admin/settings/index.html.php" line="27"/>
         <source>Maximum Lifetime</source>
         <translation>Vida Máxima</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="31"/>
+        <location filename="../../../admin/settings/index.html.php" line="29"/>
         <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
         <translation>O tempo máximo depois do qual as sessões inativas e eventos no log de eventos são suprimidos.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="33"/>
+        <location filename="../../../admin/settings/index.html.php" line="31"/>
         <source>Session lifetime:</source>
         <translation>Vida da Seção:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="34"/>
+        <location filename="../../../admin/settings/index.html.php" line="32"/>
         <source>Event log lifetime:</source>
         <translation>Vida do log de eventos:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="39"/>
+        <location filename="../../../admin/settings/index.html.php" line="37"/>
         <source>Garbage Collection</source>
         <translation>Coleta de Lixo</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="41"/>
+        <location filename="../../../admin/settings/index.html.php" line="39"/>
         <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
         <translation>A probabilidade de coleta de lixo após cada solicitação. Se a tarefa do cron job é usada para coleta de lixo, verifique se ele está sendo executado.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="43"/>
+        <location filename="../../../admin/settings/index.html.php" line="41"/>
         <source>GC probability:</source>
         <translation>GC probabilidade:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="48"/>
+        <location filename="../../../admin/settings/index.html.php" line="46"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="49"/>
+        <location filename="../../../admin/settings/index.html.php" line="47"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -552,69 +672,79 @@
 <context>
     <name>Admin_Setup_Install</name>
     <message>
-        <location filename="../../../admin/setup/install.php" line="247"/>
-        <source>Invalid file name &apos;%1&apos;.</source>
-        <translation>Nome de arquivo inválido &apos;%1&apos;.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.php" line="255"/>
-        <source>Directory &apos;%1&apos; does not exist.</source>
-        <translation>O diretório &apos;%1&apos; não existe.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.php" line="258"/>
-        <source>Directory &apos;%1&apos; is not writable.</source>
-        <translation>O diretório &apos;%1&apos; não pode ser escrito.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.php" line="235"/>
+        <location filename="../../../admin/setup/install.php" line="232"/>
         <source>No supported database engines are available in this PHP installation.</source>
         <translation>Nenhuma ferramenta de banco de dados de suporte estão disponíveis nesta instalação do PHP.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="73"/>
+        <location filename="../../../admin/setup/install.php" line="77"/>
         <location filename="../../../admin/setup/install.html.php" line="9"/>
-        <location filename="../../../admin/setup/install.html.php" line="125"/>
         <source>Server Configuration</source>
         <translation>Configuração do Servidor</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="74"/>
+        <location filename="../../../admin/setup/install.php" line="78"/>
         <source>Configure your WebIssues Server</source>
         <translation>Configure seu Servidoe Webissues</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="197"/>
+        <location filename="../../../admin/setup/install.php" line="209"/>
         <source>My WebIssues Server</source>
         <translation>Meu Servidor Webissues</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="290"/>
+        <location filename="../../../admin/setup/install.php" line="257"/>
+        <source>Do not install any issue types</source>
+        <translation>Não instale qualquer tipo de questão</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="258"/>
+        <source>Install the default set of issue types</source>
+        <translation>Instale o conjunto padrão de tipos de questão</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="259"/>
+        <source>Import data from WebIssues Server 0.8.5</source>
+        <translation>Importar dados do Servidor WebIssues 0.8.5</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="278"/>
         <source>Could not connect to database. Please check connection details and try again.</source>
         <translation>Não foi possível conectar ao banco de dados. Veja os detalhes da conexão e tente novamente.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="327"/>
+        <location filename="../../../admin/setup/install.php" line="299"/>
+        <source>The existing version of the database cannot be used with this version of WebIssues Server.</source>
+        <translation>A versão existente do banco de dados não pode ser usado com esta versão do Servidor WebIssues.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="307"/>
+        <location filename="../../../admin/setup/install.php" line="338"/>
         <source>Could not retrieve information from the database.</source>
         <translation>Não foi possível recuperar informações do banco de dados.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="341"/>
+        <location filename="../../../admin/setup/install.php" line="320"/>
+        <source>No data tables were found in the database.</source>
+        <translation>Não foram encontrados tabelas de dados no banco de dados.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="328"/>
+        <source>The existing version of the database cannot be imported.</source>
+        <translation>A versão existente do banco de dados não pode ser importado.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="352"/>
         <source>Database does not support InnoDB storage which is required by WebIssues Server.</source>
         <translation>Banco de dados não oferece suporte InnoDB para armazenagem que é exigida pelo servidor WebIssues.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="362"/>
+        <location filename="../../../admin/setup/install.php" line="378"/>
         <source>Database version %1 is older than minimum required version %2.</source>
         <translation>O Banco de Dados versão %1 é mais antigo que a versão %2 mínima exigida.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="392"/>
-        <source>Administrator</source>
-        <translation>Administrador</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.php" line="424"/>
+        <location filename="../../../admin/setup/install.php" line="430"/>
         <source>The configuration file could not be written.</source>
         <translation>O arquivo de configuração não pôde ser gravado.</translation>
     </message>
@@ -632,16 +762,6 @@
         <location filename="../../../admin/setup/install.html.php" line="35"/>
         <source>Language:</source>
         <translation>Idioma:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="42"/>
-        <source>NOTE: THIS IS AN ALPHA RELEASE, USE IT FOR TESTING PURPOSES ONLY.</source>
-        <translation>NOTA: ESTA É UMA VERSÃO ALPHA, UTILISE APENAS PARA TESTE.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="45"/>
-        <source>Site Information</source>
-        <translation>Informação do Site</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="6"/>
@@ -664,56 +784,32 @@
         <translation>Ir para %1 para continuar a configuração deste servidor.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="53"/>
-        <source>Base URL address:</source>
-        <translation>Base endereço URL:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="66"/>
-        <location filename="../../../admin/setup/install.html.php" line="70"/>
-        <location filename="../../../admin/setup/install.html.php" line="74"/>
-        <source>ok</source>
-        <translation>ok</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="69"/>
-        <source>Storage directory:</source>
-        <translation>Diretório de armazenamento:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="70"/>
-        <location filename="../../../admin/setup/install.html.php" line="74"/>
-        <location filename="../../../admin/setup/install.html.php" line="78"/>
-        <source>disabled</source>
-        <translation>desabilitado</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="90"/>
+        <location filename="../../../admin/setup/install.html.php" line="50"/>
         <source>Database Engine</source>
         <translation>Ferramenta de Banco de Dados</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="122"/>
+        <location filename="../../../admin/setup/install.html.php" line="82"/>
         <source>Please enter the parameters of the new server.</source>
         <translation>Por favor insira os parâmetros do novo servidor.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="127"/>
+        <location filename="../../../admin/setup/install.html.php" line="87"/>
         <source>Enter the name of this server.</source>
         <translation>Digite o nome do servidor.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="136"/>
+        <location filename="../../../admin/setup/install.html.php" line="96"/>
         <source>The Administrator user account will be created allowing you to log in to the server and change its settings.</source>
         <translation>A conta de usuário Administrador será criada, permitindo que você faça logon no servidor e alterar suas configurações.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="154"/>
+        <location filename="../../../admin/setup/install.html.php" line="85"/>
         <source>Server Information</source>
         <translation>Informações do Servidor</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="87"/>
+        <location filename="../../../admin/setup/install.html.php" line="47"/>
         <source>Please enter information required to connect to the database.</source>
         <translation>Por favor insira as informações necessárias para se conectar ao banco de dados.</translation>
     </message>
@@ -728,150 +824,347 @@
         <translation>Este assistente irá ajudá-lo a configurar o servidor WebIssues.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="61"/>
-        <source>Site Status</source>
-        <translation>Status do site</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="65"/>
-        <source>Configuration file:</source>
-        <translation>O arquivo de configuração:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="73"/>
-        <source>Debugging log file:</source>
-        <translation>Depuração de arquivo de log:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="77"/>
-        <source>Debugging information:</source>
-        <translation>As informações de depuração:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="78"/>
-        <source>enabled</source>
-        <translation>habilitado</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="92"/>
+        <location filename="../../../admin/setup/install.html.php" line="52"/>
         <source>Select the type of the database to use:</source>
         <translation>Selecione o tipo de banco de dados para uso:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="99"/>
+        <location filename="../../../admin/setup/install.html.php" line="59"/>
         <source>Connection Details</source>
         <translation>Detalhes da Conexão</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="101"/>
+        <location filename="../../../admin/setup/install.html.php" line="61"/>
         <source>Host name:</source>
         <translation>Nome do host:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="102"/>
+        <location filename="../../../admin/setup/install.html.php" line="62"/>
         <source>Database name:</source>
         <translation>Nome do Banco de Dados:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="103"/>
+        <location filename="../../../admin/setup/install.html.php" line="63"/>
         <source>User name:</source>
         <translation>Nome do Usuário:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="104"/>
-        <location filename="../../../admin/setup/install.html.php" line="139"/>
+        <location filename="../../../admin/setup/install.html.php" line="64"/>
+        <location filename="../../../admin/setup/install.html.php" line="99"/>
         <source>Password:</source>
         <translation>Senha:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="111"/>
+        <location filename="../../../admin/setup/install.html.php" line="71"/>
         <source>Table Prefix</source>
         <translation>Prefixo de Tabela</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="115"/>
-        <source>Prefix:</source>
-        <translation>Prefixo:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="148"/>
-        <source>The database is already configured. It is not compatible with this version of WebIssues Server.</source>
-        <translation>O banco de dados já está configurado. Ele não é compatível com esta versão do Servidor WebIssues.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="150"/>
-        <source>The database is already configured. It will not be modified during the installation.</source>
-        <translation>O banco de dados já está configurado. Não vai ser modificado durante a instalação.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="157"/>
-        <source>Version:</source>
-        <translation>Versão:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="161"/>
-        <source>Name:</source>
-        <translation>Nome:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="165"/>
-        <source>Unique ID:</source>
-        <translation>ID Única:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="181"/>
+        <location filename="../../../admin/setup/install.html.php" line="154"/>
         <source>&amp;lt; Back</source>
         <translation>&amp;lt; Voltar</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="197"/>
+        <location filename="../../../admin/setup/install.html.php" line="169"/>
         <source>Installation in progress...</source>
         <translation>Instalação em progresso ...</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="49"/>
-        <source>Site name:</source>
-        <translation>Nome do Site:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="113"/>
+        <location filename="../../../admin/setup/install.html.php" line="73"/>
         <source>You can enter an optional prefix for table names. This allows installing multiple servers using the same database.</source>
         <translation>Você pode inserir um prefixo opcional para nomes de tabela. Isto permite a instalação de vários servidores usando o mesmo banco de dados.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="129"/>
+        <location filename="../../../admin/setup/install.html.php" line="75"/>
+        <source>Table prefix:</source>
+        <translation>Prefixo da tabela:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="89"/>
         <source>Server name:</source>
         <translation>Nome do Servidir:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="134"/>
+        <location filename="../../../admin/setup/install.html.php" line="94"/>
         <source>Administrator Account</source>
         <translation>Administrador da Conta</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="138"/>
+        <location filename="../../../admin/setup/install.html.php" line="98"/>
         <source>Login:</source>
         <translation>Nome de Usuário:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="140"/>
+        <location filename="../../../admin/setup/install.html.php" line="100"/>
         <source>Confirm password:</source>
         <translation>Confirmar Senha:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="178"/>
+        <location filename="../../../admin/setup/install.html.php" line="105"/>
+        <source>Initial Configuration</source>
+        <translation>Configuração Inicial</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="107"/>
+        <source>Select the initial configuration of this server:</source>
+        <translation>Selecionar a configuração inicial deste servidor:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="111"/>
+        <source>When importing data, enter an optional prefix for source table names.</source>
+        <translation>Ao importar dados, digite um prefixo opcional para nomes de tabela de origem.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="113"/>
+        <source>Source prefix:</source>
+        <translation>Prefixo de origem:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="120"/>
+        <source>The new server will be installed in the selected database.</source>
+        <translation>O novo servidor será instalado no banco de dados selecionado.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="124"/>
+        <source>The default set of issue types will be created.</source>
+        <translation>O conjunto padrão de tipos de questões será criado.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="128"/>
+        <source>Existing data will be imported from the following server:</source>
+        <translation>Os dados existentes serão importados do seguinte servidor:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="134"/>
+        <source>No issue types will be created on this server.</source>
+        <translation>Nenhum tipo de questão será criado no servidor.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="141"/>
+        <source>The server is already configured. It will not be modified during the installation.</source>
+        <translation>O servidor já está configurado. Não vai ser modificado durante a instalação.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="151"/>
         <source>Refresh</source>
         <translation>Recarregar</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="184"/>
+        <location filename="../../../admin/setup/install.html.php" line="157"/>
         <source>Next &amp;gt;</source>
         <translation>Próximo &amp;gt;</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="187"/>
+        <location filename="../../../admin/setup/install.html.php" line="160"/>
         <source>Install</source>
         <translation>Instalar</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Setup_Installer</name>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="254"/>
+        <source>Administrator</source>
+        <translation>Administrador</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="277"/>
+        <source>Forum</source>
+        <translation>Forum</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="283"/>
+        <source>Bugs</source>
+        <translation>Bugs</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="286"/>
+        <source>Assigned To</source>
+        <comment>bug</comment>
+        <translation>Atribuído A</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="293"/>
+        <source>Status</source>
+        <comment>bug</comment>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="296"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="338"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="346"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="354"/>
+        <source>Active</source>
+        <comment>bug</comment>
+        <translation>Ativo</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="296"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
+        <source>Resolved</source>
+        <comment>bug</comment>
+        <translation>Resolvido</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="296"/>
+        <source>Closed</source>
+        <comment>bug</comment>
+        <translation>Fechado</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="302"/>
+        <source>Reason</source>
+        <translation>Razão</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="305"/>
+        <source>Fixed</source>
+        <translation>Resolvido</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="305"/>
+        <source>Obsolete</source>
+        <translation>Obsoleto</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="305"/>
+        <source>Duplicate</source>
+        <translation>Duplicado</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="306"/>
+        <source>As Designed</source>
+        <translation>Como Designado</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="306"/>
+        <source>Unable To Reproduce</source>
+        <translation>Não é possível reproduzir</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="306"/>
+        <source>Test Failed</source>
+        <translation>Falha de teste</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="310"/>
+        <source>Severity</source>
+        <comment>bug</comment>
+        <translation>Severidade</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
+        <source>Version</source>
+        <translation>Versão</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="328"/>
+        <source>Created By Me</source>
+        <comment>bug</comment>
+        <translation>Criado Por Mim</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="335"/>
+        <source>Active Bugs</source>
+        <translation>Bugs Ativos</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="342"/>
+        <source>My Active Bugs</source>
+        <translation>Meus Bugs Ativos</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="350"/>
+        <source>Unassigned Bugs</source>
+        <translation>Bugs não Designados</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
+        <source>Resolved Bugs</source>
+        <translation>Bugs Resolvidos</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <source>Tasks</source>
+        <translation>Tarefas</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
+        <source>Assigned To</source>
+        <comment>task</comment>
+        <translation>Designado Para</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="377"/>
+        <source>Status</source>
+        <comment>task</comment>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="380"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="422"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="430"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="438"/>
+        <source>Active</source>
+        <comment>task</comment>
+        <translation>Ativo</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="380"/>
+        <source>Closed</source>
+        <comment>task</comment>
+        <translation>Fechado</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="386"/>
+        <source>Priority</source>
+        <comment>task</comment>
+        <translation>Prioridade</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="396"/>
+        <source>Progress</source>
+        <translation>Progresso</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="404"/>
+        <source>Due Date</source>
+        <translation>Data de Vencimento</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="412"/>
+        <source>Created By Me</source>
+        <comment>task</comment>
+        <translation>Criado Por Mim</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
+        <source>Active Tasks</source>
+        <translation>Tarefas Ativas</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="426"/>
+        <source>My Active Tasks</source>
+        <translation>Minhas Tarefas Ativas</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="434"/>
+        <source>Unassigned Tasks</source>
+        <translation>Terefas Não Designadas</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
+        <source>Completed Tasks</source>
+        <translation>Tarefas Finalizadas</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="380"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
+        <source>Completed</source>
+        <comment>task</comment>
+        <translation>Finalizada</translation>
     </message>
 </context>
 <context>
@@ -1097,8 +1390,8 @@
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="6"/>
-        <source>&lt;strong&gt;Warning:&lt;/strong&gt; All current values of this attribute will be deleted.</source>
-        <translation>&lt;strong&gt;Atenção:&lt;/strong&gt; Todos os valores atuais deste atributo serão excluídos.</translation>
+        <source>&lt;strong&gt;Warning:&lt;/strong&gt; All current and historical values of this attribute will be deleted.</source>
+        <translation>&lt;strong&gt;Atenção:&lt;/strong&gt; Todos os valores atuais e históricos deste atributo serão apagados.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="12"/>
@@ -1812,11 +2105,6 @@
         <translation>Deletar Alerta</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.php" line="127"/>
-        <source>%1 new, %2 modified, %3 total issues</source>
-        <translation>%1 nova, %2 modificada, %3 total de notificações</translation>
-    </message>
-    <message>
         <location filename="../../../client/alerts/index.html.php" line="7"/>
         <source>Edit alert settings for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation>Editar configurações de alerta para a pasta &lt;strong&gt;%1&lt;/strong&gt;.</translation>
@@ -1828,16 +2116,26 @@
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="14"/>
-        <source>Status</source>
-        <translation>Estado</translation>
+        <source>Total</source>
+        <translation>Total</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="15"/>
+        <source>Unread</source>
+        <translation>Não Lido</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="16"/>
+        <source>Modified</source>
+        <translation>Modificado</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="18"/>
         <source>Email Type</source>
         <translation>Tipo de Email</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="51"/>
+        <location filename="../../../client/alerts/index.html.php" line="55"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -1878,7 +2176,7 @@
 <context>
     <name>Client_Index</name>
     <message>
-        <location filename="../../../client/index.php" line="45"/>
+        <location filename="../../../client/index.php" line="47"/>
         <source>Web Client</source>
         <translation>Client Web</translation>
     </message>
@@ -2008,28 +2306,23 @@
         <translation>Última edição:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="159"/>
-        <source>Unknown Attribute</source>
-        <translation>Atributo Desconhecido</translation>
-    </message>
-    <message>
+        <location filename="../../../client/issuedetails.html.php" line="196"/>
         <location filename="../../../client/issuedetails.html.php" line="197"/>
-        <location filename="../../../client/issuedetails.html.php" line="198"/>
         <source>Unknown Folder</source>
         <translation>Pasta Desconhecida</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="199"/>
+        <location filename="../../../client/issuedetails.html.php" line="198"/>
         <source>Folder</source>
         <translation>Pasta</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="216"/>
+        <location filename="../../../client/issuedetails.html.php" line="215"/>
         <source>There are no comments.</source>
         <translation>Não existe nenum comentário.</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="218"/>
+        <location filename="../../../client/issuedetails.html.php" line="217"/>
         <source>There are no attachments.</source>
         <translation>Não existe nenhum anexo.</translation>
     </message>
@@ -2139,12 +2432,12 @@
         <translation>Gerenciar Visualização</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="14"/>
+        <location filename="../../../client/issueslist.html.php" line="16"/>
         <source>Select view:</source>
         <translation>Selecionar Visualização:</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="15"/>
+        <location filename="../../../client/issueslist.html.php" line="17"/>
         <source>Go</source>
         <translation>Ir</translation>
     </message>
@@ -2355,12 +2648,12 @@
 <context>
     <name>Client_Issues_Issue</name>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="51"/>
+        <location filename="../../../client/issues/issue.inc.php" line="50"/>
         <source>Edit Attributes</source>
         <translation>Adicionar Atributos</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="67"/>
+        <location filename="../../../client/issues/issue.inc.php" line="66"/>
         <source>Add Issue</source>
         <translation>Adicionar Questão</translation>
     </message>
@@ -2886,6 +3179,112 @@
     </message>
 </context>
 <context>
+    <name>Client_Tools_About</name>
+    <message>
+        <location filename="../../../client/tools/about.php" line="33"/>
+        <source>About WebIssues</source>
+        <translation>Sobre o WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="5"/>
+        <source>WebIssues %1</source>
+        <translation>WebIssues %1</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="7"/>
+        <source>Issue tracking and team collaboration system.</source>
+        <translation>Acompanhamento de questões e sistema de colaboração em equipe.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="12"/>
+        <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</source>
+        <translation>Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da licença GNU Affero General Public License conforme publicada pela Free Software Foundation, tanto a versão 3 da Licença, ou (a seu critério) qualquer versão posterior.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="14"/>
+        <source>Copyright &amp;copy; 2006 Michał Męciński</source>
+        <translation>Copyright &amp;copy; 2006 Michał Męciński</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="15"/>
+        <source>Copyright &amp;copy; 2007-2011 WebIssues Team</source>
+        <translation>Copyright &amp;copy; 2007-2011 WebIssues Team</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="18"/>
+        <source>Help</source>
+        <translation>Ajuda</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="20"/>
+        <source>Open the WebIssues Manual for help.</source>
+        <translation>Abra o Manual WebIssues para obter ajuda.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="23"/>
+        <source>Manual</source>
+        <translation>Manual</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="29"/>
+        <source>Web Page</source>
+        <translation>Página Web</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="31"/>
+        <source>Visit %1 for more information about WebIssues.</source>
+        <translation>Visite %1 para obter mais informações sobre WebIssues.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="36"/>
+        <source>Donations</source>
+        <translation>Doações</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="38"/>
+        <source>If you like this program, your donation will help us dedicate more time for it, support it and implement new features.</source>
+        <translation>Se você gosta deste programa, a sua doação vai nos ajudar a dedicar mais tempo para ele, desenvolve-lo e implementar novas funcionalidades.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="41"/>
+        <source>Donate</source>
+        <translation>Doar</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/about.html.php" line="47"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+</context>
+<context>
+    <name>Client_Tools_GoToItem</name>
+    <message>
+        <location filename="../../../client/tools/gotoitem.php" line="33"/>
+        <source>Go To Item</source>
+        <translation>Ir para o Item</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/gotoitem.html.php" line="3"/>
+        <source>Enter the identifier of an issue, comment or attachment.</source>
+        <translation>Digite o identificador de uma questão, comentário ou anexo.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/gotoitem.html.php" line="7"/>
+        <source>ID:</source>
+        <translation>ID:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/gotoitem.html.php" line="10"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/gotoitem.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
     <name>Client_Tools_Index</name>
     <message>
         <location filename="../../../client/tools/index.php" line="33"/>
@@ -2894,23 +3293,43 @@
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="4"/>
+        <source>Go To Item</source>
+        <translation>Ir para o Item</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/index.html.php" line="5"/>
+        <source>Go to item with given identifier.</source>
+        <translation>Vá ao item com determinado identificador.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/index.html.php" line="6"/>
         <source>Change Password</source>
         <translation>Trocar Senha</translation>
     </message>
     <message>
-        <location filename="../../../client/tools/index.html.php" line="5"/>
+        <location filename="../../../client/tools/index.html.php" line="7"/>
         <source>Change your password.</source>
         <translation>Trocar sua senha.</translation>
     </message>
     <message>
-        <location filename="../../../client/tools/index.html.php" line="6"/>
+        <location filename="../../../client/tools/index.html.php" line="8"/>
         <source>User Preferences</source>
         <translation>Preferências do Usuário</translation>
     </message>
     <message>
-        <location filename="../../../client/tools/index.html.php" line="7"/>
+        <location filename="../../../client/tools/index.html.php" line="9"/>
         <source>Configure your user preferences.</source>
         <translation>Configurar suas preferências de usuário.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/index.html.php" line="10"/>
+        <source>About WebIssues</source>
+        <translation>Sobre WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/index.html.php" line="11"/>
+        <source>Show information about WebIssues.</source>
+        <translation>Mostrar informações sobre o WebIssues.</translation>
     </message>
 </context>
 <context>
@@ -3184,17 +3603,22 @@
         <translation>WebIssues %1</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="50"/>
+        <location filename="../../pagelayout.html.php" line="37"/>
+        <source>Manual</source>
+        <translation>Manual</translation>
+    </message>
+    <message>
+        <location filename="../../pagelayout.html.php" line="51"/>
         <source>Logged in as: %1</source>
         <translation>Conectado como: %1</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="51"/>
+        <location filename="../../pagelayout.html.php" line="52"/>
         <source>Tools</source>
         <translation>Ferramentas</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="52"/>
+        <location filename="../../pagelayout.html.php" line="53"/>
         <source>Log Out</source>
         <translation>Sair</translation>
     </message>
@@ -3501,7 +3925,12 @@
         <translation>descendente</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="414"/>
+        <location filename="../../views/helper.inc.php" line="416"/>
+        <source>empty</source>
+        <translation>vazio</translation>
+    </message>
+    <message>
+        <location filename="../../views/helper.inc.php" line="422"/>
         <source>AND</source>
         <translation>E</translation>
     </message>
@@ -4245,7 +4674,7 @@
     <name>System_Web_JavaScript</name>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="136"/>
-        <location filename="../../../system/web/javascript.inc.php" line="162"/>
+        <location filename="../../../system/web/javascript.inc.php" line="164"/>
         <source>Choose</source>
         <translation>Escolha</translation>
     </message>
@@ -4258,6 +4687,16 @@
         <location filename="../../../system/web/javascript.inc.php" line="143"/>
         <source>Previous</source>
         <translation>Anterior</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="144"/>
+        <source>Today</source>
+        <translation>Hoje</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="145"/>
+        <source>Close</source>
+        <translation>Fechar</translation>
     </message>
 </context>
 <context>
