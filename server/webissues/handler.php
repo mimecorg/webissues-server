@@ -130,7 +130,7 @@ class Server_WebIssues_Handler implements Server_IHandler
 
     public function setReply( $reply )
     {
-        if ( $this->commandInfo->getMetadata( 'attachment' ) )
+        if ( $this->commandInfo != null && $this->commandInfo->getMetadata( 'attachment' ) )
             throw new System_Core_Exception( "Expected binary response" );
 
         $protocol = System_Core_IniFile::parseRaw( '/common/data/protocol.ini' );
