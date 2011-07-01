@@ -50,6 +50,8 @@ class System_Api_ServerManager extends System_Api_Base
             $query = 'SELECT server_name, server_uuid, db_version FROM {server}';
 
             self::$server = $this->connection->queryRow( $query );
+
+            self::$server[ 'server_version' ] = WI_VERSION;
         }
 
         return self::$server;
