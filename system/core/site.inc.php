@@ -204,7 +204,7 @@ class System_Core_Site
 
         $parsed = parse_url( $url );
         $hosts = isset( $parsed[ 'host' ] ) ? explode( '.', $parsed[ 'host' ] ) : array();
-        $paths = isset( $parsed[ 'path' ] ) ? explode( '/', $parsed[ 'path' ] ) : array( '/' );
+        $paths = isset( $parsed[ 'path' ] ) ? explode( '/', $parsed[ 'path' ] ) : array( '' );
         $port = isset( $parsed[ 'port' ] ) ? $parsed[ 'port' ] : '';
 
         for ( $i = count( $paths ); $i >= 1; $i-- ) {
