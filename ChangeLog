@@ -1,3 +1,13 @@
+1.0-beta1 (2011-07-08)
+    * added initial version of WebIssues Manual
+    * added support for PostgreSQL database
+    * installation of default issue types
+    * migration of data from version 0.8.5
+    * no need for default value when attribute is required
+    * mark updated issues using bold font
+    * delete historical values of deleted attributes
+    * fixed wrong content type charset (bug #616)
+
 1.0-alpha4 (2011-03-15)
     * moving and deleting issues
     * editing and deleting comments and attachments
