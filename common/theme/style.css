@@ -360,6 +360,10 @@ table.grid tr.selected
   top: 0.2em;
 }
 
+.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary {
+  font-weight: normal;
+}
+
 .image-link {
   margin-right: 0.5em;
 }
