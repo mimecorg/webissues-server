@@ -91,6 +91,7 @@ class Admin_Types_Attribute extends System_Web_Component
         $this->form->addPersistentField( 'minimumLength' );
         $this->form->addPersistentField( 'maximumLength' );
         $this->form->addPersistentField( 'editable', 0 );
+        $this->form->addPersistentField( 'multiSelect', 0 );
         $this->form->addPersistentField( 'items', '' );
         $this->form->addPersistentField( 'decimalPlaces', 0 );
         $this->form->addPersistentField( 'minimumValue' );
@@ -256,6 +257,7 @@ class Admin_Types_Attribute extends System_Web_Component
 
             case 'ENUM':
                 $this->editable = $info->getMetadata( 'editable', 0 );
+                $this->multiSelect = $info->getMetadata( 'multi-select', 0 );
                 $this->items = join( "\n", $info->getMetadata( 'items' ) );
                 $this->minimumLength = $this->formatInteger( $info->getMetadata( 'min-length' ) );
                 $this->maximumLength = $this->formatInteger( $info->getMetadata( 'max-length' ) );
@@ -314,6 +316,8 @@ class Admin_Types_Attribute extends System_Web_Component
             case 'ENUM':
                 if ( $this->editable )
                     $info->setMetadata( 'editable', 1 );
+                if ( $this->multiSelect )
+                    $info->setMetadata( 'multi-select', 1 );
                 $info->setMetadata( 'items', $this->validateItems( 'items' ) );
                 if ( $this->editable ) {
                     $info->setMetadata( 'min-length', $this->validateInteger( 'minimumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty ) );

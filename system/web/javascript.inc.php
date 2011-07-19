@@ -62,6 +62,10 @@ class System_Web_JavaScript extends System_Web_Base
     * Include 'Today' button in the date picker.
     */
     const WithToday = 2;
+    /**
+    * Allow selecting multiple items in the autocomplete control.
+    */
+    const MultiSelect = 4;
     /*@}*/
 
     /**
@@ -89,8 +93,10 @@ class System_Web_JavaScript extends System_Web_Base
                 break;
 
             case 'ENUM':
-                if ( $info->getMetadata( 'editable', 0 ) )
-                    $this->registerAutocomplete( $selector, $info->getMetadata( 'items' ) );
+                if ( $info->getMetadata( 'editable', 0 ) || $info->getMetadata( 'multi-select', 0 ) ) {
+                    $this->registerAutocomplete( $selector, $info->getMetadata( 'items' ),
+                        $info->getMetadata( 'multi-select', 0 ) ? self::MultiSelect : 0 );
+                }
                 break;
 
             default:
@@ -153,8 +159,9 @@ class System_Web_JavaScript extends System_Web_Base
     * Registers an autocomplete control.
     * @param $selector The jQuery selector of the control.
     * @param $items Items for autocomplete.
+    * @param $flags If MultiSelect is set then multiple items can be entered.
     */
-    public function registerAutocomplete( $selector, $items )
+    public function registerAutocomplete( $selector, $items, $flags = 0 )
     {
         $this->registerScripts( array( 'bgiframe', 'ui.core', 'ui.widget', 'ui.position', 'ui.autocomplete', 'autocompletebutton' ) );
         $this->registerCss( array( 'ui.autocomplete' ) );
@@ -163,6 +170,7 @@ class System_Web_JavaScript extends System_Web_Base
             $( '$selector' ).autocompletebutton( {
                 buttonText: " . $this->escape( $this->tr( 'Choose' ) ) . ",
                 buttonImage: " . $this->escape( $this->url( '/common/images/arrow-down-16.png' ) ) . ",
+                multiSelect: " . ( ( $flags & self::MultiSelect ) ? 'true' : 'false' ) . ",
                 source: " . $this->escapeArray( $items ) . " } );" );
     }
 

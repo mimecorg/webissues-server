@@ -196,8 +196,20 @@ class System_Api_Parser extends System_Api_Validator
 
         switch ( $info->getType() ) {
             case 'TEXT':
-            case 'ENUM':
             case 'USER':
+                break;
+
+            case 'ENUM':
+                if ( $info->getMetadata( 'multi-select', 0 ) ) {
+                    $items = array();
+                    $parts = explode( ',', $value );
+                    foreach ( $parts as $part ) {
+                        $part = trim( $part );
+                        if ( $part != '' && array_search( $part, $items ) === false )
+                            $items[] = $part;
+                    }
+                    $value = join( ', ', $items );
+                }
                 break;
 
             case 'NUMERIC':

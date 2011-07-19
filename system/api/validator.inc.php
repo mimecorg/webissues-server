@@ -282,6 +282,7 @@ class System_Api_Validator
             case 'ENUM':
                 $requiredKeys[ 'items' ] = 'a';
                 $optionalKeys[ 'editable' ] = 'i';
+                $optionalKeys[ 'multi-select' ] = 'i';
                 $optionalKeys[ 'max-length' ] = 'i';
                 $optionalKeys[ 'min-length' ] = 'i';
                 break;
@@ -319,6 +320,7 @@ class System_Api_Validator
                 case 'required':
                 case 'multi-line':
                 case 'editable':
+                case 'multi-select':
                 case 'strip':
                 case 'time':
                 case 'local':
@@ -465,8 +467,18 @@ class System_Api_Validator
             case 'ENUM':
                 if ( !$info->getMetadata( 'editable', 0 ) ) {
                     $items = $info->getMetadata( 'items' );
-                    if ( array_search( $value, $items ) === false )
-                        throw new System_Api_Error( System_Api_Error::NoMatchingItem );
+                    if ( $info->getMetadata( 'multi-select', 0 ) ) {
+                        $parts = explode( ', ', $value );
+                        if ( count( array_unique( $parts ) ) != count( $parts ) )
+                            throw new System_Api_Error( System_Api_Error::DuplicateItems );
+                        foreach ( $parts as $part ) {
+                            if ( array_search( $part, $items ) === false )
+                                throw new System_Api_Error( System_Api_Error::NoMatchingItem );
+                        }
+                    } else {
+                        if ( array_search( $value, $items ) === false )
+                            throw new System_Api_Error( System_Api_Error::NoMatchingItem );
+                    }
                 } else {
                     $this->checkLength( $value, $info->getMetadata( 'min-length' ), $info->getMetadata( 'max-length' ) );
                 }

@@ -53,6 +53,8 @@ case 'ENUM': ?>
 
 <?php $form->renderRadioGroup( 'editable', $editableOptions ) ?>
 
+<?php $form->renderCheckBox( $this->tr( 'Allow selecting multiple items' ), 'multiSelect' ) ?>
+
 <p><?php echo $this->tr( 'Enter one dropdown list item per line.' ) ?></p>
 
 <?php $form->renderTextArea( $this->tr( 'Dropdown list items:' ), 'items', array( 'cols' => 40, 'rows' => 6 ) ) ?>

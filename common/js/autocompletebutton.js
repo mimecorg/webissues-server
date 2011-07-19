@@ -20,13 +20,36 @@
 ( function( $ ) {
     $.widget( "ui.autocompletebutton", {
         options: {
-            minLength: 0
+            minLength: 0,
+            multiSelect: false
         },
         _create: function() {
             var self = this;
-            self.element.autocomplete( {
+            self.element.bind( "keydown", function( event ) {
+				if ( event.keyCode === $.ui.keyCode.TAB && $( this ).data( "autocomplete" ).menu.active )
+					event.preventDefault();
+			} ).autocomplete( {
                 minLength: self.options.minLength,
-                source: self.options.source
+                source: self.options.multiSelect ? function( request, response ) {
+                    var term = request.term;
+                    if ( self.options.multiSelect )
+                        term = term.split( /,\s*/ ).pop();
+                    response( $.ui.autocomplete.filter( self.options.source, term ) );
+                } : self.options.source,
+                focus: function() {
+                    if ( !self.options.multiSelect )
+                        return true;
+                    return false;
+                },
+                select: function( event, ui ) {
+                    if ( !self.options.multiSelect )
+                        return true;
+                    var parts = this.value.split( /,\s*/ );
+                    parts.pop();
+                    parts.push( ui.item.value );
+                    this.value = parts.join( ", " );
+                    return false;
+                }
             } );
             var url = self.options.buttonImage;
             var text = self.options.buttonText;

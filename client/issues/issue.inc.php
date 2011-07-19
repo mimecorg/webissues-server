@@ -142,7 +142,7 @@ class Client_Issues_Issue extends System_Web_Component
                     break;
 
                 case 'ENUM':
-                    if ( !$info->getMetadata( 'editable', 0 ) )
+                    if ( !$info->getMetadata( 'editable', 0 ) && !$info->getMetadata( 'multi-select', 0 ) )
                         $items = $info->getMetadata( 'items' );
                     else
                         $maxLength = $info->getMetadata( 'max-length', $maxLength );
