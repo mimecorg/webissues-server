@@ -200,16 +200,8 @@ class System_Api_Parser extends System_Api_Validator
                 break;
 
             case 'ENUM':
-                if ( $info->getMetadata( 'multi-select', 0 ) ) {
-                    $items = array();
-                    $parts = explode( ',', $value );
-                    foreach ( $parts as $part ) {
-                        $part = trim( $part );
-                        if ( $part != '' && array_search( $part, $items ) === false )
-                            $items[] = $part;
-                    }
-                    $value = join( ', ', $items );
-                }
+                if ( $info->getMetadata( 'multi-select', 0 ) )
+                    $value = $this->normalizeList( $value );
                 break;
 
             case 'NUMERIC':
@@ -291,5 +283,20 @@ class System_Api_Parser extends System_Api_Validator
 
         if ( $matches[ 'i' ] > 59 )
             throw new System_Api_Error( System_Api_Error::InvalidTime );
+    }
+
+    private function normalizeList( $value )
+    {
+        $result = array();
+
+        $parts = explode( ',', $value );
+
+        foreach ( $parts as $part ) {
+            $part = trim( $part );
+            if ( $part != '' )
+                $result[] = $part;
+        }
+
+        return join( ', ', $result );
     }
 }

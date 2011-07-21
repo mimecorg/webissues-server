@@ -173,6 +173,8 @@ class System_Web_ErrorHelper extends System_Web_Base
                 return $this->tr( 'Cannot reuse password; choose different password' );
             case System_Api_Error::ItemNotFound:
                 return $this->tr( 'The specified item was not found' );
+            case System_Api_Error::CommaNotAllowed:
+                return $this->tr( 'Value cannot contain a comma' );
             default:
                 return '';
         }

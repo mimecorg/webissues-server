@@ -83,6 +83,7 @@ class System_Api_Error extends System_Core_Exception
     const MustChangePassword = '352 Must Change Password';
     const CannotReusePassword = '353 Cannot Reuse Password';
     const ItemNotFound = '354 Item Not Found';
+    const CommaNotAllowed = '355 Comma Not Allowed';
 
     public function __construct( $message, $wrappedException = null )
     {

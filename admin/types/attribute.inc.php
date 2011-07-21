@@ -178,19 +178,11 @@ class Admin_Types_Attribute extends System_Web_Component
                     $this->form->addTextRule( 'attributeName', System_Const::NameMaxLength );
                 switch ( $this->type ) {
                     case 'TEXT':
-                        $this->multiLineOptions = array(
-                            0 => $this->tr( 'Single line of text' ),
-                            1 => $this->tr( 'Multiple lines of text' ) );
-                        $this->form->addItemsRule( 'multiLine', $this->multiLineOptions );
                         $this->form->addTextRule( 'minimumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
                         $this->form->addTextRule( 'maximumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
                         break;
 
                     case 'ENUM':
-                        $this->editableOptions = array(
-                            0 => $this->tr( 'Allow only values from the list' ),
-                            1 => $this->tr( 'Allow entering custom values' ) );
-                        $this->form->addItemsRule( 'editable', $this->editableOptions );
                         $this->form->addTextRule( 'items', null, System_Api_Parser::MultiLine );
                         $this->form->addTextRule( 'minimumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
                         $this->form->addTextRule( 'maximumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
@@ -319,7 +311,7 @@ class Admin_Types_Attribute extends System_Web_Component
                 if ( $this->multiSelect )
                     $info->setMetadata( 'multi-select', 1 );
                 $info->setMetadata( 'items', $this->validateItems( 'items' ) );
-                if ( $this->editable ) {
+                if ( $this->editable && !$this->multiSelect ) {
                     $info->setMetadata( 'min-length', $this->validateInteger( 'minimumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty ) );
                     $info->setMetadata( 'max-length', $this->validateInteger( 'maximumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty ) );
                 } else {

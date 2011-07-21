@@ -43,7 +43,7 @@ case 'details': ?>
 <?php switch ( $type ):
 case 'TEXT': ?>
 
-<?php $form->renderRadioGroup( 'multiLine', $multiLineOptions ) ?>
+<?php $form->renderCheckBox( $this->tr( 'Allow entering multiple lines of text' ), 'multiLine' ) ?>
 
 <?php $form->renderText( $this->tr( 'Minimum length:' ), 'minimumLength', array( 'size' => 40 ) ) ?>
 <?php $form->renderText( $this->tr( 'Maximum length:' ), 'maximumLength', array( 'size' => 40 ) ) ?>
@@ -51,15 +51,15 @@ case 'TEXT': ?>
 <?php break;
 case 'ENUM': ?>
 
-<?php $form->renderRadioGroup( 'editable', $editableOptions ) ?>
+<?php $form->renderCheckBox( $this->tr( 'Allow entering custom values' ), 'editable' ) ?>
 
 <?php $form->renderCheckBox( $this->tr( 'Allow selecting multiple items' ), 'multiSelect' ) ?>
 
 <p><?php echo $this->tr( 'Enter one dropdown list item per line.' ) ?></p>
 
-<?php $form->renderTextArea( $this->tr( 'Dropdown list items:' ), 'items', array( 'cols' => 40, 'rows' => 6 ) ) ?>
+<?php $form->renderTextArea( $this->tr( 'Dropdown list items:' ), 'items', array( 'cols' => 40, 'rows' => 10 ) ) ?>
 
-<p><?php echo $this->tr( 'The following settings can only be used when entering custom values is allowed.' ) ?></p>
+<p><?php echo $this->tr( 'The following settings can only be used when entering custom values is allowed and selecting multiple items is not allowed.' ) ?></p>
 
 <?php $form->renderText( $this->tr( 'Minimum length:' ), 'minimumLength', array( 'size' => 40 ) ) ?>
 <?php $form->renderText( $this->tr( 'Maximum length:' ), 'maximumLength', array( 'size' => 40 ) ) ?>

@@ -365,15 +365,20 @@ class System_Api_Validator
 
             case 'ENUM':
                 $editable = $info->getMetadata( 'editable', 0 );
+                $multiSelect = $info->getMetadata( 'multi-select', 0 );
                 $minLength = $info->getMetadata( 'min-length' );
                 $maxLength = $info->getMetadata( 'max-length' );
-                if ( !$editable && ( $minLength !== null || $maxLength !== null ) )
+                if ( ( !$editable || $multiSelect ) && ( $minLength !== null || $maxLength !== null ) )
                     throw new System_Api_Error( System_Api_Error::InvalidDefinition );
                 if ( $minLength !== null && $maxLength !== null && (int)$minLength > (int)$maxLength )
                     throw new System_Api_Error( System_Api_Error::InvalidLimits );
                 if ( $minLength !== null || $maxLength !== null ) {
                     foreach ( $info->getMetadata( 'items' ) as $item )
                         $this->checkLength( $item, $minLength, $maxLength );
+                }
+                if ( $multiSelect ) {
+                    foreach ( $info->getMetadata( 'items' ) as $item )
+                        $this->checkItem( $item );
                 }
                 break;
 
@@ -465,22 +470,29 @@ class System_Api_Validator
                 break;
 
             case 'ENUM':
-                if ( !$info->getMetadata( 'editable', 0 ) ) {
-                    $items = $info->getMetadata( 'items' );
-                    if ( $info->getMetadata( 'multi-select', 0 ) ) {
+                if ( $info->getMetadata( 'multi-select', 0 ) ) {
+                    $this->checkList( $value );
+
+                    if ( !$info->getMetadata( 'editable', 0 ) ) {
+                        $items = $info->getMetadata( 'items' );
                         $parts = explode( ', ', $value );
-                        if ( count( array_unique( $parts ) ) != count( $parts ) )
-                            throw new System_Api_Error( System_Api_Error::DuplicateItems );
+
                         foreach ( $parts as $part ) {
                             if ( array_search( $part, $items ) === false )
                                 throw new System_Api_Error( System_Api_Error::NoMatchingItem );
                         }
-                    } else {
-                        if ( array_search( $value, $items ) === false )
-                            throw new System_Api_Error( System_Api_Error::NoMatchingItem );
+
+                        if ( count( array_unique( $parts ) ) != count( $parts ) )
+                            throw new System_Api_Error( System_Api_Error::DuplicateItems );
                     }
                 } else {
-                    $this->checkLength( $value, $info->getMetadata( 'min-length' ), $info->getMetadata( 'max-length' ) );
+                    if ( !$info->getMetadata( 'editable', 0 ) ) {
+                        $items = $info->getMetadata( 'items' );
+                        if ( array_search( $value, $items ) === false )
+                            throw new System_Api_Error( System_Api_Error::NoMatchingItem );
+                    } else {
+                        $this->checkLength( $value, $info->getMetadata( 'min-length' ), $info->getMetadata( 'max-length' ) );
+                    }
                 }
                 break;
 
@@ -907,5 +919,19 @@ class System_Api_Validator
 
         if ( count( array_unique( $items ) ) != count( $items ) )
             throw new System_Api_Error( System_Api_Error::DuplicateItems );
+    }
+
+    private function checkList( $value )
+    {
+        $itemPattern = '[^, ]+(?: [^, ]+)*';
+
+        if ( !preg_match( "/^$itemPattern(?:, $itemPattern)*$/", $value ) )
+            throw new System_Api_Error( System_Api_Error::InvalidFormat );
+    }
+
+    private function checkItem( $item )
+    {
+        if ( strpos( $item, ',' ) !== false )
+            throw new System_Api_Error( System_Api_Error::CommaNotAllowed );
     }
 }
