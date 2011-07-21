@@ -115,6 +115,8 @@ class Admin_Types_Index extends System_Web_Component
             case 'ENUM':
                 if ( $info->getMetadata( 'editable', 0 ) )
                     $details[] = $this->tr( 'Editable' );
+                if ( $info->getMetadata( 'multi-select', 0 ) )
+                    $details[] = $this->tr( 'Multiple selection' );
                 $details[] = $this->tr( 'Items: %1', null, join( ', ', $info->getMetadata( 'items' ) ) );
                 $minLength = $info->getMetadata( 'min-length' );
                 if ( $minLength !== null )
