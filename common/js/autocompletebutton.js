@@ -26,19 +26,29 @@
         _create: function() {
             var self = this;
             self.element.bind( "keydown", function( event ) {
-				if ( event.keyCode === $.ui.keyCode.TAB && $( this ).data( "autocomplete" ).menu.active )
-					event.preventDefault();
-			} ).autocomplete( {
+                if ( event.keyCode === $.ui.keyCode.TAB && $( this ).data( "autocomplete" ).menu.active )
+                    event.preventDefault();
+            } );
+            self.element.autocomplete( {
                 minLength: self.options.minLength,
-                source: self.options.multiSelect ? function( request, response ) {
+                source: function( request, response ) {
                     var term = request.term;
                     if ( self.options.multiSelect )
                         term = term.split( /,\s*/ ).pop();
-                    response( $.ui.autocomplete.filter( self.options.source, term ) );
-                } : self.options.source,
-                focus: function() {
+                    var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( term ), "i" );
+                    response( $.grep( self.options.source, function( value ) {
+                        return matcher.test( value.label || value.value || value );
+                    } ) );
+                },
+                focus: function( event, ui ) {
                     if ( !self.options.multiSelect )
                         return true;
+                    if ( /^key/.test( event.originalEvent.originalEvent.type ) ) {
+                        var parts = this.value.split( /,\s*/ );
+                        parts.pop();
+                        parts.push( ui.item.value );
+                        this.value = parts.join( ", " );
+                    }
                     return false;
                 },
                 select: function( event, ui ) {
