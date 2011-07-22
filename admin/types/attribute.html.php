@@ -80,7 +80,9 @@ case 'DATETIME': ?>
 <?php break;
 case 'USER': ?>
 
-<?php $form->renderRadioGroup( 'members', $membersOptions ) ?>
+<?php $form->renderCheckBox( $this->tr( 'Allow selecting only project members' ), 'members' ) ?>
+
+<?php $form->renderCheckBox( $this->tr( 'Allow selecting multiple items' ), 'multiSelect' ) ?>
 
 <?php break;
 endswitch ?>

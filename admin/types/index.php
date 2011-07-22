@@ -151,6 +151,8 @@ class Admin_Types_Index extends System_Web_Component
             case 'USER':
                 if ( $info->getMetadata( 'members', 0 ) )
                     $details[] = $this->tr( 'Members only' );
+                if ( $info->getMetadata( 'multi-select', 0 ) )
+                    $details[] = $this->tr( 'Multiple selection' );
                 break;
         }
 

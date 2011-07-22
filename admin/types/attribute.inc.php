@@ -203,10 +203,6 @@ class Admin_Types_Attribute extends System_Web_Component
                         break;
 
                     case 'USER':
-                        $this->membersOptions = array(
-                            0 => $this->tr( 'All users' ),
-                            1 => $this->tr( 'Only project members' ) );
-                        $this->form->addItemsRule( 'members', $this->membersOptions );
                         break;
                 }
                 break;
@@ -268,6 +264,7 @@ class Admin_Types_Attribute extends System_Web_Component
 
             case 'USER':
                 $this->members = $info->getMetadata( 'members', 0 );
+                $this->multiSelect = $info->getMetadata( 'multi-select', 0 );
                 break;
         }
 
@@ -339,6 +336,8 @@ class Admin_Types_Attribute extends System_Web_Component
             case 'USER':
                 if ( $this->members )
                     $info->setMetadata( 'members', 1 );
+                if ( $this->multiSelect )
+                    $info->setMetadata( 'multi-select', 1 );
                 break;
         }
 

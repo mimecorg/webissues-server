@@ -134,6 +134,8 @@ class Client_Issues_Issue extends System_Web_Component
             $items = null;
             $maxLength = System_Const::ValueMaxLength;
 
+            $selector = $this->form->getFieldSelector( 'value' . $attributeId );
+
             switch ( $info->getType() ) {
                 case 'TEXT':
                     if ( $info->getMetadata( 'multi-line', 0 ) )
@@ -142,10 +144,23 @@ class Client_Issues_Issue extends System_Web_Component
                     break;
 
                 case 'ENUM':
-                    if ( !$info->getMetadata( 'editable', 0 ) && !$info->getMetadata( 'multi-select', 0 ) )
-                        $items = $info->getMetadata( 'items' );
+                    if ( $info->getMetadata( 'multi-select', 0 ) ) {
+                        $this->javaScript->registerAutocomplete( $selector, $info->getMetadata( 'items' ), System_Web_JavaScript::MultiSelect );
+                    } else {
+                        if ( $info->getMetadata( 'editable', 0 ) ) {
+                            $this->javaScript->registerAutocomplete( $selector, $info->getMetadata( 'items' ) );
+                            $maxLength = $info->getMetadata( 'max-length', $maxLength );
+                        } else {
+                            $items = $info->getMetadata( 'items' );
+                        }
+                    }
+                    break;
+
+                case 'DATETIME':
+                    if ( $info->getMetadata( 'time', 0 ) )
+                        $this->javaScript->registerDatePicker( $selector, System_Web_JavaScript::WithTime );
                     else
-                        $maxLength = $info->getMetadata( 'max-length', $maxLength );
+                        $this->javaScript->registerDatePicker( $selector );
                     break;
 
                 case 'USER':
@@ -172,6 +187,10 @@ class Client_Issues_Issue extends System_Web_Component
                     } else {
                         $items = $allUsers;
                     }
+                    if ( $info->getMetadata( 'multi-select', 0 ) ) {
+                        $this->javaScript->registerAutocomplete( $selector, $items, System_Web_JavaScript::MultiSelect );
+                        $items = null;
+                    }
                     break;
             }
 
@@ -182,8 +201,6 @@ class Client_Issues_Issue extends System_Web_Component
             }
 
             $this->form->addField( 'value' . $attributeId );
-
-            $this->javaScript->registerAttribute( $this->form->getFieldSelector( 'value' . $attributeId ), $info );
 
             if ( $items !== null ) {
                 $this->form->addItemsRule( 'value' . $attributeId, $items );

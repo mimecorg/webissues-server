@@ -196,10 +196,10 @@ class System_Api_Parser extends System_Api_Validator
 
         switch ( $info->getType() ) {
             case 'TEXT':
-            case 'USER':
                 break;
 
             case 'ENUM':
+            case 'USER':
                 if ( $info->getMetadata( 'multi-select', 0 ) )
                     $value = $this->normalizeList( $value );
                 break;

@@ -301,6 +301,7 @@ class System_Api_Validator
 
             case 'USER':
                 $optionalKeys[ 'members' ] = 'i';
+                $optionalKeys[ 'multi-select' ] = 'i';
                 break;
 
             default:
@@ -511,7 +512,19 @@ class System_Api_Validator
             case 'USER':
                 $member = $info->getMetadata( 'member', 0 );
                 $userManager = new System_Api_UserManager();
-                $userManager->checkUserName( $value, $member ? $this->projectId : null );
+                if ( $info->getMetadata( 'multi-select', 0 ) ) {
+                    $this->checkList( $value );
+
+                    $parts = explode( ', ', $value );
+
+                    foreach ( $parts as $part )
+                        $userManager->checkUserName( $part, $member ? $this->projectId : null );
+
+                    if ( count( array_unique( $parts ) ) != count( $parts ) )
+                        throw new System_Api_Error( System_Api_Error::DuplicateItems );
+                } else {
+                    $userManager->checkUserName( $value, $member ? $this->projectId : null );
+                }
                 break;
 
             default:

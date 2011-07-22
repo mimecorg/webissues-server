@@ -80,31 +80,6 @@ class System_Web_JavaScript extends System_Web_Base
     }
 
     /**
-    * Register an attribute value control.
-    * @param $selector The jQuery selector of the control.
-    * @param $info A System_ApiDefinitionInfo object containing the definition
-    * of the attribute.
-    */
-    public function registerAttribute( $selector, $info )
-    {
-        switch ( $info->getType() ) {
-            case 'DATETIME':
-                $this->registerDatePicker( $selector, $info->getMetadata( 'time', 0 ) ? self::WithTime : 0 );
-                break;
-
-            case 'ENUM':
-                if ( $info->getMetadata( 'editable', 0 ) || $info->getMetadata( 'multi-select', 0 ) ) {
-                    $this->registerAutocomplete( $selector, $info->getMetadata( 'items' ),
-                        $info->getMetadata( 'multi-select', 0 ) ? self::MultiSelect : 0 );
-                }
-                break;
-
-            default:
-                break;
-        }
-    }
-
-    /**
     * Register date picker controls based on click events.
     * @param $selector The jQuery selector of the datePicker control.
     * @param $noTimeSelector The jQuery selector on which a click 
