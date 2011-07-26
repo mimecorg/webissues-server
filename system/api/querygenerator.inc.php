@@ -550,6 +550,19 @@ class System_Api_QueryGenerator
             case 'END':
                 $this->arguments[] = '%' . $this->escapeLike( $value );
                 return "$expression LIKE %s ESCAPE '!'";
+            case 'IN':
+                $items = explode( ', ', $value );
+                if ( count( $items >= 2 ) ) {
+                    $placeholders = array();
+                    foreach ( $items as $item ) {
+                        $this->arguments[] = $item;
+                        $placeholders[] = '%s';
+                    }
+                    return "$expression IN ( " . join( ', ', $placeholders ) . ' )';
+                } else {
+                    $this->arguments[] = $value;
+                    return "$expression = %s";
+                }
         }
     }
 

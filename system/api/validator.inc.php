@@ -848,8 +848,9 @@ class System_Api_Validator
             case 'TEXT':
             case 'ENUM':
             case 'USER':
-                $valueInfo->setType( 'TEXT' );
-                $filters = array_merge( $filters, array( 'CON', 'BEG', 'END' ) );
+                $valueInfo->setType( 'ENUM' );
+                $valueInfo->setMetadata( 'editable', 1 );
+                $filters = array_merge( $filters, array( 'CON', 'BEG', 'END', 'IN' ) );
                 break;
 
             case 'NUMERIC':
@@ -870,6 +871,9 @@ class System_Api_Validator
 
         if ( $type != 'EQ' && $type != 'NEQ' )
             $valueInfo->setMetadata( 'required', 1 );
+
+        if ( $type == 'IN' )
+            $valueInfo->setMetadata( 'multi-select', 1 );
 
         $value = $info->getMetadata( 'value' );
         $this->checkString( $value, System_Const::ValueMaxLength, self::AllowEmpty );

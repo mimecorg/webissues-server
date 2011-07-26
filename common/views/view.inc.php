@@ -326,6 +326,7 @@ class Common_Views_View extends System_Web_Component
                 $operators[ 'BEG' ] = $this->tr( 'begins with' );
                 $operators[ 'CON' ] = $this->tr( 'contains' );
                 $operators[ 'END' ] = $this->tr( 'ends with' );
+                $operators[ 'IN' ] = $this->tr( 'in list' );
                 break;
 
             case 'NUMERIC':
@@ -348,7 +349,7 @@ class Common_Views_View extends System_Web_Component
                 break;
 
             case 'ENUM':
-                $this->javaScript->registerAutocomplete( $selector, $info->getMetadata( 'items' ) );
+                $this->javaScript->registerAutocomplete( $selector, $info->getMetadata( 'items' ), System_Web_JavaScript::MultiSelect );
                 break;
 
             case 'USER':
@@ -356,7 +357,7 @@ class Common_Views_View extends System_Web_Component
                     $expressionHelper = new System_Web_ExpressionHelper();
                     $this->allUsers = $expressionHelper->getUserItems();
                 }
-                $this->javaScript->registerAutocomplete( $selector, $this->allUsers );
+                $this->javaScript->registerAutocomplete( $selector, $this->allUsers, System_Web_JavaScript::MultiSelect );
                 break;
         }
     }
@@ -386,6 +387,8 @@ class Common_Views_View extends System_Web_Component
                     $value = $parser->normalizeString( $value, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
 
                     $valueInfo = System_Api_DefinitionInfo::fromString( $this->valueDefinitions[ $column ] );
+                    if ( $info->getType() == 'IN' )
+                        $valueInfo->setMetadata( 'multi-select', 1 );
 
                     $value = $expressionHelper->parseExpression( $valueInfo->getType(), $this->valueDefinitions[ $column ], $value );
                     $this->$valueField = $expressionHelper->formatExpression( $valueInfo->getType(), $this->valueDefinitions[ $column ], $value );

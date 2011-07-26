@@ -101,6 +101,7 @@ class Common_Views_Helper extends System_Web_Base
             'BEG' => $this->tr( 'begins with' ),
             'CON' => $this->tr( 'contains' ),
             'END' => $this->tr( 'ends with' ),
+            'IN' => $this->tr( 'in' ),
             'EQ' => '=',
             'GT' => '>',
             'GTE' => '>=',
@@ -374,7 +375,8 @@ class Common_Views_Helper extends System_Web_Base
                 case 'TEXT':
                 case 'ENUM':
                 case 'USER':
-                    $valueInfo->setType( 'TEXT' );
+                    $valueInfo->setType( 'ENUM' );
+                    $valueInfo->setMetadata( 'editable', 1 );
                     break;
 
                 case 'NUMERIC':
