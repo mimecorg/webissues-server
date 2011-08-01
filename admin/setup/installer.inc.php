@@ -453,7 +453,7 @@ class Admin_Setup_Installer extends System_Web_Base
             $query = 'INSERT INTO {issue_types} ( type_name ) VALUES ( %s )';
             $this->connection->execute( $query, $type[ 0 ] );
 
-            $typeId = $this->connection->getInsertId( 'types', 'type_id' );
+            $typeId = $this->connection->getInsertId( 'issue_types', 'type_id' );
 
             $attributeIds = array();
 
