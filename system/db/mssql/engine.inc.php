@@ -37,6 +37,10 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
     const adVarBinary = 204;
     const adTypeBinary = 1;
     const adSaveCreateOverWrite = 2;
+    const adXactReadUncommitted = 256;
+    const adXactReadCommitted = 4096;
+    const adXactRepeatableRead = 65536;
+    const adXactSerializable = 1048576;
 
     private $connection = null;
 
@@ -51,12 +55,6 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
 
     public function open( $host, $database, $user, $password )
     {
-        try {
-            $this->connection = new COM( 'ADODB.Connection', null, CP_UTF8 );
-        } catch ( com_exception $ex ) {
-            throw new System_Db_Exception( null, $ex );
-        }
-
         $string = "Provider=sqloledb; Data Source=$host; Initial Catalog=$database";
         if ( $user != '' )
             $string .= "; User ID=$user; Password=$password";
@@ -64,6 +62,7 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
             $string .= "; Trusted_Connection=yes";
 
         try {
+            $this->connection = new COM( 'ADODB.Connection', null, CP_UTF8 );
             $this->connection->Open( $string );
         } catch ( com_exception $ex ) {
             throw new System_Db_Exception( null, $ex );
@@ -237,6 +236,45 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
                 return $this->connection->Properties[ 'DBMS Version' ];
             default:
                 return null;
+        }
+    }
+
+    public function beginTransaction( $level )
+    {
+        switch ( $level ) {
+            case System_Db_Transaction::ReadUncommitted:
+                $isoLevel = self::adXactReadUncommitted;
+                break;
+            case System_Db_Transaction::ReadCommitted:
+                $isoLevel = self::adXactReadCommitted;
+                break;
+            case System_Db_Transaction::RepeatableRead:
+                $isoLevel = self::adXactRepeatableRead;
+                break;
+            case System_Db_Transaction::Serializable:
+                $isoLevel = self::adXactSerializable;
+                break;
+            default:
+                throw new System_Db_Exception( 'Unsupported isolation level' );
+        }
+
+        try {
+            $this->connection->IsolationLevel = $isoLevel;
+            $this->connection->BeginTrans();
+        } catch ( com_exception $ex ) {
+            throw new System_Db_Exception( null, $ex );
+        }
+    }
+
+    public function endTransaction( $commit )
+    {
+        try {
+            if ( $commit )
+                $this->connection->CommitTrans();
+            else
+                $this->connection->RollbackTrans();
+        } catch ( com_exception $ex ) {
+            throw new System_Db_Exception( null, $ex );
         }
     }
 }

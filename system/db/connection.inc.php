@@ -74,6 +74,8 @@ class System_Db_Connection
 
     private $prefix = '';
 
+    private $transaction = null;
+
     /**
     * Constructor.
     */
@@ -427,6 +429,48 @@ class System_Db_Connection
     public function getParameter( $key )
     {
         return $this->engine->getParameter( $key );
+    }
+
+    /**
+    * Begin a transaction with given isolation level.
+    */
+    public function beginTransaction( $level = null )
+    {
+        if ( $this->transaction != null )
+            throw new System_Db_Exception( 'Nested transactions are not supported' );
+
+        if ( $level == null )
+            $level = System_Db_Transaction::ReadCommitted;
+
+        $debug = System_Core_Application::getInstance()->getDebug();
+        if ( $debug->checkLevel( DEBUG_SQL ) )
+            $debug->write( "Begin Transaction\n" );
+
+        $this->engine->beginTransaction( $level );
+        $this->transaction = new System_Db_Transaction( $this );
+
+        return $this->transaction;
+    }
+
+    /**
+    * Return the current transaction.
+    */
+    public function getTransaction()
+    {
+        return $this->transaction;
+    }
+
+    /**
+    * @internal
+    */
+    public function endTransaction( $commit = false )
+    {
+        $debug = System_Core_Application::getInstance()->getDebug();
+        if ( $debug->checkLevel( DEBUG_SQL ) )
+            $debug->write( $commit ? "Commit Transaction\n" : "Rollback Transaction\n" );
+
+        $this->engine->endTransaction( $commit );
+        $this->transaction = null;
     }
 
     private function buildQuery( $query, $args, &$params )

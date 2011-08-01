@@ -211,4 +211,44 @@ class System_Db_Mysqli_Engine implements System_Db_IEngine
             return null;
         return $row[ 'Value' ];
     }
+
+    public function beginTransaction( $level )
+    {
+        switch ( $level ) {
+            case System_Db_Transaction::ReadUncommitted:
+                $isoLevel = 'READ UNCOMMITTED';
+                break;
+            case System_Db_Transaction::ReadCommitted:
+                $isoLevel = 'READ COMMITTED';
+                break;
+            case System_Db_Transaction::RepeatableRead:
+                $isoLevel = 'REPEATABLE READ';
+                break;
+            case System_Db_Transaction::Serializable:
+                $isoLevel = 'SERIALIZABLE';
+                break;
+            default:
+                throw new System_Db_Exception( 'Unsupported isolation level' );
+        }
+
+        if ( !$this->connection->query( "SET TRANSACTION ISOLATION LEVEL $isoLevel" ) )
+            throw new System_Db_Exception( $this->connection->error );
+
+        if ( !$this->connection->autocommit( false ) )
+            throw new System_Db_Exception( $this->connection->error );
+    }
+
+    public function endTransaction( $commit )
+    {
+        if ( $commit )
+            $result = $this->connection->commit();
+        else
+            $result = $this->connection->rollback();
+
+        if ( !$result )
+            throw new System_Db_Exception( $this->connection->error );
+
+        if ( !$this->connection->autocommit( true ) )
+            throw new System_Db_Exception( $this->connection->error );
+    }
 }

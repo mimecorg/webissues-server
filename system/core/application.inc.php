@@ -376,6 +376,9 @@ abstract class System_Core_Application
         if ( !$this->response->isSending() && $this->fatalError == null )
             $this->handleException( new System_Core_Exception( 'Request terminated unexpectedly' ) );
 
+        if ( $this->connection->getTransaction() != null )
+            $this->handleException( new System_Core_Exception( 'Uncommitted transaction' ) );
+
         // display error page if necessary
         if ( $this->fatalError != null ) {
             try {
@@ -466,6 +469,16 @@ abstract class System_Core_Application
 
         if ( $this->fatalError == null )
             $this->fatalError = $exception;
+
+        // roll back any pending transaction before logging the error
+        if ( $this->loggingEnabled && $this->connection->getTransaction() != null ) {
+            try {
+                $this->connection->getTransaction()->rollback();
+            } catch ( Exception $ex ) {
+                $this->loggingEnabled = false;
+                $this->handleException( $ex );
+            }
+        }
 
         $this->logException( $exception );
     }

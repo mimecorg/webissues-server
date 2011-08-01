@@ -115,4 +115,14 @@ interface System_Db_IEngine
     * Get an engine-dependent parameter of the connection.
     */
     public function getParameter( $key );
+
+    /**
+    * Begin a transaction with given isolation level.
+    */
+    public function beginTransaction( $level );
+
+    /**
+    * Commit or rollback a transaction.
+    */
+    public function endTransaction( $commit );
 }

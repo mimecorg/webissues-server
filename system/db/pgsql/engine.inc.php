@@ -164,4 +164,44 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
                 return null;
         }
     }
+
+    public function beginTransaction( $level )
+    {
+        switch ( $level ) {
+            case System_Db_Transaction::ReadUncommitted:
+                $isoLevel = 'READ UNCOMMITTED';
+                break;
+            case System_Db_Transaction::ReadCommitted:
+                $isoLevel = 'READ COMMITTED';
+                break;
+            case System_Db_Transaction::RepeatableRead:
+                $isoLevel = 'REPEATABLE READ';
+                break;
+            case System_Db_Transaction::Serializable:
+                $isoLevel = 'SERIALIZABLE';
+                break;
+            default:
+                throw new System_Db_Exception( 'Unsupported isolation level' );
+        }
+
+        $result = pg_query( $this->connection, "BEGIN ISOLATION LEVEL $isoLevel" );
+
+        if ( !$result )
+            throw new System_Db_Exception( pg_last_error( $this->connection ) );
+
+        pg_free_result( $result );
+    }
+
+    public function endTransaction( $commit )
+    {
+        if ( $commit )
+            $result = pg_query( $this->connection, 'COMMIT' );
+        else
+            $result = pg_query( $this->connection, 'ROLLBACK' );
+
+        if ( !$result )
+            throw new System_Db_Exception( pg_last_error( $this->connection ) );
+
+        pg_free_result( $result );
+    }
 }
