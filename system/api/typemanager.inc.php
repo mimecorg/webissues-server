@@ -246,14 +246,25 @@ class System_Api_TypeManager extends System_Api_Base
     */
     public function addIssueType( $name )
     {
-        $query = 'SELECT type_id FROM {issue_types} WHERE type_name = %s';
-        if ( $this->connection->queryScalar( $query, $name ) !== false )
-            throw new System_Api_Error( System_Api_Error::TypeAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'INSERT INTO {issue_types} ( type_name ) VALUES ( %s )';
-        $this->connection->execute( $query, $name );
+        try {
+            $query = 'SELECT type_id FROM {issue_types} WHERE type_name = %s';
+            if ( $this->connection->queryScalar( $query, $name ) !== false )
+                throw new System_Api_Error( System_Api_Error::TypeAlreadyExists );
 
-        return $this->connection->getInsertId( 'types', 'type_id' );
+            $query = 'INSERT INTO {issue_types} ( type_name ) VALUES ( %s )';
+            $this->connection->execute( $query, $name );
+
+            $typeId = $this->connection->getInsertId( 'types', 'type_id' );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $typeId;
     }
 
     /**
@@ -271,12 +282,21 @@ class System_Api_TypeManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $query = 'SELECT type_id FROM {issue_types} WHERE type_name = %s';
-        if ( $this->connection->queryScalar( $query, $newName ) !== false )
-            throw new System_Api_Error( System_Api_Error::TypeAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
 
-        $query = 'UPDATE {issue_types} SET type_name = %s WHERE type_id = %d';
-        $this->connection->execute( $query, $newName, $typeId );
+        try {
+            $query = 'SELECT type_id FROM {issue_types} WHERE type_name = %s';
+            if ( $this->connection->queryScalar( $query, $newName ) !== false )
+                throw new System_Api_Error( System_Api_Error::TypeAlreadyExists );
+
+            $query = 'UPDATE {issue_types} SET type_name = %s WHERE type_id = %d';
+            $this->connection->execute( $query, $newName, $typeId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }
@@ -292,18 +312,27 @@ class System_Api_TypeManager extends System_Api_Base
     {
         $typeId = $type[ 'type_id' ];
 
-        if ( !( $flags & self::ForceDelete ) && $this->checkIssueTypeUsed( $type ) )
-            throw new System_Api_Error( System_Api_Error::CannotDeleteType );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'SELECT fl.file_id FROM {files} AS fl'
-            . ' JOIN {changes} ch ON ch.change_id = fl.file_id'
-            . ' JOIN {issues} i ON i.issue_id = ch.issue_id'
-            . ' JOIN {folders} f ON f.folder_id = i.folder_id'
-            . ' WHERE f.type_id = %d AND fl.file_storage = %d';
-        $files = $this->connection->queryTable( $query, $typeId, System_Api_IssueManager::FileSystemStorage );
+        try {
+            if ( !( $flags & self::ForceDelete ) && $this->checkIssueTypeUsed( $type ) )
+                throw new System_Api_Error( System_Api_Error::CannotDeleteType );
 
-        $query = 'DELETE FROM {issue_types} WHERE type_id = %d';
-        $this->connection->execute( $query, $typeId );
+            $query = 'SELECT fl.file_id FROM {files} AS fl'
+                . ' JOIN {changes} ch ON ch.change_id = fl.file_id'
+                . ' JOIN {issues} i ON i.issue_id = ch.issue_id'
+                . ' JOIN {folders} f ON f.folder_id = i.folder_id'
+                . ' WHERE f.type_id = %d AND fl.file_storage = %d';
+            $files = $this->connection->queryTable( $query, $typeId, System_Api_IssueManager::FileSystemStorage );
+
+            $query = 'DELETE FROM {issue_types} WHERE type_id = %d';
+            $this->connection->execute( $query, $typeId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         $issueManager = new System_Api_IssueManager();
         $issueManager->deleteFiles( $files );
@@ -336,14 +365,25 @@ class System_Api_TypeManager extends System_Api_Base
     {
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT attr_id FROM {attr_types} WHERE type_id = %d AND attr_name = %s';
-        if ( $this->connection->queryScalar( $query, $typeId, $name ) !== false )
-            throw new System_Api_Error( System_Api_Error::AttributeAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'INSERT INTO {attr_types} ( type_id, attr_name, attr_def ) VALUES ( %d, %s, %s )';
-        $this->connection->execute( $query, $typeId, $name, $definition );
+        try {
+            $query = 'SELECT attr_id FROM {attr_types} WHERE type_id = %d AND attr_name = %s';
+            if ( $this->connection->queryScalar( $query, $typeId, $name ) !== false )
+                throw new System_Api_Error( System_Api_Error::AttributeAlreadyExists );
 
-        return $this->connection->getInsertId( 'attr_types', 'attr_id' );
+            $query = 'INSERT INTO {attr_types} ( type_id, attr_name, attr_def ) VALUES ( %d, %s, %s )';
+            $this->connection->execute( $query, $typeId, $name, $definition );
+
+            $attributeId = $this->connection->getInsertId( 'attr_types', 'attr_id' );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $attributeId;
     }
 
     /**
@@ -362,12 +402,21 @@ class System_Api_TypeManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $query = 'SELECT attr_id FROM {attr_types} WHERE type_id = %d AND attr_name = %s';
-        if ( $this->connection->queryScalar( $query, $typeId, $newName ) !== false )
-            throw new System_Api_Error( System_Api_Error::AttributeAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
 
-        $query = 'UPDATE {attr_types} SET attr_name = %s WHERE attr_id = %d';
-        $this->connection->execute( $query, $newName, $attributeId );
+        try {
+            $query = 'SELECT attr_id FROM {attr_types} WHERE type_id = %d AND attr_name = %s';
+            if ( $this->connection->queryScalar( $query, $typeId, $newName ) !== false )
+                throw new System_Api_Error( System_Api_Error::AttributeAlreadyExists );
+
+            $query = 'UPDATE {attr_types} SET attr_name = %s WHERE attr_id = %d';
+            $this->connection->execute( $query, $newName, $attributeId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }
@@ -403,11 +452,20 @@ class System_Api_TypeManager extends System_Api_Base
     {
         $attributeId = $attribute[ 'attr_id' ];
 
-        if ( !( $flags & self::ForceDelete ) && $this->checkAttributeTypeUsed( $attribute ) )
-            throw new System_Api_Error( System_Api_Error::CannotDeleteAttribute );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'DELETE FROM {attr_types} WHERE attr_id = %d';
-        $this->connection->execute( $query, $attributeId );
+        try {
+            if ( !( $flags & self::ForceDelete ) && $this->checkAttributeTypeUsed( $attribute ) )
+                throw new System_Api_Error( System_Api_Error::CannotDeleteAttribute );
+
+            $query = 'DELETE FROM {attr_types} WHERE attr_id = %d';
+            $this->connection->execute( $query, $attributeId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }

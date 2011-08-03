@@ -369,24 +369,33 @@ class System_Api_IssueManager extends System_Api_Base
 
         $folderId = $folder[ 'folder_id' ];
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $issueId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
 
-        $query = 'INSERT INTO {issues} ( issue_id, folder_id, issue_name, stamp_id ) VALUES ( %d, %d, %s, %d )';
-        $this->connection->execute( $query, $issueId, $folderId, $name, $issueId );
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $issueId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id, value_new ) VALUES ( %d, %d, %d, %d, %s )';
-        $this->connection->execute( $query, $issueId, $issueId, System_Const::IssueCreated, $issueId, $name );
+            $query = 'INSERT INTO {issues} ( issue_id, folder_id, issue_name, stamp_id ) VALUES ( %d, %d, %s, %d )';
+            $this->connection->execute( $query, $issueId, $folderId, $name, $issueId );
 
-        $query = 'INSERT INTO {attr_values} ( issue_id, attr_id, attr_value ) VALUES ( %d, %d, %s )';
-        foreach ( $values as $attributeId => $value ) {
-            if ( $value != '' )
-                $this->connection->execute( $query, $issueId, $attributeId, $value );
+            $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id, value_new ) VALUES ( %d, %d, %d, %d, %s )';
+            $this->connection->execute( $query, $issueId, $issueId, System_Const::IssueCreated, $issueId, $name );
+
+            $query = 'INSERT INTO {attr_values} ( issue_id, attr_id, attr_value ) VALUES ( %d, %d, %s )';
+            foreach ( $values as $attributeId => $value ) {
+                if ( $value != '' )
+                    $this->connection->execute( $query, $issueId, $attributeId, $value );
+            }
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $issueId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
         }
-
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $issueId, $folderId );
 
         return $issueId;
     }
@@ -409,18 +418,30 @@ class System_Api_IssueManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
 
-        $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id, value_old, value_new ) VALUES ( %d, %d, %d, %d, %s, %s )';
-        $this->connection->execute( $query, $stampId, $issueId, System_Const::IssueRenamed, $stampId, $oldName, $newName );
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $query = 'UPDATE {issues} SET issue_name = %s, stamp_id = %d WHERE issue_id = %d';
-        $this->connection->execute( $query, $newName, $stampId, $issueId );
+            $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id, value_old, value_new ) VALUES ( %d, %d, %d, %d, %s, %s )';
+            $this->connection->execute( $query, $stampId, $issueId, System_Const::IssueRenamed, $stampId, $oldName, $newName );
 
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $stampId, $folderId );
+            $query = 'UPDATE {issues} SET issue_name = %s WHERE issue_id = %d';
+            $this->connection->execute( $query, $newName, $issueId );
+
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return $stampId;
     }
@@ -442,33 +463,44 @@ class System_Api_IssueManager extends System_Api_Base
         $attributeId = $attribute[ 'attr_id' ];
         $definition = $attribute[ 'attr_def' ];
 
-        $query = 'SELECT attr_value FROM {attr_values} WHERE issue_id = %d AND attr_id = %d';
-        $oldValue = $this->connection->queryScalar( $query, $issueId, $attributeId );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
 
-        if ( System_Api_ValueHelper::areAttributeValuesEqual( $definition, $newValue, $oldValue ) )
-            return false;
+        try {
+            $query = 'SELECT attr_value FROM {attr_values} WHERE issue_id = %d AND attr_id = %d';
+            $oldValue = $this->connection->queryScalar( $query, $issueId, $attributeId );
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+            if ( System_Api_ValueHelper::areAttributeValuesEqual( $definition, $newValue, $oldValue ) ) {
+                $transaction->commit();
+                return false;
+            }
 
-        if ( $oldValue == '' )
-            $query = 'INSERT INTO {attr_values} ( issue_id, attr_id, attr_value ) VALUES ( %1d, %2d, %3s )';
-        else if ( $newValue == '' )
-            $query = 'DELETE FROM {attr_values} WHERE issue_id = %1d AND attr_id = %2d';
-        else
-            $query = 'UPDATE {attr_values} SET attr_value = %3s WHERE issue_id = %1d AND attr_id = %2d';
-        $this->connection->execute( $query, $issueId, $attributeId, $newValue );
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id, attr_id, value_old, value_new )'
-            . ' VALUES ( %d, %d, %d, %d, %d, %s, %s )';
-        $this->connection->execute( $query, $stampId, $issueId, System_Const::ValueChanged, $stampId, $attributeId, $oldValue, $newValue );
+            if ( $oldValue == '' )
+                $query = 'INSERT INTO {attr_values} ( issue_id, attr_id, attr_value ) VALUES ( %1d, %2d, %3s )';
+            else if ( $newValue == '' )
+                $query = 'DELETE FROM {attr_values} WHERE issue_id = %1d AND attr_id = %2d';
+            else
+                $query = 'UPDATE {attr_values} SET attr_value = %3s WHERE issue_id = %1d AND attr_id = %2d';
+            $this->connection->execute( $query, $issueId, $attributeId, $newValue );
 
-        $query = 'UPDATE {issues} SET stamp_id = %d WHERE issue_id = %d';
-        $this->connection->execute( $query, $stampId, $issueId );
+            $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id, attr_id, value_old, value_new )'
+                . ' VALUES ( %d, %d, %d, %d, %d, %s, %s )';
+            $this->connection->execute( $query, $stampId, $issueId, System_Const::ValueChanged, $stampId, $attributeId, $oldValue, $newValue );
 
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $stampId, $folderId );
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return $stampId;
     }
@@ -483,24 +515,33 @@ class System_Api_IssueManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $issueId = $issue[ 'issue_id' ];
-        $folderId = $issue[ 'folder_id' ];
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $commentId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+        try {
+            $issueId = $issue[ 'issue_id' ];
+            $folderId = $issue[ 'folder_id' ];
 
-        $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id ) VALUES ( %d, %d, %d, %d )';
-        $this->connection->execute( $query, $commentId, $issueId, System_Const::CommentAdded, $commentId );
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $commentId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $query = 'INSERT INTO {comments} ( comment_id, comment_text ) VALUES ( %d, %s )';
-        $this->connection->execute( $query, $commentId, $text );
+            $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id ) VALUES ( %d, %d, %d, %d )';
+            $this->connection->execute( $query, $commentId, $issueId, System_Const::CommentAdded, $commentId );
 
-        $query = 'UPDATE {issues} SET stamp_id = %d WHERE issue_id = %d';
-        $this->connection->execute( $query, $commentId, $issueId );
+            $query = 'INSERT INTO {comments} ( comment_id, comment_text ) VALUES ( %d, %s )';
+            $this->connection->execute( $query, $commentId, $text );
 
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $commentId, $folderId );
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $commentId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $commentId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return $commentId;
     }
@@ -521,33 +562,42 @@ class System_Api_IssueManager extends System_Api_Base
         $issueId = $issue[ 'issue_id' ];
         $folderId = $issue[ 'folder_id' ];
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $fileId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
 
-        $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id ) VALUES ( %d, %d, %d, %d )';
-        $this->connection->execute( $query, $fileId, $issueId, System_Const::FileAdded, $fileId );
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $fileId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $storage = $this->getAttachmentStorage( $attachment );
-        if ( $storage == self::DatabaseStorage ) {
-            $query = 'INSERT INTO {files} ( file_id, file_name, file_size, file_data, file_descr, file_storage )'
-                . ' VALUES ( %d, %s, %d, %b, %s, %d )';
-            $this->connection->execute( $query, $fileId, $name, $attachment->getSize(), $attachment, $description, $storage );
-        } else {
-            $path = $this->getAttachmentPath( $fileId, true );
-            if ( !$attachment->saveAs( $path ) )
-                throw new System_Core_Exception( 'Cannot save attachment' );
+            $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id ) VALUES ( %d, %d, %d, %d )';
+            $this->connection->execute( $query, $fileId, $issueId, System_Const::FileAdded, $fileId );
 
-            $query = 'INSERT INTO {files} ( file_id, file_name, file_size, file_data, file_descr, file_storage )'
-                . ' VALUES ( %d, %s, %d, NULL, %s, %d )';
-            $this->connection->execute( $query, $fileId, $name, $attachment->getSize(), $description, $storage );
+            $storage = $this->getAttachmentStorage( $attachment );
+            if ( $storage == self::DatabaseStorage ) {
+                $query = 'INSERT INTO {files} ( file_id, file_name, file_size, file_data, file_descr, file_storage )'
+                    . ' VALUES ( %d, %s, %d, %b, %s, %d )';
+                $this->connection->execute( $query, $fileId, $name, $attachment->getSize(), $attachment, $description, $storage );
+            } else {
+                $path = $this->getAttachmentPath( $fileId, true );
+                if ( !$attachment->saveAs( $path ) )
+                    throw new System_Core_Exception( 'Cannot save attachment' );
+
+                $query = 'INSERT INTO {files} ( file_id, file_name, file_size, file_data, file_descr, file_storage )'
+                    . ' VALUES ( %d, %s, %d, NULL, %s, %d )';
+                $this->connection->execute( $query, $fileId, $name, $attachment->getSize(), $description, $storage );
+            }
+
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $fileId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $fileId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
         }
-
-        $query = 'UPDATE {issues} SET stamp_id = %d WHERE issue_id = %d';
-        $this->connection->execute( $query, $fileId, $issueId );
-
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $fileId, $folderId );
 
         return $fileId;
     }
@@ -598,23 +648,32 @@ class System_Api_IssueManager extends System_Api_Base
         $folderId = $issue[ 'folder_id' ];
         $previousId = $issue[ 'stub_id' ] != null ? $issue[ 'stub_id' ] : $issueId;
 
-        $query = 'SELECT fl.file_id FROM {files} AS fl'
-            . ' JOIN {changes} ch ON ch.change_id = fl.file_id'
-            . ' WHERE ch.issue_id = %d AND fl.file_storage = %d';
-        $files = $this->connection->queryTable( $query, $issueId, self::FileSystemStorage );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+        try {
+            $query = 'SELECT fl.file_id FROM {files} AS fl'
+                . ' JOIN {changes} ch ON ch.change_id = fl.file_id'
+                . ' WHERE ch.issue_id = %d AND fl.file_storage = %d';
+            $files = $this->connection->queryTable( $query, $issueId, self::FileSystemStorage );
 
-        $query = 'INSERT INTO {issue_stubs} ( stub_id, prev_id, issue_id, folder_id ) VALUES ( %d, %d, %d, %d )';
-        $this->connection->execute( $query, $stampId, $previousId, $issueId, $folderId );
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $query = 'DELETE FROM {issues} WHERE issue_id = %d';
-        $this->connection->execute( $query, $issueId );
+            $query = 'INSERT INTO {issue_stubs} ( stub_id, prev_id, issue_id, folder_id ) VALUES ( %d, %d, %d, %d )';
+            $this->connection->execute( $query, $stampId, $previousId, $issueId, $folderId );
 
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $stampId, $folderId );
+            $query = 'DELETE FROM {issues} WHERE issue_id = %d';
+            $this->connection->execute( $query, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         $this->deleteFiles( $files );
 
@@ -641,21 +700,33 @@ class System_Api_IssueManager extends System_Api_Base
         if ( $fromFolderId == $toFolderId )
             return null;
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
 
-        $query = 'INSERT INTO {issue_stubs} ( stub_id, prev_id, issue_id, folder_id ) VALUES ( %d, %d, %d, %d )';
-        $this->connection->execute( $query, $stampId, $previousId, $issueId, $fromFolderId );
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id, from_folder_id, to_folder_id ) VALUES ( %d, %d, %d, %d, %d, %d )';
-        $this->connection->execute( $query, $stampId, $issueId, System_Const::IssueMoved, $stampId, $fromFolderId, $toFolderId );
+            $query = 'INSERT INTO {issue_stubs} ( stub_id, prev_id, issue_id, folder_id ) VALUES ( %d, %d, %d, %d )';
+            $this->connection->execute( $query, $stampId, $previousId, $issueId, $fromFolderId );
 
-        $query = 'UPDATE {issues} SET folder_id = %1d, stamp_id = %2d, stub_id = %2d WHERE issue_id = %3d';
-        $this->connection->execute( $query, $toFolderId, $stampId, $issueId );
+            $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id, from_folder_id, to_folder_id ) VALUES ( %d, %d, %d, %d, %d, %d )';
+            $this->connection->execute( $query, $stampId, $issueId, System_Const::IssueMoved, $stampId, $fromFolderId, $toFolderId );
 
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d OR folder_id = %d';
-        $this->connection->execute( $query, $stampId, $fromFolderId, $toFolderId );
+            $query = 'UPDATE {issues} SET folder_id = %1d, stub_id = %2d WHERE issue_id = %3d AND stub_id < %2d';
+            $this->connection->execute( $query, $toFolderId, $stampId, $issueId );
+
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE ( folder_id = %2d OR folder_id = %3d ) AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $fromFolderId, $toFolderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return $stampId;
     }
@@ -679,21 +750,30 @@ class System_Api_IssueManager extends System_Api_Base
         if ( $newText == $oldText )
             return false;
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
 
-        $query = 'UPDATE {comments} SET comment_text = %s WHERE comment_id = %d';
-        $this->connection->execute( $query, $newText, $commentId );
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $query = 'UPDATE {changes} SET stamp_id = %d WHERE change_id = %d';
-        $this->connection->execute( $query, $stampId, $commentId );
+            $query = 'UPDATE {comments} SET comment_text = %s WHERE comment_id = %d';
+            $this->connection->execute( $query, $newText, $commentId );
 
-        $query = 'UPDATE {issues} SET stamp_id = %d WHERE issue_id = %d';
-        $this->connection->execute( $query, $stampId, $issueId );
+            $query = 'UPDATE {changes} SET stamp_id = %1d WHERE change_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $commentId );
 
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $stampId, $folderId );
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return $stampId;
     }
@@ -711,21 +791,30 @@ class System_Api_IssueManager extends System_Api_Base
         $issueId = $comment[ 'issue_id' ];
         $folderId = $comment[ 'folder_id' ];
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
 
-        $query = 'INSERT INTO {change_stubs} ( stub_id, change_id, issue_id ) VALUES ( %d, %d, %d )';
-        $this->connection->execute( $query, $stampId, $commentId, $issueId );
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $query = 'DELETE FROM {changes} WHERE change_id = %d';
-        $this->connection->execute( $query, $commentId );
+            $query = 'INSERT INTO {change_stubs} ( stub_id, change_id, issue_id ) VALUES ( %d, %d, %d )';
+            $this->connection->execute( $query, $stampId, $commentId, $issueId );
 
-        $query = 'UPDATE {issues} SET stamp_id = %d WHERE issue_id = %d';
-        $this->connection->execute( $query, $stampId, $issueId );
+            $query = 'DELETE FROM {changes} WHERE change_id = %d';
+            $this->connection->execute( $query, $commentId );
 
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $stampId, $folderId );
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return $stampId;
     }
@@ -751,21 +840,30 @@ class System_Api_IssueManager extends System_Api_Base
         if ( $newName == $oldName && $newDescription == $oldDescription )
             return false;
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
 
-        $query = 'UPDATE {files} SET file_name = %s, file_descr = %s WHERE file_id = %d';
-        $this->connection->execute( $query, $newName, $newDescription, $fileId );
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $query = 'UPDATE {changes} SET stamp_id = %d WHERE change_id = %d';
-        $this->connection->execute( $query, $stampId, $fileId );
+            $query = 'UPDATE {files} SET file_name = %s, file_descr = %s WHERE file_id = %d';
+            $this->connection->execute( $query, $newName, $newDescription, $fileId );
 
-        $query = 'UPDATE {issues} SET stamp_id = %d WHERE issue_id = %d';
-        $this->connection->execute( $query, $stampId, $issueId );
+            $query = 'UPDATE {changes} SET stamp_id = %1d WHERE change_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $fileId );
 
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $stampId, $folderId );
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return $stampId;
     }
@@ -783,21 +881,30 @@ class System_Api_IssueManager extends System_Api_Base
         $issueId = $file[ 'issue_id' ];
         $folderId = $file[ 'folder_id' ];
 
-        $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
-        $this->connection->execute( $query, $principal->getUserId(), time() );
-        $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
 
-        $query = 'INSERT INTO {change_stubs} ( stub_id, change_id, issue_id ) VALUES ( %d, %d, %d )';
-        $this->connection->execute( $query, $stampId, $fileId, $issueId );
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-        $query = 'DELETE FROM {changes} WHERE change_id = %d';
-        $this->connection->execute( $query, $fileId );
+            $query = 'INSERT INTO {change_stubs} ( stub_id, change_id, issue_id ) VALUES ( %d, %d, %d )';
+            $this->connection->execute( $query, $stampId, $fileId, $issueId );
 
-        $query = 'UPDATE {issues} SET stamp_id = %d WHERE issue_id = %d';
-        $this->connection->execute( $query, $stampId, $issueId );
+            $query = 'DELETE FROM {changes} WHERE change_id = %d';
+            $this->connection->execute( $query, $fileId );
 
-        $query = 'UPDATE {folders} SET stamp_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $stampId, $folderId );
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         if ( $file[ 'file_storage' ] == self::FileSystemStorage )
             @unlink( $this->getAttachmentPath( $fileId ) );

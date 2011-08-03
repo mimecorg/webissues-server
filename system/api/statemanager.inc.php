@@ -86,18 +86,29 @@ class System_Api_StateManager extends System_Api_Base
                 return false;
         }
 
-        if ( $stateId != null ) {
-            $query = 'DELETE FROM {issue_states} WHERE state_id = %d';
-            $this->connection->execute( $query, $stateId );
+        $transaction = $this->connection->beginTransaction();
+
+        try {
+            if ( $stateId != null ) {
+                $query = 'DELETE FROM {issue_states} WHERE state_id = %d';
+                $this->connection->execute( $query, $stateId );
+            }
+
+            if ( $isRead )
+                $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id ) VALUES ( %d, %d, %d )';
+            else
+                $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id ) VALUES ( %d, %d, NULL )';
+            $this->connection->execute( $query, $principal->getUserId(), $issueId, $stampId );
+
+            $stateId = $this->connection->getInsertId( 'issue_states', 'state_id' );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
         }
 
-        if ( $isRead )
-            $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id ) VALUES ( %d, %d, %d )';
-        else
-            $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id ) VALUES ( %d, %d, NULL )';
-        $this->connection->execute( $query, $principal->getUserId(), $issueId, $stampId );
-
-        return $this->connection->getInsertId( 'issue_states', 'state_id' );
+        return $stateId;
     }
 
     /**
@@ -112,20 +123,29 @@ class System_Api_StateManager extends System_Api_Base
 
         $folderId = $folder[ 'folder_id' ];
 
-        $query = 'DELETE FROM {issue_states}'
-            . ' WHERE user_id = %d'
-            . ' AND issue_id IN ( SELECT issue_id FROM {issues} WHERE folder_id = %d )';
+        $transaction = $this->connection->beginTransaction();
 
-        $this->connection->execute( $query, $principal->getUserId(), $folderId );
+        try {
+            $query = 'DELETE FROM {issue_states}'
+                . ' WHERE user_id = %d'
+                . ' AND issue_id IN ( SELECT issue_id FROM {issues} WHERE folder_id = %d )';
 
-        $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id )';
-        if ( $isRead )
-            $query .= ' SELECT %1d AS user_id, i.issue_id, i.stamp_id AS read_id';
-        else
-            $query .= ' SELECT %1d AS user_id, i.issue_id, NULL AS read_id';
-        $query .= ' FROM {issues} AS i WHERE i.folder_id = %2d';
+            $this->connection->execute( $query, $principal->getUserId(), $folderId );
 
-        $this->connection->execute( $query, $principal->getUserId(), $folderId );
+            $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id )';
+            if ( $isRead )
+                $query .= ' SELECT %1d AS user_id, i.issue_id, i.stamp_id AS read_id';
+            else
+                $query .= ' SELECT %1d AS user_id, i.issue_id, NULL AS read_id';
+            $query .= ' FROM {issues} AS i WHERE i.folder_id = %2d';
+
+            $this->connection->execute( $query, $principal->getUserId(), $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }

@@ -229,17 +229,28 @@ class System_Api_UserManager extends System_Api_Base
     */
     public function addUser( $login, $name, $password, $isTemp )
     {
-        $query = 'SELECT user_id FROM {users} WHERE user_login = %s OR user_name = %s';
-        if ( $this->connection->queryScalar( $query, $login, $name ) !== false )
-            throw new System_Api_Error( System_Api_Error::UserAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $passwordHash = new System_Core_PasswordHash();
-        $hash = $passwordHash->hashPassword( $password );
+        try {
+            $query = 'SELECT user_id FROM {users} WHERE user_login = %s OR user_name = %s';
+            if ( $this->connection->queryScalar( $query, $login, $name ) !== false )
+                throw new System_Api_Error( System_Api_Error::UserAlreadyExists );
 
-        $query = 'INSERT INTO {users} ( user_login, user_name, user_passwd, user_access, passwd_temp ) VALUES ( %s, %s, %s, %d, %d )';
-        $this->connection->execute( $query, $login, $name, $hash, System_Const::NormalAccess, $isTemp );
+            $passwordHash = new System_Core_PasswordHash();
+            $hash = $passwordHash->hashPassword( $password );
 
-        return $this->connection->getInsertId( 'users', 'user_id' );
+            $query = 'INSERT INTO {users} ( user_login, user_name, user_passwd, user_access, passwd_temp ) VALUES ( %s, %s, %s, %d, %d )';
+            $this->connection->execute( $query, $login, $name, $hash, System_Const::NormalAccess, $isTemp );
+
+            $userId = $this->connection->getInsertId( 'users', 'user_id' );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $userId;
     }
 
     /**
@@ -278,21 +289,30 @@ class System_Api_UserManager extends System_Api_Base
     {
         $userId = System_Api_Principal::getCurrent()->getUserId();
 
-        $query = 'SELECT user_passwd FROM {users} WHERE user_id = %d';
-        $hash = $this->connection->queryScalar( $query, $userId );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
 
-        $passwordHash = new System_Core_PasswordHash();
+        try {
+            $query = 'SELECT user_passwd FROM {users} WHERE user_id = %d';
+            $hash = $this->connection->queryScalar( $query, $userId );
 
-        if ( !$passwordHash->checkPassword( $password, $hash ) )
-            throw new System_Api_Error( System_Api_Error::IncorrectLogin );
+            $passwordHash = new System_Core_PasswordHash();
 
-        if ( $newPassword == $password )
-            throw new System_Api_Error( System_Api_Error::CannotReusePassword );
+            if ( !$passwordHash->checkPassword( $password, $hash ) )
+                throw new System_Api_Error( System_Api_Error::IncorrectLogin );
 
-        $newHash = $passwordHash->hashPassword( $newPassword );
+            if ( $newPassword == $password )
+                throw new System_Api_Error( System_Api_Error::CannotReusePassword );
 
-        $query = 'UPDATE {users} SET user_passwd = %s, passwd_temp = 0 WHERE user_id = %d';
-        $this->connection->execute( $query, $newHash, $userId );
+            $newHash = $passwordHash->hashPassword( $newPassword );
+
+            $query = 'UPDATE {users} SET user_passwd = %s, passwd_temp = 0 WHERE user_id = %d';
+            $this->connection->execute( $query, $newHash, $userId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }
@@ -312,12 +332,21 @@ class System_Api_UserManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $query = 'SELECT user_id FROM {users} WHERE user_name = %s';
-        if ( $this->connection->queryScalar( $query, $newName ) !== false )
-            throw new System_Api_Error( System_Api_Error::UserAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
 
-        $query = 'UPDATE {users} SET user_name = %s WHERE user_id = %d';
-        $this->connection->execute( $query, $newName, $userId );
+        try {
+            $query = 'SELECT user_id FROM {users} WHERE user_name = %s';
+            if ( $this->connection->queryScalar( $query, $newName ) !== false )
+                throw new System_Api_Error( System_Api_Error::UserAlreadyExists );
+
+            $query = 'UPDATE {users} SET user_name = %s WHERE user_id = %d';
+            $this->connection->execute( $query, $newName, $userId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }
@@ -365,21 +394,32 @@ class System_Api_UserManager extends System_Api_Base
         if ( $userId == $principal->getUserId() && $principal->getUserAccess() != System_Const::AdministratorAccess )
             throw new System_Api_Error( System_Api_Error::AccessDenied );
 
-        $query = 'SELECT project_access FROM {rights} WHERE project_id = %d AND user_id = %d';
-        $oldAccess = $this->connection->queryScalar( $query, $projectId, $userId );
-        if ( $oldAccess === false )
-            $oldAccess = System_Const::NoAccess;
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        if ( $newAccess == $oldAccess )
-            return false;
+        try {
+            $query = 'SELECT project_access FROM {rights} WHERE project_id = %d AND user_id = %d';
+            $oldAccess = $this->connection->queryScalar( $query, $projectId, $userId );
+            if ( $oldAccess === false )
+                $oldAccess = System_Const::NoAccess;
 
-        if ( $oldAccess == System_Const::NoAccess )
-            $query = 'INSERT INTO {rights} ( project_id, user_id, project_access ) VALUES ( %1d, %2d, %3d )';
-        else if ( $newAccess == System_Const::NoAccess )
-            $query = 'DELETE FROM {rights} WHERE project_id = %1d AND user_id = %2d';
-        else
-            $query = 'UPDATE {rights} SET project_access = %3d WHERE project_id = %1d AND user_id = %2d';
-        $this->connection->execute( $query, $projectId, $userId, $newAccess );
+            if ( $newAccess == $oldAccess ) {
+                $transaction->commit();
+                return false;
+            }
+
+            if ( $oldAccess == System_Const::NoAccess )
+                $query = 'INSERT INTO {rights} ( project_id, user_id, project_access ) VALUES ( %1d, %2d, %3d )';
+            else if ( $newAccess == System_Const::NoAccess )
+                $query = 'DELETE FROM {rights} WHERE project_id = %1d AND user_id = %2d';
+            else
+                $query = 'UPDATE {rights} SET project_access = %3d WHERE project_id = %1d AND user_id = %2d';
+            $this->connection->execute( $query, $projectId, $userId, $newAccess );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }

@@ -180,35 +180,46 @@ class System_Api_AlertManager extends System_Api_Base
         $folderId = $folder[ 'folder_id' ];
         $stampId = $folder[ 'stamp_id' ];
 
-        if ( $view != null ) {
-            $viewId = $view[ 'view_id' ];
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-            $query = 'SELECT alert_id FROM {alerts} WHERE user_id = %d AND folder_id = %d AND view_id = %d';
-            if ( $this->connection->queryScalar( $query, $principal->getUserId(), $folderId, $viewId ) !== false )
-                throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
+        try {
+            if ( $view != null ) {
+                $viewId = $view[ 'view_id' ];
 
-            if ( $stampId != null ) {
-                $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, %d, %d, %d )';
-                $this->connection->execute( $query, $principal->getUserId(), $folderId, $viewId, $alertEmail, $stampId );
+                $query = 'SELECT alert_id FROM {alerts} WHERE user_id = %d AND folder_id = %d AND view_id = %d';
+                if ( $this->connection->queryScalar( $query, $principal->getUserId(), $folderId, $viewId ) !== false )
+                    throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
+
+                if ( $stampId != null ) {
+                    $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, %d, %d, %d )';
+                    $this->connection->execute( $query, $principal->getUserId(), $folderId, $viewId, $alertEmail, $stampId );
+                } else {
+                    $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, %d, %d, NULL )';
+                    $this->connection->execute( $query, $principal->getUserId(), $folderId, $viewId, $alertEmail );
+                }
             } else {
-                $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, %d, %d, NULL )';
-                $this->connection->execute( $query, $principal->getUserId(), $folderId, $viewId, $alertEmail );
-            }
-        } else {
-            $query = 'SELECT alert_id FROM {alerts} WHERE user_id = %d AND folder_id = %d AND view_id IS NULL';
-            if ( $this->connection->queryScalar( $query, $principal->getUserId(), $folderId ) !== false )
-                throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
+                $query = 'SELECT alert_id FROM {alerts} WHERE user_id = %d AND folder_id = %d AND view_id IS NULL';
+                if ( $this->connection->queryScalar( $query, $principal->getUserId(), $folderId ) !== false )
+                    throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
 
-            if ( $stampId != null ) {
-                $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, NULL, %d, %d )';
-                $this->connection->execute( $query, $principal->getUserId(), $folderId, $alertEmail, $stampId );
-            } else {
-                $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, NULL, %d, NULL )';
-                $this->connection->execute( $query, $principal->getUserId(), $folderId, $alertEmail );
+                if ( $stampId != null ) {
+                    $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, NULL, %d, %d )';
+                    $this->connection->execute( $query, $principal->getUserId(), $folderId, $alertEmail, $stampId );
+                } else {
+                    $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, NULL, %d, NULL )';
+                    $this->connection->execute( $query, $principal->getUserId(), $folderId, $alertEmail );
+                }
             }
+
+            $alertId = $this->connection->getInsertId( 'alerts', 'alert_id' );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
         }
 
-        return $this->connection->getInsertId( 'alerts', 'alert_id' );
+        return $alertId;
     }
 
     /**

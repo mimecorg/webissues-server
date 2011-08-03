@@ -176,14 +176,25 @@ class System_Api_ProjectManager extends System_Api_Base
     */
     public function addProject( $name )
     {
-        $query = 'SELECT project_id FROM {projects} WHERE project_name = %s';
-        if ( $this->connection->queryScalar( $query, $name ) !== false )
-            throw new System_Api_Error( System_Api_Error::ProjectAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'INSERT INTO {projects} ( project_name ) VALUES ( %s )';
-        $this->connection->execute( $query, $name );
+        try {
+            $query = 'SELECT project_id FROM {projects} WHERE project_name = %s';
+            if ( $this->connection->queryScalar( $query, $name ) !== false )
+                throw new System_Api_Error( System_Api_Error::ProjectAlreadyExists );
 
-        return $this->connection->getInsertId( 'projects', 'project_id' );
+            $query = 'INSERT INTO {projects} ( project_name ) VALUES ( %s )';
+            $this->connection->execute( $query, $name );
+
+            $projectId = $this->connection->getInsertId( 'projects', 'project_id' );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $projectId;
     }
 
     /**
@@ -201,12 +212,21 @@ class System_Api_ProjectManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $query = 'SELECT project_id FROM {projects} WHERE project_name = %s';
-        if ( $this->connection->queryScalar( $query, $newName ) !== false )
-            throw new System_Api_Error( System_Api_Error::ProjectAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
 
-        $query = 'UPDATE {projects} SET project_name = %s WHERE project_id = %d';
-        $this->connection->execute( $query, $newName, $projectId );
+        try {
+            $query = 'SELECT project_id FROM {projects} WHERE project_name = %s';
+            if ( $this->connection->queryScalar( $query, $newName ) !== false )
+                throw new System_Api_Error( System_Api_Error::ProjectAlreadyExists );
+
+            $query = 'UPDATE {projects} SET project_name = %s WHERE project_id = %d';
+            $this->connection->execute( $query, $newName, $projectId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }
@@ -222,18 +242,27 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $projectId = $project[ 'project_id' ];
 
-        if ( !( $flags & self::ForceDelete ) && $this->checkProjectNotEmpty( $project ) )
-            throw new System_Api_Error( System_Api_Error::CannotDeleteProject );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'SELECT fl.file_id FROM {files} AS fl'
-            . ' JOIN {changes} ch ON ch.change_id = fl.file_id'
-            . ' JOIN {issues} i ON i.issue_id = ch.issue_id'
-            . ' JOIN {folders} f ON f.folder_id = i.folder_id'
-            . ' WHERE f.project_id = %d AND fl.file_storage = %d';
-        $files = $this->connection->queryTable( $query, $projectId, System_Api_IssueManager::FileSystemStorage );
+        try {
+            if ( !( $flags & self::ForceDelete ) && $this->checkProjectNotEmpty( $project ) )
+                throw new System_Api_Error( System_Api_Error::CannotDeleteProject );
 
-        $query = 'DELETE FROM {projects} WHERE project_id = %d';
-        $this->connection->execute( $query, $projectId );
+            $query = 'SELECT fl.file_id FROM {files} AS fl'
+                . ' JOIN {changes} ch ON ch.change_id = fl.file_id'
+                . ' JOIN {issues} i ON i.issue_id = ch.issue_id'
+                . ' JOIN {folders} f ON f.folder_id = i.folder_id'
+                . ' WHERE f.project_id = %d AND fl.file_storage = %d';
+            $files = $this->connection->queryTable( $query, $projectId, System_Api_IssueManager::FileSystemStorage );
+
+            $query = 'DELETE FROM {projects} WHERE project_id = %d';
+            $this->connection->execute( $query, $projectId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         $issueManager = new System_Api_IssueManager();
         $issueManager->deleteFiles( $files );
@@ -267,14 +296,25 @@ class System_Api_ProjectManager extends System_Api_Base
         $projectId = $project[ 'project_id' ];
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT folder_id FROM {folders} WHERE project_id = %d AND folder_name = %s';
-        if ( $this->connection->queryScalar( $query, $projectId, $name ) !== false )
-            throw new System_Api_Error( System_Api_Error::FolderAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'INSERT INTO {folders} ( project_id, type_id, folder_name ) VALUES ( %d, %d, %s )';
-        $this->connection->execute( $query, $projectId, $typeId, $name );
+        try {
+            $query = 'SELECT folder_id FROM {folders} WHERE project_id = %d AND folder_name = %s';
+            if ( $this->connection->queryScalar( $query, $projectId, $name ) !== false )
+                throw new System_Api_Error( System_Api_Error::FolderAlreadyExists );
 
-        return $this->connection->getInsertId( 'folders', 'folder_id' );
+            $query = 'INSERT INTO {folders} ( project_id, type_id, folder_name ) VALUES ( %d, %d, %s )';
+            $this->connection->execute( $query, $projectId, $typeId, $name );
+
+            $folderId = $this->connection->getInsertId( 'folders', 'folder_id' );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $folderId;
     }
 
     /**
@@ -293,12 +333,21 @@ class System_Api_ProjectManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $query = 'SELECT folder_id FROM {folders} WHERE project_id = %d AND folder_name = %s';
-        if ( $this->connection->queryScalar( $query, $projectId, $newName ) !== false )
-            throw new System_Api_Error( System_Api_Error::FolderAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
 
-        $query = 'UPDATE {folders} SET folder_name = %s WHERE folder_id = %d';
-        $this->connection->execute( $query, $newName, $folderId );
+        try {
+            $query = 'SELECT folder_id FROM {folders} WHERE project_id = %d AND folder_name = %s';
+            if ( $this->connection->queryScalar( $query, $projectId, $newName ) !== false )
+                throw new System_Api_Error( System_Api_Error::FolderAlreadyExists );
+
+            $query = 'UPDATE {folders} SET folder_name = %s WHERE folder_id = %d';
+            $this->connection->execute( $query, $newName, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }
@@ -314,17 +363,26 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $folderId = $folder[ 'folder_id' ];
 
-        if ( !( $flags & self::ForceDelete ) && $this->checkFolderNotEmpty( $folder ) )
-            throw new System_Api_Error( System_Api_Error::CannotDeleteFolder );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'SELECT fl.file_id FROM {files} AS fl'
-            . ' JOIN {changes} ch ON ch.change_id = fl.file_id'
-            . ' JOIN {issues} i ON i.issue_id = ch.issue_id'
-            . ' WHERE i.folder_id = %d AND fl.file_storage = %d';
-        $files = $this->connection->queryTable( $query, $folderId, System_Api_IssueManager::FileSystemStorage );
+        try {
+            if ( !( $flags & self::ForceDelete ) && $this->checkFolderNotEmpty( $folder ) )
+                throw new System_Api_Error( System_Api_Error::CannotDeleteFolder );
 
-        $query = 'DELETE FROM {folders} WHERE folder_id = %d';
-        $this->connection->execute( $query, $folderId );
+            $query = 'SELECT fl.file_id FROM {files} AS fl'
+                . ' JOIN {changes} ch ON ch.change_id = fl.file_id'
+                . ' JOIN {issues} i ON i.issue_id = ch.issue_id'
+                . ' WHERE i.folder_id = %d AND fl.file_storage = %d';
+            $files = $this->connection->queryTable( $query, $folderId, System_Api_IssueManager::FileSystemStorage );
+
+            $query = 'DELETE FROM {folders} WHERE folder_id = %d';
+            $this->connection->execute( $query, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         $issueManager = new System_Api_IssueManager();
         $issueManager->deleteFiles( $files );
@@ -362,12 +420,21 @@ class System_Api_ProjectManager extends System_Api_Base
         if ( $fromProjectId == $toProjectId )
             return false;
 
-        $query = 'SELECT folder_id FROM {folders} WHERE project_id = %d AND folder_name = %s';
-        if ( $this->connection->queryScalar( $query, $toProjectId, $name ) !== false )
-            throw new System_Api_Error( System_Api_Error::FolderAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
 
-        $query = 'UPDATE {folders} SET project_id = %d WHERE folder_id = %d';
-        $this->connection->execute( $query, $toProjectId, $folderId );
+        try {
+            $query = 'SELECT folder_id FROM {folders} WHERE project_id = %d AND folder_name = %s';
+            if ( $this->connection->queryScalar( $query, $toProjectId, $name ) !== false )
+                throw new System_Api_Error( System_Api_Error::FolderAlreadyExists );
+
+            $query = 'UPDATE {folders} SET project_id = %d WHERE folder_id = %d';
+            $this->connection->execute( $query, $toProjectId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }

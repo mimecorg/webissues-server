@@ -243,14 +243,25 @@ class System_Api_ViewManager extends System_Api_Base
 
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id = %d AND view_name = %s';
-        if ( $this->connection->queryScalar( $query, $typeId, $principal->getUserId(), $name ) !== false )
-            throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'INSERT INTO {views} ( type_id, user_id, view_name, view_def ) VALUES ( %d, %d, %s, %s )';
-        $this->connection->execute( $query, $typeId, $principal->getUserId(), $name, $definition );
+        try {
+            $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id = %d AND view_name = %s';
+            if ( $this->connection->queryScalar( $query, $typeId, $principal->getUserId(), $name ) !== false )
+                throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
 
-        return $this->connection->getInsertId( 'views', 'view_id' );
+            $query = 'INSERT INTO {views} ( type_id, user_id, view_name, view_def ) VALUES ( %d, %d, %s, %s )';
+            $this->connection->execute( $query, $typeId, $principal->getUserId(), $name, $definition );
+
+            $viewId = $this->connection->getInsertId( 'views', 'view_id' );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $viewId;
     }
 
     /**
@@ -265,14 +276,25 @@ class System_Api_ViewManager extends System_Api_Base
     {
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id IS NULL AND view_name = %s';
-        if ( $this->connection->queryScalar( $query, $typeId, $name ) !== false )
-            throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
 
-        $query = 'INSERT INTO {views} ( type_id, user_id, view_name, view_def ) VALUES ( %d, NULL, %s, %s )';
-        $this->connection->execute( $query, $typeId, $name, $definition );
+        try {
+            $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id IS NULL AND view_name = %s';
+            if ( $this->connection->queryScalar( $query, $typeId, $name ) !== false )
+                throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
 
-        return $this->connection->getInsertId( 'views', 'view_id' );
+            $query = 'INSERT INTO {views} ( type_id, user_id, view_name, view_def ) VALUES ( %d, NULL, %s, %s )';
+            $this->connection->execute( $query, $typeId, $name, $definition );
+
+            $viewId = $this->connection->getInsertId( 'views', 'view_id' );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $viewId;
     }
 
     /**
@@ -294,18 +316,27 @@ class System_Api_ViewManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        if ( $isPublic ) {
-            $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id IS NULL AND view_name = %s';
-            if ( $this->connection->queryScalar( $query, $typeId, $newName ) !== false )
-                throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
-        } else {
-            $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id = %d AND view_name = %s';
-            if ( $this->connection->queryScalar( $query, $typeId, $principal->getUserId(), $newName ) !== false )
-                throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
-        }
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
 
-        $query = 'UPDATE {views} SET view_name = %s WHERE view_id = %d';
-        $this->connection->execute( $query, $newName, $viewId );
+        try {
+            if ( $isPublic ) {
+                $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id IS NULL AND view_name = %s';
+                if ( $this->connection->queryScalar( $query, $typeId, $newName ) !== false )
+                    throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
+            } else {
+                $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id = %d AND view_name = %s';
+                if ( $this->connection->queryScalar( $query, $typeId, $principal->getUserId(), $newName ) !== false )
+                    throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
+            }
+
+            $query = 'UPDATE {views} SET view_name = %s WHERE view_id = %d';
+            $this->connection->execute( $query, $newName, $viewId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }
@@ -345,12 +376,21 @@ class System_Api_ViewManager extends System_Api_Base
         if ( $isPublic )
             return false;
 
-        $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id IS NULL AND view_name = %s';
-        if ( $this->connection->queryScalar( $query, $typeId, $name ) !== false )
-            throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
 
-        $query = 'UPDATE {views} SET user_id = NULL WHERE view_id = %d';
-        $this->connection->execute( $query, $viewId );
+        try {
+            $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id IS NULL AND view_name = %s';
+            if ( $this->connection->queryScalar( $query, $typeId, $name ) !== false )
+                throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
+
+            $query = 'UPDATE {views} SET user_id = NULL WHERE view_id = %d';
+            $this->connection->execute( $query, $viewId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }
@@ -372,15 +412,24 @@ class System_Api_ViewManager extends System_Api_Base
         if ( !$isPublic )
             return false;
 
-        $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id = %d AND view_name = %s';
-        if ( $this->connection->queryScalar( $query, $typeId, $principal->getUserId(), $name ) !== false )
-            throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
 
-        $query = 'DELETE FROM {alerts} WHERE view_id = %d AND user_id <> %d';
-        $this->connection->execute( $query, $viewId, $principal->getUserId() );
+        try {
+            $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id = %d AND view_name = %s';
+            if ( $this->connection->queryScalar( $query, $typeId, $principal->getUserId(), $name ) !== false )
+                throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
 
-        $query = 'UPDATE {views} SET user_id = %d WHERE view_id = %d';
-        $this->connection->execute( $query, $principal->getUserId(), $viewId );
+            $query = 'DELETE FROM {alerts} WHERE view_id = %d AND user_id <> %d';
+            $this->connection->execute( $query, $viewId, $principal->getUserId() );
+
+            $query = 'UPDATE {views} SET user_id = %d WHERE view_id = %d';
+            $this->connection->execute( $query, $principal->getUserId(), $viewId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return true;
     }

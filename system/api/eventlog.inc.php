@@ -61,8 +61,8 @@ class System_Api_EventLog extends System_Api_Base
     {
         parent::__construct();
 
-		if ( $owner != null )
-			$this->ownerClass = get_class( $owner );
+        if ( $owner != null )
+            $this->ownerClass = get_class( $owner );
     }
 
     /**
@@ -192,9 +192,9 @@ class System_Api_EventLog extends System_Api_Base
     * to the translators.
     */
     public function tr( $source, $comment = null )
-	{
-		$translator = System_Core_Application::getInstance()->getTranslator();
-		$args = func_get_args();
-		return $translator->translate( System_Core_Translator::SystemLanguage, $this->ownerClass, $args );
-	}
+    {
+        $translator = System_Core_Application::getInstance()->getTranslator();
+        $args = func_get_args();
+        return $translator->translate( System_Core_Translator::SystemLanguage, $this->ownerClass, $args );
+    }
 }
