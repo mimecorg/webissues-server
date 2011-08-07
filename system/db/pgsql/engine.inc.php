@@ -76,22 +76,14 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
         return new System_Db_Pgsql_Result( $this->executeQuery( $query, $params ) );
     }
 
-    public function executeQuery( $query, $params )
+    private function executeQuery( $query, $params )
     {
         if ( $this->result ) {
             pg_free_result( $this->result );
             $this->result = null;
         }
 
-        if ( empty( $params ) )
-            $result = pg_query( $this->connection, $query );
-        else
-            $result = pg_query_params( $this->connection, $query, $params );
-
-        if ( !$result )
-            throw new System_Db_Exception( pg_last_error( $this->connection ) );
-
-        return $result;
+        return $this->sendQuery( $query, $params );
     }
 
     public function escapeArgument( $arg, $type, &$params )
@@ -137,7 +129,7 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
     public function getInsertId( $table, $column )
     {
         $query = "SELECT currval('${table}_${column}_seq')";
-        $result = pg_query( $this->connection, $query );
+        $result = $this->sendQuery( $query );
         $row = pg_fetch_row( $result );
         pg_free_result( $result );
         return $row[ 0 ];
@@ -146,7 +138,7 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
     public function checkTableExists( $table )
     {
         $query = "SELECT relname FROM pg_class WHERE relkind = 'r' AND relname = '$table'";
-        $result = pg_query( $this->connection, $query );
+        $result = $this->sendQuery( $query );
         $count = pg_num_rows( $result );
         pg_free_result( $result );
         return $count > 0;
@@ -165,18 +157,14 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
         }
     }
 
-    public function beginTransaction( $level )
+    public function beginTransaction( $level, $table )
     {
         switch ( $level ) {
             case System_Db_Transaction::ReadUncommitted:
-                $isoLevel = 'READ UNCOMMITTED';
-                break;
             case System_Db_Transaction::ReadCommitted:
                 $isoLevel = 'READ COMMITTED';
                 break;
             case System_Db_Transaction::RepeatableRead:
-                $isoLevel = 'REPEATABLE READ';
-                break;
             case System_Db_Transaction::Serializable:
                 $isoLevel = 'SERIALIZABLE';
                 break;
@@ -184,24 +172,60 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
                 throw new System_Db_Exception( 'Unsupported isolation level' );
         }
 
-        $result = pg_query( $this->connection, "BEGIN ISOLATION LEVEL $isoLevel" );
-
-        if ( !$result )
-            throw new System_Db_Exception( pg_last_error( $this->connection ) );
-
+        $result = $this->sendQuery( "BEGIN ISOLATION LEVEL $isoLevel" );
         pg_free_result( $result );
+
+        if ( $isoLevel == 'SERIALIZABLE' && $table != null ) {
+            try {
+                $result = $this->sendQuery( "LOCK TABLE $table IN SHARE MODE" );
+                pg_free_result( $result );
+            } catch ( Exception $ex ) {
+                $this->endTransaction( false );
+                throw $ex;
+            }
+        }
     }
 
     public function endTransaction( $commit )
     {
         if ( $commit )
-            $result = pg_query( $this->connection, 'COMMIT' );
+            $result = $this->sendQuery( 'COMMIT' );
         else
-            $result = pg_query( $this->connection, 'ROLLBACK' );
+            $result = $this->sendQuery( 'ROLLBACK' );
+        pg_free_result( $result );
+    }
+
+    private function sendQuery( $query, $params = null )
+    {
+        if ( empty( $params ) )
+            $sent = pg_send_query( $this->connection, $query );
+        else
+            $sent = pg_send_query_params( $this->connection, $query, $params );
+
+        if ( !$sent )
+            throw new System_Db_Exception( 'Cannot send query' );
+
+        $result = pg_get_result( $this->connection );
 
         if ( !$result )
-            throw new System_Db_Exception( pg_last_error( $this->connection ) );
+            throw new System_Db_Exception( 'Cannot retrieve result' );
 
-        pg_free_result( $result );
+        $status = pg_result_status( $result );
+
+        if ( $status != PGSQL_COMMAND_OK && $status != PGSQL_TUPLES_OK ) {
+            $errno = pg_result_error_field( $result, PGSQL_DIAG_SQLSTATE );
+            $error = pg_result_error_field( $result, PGSQL_DIAG_MESSAGE_PRIMARY );
+
+            pg_free_result( $result );
+
+            if ( $errno == '40P01' )
+                throw new System_Api_Error( System_Api_Error::TransactionDeadlock, new System_Db_Exception( $error ) );
+            if ( $errno == '23503' )
+                throw new System_Api_Error( System_Api_Error::ConstraintConflict, new System_Db_Exception( $error ) );
+
+            throw new System_Db_Exception( $error );
+        }
+
+        return $result;
     }
 }

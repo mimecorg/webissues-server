@@ -180,7 +180,7 @@ class System_Api_AlertManager extends System_Api_Base
         $folderId = $folder[ 'folder_id' ];
         $stampId = $folder[ 'stamp_id' ];
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'alerts' );
 
         try {
             if ( $view != null ) {

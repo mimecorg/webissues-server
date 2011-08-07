@@ -176,7 +176,7 @@ class System_Api_ProjectManager extends System_Api_Base
     */
     public function addProject( $name )
     {
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'projects' );
 
         try {
             $query = 'SELECT project_id FROM {projects} WHERE project_name = %s';
@@ -212,7 +212,7 @@ class System_Api_ProjectManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'projects' );
 
         try {
             $query = 'SELECT project_id FROM {projects} WHERE project_name = %s';
@@ -242,7 +242,7 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $projectId = $project[ 'project_id' ];
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'folders' );
 
         try {
             if ( !( $flags & self::ForceDelete ) && $this->checkProjectNotEmpty( $project ) )
@@ -296,7 +296,7 @@ class System_Api_ProjectManager extends System_Api_Base
         $projectId = $project[ 'project_id' ];
         $typeId = $type[ 'type_id' ];
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'folders' );
 
         try {
             $query = 'SELECT folder_id FROM {folders} WHERE project_id = %d AND folder_name = %s';
@@ -333,7 +333,7 @@ class System_Api_ProjectManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'folders' );
 
         try {
             $query = 'SELECT folder_id FROM {folders} WHERE project_id = %d AND folder_name = %s';
@@ -363,7 +363,7 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $folderId = $folder[ 'folder_id' ];
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'issues' );
 
         try {
             if ( !( $flags & self::ForceDelete ) && $this->checkFolderNotEmpty( $folder ) )
@@ -420,7 +420,7 @@ class System_Api_ProjectManager extends System_Api_Base
         if ( $fromProjectId == $toProjectId )
             return false;
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'folders' );
 
         try {
             $query = 'SELECT folder_id FROM {folders} WHERE project_id = %d AND folder_name = %s';

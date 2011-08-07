@@ -84,6 +84,8 @@ class System_Api_Error extends System_Core_Exception
     const CannotReusePassword = '353 Cannot Reuse Password';
     const ItemNotFound = '354 Item Not Found';
     const CommaNotAllowed = '355 Comma Not Allowed';
+    const TransactionDeadlock = '356 Transaction Deadlock';
+    const ConstraintConflict = '357 Constraint Conflict';
 
     public function __construct( $message, $wrappedException = null )
     {

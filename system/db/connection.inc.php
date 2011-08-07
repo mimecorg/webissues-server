@@ -433,8 +433,10 @@ class System_Db_Connection
 
     /**
     * Begin a transaction with given isolation level.
+    * @param $level Transaction isolation level.
+    * @param $table Name of the table to lock (for PostgreSQL).
     */
-    public function beginTransaction( $level = null )
+    public function beginTransaction( $level = null, $table = null )
     {
         if ( $this->transaction != null )
             throw new System_Db_Exception( 'Nested transactions are not supported' );
@@ -442,11 +444,14 @@ class System_Db_Connection
         if ( $level == null )
             $level = System_Db_Transaction::ReadCommitted;
 
+        if ( $table != null )
+            $table = $this->prefix . $table;
+
         $debug = System_Core_Application::getInstance()->getDebug();
         if ( $debug->checkLevel( DEBUG_SQL ) )
             $debug->write( "Begin Transaction\n" );
 
-        $this->engine->beginTransaction( $level );
+        $this->engine->beginTransaction( $level, $table );
         $this->transaction = new System_Db_Transaction( $this );
 
         return $this->transaction;

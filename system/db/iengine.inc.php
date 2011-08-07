@@ -119,7 +119,7 @@ interface System_Db_IEngine
     /**
     * Begin a transaction with given isolation level.
     */
-    public function beginTransaction( $level );
+    public function beginTransaction( $level, $table );
 
     /**
     * Commit or rollback a transaction.

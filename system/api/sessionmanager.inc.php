@@ -52,43 +52,55 @@ class System_Api_SessionManager extends System_Api_Base
     */
     public function login( $login, $password, $newPassword = null )
     {
-        $query = 'SELECT user_id, user_name, user_passwd, user_access, passwd_temp FROM {users}'
-            . ' WHERE user_login = %s AND user_access > %d';
+        $user = null;
+        $isTemp = false;
 
-        $user = $this->connection->queryRow( $query, $login, System_Const::NoAccess );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'users' );
 
-        if ( $user != null ) {
-            $userId = $user[ 'user_id' ];
-            $hash = $user[ 'user_passwd' ];
-            $isTemp = $user[ 'passwd_temp' ];
+        try {
+            $query = 'SELECT user_id, user_name, user_passwd, user_access, passwd_temp FROM {users}'
+                . ' WHERE user_login = %s AND user_access > %d';
 
-            $passwordHash = new System_Core_PasswordHash();
+            $user = $this->connection->queryRow( $query, $login, System_Const::NoAccess );
 
-            if ( $passwordHash->checkPassword( $password, $user[ 'user_passwd' ] ) ) {
-                if ( $newPassword != null ) {
-                    if ( $newPassword == $password )
-                        throw new System_Api_Error( System_Api_Error::CannotReusePassword );
+            if ( $user != null ) {
+                $userId = $user[ 'user_id' ];
+                $hash = $user[ 'user_passwd' ];
+                $isTemp = $user[ 'passwd_temp' ];
 
-                    $newHash = $passwordHash->hashPassword( $newPassword );
+                $passwordHash = new System_Core_PasswordHash();
 
-                    $query = 'UPDATE {users} SET user_passwd = %s, passwd_temp = 0 WHERE user_id = %d';
-                    $this->connection->execute( $query, $newHash, $userId );
+                if ( $passwordHash->checkPassword( $password, $user[ 'user_passwd' ] ) ) {
+                    if ( $newPassword != null ) {
+                        if ( $newPassword == $password )
+                            throw new System_Api_Error( System_Api_Error::CannotReusePassword );
 
-                    $isTemp = false;
-                } else if ( $passwordHash->isNewHashNeeeded( $hash ) ) {
-                    $newHash = $passwordHash->hashPassword( $password );
+                        $newHash = $passwordHash->hashPassword( $newPassword );
 
-                    $query = 'UPDATE {users} SET user_passwd = %s WHERE user_id = %d';
-                    $this->connection->execute( $query, $newHash, $userId );
+                        $query = 'UPDATE {users} SET user_passwd = %s, passwd_temp = 0 WHERE user_id = %d';
+                        $this->connection->execute( $query, $newHash, $userId );
+
+                        $isTemp = false;
+                    } else if ( $passwordHash->isNewHashNeeeded( $hash ) ) {
+                        $newHash = $passwordHash->hashPassword( $password );
+
+                        $query = 'UPDATE {users} SET user_passwd = %s WHERE user_id = %d';
+                        $this->connection->execute( $query, $newHash, $userId );
+                    }
+                } else {
+                    $user = null;
                 }
-
-                if ( $isTemp ) {
-                    $this->logout();
-                    throw new System_Api_Error( System_Api_Error::MustChangePassword );
-                }
-            } else {
-                $user = null;
             }
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        if ( $isTemp ) {
+            $this->logout();
+            throw new System_Api_Error( System_Api_Error::MustChangePassword );
         }
 
         $this->loginCommon( $login, $user );

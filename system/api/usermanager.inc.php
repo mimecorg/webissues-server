@@ -229,7 +229,7 @@ class System_Api_UserManager extends System_Api_Base
     */
     public function addUser( $login, $name, $password, $isTemp )
     {
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'users' );
 
         try {
             $query = 'SELECT user_id FROM {users} WHERE user_login = %s OR user_name = %s';
@@ -289,7 +289,7 @@ class System_Api_UserManager extends System_Api_Base
     {
         $userId = System_Api_Principal::getCurrent()->getUserId();
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'users' );
 
         try {
             $query = 'SELECT user_passwd FROM {users} WHERE user_id = %d';
@@ -332,7 +332,7 @@ class System_Api_UserManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'users' );
 
         try {
             $query = 'SELECT user_id FROM {users} WHERE user_name = %s';
@@ -394,7 +394,7 @@ class System_Api_UserManager extends System_Api_Base
         if ( $userId == $principal->getUserId() && $principal->getUserAccess() != System_Const::AdministratorAccess )
             throw new System_Api_Error( System_Api_Error::AccessDenied );
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'rights' );
 
         try {
             $query = 'SELECT project_access FROM {rights} WHERE project_id = %d AND user_id = %d';

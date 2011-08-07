@@ -175,6 +175,10 @@ class System_Web_ErrorHelper extends System_Web_Base
                 return $this->tr( 'The specified item was not found' );
             case System_Api_Error::CommaNotAllowed:
                 return $this->tr( 'Value cannot contain a comma' );
+            case System_Api_Error::TransactionDeadlock:
+                return $this->tr( 'Concurrency error; please try again' );
+            case System_Api_Error::ConstraintConflict:
+                return $this->tr( 'One of the dependent objects no longer exists' );
             default:
                 return '';
         }

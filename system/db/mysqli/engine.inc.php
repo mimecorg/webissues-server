@@ -98,7 +98,7 @@ class System_Db_Mysqli_Engine implements System_Db_IEngine
 
         $rs = $this->connection->query( $query );
         if ( !$rs )
-            throw new System_Db_Exception( $this->connection->error );
+            $this->handleError( $this->connection );
 
         return $rs;
     }
@@ -107,7 +107,7 @@ class System_Db_Mysqli_Engine implements System_Db_IEngine
     {
         $this->statement = $this->connection->prepare( $query );
         if ( !$this->statement )
-            throw new System_Db_Exception( $this->connection->error );
+            $this->handleError( $this->connection );
 
         $types = '';
         foreach ( $params as $param ) {
@@ -126,7 +126,7 @@ class System_Db_Mysqli_Engine implements System_Db_IEngine
         call_user_func_array( 'mysqli_stmt_bind_param', $args );
 
         if ( !$this->statement->execute() )
-            throw new System_Db_Exception( $this->statement->error );
+            $this->handleError( $this->statement );
     }
 
     public function escapeArgument( $arg, $type, &$params )
@@ -212,7 +212,7 @@ class System_Db_Mysqli_Engine implements System_Db_IEngine
         return $row[ 'Value' ];
     }
 
-    public function beginTransaction( $level )
+    public function beginTransaction( $level, $table )
     {
         switch ( $level ) {
             case System_Db_Transaction::ReadUncommitted:
@@ -232,10 +232,10 @@ class System_Db_Mysqli_Engine implements System_Db_IEngine
         }
 
         if ( !$this->connection->query( "SET TRANSACTION ISOLATION LEVEL $isoLevel" ) )
-            throw new System_Db_Exception( $this->connection->error );
+            $this->handleError( $this->connection );
 
         if ( !$this->connection->autocommit( false ) )
-            throw new System_Db_Exception( $this->connection->error );
+            $this->handleError( $this->connection );
     }
 
     public function endTransaction( $commit )
@@ -246,9 +246,21 @@ class System_Db_Mysqli_Engine implements System_Db_IEngine
             $result = $this->connection->rollback();
 
         if ( !$result )
-            throw new System_Db_Exception( $this->connection->error );
+            $this->handleError( $this->connection );
 
         if ( !$this->connection->autocommit( true ) )
-            throw new System_Db_Exception( $this->connection->error );
+            $this->handleError( $this->connection );
+    }
+
+    private function handleError( $object )
+    {
+        $errno = $object->errno;
+
+        if ( $errno == 1213 )
+            throw new System_Api_Error( System_Api_Error::TransactionDeadlock, new System_Db_Exception( $object->error ) );
+        if ( $errno == 1451 || $errno == 1452 )
+            throw new System_Api_Error( System_Api_Error::ConstraintConflict, new System_Db_Exception( $object->error ) );
+
+        throw new System_Db_Exception( $object->error );
     }
 }

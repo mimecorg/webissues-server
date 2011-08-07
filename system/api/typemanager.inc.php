@@ -246,7 +246,7 @@ class System_Api_TypeManager extends System_Api_Base
     */
     public function addIssueType( $name )
     {
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'issue_types' );
 
         try {
             $query = 'SELECT type_id FROM {issue_types} WHERE type_name = %s';
@@ -282,7 +282,7 @@ class System_Api_TypeManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'issue_types' );
 
         try {
             $query = 'SELECT type_id FROM {issue_types} WHERE type_name = %s';
@@ -312,7 +312,7 @@ class System_Api_TypeManager extends System_Api_Base
     {
         $typeId = $type[ 'type_id' ];
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'folders' );
 
         try {
             if ( !( $flags & self::ForceDelete ) && $this->checkIssueTypeUsed( $type ) )
@@ -365,7 +365,7 @@ class System_Api_TypeManager extends System_Api_Base
     {
         $typeId = $type[ 'type_id' ];
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'attr_types' );
 
         try {
             $query = 'SELECT attr_id FROM {attr_types} WHERE type_id = %d AND attr_name = %s';
@@ -402,7 +402,7 @@ class System_Api_TypeManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'attr_types' );
 
         try {
             $query = 'SELECT attr_id FROM {attr_types} WHERE type_id = %d AND attr_name = %s';
@@ -452,7 +452,7 @@ class System_Api_TypeManager extends System_Api_Base
     {
         $attributeId = $attribute[ 'attr_id' ];
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'attr_values' );
 
         try {
             if ( !( $flags & self::ForceDelete ) && $this->checkAttributeTypeUsed( $attribute ) )

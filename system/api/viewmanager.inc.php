@@ -243,7 +243,7 @@ class System_Api_ViewManager extends System_Api_Base
 
         $typeId = $type[ 'type_id' ];
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'views' );
 
         try {
             $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id = %d AND view_name = %s';
@@ -276,7 +276,7 @@ class System_Api_ViewManager extends System_Api_Base
     {
         $typeId = $type[ 'type_id' ];
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'views' );
 
         try {
             $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id IS NULL AND view_name = %s';
@@ -316,7 +316,7 @@ class System_Api_ViewManager extends System_Api_Base
         if ( $newName == $oldName )
             return false;
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'views' );
 
         try {
             if ( $isPublic ) {
@@ -376,7 +376,7 @@ class System_Api_ViewManager extends System_Api_Base
         if ( $isPublic )
             return false;
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'views' );
 
         try {
             $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id IS NULL AND view_name = %s';
@@ -412,7 +412,7 @@ class System_Api_ViewManager extends System_Api_Base
         if ( !$isPublic )
             return false;
 
-        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead );
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'views' );
 
         try {
             $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id = %d AND view_name = %s';

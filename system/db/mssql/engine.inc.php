@@ -88,7 +88,7 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
                 $command->Execute( $this->affectedRows, $params, self::adCmdText | self::adExecuteNoRecords );
             }
         } catch ( com_exception $ex ) {
-            throw new System_Db_Exception( null, $ex );
+            $this->handleError( $ex );
         }
     }
 
@@ -102,7 +102,7 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
                 $rs = $command->Execute( $this->affectedRows, $params, self::adCmdText );
             }
         } catch ( com_exception $ex ) {
-            throw new System_Db_Exception( null, $ex );
+            $this->handleError( $ex );
         }
 
         return new System_Db_Mssql_Result( $rs );
@@ -239,7 +239,7 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
         }
     }
 
-    public function beginTransaction( $level )
+    public function beginTransaction( $level, $table )
     {
         switch ( $level ) {
             case System_Db_Transaction::ReadUncommitted:
@@ -262,7 +262,7 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
             $this->connection->IsolationLevel = $isoLevel;
             $this->connection->BeginTrans();
         } catch ( com_exception $ex ) {
-            throw new System_Db_Exception( null, $ex );
+            $this->handleError( $ex );
         }
     }
 
@@ -274,7 +274,18 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
             else
                 $this->connection->RollbackTrans();
         } catch ( com_exception $ex ) {
-            throw new System_Db_Exception( null, $ex );
+            $this->handleError( $ex );
         }
+    }
+
+    private function handleError( $ex )
+    {
+        foreach ( $this->connection->Errors as $error ) {
+            if ( $error->NativeError == 1205 )
+                throw new System_Api_Error( System_Api_Error::TransactionDeadlock, $ex );
+            if ( $error->NativeError == 547 )
+                throw new System_Api_Error( System_Api_Error::ConstraintConflict, $ex );
+        }
+        throw new System_Db_Exception( null, $ex );
     }
 }
