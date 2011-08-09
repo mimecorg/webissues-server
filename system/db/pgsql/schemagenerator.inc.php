@@ -72,6 +72,14 @@ class System_Db_Pgsql_SchemaGenerator extends System_Db_SchemaGenerator
         $this->indexes = array();
     }
 
+    public function setIdentityInsert( $tableName, $fieldName, $on )
+    {
+        if ( $on == false ) {
+            $query = "SELECT setval('{" . $tableName . '}_' . $fieldName . "_seq', max(" . $fieldName . ')) FROM {' . $tableName . '}';
+            $this->connection->execute( $query );
+        }
+    }
+
     private function getFieldType( $info )
     {
         switch ( $info->getType() ) {

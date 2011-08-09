@@ -64,7 +64,7 @@ abstract class System_Db_SchemaGenerator
     /**
     * Set identity insert on or off for the given table.
     */
-    public function setIdentityInsert( $tableName, $on )
+    public function setIdentityInsert( $tableName, $fieldName, $on )
     {
     }
 

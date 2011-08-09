@@ -515,7 +515,7 @@ class Admin_Setup_Installer extends System_Web_Base
 
     public function importData( $prefix )
     {
-        $this->generator->setIdentityInsert( 'users', true );
+        $this->generator->setIdentityInsert( 'users', 'user_id', true );
 
         $query = 'SELECT user_id, user_login, user_name, user_passwd, user_access FROM ' . $prefix . 'users WHERE user_id > 1';
         $users = $this->connection->queryTable( $query );
@@ -530,7 +530,7 @@ class Admin_Setup_Installer extends System_Web_Base
             $this->connection->execute( $query, $user[ 'user_id' ], $user[ 'user_login' ], $user[ 'user_name' ], $newHash, $user[ 'user_access' ] );
         }
 
-        $this->generator->setIdentityInsert( 'users', false );
+        $this->generator->setIdentityInsert( 'users', 'user_id', false );
 
         $tables = array(
             'issue_types' => array( 'type_id', 'type_name' ),
@@ -540,22 +540,22 @@ class Admin_Setup_Installer extends System_Web_Base
         );
 
         foreach ( $tables as $tableName => $columns ) {
-            $this->generator->setIdentityInsert( $tableName, true );
+            $this->generator->setIdentityInsert( $tableName, $columns[ 0 ], true );
 
             $query = 'INSERT INTO {' . $tableName . '} ( ' . join( ', ', $columns ) . ' ) SELECT ' . join( ', ', $columns ) . ' FROM ' . $prefix . $tableName;
             $this->connection->execute( $query );
 
-            $this->generator->setIdentityInsert( $tableName, false );
+            $this->generator->setIdentityInsert( $tableName, $columns[ 0 ], false );
         }
 
-        $this->generator->setIdentityInsert( 'folders', true );
+        $this->generator->setIdentityInsert( 'folders', 'folder_id', true );
 
         $query = 'INSERT INTO {folders} ( folder_id, project_id, type_id, folder_name, stamp_id ) SELECT folder_id, project_id, type_id, folder_name, s.stamp_id'
             . ' FROM ' . $prefix . 'folders AS f'
             . ' LEFT OUTER JOIN ' . $prefix . 'stamps AS s ON s.stamp_id = f.stamp_id';
         $this->connection->execute( $query );
 
-        $this->generator->setIdentityInsert( 'folders', false );
+        $this->generator->setIdentityInsert( 'folders', 'folder_id', false );
 
         $tables = array(
             'rights' => array( 'project_id', 'user_id', 'project_access' ),

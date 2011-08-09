@@ -72,7 +72,7 @@ class System_Db_Mssql_SchemaGenerator extends System_Db_SchemaGenerator
         $this->indexes = array();
     }
 
-    public function setIdentityInsert( $tableName, $on )
+    public function setIdentityInsert( $tableName, $fieldName, $on )
     {
         $query = 'SET IDENTITY_INSERT {' . $tableName . '} ';
         if ( $on )
