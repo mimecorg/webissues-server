@@ -256,7 +256,7 @@ class System_Api_TypeManager extends System_Api_Base
             $query = 'INSERT INTO {issue_types} ( type_name ) VALUES ( %s )';
             $this->connection->execute( $query, $name );
 
-            $typeId = $this->connection->getInsertId( 'types', 'type_id' );
+            $typeId = $this->connection->getInsertId( 'issue_types', 'type_id' );
 
             $transaction->commit();
         } catch ( Exception $ex ) {
