@@ -16,6 +16,10 @@ case 'completed': ?>
 <p><?php echo $this->tr( 'Go to the %1 to continue the configuration of this server.', null,
     $this->link( '/admin/index.php', $this->tr( 'Administration Panel' ) ) ) ?></p>
 
+<?php if ( !empty( $hasFileSystemFiles ) ): ?>
+<p><?php echo $this->tr( 'Do not forget to copy attachments stored in the file system from the old version of the server.' ) ?></p>
+<?php endif ?>
+
 <?php break;
 case 'failed': ?>
 

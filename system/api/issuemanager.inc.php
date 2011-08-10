@@ -921,6 +921,16 @@ class System_Api_IssueManager extends System_Api_Base
             @unlink( $this->getAttachmentPath( $file[ 'file_id' ] ) );
     }
 
+    /**
+    * Return @c true if any attachments are stored in the file system.
+    */
+    public function checkFileSystemFiles()
+    {
+        $query = 'SELECT COUNT(*) FROM {files} WHERE file_storage = %d';
+
+        return $this->connection->queryScalar( $query, self::FileSystemStorage ) > 0;
+    }
+
     private function getAttachmentPath( $id, $createDir = false )
     {
         $site = System_Core_Application::getInstance()->getSite();

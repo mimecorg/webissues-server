@@ -399,6 +399,9 @@ class Admin_Setup_Install extends System_Web_Component
 
                 case 'import':
                     $installer->importData( $this->prefix085 );
+
+                    $issueManager = new System_Api_IssueManager();
+                    $this->hasFileSystemFiles = $issueManager->checkFileSystemFiles();
                     break;
             }
 
