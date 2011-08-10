@@ -151,6 +151,10 @@ class System_Core_Translator
             if ( $comment != null )
                 $crc ^= crc32( $comment );
 
+            // workaround for https://bugs.php.net/bug.php?id=39062
+            if ( $crc > System_Const::INT_MAX )
+                $crc = $crc - 2 * System_Const::INT_MAX - 2;
+
             foreach ( $this->files[ $mode ] as $file ) {
                 $contexts =& $this->data[ $file ][ 'contexts' ];
                 $messages =& $this->data[ $file ][ 'messages' ];
