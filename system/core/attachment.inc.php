@@ -113,6 +113,15 @@ class System_Core_Attachment
     }
 
     /**
+    * Ensure that the file exists.
+    */
+    public function validate()
+    {
+        if ( $this->data === null && !file_exists( $this->path ) )
+            throw new System_Core_Exception( 'Attachment file does not exist' );
+    }
+
+    /**
     * Output the file content as server's response.
     * Use System_Core_Response::setAttachment() instead of calling
     * this method directly.

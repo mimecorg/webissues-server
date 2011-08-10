@@ -109,6 +109,7 @@ class System_Core_Response
     */
     public function setAttachment( $attachment )
     {
+        $attachment->validate();
         $this->attachment = $attachment;
     }
 
