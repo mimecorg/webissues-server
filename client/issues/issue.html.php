@@ -24,12 +24,10 @@
     foreach ( $attributes as $attributeId => $attribute ):
         $label = $this->tr( '%1:', null, $attribute[ 'attr_name' ] );
         $key = 'value' . $attributeId;
-        if ( isset( $items[ $attributeId ] ) ):
-            $form->renderSelect( $label, $key, $items[ $attributeId ], array( 'style' => 'width: 30em;' ) );
-        elseif ( !empty( $multiLine[ $attributeId ] ) ):
-            $form->renderTextArea( $label, $key, array( 'style' => 'width: 30em;', 'rows' => 6 ) );
+        if ( !empty( $multiLine[ $attributeId ] ) ):
+            $form->renderTextArea( $label, $key, array( 'cols' => 60, 'rows' => 6 ) );
         else:
-            $form->renderText( $label, $key, array( 'style' => 'width: 30em;' ) );
+            $form->renderText( $label, $key, array( 'size' => 60 ) );
         endif;
     endforeach
 ?>

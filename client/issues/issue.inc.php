@@ -103,7 +103,6 @@ class Client_Issues_Issue extends System_Web_Component
 
         $this->attributes = array();
         $this->values = array();
-        $this->items = array();
         $this->multiLine = array();
 
         $typeManager = new System_Api_TypeManager();
@@ -147,12 +146,9 @@ class Client_Issues_Issue extends System_Web_Component
                     if ( $info->getMetadata( 'multi-select', 0 ) ) {
                         $this->javaScript->registerAutocomplete( $selector, $info->getMetadata( 'items' ), System_Web_JavaScript::MultiSelect );
                     } else {
-                        if ( $info->getMetadata( 'editable', 0 ) ) {
-                            $this->javaScript->registerAutocomplete( $selector, $info->getMetadata( 'items' ) );
+                        if ( $info->getMetadata( 'editable', 0 ) )
                             $maxLength = $info->getMetadata( 'max-length', $maxLength );
-                        } else {
-                            $items = $info->getMetadata( 'items' );
-                        }
+                        $this->javaScript->registerAutocomplete( $selector, $info->getMetadata( 'items' ) );
                     }
                     break;
 
@@ -183,31 +179,21 @@ class Client_Issues_Issue extends System_Web_Component
                     } else {
                         $items = $allUsers;
                     }
-                    if ( $info->getMetadata( 'multi-select', 0 ) ) {
+                    if ( $info->getMetadata( 'multi-select', 0 ) )
                         $this->javaScript->registerAutocomplete( $selector, $items, System_Web_JavaScript::MultiSelect );
-                        $items = null;
-                    }
+                    else
+                        $this->javaScript->registerAutocomplete( $selector, $items );
                     break;
-            }
-
-            if ( $items !== null ) {
-                if ( !$info->getMetadata( 'required', 0 ) )
-                    $items = array_merge( array( '' => '' ), $items );
-                $this->items[ $attributeId ] = $items;
             }
 
             $this->form->addField( 'value' . $attributeId );
 
-            if ( $items !== null ) {
-                $this->form->addItemsRule( 'value' . $attributeId, $items );
-            } else {
-                $flags = 0;
-                if ( !$info->getMetadata( 'required', 0 ) )
-                    $flags |= System_Api_Parser::AllowEmpty;
-                if ( !empty( $this->multiLine[ $attributeId ] ) )
-                    $flags |= System_Api_Parser::MultiLine;
-                $this->form->addTextRule( 'value' . $attributeId, $maxLength, $flags );
-            }
+            $flags = 0;
+            if ( !$info->getMetadata( 'required', 0 ) )
+                $flags |= System_Api_Parser::AllowEmpty;
+            if ( !empty( $this->multiLine[ $attributeId ] ) )
+                $flags |= System_Api_Parser::MultiLine;
+            $this->form->addTextRule( 'value' . $attributeId, $maxLength, $flags );
         }
 
         $this->form->addViewState( 'oldValues', $this->values );
@@ -226,10 +212,7 @@ class Client_Issues_Issue extends System_Web_Component
             $propertyName = 'value' . $attributeId;
             if ( $this->form->hasErrors( $propertyName ) )
                 continue;
-            if ( isset( $this->items[ $attributeId ] ) )
-                $value = $this->items[ $attributeId ][ $this->$propertyName ];
-            else
-                $value = $this->$propertyName;
+            $value = $this->$propertyName;
             try {
                 $this->values[ $attributeId ] = $parser->convertAttributeValue( $attribute[ 'attr_def' ], $value );
             } catch ( System_Api_Error $ex ) {
@@ -264,12 +247,8 @@ class Client_Issues_Issue extends System_Web_Component
         foreach ( $this->values as $attributeId => $value ) {
             $attribute = $this->attributes[ $attributeId ];
             $propertyName = 'value' . $attributeId;
-            if ( isset( $this->items[ $attributeId ] ) ) {
-                $this->$propertyName = array_search( $value, $this->items[ $attributeId ] );
-            } else {
-                $flags = !empty( $this->multiLine[ $attributeId ] ) ? System_Api_Formatter::MultiLine : 0;
-                $this->$propertyName = $formatter->convertAttributeValue( $attribute[ 'attr_def' ], $value, $flags );
-            }
+            $flags = !empty( $this->multiLine[ $attributeId ] ) ? System_Api_Formatter::MultiLine : 0;
+            $this->$propertyName = $formatter->convertAttributeValue( $attribute[ 'attr_def' ], $value, $flags );
         }
     }
 }

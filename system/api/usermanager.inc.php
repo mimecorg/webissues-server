@@ -201,7 +201,7 @@ class System_Api_UserManager extends System_Api_Base
         $query .= ' WHERE u.user_name = %1s';
 
         if ( $this->connection->queryScalar( $query, $value, $projectId ) === false )
-            throw new System_Api_Error( System_Api_Error::InvalidValue );
+            throw new System_Api_Error( System_Api_Error::NoMatchingItem );
     }
 
     /**
