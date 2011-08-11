@@ -91,10 +91,8 @@ class System_Web_ExpressionHelper extends System_Web_Base
         $items = array( 0 => '[' .$this->tr( 'Me' ) . ']' );
         $userManager = new System_Api_UserManager();
         $users = $userManager->getUsers();
-        foreach ( $users as $user ) {
-            if ( $user[ 'user_access' ] != System_Const::NoAccess )
-                $items[ $user[ 'user_id' ] ] = $user[ 'user_name' ];
-        }
+        foreach ( $users as $user )
+            $items[ $user[ 'user_id' ] ] = $user[ 'user_name' ];
         return $items;
     }
 }

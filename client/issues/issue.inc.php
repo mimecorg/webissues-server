@@ -168,20 +168,16 @@ class Client_Issues_Issue extends System_Web_Component
                         $userManager = new System_Api_UserManager();
                         $users = $userManager->getUsers();
                         $allUsers = array();
-                        foreach ( $users as $user ) {
-                            if ( $user[ 'user_access' ] != System_Const::NoAccess )
-                                $allUsers[ $user[ 'user_id' ] ] = $user[ 'user_name' ];
-                        }
+                        foreach ( $users as $user )
+                            $allUsers[ $user[ 'user_id' ] ] = $user[ 'user_name' ];
                     }
                     if ( $info->getMetadata( 'members', 0 ) ) {
                         if ( $projectMembers === null ) {
-                            $userManager = new System_Api_UserManager();
                             $members = $userManager->getMembers( array( 'project_id' => $this->projectId ) );
-                            $projectMembers = array();
-                            foreach ( $members as $member ) {
-                                if ( isset( $allUsers[ $member[ 'user_id' ] ] ) )
-                                    $projectMembers[ $member[ 'user_id' ] ] = $allUsers[ $member[ 'user_id' ] ] ;
-                            }
+                            $allMembers = array();
+                            foreach ( $members as $member )
+                                $allMembers[ $member[ 'user_id' ] ] = $member;
+                            $projectMembers = array_intersect_key( $allUsers, $allMembers );
                         }
                         $items = $projectMembers;
                     } else {

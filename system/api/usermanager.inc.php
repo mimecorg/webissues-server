@@ -39,7 +39,7 @@ class System_Api_UserManager extends System_Api_Base
     */
     public function getUsers()
     {
-        $query = 'SELECT user_id, user_login, user_name, user_access FROM {users}';
+        $query = 'SELECT user_id, user_login, user_name, user_access FROM {users} ORDER BY user_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query );
     }

@@ -37,16 +37,15 @@ class Client_Projects_AddMembers extends System_Web_Component
         $breadcrumbs->initialize( System_Web_Breadcrumbs::ProjectMembers, $this->project );
 
         $userManager = new System_Api_UserManager();
-
-        $this->members = array();
         $users = $userManager->getUsers();
-        foreach ( $users as $user ) {
-            if ( $user[ 'user_access' ] != System_Const::NoAccess )
-                $this->members[ $user[ 'user_id' ] ] = $user;
-        }
+        $allUsers = array();
+        foreach ( $users as $user )
+            $allUsers[ $user[ 'user_id' ] ] = $user;
         $members = $userManager->getMembers( $this->project );
+        $allMembers = array();
         foreach ( $members as $member )
-            unset( $this->members[ $member[ 'user_id' ] ] );
+            $allMembers[ $member[ 'user_id' ] ] = $member;
+        $this->members = array_diff_key( $allUsers, $allMembers );
 
         $this->form = new System_Web_Form( 'projects', $this );
         foreach ( $this->members as $userId => $user )
