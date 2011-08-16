@@ -83,7 +83,7 @@ class Client_Issues_Issue extends System_Web_Component
         $this->processValues();
 
         if ( $this->form->loadForm() ) {
-            if ( $this->form->isSubmittedWith( 'cancel' ) )
+            if ( $this->form->isSubmittedWith( 'cancel' ) || $this->form->isSubmittedWith( 'close' ) )
                 $this->response->redirect( $this->parentUrl );
 
             $this->validateValues();
@@ -179,10 +179,15 @@ class Client_Issues_Issue extends System_Web_Component
                     } else {
                         $items = $allUsers;
                     }
-                    if ( $info->getMetadata( 'multi-select', 0 ) )
-                        $this->javaScript->registerAutocomplete( $selector, $items, System_Web_JavaScript::MultiSelect );
-                    else
-                        $this->javaScript->registerAutocomplete( $selector, $items );
+                    if ( empty( $items ) ) {
+                        if ( $info->getMetadata( 'required', 0 ) )
+                            $this->noMembers = true;
+                    } else {
+                        if ( $info->getMetadata( 'multi-select', 0 ) )
+                            $this->javaScript->registerAutocomplete( $selector, $items, System_Web_JavaScript::MultiSelect );
+                        else
+                            $this->javaScript->registerAutocomplete( $selector, $items );
+                    }
                     break;
             }
 

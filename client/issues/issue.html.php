@@ -14,6 +14,8 @@
 
 <?php $form->renderFormOpen(); ?>
 
+<?php if ( empty( $noMembers ) ): ?>
+
 <?php $form->renderText( $this->tr( 'Name:' ), 'issueName', array( 'size' => 80 ) ); ?>
 
 <?php if ( !empty( $attributes ) ): ?>
@@ -39,5 +41,15 @@
 <?php $form->renderSubmit( $this->tr( 'OK' ), 'ok' ); ?>
 <?php $form->renderSubmit( $this->tr( 'Cancel' ), 'cancel' ); ?>
 </div>
+
+<?php else: ?>
+
+<p class="error"><?php echo $this->tr( 'There are no available project members to assign to the issue.' ) ?></p>
+
+<div class="form-submit">
+<?php $form->renderSubmit( $this->tr( 'Close' ), 'close' ); ?>
+</div>
+
+<?php endif ?>
 
 <?php $form->renderFormClose() ?>
