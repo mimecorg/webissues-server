@@ -91,7 +91,10 @@ class System_Api_TypeManager extends System_Api_Base
     */
     public function getAttributeType( $attributeId )
     {
-        $query = 'SELECT attr_id, type_id, attr_name, attr_def FROM {attr_types} WHERE attr_id = %d';
+        $query = 'SELECT a.attr_id, t.type_id, a.attr_name, a.attr_def, t.type_name'
+            . ' FROM {attr_types} AS a'
+            . ' INNER JOIN {issue_types} AS t ON t.type_id = a.type_id'
+            . ' WHERE attr_id = %d';
 
         if ( !( $attribute = $this->connection->queryRow( $query, $attributeId ) ) )
             throw new System_Api_Error( System_Api_Error::UnknownAttribute );
@@ -264,6 +267,10 @@ class System_Api_TypeManager extends System_Api_Base
             throw $ex;
         }
 
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Added issue type "%1"', null, $name ) );
+
         return $typeId;
     }
 
@@ -297,6 +304,10 @@ class System_Api_TypeManager extends System_Api_Base
             $transaction->rollback();
             throw $ex;
         }
+
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Renamed issue type "%1" to "%2"', null, $oldName, $newName ) );
 
         return true;
     }
@@ -332,6 +343,15 @@ class System_Api_TypeManager extends System_Api_Base
         } catch ( Exception $ex ) {
             $transaction->rollback();
             throw $ex;
+        }
+
+        $eventLog = new System_Api_EventLog( $this );
+        if ( $flags & self::ForceDelete ) {
+            $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Warning,
+                $eventLog->tr( 'Deleted issue type "%1" with folders', null, $type[ 'type_name' ] ) );
+        } else {
+            $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                $eventLog->tr( 'Deleted issue type "%1"', null, $type[ 'type_name' ] ) );
         }
 
         $issueManager = new System_Api_IssueManager();
@@ -383,6 +403,10 @@ class System_Api_TypeManager extends System_Api_Base
             throw $ex;
         }
 
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Added attribute "%1" to issue type "%2"', null, $name, $type[ 'type_name' ] ) );
+
         return $attributeId;
     }
 
@@ -418,6 +442,10 @@ class System_Api_TypeManager extends System_Api_Base
             throw $ex;
         }
 
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Renamed attribute "%1" to "%2" of issue type "%3"', null, $oldName, $newName, $attribute[ 'type_name' ] ) );
+
         return true;
     }
 
@@ -437,6 +465,10 @@ class System_Api_TypeManager extends System_Api_Base
 
         $query = 'UPDATE {attr_types} SET attr_def = %s WHERE attr_id = %d';
         $this->connection->execute( $query, $newDefinition, $attributeId );
+
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Modified attribute "%1" of issue type "%2"', null, $attribute[ 'attr_name' ], $attribute[ 'type_name' ] ) );
 
         return true;
     }
@@ -465,6 +497,15 @@ class System_Api_TypeManager extends System_Api_Base
         } catch ( Exception $ex ) {
             $transaction->rollback();
             throw $ex;
+        }
+
+        $eventLog = new System_Api_EventLog( $this );
+        if ( $flags & self::ForceDelete ) {
+            $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Warning,
+                $eventLog->tr( 'Deleted attribute "%1" with values from issue type "%2"', null, $attribute[ 'attr_name' ], $attribute[ 'type_name' ] ) );
+        } else {
+            $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                $eventLog->tr( 'Deleted attribute "%1" from issue type "%2"', null, $attribute[ 'attr_name' ], $attribute[ 'type_name' ] ) );
         }
 
         return true;

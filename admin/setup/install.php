@@ -405,6 +405,10 @@ class Admin_Setup_Install extends System_Web_Component
                     break;
             }
 
+            $eventLog = new System_Api_EventLog( $this );
+            $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                $eventLog->tr( 'Completed the installation of the server' ) );
+
             return true;
         } catch ( System_Db_Exception $e ) {
             $connection->close();

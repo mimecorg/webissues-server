@@ -250,6 +250,10 @@ class System_Api_UserManager extends System_Api_Base
             throw $ex;
         }
 
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Added user "%1"', null, $name ) );
+
         return $userId;
     }
 
@@ -275,6 +279,10 @@ class System_Api_UserManager extends System_Api_Base
 
         $query = 'UPDATE {users} SET user_passwd = %s, passwd_temp = %d WHERE user_id = %d';
         $this->connection->execute( $query, $newHash, $isTemp, $userId );
+
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Changed password for user "%1"', null, $user[ 'user_name' ] ) );
 
         return true;
     }
@@ -314,6 +322,10 @@ class System_Api_UserManager extends System_Api_Base
             throw $ex;
         }
 
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'User "%1" changed own password', null, System_Api_Principal::getCurrent()->getUserName() ) );
+
         return true;
     }
 
@@ -348,6 +360,10 @@ class System_Api_UserManager extends System_Api_Base
             throw $ex;
         }
 
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Renamed user "%1" to "%2"', null, $oldName, $newName ) );
+
         return true;
     }
 
@@ -373,6 +389,22 @@ class System_Api_UserManager extends System_Api_Base
 
         $query = 'UPDATE {users} SET user_access = %d WHERE user_id = %d';
         $this->connection->execute( $query, $newAccess, $userId );
+
+        $eventLog = new System_Api_EventLog( $this );
+        switch ( $newAccess ) {
+            case System_Const::NoAccess:
+                $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                    $eventLog->tr( 'Disabled access for user "%1"', null, $user[ 'user_name' ] ) );
+                break;
+            case System_Const::NormalAccess:
+                $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                    $eventLog->tr( 'Granted regular access for user "%1"', null, $user[ 'user_name' ] ) );
+                break;
+            case System_Const::AdministratorAccess:
+                $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                    $eventLog->tr( 'Granted system administrator access for user "%1"', null, $user[ 'user_name' ] ) );
+                break;
+        }
 
         return true;
     }
@@ -419,6 +451,22 @@ class System_Api_UserManager extends System_Api_Base
         } catch ( Exception $ex ) {
             $transaction->rollback();
             throw $ex;
+        }
+
+        $eventLog = new System_Api_EventLog( $this );
+        switch ( $newAccess ) {
+            case System_Const::NoAccess:
+                $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                    $eventLog->tr( 'Removed user "%1" from project "%2"', null, $user[ 'user_name' ], $project[ 'project_name' ] ) );
+                break;
+            case System_Const::NormalAccess:
+                $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                    $eventLog->tr( 'Granted regular access for user "%1" to project "%2"', null, $user[ 'user_name' ], $project[ 'project_name' ] ) );
+                break;
+            case System_Const::AdministratorAccess:
+                $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                    $eventLog->tr( 'Granted project administrator access for user "%1" to project "%2"', null, $user[ 'user_name' ], $project[ 'project_name' ] ) );
+                break;
         }
 
         return true;

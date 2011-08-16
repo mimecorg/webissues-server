@@ -142,7 +142,7 @@ class System_Api_SessionManager extends System_Api_Base
             $this->logout();
 
             $eventLog->addEvent( System_Api_EventLog::Access, System_Api_EventLog::Error,
-                $eventLog->tr( 'Incorrect login attempt for user \'%1\'', null, $login ) );
+                $eventLog->tr( 'Incorrect login attempt for user "%1"', null, $login ) );
 
             throw new System_Api_Error( System_Api_Error::IncorrectLogin );
         }
@@ -158,7 +158,7 @@ class System_Api_SessionManager extends System_Api_Base
         $session->createSession();
 
         $eventLog->addEvent( System_Api_EventLog::Access, System_Api_EventLog::Information,
-            $eventLog->tr( 'Session opened for user \'%1\'', null, $login ) );
+            $eventLog->tr( 'Session opened for user "%1"', null, $login ) );
     }
 
     /**

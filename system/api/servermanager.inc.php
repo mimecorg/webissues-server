@@ -73,6 +73,10 @@ class System_Api_ServerManager extends System_Api_Base
         $query = 'UPDATE {server} SET server_name = %s';
         $this->connection->execute( $query, $newName );
 
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Renamed the server from "%1" to "%2"', null, $oldName, $newName ) );
+
         self::$server[ 'server_name' ] = $newName;
 
         return true;
@@ -93,6 +97,10 @@ class System_Api_ServerManager extends System_Api_Base
 
         $query = 'UPDATE {server} SET server_uuid = %s';
         $this->connection->execute( $query, $newUuid );
+
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Changed the unique identifier of the server' ) );
 
         self::$server[ 'server_uuid' ] = $newUuid;
 
