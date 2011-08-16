@@ -510,7 +510,7 @@ class System_Api_Validator
                 break;
 
             case 'USER':
-                $member = $info->getMetadata( 'member', 0 );
+                $members = $info->getMetadata( 'members', 0 );
                 $userManager = new System_Api_UserManager();
                 if ( $info->getMetadata( 'multi-select', 0 ) ) {
                     $this->checkList( $value );
@@ -518,12 +518,12 @@ class System_Api_Validator
                     $parts = explode( ', ', $value );
 
                     foreach ( $parts as $part )
-                        $userManager->checkUserName( $part, $member ? $this->projectId : null );
+                        $userManager->checkUserName( $part, $members ? $this->projectId : null );
 
                     if ( count( array_unique( $parts ) ) != count( $parts ) )
                         throw new System_Api_Error( System_Api_Error::DuplicateItems );
                 } else {
-                    $userManager->checkUserName( $value, $member ? $this->projectId : null );
+                    $userManager->checkUserName( $value, $members ? $this->projectId : null );
                 }
                 break;
 
