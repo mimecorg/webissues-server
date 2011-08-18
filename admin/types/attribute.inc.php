@@ -26,8 +26,10 @@ class Admin_Types_Attribute extends System_Web_Component
     private $formatter = null;
     private $attribute = null;
     private $issueType = null;
+    private $details = array();
     private $definition = null;
-    private $rules = null;
+    private $autoComplete = array();
+    private $flags = 0;
 
     protected function __construct()
     {
@@ -55,12 +57,8 @@ class Admin_Types_Attribute extends System_Web_Component
                 $this->oldAttributeName = $this->attribute[ 'attr_name' ];
 
                 $info = System_Api_DefinitionInfo::fromString( $this->attribute[ 'attr_def' ] );
-                $initialType = $info->getType();
+                $this->typeOptions = $helper->getCompatibleTypes( $info->getType() );
 
-                $this->typeOptions = $helper->getCompatibleTypes( $initialType );
-                $this->canChangeType = count( $this->typeOptions ) > 1;
-
-                $initialPage = 'details';
                 $this->view->setSlot( 'page_title', $this->tr( 'Modify Attribute' ) );
                 break;
 
@@ -70,11 +68,9 @@ class Admin_Types_Attribute extends System_Web_Component
                 $this->typeName = $this->issueType[ 'type_name' ];
                 $this->oldAttributeName = null;
 
-                $initialType = null;
+                $info = null;
                 $this->typeOptions = $helper->getAllTypes();
-                $this->canChangeType = true;
 
-                $initialPage = 'type';
                 $this->view->setSlot( 'page_title', $this->tr( 'Add Attribute' ) );
                 break;
 
@@ -83,194 +79,288 @@ class Admin_Types_Attribute extends System_Web_Component
         }
 
         $this->form = new System_Web_Form( 'types', $this );
-        $this->form->addViewState( 'page', $initialPage );
-        $this->form->addViewState( 'type', $initialType );
-        $this->form->addField( 'attributeType' );
+        $this->form->addViewState( 'page', 'basic' );
+        $this->form->addPersistentField( 'attributeType' );
         $this->form->addPersistentField( 'attributeName', $this->oldAttributeName );
-        $this->form->addPersistentField( 'multiLine', 0 );
-        $this->form->addPersistentField( 'minimumLength' );
-        $this->form->addPersistentField( 'maximumLength' );
-        $this->form->addPersistentField( 'editable', 0 );
-        $this->form->addPersistentField( 'multiSelect', 0 );
-        $this->form->addPersistentField( 'items', '' );
-        $this->form->addPersistentField( 'decimalPlaces', 0 );
-        $this->form->addPersistentField( 'minimumValue' );
-        $this->form->addPersistentField( 'maximumValue' );
-        $this->form->addPersistentField( 'stripZeros' );
-        $this->form->addPersistentField( 'time', 0 );
-        $this->form->addPersistentField( 'members', 0 );
         $this->form->addPersistentField( 'required' );
         $this->form->addPersistentField( 'defaultValue' );
-        $this->form->addViewState( 'changeMode' );
+        $this->form->addField( 'multiLine', 0 );
+        $this->form->addField( 'minimumLength' );
+        $this->form->addField( 'maximumLength' );
+        $this->form->addField( 'editable', 0 );
+        $this->form->addField( 'multiSelect', 0 );
+        $this->form->addField( 'items', '' );
+        $this->form->addField( 'decimalPlaces', 0 );
+        $this->form->addField( 'minimumValue' );
+        $this->form->addField( 'maximumValue' );
+        $this->form->addField( 'stripZeros' );
+        $this->form->addField( 'time', 0 );
+        $this->form->addField( 'members', 0 );
+        $this->form->addViewState( 'metadata' );
+        $this->form->addViewState( 'type' );
 
         if ( $this->form->loadForm() ) {
             switch ( $this->page ) {
-                case 'type':
-                    if ( $this->form->isSubmittedWith( 'cancel' ) ) {
-                        if ( $this->changeMode ) {
-                            $this->page = 'details';
-                            break;
-                        } else {
-                            $this->response->redirect( $breadcrumbs->getParentUrl() );
-                        }
-                    }
+                case 'basic':
+                    if ( $this->form->isSubmittedWith( 'cancel' ) )
+                        $this->response->redirect( $breadcrumbs->getParentUrl() );
 
-                    $this->initializeRules();
-                    $this->form->validate();
+                    if ( $this->attributeType != $this->type )
+                        $this->switchType();
 
-                    if ( $this->form->isSubmittedWith( 'next' ) && !$this->form->hasErrors() ) {
-                        $this->type = $this->attributeType;
+                    if ( $this->form->isSubmittedWith( 'details' ) ) {
                         $this->page = 'details';
+                        $this->initializeDetailsRules();
+                        $this->loadDetails();
+                    } else {
+                        $this->initializeBasicRules();
+
+                        if ( $this->form->isSubmittedWith( 'ok' ) ) {
+                            $this->validateValues();
+
+                            if ( !$this->form->hasErrors() && $this->submitValues() ) {
+                                if ( $this->attribute == null ) {
+                                    $grid = new System_Web_Grid();
+                                    $grid->addExpandCookieId( 'wi_types', $typeId );
+                                }
+                                $this->response->redirect( $breadcrumbs->getParentUrl() );
+                            }
+                        }
                     }
                     break;
 
                 case 'details':
-                    if ( $this->form->isSubmittedWith( 'cancel' ) )
-                        $this->response->redirect( $breadcrumbs->getParentUrl() );
+                    if ( $this->form->isSubmittedWith( 'cancel' ) ) {
+                        $this->page = 'basic';
+                        $this->initializeBasicRules();
+                    } else {
+                        $this->initializeDetailsRules();
 
-                    if ( $this->form->isSubmittedWith( 'changeType' ) && $this->canChangeType ) {
-                        $this->changeMode = true;
-                        $this->attributeType = $this->type;
-                        $this->page = 'type';
-                        break;
-                    }
-
-                    $this->initializeRules();
-                    $this->validateValues();
-
-                    if ( $this->form->isSubmittedWith( 'ok' ) && !$this->form->hasErrors() ) {
-                        if ( $this->submitValues() ) {
-                            if ( $this->attribute == null ) {
-                                $grid = new System_Web_Grid();
-                                $grid->addExpandCookieId( 'wi_types', $typeId );
+                        if ( $this->form->isSubmittedWith( 'ok' ) ) {
+                            $this->validateDetails();
+                            
+                            if ( !$this->form->hasErrors() ) {
+                                $this->saveDetails();
+                                $this->page = 'basic';
+                                $this->initializeBasicRules();
                             }
-                            $this->response->redirect( $breadcrumbs->getParentUrl() );
                         }
                     }
                     break;
             }
         } else {
-            if ( $this->attribute != null )
-                $this->loadValues( $this->attribute[ 'attr_def' ] );
+            if ( $this->attribute != null ) {
+                $this->type = $info->getType();
+                $this->metadata = $info->getAllMetadata();
+
+                $this->required = $info->getMetadata( 'required', 0 );
+
+                $flags = 0;
+                if ( $info->getMetadata( 'multi-line', 0 ) )
+                    $flags |= System_Api_Formatter::MultiLine;
+
+                $expressionHelper = new System_Web_ExpressionHelper();
+                $this->defaultValue = $expressionHelper->formatExpression( $this->type, $this->attribute[ 'attr_def' ], $info->getMetadata( 'default' ), $flags );
+            } else {
+                $this->type = 'TEXT';
+                $this->metadata = array();
+            }
+
+            $this->attributeType = $this->type;
+
+            $this->initializeBasicRules();
         }
 
-        $this->initializeRules();
+        if ( $this->page == 'basic' ) {
+            $this->details = array();
+            $info = $this->createDefinition();
 
-        $this->registerJavaScript();
+            $this->attributeDetails = $helper->getAttributeDetails( $info );
+
+            $javaScript = new System_Web_JavaScript( $this->view );
+
+            $javaScript->registerAutoSubmit( $this->form->getFormSelector(), $this->form->getFieldSelector( 'attributeType' ),
+                $this->form->getSubmitSelector( 'go' ) );
+
+            if ( !empty( $this->autoComplete ) )
+                $javaScript->registerAutocomplete( $this->form->getFieldSelector( 'defaultValue' ), $this->autoComplete, $this->jsFlags );
+            else if ( $this->type == 'DATETIME' )
+                $javaScript->registerDatePicker( $this->form->getFieldSelector( 'defaultValue' ), $this->jsFlags );
+        }
     }
 
-    private function initializeRules()
+    private function initializeBasicRules()
     {
-        if ( $this->rules == $this->page )
-            return;
-
-        $this->rules = $this->page;
-
         $this->form->clearRules();
 
-        switch ( $this->page ) {
-            case 'type':
-                $this->form->addItemsRule( 'attributeType', $this->typeOptions );
-                break;
+        if ( $this->attribute == null )
+            $this->form->addTextRule( 'attributeName', System_Const::NameMaxLength );
 
-            case 'details':
-                if ( $this->attribute == null )
-                    $this->form->addTextRule( 'attributeName', System_Const::NameMaxLength );
-                switch ( $this->type ) {
-                    case 'TEXT':
-                        $this->form->addTextRule( 'minimumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
-                        $this->form->addTextRule( 'maximumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
-                        break;
+        $this->form->addItemsRule( 'attributeType', $this->typeOptions );
 
-                    case 'ENUM':
-                        $this->form->addTextRule( 'items', null, System_Api_Parser::MultiLine );
-                        $this->form->addTextRule( 'minimumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
-                        $this->form->addTextRule( 'maximumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
-                        break;
-
-                    case 'NUMERIC':
-                        $this->form->addTextRule( 'decimalPlaces', System_Const::ValueMaxLength );
-                        $this->form->addTextRule( 'minimumValue', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
-                        $this->form->addTextRule( 'maximumValue', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
-                        break;
-
-                    case 'DATETIME':
-                        $this->timeOptions = array(
-                            0 => $this->tr( 'Date only' ),
-                            1 => $this->tr( 'Date and time without time zone conversion' ),
-                            2 => $this->tr( 'Date and time using local time zone' ) );
-                        $this->form->addItemsRule( 'time', $this->timeOptions );
-                        break;
-
-                    case 'USER':
-                        break;
-                }
-                break;
-        }
-    }
-
-    private function registerJavaScript()
-    {
-        switch ( $this->type ) {
-            case 'DATETIME':
-                $javaScript = new System_Web_JavaScript( $this->view );
-                $flags = System_Web_JavaScript::WithToday;
-                if ( $this->time != 0 )
-                    $flags |= System_Web_JavaScript::WithTime;
-                $javaScript->registerDatePicker( $this->form->getFieldSelector( 'defaultValue' ), $flags );
-                $javaScript->registerDynamicDatePicker( $this->form->getFieldSelector( 'defaultValue' ),
-                    $this->form->getRadioSelector( 'time', 0 ), $this->form->getRadioSelector( 'time', 1 ) . ', ' . $this->form->getRadioSelector( 'time', 2 ) );
-                break;
-
-            case 'USER':
-                $javaScript = new System_Web_JavaScript( $this->view );
-                $expressionHelper = new System_Web_ExpressionHelper();
-                $javaScript->registerAutocomplete( $this->form->getFieldSelector( 'defaultValue' ), $expressionHelper->getUserItems() );
-                break;
-        }
-    }
-
-    private function loadValues( $definition )
-    {
-        $expressionHelper = new System_Web_ExpressionHelper();
-
-        $info = System_Api_DefinitionInfo::fromString( $definition );
+        $maxLength = System_Const::ValueMaxLength;
 
         switch ( $this->type ) {
             case 'TEXT':
-                $this->multiLine = $info->getMetadata( 'multi-line', 0 );
-                $this->minimumLength = $this->formatInteger( $info->getMetadata( 'min-length' ) );
-                $this->maximumLength = $this->formatInteger( $info->getMetadata( 'max-length' ) );
+                if ( $this->getMetadata( 'multi-line', 0 ) )
+                    $this->multiLine = true;
+                $maxLength = $this->getMetadata( 'max-length', $maxLength );
                 break;
 
             case 'ENUM':
-                $this->editable = $info->getMetadata( 'editable', 0 );
-                $this->multiSelect = $info->getMetadata( 'multi-select', 0 );
-                $this->items = join( "\n", $info->getMetadata( 'items' ) );
-                $this->minimumLength = $this->formatInteger( $info->getMetadata( 'min-length' ) );
-                $this->maximumLength = $this->formatInteger( $info->getMetadata( 'max-length' ) );
-                break;
-
-            case 'NUMERIC':
-                $this->decimalPlaces = $this->formatInteger( $info->getMetadata( 'decimal', 0 ) );
-                $this->stripZeros = $info->getMetadata( 'strip', 0 );
-                $this->minimumValue = $this->formatDecimalNumber( $info->getMetadata( 'min-value' ) );
-                $this->maximumValue = $this->formatDecimalNumber( $info->getMetadata( 'max-value' ) );
+                $this->autoComplete = $this->getMetadata( 'items' );
+                if ( $this->getMetadata( 'multi-select', 0 ) ) {
+                    $this->jsFlags |= System_Web_JavaScript::MultiSelect;
+                } else {
+                    if ( $this->getMetadata( 'editable', 0 ) )
+                        $maxLength = $this->getMetadata( 'max-length', $maxLength );
+                }
                 break;
 
             case 'DATETIME':
-                $this->time = $info->getMetadata( 'time', 0 ) ? ( $info->getMetadata( 'local', 0 ) ? 2 : 1 ) : 0;
+                $this->jsFlags = System_Web_JavaScript::WithToday;
+                if ( $this->getMetadata( 'time', 0 ) )
+                    $this->jsFlags |= System_Web_JavaScript::WithTime;
                 break;
 
             case 'USER':
-                $this->members = $info->getMetadata( 'members', 0 );
-                $this->multiSelect = $info->getMetadata( 'multi-select', 0 );
+                $expressionHelper = new System_Web_ExpressionHelper();
+                $this->autoComplete = $expressionHelper->getUserItems();
+                if ( $this->getMetadata( 'multi-select', 0 ) )
+                    $this->jsFlags |= System_Web_JavaScript::MultiSelect;
                 break;
         }
 
-        $this->required = $info->getMetadata( 'required', 0 );
+        $flags = System_Api_Parser::AllowEmpty;
+        if ( !empty( $this->multiLine ) )
+            $flags |= System_Api_Parser::MultiLine;
+        $this->form->addTextRule( 'defaultValue', $maxLength, $flags );
+    }
 
-        $this->defaultValue = $expressionHelper->formatExpression( $this->type, $definition, $info->getMetadata( 'default' ) );
+    private function validateValues()
+    {
+        $this->form->validate();
+
+        $info = $this->createDefinition();
+        $this->definition = $info->toString();
+
+        try {
+            $this->parser->checkAttributeDefinition( $this->definition );
+        } catch ( System_Api_Error $ex ) {
+            $this->form->getErrorHelper()->handleError( 'definitionError', $ex );
+        }
+
+        try {
+            $flags = System_Api_Parser::AllowEmpty;
+            if ( !empty( $this->multiLine ) )
+                $flags |= System_Api_Parser::MultiLine;
+
+            $this->defaultValue = $this->parser->normalizeString( $this->defaultValue, System_Const::ValueMaxLength, $flags );
+
+            if ( $this->defaultValue !== '' && !$this->form->hasErrors() ) {
+                $expressionHelper = new System_Web_ExpressionHelper();
+                $value = $expressionHelper->parseExpression( $this->type, $this->definition, $this->defaultValue );
+
+                $flags = 0;
+                if ( $info->getMetadata( 'multi-line', 0 ) )
+                    $flags |= System_Api_Formatter::MultiLine;
+
+                $this->defaultValue = $expressionHelper->formatExpression( $this->type, $this->definition, $value, $flags );
+
+                $info->setMetadata( 'default', $value );
+                $this->definition = $info->toString();
+            }
+        } catch ( System_Api_Error $ex ) {
+            $this->form->getErrorHelper()->handleError( 'defaultValue', $ex );
+        }
+    }
+
+    private function submitValues()
+    {
+        $typeManager = new System_Api_TypeManager();
+
+        if ( $this->attribute == null ) {
+            try {
+                $typeManager->addAttributeType( $this->issueType, $this->attributeName, $this->definition );
+            } catch ( System_Api_Error $ex ) {
+                $this->form->getErrorHelper()->handleError( 'attributeName', $ex );
+                return false;
+            }
+        } else {
+            $typeManager->modifyAttributeType( $this->attribute, $this->definition );
+        }
+
+        return true;
+    }
+
+    private function initializeDetailsRules()
+    {
+        $this->form->clearRules();
+
+        switch ( $this->type ) {
+            case 'TEXT':
+                $this->form->addTextRule( 'minimumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
+                $this->form->addTextRule( 'maximumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
+                break;
+
+            case 'ENUM':
+                $this->form->addTextRule( 'items', null, System_Api_Parser::MultiLine );
+                $this->form->addTextRule( 'minimumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
+                $this->form->addTextRule( 'maximumLength', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
+                break;
+
+            case 'NUMERIC':
+                $this->form->addTextRule( 'decimalPlaces', System_Const::ValueMaxLength );
+                $this->form->addTextRule( 'minimumValue', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
+                $this->form->addTextRule( 'maximumValue', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
+                break;
+
+            case 'DATETIME':
+                $this->timeOptions = array(
+                    0 => $this->tr( 'Date only' ),
+                    1 => $this->tr( 'Date and time without time zone conversion' ),
+                    2 => $this->tr( 'Date and time using local time zone' ) );
+                $this->form->addItemsRule( 'time', $this->timeOptions );
+                break;
+
+            case 'USER':
+                break;
+        }
+    }
+
+    private function loadDetails()
+    {
+        switch ( $this->type ) {
+            case 'TEXT':
+                $this->multiLine = $this->getMetadata( 'multi-line', 0 );
+                $this->minimumLength = $this->formatInteger( $this->getMetadata( 'min-length' ) );
+                $this->maximumLength = $this->formatInteger( $this->getMetadata( 'max-length' ) );
+                break;
+
+            case 'ENUM':
+                $this->editable = $this->getMetadata( 'editable', 0 );
+                $this->multiSelect = $this->getMetadata( 'multi-select', 0 );
+                $this->items = join( "\n", $this->getMetadata( 'items', array() ) );
+                $this->minimumLength = $this->formatInteger( $this->getMetadata( 'min-length' ) );
+                $this->maximumLength = $this->formatInteger( $this->getMetadata( 'max-length' ) );
+                break;
+
+            case 'NUMERIC':
+                $this->decimalPlaces = $this->formatInteger( $this->getMetadata( 'decimal', 0 ) );
+                $this->stripZeros = $this->getMetadata( 'strip', 0 );
+                $this->minimumValue = $this->formatDecimalNumber( $this->getMetadata( 'min-value' ) );
+                $this->maximumValue = $this->formatDecimalNumber( $this->getMetadata( 'max-value' ) );
+                break;
+
+            case 'DATETIME':
+                $this->time = $this->getMetadata( 'time', 0 ) ? ( $this->getMetadata( 'local', 0 ) ? 2 : 1 ) : 0;
+                break;
+
+            case 'USER':
+                $this->members = $this->getMetadata( 'members', 0 );
+                $this->multiSelect = $this->getMetadata( 'multi-select', 0 );
+                break;
+        }
     }
 
     private function formatInteger( $value )
@@ -287,61 +377,51 @@ class Admin_Types_Attribute extends System_Web_Component
         return null;
     }
 
-    private function validateValues()
+    private function validateDetails()
     {
         $this->form->validate();
 
-        $info = new System_Api_DefinitionInfo();
-        $info->setType( $this->type );
+        $this->details = array();
 
         switch ( $this->type ) {
             case 'TEXT':
-                if ( $this->multiLine )
-                    $info->setMetadata( 'multi-line', 1 );
-                $info->setMetadata( 'min-length', $this->validateInteger( 'minimumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty ) );
-                $info->setMetadata( 'max-length', $this->validateInteger( 'maximumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty ) );
+                $this->details[ 'multi-line' ] = $this->multiLine ? 1 : 0;
+                $this->details[ 'min-length' ] = $this->validateInteger( 'minimumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
+                $this->details[ 'max-length' ] = $this->validateInteger( 'maximumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
                 break;
 
             case 'ENUM':
-                if ( $this->editable )
-                    $info->setMetadata( 'editable', 1 );
-                if ( $this->multiSelect )
-                    $info->setMetadata( 'multi-select', 1 );
-                $info->setMetadata( 'items', $this->validateItems( 'items' ) );
-                if ( $this->editable && !$this->multiSelect ) {
-                    $info->setMetadata( 'min-length', $this->validateInteger( 'minimumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty ) );
-                    $info->setMetadata( 'max-length', $this->validateInteger( 'maximumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty ) );
-                } else {
+                $this->details[ 'editable' ] = $this->editable ? 1 : 0;
+                $this->details[ 'multi-select' ] = $this->multiSelect ? 1 : 0;
+                $this->details[ 'items' ] = $this->validateItems( 'items' );
+                $this->details[ 'min-length' ] = $this->validateInteger( 'minimumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
+                $this->details[ 'max-length' ] = $this->validateInteger( 'maximumLength', 1, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
+                if ( !$this->editable || $this->multiSelect ) {
                     $this->validateEmpty( 'minimumLength' );
                     $this->validateEmpty( 'maximumLength' );
                 }
                 break;
 
             case 'NUMERIC':
-                $info->setMetadata( 'decimal', $this->validateInteger( 'decimalPlaces', 0, 6 ) );
-                if ( $this->stripZeros )
-                    $info->setMetadata( 'strip', 1 );
-                $info->setMetadata( 'min-value', $this->validateDecimalNumber( 'minimumValue', System_Api_Parser::AllowEmpty ) );
-                $info->setMetadata( 'max-value', $this->validateDecimalNumber( 'maximumValue', System_Api_Parser::AllowEmpty ) );
+                $this->details[ 'decimal' ] = $this->validateInteger( 'decimalPlaces', 0, 6 );
+                $this->details[ 'strip' ] = $this->stripZeros ? 1 : 0;
+                $this->details[ 'min-value' ] = $this->validateDecimalNumber( 'minimumValue', System_Api_Parser::AllowEmpty );
+                $this->details[ 'max-value' ] = $this->validateDecimalNumber( 'maximumValue', System_Api_Parser::AllowEmpty );
                 break;
 
             case 'DATETIME':
-                if ( $this->time > 0 ) {
-                    $info->setMetadata( 'time', 1 );
-                    if ( $this->time == 2 )
-                        $info->setMetadata( 'local', 1 );
-                }
+                $this->details[ 'time' ] = ( $this->time > 0 ) ? 1 : 0;
+                $this->details[ 'local' ] = ( $this->time == 2 );
                 break;
 
             case 'USER':
-                if ( $this->members )
-                    $info->setMetadata( 'members', 1 );
-                if ( $this->multiSelect )
-                    $info->setMetadata( 'multi-select', 1 );
+                $this->details[ 'members' ] = $this->members ? 1 : 0;
+                $this->details[ 'multi-select' ] = $this->multiSelect ? 1 : 0;
                 break;
         }
 
         if ( !$this->form->hasErrors() ) {
+            $info = $this->createDefinition();
             $this->definition = $info->toString();
 
             try {
@@ -350,14 +430,6 @@ class Admin_Types_Attribute extends System_Web_Component
                 $this->form->getErrorHelper()->handleError( 'definitionError', $ex );
             }
         }
-
-        if ( $this->required )
-            $info->setMetadata( 'required', 1 );
-
-        $info->setMetadata( 'default', $this->validateValue( 'defaultValue' ) );
-
-        if ( !$this->form->hasErrors() )
-            $this->definition = $info->toString();
     }
 
     private function validateEmpty( $propertyName )
@@ -396,22 +468,6 @@ class Admin_Types_Attribute extends System_Web_Component
         return null;
     }
 
-    private function validateValue( $propertyName )
-    {
-        try {
-            $this->$propertyName = $this->parser->normalizeString( $this->$propertyName, System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
-            if ( $this->$propertyName !== '' && !$this->form->hasErrors() ) {
-                $expressionHelper = new System_Web_ExpressionHelper();
-                $value = $expressionHelper->parseExpression( $this->type, $this->definition, $this->$propertyName );
-                $this->$propertyName = $expressionHelper->formatExpression( $this->type, $this->definition, $value );
-                return $value;
-            }
-        } catch ( System_Api_Error $ex ) {
-            $this->form->getErrorHelper()->handleError( $propertyName, $ex );
-        }
-        return null;
-    }
-
     private function validateItems( $propertyName )
     {
         try {
@@ -430,21 +486,96 @@ class Admin_Types_Attribute extends System_Web_Component
         return null;
     }
 
-    private function submitValues()
+    private function saveDetails()
     {
-        $typeManager = new System_Api_TypeManager();
+        $this->metadata = array_merge( $this->metadata, $this->details );
+        $this->details = array();
 
-        if ( $this->attribute == null ) {
-            try {
-                $typeManager->addAttributeType( $this->issueType, $this->attributeName, $this->definition );
-            } catch ( System_Api_Error $ex ) {
-                $this->form->getErrorHelper()->handleError( 'attributeName', $ex );
-                return false;
-            }
-        } else {
-            $typeManager->modifyAttributeType( $this->attribute, $this->definition );
+        $this->normalizeDefaultValue();
+    }
+
+    private function switchType()
+    {
+        $helper = new Admin_Types_Helper();
+        $compatible = $helper->getCompatibleTypes( $this->type );
+
+        $this->type = $this->attributeType;
+
+        if ( isset( $compatible[ $this->attributeType ] ) )
+            $this->normalizeDefaultValue();
+        else
+            $this->defaultValue = '';
+    }
+
+    private function normalizeDefaultValue()
+    {
+        $flags = 0;
+        if ( $this->type == 'TEXT' && $this->getMetadata( 'multi-line', 0 ) )
+            $flags |= System_Api_Parser::MultiLine;
+
+        try {
+            $this->defaultValue = $this->parser->normalizeString( $this->defaultValue, null, $flags );
+        } catch ( System_Api_Error $ex ) {
+            $this->defaultValue = '';
+        }
+    }
+
+    private function createDefinition()
+    {
+        $info = new System_Api_DefinitionInfo();
+        $info->setType( $this->type );
+
+        switch ( $this->type ) {
+            case 'TEXT':
+                if ( $this->getMetadata( 'multi-line', 0 ) == 1 )
+                    $info->setMetadata( 'multi-line', 1 );
+                $info->setMetadata( 'min-length', $this->getMetadata( 'min-length' ) );
+                $info->setMetadata( 'max-length', $this->getMetadata( 'max-length' ) );
+                break;
+
+            case 'ENUM':
+                $info->setMetadata( 'items', $this->getMetadata( 'items' ) );
+                if ( $this->getMetadata( 'editable', 0 ) == 1 )
+                    $info->setMetadata( 'editable', 1 );
+                if ( $this->getMetadata( 'multi-select', 0 ) == 1 )
+                    $info->setMetadata( 'multi-select', 1 );
+                $info->setMetadata( 'min-length', $this->getMetadata( 'min-length' ) );
+                $info->setMetadata( 'max-length', $this->getMetadata( 'max-length' ) );
+                break;
+
+            case 'NUMERIC':
+                $info->setMetadata( 'decimal', $this->getMetadata( 'decimal' ) );
+                $info->setMetadata( 'min-length', $this->getMetadata( 'min-length' ) );
+                $info->setMetadata( 'max-length', $this->getMetadata( 'max-length' ) );
+                if ( $this->getMetadata( 'strip', 0 ) == 1 )
+                    $info->setMetadata( 'strip', 1 );
+                break;
+
+            case 'DATETIME':
+                if ( $this->getMetadata( 'time', 0 ) == 1 )
+                    $info->setMetadata( 'time', 1 );
+                if ( $this->getMetadata( 'local', 0 ) == 1 )
+                    $info->setMetadata( 'local', 1 );
+                break;
+
+            case 'USER':
+                if ( $this->getMetadata( 'members', 0 ) == 1 )
+                    $info->setMetadata( 'members', 1 );
+                if ( $this->getMetadata( 'multi-select', 0 ) == 1 )
+                    $info->setMetadata( 'multi-select', 1 );
+                break;
         }
 
-        return true;
+        if ( $this->required )
+            $info->setMetadata( 'required', 1 );
+
+        return $info;
+    }
+
+    private function getMetadata( $key, $default = null )
+    {
+        if ( array_key_exists( $key, $this->details ) )
+            return $this->details[ $key ];
+        return isset( $this->metadata[ $key ] ) ? $this->metadata[ $key ] : $default;
     }
 }

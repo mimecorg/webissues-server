@@ -69,9 +69,11 @@ class System_Web_ExpressionHelper extends System_Web_Base
     * @param $type Type of the attribute.
     * @param $definition Definition of the attribute.
     * @param $value The standardized value to format.
+    * @param $flags If MultiLine is given, new lines and multiple spaces
+    * are preserved in the value.
     * @return The formatted value.
     */
-    public function formatExpression( $type, $definition, $value )
+    public function formatExpression( $type, $definition, $value, $flags = 0 )
     {
         if ( ( $type == 'TEXT' || $type == 'ENUM' || $type == 'USER' ) && mb_substr( $value, 0, 4 ) == '[Me]' ) {
             return '[' . $this->tr( 'Me' ) . ']';
@@ -79,7 +81,7 @@ class System_Web_ExpressionHelper extends System_Web_Base
             return '[' . $this->tr( 'Today' ) . ']' . mb_substr( $value, 7 );
         } else {
             $formatter = new System_Api_Formatter();
-            return $formatter->convertAttributeValue( $definition, $value );
+            return $formatter->convertAttributeValue( $definition, $value, $flags );
         }
     }
 

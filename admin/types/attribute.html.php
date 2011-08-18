@@ -6,41 +6,68 @@
 </p>
 <?php endif ?>
 
+<?php $form->renderFormOpen() ?>
+
+<?php switch ( $page ):
+case 'basic': ?>
+
 <?php if ( !empty( $typeName ) ): ?>
 <p><?php echo $this->tr( 'Create a new attribute in type <strong>%1</strong>.', null, $typeName ) ?></p>
 <?php elseif ( !empty( $oldAttributeName ) ): ?>
 <p><?php echo $this->tr( 'Modify attribute <strong>%1</strong>.', null, $oldAttributeName ) ?></p>
 <?php endif ?>
 
-<?php $form->renderFormOpen() ?>
-
-<?php switch ( $page ):
-case 'type': ?>
-
-<?php $form->renderSelect( $this->tr( 'Type:' ), 'attributeType', $typeOptions ) ?>
-
-<div class="form-submit">
-<?php $form->renderSubmit( $this->tr( 'Continue' ), 'next' ) ?>
-<?php $form->renderSubmit( $this->tr( 'Cancel' ), 'cancel' ) ?>
-</div>
-
-<?php break;
-case 'details': ?>
-
 <?php if ( !empty( $typeName ) ): ?>
 <?php $form->renderText( $this->tr( 'Name:' ), 'attributeName', array( 'size' => 40 ) ) ?>
 <?php endif ?>
 
 <fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Attribute Type' ) ?></legend>
+
+<div class="form-inline">
+<?php $form->renderSelect( null, 'attributeType', $typeOptions, array( 'style' => 'width: 15em;' ) ) ?>
+<?php $form->renderSubmit( $this->tr( 'Go' ), 'go' ) ?>
+</div>
+
+</fieldset>
+
+<fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Attribute Details' ) ?></legend>
 
 <div style="float: right">
-<?php $form->renderSubmit( $this->tr( 'Change Type' ), 'changeType', array( 'disabled' => empty( $canChangeType ) ) ) ?>
+<?php $form->renderSubmit( $this->tr( 'Edit' ), 'details' ) ?>
 </div>
 
-<p><?php echo $this->tr( 'Specify details of <strong>%1</strong> attribute.', null, $typeOptions[ $type ] ) ?></p>
+<p><?php echo $attributeDetails ?></p>
 
-<?php switch ( $type ):
+<?php $form->renderError( 'definitionError' ) ?>
+
+</fieldset>
+
+<fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Common Settings' ) ?></legend>
+
+<?php $form->renderCheckBox( $this->tr( 'Attribute is required' ), 'required' ) ?>
+
+<?php
+    if ( !empty( $multiLine ) ):
+        $form->renderTextArea( $this->tr( 'Default value:' ), 'defaultValue', array( 'cols' => 60, 'rows' => 6 ) );
+    else:
+        $form->renderText( $this->tr( 'Default value:' ), 'defaultValue', array( 'size' => 60 ) );
+    endif;
+?>
+
+</fieldset>
+
+<?php break;
+case 'details': ?>
+
+<p><?php echo $this->tr( 'Specify details of <strong>%1</strong> attribute.', null, $typeOptions[ $attributeType ] ) ?></p>
+
+<fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Attribute Details' ) ?></legend>
+
+<?php switch ( $attributeType ):
 case 'TEXT': ?>
 
 <?php $form->renderCheckBox( $this->tr( 'Allow entering multiple lines of text' ), 'multiLine' ) ?>
@@ -91,20 +118,12 @@ endswitch ?>
 
 </fieldset>
 
-<fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Common Settings' ) ?></legend>
-
-<?php $form->renderCheckBox( $this->tr( 'Attribute is required' ), 'required' ) ?>
-<?php $form->renderText( $this->tr( 'Default value:' ), 'defaultValue', array( 'size' => 40 ) ) ?>
-
-</fieldset>
+<?php break;
+endswitch ?>
 
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'OK' ), 'ok' ) ?>
 <?php $form->renderSubmit( $this->tr( 'Cancel' ), 'cancel' ) ?>
 </div>
-
-<?php break;
-endswitch ?>
 
 <?php $form->renderFormClose() ?>
