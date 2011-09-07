@@ -42,7 +42,7 @@ class Admin_Views_Unpublish extends System_Web_Component
 
         if ( $this->form->loadForm() ) {
             if ( $this->form->isSubmittedWith( 'cancel' ) )
-                $this->response->redirect( $parentUrl );
+                $this->response->redirect( $breadcrumbs->getParentUrl() );
 
             if ( $this->form->isSubmittedWith( 'ok' ) ) {
                 if ( $this->canUnpublish ) {
