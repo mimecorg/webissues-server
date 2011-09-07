@@ -19,7 +19,7 @@
 <td><?php echo $server[ 'server_name' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Unique identifier:' ) ?></td>
+<td><?php echo $this->tr( 'Unique ID:' ) ?></td>
 <td><?php echo $server[ 'server_uuid' ] ?></td>
 </tr>
 </table>

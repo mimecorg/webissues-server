@@ -1,6 +1,6 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<p><?php echo $this->tr( 'A new random unique ID will be assigned to this server.' ) ?></p>
+<p><?php echo $this->tr( 'A new, random unique identifier will be assigned to this server.' ) ?></p>
 
 <?php $form->renderFormOpen(); ?>
 

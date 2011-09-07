@@ -38,7 +38,7 @@
 
 <p><?php echo $this->tr( 'The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.' ) ?></p>
 
-<?php $form->renderSelect( $this->tr( 'GC probability:' ), 'gcDivisor', $gcOptions, array( 'style' => 'width: 15em;' ) ) ?>
+<?php $form->renderSelect( $this->tr( 'GC probability:' ), 'gcDivisor', $gcOptions, array( 'style' => 'width: 20em;' ) ) ?>
 
 </fieldset>
 
