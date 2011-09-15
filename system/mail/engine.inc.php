@@ -74,8 +74,9 @@ class System_Mail_Engine
                 $this->mailer->IsSMTP();
                 $this->mailer->Host = $settings[ 'smtp_server' ];
                 $this->mailer->Port = $settings[ 'smtp_port' ];
-                $this->mailer->SMTPSecure = $settings[ 'smtp_encryption' ];
-                if ( $settings[ 'smtp_user' ] != '' ) {
+                if ( !empty( $settings[ 'smtp_encryption' ] ) )
+                    $this->mailer->SMTPSecure = $settings[ 'smtp_encryption' ];
+                if ( !empty( $settings[ 'smtp_user' ] ) ) {
                     $this->mailer->SMTPAuth = true;
                     $this->mailer->Username = $settings[ 'smtp_user' ];
                     $this->mailer->Password = $settings[ 'smtp_password' ];
