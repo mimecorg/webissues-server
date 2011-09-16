@@ -69,7 +69,7 @@ class System_Api_Formatter
         $value = number_format( $number, $decimal, $decimalSeparator, $groupSeparator );
 
         if ( ( $flags & self::StripZeros ) && $decimal > 0 && strpos( $value, $decimalSeparator ) !== false )
-            $value = rtrim( rtrim( $value, '0' ), '.' );
+            $value = rtrim( rtrim( $value, '0' ), $decimalSeparator );
 
         return $value;
     }

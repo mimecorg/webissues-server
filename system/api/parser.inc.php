@@ -86,7 +86,7 @@ class System_Api_Parser extends System_Api_Validator
         else
             $pattern = '(-?\d+)';
 
-        $pattern .= '(?:' . preg_quote( $info->getMetadata( 'decimal-separator' ), '/' ) . '(\d+))?';
+        $pattern .= '(?:' . preg_quote( $info->getMetadata( 'decimal-separator' ), '/' ) . '(\d*))?';
 
         if ( !preg_match( '/^' . $pattern . '$/', $value, $matches ) )
             throw new System_Api_Error( System_Api_Error::InvalidFormat );
