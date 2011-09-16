@@ -545,8 +545,8 @@ class Admin_Types_Attribute extends System_Web_Component
 
             case 'NUMERIC':
                 $info->setMetadata( 'decimal', $this->getMetadata( 'decimal' ) );
-                $info->setMetadata( 'min-length', $this->getMetadata( 'min-length' ) );
-                $info->setMetadata( 'max-length', $this->getMetadata( 'max-length' ) );
+                $info->setMetadata( 'min-value', $this->getMetadata( 'min-value' ) );
+                $info->setMetadata( 'max-value', $this->getMetadata( 'max-value' ) );
                 if ( $this->getMetadata( 'strip', 0 ) == 1 )
                     $info->setMetadata( 'strip', 1 );
                 break;
