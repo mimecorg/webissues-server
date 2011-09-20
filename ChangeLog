@@ -1,3 +1,13 @@
+1.0-beta2 (2011-09-20)
+    * added multi-select attributes
+    * added IN operator in filters
+    * added support for transactions
+    * added the audit log (task #424)
+    * redesigned the attribute definition page
+    * fixed creating issue types on Postgres (bug #630)
+    * fixed importing data from 0.8.5 on Postgres (bug #636)
+    * fixed translations on 64-bit Linux (bug #624)
+
 1.0-beta1 (2011-07-08)
     * added initial version of WebIssues Manual
     * added support for PostgreSQL database
