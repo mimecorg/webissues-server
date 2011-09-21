@@ -179,6 +179,14 @@ class System_Db_Connection
     }
 
     /**
+    * Execute the query without additional processing.
+    */
+    public function executeRaw( $query )
+    {
+        $this->engine->execute( $query, array() );
+    }
+
+    /**
     * Execute a query which returns no result. This method works like
     * execute() but takes substitution arguments as an array.
     * @param $query The query to execute.
