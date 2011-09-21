@@ -295,6 +295,9 @@ class System_Api_UserManager extends System_Api_Base
     */
     public function changePassword( $password, $newPassword )
     {
+        if ( System_Core_Application::getInstance()->getSite()->getConfig( 'demo_mode' ) )
+            System_Api_Principal::getCurrent()->checkAdministrator();
+
         $userId = System_Api_Principal::getCurrent()->getUserId();
 
         $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'users' );

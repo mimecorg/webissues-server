@@ -105,6 +105,9 @@ class System_Api_PreferencesManager extends System_Api_Base
         if ( $newValue == $oldValue )
             return false;
 
+        if ( System_Core_Application::getInstance()->getSite()->getConfig( 'demo_mode' ) )
+            System_Api_Principal::getCurrent()->checkAdministrator();
+
         if ( $oldValue == '' )
             $query = 'INSERT INTO {preferences} ( user_id, pref_key, pref_value ) VALUES ( %1d, %2s, %3s )';
         else if ( $newValue == '' )

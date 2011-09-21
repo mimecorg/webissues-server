@@ -75,6 +75,11 @@ class System_Api_SessionManager extends System_Api_Base
                         if ( $newPassword == $password )
                             throw new System_Api_Error( System_Api_Error::CannotReusePassword );
 
+                        if ( System_Core_Application::getInstance()->getSite()->getConfig( 'demo_mode' ) ) {
+                            if ( $user[ 'user_access' ] != System_Const::AdministratorAccess )
+                                throw new System_Api_Error( System_Api_Error::AccessDenied );
+                        }
+
                         $newHash = $passwordHash->hashPassword( $newPassword );
 
                         $query = 'UPDATE {users} SET user_passwd = %s, passwd_temp = 0 WHERE user_id = %d';
