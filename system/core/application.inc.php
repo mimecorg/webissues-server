@@ -493,7 +493,7 @@ abstract class System_Core_Application
     */
     protected function logException( $exception )
     {
-        if ( $this->commandLine != null )
+        if ( $this->commandLine != null && is_resource( STDERR ) )
             fwrite( STDERR, $exception->__toString() . "\n" );
 
         if ( $this->debug->checkLevel( DEBUG_ERRORS ) )
