@@ -172,6 +172,8 @@ class Client_IssuesList extends System_Web_Component
         }
         $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-read-16.png', $this->tr( 'Mark All As Read' ), array( 'folder' => $folderId, 'status' => 1 ) );
         $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-unread-16.png', $this->tr( 'Mark All As Unread' ), array( 'folder' => $folderId, 'status' => 0 ) );
+        $this->toolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Manage Views' ), array( 'folder' => $folderId ) );
+        $this->toolBar->addFixedCommand( '/client/alerts/index.php', '/common/images/configure-alerts-16.png', $this->tr( 'Manage Alerts' ), array( 'folder' => $folderId ) );
 
         $this->viewToolBar = new System_Web_ToolBar();
         $this->viewToolBar->setFilterParameters( array( 'sort', 'order', 'page', 'view' ) );
@@ -179,7 +181,5 @@ class Client_IssuesList extends System_Web_Component
         $this->viewToolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add View' ), array( 'folder' => $folderId, 'direct' => 1 ) );
         if ( $personalViewId != 0 )
             $this->viewToolBar->addFixedCommand( '/client/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ), array( 'folder' => $folderId, 'id' => $personalViewId, 'direct' => 1 ) );
-        $this->viewToolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Manage Views' ), array( 'folder' => $folderId ) );
-        $this->viewToolBar->addFixedCommand( '/client/alerts/index.php', '/common/images/configure-alerts-16.png', $this->tr( 'Manage Alerts' ), array( 'folder' => $folderId ) );
     }
 }

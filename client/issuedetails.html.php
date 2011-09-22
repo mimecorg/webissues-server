@@ -1,10 +1,10 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<div style="float: right; max-width: 75%; text-align: right; line-height: 20px">
+<h2><?php echo $issue[ 'issue_name' ] ?></h2>
+
+<div class="toolbar">
 <?php $toolBar->render() ?>
 </div>
-
-<h2><?php echo $issue[ 'issue_name' ] ?></h2>
 
 <div class="sub-pane-wrapper">
 

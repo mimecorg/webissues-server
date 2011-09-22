@@ -1,12 +1,12 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<div style="float: right;">
-<?php $toolBar->render() ?>
-</div>
-
 <p><?php echo $this->tr( 'Edit alert settings for folder <strong>%1</strong>.', null, $folder[ 'folder_name' ] ) ?></p>
 
 <?php $form->renderFormOpen(); ?>
+
+<div class="toolbar">
+<?php $toolBar->render() ?>
+</div>
 
 <table class="grid">
 <tr>

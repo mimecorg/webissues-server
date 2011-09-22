@@ -1,21 +1,20 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<div style="float: right; max-width: 75%; text-align: right; line-height: 20px">
+<h2><?php echo $folderName ?></h2>
+
+<div class="toolbar">
 <?php $toolBar->render() ?>
 </div>
 
-<h2><?php echo $folderName ?></h2>
-
-<div style="clear: both"></div>
-
-<div style="float: right; line-height: 20px">
-<?php $viewToolBar->render() ?>
-</div>
-
+<div style="float: left">
 <?php $viewForm->renderFormOpen( null, array( 'class' => 'form-inline' ) ) ?>
 <?php $viewForm->renderSelect( $this->tr( 'Select view:' ), 'viewSelect', $viewOptions, array( 'style' => 'width: 15em;' ) ) ?>
 <?php $viewForm->renderSubmit( $this->tr( 'Go' ), 'go' ) ?>
+&nbsp; <?php $viewToolBar->render() ?>
 <?php $viewForm->renderFormClose() ?>
+</div>
+
+<div style="clear: both"></div>
 
 <table class="grid">
 <tr>

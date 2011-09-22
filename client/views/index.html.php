@@ -1,10 +1,10 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<div style="float: right;">
+<p><?php echo $this->tr( 'Edit personal view settings for type <strong>%1</strong>.', null, $type[ 'type_name' ] ) ?></p>
+
+<div class="toolbar">
 <?php $toolBar->render() ?>
 </div>
-
-<p><?php echo $this->tr( 'Edit personal view settings for type <strong>%1</strong>.', null, $type[ 'type_name' ] ) ?></p>
 
 <?php $form->renderFormOpen(); ?>
 

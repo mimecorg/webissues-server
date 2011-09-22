@@ -1,8 +1,8 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<?php $this->beginSlot( 'float_links' ) ?>
+<div class="toolbar">
 <?php $toolBar->render() ?>
-<?php $this->endSlot() ?>
+</div>
 
 <table class="grid">
 <tr>

@@ -37,9 +37,9 @@
 
 </fieldset>
 
-<p style="float: right;">
+<div class="toolbar">
 <?php $toolBar->render() ?>
-</p>
+</div>
 
 <table class="grid">
 <tr>
