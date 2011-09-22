@@ -13,7 +13,7 @@ body {
 
 #header {
   width: 100%;
-  height: 100px;
+  height: 95px;
 }
 
 #site-logo {
@@ -75,7 +75,7 @@ body {
 
 .fixed-block {
   position: relative;
-  margin: 20px auto 20px auto;
+  margin: 25px auto 20px auto;
   padding: 0.75em;
   background: #ffffff url(images/bg-block.png) repeat-x;
   border: 1px solid #cccccc;
@@ -84,7 +84,7 @@ body {
 
 .message-block {
   position: relative;
-  margin: 70px auto 20px auto;
+  margin: 75px auto 20px auto;
   padding: 0.75em;
   background: #ffffff url(images/bg-block.png) repeat-x;
   border: 1px solid #cccccc;
