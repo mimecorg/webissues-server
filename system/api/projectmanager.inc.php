@@ -51,15 +51,19 @@ class System_Api_ProjectManager extends System_Api_Base
 
     /**
     * Get list of accessible projects.
+    * @param $flags If RequireAdministrator is passed only projects
+    * to which the user has administrator access are returned.
     * @return An array of associative arrays representing project.
     */
-    public function getProjects()
+    public function getProjects( $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
         if ( !$principal->isAdministrator() ) {
             $query = 'SELECT p.project_id, p.project_name, r.project_access FROM {projects} AS p'
                 . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
+            if ( $flags & self::RequireAdministrator )
+                $query .= ' AND r.project_access = %2d';
         } else {
             $query = 'SELECT p.project_id, p.project_name, %2d AS project_access FROM {projects} AS p';
         }
@@ -72,8 +76,7 @@ class System_Api_ProjectManager extends System_Api_Base
     * Get the project with given identifier.
     * @param $projectId Identifier of the project.
     * @param $flags If RequireAdministrator is passed an error is thrown
-    * if the user does not have administrator access to
-    * the project.
+    * if the user does not have administrator access to the project.
     * @return Array containing project details.
     */
     public function getProject( $projectId, $flags = 0 )
@@ -99,19 +102,24 @@ class System_Api_ProjectManager extends System_Api_Base
 
     /**
     * Get list of folders in all accessible projects.
+    * @param $flags If RequireAdministrator is passed only folders from
+    * projects to which the user has administrator access are returned.
     * @return An array of associative arrays representing folders.
     */
-    public function getFolders()
+    public function getFolders( $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
         $query = 'SELECT f.folder_id, f.project_id, f.folder_name, f.type_id, f.stamp_id, t.type_name FROM {folders} AS f';
-        if ( !$principal->isAdministrator() )
-            $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %d';
+        if ( !$principal->isAdministrator() ) {
+            $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
+            if ( $flags & self::RequireAdministrator )
+                $query .= ' AND r.project_access = %2d';
+        }
         $query .= ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
             . ' ORDER BY f.folder_name COLLATE LOCALE';
 
-        return $this->connection->queryTable( $query, $principal->getUserId() );
+        return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::AdministratorAccess );
     }
 
     /**

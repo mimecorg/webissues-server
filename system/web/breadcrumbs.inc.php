@@ -37,6 +37,7 @@ class System_Web_Breadcrumbs extends System_Web_Base
     const ManageAlerts = 10;
     const Issue = 11;
     const Tools = 12;
+    const ManageProjects = 13;
 
     private $page = null;
 
@@ -122,7 +123,7 @@ class System_Web_Breadcrumbs extends System_Web_Base
                 break;
 
             case self::ProjectMembers:
-                $this->append( self::Project, $object );
+                $this->append( self::ManageProjects );
                 $this->urls[] = $this->filterQueryString( '/client/projects/members.php', array( 'project', 'sort', 'order', 'page' ) );
                 $this->names[] = $this->tr( 'Project Members' );
                 break;
@@ -154,6 +155,11 @@ class System_Web_Breadcrumbs extends System_Web_Base
             case self::Tools:
                 $this->urls[] = '/client/tools/index.php';
                 $this->names[] = $this->tr( 'Tools' );
+                break;
+
+            case self::ManageProjects:
+                $this->urls[] = '/client/projects/index.php';
+                $this->names[] = $this->tr( 'Manage Projects' );
                 break;
         }
     }

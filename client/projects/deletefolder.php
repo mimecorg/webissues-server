@@ -37,7 +37,7 @@ class Client_Projects_DeleteFolder extends System_Web_Component
         $this->view->setSlot( 'page_title', $this->tr( 'Delete Folder' ) );
 
         $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Folder, $this->folder );
+        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageProjects );
 
         $this->form = new System_Web_Form( 'projects', $this );
         $this->form->addViewState( 'warning', false );
@@ -48,7 +48,7 @@ class Client_Projects_DeleteFolder extends System_Web_Component
 
             if ( $this->form->isSubmittedWith( 'ok' ) ) {
                 if ( $this->submit() )
-                    $this->response->redirect( $breadcrumbs->getAncestorUrl( 1 ) );
+                    $this->response->redirect( $breadcrumbs->getParentUrl() );
             }
         } else {
             $this->warning = $projectManager->checkFolderNotEmpty( $this->folder );

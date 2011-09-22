@@ -62,9 +62,12 @@ class Client_ProjectsTree extends System_Web_Component
             $this->projects[ $folder[ 'project_id' ] ][ 'folders' ][ $folder[ 'folder_id' ] ] = $folder;
 
         $emptyProjects = array();
+        $anyProjectAdmin = false;
         foreach ( $this->projects as $id => $project ) {
             if ( empty( $project[ 'folders' ] ) )
                 $emptyProjects[] = $id;
+            if ( $project[ 'project_access' ] == System_Const::AdministratorAccess )
+                $anyProjectAdmin = true;
         }
         $this->grid->removeExpandCookieIds( 'wi_projects', $emptyProjects );
 
@@ -74,7 +77,7 @@ class Client_ProjectsTree extends System_Web_Component
         $this->toolBar = new System_Web_ToolBar();
         $this->toolBar->setFilterParameters( array() );
 
-        if ( System_Api_Principal::getCurrent()->isAdministrator() )
-            $this->toolBar->addFixedCommand( '/client/projects/addproject.php', '/common/images/project-new-16.png', $this->tr( 'Add Project' ) );
+        if ( System_Api_Principal::getCurrent()->isAdministrator() || $anyProjectAdmin )
+            $this->toolBar->addFixedCommand( '/client/projects/index.php', '/common/images/project-admin-16.png', $this->tr( 'Manage Projects' ) );
     }
 }

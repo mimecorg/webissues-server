@@ -36,7 +36,7 @@ class Client_Projects_AddFolder extends System_Web_Component
         $this->project = $projectManager->getProject( $projectId, System_Api_ProjectManager::RequireAdministrator );
 
         $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Project, $this->project );
+        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageProjects );
         $this->parentUrl = $breadcrumbs->getParentUrl();
 
         $this->form = new System_Web_Form( 'projects', $this );
@@ -84,7 +84,6 @@ class Client_Projects_AddFolder extends System_Web_Component
         try {
             $type = $typeManager->getIssueType( $this->issueType );
             $folderId = $projectManager->addFolder( $this->project, $type, $this->folderName );
-            $this->parentUrl = $this->appendQueryString( '/client/index.php', array( 'folder' => $folderId ) );
         } catch ( System_Api_Error $ex ) {
             $this->form->getErrorHelper()->handleError( 'folderName', $ex );
         }

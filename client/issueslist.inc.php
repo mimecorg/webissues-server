@@ -165,11 +165,6 @@ class Client_IssuesList extends System_Web_Component
         $this->toolBar->setFilterParameters( array( 'sort', 'order', 'page', 'view' ) );
 
         $this->toolBar->addFixedCommand( '/client/issues/addissue.php', '/common/images/issue-new-16.png', $this->tr( 'Add Issue' ), array( 'folder' => $folderId ) );
-        if ( $folder[ 'project_access' ] == System_Const::AdministratorAccess ) {
-            $this->toolBar->addFixedCommand( '/client/projects/renamefolder.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Folder' ), array( 'folder' => $folderId ) );
-            $this->toolBar->addFixedCommand( '/client/projects/movefolder.php', '/common/images/folder-move-16.png', $this->tr( 'Move Folder' ), array( 'folder' => $folderId ) );
-            $this->toolBar->addFixedCommand( '/client/projects/deletefolder.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Folder' ), array( 'folder' => $folderId ) );
-        }
         $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-read-16.png', $this->tr( 'Mark All As Read' ), array( 'folder' => $folderId, 'status' => 1 ) );
         $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-unread-16.png', $this->tr( 'Mark All As Unread' ), array( 'folder' => $folderId, 'status' => 0 ) );
         $this->toolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Manage Views' ), array( 'folder' => $folderId ) );

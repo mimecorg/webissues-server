@@ -29,7 +29,65 @@ class Client_Projects_Index extends System_Web_Component
 
     protected function execute()
     {
-        $this->response->redirect( '/client/index.php' );
+        $this->view->setDecoratorClass( 'Common_FixedBlock' );
+        $this->view->setSlot( 'page_title', $this->tr( 'Manage Projects' ) );
+
+        $this->form = new System_Web_Form( 'projects', $this );
+        if ( $this->form->loadForm() )
+            $this->response->redirect( '/client/index.php' );
+
+        $projectManager = new System_Api_ProjectManager();
+
+        $projects = $projectManager->getProjects( System_Api_ProjectManager::RequireAdministrator );
+        $folders = $projectManager->getFolders( System_Api_ProjectManager::RequireAdministrator );
+
+        $this->grid = new System_Web_Grid();
+        $this->grid->setMergeParameters( array( 'project' => null, 'folder' => null ) );
+
+        $this->projects = array();
+        foreach ( $projects as $project ) {
+            $project[ 'folders' ] = array();
+            $this->projects[ $project[ 'project_id' ] ] = $project;
+        }
+        foreach ( $folders as $folder )
+            $this->projects[ $folder[ 'project_id' ] ][ 'folders' ][ $folder[ 'folder_id' ] ] = $folder;
+
+        $emptyProjects = array();
+        foreach ( $this->projects as $id => $project ) {
+            if ( empty( $project[ 'folders' ] ) )
+                $emptyProjects[] = $id;
+        }
+
+        $folderId = (int)$this->request->getQueryString( 'folder' );
+        if ( $folderId ) {
+            $folder = $projectManager->getFolder( $folderId );
+            $projectId = $folder[ 'project_id' ];
+        } else {
+            $projectId = (int)$this->request->getQueryString( 'project' );
+        }
+
+        $this->grid->setSelection( $folderId, $projectId );
+
+        $this->toolBar = new System_Web_ToolBar();
+        $this->toolBar->setParameters( 'folder', 'project' );
+        $this->toolBar->setSelection( $folderId, $projectId );
+
+        if ( System_Api_Principal::getCurrent()->isAdministrator() )
+            $this->toolBar->addFixedCommand( '/client/projects/addproject.php', '/common/images/project-new-16.png', $this->tr( 'Add Project' ) );
+        $this->toolBar->addItemCommand( '/client/projects/addfolder.php', '/common/images/folder-new-16.png', $this->tr( 'Add Folder' ) );
+        $this->toolBar->addParentCommand( '/client/projects/renameproject.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Project' ) );
+        if ( System_Api_Principal::getCurrent()->isAdministrator() )
+            $this->toolBar->addParentCommand( '/client/projects/deleteproject.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Project' ) );
+        $this->toolBar->addChildCommand( '/client/projects/renamefolder.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Folder' ) );
+        $this->toolBar->addChildCommand( '/client/projects/movefolder.php', '/common/images/folder-move-16.png', $this->tr( 'Move Folder' ) );
+        $this->toolBar->addChildCommand( '/client/projects/deletefolder.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Folder' ) );
+        $this->toolBar->addParentCommand( '/client/projects/members.php', '/common/images/view-members-16.png', $this->tr( 'Project Members' ) );
+
+        $javaScript = new System_Web_JavaScript( $this->view );
+        $javaScript->registerExpandCookie( 'wi_projects' );
+        $javaScript->registerSelection( $this->toolBar );
+
+        $this->grid->removeExpandCookieIds( 'wi_projects', $emptyProjects );
     }
 }
 

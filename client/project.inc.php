@@ -36,13 +36,5 @@ class Client_Project extends System_Web_Component
         $this->projectName = $project[ 'project_name' ];
 
         $this->view->setSlot( 'page_title', $project[ 'project_name' ] );
-
-        if ( $project[ 'project_access' ] == System_Const::AdministratorAccess ) {
-            $this->toolBar = new System_Web_ToolBar();
-            $this->toolBar->addFixedCommand( '/client/projects/addfolder.php', '/common/images/folder-new-16.png', $this->tr( 'Add Folder' ) );
-            $this->toolBar->addFixedCommand( '/client/projects/renameproject.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Project' ) );
-            $this->toolBar->addFixedCommand( '/client/projects/deleteproject.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Project' ) );
-            $this->toolBar->addFixedCommand( '/client/projects/members.php', '/common/images/view-members-16.png', $this->tr( 'Project Members' ) );
-        }
     }
 }

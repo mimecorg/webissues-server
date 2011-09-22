@@ -37,7 +37,7 @@ class Client_Projects_RenameProject extends System_Web_Component
         $this->view->setSlot( 'page_title', $this->tr( 'Rename Project' ) );
 
         $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Project, $this->project );
+        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageProjects );
 
         $this->form = new System_Web_Form( 'projects', $this );
         $this->form->addField( 'projectName', $this->project[ 'project_name' ] );

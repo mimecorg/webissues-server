@@ -37,7 +37,7 @@ class Client_Projects_RenameFolder extends System_Web_Component
         $this->view->setSlot( 'page_title', $this->tr( 'Rename Folder' ) );
 
         $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Folder, $this->folder );
+        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageProjects );
 
         $this->form = new System_Web_Form( 'projects', $this );
         $this->form->addField( 'folderName', $this->folder[ 'folder_name' ] );

@@ -34,7 +34,9 @@ class Client_Projects_AddProject extends System_Web_Component
         if ( !System_Api_Principal::getCurrent()->isAdministrator() )
                 throw new System_Api_Error( System_Api_Error::AccessDenied );
 
-        $this->parentUrl = '/client/index.php';
+        $breadcrumbs = new System_Web_Breadcrumbs( $this );
+        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageProjects );
+        $this->parentUrl = $breadcrumbs->getParentUrl();
 
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Add Project' ) );
@@ -63,7 +65,6 @@ class Client_Projects_AddProject extends System_Web_Component
         $projectManager = new System_Api_ProjectManager();
         try {
             $projectId = $projectManager->addProject( $this->projectName );
-            $this->parentUrl = $this->appendQueryString( '/client/index.php', array( 'project' => $projectId ) );
         } catch ( System_Api_Error $ex ) {
             $this->form->getErrorHelper()->handleError( 'projectName', $ex );
         }

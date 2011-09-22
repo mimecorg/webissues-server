@@ -37,7 +37,7 @@ class Client_Projects_Members extends System_Web_Component
         $this->view->setSlot( 'page_title', $this->tr( 'Project Members' ) );
 
         $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Project, $this->project );
+        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageProjects );
 
         $this->form = new System_Web_Form( 'members', $this );
         if ( $this->form->loadForm() )
