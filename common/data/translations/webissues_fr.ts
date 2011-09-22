@@ -188,7 +188,7 @@
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="3"/>
         <source>A new, random unique identifier will be assigned to this server.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un nouvel identifiant uniquement aléatoire va être affecté à ce serveur.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="9"/>
@@ -337,7 +337,7 @@
     <message>
         <location filename="../../../admin/info/server.html.php" line="22"/>
         <source>Unique ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>Identifiant unique :</translation>
     </message>
 </context>
 <context>
@@ -746,7 +746,7 @@
     <message>
         <location filename="../../../admin/setup/install.php" line="410"/>
         <source>Completed the installation of the server</source>
-        <translation type="unfinished"></translation>
+        <translation>Installation du serveur terminée</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="437"/>
@@ -882,7 +882,7 @@
     <message>
         <location filename="../../../admin/setup/install.html.php" line="20"/>
         <source>Do not forget to copy attachments stored in the file system from the old version of the server.</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez ne pas oublier de copier les pièces jointes enregistrées dans le système de fichier de l&apos;ancienne version du serveur.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="79"/>
@@ -1215,12 +1215,12 @@
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="62"/>
         <source>Modify Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier l&apos;attribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="74"/>
         <source>Add Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un attribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="320"/>
@@ -1328,7 +1328,7 @@
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="25"/>
         <source>Attribute Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type d&apos;attribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="29"/>
@@ -1338,7 +1338,7 @@
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="38"/>
         <source>Edit</source>
-        <translation type="unfinished">Modifier</translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="50"/>
@@ -1354,23 +1354,23 @@
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="73"/>
         <source>Allow entering multiple lines of text</source>
-        <translation type="unfinished"></translation>
+        <translation>Autoriser la saisie de texte à lignes multiples</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="83"/>
         <location filename="../../../admin/types/attribute.html.php" line="112"/>
         <source>Allow selecting multiple items</source>
-        <translation type="unfinished"></translation>
+        <translation>Autoriser la sélection multiple d&apos;éléments</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="89"/>
         <source>The following settings can only be used when entering custom values is allowed and selecting multiple items is not allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les paramètres suivants peuvent être utilisés uniquement si vous autorisez les valeurs autres que celles de la liste et que la sélection multiple n&amp;apos;est pas autorisée.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="110"/>
         <source>Allow selecting only project members</source>
-        <translation type="unfinished"></translation>
+        <translation>Autoriser uniquement la sélection de membres du projet</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="125"/>
@@ -1403,7 +1403,7 @@
     <message>
         <location filename="../../../admin/types/deleteattribute.php" line="33"/>
         <source>Delete Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer l&apos;attribut</translation>
     </message>
 </context>
 <context>
@@ -1459,70 +1459,70 @@
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="69"/>
         <source>Multiple lines</source>
-        <translation type="unfinished">Plusieurs lignes</translation>
+        <translation>Lignes multiples</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="72"/>
         <location filename="../../../admin/types/helper.inc.php" line="88"/>
         <source>Min. length: %1</source>
-        <translation type="unfinished">Longueur min. : %1</translation>
+        <translation>Longueur min. : %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="75"/>
         <location filename="../../../admin/types/helper.inc.php" line="91"/>
         <source>Max. length: %1</source>
-        <translation type="unfinished">Longueur max. : %1</translation>
+        <translation>Longueur max. : %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="80"/>
         <source>Editable</source>
-        <translation type="unfinished">Valeurs hors liste autorisées</translation>
+        <translation>Valeurs hors liste autorisées</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="82"/>
         <location filename="../../../admin/types/helper.inc.php" line="120"/>
         <source>Multiple selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélection multiple</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="85"/>
         <source>Items: %1</source>
-        <translation type="unfinished">Éléments : %1</translation>
+        <translation>Éléments : %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="98"/>
         <source>Decimal places: %1</source>
-        <translation type="unfinished">Nombre de décimales : %1</translation>
+        <translation>Nombre de décimales : %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="101"/>
         <source>Min. value: %1</source>
-        <translation type="unfinished">Valeur min. : %1</translation>
+        <translation>Valeur min. : %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="104"/>
         <source>Max. value: %1</source>
-        <translation type="unfinished">Valeur max. : %1</translation>
+        <translation>Valeur max. : %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="106"/>
         <source>Strip zeros</source>
-        <translation type="unfinished">Suppression des zéros</translation>
+        <translation>Suppression des zéros</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="111"/>
         <source>With time</source>
-        <translation type="unfinished">Avec l&apos;heure</translation>
+        <translation>Avec l&apos;heure</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="113"/>
         <source>Local time zone</source>
-        <translation type="unfinished">Fuseau horaire local</translation>
+        <translation>Fuseau horaire local</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="118"/>
         <source>Members only</source>
-        <translation type="unfinished">Membres uniquement</translation>
+        <translation>Membres uniquement</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="135"/>
@@ -1550,7 +1550,7 @@
     <message>
         <location filename="../../../admin/types/index.php" line="82"/>
         <source>Add Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un attribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="83"/>
@@ -1565,17 +1565,17 @@
     <message>
         <location filename="../../../admin/types/index.php" line="85"/>
         <source>Modify Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier l&apos;attribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="86"/>
         <source>Rename Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Renommer l&apos;attribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="87"/>
         <source>Delete Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer l&apos;attribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="81"/>
@@ -1638,7 +1638,7 @@
     <message>
         <location filename="../../../admin/types/renameattribute.php" line="33"/>
         <source>Rename Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Renommer l&apos;attribut</translation>
     </message>
 </context>
 <context>
@@ -1856,7 +1856,7 @@
     <message>
         <location filename="../../../admin/views/index.html.php" line="9"/>
         <source>Order of Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordre des attributs</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="12"/>
@@ -1945,7 +1945,7 @@
     <message>
         <location filename="../../../admin/views/order.php" line="33"/>
         <source>Order of Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordre des attributs</translation>
     </message>
 </context>
 <context>
@@ -2204,7 +2204,7 @@
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="134"/>
         <source>Edit Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier les attributs</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="135"/>
@@ -2311,7 +2311,7 @@
     <message>
         <location filename="../../../client/issuedetails.html.php" line="133"/>
         <source>last edited:</source>
-        <translation>dernière modification </translation>
+        <translation>dernière modification :</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="196"/>
@@ -2658,7 +2658,7 @@
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="50"/>
         <source>Edit Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier les attributs</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="66"/>
@@ -2708,12 +2708,12 @@
     <message>
         <location filename="../../../client/issues/issue.html.php" line="47"/>
         <source>There are no available project members to assign to the issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il n&apos;y a plus de membre de projet disponible à affecter à la demande.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="50"/>
         <source>Close</source>
-        <translation type="unfinished">Fermer</translation>
+        <translation>Fermer</translation>
     </message>
 </context>
 <context>
@@ -3221,7 +3221,7 @@
     <message>
         <location filename="../../../client/tools/about.html.php" line="14"/>
         <source>Copyright &amp;copy; 2006 Michał Męciński</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright &amp;copy; 2006 Michał Męciński</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="15"/>
@@ -3889,7 +3889,7 @@
     <message>
         <location filename="../../views/helper.inc.php" line="104"/>
         <source>in</source>
-        <translation type="unfinished"></translation>
+        <translation>dans</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="320"/>
@@ -4048,7 +4048,7 @@
     <message>
         <location filename="../../views/view.inc.php" line="329"/>
         <source>in list</source>
-        <translation type="unfinished"></translation>
+        <translation>dans la liste</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="334"/>
@@ -4254,7 +4254,7 @@
     <message>
         <location filename="../../../system/api/issuemanager.inc.php" line="680"/>
         <source>Deleted issue &quot;%1&quot; from folder &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Demande &quot;%1&quot; supprimée du dossier &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -4262,47 +4262,47 @@
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="199"/>
         <source>Added project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Projet &quot;%1&quot; ajouté</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="237"/>
         <source>Renamed project &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Projet &quot;%1&quot; renommé en &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="278"/>
         <source>Deleted project &quot;%1&quot; with folders</source>
-        <translation type="unfinished"></translation>
+        <translation>Projet &quot;%1&quot; supprimé avec ses dossiers</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="281"/>
         <source>Deleted project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Projet &quot;%1&quot; supprimé</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="336"/>
         <source>Added folder &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Dossier &quot;%1&quot; ajouté au projet &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="375"/>
         <source>Renamed folder &quot;%1&quot; to &quot;%2&quot; in project &quot;%3&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Dossier &quot;%1&quot; renommé en &quot;%2&quot; dans le projet &quot;%3&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="415"/>
         <source>Deleted folder &quot;%1&quot; with issues from project &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Dossier &quot;%1&quot; supprimé avec ses demandes du projet &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="418"/>
         <source>Deleted folder &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Dossier &quot;%1&quot; supprimé du projet &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="475"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Dossier &quot;%1&quot; déplacé du projet &quot;%2&quot; au projet &quot;%3&quot;</translation>
     </message>
 </context>
 <context>
@@ -4310,12 +4310,12 @@
     <message>
         <location filename="../../../system/api/servermanager.inc.php" line="78"/>
         <source>Renamed the server from &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Serveur &quot;%1&quot; renommé en &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/servermanager.inc.php" line="103"/>
         <source>Changed the unique identifier of the server</source>
-        <translation type="unfinished"></translation>
+        <translation>Identifiant unique du serveur modifié</translation>
     </message>
 </context>
 <context>
@@ -4323,12 +4323,12 @@
     <message>
         <location filename="../../../system/api/sessionmanager.inc.php" line="145"/>
         <source>Incorrect login attempt for user &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentative de connexion incorrect de l&apos;utilisateur &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/sessionmanager.inc.php" line="161"/>
         <source>Session opened for user &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Session ouverte de l&apos;utilisateur &quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -4336,47 +4336,47 @@
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="272"/>
         <source>Added issue type &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Type de demande &quot;%1&quot; ajouté</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="310"/>
         <source>Renamed issue type &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Type de demande &quot;%1&quot; renommé en &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="351"/>
         <source>Deleted issue type &quot;%1&quot; with folders</source>
-        <translation type="unfinished"></translation>
+        <translation>Type de demande &quot;%1&quot; supprimé avec ses dossiers</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="354"/>
         <source>Deleted issue type &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Type de demande &quot;%1&quot; supprimé</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="408"/>
         <source>Added attribute &quot;%1&quot; to issue type &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribut &quot;%1&quot; ajouté au type de demande &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="447"/>
         <source>Renamed attribute &quot;%1&quot; to &quot;%2&quot; of issue type &quot;%3&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribut &quot;%1&quot; renommé en &quot;%2&quot; pour le type de demande &quot;%3&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="471"/>
         <source>Modified attribute &quot;%1&quot; of issue type &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribut &quot;%1&quot; modifié pour le type de demande &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="505"/>
         <source>Deleted attribute &quot;%1&quot; with values from issue type &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribut &quot;%1&quot; supprimé avec les valeurs pour le type de demande &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="508"/>
         <source>Deleted attribute &quot;%1&quot; from issue type &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribut &quot;%1&quot; supprimé pour le type de demande &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -4384,52 +4384,52 @@
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="255"/>
         <source>Added user &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilisateur &quot;%1&quot; ajouté</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="285"/>
         <source>Changed password for user &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Mot de passe modifié pour l&apos;utilisateur &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="327"/>
         <source>User &quot;%1&quot; changed own password</source>
-        <translation type="unfinished"></translation>
+        <translation>Mot de passe modifié par l&apos;utilisateur &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="365"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilisateur renommé de &quot;%1&quot; à &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="397"/>
         <source>Disabled access for user &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Accès désactivé pour l&apos;utilisateur &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="401"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Accès régulier autorisé pour l&apos;utilisateur &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="405"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Accès administrateur autorisé pour l&apos;utilisateur &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="460"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilisateur &quot;%1&quot; retiré du projet &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="464"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Accès régulier autorisé pour l&apos;utilisateur &quot;%1&quot; au projet &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="468"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Accès administrateur autorisé pour l&apos;utilisateur &quot;%1&quot; au projet &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -4803,17 +4803,17 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="177"/>
         <source>Value cannot contain a comma</source>
-        <translation type="unfinished"></translation>
+        <translation>La valeur ne peut pas contenir de virgule</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="179"/>
         <source>Concurrency error; please try again</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;accès concurrentiel, veuillez réessayer</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="181"/>
         <source>One of the dependent objects no longer exists</source>
-        <translation type="unfinished"></translation>
+        <translation>Un des objets dépendants n&apos;existe plus</translation>
     </message>
 </context>
 <context>
