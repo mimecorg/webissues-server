@@ -32,6 +32,20 @@ class Admin_Users_Index extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'User Accounts' ) );
 
+        $this->filterBar = new System_Web_FilterBar();
+        $this->filterBar->setParameter( 'type' );
+        $this->filterBar->setMergeParameters( array( 'page' => null ) );
+
+        $this->userTypes = array(
+            System_Api_UserManager::Active => $this->tr( 'Active' ),
+            System_Api_UserManager::Disabled => $this->tr( 'Disabled' )
+        );
+
+        $type = $this->request->getQueryString( 'type' );
+
+        if ( ( $type !== null ) && !isset( $this->userTypes[ $type ] ) )
+            throw new System_Core_Exception( 'Invalid user type' );
+
         $this->grid = new System_Web_Grid();
         $this->grid->setPageSize( 20 );
         $this->grid->setMergeParameters( array( 'id' => null ) );
@@ -39,9 +53,9 @@ class Admin_Users_Index extends System_Web_Component
         $userManager = new System_Api_UserManager();
         $this->grid->setColumns( $userManager->getUsersColumns() );
         $this->grid->setDefaultSort( 'name', System_Web_Grid::Ascending );
-        $this->grid->setRowsCount( $userManager->getUsersCount() );
+        $this->grid->setRowsCount( $userManager->getUsersCount( $type ) );
 
-        $page = $userManager->getUsersPage( $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
+        $page = $userManager->getUsersPage( $type, $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
 
         $accessLevels = array(
             System_Const::NoAccess => $this->tr( 'Disabled' ),

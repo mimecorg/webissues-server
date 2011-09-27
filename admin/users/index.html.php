@@ -1,5 +1,10 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
+<?php $this->beginSlot( 'float_links' ) ?>
+<?php $filterBar->renderNoFilter( $this->tr( 'All Users' ) ) ?>
+<?php $filterBar->renderFilters( $userTypes ) ?>
+<?php $this->endSlot() ?>
+
 <div class="toolbar">
 <?php $toolBar->render() ?>
 </div>

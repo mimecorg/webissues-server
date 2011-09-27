@@ -26,6 +26,16 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 class System_Api_UserManager extends System_Api_Base
 {
     /**
+    * @name User Types
+    */
+    /*@{*/
+    /** Active users. */
+    const Active = 1;
+    /** Disabled users. */
+    const Disabled = 2;
+    /*@}*/
+
+    /**
     * Constructor.
     */
     public function __construct()
@@ -110,11 +120,15 @@ class System_Api_UserManager extends System_Api_Base
     /**
     * Get the total number of users.
     */
-    public function getUsersCount()
+    public function getUsersCount( $type )
     {
         $query = 'SELECT COUNT(*) FROM {users}';
- 
-        return $this->connection->queryScalar( $query );
+        if ( $type == self::Active )
+            $query .= ' WHERE user_access <> %d';
+        else if ( $type == self::Disabled )
+            $query .= ' WHERE user_access = %d';
+
+        return $this->connection->queryScalar( $query, System_Const::NoAccess );
     }
 
     /**
@@ -124,11 +138,15 @@ class System_Api_UserManager extends System_Api_Base
     * @param $offset Zero-based index of first row to return.
     * @return An array of associative arrays representing types.
     */
-    public function getUsersPage( $orderBy, $limit, $offset )
+    public function getUsersPage( $type, $orderBy, $limit, $offset )
     {
         $query = 'SELECT user_id, user_login, user_name, user_access FROM {users}';
+        if ( $type == self::Active )
+            $query .= ' WHERE user_access <> %d';
+        else if ( $type == self::Disabled )
+            $query .= ' WHERE user_access = %d';
 
-        return $this->connection->queryPage( $query, $orderBy, $limit, $offset );
+        return $this->connection->queryPage( $query, $orderBy, $limit, $offset, System_Const::NoAccess );
     }
 
     /**
