@@ -117,6 +117,19 @@ class System_Api_QueryGenerator
     }
 
     /**
+    * Set the quick search text for the list.
+    */
+    public function setSearchText( $text )
+    {
+        $info = new System_Api_DefinitionInfo();
+        $info->setType( 'CON' );
+        $info->setMetadata( 'column', System_Api_Column::Name );
+        $info->setMetadata( 'value', $text );
+
+        $this->filters[] = $info;
+    }
+
+    /**
     * Only include issues with stamp greater than specified value.
     */
     public function setSinceStamp( $stamp )

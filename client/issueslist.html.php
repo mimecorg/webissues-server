@@ -14,6 +14,13 @@
 <?php $viewForm->renderFormClose() ?>
 </div>
 
+<div style="float: right">
+<?php $searchForm->renderFormOpen( null, array( 'class' => 'form-inline' ) ) ?>
+<?php $searchForm->renderText( null, 'searchBox', array( 'style' => 'width: 15em;' ) ) ?>
+<?php $searchForm->renderSubmit( $this->tr( 'Search' ), 'search' ) ?>
+<?php $searchForm->renderFormClose() ?>
+</div>
+
 <div style="clear: both"></div>
 
 <table class="grid">

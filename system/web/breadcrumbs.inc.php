@@ -102,7 +102,7 @@ class System_Web_Breadcrumbs extends System_Web_Base
                 break;
 
             case self::UserAccounts:
-                $this->urls[] = $this->filterQueryString( '/admin/users/index.php', array( 'sort', 'order', 'page' ) );
+                $this->urls[] = $this->filterQueryString( '/admin/users/index.php', array( 'sort', 'order', 'page', 'type' ) );
                 $this->names[] = $this->tr( 'User Accounts' );
                 break;
 
@@ -130,25 +130,25 @@ class System_Web_Breadcrumbs extends System_Web_Base
 
             case self::Folder:
                 $this->append( self::Project, $object );
-                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'sort', 'order', 'page', 'view' ), array( 'folder' => $object[ 'folder_id' ] ) );
+                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'sort', 'order', 'page', 'view', 'q' ), array( 'folder' => $object[ 'folder_id' ] ) );
                 $this->names[] = $object[ 'folder_name' ];
                 break;
 
             case self::ManageViews:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/views/index.php', array( 'sort', 'order', 'page', 'view', 'folder', 'vsort', 'vorder', 'vpage' ) );
+                $this->urls[] = $this->filterQueryString( '/client/views/index.php', array( 'sort', 'order', 'page', 'view', 'q', 'folder', 'vsort', 'vorder', 'vpage' ) );
                 $this->names[] = $this->tr( 'Manage Views' );
                 break;
 
             case self::ManageAlerts:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/alerts/index.php', array( 'sort', 'order', 'page', 'view', 'folder', 'asort', 'aorder', 'apage' ) );
+                $this->urls[] = $this->filterQueryString( '/client/alerts/index.php', array( 'sort', 'order', 'page', 'view', 'q', 'folder', 'asort', 'aorder', 'apage' ) );
                 $this->names[] = $this->tr( 'Manage Alerts' );
                 break;
 
             case self::Issue:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'sort', 'order', 'page', 'view', 'hpg', 'hflt', 'unread' ), array( 'issue' => $object[ 'issue_id' ] ) );
+                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'sort', 'order', 'page', 'view', 'q', 'hpg', 'hflt', 'unread' ), array( 'issue' => $object[ 'issue_id' ] ) );
                 $this->names[] = $object[ 'issue_name' ];
                 break;
 

@@ -81,6 +81,16 @@ class Client_IssuesList extends System_Web_Component
             }
         }
 
+        $query = $this->request->getQueryString( 'q' );
+
+        $this->searchForm = new System_Web_Form( 'search', $this );
+        $this->searchForm->addField( 'searchBox', $query );
+
+        if ( $this->searchForm->loadForm() ) {
+            $url = $this->mergeQueryString( '/client/index.php', array( 'q' => $this->searchBox ) );
+            $this->response->redirect( $url );
+        }
+
         $javaScript = new System_Web_JavaScript( $this->view );
         $javaScript->registerAutoSubmit( $this->viewForm->getFormSelector(), $this->viewForm->getFieldSelector( 'viewSelect' ),
             $this->viewForm->getSubmitSelector( 'go' ) );
@@ -100,6 +110,9 @@ class Client_IssuesList extends System_Web_Component
         }
         if ( $definition != null )
             $queryGenerator->setViewDefinition( $definition );
+
+        if ( $query != '' )
+            $queryGenerator->setSearchText( $query );
 
         $this->columns = $queryGenerator->getColumnNames();
 
@@ -162,7 +175,7 @@ class Client_IssuesList extends System_Web_Component
         }
 
         $this->toolBar = new System_Web_ToolBar();
-        $this->toolBar->setFilterParameters( array( 'sort', 'order', 'page', 'view' ) );
+        $this->toolBar->setFilterParameters( array( 'sort', 'order', 'page', 'view', 'q' ) );
 
         $this->toolBar->addFixedCommand( '/client/issues/addissue.php', '/common/images/issue-new-16.png', $this->tr( 'Add Issue' ), array( 'folder' => $folderId ) );
         $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-read-16.png', $this->tr( 'Mark All As Read' ), array( 'folder' => $folderId, 'status' => 1 ) );
@@ -171,7 +184,7 @@ class Client_IssuesList extends System_Web_Component
         $this->toolBar->addFixedCommand( '/client/alerts/index.php', '/common/images/configure-alerts-16.png', $this->tr( 'Manage Alerts' ), array( 'folder' => $folderId ) );
 
         $this->viewToolBar = new System_Web_ToolBar();
-        $this->viewToolBar->setFilterParameters( array( 'sort', 'order', 'page', 'view' ) );
+        $this->viewToolBar->setFilterParameters( array( 'sort', 'order', 'page', 'view', 'q' ) );
 
         $this->viewToolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add View' ), array( 'folder' => $folderId, 'direct' => 1 ) );
         if ( $personalViewId != 0 )
