@@ -75,9 +75,10 @@ class Client_Projects_Index extends System_Web_Component
         if ( System_Api_Principal::getCurrent()->isAdministrator() )
             $this->toolBar->addFixedCommand( '/client/projects/addproject.php', '/common/images/project-new-16.png', $this->tr( 'Add Project' ) );
         $this->toolBar->addItemCommand( '/client/projects/addfolder.php', '/common/images/folder-new-16.png', $this->tr( 'Add Folder' ) );
-        $this->toolBar->addParentCommand( '/client/projects/renameproject.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Project' ) );
-        if ( System_Api_Principal::getCurrent()->isAdministrator() )
+        if ( System_Api_Principal::getCurrent()->isAdministrator() ) {
+            $this->toolBar->addParentCommand( '/client/projects/renameproject.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Project' ) );
             $this->toolBar->addParentCommand( '/client/projects/deleteproject.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Project' ) );
+        }
         $this->toolBar->addChildCommand( '/client/projects/renamefolder.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Folder' ) );
         $this->toolBar->addChildCommand( '/client/projects/movefolder.php', '/common/images/folder-move-16.png', $this->tr( 'Move Folder' ) );
         $this->toolBar->addChildCommand( '/client/projects/deletefolder.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Folder' ) );
