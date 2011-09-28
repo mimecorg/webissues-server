@@ -11,13 +11,17 @@
     if ( $isDefault ):
         echo $this->tr( 'Modify the default view for type <strong>%1</strong>.', null, $type[ 'type_name' ] );
     elseif ( $isPublic ):
-        if ( !empty( $oldView ) ):
+        if ( !empty( $clone ) ):
+            echo $this->tr( 'Clone view <strong>%1</strong> as a new public view.', null, $oldView[ 'view_name' ] );
+        elseif ( !empty( $oldView ) ):
             echo $this->tr( 'Modify the public view <strong>%1</strong>.', null, $oldView[ 'view_name' ] );
         else:
             echo $this->tr( 'Create a new public view for type <strong>%1</strong>.', null, $type[ 'type_name' ] );
         endif;
     else:
-        if ( !empty( $oldView ) ):
+        if ( !empty( $clone ) ):
+            echo $this->tr( 'Clone view <strong>%1</strong> as a new personal view.', null, $oldView[ 'view_name' ] );
+        elseif ( !empty( $oldView ) ):
             echo $this->tr( 'Modify your personal view <strong>%1</strong>.', null, $oldView[ 'view_name' ] );
         else:
             echo $this->tr( 'Create a new personal view for type <strong>%1</strong>.', null, $type[ 'type_name' ] );
@@ -28,7 +32,7 @@
 
 <?php $form->renderFormOpen(); ?>
 
-<?php if ( $oldView == null && !$isDefault ): ?>
+<?php if ( $oldView == null && !$isDefault || $clone ): ?>
 <?php $form->renderText( $this->tr( 'Name:' ), 'viewName', array( 'size' => 40 ) ) ?>
 <?php endif ?>
 

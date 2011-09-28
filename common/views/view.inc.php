@@ -46,11 +46,18 @@ class Common_Views_View extends System_Web_Component
         $this->isPublic = $this->helper->getIsPublic();
         $this->oldView = null;
         $this->isDefault = false;
+        $this->clone = false;
+
+        $baseName = $this->request->getScriptBaseName();
 
         if ( !$this->isPublic ) {
-            if ( $this->request->getScriptBaseName() == 'modify' ) {
+            if ( $baseName == 'modify' ) {
                 $this->oldView = $this->helper->getOldView();
                 $this->view->setSlot( 'page_title', $this->tr( 'Modify Personal View' ) );
+            } else if ( $baseName == 'clone' ) {
+                $this->oldView = $this->helper->getOldView();
+                $this->view->setSlot( 'page_title', $this->tr( 'Clone View' ) );
+                $this->clone = true;
             } else {
                 $this->view->setSlot( 'page_title', $this->tr( 'Add Personal View' ) );
             }
@@ -58,12 +65,16 @@ class Common_Views_View extends System_Web_Component
             $breadcrumbs = $this->helper->getBreadcrumbs( $this );
             $this->parentUrl = $breadcrumbs->getAncestorUrl( $this->request->getQueryString( 'direct' ) ? 1 : 0 );
         } else {
-            if ( $this->request->getScriptBaseName() == 'default' ) {
+            if ( $baseName == 'default' ) {
                 $this->isDefault = true;
                 $this->view->setSlot( 'page_title', $this->tr( 'Default View' ) );
-            } else if ( $this->request->getScriptBaseName() == 'modify' ) {
+            } else if ( $baseName == 'modify' ) {
                 $this->oldView = $this->helper->getOldView();
                 $this->view->setSlot( 'page_title', $this->tr( 'Modify Public View' ) );
+            } else if ( $baseName == 'clone' ) {
+                $this->oldView = $this->helper->getOldView();
+                $this->view->setSlot( 'page_title', $this->tr( 'Clone View' ) );
+                $this->clone = true;
             } else {
                 $this->view->setSlot( 'page_title', $this->tr( 'Add Public View' ) );
             }
@@ -88,8 +99,8 @@ class Common_Views_View extends System_Web_Component
         $this->definitions = $this->helper->getDefinitions();
         $this->valueDefinitions = $this->helper->getValueDefinitions();
 
-        if ( $this->oldView == null && !$this->isDefault ) {
-            $this->form->addField( 'viewName' );
+        if ( $this->oldView == null && !$this->isDefault || $this->clone ) {
+            $this->form->addField( 'viewName', $this->clone ? $this->oldView[ 'view_name' ] : '' );
             $this->form->addTextRule( 'viewName', System_Const::NameMaxLength );
         }
 
@@ -427,7 +438,7 @@ class Common_Views_View extends System_Web_Component
         try {
             if ( $this->isDefault ) {
                 $viewManager->setViewSetting( $this->type, 'default_view', $info->toString() );
-            } else if ( $this->oldView != null ) {
+            } else if ( $this->oldView != null && !$this->clone ) {
                 $viewManager->modifyView( $this->oldView, $info->toString() );
             } else if ( $this->isPublic ) {
                 $viewManager->addPublicView( $this->type, $this->viewName, $info->toString() );

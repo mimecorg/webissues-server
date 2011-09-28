@@ -319,12 +319,14 @@ class Common_Views_Helper extends System_Web_Base
         if ( $this->isPublic ) {
             $toolBar->addFixedCommand( '/admin/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add Public View' ) );
             $toolBar->addItemCommand( '/admin/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ) );
+            $toolBar->addItemCommand( '/admin/views/clone.php', '/common/images/view-clone-16.png', $this->tr( 'Clone View' ) );
             $toolBar->addItemCommand( '/admin/views/rename.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename View' ) );
             $toolBar->addItemCommand( '/admin/views/delete.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete View' ) );
             $toolBar->addItemCommand( '/admin/views/unpublish.php', '/common/images/edit-access-16.png', $this->tr( 'Unpublish View' ) );
         } else {
             $toolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add Personal View' ) );
             $toolBar->addItemCommand( '/client/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ) );
+            $toolBar->addItemCommand( '/client/views/clone.php', '/common/images/view-clone-16.png', $this->tr( 'Clone View' ) );
             $toolBar->addItemCommand( '/client/views/rename.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename View' ) );
             $toolBar->addItemCommand( '/client/views/delete.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete View' ) );
 

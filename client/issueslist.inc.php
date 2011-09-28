@@ -189,5 +189,7 @@ class Client_IssuesList extends System_Web_Component
         $this->viewToolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add View' ), array( 'folder' => $folderId, 'direct' => 1 ) );
         if ( $personalViewId != 0 )
             $this->viewToolBar->addFixedCommand( '/client/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ), array( 'folder' => $folderId, 'id' => $personalViewId, 'direct' => 1 ) );
+        if ( $viewParam != 0 )
+            $this->viewToolBar->addFixedCommand( '/client/views/clone.php', '/common/images/view-clone-16.png', $this->tr( 'Clone View' ), array( 'folder' => $folderId, 'id' => $viewParam, 'direct' => 1 ) );
     }
 }
