@@ -61,13 +61,31 @@ class Client_Issues_Issue extends System_Web_Component
 
                 $this->projectId = $this->folder[ 'project_id' ];
                 $this->folderName = $this->folder[ 'folder_name' ];
-                $this->oldIssueName = '';
 
-                $this->view->setSlot( 'page_title', $this->tr( 'Add Issue' ) );
+                $issueId = (int)$this->request->getQueryString( 'clone' );
 
-                $breadcrumbs = new System_Web_Breadcrumbs( $this );
-                $breadcrumbs->initialize( System_Web_Breadcrumbs::Folder, $this->folder );
-                $this->parentUrl = $breadcrumbs->getParentUrl();
+                if ( $issueId != 0 ) {
+                    $issueManager = new System_Api_IssueManager();
+                    $this->issue = $issueManager->getIssue( $issueId );
+
+                    $this->oldIssueName = $this->issue[ 'issue_name' ];
+                    $this->clone = true;
+
+                    $this->view->setSlot( 'page_title', $this->tr( 'Clone Issue' ) );
+
+                    $breadcrumbs = new System_Web_Breadcrumbs( $this );
+                    $breadcrumbs->initialize( System_Web_Breadcrumbs::Issue, $this->issue );
+                    $this->parentUrl = $breadcrumbs->getParentUrl();
+                } else {
+                    $this->oldIssueName = '';
+                    $this->clone = false;
+
+                    $this->view->setSlot( 'page_title', $this->tr( 'Add Issue' ) );
+
+                    $breadcrumbs = new System_Web_Breadcrumbs( $this );
+                    $breadcrumbs->initialize( System_Web_Breadcrumbs::Folder, $this->folder );
+                    $this->parentUrl = $breadcrumbs->getParentUrl();
+                }
                 break;
 
             default:
@@ -105,6 +123,8 @@ class Client_Issues_Issue extends System_Web_Component
         $this->values = array();
         $this->multiLine = array();
 
+        $oldValues = array();
+
         $typeManager = new System_Api_TypeManager();
 
         if ( $this->issue != null ) {
@@ -129,6 +149,11 @@ class Client_Issues_Issue extends System_Web_Component
                 $this->values[ $attributeId ] = $row[ 'attr_value' ];
             else
                 $this->values[ $attributeId ] = $typeManager->convertInitialValue( $info, $info->getMetadata( 'default', '' ) );
+
+            if ( $this->issue != null && $this->clone )
+                $oldValues[ $attributeId ] = $typeManager->convertInitialValue( $info, $info->getMetadata( 'default', '' ) );
+            else
+                $oldValues[ $attributeId ] = $this->values[ $attributeId ];
 
             $items = null;
             $maxLength = System_Const::ValueMaxLength;
@@ -201,7 +226,7 @@ class Client_Issues_Issue extends System_Web_Component
             $this->form->addTextRule( 'value' . $attributeId, $maxLength, $flags );
         }
 
-        $this->form->addViewState( 'oldValues', $this->values );
+        $this->form->addViewState( 'oldValues', $oldValues );
     }
 
     private function validateValues()
@@ -230,7 +255,7 @@ class Client_Issues_Issue extends System_Web_Component
     {
         $issueManager = new System_Api_IssueManager();
 
-        if ( $this->issue == null ) {
+        if ( $this->issue == null || $this->clone ) {
             $issueId = $issueManager->addIssue( $this->folder, $this->issueName, $this->oldValues );
             $this->issue = $issueManager->getIssue( $issueId );
             $this->parentUrl = $this->mergeQueryString( '/client/index.php', array( 'issue' => $issueId, 'folder' => null ) );

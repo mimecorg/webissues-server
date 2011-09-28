@@ -134,6 +134,7 @@ class Client_IssueDetails extends System_Web_Component
         $this->toolBar->addFixedCommand( '/client/issues/editissue.php', '/common/images/edit-modify-16.png', $this->tr( 'Edit Attributes' ) );
         $this->toolBar->addFixedCommand( '/client/issues/addcomment.php', '/common/images/comment-16.png', $this->tr( 'Add Comment' ) );
         $this->toolBar->addFixedCommand( '/client/issues/addattachment.php', '/common/images/file-attach-16.png', $this->tr( 'Add Attachment' ) );
+        $this->toolBar->addFixedCommand( '/client/issues/cloneissue.php', '/common/images/issue-clone-16.png', $this->tr( 'Clone Issue' ) );
         if ( $issue[ 'project_access' ] == System_Const::AdministratorAccess ) {
             $this->toolBar->addFixedCommand( '/client/issues/moveissue.php', '/common/images/issue-move-16.png', $this->tr( 'Move Issue' ) );
             $this->toolBar->addFixedCommand( '/client/issues/deleteissue.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Issue' ) );
