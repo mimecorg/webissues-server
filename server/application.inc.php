@@ -62,11 +62,15 @@ class Server_Application extends System_Core_Application
         if ( is_a( $exception, 'System_Api_Error' ) || is_a( $exception, 'Server_Error' ) ) {
             $error = $exception->getMessage();
         } else if ( is_a( $exception, 'System_Core_SetupException' ) ) {
-            $code = $exception->getCode();
-            if ( $code == System_Core_SetupException::SiteConfigNotFound )
-                $error = Server_Error::ServerNotConfigured;
-            else if ( $code == System_Core_SetupException::DatabaseNotCompatible )
-                $error = Server_Error::BadDatabaseVersion;
+            switch ( $exception->getCode() ) {
+                case System_Core_SetupException::SiteConfigNotFound:
+                    $error = Server_Error::ServerNotConfigured;
+                    break;
+                case System_Core_SetupException::DatabaseNotCompatible:
+                case System_Core_SetupException::DatabaseNotUpdated:
+                    $error = Server_Error::BadDatabaseVersion;
+                    break;
+            }
         }
 
         list( $code, $message ) = explode( ' ', $error, 2 );

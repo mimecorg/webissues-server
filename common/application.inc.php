@@ -56,6 +56,9 @@ class Common_Application extends System_Web_Application
         if ( $exception->getCode() == System_Core_SetupException::SiteConfigNotFound && $this->request->isRelativePath( '/admin/setup/install.php' ) )
             return;
 
+        if ( $exception->getCode() == System_Core_SetupException::DatabaseNotUpdated && $this->request->isRelativePath( '/admin/setup/update.php' ) )
+            return;
+
         $this->handleException( $exception );
         exit;
     }

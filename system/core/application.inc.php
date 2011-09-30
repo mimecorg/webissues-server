@@ -199,9 +199,13 @@ abstract class System_Core_Application
     */
     public function run()
     {
-        $this->initializeRequest();
-        $this->initializeConnection();
-        $this->initializeSession();
+        try {
+            $this->initializeRequest();
+            $this->initializeSite();
+            $this->initializeConnection();
+        } catch ( System_Core_SetupException $ex ) {
+            $this->handleSetupException( $ex );
+        }
 
         $this->execute();
 
@@ -209,10 +213,9 @@ abstract class System_Core_Application
     }
 
     /**
-    * First stage of initialization. Set up the request and response objects,
-    * set up error handling and read the main site configuration file.
+    * Create the request and response objects and set up error handling.
     */
-    protected function initializeRequest()
+    private function initializeRequest()
     {
         if ( WI_BASE_URL == '' ) {
             global $argv;
@@ -240,7 +243,13 @@ abstract class System_Core_Application
         set_error_handler( array( $this, 'handleError' ) );
 
         set_exception_handler( array( $this, 'handleException' ) );
+    }
 
+    /**
+    * Load site configuration.
+    */
+    private function initializeSite()
+    {
         if ( $this->commandLine != null )
             $this->processCommandLine( count( $this->commandLine ), $this->commandLine );
 
@@ -261,6 +270,8 @@ abstract class System_Core_Application
             foreach ( $this->errors as $exception )
                 $this->debug->write( '*** ', $exception->__toString(), "\n" );
         }
+
+        $this->site->loadSiteConfig();
     }
 
     /**
@@ -280,56 +291,39 @@ abstract class System_Core_Application
     }
 
     /**
-    * Second stage of initialization. Load database connection parameters,
-    * connect to the database and check its version. If the site was not configured,
-    * a System_Core_SetupException error occurs and the handleSetupException()
-    * method is called.
+    * Connect to the database, check its version and initialize
+    * the server and session.
     */
-    protected function initializeConnection()
+    private function initializeConnection()
     {
-        try {
-            $this->site->loadSiteConfig();
+        $engine = $this->site->getConfig( 'db_engine' );
+        $this->connection->loadEngine( $engine );
 
-            $engine = $this->site->getConfig( 'db_engine' );
-            $this->connection->loadEngine( $engine );
+        $host = $this->site->getConfig( 'db_host' );
+        $database = $this->site->getConfig( 'db_database' );
+        $user = $this->site->getConfig( 'db_user' );
+        $password = $this->site->getConfig( 'db_password' );
+        $this->connection->open( $host, $database, $user, $password );
 
-            $host = $this->site->getConfig( 'db_host' );
-            $database = $this->site->getConfig( 'db_database' );
-            $user = $this->site->getConfig( 'db_user' );
-            $password = $this->site->getConfig( 'db_password' );
-            $this->connection->open( $host, $database, $user, $password );
+        $prefix = $this->site->getConfig( 'db_prefix' );
+        $this->connection->setPrefix( $prefix );
 
-            $prefix = $this->site->getConfig( 'db_prefix' );
-            $this->connection->setPrefix( $prefix );
-
-            $this->checkDatabaseVersion();
-        } catch ( System_Core_SetupException $ex ) {
-            $this->handleSetupException( $ex );
-        }
-    }
-
-    private function checkDatabaseVersion()
-    {
         $serverManager = new System_Api_ServerManager();
         $server = $serverManager->getServer();
 
-        if ( $server[ 'db_version' ] != WI_DATABASE_VERSION ) {
-            $this->connection->close();
+        $version = $server[ 'db_version' ];
+        $current = version_compare( $version, WI_DATABASE_VERSION );
 
-            throw new System_Core_SetupException( 'Database version ' . $server[ 'db_version' ] . ' is not compatible with server version ' . WI_VERSION,
+        if ( version_compare( $version, '1.0' ) < 0 || $current > 0 ) {
+            $this->connection->close();
+            throw new System_Core_SetupException( 'Database version ' . $version . ' is not compatible with server version ' . WI_VERSION,
                 System_Core_SetupException::DatabaseNotCompatible );
         }
-    }
 
-    /**
-    * Third stage of initialization performed only if the connection to database
-    * was successfully opened. Log startup errors to event log, initialize
-    * session and the translator.
-    */
-    public function initializeSession()
-    {
-        if ( !$this->connection->isOpened() )
-            return;
+        if ( $current < 0 ) {
+            $this->initializeServer();
+            throw new System_Core_SetupException( 'Database is not updated', System_Core_SetupException::DatabaseNotUpdated );
+        }
 
         $this->loggingEnabled = true;
 
@@ -339,17 +333,35 @@ abstract class System_Core_Application
                 $eventLog->addErrorEvent( $exception );
         }
 
+        $this->initializeServer();
+        $this->initializeSession();
+    }
+
+    /**
+    * Load server configuration.
+    */
+    public function initializeServer()
+    {
+        $this->translator->addModule( 'webissues' );
+
+        $serverManager = new System_Api_ServerManager();
+        $language = $serverManager->getSetting( 'language' );
+
+        $this->translator->setLanguage( System_Core_Translator::SystemLanguage, $language );
+    }
+
+    /**
+    * Initialize session and load user preferences.
+    */
+    public function initializeSession()
+    {
         if ( $this->commandLine == null )
             $this->session->initialize();
 
         $sessionManager = new System_Api_SessionManager();
         $sessionManager->initializePrincipal();
 
-        $serverManager = new System_Api_ServerManager();
         $locale = new System_Api_Locale();
-
-        $this->translator->addModule( 'webissues' );
-        $this->translator->setLanguage( System_Core_Translator::SystemLanguage, $serverManager->getSetting( 'language' ) );
         $this->translator->setLanguage( System_Core_Translator::UserLanguage, $locale->getSetting( 'language' ) );
     }
 

@@ -40,7 +40,7 @@ define( 'WI_PROTOCOL_VERSION', '1.0-beta2' );
 /**
 * Current version of the WebIssues database schema.
 */
-define( 'WI_DATABASE_VERSION', '1.0.001' );
+define( 'WI_DATABASE_VERSION', '1.0.002' );
 
 /**
 * The full physical path of the entry script.

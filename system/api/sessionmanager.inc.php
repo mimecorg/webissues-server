@@ -29,6 +29,14 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 */
 class System_Api_SessionManager extends System_Api_Base
 {
+    /**
+    * @name Flags
+    */
+    /*@{*/
+    /** Administrator access is required. */
+    const RequireAdministrator = 1;
+    /*@}*/
+
     private static $existingId = null;
     private static $user = null;
 
@@ -70,7 +78,7 @@ class System_Api_SessionManager extends System_Api_Base
 
                 $passwordHash = new System_Core_PasswordHash();
 
-                if ( $passwordHash->checkPassword( $password, $user[ 'user_passwd' ] ) ) {
+                if ( $passwordHash->checkPassword( $password, $hash ) ) {
                     if ( $newPassword != null ) {
                         if ( $newPassword == $password )
                             throw new System_Api_Error( System_Api_Error::CannotReusePassword );
@@ -114,18 +122,47 @@ class System_Api_SessionManager extends System_Api_Base
     }
 
     /**
-    * Create a session for the administrator. This method is only used
-    * by the site setup page when installation is successful.
+    * Check access for a user without creating the session.
+    * @param $login Login name of the user.
+    * @param $password Password of the user.
+    * @param $flags If RequireAdministrator is passed an error is thrown
+    * if the user does not have administrator access to the system.
     * @return Array containing user details.
     */
-    public function loginAsAdministrator()
+    public function checkAccess( $login, $password, $flags = 0 )
+    {
+        $query = 'SELECT user_id, user_name, user_passwd, user_access FROM {users}'
+            . ' WHERE user_login = %s AND user_access > %d';
+
+        $user = $this->connection->queryRow( $query, $login, System_Const::NoAccess );
+
+        if ( $user == null )
+            throw new System_Api_Error( System_Api_Error::IncorrectLogin );
+
+        $passwordHash = new System_Core_PasswordHash();
+
+        if ( !$passwordHash->checkPassword( $password, $user[ 'user_passwd' ] ) )
+            throw new System_Api_Error( System_Api_Error::IncorrectLogin );
+
+        if ( $flags & self::RequireAdministrator && $user[ 'user_access' ] != System_Const::AdministratorAccess )
+            throw new System_Api_Error( System_Api_Error::AccessDenied );
+
+        return $user;
+    }
+
+    /**
+    * Create a session for the specified user without checking password.
+    * @param $login Login name of the user.
+    * @return Array containing user details.
+    */
+    public function loginAs( $login )
     {
         $query = 'SELECT user_id, user_name, user_access FROM {users}'
             . ' WHERE user_login = %s';
 
-        $user = $this->connection->queryRow( $query, 'admin' );
+        $user = $this->connection->queryRow( $query, $login );
 
-        $this->loginCommon( 'admin', $user );
+        $this->loginCommon( $login, $user );
 
         return $user;
     }

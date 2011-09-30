@@ -47,6 +47,13 @@ class Common_Errors_Setup extends System_Web_Component
                 $this->view->setSlot( 'header_class', 'error' );
                 $this->infoMessage = $this->tr( 'Current version of the database is not compatible with this version of WebIssues Server.' );
                 break;
+
+            case System_Core_SetupException::DatabaseNotUpdated:
+                $this->view->setSlot( 'page_title', $this->tr( 'Database Not Updated' ) );
+                $this->infoMessage = $this->tr( 'The database of this WebIssues Server has not been updated yet.' );
+                $this->linkMessage = $this->tr( 'Go to the %1 page to update the database.', null,
+                    $this->link( '/admin/setup/update.php', $this->tr( 'Server Update' ) ) );
+                break;
         }
    }
 }

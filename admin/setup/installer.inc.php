@@ -258,6 +258,8 @@ class Admin_Setup_Installer extends System_Web_Base
         $settings = array(
             'language'              => $language,
             'comment_max_length'    => 10000,
+            'folder_page_size'      => 10,
+            'history_page_size'     => 20,
             'file_max_size'         => 1048576,
             'file_db_max_size'      => 4096,
             'session_max_lifetime'  => 7200,

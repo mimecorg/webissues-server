@@ -444,10 +444,11 @@ class Admin_Setup_Install extends System_Web_Component
 
     private function startSession()
     {
+        System_Core_Application::getInstance()->initializeServer();
         System_Core_Application::getInstance()->initializeSession();
 
         $sessionManager = new System_Api_SessionManager();
-        $sessionManager->loginAsAdministrator();
+        $sessionManager->loginAs( 'admin' );
     }
 }
 

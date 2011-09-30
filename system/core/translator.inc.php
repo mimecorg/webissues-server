@@ -71,10 +71,7 @@ class System_Core_Translator
     */
     public function setLanguage( $mode, $language )
     {
-        if ( $this->getLanguage( $mode ) != $language ) {
-            $this->language[ $mode ] = $language;
-            unset( $this->files[ $mode ] );
-        }
+        $this->language[ $mode ] = $language;
     }
 
     /**
@@ -93,7 +90,7 @@ class System_Core_Translator
     {
         if ( !in_array( $module, $this->modules ) ) {
             $this->modules[] = $module;
-            $this->files = null;
+            $this->files = array();
         }
     }
 
@@ -109,8 +106,11 @@ class System_Core_Translator
     */
     public function translate( $mode, $context, $args )
     {
+        if ( !isset( $this->language[ $mode ] ) )
+            $mode = self::SystemLanguage;
+
         if ( isset( $this->language[ $mode ] ) )
-            $translated = $this->lookupTranslation( $mode, $context, $args[ 0 ], isset( $args[ 1 ] ) ? $args[ 1 ] : null );
+            $translated = $this->lookupTranslation( $this->language[ $mode ], $context, $args[ 0 ], isset( $args[ 1 ] ) ? $args[ 1 ] : null );
         else
             $translated = $args[ 0 ];
 
@@ -136,13 +136,13 @@ class System_Core_Translator
         return $translated;
     }
 
-    private function lookupTranslation( $mode, $context, $source, $comment )
+    private function lookupTranslation( $language, $context, $source, $comment )
     {
         // rebuild list of message files if a module was added or language was changed
-        if ( !isset( $this->files[ $mode ] ) )
-            $this->loadMessageFiles( $mode );
+        if ( !isset( $this->files[ $language ] ) )
+            $this->loadMessageFiles( $language );
 
-        if ( !empty( $this->files[ $mode ] ) ) {
+        if ( !empty( $this->files[ $language ] ) ) {
 
             // use CRC as hash value
             $crc = crc32( $source );
@@ -155,7 +155,7 @@ class System_Core_Translator
             if ( $crc > System_Const::INT_MAX )
                 $crc = $crc - 2 * System_Const::INT_MAX - 2;
 
-            foreach ( $this->files[ $mode ] as $file ) {
+            foreach ( $this->files[ $language ] as $file ) {
                 $contexts =& $this->data[ $file ][ 'contexts' ];
                 $messages =& $this->data[ $file ][ 'messages' ];
 
@@ -176,12 +176,12 @@ class System_Core_Translator
         return $source;
     }
 
-    private function loadMessageFiles( $mode )
+    private function loadMessageFiles( $language )
     {
-        $this->files[ $mode ] = array();
+        $this->files[ $language ] = array();
 
         foreach ( $this->modules as $module ) {
-            $suffix = '_' . $this->language[ $mode ];
+            $suffix = '_' . $language;
 
             while ( $suffix != '' ) {
                 $file = $module . $suffix;
@@ -200,7 +200,7 @@ class System_Core_Translator
                 }
 
                 if ( $this->data[ $file ] !== false ) {
-                    $this->files[ $mode ][] = $file;
+                    $this->files[ $language ][] = $file;
                     break;
                 }
 

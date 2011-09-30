@@ -41,6 +41,10 @@ class System_Core_SetupException extends System_Core_Exception
     * The database has an incompatible version which cannot be updated.
     */
     const DatabaseNotCompatible = 2;
+    /**
+    * The database has an old version which can be updated.
+    */
+    const DatabaseNotUpdated = 3;
 
     /**
     * Constructor.
