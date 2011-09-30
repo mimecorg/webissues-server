@@ -8,6 +8,8 @@
 
 <?php $this->insertComponent( 'Common_Tools_Locale', $form ) ?>
 
+<?php $this->insertComponent( 'Common_Tools_PageSize', $form ) ?>
+
 <?php if ( $emailEngine ): ?>
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Notifications' ) ?></legend>

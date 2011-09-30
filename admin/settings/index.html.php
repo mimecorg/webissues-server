@@ -4,6 +4,8 @@
 
 <?php $this->insertComponent( 'Common_Tools_Locale', $form ) ?>
 
+<?php $this->insertComponent( 'Common_Tools_PageSize', $form ) ?>
+
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Limits' ) ?></legend>
 

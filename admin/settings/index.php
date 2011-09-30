@@ -33,6 +33,7 @@ class Admin_Settings_Index extends System_Web_Component
         $this->view->setSlot( 'page_title', $this->tr( 'Server Settings' ) );
 
         Common_Tools_Locale::registerFields( $fields );
+        Common_Tools_PageSize::registerFields( $fields );
         $fields[ 'comment_max_length' ] = 'commentMaxLength';
         $fields[ 'file_max_size' ] = 'fileMaxSize';
         $fields[ 'file_db_max_size' ] = 'fileDbMaxSize';

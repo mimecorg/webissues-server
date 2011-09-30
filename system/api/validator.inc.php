@@ -555,6 +555,11 @@ class System_Api_Validator
                     $this->checkLocale( $key, $value );
                 break;
 
+            case 'folder_page_size':
+            case 'history_page_size':
+                $this->checkDecimalNumber( $value, 0, 1, 100 );
+                break;
+
             case 'comment_max_length':
                 $this->checkDecimalNumber( $value, 0, 1000, 100000 );
                 break;
@@ -627,6 +632,12 @@ class System_Api_Validator
             case 'time_zone':
                 if ( $value != '' )
                     $this->checkLocale( $key, $value );
+                break;
+
+            case 'folder_page_size':
+            case 'history_page_size':
+                if ( $value != '' )
+                    $this->checkDecimalNumber( $value, 0, 1, 100 );
                 break;
 
             case 'email':

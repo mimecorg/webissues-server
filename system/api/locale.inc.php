@@ -44,11 +44,8 @@ class System_Api_Locale
     {
         if ( !isset( self::$cache[ $this->userId ] ) ) {
             $preferencesManager = new System_Api_PreferencesManager();
-            $serverManager = new System_Api_ServerManager();
 
-            $language = $preferencesManager->getPreference( 'language' );
-            if ( $language == null )
-                $language = $serverManager->getSetting( 'language' );
+            $language = $preferencesManager->getPreferenceOrSetting( 'language' );
 
             $locale = System_Core_IniFile::parseExtended( '/common/data/locale.ini', '/data/locale.ini' );
 
@@ -59,14 +56,9 @@ class System_Api_Locale
             $settings[ 'time_zone' ] = date_default_timezone_get();
 
             foreach ( $settings as $key => &$value ) {
-                $preference = $preferencesManager->getPreference( $key );
-                if ( $preference != null ) {
+                $preference = $preferencesManager->getPreferenceOrSetting( $key );
+                if ( $preference != null )
                     $value = $preference;
-                } else {
-                    $setting = $serverManager->getSetting( $key );
-                    if ( $setting != null )
-                        $value = $setting;
-                }
             }
 
             $settings[ 'language' ] = $language;

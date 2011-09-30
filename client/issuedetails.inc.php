@@ -80,8 +80,11 @@ class Client_IssueDetails extends System_Web_Component
         if ( ( $this->historyFilter !== null ) && !isset( $this->filters[ $this->historyFilter ] ) )
             throw new System_Core_Exception( 'Invalid filter' );
 
+        $preferencesManager = new System_Api_PreferencesManager();
+        $pageSize = $preferencesManager->getPreferenceOrSetting( 'history_page_size' );
+
         $this->pager = new System_Web_Grid();
-        $this->pager->setPageSize( 20 );
+        $this->pager->setPageSize( $pageSize );
         $this->pager->setParameters( 'hpg' );
 
         $connection = System_Core_Application::getInstance()->getConnection();
