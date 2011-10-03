@@ -34,8 +34,8 @@ class Client_Projects_AddProject extends System_Web_Component
         if ( !System_Api_Principal::getCurrent()->isAdministrator() )
                 throw new System_Api_Error( System_Api_Error::AccessDenied );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageProjects );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::ManageProjects );
         $this->parentUrl = $breadcrumbs->getParentUrl();
 
         $this->view->setDecoratorClass( 'Common_FixedBlock' );

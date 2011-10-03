@@ -29,11 +29,11 @@ class Common_Tools_Helper extends System_Web_Base
 
     public function getBreadcrumbs( $page )
     {
-        $breadcrumbs = new System_Web_Breadcrumbs( $page );
+        $breadcrumbs = new Common_Breadcrumbs( $page );
         if ( $this->request->isRelativePathUnder( '/admin' ) )
-            $breadcrumbs->initialize( System_Web_Breadcrumbs::UserAccounts );
+            $breadcrumbs->initialize( Common_Breadcrumbs::UserAccounts );
         else
-            $breadcrumbs->initialize( System_Web_Breadcrumbs::Tools );
+            $breadcrumbs->initialize( Common_Breadcrumbs::Tools );
         return $breadcrumbs;
     }
 

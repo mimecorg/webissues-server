@@ -49,8 +49,8 @@ class Client_Issues_Issue extends System_Web_Component
 
                 $this->view->setSlot( 'page_title', $this->tr( 'Edit Attributes' ) );
 
-                $breadcrumbs = new System_Web_Breadcrumbs( $this );
-                $breadcrumbs->initialize( System_Web_Breadcrumbs::Issue, $this->issue );
+                $breadcrumbs = new Common_Breadcrumbs( $this );
+                $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
                 $this->parentUrl = $breadcrumbs->getParentUrl();
                 break;
 
@@ -73,8 +73,8 @@ class Client_Issues_Issue extends System_Web_Component
 
                     $this->view->setSlot( 'page_title', $this->tr( 'Clone Issue' ) );
 
-                    $breadcrumbs = new System_Web_Breadcrumbs( $this );
-                    $breadcrumbs->initialize( System_Web_Breadcrumbs::Issue, $this->issue );
+                    $breadcrumbs = new Common_Breadcrumbs( $this );
+                    $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
                     $this->parentUrl = $breadcrumbs->getParentUrl();
                 } else {
                     $this->oldIssueName = '';
@@ -82,8 +82,8 @@ class Client_Issues_Issue extends System_Web_Component
 
                     $this->view->setSlot( 'page_title', $this->tr( 'Add Issue' ) );
 
-                    $breadcrumbs = new System_Web_Breadcrumbs( $this );
-                    $breadcrumbs->initialize( System_Web_Breadcrumbs::Folder, $this->folder );
+                    $breadcrumbs = new Common_Breadcrumbs( $this );
+                    $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
                     $this->parentUrl = $breadcrumbs->getParentUrl();
                 }
                 break;

@@ -36,8 +36,8 @@ class Client_Issues_CloneIssue extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Clone Issue' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Issue, $this->issue );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
 
         $this->form = new System_Web_Form( 'issues', $this );
         $this->form->addField( 'folder', $this->issue[ 'folder_id' ] );

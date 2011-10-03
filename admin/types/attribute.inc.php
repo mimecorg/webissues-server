@@ -44,8 +44,8 @@ class Admin_Types_Attribute extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'breadcrumbs', array( $this->mergeQueryString( '/admin/types/index.php', array( 'type' => null, 'attribute' => null ) ) => $this->tr( 'Issue Types' ) ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::IssueTypes );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::IssueTypes );
 
         $helper = new Admin_Types_Helper();
 

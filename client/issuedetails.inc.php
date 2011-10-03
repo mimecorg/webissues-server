@@ -40,8 +40,8 @@ class Client_IssueDetails extends System_Web_Component
 
         $this->view->setSlot( 'page_title', $issue[ 'issue_name' ] );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Folder, $issue );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $issue );
 
         $this->issue[ 'issue_id' ] = '#' . $this->issue[ 'issue_id' ];
         $this->issue[ 'created_date' ] = $formatter->formatDateTime( $this->issue[ 'created_date' ], System_Api_Formatter::ToLocalTimeZone );

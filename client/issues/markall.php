@@ -41,8 +41,8 @@ class Client_Issues_MarkAll extends System_Web_Component
         else
             $this->view->setSlot( 'page_title', $this->tr( 'Mark All As Unread' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Folder, $this->folder );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
 
         $this->form = new System_Web_Form( 'markall', $this );
 

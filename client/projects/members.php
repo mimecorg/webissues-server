@@ -36,8 +36,8 @@ class Client_Projects_Members extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Project Members' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageProjects );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::ManageProjects );
 
         $this->form = new System_Web_Form( 'members', $this );
         if ( $this->form->loadForm() )

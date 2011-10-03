@@ -33,8 +33,8 @@ class Client_Projects_AddMembers extends System_Web_Component
         $projectId = (int)$this->request->getQueryString( 'project' );
         $this->project = $projectManager->getProject( $projectId, System_Api_ProjectManager::RequireAdministrator );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::ProjectMembers, $this->project );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::ProjectMembers, $this->project );
 
         $userManager = new System_Api_UserManager();
         $users = $userManager->getUsers();

@@ -32,8 +32,8 @@ class Admin_Users_Access extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Change Access' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::UserAccounts );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::UserAccounts );
 
         $userId = (int)$this->request->getQueryString( 'id' );
         $userManager = new System_Api_UserManager();

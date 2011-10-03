@@ -39,8 +39,8 @@ class Client_Projects_DeleteProject extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_MessageBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Delete Project' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageProjects );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::ManageProjects );
 
         $this->form = new System_Web_Form( 'projects', $this );
         $this->form->addViewState( 'warning', false );

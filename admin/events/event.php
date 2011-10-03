@@ -32,8 +32,8 @@ class Admin_Events_Event extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Event Details' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::EventLog );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::EventLog );
 
         $this->form = new System_Web_Form( 'event', $this );
         if ( $this->form->loadForm() )

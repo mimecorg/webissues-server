@@ -45,8 +45,8 @@ class Client_IssuesList extends System_Web_Component
         $this->folderName = $folder[ 'folder_name' ];
 
         if ( !$issueId ) {
-            $breadcrumbs = new System_Web_Breadcrumbs( $this );
-            $breadcrumbs->initialize( System_Web_Breadcrumbs::Project, $folder );
+            $breadcrumbs = new Common_Breadcrumbs( $this );
+            $breadcrumbs->initialize( Common_Breadcrumbs::Project, $folder );
             $this->view->setSlot( 'page_title', $folder[ 'folder_name' ] );
         }
 

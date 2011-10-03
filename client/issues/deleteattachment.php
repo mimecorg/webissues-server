@@ -37,8 +37,8 @@ class Client_Issues_DeleteAttachment extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_MessageBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Delete Attachment' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Issue, $issue );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $issue );
 
         $this->form = new System_Web_Form( 'issues', $this );
 

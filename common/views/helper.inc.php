@@ -66,22 +66,22 @@ class Common_Views_Helper extends System_Web_Base
 
     public function getBreadcrumbs( $page )
     {
-        $breadcrumbs = new System_Web_Breadcrumbs( $page );
+        $breadcrumbs = new Common_Breadcrumbs( $page );
 
         if ( $this->isPublic ) {
             if ( $this->request->getScriptBaseName() == 'index' )
-                $breadcrumbs->initialize( System_Web_Breadcrumbs::IssueTypes );
+                $breadcrumbs->initialize( Common_Breadcrumbs::IssueTypes );
             else
-                $breadcrumbs->initialize( System_Web_Breadcrumbs::ViewSettings );
+                $breadcrumbs->initialize( Common_Breadcrumbs::ViewSettings );
         } else {
             $projectManager = new System_Api_ProjectManager();
             $folderId = (int)$this->request->getQueryString( 'folder' );
             $folder = $projectManager->getFolder( $folderId );
 
             if ( $this->request->getScriptBaseName() == 'index' )
-                $breadcrumbs->initialize( System_Web_Breadcrumbs::Folder, $folder );
+                $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $folder );
             else
-                $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageViews, $folder );
+                $breadcrumbs->initialize( Common_Breadcrumbs::ManageViews, $folder );
         }
 
         return $breadcrumbs;

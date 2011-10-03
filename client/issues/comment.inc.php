@@ -67,8 +67,8 @@ class Client_Issues_Comment extends System_Web_Component
                 throw new System_Core_Exception( 'Invalid URL' );
         }
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Issue, $this->issue );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
 
         $this->form = new System_Web_Form( 'issues', $this );
         $this->form->addField( 'commentText', $this->oldText );

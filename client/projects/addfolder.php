@@ -35,8 +35,8 @@ class Client_Projects_AddFolder extends System_Web_Component
         $projectId = (int)$this->request->getQueryString( 'project' );
         $this->project = $projectManager->getProject( $projectId, System_Api_ProjectManager::RequireAdministrator );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageProjects );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::ManageProjects );
         $this->parentUrl = $breadcrumbs->getParentUrl();
 
         $this->form = new System_Web_Form( 'projects', $this );

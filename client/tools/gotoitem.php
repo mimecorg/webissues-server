@@ -32,8 +32,8 @@ class Client_Tools_GoToItem extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Go To Item' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Tools );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::Tools );
 
         $this->form = new System_Web_Form( 'tools', $this );
         $this->form->addField( 'itemId', '' );

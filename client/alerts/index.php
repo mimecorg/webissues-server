@@ -39,8 +39,8 @@ class Client_Alerts_Index extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Manage Alerts' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::Folder, $this->folder );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
 
         $this->form = new System_Web_Form( 'views', $this );
         if ( $this->form->loadForm() )

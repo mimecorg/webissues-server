@@ -23,7 +23,7 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 /**
 * Helper class for generating breadcrumbs and links to parent pages.
 */
-class System_Web_Breadcrumbs extends System_Web_Base
+class Common_Breadcrumbs extends System_Web_Base
 {
     const GeneralInformation = 1;
     const EventLog = 2;

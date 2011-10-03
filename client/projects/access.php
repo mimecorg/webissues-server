@@ -36,8 +36,8 @@ class Client_Projects_Access extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Change Access' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::ProjectMembers, $this->project );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::ProjectMembers, $this->project );
 
         $userManager = new System_Api_UserManager();
         $userId = (int)$this->request->getQueryString( 'user' );

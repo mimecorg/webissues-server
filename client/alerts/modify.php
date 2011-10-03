@@ -43,8 +43,8 @@ class Client_Alerts_Modify extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Modify Alert' ) );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageAlerts, $this->folder );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $this->folder );
 
         $alertId = (int)$this->request->getQueryString( 'id' );
         $this->alertManager = new System_Api_AlertManager();

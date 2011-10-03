@@ -35,8 +35,8 @@ class Client_Alerts_Add extends System_Web_Component
         $folderId = (int)$this->request->getQueryString( 'folder' );
         $this->folder = $projectManager->getFolder( $folderId );
 
-        $breadcrumbs = new System_Web_Breadcrumbs( $this );
-        $breadcrumbs->initialize( System_Web_Breadcrumbs::ManageAlerts, $this->folder );
+        $breadcrumbs = new Common_Breadcrumbs( $this );
+        $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $this->folder );
 
         $this->alertManager = new System_Api_AlertManager();
 
