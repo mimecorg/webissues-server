@@ -118,37 +118,37 @@ class System_Web_Breadcrumbs extends System_Web_Base
                 break;
 
             case self::Project:
-                $this->urls[] = $this->appendQueryString( '/client/index.php', array( 'project' => $object[ 'project_id' ] ) );
+                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'project' => $object[ 'project_id' ] ) );
                 $this->names[] = $object[ 'project_name' ];
                 break;
 
             case self::ProjectMembers:
                 $this->append( self::ManageProjects );
-                $this->urls[] = $this->filterQueryString( '/client/projects/members.php', array( 'project', 'sort', 'order', 'page' ) );
+                $this->urls[] = $this->filterQueryString( '/client/projects/members.php', array( 'project', 'sort', 'order', 'page', 'msort', 'morder', 'mpage' ) );
                 $this->names[] = $this->tr( 'Project Members' );
                 break;
 
             case self::Folder:
                 $this->append( self::Project, $object );
-                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'sort', 'order', 'page', 'view', 'q' ), array( 'folder' => $object[ 'folder_id' ] ) );
+                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q' ), array( 'folder' => $object[ 'folder_id' ] ) );
                 $this->names[] = $object[ 'folder_name' ];
                 break;
 
             case self::ManageViews:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/views/index.php', array( 'sort', 'order', 'page', 'view', 'q', 'folder', 'vsort', 'vorder', 'vpage' ) );
+                $this->urls[] = $this->filterQueryString( '/client/views/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'folder', 'vsort', 'vorder', 'vpage' ) );
                 $this->names[] = $this->tr( 'Manage Views' );
                 break;
 
             case self::ManageAlerts:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/alerts/index.php', array( 'sort', 'order', 'page', 'view', 'q', 'folder', 'asort', 'aorder', 'apage' ) );
+                $this->urls[] = $this->filterQueryString( '/client/alerts/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'folder', 'asort', 'aorder', 'apage' ) );
                 $this->names[] = $this->tr( 'Manage Alerts' );
                 break;
 
             case self::Issue:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'sort', 'order', 'page', 'view', 'q', 'hpg', 'hflt', 'unread' ), array( 'issue' => $object[ 'issue_id' ] ) );
+                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'hpg', 'hflt', 'unread' ), array( 'issue' => $object[ 'issue_id' ] ) );
                 $this->names[] = $object[ 'issue_name' ];
                 break;
 
@@ -158,7 +158,7 @@ class System_Web_Breadcrumbs extends System_Web_Base
                 break;
 
             case self::ManageProjects:
-                $this->urls[] = '/client/projects/index.php';
+                $this->urls[] = $this->filterQueryString( '/client/projects/index.php', array( 'sort', 'order', 'page' ) );
                 $this->names[] = $this->tr( 'Manage Projects' );
                 break;
         }

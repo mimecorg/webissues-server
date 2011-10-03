@@ -38,11 +38,16 @@ class Client_Projects_Index extends System_Web_Component
 
         $projectManager = new System_Api_ProjectManager();
 
-        $projects = $projectManager->getProjects( System_Api_ProjectManager::RequireAdministrator );
-        $folders = $projectManager->getFolders( System_Api_ProjectManager::RequireAdministrator );
-
         $this->grid = new System_Web_Grid();
+        $this->grid->setPageSize( 10 );
         $this->grid->setMergeParameters( array( 'project' => null, 'folder' => null ) );
+
+        $this->grid->setColumns( $projectManager->getProjectsColumns() );
+        $this->grid->setDefaultSort( 'name', System_Web_Grid::Ascending );
+        $this->grid->setRowsCount( $projectManager->getProjectsCount( System_Api_ProjectManager::RequireAdministrator ) );
+
+        $projects = $projectManager->getProjectsPage( $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset(), System_Api_ProjectManager::RequireAdministrator );
+        $folders = $projectManager->getFoldersForProjects( $projects );
 
         $this->projects = array();
         foreach ( $projects as $project ) {

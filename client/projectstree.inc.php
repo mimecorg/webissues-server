@@ -47,11 +47,17 @@ class Client_ProjectsTree extends System_Web_Component
             }
         }
 
-        $projects = $projectManager->getProjects();
-        $folders = $projectManager->getFolders();
-
         $this->grid = new System_Web_Grid();
+        $this->grid->setPageSize( 10 );
+        $this->grid->setParameters( 'ppg', 'po', 'ps' );
         $this->grid->setSelection( $folderId, $projectId );
+
+        $this->grid->setColumns( $projectManager->getProjectsColumns() );
+        $this->grid->setDefaultSort( 'name', System_Web_Grid::Ascending );
+        $this->grid->setRowsCount( $projectManager->getProjectsCount() );
+
+        $projects = $projectManager->getProjectsPage( $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
+        $folders = $projectManager->getFoldersForProjects( $projects );
 
         $this->projects = array();
         foreach ( $projects as $project ) {

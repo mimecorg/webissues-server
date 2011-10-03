@@ -47,6 +47,7 @@ class Client_Projects_Members extends System_Web_Component
 
         $this->grid = new System_Web_Grid();
         $this->grid->setPageSize( 20 );
+        $this->grid->setParameters( 'mpage', 'morder', 'msort' );
         $this->grid->setMergeParameters( array( 'user' => null ) );
 
         $this->grid->setColumns( $userManager->getMembersColumns() );

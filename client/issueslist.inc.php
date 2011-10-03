@@ -74,9 +74,9 @@ class Client_IssuesList extends System_Web_Component
 
             if ( !$this->viewForm->hasErrors() ) {
                 if ( $this->viewSelect != '' )
-                    $url = $this->appendQueryString( '/client/index.php', array( 'folder' => $folderId, 'view' => $this->viewSelect ) );
+                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'folder' => $folderId, 'view' => $this->viewSelect ) );
                 else
-                    $url = $this->appendQueryString( '/client/index.php', array( 'folder' => $folderId ) );
+                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'folder' => $folderId ) );
                 $this->response->redirect( $url );
             }
         }
@@ -178,7 +178,7 @@ class Client_IssuesList extends System_Web_Component
         }
 
         $this->toolBar = new System_Web_ToolBar();
-        $this->toolBar->setFilterParameters( array( 'sort', 'order', 'page', 'view', 'q' ) );
+        $this->toolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q' ) );
 
         $this->toolBar->addFixedCommand( '/client/issues/addissue.php', '/common/images/issue-new-16.png', $this->tr( 'Add Issue' ), array( 'folder' => $folderId ) );
         $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-read-16.png', $this->tr( 'Mark All As Read' ), array( 'folder' => $folderId, 'status' => 1 ) );
@@ -187,7 +187,7 @@ class Client_IssuesList extends System_Web_Component
         $this->toolBar->addFixedCommand( '/client/alerts/index.php', '/common/images/configure-alerts-16.png', $this->tr( 'Manage Alerts' ), array( 'folder' => $folderId ) );
 
         $this->viewToolBar = new System_Web_ToolBar();
-        $this->viewToolBar->setFilterParameters( array( 'sort', 'order', 'page', 'view', 'q' ) );
+        $this->viewToolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q' ) );
 
         $this->viewToolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add View' ), array( 'folder' => $folderId, 'direct' => 1 ) );
         if ( $personalViewId != 0 )

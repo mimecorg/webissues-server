@@ -279,7 +279,7 @@ class Common_Views_Helper extends System_Web_Base
     public function prepareGrid( $component )
     {
         $grid = new System_Web_Grid();
-        $grid->setPageSize( 20 );
+        $grid->setPageSize( 10 );
         $grid->setParameters( 'vpage', 'vorder', 'vsort' );
         $grid->setMergeParameters( array( 'id' => null ) );
 

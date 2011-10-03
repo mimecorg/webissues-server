@@ -496,18 +496,23 @@ class System_Api_ProjectManager extends System_Api_Base
 
     /**
     * Return the total number of accessible projects.
+    * @param $flags If RequireAdministrator is passed only projects
+    * to which the user has administrator access are returned.
     * @return The number of projects.
     */
-    public function getProjectsCount()
+    public function getProjectsCount( $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
-        if ( !$principal->isAdministrator() )
+        if ( !$principal->isAdministrator() ) {
             $query = 'SELECT COUNT(*) FROM {projects} AS p'
-                . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %d';
-        else
+                . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
+            if ( $flags & self::RequireAdministrator )
+                $query .= ' AND r.project_access = %2d';
+        } else {
             $query = 'SELECT COUNT(*) FROM {projects} AS p';
- 
-        return $this->connection->queryScalar( $query, $principal->getUserId() );
+        }
+
+        return $this->connection->queryScalar( $query, $principal->getUserId(), System_Const::AdministratorAccess );
     }
 
     /**
@@ -515,18 +520,23 @@ class System_Api_ProjectManager extends System_Api_Base
     * @param $orderBy The sorting order specifier.
     * @param $limit Maximum number of rows to return.
     * @param $offset Zero-based index of first row to return.
+    * @param $flags If RequireAdministrator is passed only projects
+    * to which the user has administrator access are returned.
     * @return An array of associative arrays representing projects.
     */
-    public function getProjectsPage( $orderBy, $limit, $offset )
+    public function getProjectsPage( $orderBy, $limit, $offset, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
-        if ( !$principal->isAdministrator() )
-            $query = 'SELECT p.project_id, p.project_name, r.project_access, r.user_id FROM {projects} AS p'
-                . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %d';
-        else
-            $query = 'SELECT p.project_id, p.project_name FROM {projects} AS p';
+        if ( !$principal->isAdministrator() ) {
+            $query = 'SELECT p.project_id, p.project_name, r.project_access FROM {projects} AS p'
+                . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
+            if ( $flags & self::RequireAdministrator )
+                $query .= ' AND r.project_access = %2d';
+        } else {
+            $query = 'SELECT p.project_id, p.project_name, %2d AS project_access FROM {projects} AS p';
+        }
 
-        return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $principal->getUserId() );
+        return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $principal->getUserId(), System_Const::AdministratorAccess );
     }
 
     /**
@@ -544,5 +554,28 @@ class System_Api_ProjectManager extends System_Api_Base
             . ' ORDER BY f.folder_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query, $projectId );
+    }
+
+    /**
+    * Get list of folders in given projects.
+    * @param $projects Array of projects.
+    * @return An array of associative arrays representing folders.
+    */
+    public function getFoldersForProjects( $projects )
+    {
+        $placeholders = array();
+        $args = array();
+
+        foreach ( $projects as $project ) {
+            $placeholders[] = '%d';
+            $args[] = $project[ 'project_id' ];
+        }
+
+        $query = 'SELECT f.folder_id, f.project_id, f.folder_name, f.type_id, f.stamp_id, t.type_name FROM {folders} AS f'
+            . ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
+            . ' WHERE f.project_id IN ( ' . join( ', ', $placeholders ) . ' )'
+            . ' ORDER BY f.folder_name COLLATE LOCALE';
+
+        return $this->connection->queryTableArgs( $query, $args );
     }
 }

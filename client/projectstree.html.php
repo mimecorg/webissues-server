@@ -10,7 +10,7 @@
 
 <table class="grid">
 <tr>
-<?php $grid->renderHeader( $this->tr( 'Name' ) ) ?>
+<?php $grid->renderHeader( $this->tr( 'Name' ), 'name' ) ?>
 <?php $grid->renderHeader( $this->tr( 'Type' ) ) ?>
 </tr>
 
@@ -18,15 +18,15 @@
 <?php $grid->renderParentRowOpen( $projectId ) ?>
 
 <td colspan="2">
-<?php
-    $grid->renderExpandButton( empty( $project[ 'folders' ] ) );
+  <?php $grid->renderExpandButton( empty( $project[ 'folders' ] ) ) ?>
+  <?php
     if ( $project[ 'project_access' ] == System_Const::AdministratorAccess ):
         $image = '/common/images/project-admin-16.png';
     else:
         $image = '/common/images/project-16.png';
     endif;
-    echo $this->imageAndTextLink( $this->appendQueryString( '/client/index.php', array( 'project' => $projectId ) ), $image, $project[ 'project_name' ] )
-?>
+    echo $this->imageAndTextLink( $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'project' => $projectId ) ), $image, $project[ 'project_name' ] )
+  ?>
 </td>
 
 <?php $grid->renderRowClose() ?>
@@ -35,7 +35,7 @@
 <?php $grid->renderChildRowOpen( $folderId, $projectId ) ?>
 
 <td class="first-column">
-  <?php echo $this->imageAndTextLink( $this->appendQueryString( '/client/index.php', array( 'folder' => $folderId ) ), '/common/images/folder-16.png', $folder[ 'folder_name' ] ) ?>
+  <?php echo $this->imageAndTextLink( $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'folder' => $folderId ) ), '/common/images/folder-16.png', $folder[ 'folder_name' ] ) ?>
 </td>
 <td><?php echo $folder[ 'type_name' ] ?></td>
 
@@ -45,6 +45,8 @@
 <?php endforeach ?>
 
 </table>
+
+<?php $grid->renderPager() ?>
 
 <?php else: ?>
 

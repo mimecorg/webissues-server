@@ -41,27 +41,31 @@ class Admin_Types_Index extends System_Web_Component
         $this->grid->setDefaultSort( 'name', System_Web_Grid::Ascending );
         $this->grid->setRowsCount( $typeManager->getIssueTypesCount() );
 
-        $page = $typeManager->getIssueTypesPage( $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
+        $types = $typeManager->getIssueTypesPage( $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
+        $attributes = $typeManager->getAttributeTypesForIssueTypes( $types );
 
         $helper = new Admin_Types_Helper();
         $expressionHelper = new System_Web_ExpressionHelper();
 
         $this->types = array();
+        foreach ( $types as $type ) {
+            $type[ 'attributes' ] = array();
+            $this->types[ $type[ 'type_id' ] ] = $type;
+        }
+
+        foreach ( $attributes as $attribute ) {
+            $info = System_Api_DefinitionInfo::fromString( $attribute[ 'attr_def' ] );
+            $attribute[ 'type' ] = $helper->getTypeName( $info->getType() );
+            $attribute[ 'default_value' ] = $expressionHelper->formatExpression( $info->getType(), $attribute[ 'attr_def' ], $info->getMetadata( 'default', '' ) );
+            $attribute[ 'required' ] = $info->getMetadata( 'required', 0 ) ? $this->tr( 'Yes' ) : $this->tr( 'No' );
+            $attribute[ 'details' ] = $helper->getAttributeDetails( $info );
+            $this->types[ $attribute[ 'type_id' ] ][ 'attributes' ][ $attribute[ 'attr_id' ] ] = $attribute;
+        }
+
         $emptyTypes = array();
-        foreach ( $page as $row ) {
-            $attributes = $typeManager->getAttributeTypesForIssueType( $row );
-            $row[ 'attributes' ] = array();
-            foreach ( $attributes as $attribute ) {
-                $info = System_Api_DefinitionInfo::fromString( $attribute[ 'attr_def' ] );
-                $attribute[ 'type' ] = $helper->getTypeName( $info->getType() );
-                $attribute[ 'default_value' ] = $expressionHelper->formatExpression( $info->getType(), $attribute[ 'attr_def' ], $info->getMetadata( 'default', '' ) );
-                $attribute[ 'required' ] = $info->getMetadata( 'required', 0 ) ? $this->tr( 'Yes' ) : $this->tr( 'No' );
-                $attribute[ 'details' ] = $helper->getAttributeDetails( $info );
-                $row[ 'attributes' ][ $attribute[ 'attr_id' ] ] = $attribute;
-            }
-            $this->types[ $row[ 'type_id' ] ] = $row;
-            if ( empty( $row[ 'attributes' ] ) )
-                $emptyTypes[] = $row[ 'type_id' ];
+        foreach ( $types as $type ) {
+            if ( empty( $type[ 'attributes' ] ) )
+                $emptyTypes[] = $type[ 'type_id' ];
         }
 
         $attributeId = (int)$this->request->getQueryString( 'attribute' );

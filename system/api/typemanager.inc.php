@@ -206,6 +206,28 @@ class System_Api_TypeManager extends System_Api_Base
     }
 
     /**
+    * Get all attributes for given issue types.
+    * @param $types Array of issue types.
+    * @return An array of associative arrays representing attributes.
+    */
+    public function getAttributeTypesForIssueTypes( $types )
+    {
+        $placeholders = array();
+        $args = array();
+
+        foreach ( $types as $type ) {
+            $placeholders[] = '%d';
+            $args[] = $type[ 'type_id' ];
+        }
+
+        $query = 'SELECT attr_id, type_id, attr_name, attr_def FROM {attr_types}'
+            . ' WHERE type_id IN ( ' . join( ', ', $placeholders ) . ' )'
+            . 'ORDER BY attr_name COLLATE LOCALE';
+
+        return $this->connection->queryTableArgs( $query, $args );
+    }
+
+    /**
     * Get the issue type for the given issue.
     * @param $issue The issue to retrieve the type from.
     * @return Array representing the issue type.

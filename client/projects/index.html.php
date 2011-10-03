@@ -10,7 +10,7 @@
 
 <table class="grid">
 <tr>
-<?php $grid->renderHeader( $this->tr( 'Name' ) ) ?>
+<?php $grid->renderHeader( $this->tr( 'Name' ), 'name' ) ?>
 <?php $grid->renderHeader( $this->tr( 'Type' ) ) ?>
 </tr>
 
@@ -18,10 +18,8 @@
 <?php $grid->renderParentRowOpen( $projectId ) ?>
 
 <td colspan="2">
-<?php
-    $grid->renderExpandButton( empty( $project[ 'folders' ] ) );
-    echo $this->imageAndTextLink( $this->appendQueryString( '/client/projects/index.php', array( 'project' => $projectId ) ), '/common/images/project-admin-16.png', $project[ 'project_name' ] );
-?>
+  <?php $grid->renderExpandButton( empty( $project[ 'folders' ] ) ) ?>
+  <?php echo $this->imageAndTextLink( $this->appendQueryString( '/client/projects/index.php', array( 'project' => $projectId ) ), '/common/images/project-admin-16.png', $project[ 'project_name' ] ) ?>
 </td>
 
 <?php $grid->renderRowClose() ?>
@@ -40,6 +38,8 @@
 <?php endforeach ?>
 
 </table>
+
+<?php $grid->renderPager() ?>
 
 <?php else: ?>
 
