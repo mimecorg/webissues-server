@@ -64,27 +64,23 @@ class System_Api_StateManager extends System_Api_Base
     /**
     * Set the read state of the issue.
     * @param $issue The issue to modify.
-    * @param $isRead @c true to change state to "read", @c false to
-    * change to "new".
+    * @param $readId The new read stamp of the issue.
     * @return The identifier of the state or @c false if the state was
     * not modified.
     */
-    public function setIssueRead( $issue, $isRead )
+    public function setIssueRead( $issue, $readId )
     {
         $principal = System_Api_Principal::getCurrent();
 
         $issueId = $issue[ 'issue_id' ];
         $stampId = $issue[ 'stamp_id' ];
         $stateId = $issue[ 'state_id' ];
-        $readId = $issue[ 'read_id' ];
 
-        if ( $isRead ) {
-            if ( $readId == $stampId )
-                return false;
-        } else {
-            if ( $readId == null )
-                return false;
-        }
+        if ( $readId < 0 || $readId > $stampId )
+            throw new System_Api_Error( System_Api_Error::InvalidValue );
+
+        if ( $readId == $issue[ 'read_id' ] )
+            return false;
 
         $transaction = $this->connection->beginTransaction();
 
@@ -94,11 +90,11 @@ class System_Api_StateManager extends System_Api_Base
                 $this->connection->execute( $query, $stateId );
             }
 
-            if ( $isRead )
+            if ( $readId > 0 )
                 $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id ) VALUES ( %d, %d, %d )';
             else
                 $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id ) VALUES ( %d, %d, NULL )';
-            $this->connection->execute( $query, $principal->getUserId(), $issueId, $stampId );
+            $this->connection->execute( $query, $principal->getUserId(), $issueId, $readId );
 
             $stateId = $this->connection->getInsertId( 'issue_states', 'state_id' );
 
@@ -114,14 +110,17 @@ class System_Api_StateManager extends System_Api_Base
     /**
     * Set the read state of all issues in specified folder.
     * @param $folder Folder containing issues to modify.
-    * @param $isRead @c true to change state to "read", @c false to
-    * change to "new".
+    * @param $readId The new read stamp of the folder.
     */
-    public function setFolderRead( $folder, $isRead )
+    public function setFolderRead( $folder, $readId )
     {
         $principal = System_Api_Principal::getCurrent();
 
         $folderId = $folder[ 'folder_id' ];
+        $stampId = $folder[ 'stamp_id' ];
+
+        if ( $readId < 0 || $readId > $stampId )
+            throw new System_Api_Error( System_Api_Error::InvalidValue );
 
         $transaction = $this->connection->beginTransaction();
 
@@ -133,13 +132,13 @@ class System_Api_StateManager extends System_Api_Base
             $this->connection->execute( $query, $principal->getUserId(), $folderId );
 
             $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id )';
-            if ( $isRead )
-                $query .= ' SELECT %1d AS user_id, i.issue_id, i.stamp_id AS read_id';
+            if ( $readId > 0 )
+                $query .= ' SELECT %1d AS user_id, i.issue_id, %3d AS read_id';
             else
                 $query .= ' SELECT %1d AS user_id, i.issue_id, NULL AS read_id';
             $query .= ' FROM {issues} AS i WHERE i.folder_id = %2d';
 
-            $this->connection->execute( $query, $principal->getUserId(), $folderId );
+            $this->connection->execute( $query, $principal->getUserId(), $folderId, $readId );
 
             $transaction->commit();
         } catch ( Exception $ex ) {

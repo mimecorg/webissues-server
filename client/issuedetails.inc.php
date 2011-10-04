@@ -50,7 +50,7 @@ class Client_IssueDetails extends System_Web_Component
         $isRead = (int)$this->request->getQueryString( 'unread' ) == 0;
 
         $stateManager = new System_Api_StateManager();
-        $stateId = $stateManager->setIssueRead( $issue, $isRead );
+        $stateId = $stateManager->setIssueRead( $issue, $isRead ? $issue[ 'stamp_id' ] : 0 );
 
         $this->attributeValues = $issueManager->getAllAttributeValuesForIssue( $issue );
 

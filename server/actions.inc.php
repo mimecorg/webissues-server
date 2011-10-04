@@ -390,7 +390,7 @@ class Server_Actions
             $this->addTable( 'change_stubs', $issueManager->getChangeStubs( $issue, $sinceStamp ) );
 
             $stateManager = new System_Api_StateManager();
-            $stateManager->setIssueRead( $issue, true );
+            $stateManager->setIssueRead( $issue, $issue[ 'stamp_id' ] );
         }
     }
 
@@ -676,30 +676,26 @@ class Server_Actions
         $this->addTable( 'issue_states', $stateManager->getStates( $sinceState ) );
     }
 
-    public function setIssueRead( $issueId, $isRead )
+    public function setIssueRead( $issueId, $readId )
     {
         $this->principal->checkAuthenticated();
 
         $issueManager = new System_Api_IssueManager();
         $issue = $issueManager->getIssue( $issueId );
 
-        $this->validator->checkBooleanValue( $isRead );
-
         $stateManager = new System_Api_StateManager();
-        $this->setIdIf( $stateManager->setIssueRead( $issue, $isRead ) );
+        $this->setIdIf( $stateManager->setIssueRead( $issue, $readId ) );
     }
 
-    public function setFolderRead( $folderId, $isRead )
+    public function setFolderRead( $folderId, $readId )
     {
         $this->principal->checkAuthenticated();
 
         $projectManager = new System_Api_ProjectManager();
         $folder = $projectManager->getFolder( $folderId );
 
-        $this->validator->checkBooleanValue( $isRead );
-
         $stateManager = new System_Api_StateManager();
-        $this->setOkIf( $stateManager->setFolderRead( $folder, $isRead ) );
+        $this->setOkIf( $stateManager->setFolderRead( $folder, $readId ) );
     }
 
     public function addAlert( $folderId, $viewId, $alertEmail )

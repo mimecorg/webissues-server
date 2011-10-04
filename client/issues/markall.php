@@ -60,7 +60,7 @@ class Client_Issues_MarkAll extends System_Web_Component
     private function submit()
     {
         $stateManager = new System_Api_StateManager();
-        $stateManager->setFolderRead( $this->folder, $this->isRead );
+        $stateManager->setFolderRead( $this->folder, $this->isRead ? $this->folder[ 'stamp_id' ] : 0 );
     }
 }
 
