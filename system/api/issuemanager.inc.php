@@ -720,7 +720,7 @@ class System_Api_IssueManager extends System_Api_Base
             $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id, from_folder_id, to_folder_id ) VALUES ( %d, %d, %d, %d, %d, %d )';
             $this->connection->execute( $query, $stampId, $issueId, System_Const::IssueMoved, $stampId, $fromFolderId, $toFolderId );
 
-            $query = 'UPDATE {issues} SET folder_id = %1d, stub_id = %2d WHERE issue_id = %3d AND stub_id < %2d';
+            $query = 'UPDATE {issues} SET folder_id = %1d, stub_id = %2d WHERE issue_id = %3d AND COALESCE( stub_id, 0 ) < %2d';
             $this->connection->execute( $query, $toFolderId, $stampId, $issueId );
 
             $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
