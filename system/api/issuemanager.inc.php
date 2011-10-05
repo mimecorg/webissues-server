@@ -190,7 +190,7 @@ class System_Api_IssueManager extends System_Api_Base
 
         $folderId = $folder[ 'folder_id' ];
 
-        $query = 'SELECT s.issue_id, i.folder_id'
+        $query = 'SELECT s.issue_id, i.folder_id, i.stamp_id'
             . ' FROM {issue_stubs} AS s'
             . ' LEFT OUTER JOIN {issues} AS i ON i.issue_id = s.issue_id'
             . ' WHERE s.folder_id = %d AND s.stub_id > %d AND s.prev_id <= %d AND COALESCE( i.folder_id, 0 ) <> s.folder_id';
