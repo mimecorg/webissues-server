@@ -361,8 +361,10 @@ abstract class System_Core_Application
         $sessionManager = new System_Api_SessionManager();
         $sessionManager->initializePrincipal();
 
-        $locale = new System_Api_Locale();
-        $this->translator->setLanguage( System_Core_Translator::UserLanguage, $locale->getSetting( 'language' ) );
+        $preferencesManager = new System_Api_PreferencesManager();
+        $language = $preferencesManager->getPreferenceOrSetting( 'language' );
+
+        $this->translator->setLanguage( System_Core_Translator::UserLanguage, $language );
     }
 
     /**
