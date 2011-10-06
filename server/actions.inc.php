@@ -63,7 +63,7 @@ class Server_Actions
         $this->addRow( 'user_login', $sessionManager->login( $login, $password, $newPassword ) );
     }
 
-    public function getSettings()
+    public function getSettings( $language )
     {
         $this->principal->checkAuthenticated();
 
@@ -74,6 +74,7 @@ class Server_Actions
             $this->addRow( 'settings', $row );
 
         $locale = new System_Api_Locale();
+        $locale->setLanguage( $language );
         $settings = $locale->getSettingsAsTable();
 
         foreach ( $settings as $row )

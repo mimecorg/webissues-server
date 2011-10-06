@@ -28,6 +28,7 @@ class System_Api_Locale
     private static $cache = array();
 
     private $userId = null;
+    private $language = null;
 
     /**
     * Constructor.
@@ -38,6 +39,23 @@ class System_Api_Locale
     }
 
     /**
+    * Set specific language for current user's locale.
+    */
+    public function setLanguage( $language )
+    {
+        if ( !array_key_exists( $language, $this->getAvailableLanguages() ) )
+            $language = 'en_US';
+
+        if ( $this->language == $language )
+            return;
+
+        if ( $this->language != null )
+            unset( self::$cache[ $this->userId ] );
+
+        $this->language = $language;
+    }
+
+    /**
     * Return all locale settings as an assotiative array.
     */
     public function getSettings()
@@ -45,13 +63,14 @@ class System_Api_Locale
         if ( !isset( self::$cache[ $this->userId ] ) ) {
             $preferencesManager = new System_Api_PreferencesManager();
 
-            $language = $preferencesManager->getPreferenceOrSetting( 'language' );
+            if ( $this->language == null )
+                $this->language = $preferencesManager->getPreferenceOrSetting( 'language' );
 
             $locale = System_Core_IniFile::parseExtended( '/common/data/locale.ini', '/data/locale.ini' );
 
             $settings = $locale[ 'global' ];
-            if ( isset( $locale[ $language ] ) )
-                $settings = array_merge( $settings, $locale[ $language ] );
+            if ( isset( $locale[ $this->language ] ) )
+                $settings = array_merge( $settings, $locale[ $this->language ] );
 
             $settings[ 'time_zone' ] = date_default_timezone_get();
 
@@ -61,7 +80,7 @@ class System_Api_Locale
                     $value = $preference;
             }
 
-            $settings[ 'language' ] = $language;
+            $settings[ 'language' ] = $this->language;
 
             self::$cache[ $this->userId ] = $settings;
         }
