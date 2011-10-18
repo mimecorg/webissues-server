@@ -38,7 +38,7 @@ class Admin_Users_Index extends System_Web_Component
 
         $this->userTypes = array(
             System_Api_UserManager::Active => $this->tr( 'Active' ),
-            System_Api_UserManager::Disabled => $this->tr( 'Disabled' )
+            System_Api_UserManager::Disabled => $this->tr( 'Disabled', 'filter' )
         );
 
         $type = $this->request->getQueryString( 'type' );
@@ -58,7 +58,7 @@ class Admin_Users_Index extends System_Web_Component
         $page = $userManager->getUsersPage( $type, $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
 
         $accessLevels = array(
-            System_Const::NoAccess => $this->tr( 'Disabled' ),
+            System_Const::NoAccess => $this->tr( 'Disabled', 'user' ),
             System_Const::NormalAccess => $this->tr( 'Regular user' ),
             System_Const::AdministratorAccess => $this->tr( 'System administrator' ) );
  
