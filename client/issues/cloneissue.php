@@ -31,7 +31,7 @@ class Client_Issues_CloneIssue extends System_Web_Component
     {
         $issueManager = new System_Api_IssueManager();
         $issueId = (int)$this->request->getQueryString( 'issue' );
-        $this->issue = $issueManager->getIssue( $issueId, System_Api_IssueManager::RequireAdministrator );
+        $this->issue = $issueManager->getIssue( $issueId );
 
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Clone Issue' ) );

@@ -43,21 +43,19 @@ class Client_Issues_MoveIssue extends System_Web_Component
         $this->form->addField( 'folder', $this->issue[ 'folder_id' ] );
 
         $projectManager = new System_Api_ProjectManager();
-        $projects = $projectManager->getProjects();
-        $folders = $projectManager->getFolders();
+        $projects = $projectManager->getProjects( System_Api_IssueManager::RequireAdministrator );
+        $folders = $projectManager->getFolders( System_Api_IssueManager::RequireAdministrator );
 
         $this->folders = array();
 
         foreach ( $projects as $project ) {
-            if ( $project[ 'project_access' ] == System_Const::AdministratorAccess ) {
-                $list = array();
-                foreach ( $folders as $folder ) {
-                    if ( $folder[ 'project_id' ] == $project[ 'project_id' ] && $folder[ 'type_id' ] == $this->issue[ 'type_id' ] )
-                        $list[ $folder[ 'folder_id' ] ] = $folder[ 'folder_name' ];
-                }
-                if ( !empty( $list ) )
-                    $this->folders[ $project[ 'project_name' ] ] = $list;
+            $list = array();
+            foreach ( $folders as $folder ) {
+                if ( $folder[ 'project_id' ] == $project[ 'project_id' ] && $folder[ 'type_id' ] == $this->issue[ 'type_id' ] )
+                    $list[ $folder[ 'folder_id' ] ] = $folder[ 'folder_name' ];
             }
+            if ( !empty( $list ) )
+                $this->folders[ $project[ 'project_name' ] ] = $list;
         }
 
         $this->form->addItemsRule( 'folder', $this->folders );
