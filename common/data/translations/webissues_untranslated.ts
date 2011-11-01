@@ -435,133 +435,133 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="69"/>
-        <location filename="../../../admin/settings/index.php" line="76"/>
+        <location filename="../../../admin/settings/index.php" line="70"/>
+        <location filename="../../../admin/settings/index.php" line="77"/>
         <source>%1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="71"/>
+        <location filename="../../../admin/settings/index.php" line="72"/>
         <source>%1 MB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="74"/>
+        <location filename="../../../admin/settings/index.php" line="75"/>
         <source>Never</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="77"/>
+        <location filename="../../../admin/settings/index.php" line="78"/>
         <source>Always</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="81"/>
+        <location filename="../../../admin/settings/index.php" line="82"/>
         <source>%1 minutes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="82"/>
+        <location filename="../../../admin/settings/index.php" line="83"/>
         <source>1 hour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="84"/>
+        <location filename="../../../admin/settings/index.php" line="85"/>
         <source>%1 hours</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="87"/>
+        <location filename="../../../admin/settings/index.php" line="88"/>
         <source>1 day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="89"/>
+        <location filename="../../../admin/settings/index.php" line="90"/>
         <source>%1 days</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="92"/>
+        <location filename="../../../admin/settings/index.php" line="93"/>
         <source>Use cron job</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="8"/>
+        <location filename="../../../admin/settings/index.html.php" line="10"/>
         <source>Limits</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="10"/>
+        <location filename="../../../admin/settings/index.html.php" line="12"/>
         <source>The maximum length (in characters) of comments and the maximum size (in bytes) of attached files that are allowed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="12"/>
+        <location filename="../../../admin/settings/index.html.php" line="14"/>
         <source>Maximum comment length:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="13"/>
+        <location filename="../../../admin/settings/index.html.php" line="15"/>
         <source>Maximum attachment size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="18"/>
+        <location filename="../../../admin/settings/index.html.php" line="20"/>
         <source>Attachment Storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="20"/>
+        <location filename="../../../admin/settings/index.html.php" line="22"/>
         <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="22"/>
+        <location filename="../../../admin/settings/index.html.php" line="24"/>
         <source>Maximum database storage size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="27"/>
+        <location filename="../../../admin/settings/index.html.php" line="29"/>
         <source>Maximum Lifetime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="29"/>
+        <location filename="../../../admin/settings/index.html.php" line="31"/>
         <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="31"/>
+        <location filename="../../../admin/settings/index.html.php" line="33"/>
         <source>Session lifetime:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="32"/>
+        <location filename="../../../admin/settings/index.html.php" line="34"/>
         <source>Event log lifetime:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="37"/>
+        <location filename="../../../admin/settings/index.html.php" line="39"/>
         <source>Garbage Collection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="39"/>
+        <location filename="../../../admin/settings/index.html.php" line="41"/>
         <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="41"/>
+        <location filename="../../../admin/settings/index.html.php" line="43"/>
         <source>GC probability:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="46"/>
+        <location filename="../../../admin/settings/index.html.php" line="48"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="47"/>
+        <location filename="../../../admin/settings/index.html.php" line="49"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -978,202 +978,285 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="277"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="279"/>
         <source>Forum</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="283"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="285"/>
         <source>Bugs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="286"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="288"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="293"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="295"/>
         <source>Status</source>
         <comment>bug</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="296"/>
         <location filename="../../../admin/setup/installer.inc.php" line="298"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="338"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="346"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="354"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="300"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="340"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="348"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
         <source>Active</source>
         <comment>bug</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="296"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="296"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="302"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="304"/>
         <source>Reason</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="305"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="307"/>
         <source>Fixed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="305"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="307"/>
         <source>Obsolete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="305"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="307"/>
         <source>Duplicate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="306"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
         <source>As Designed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="306"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
         <source>Unable To Reproduce</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="306"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
         <source>Test Failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="310"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="312"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="328"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="330"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="335"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="337"/>
         <source>Active Bugs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="342"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="344"/>
         <source>My Active Bugs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="350"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="352"/>
         <source>Unassigned Bugs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="360"/>
         <source>Resolved Bugs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="369"/>
         <source>Tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="372"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="377"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="379"/>
         <source>Status</source>
         <comment>task</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="380"/>
         <location filename="../../../admin/setup/installer.inc.php" line="382"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="422"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="430"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="438"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="384"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="424"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="432"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
         <source>Active</source>
         <comment>task</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="380"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
         <source>Closed</source>
         <comment>task</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="386"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="388"/>
         <source>Priority</source>
         <comment>task</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="396"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="398"/>
         <source>Progress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="404"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="406"/>
         <source>Due Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="412"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="414"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="421"/>
         <source>Active Tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="426"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="428"/>
         <source>My Active Tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="434"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="436"/>
         <source>Unassigned Tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="444"/>
         <source>Completed Tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="380"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
         <source>Completed</source>
         <comment>task</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Setup_Update</name>
+    <message>
+        <location filename="../../../admin/setup/update.php" line="50"/>
+        <source>Server Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.php" line="51"/>
+        <source>Update your WebIssues Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.php" line="124"/>
+        <source>Updated database to version %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="6"/>
+        <source>The database of this WebIssues Server is already up to date.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="11"/>
+        <source>Update of your WebIssues Server was successfully completed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="13"/>
+        <source>Go to the %1 to continue the configuration of this server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="14"/>
+        <source>Administration Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="19"/>
+        <source>Update failed with the following fatal error:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="30"/>
+        <source>Log in as administrator in order to update the server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="32"/>
+        <source>Login:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="33"/>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="38"/>
+        <source>The database of this WebIssues Server will be updated to version %1.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="48"/>
+        <source>&amp;lt; Back</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="51"/>
+        <source>Next &amp;gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="54"/>
+        <source>Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/update.html.php" line="63"/>
+        <source>Update in progress...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1538,37 +1621,37 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="58"/>
+        <location filename="../../../admin/types/index.php" line="60"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="58"/>
+        <location filename="../../../admin/types/index.php" line="60"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="83"/>
+        <location filename="../../../admin/types/index.php" line="87"/>
         <source>Rename Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="84"/>
+        <location filename="../../../admin/types/index.php" line="88"/>
         <source>Delete Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="86"/>
+        <location filename="../../../admin/types/index.php" line="90"/>
         <source>Rename Attribute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="87"/>
+        <location filename="../../../admin/types/index.php" line="91"/>
         <source>Delete Attribute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="81"/>
+        <location filename="../../../admin/types/index.php" line="85"/>
         <source>Add Type</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1598,17 +1681,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="82"/>
+        <location filename="../../../admin/types/index.php" line="86"/>
         <source>Add Attribute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="88"/>
+        <location filename="../../../admin/types/index.php" line="92"/>
         <source>View Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="85"/>
+        <location filename="../../../admin/types/index.php" line="89"/>
         <source>Modify Attribute</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1758,57 +1841,74 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="47"/>
-        <source>Disabled</source>
+        <location filename="../../../admin/users/index.php" line="40"/>
+        <source>Active</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="73"/>
+        <location filename="../../../admin/users/index.php" line="87"/>
         <source>Add User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.html.php" line="9"/>
+        <location filename="../../../admin/users/index.html.php" line="4"/>
+        <source>All Users</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.html.php" line="14"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.html.php" line="10"/>
+        <location filename="../../../admin/users/index.html.php" line="15"/>
         <source>Login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.html.php" line="11"/>
+        <location filename="../../../admin/users/index.html.php" line="16"/>
         <source>Access Level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="48"/>
+        <location filename="../../../admin/users/index.php" line="62"/>
         <source>Regular user</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="49"/>
+        <location filename="../../../admin/users/index.php" line="63"/>
         <source>System administrator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="74"/>
+        <location filename="../../../admin/users/index.php" line="88"/>
         <source>Change Access</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="76"/>
+        <location filename="../../../admin/users/index.php" line="90"/>
         <source>Rename User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="75"/>
+        <location filename="../../../admin/users/index.php" line="89"/>
         <source>Change Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="77"/>
+        <location filename="../../../admin/users/index.php" line="41"/>
+        <source>Disabled</source>
+        <comment>filter</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.php" line="61"/>
+        <source>Disabled</source>
+        <comment>user</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.php" line="91"/>
         <source>User Preferences</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2113,7 +2213,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="7"/>
+        <location filename="../../../client/alerts/index.html.php" line="3"/>
         <source>Edit alert settings for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2202,37 +2302,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="134"/>
+        <location filename="../../../client/issuedetails.inc.php" line="137"/>
         <source>Edit Attributes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="135"/>
+        <location filename="../../../client/issuedetails.inc.php" line="138"/>
         <source>Add Comment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="136"/>
+        <location filename="../../../client/issuedetails.inc.php" line="139"/>
         <source>Add Attachment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="138"/>
-        <source>Move Issue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.inc.php" line="139"/>
-        <source>Delete Issue</source>
+        <location filename="../../../client/issuedetails.inc.php" line="140"/>
+        <source>Clone Issue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="142"/>
+        <source>Move Issue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="143"/>
+        <source>Delete Issue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="146"/>
         <source>Mark As Unread</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="144"/>
+        <location filename="../../../client/issuedetails.inc.php" line="148"/>
         <source>Mark As Read</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2390,63 +2495,58 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="169"/>
-        <source>Rename Folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../client/issueslist.inc.php" line="170"/>
-        <source>Move Folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../client/issueslist.inc.php" line="171"/>
-        <source>Delete Folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../client/issueslist.inc.php" line="167"/>
+        <location filename="../../../client/issueslist.inc.php" line="183"/>
         <source>Add Issue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="173"/>
+        <location filename="../../../client/issueslist.inc.php" line="184"/>
         <source>Mark All As Read</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="174"/>
+        <location filename="../../../client/issueslist.inc.php" line="185"/>
         <source>Mark All As Unread</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="183"/>
+        <location filename="../../../client/issueslist.inc.php" line="187"/>
         <source>Manage Alerts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="179"/>
+        <location filename="../../../client/issueslist.inc.php" line="192"/>
         <source>Add View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="181"/>
+        <location filename="../../../client/issueslist.inc.php" line="194"/>
         <source>Modify View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="182"/>
+        <location filename="../../../client/issueslist.inc.php" line="196"/>
+        <source>Clone View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.inc.php" line="186"/>
         <source>Manage Views</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="16"/>
+        <location filename="../../../client/issueslist.html.php" line="11"/>
         <source>Select view:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="17"/>
+        <location filename="../../../client/issueslist.html.php" line="12"/>
         <source>Go</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.html.php" line="20"/>
+        <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2499,6 +2599,34 @@
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="13"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Client_Issues_CloneIssue</name>
+    <message>
+        <location filename="../../../client/issues/cloneissue.php" line="37"/>
+        <source>Clone Issue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/cloneissue.html.php" line="3"/>
+        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; to a folder of the same type.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/cloneissue.html.php" line="7"/>
+        <source>Folder:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/cloneissue.html.php" line="10"/>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/cloneissue.html.php" line="11"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2661,7 +2789,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="66"/>
+        <location filename="../../../client/issues/issue.inc.php" line="74"/>
+        <source>Clone Issue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.inc.php" line="83"/>
         <source>Add Issue</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2672,46 +2805,51 @@
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="10"/>
-        <source>Create a new issue in folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in folder &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="12"/>
+        <source>Create a new issue in folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="14"/>
         <source>Edit attributes of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="19"/>
+        <location filename="../../../client/issues/issue.html.php" line="21"/>
         <source>Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="23"/>
+        <location filename="../../../client/issues/issue.html.php" line="25"/>
         <source>Attributes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="27"/>
+        <location filename="../../../client/issues/issue.html.php" line="29"/>
         <source>%1:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="41"/>
+        <location filename="../../../client/issues/issue.html.php" line="43"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="42"/>
+        <location filename="../../../client/issues/issue.html.php" line="44"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="47"/>
+        <location filename="../../../client/issues/issue.html.php" line="49"/>
         <source>There are no available project members to assign to the issue.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="50"/>
+        <location filename="../../../client/issues/issue.html.php" line="52"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2778,35 +2916,7 @@
     </message>
 </context>
 <context>
-    <name>Client_Project</name>
-    <message>
-        <location filename="../../../client/project.inc.php" line="43"/>
-        <source>Rename Project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../client/project.inc.php" line="44"/>
-        <source>Delete Project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../client/project.inc.php" line="45"/>
-        <source>Project Members</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../client/project.inc.php" line="42"/>
-        <source>Add Folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Client_ProjectsTree</name>
-    <message>
-        <location filename="../../../client/projectstree.inc.php" line="78"/>
-        <source>Add Project</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="7"/>
         <source>Projects</source>
@@ -2823,8 +2933,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/projectstree.html.php" line="51"/>
+        <location filename="../../../client/projectstree.html.php" line="53"/>
         <source>There are no projects.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projectstree.inc.php" line="87"/>
+        <source>Manage Projects</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2960,7 +3075,7 @@
 <context>
     <name>Client_Projects_AddProject</name>
     <message>
-        <location filename="../../../client/projects/addproject.php" line="40"/>
+        <location filename="../../../client/projects/addproject.php" line="42"/>
         <source>Add Project</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3037,6 +3152,74 @@
     </message>
 </context>
 <context>
+    <name>Client_Projects_Index</name>
+    <message>
+        <location filename="../../../client/projects/index.php" line="33"/>
+        <source>Manage Projects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="81"/>
+        <source>Add Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="82"/>
+        <source>Add Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="84"/>
+        <source>Rename Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="85"/>
+        <source>Delete Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="87"/>
+        <source>Rename Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="88"/>
+        <source>Move Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="89"/>
+        <source>Delete Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="90"/>
+        <source>Project Members</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.html.php" line="13"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.html.php" line="14"/>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.html.php" line="46"/>
+        <source>There are no projects that you can manage.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.html.php" line="51"/>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Client_Projects_Members</name>
     <message>
         <location filename="../../../client/projects/members.php" line="37"/>
@@ -3044,12 +3227,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.php" line="86"/>
+        <location filename="../../../client/projects/members.php" line="87"/>
         <source>Add Members</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.html.php" line="7"/>
+        <location filename="../../../client/projects/members.html.php" line="3"/>
         <source>Members of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3069,22 +3252,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.php" line="59"/>
+        <location filename="../../../client/projects/members.php" line="60"/>
         <source>Regular member</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.php" line="60"/>
+        <location filename="../../../client/projects/members.php" line="61"/>
         <source>Project administrator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.php" line="87"/>
+        <location filename="../../../client/projects/members.php" line="88"/>
         <source>Change Access</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.php" line="88"/>
+        <location filename="../../../client/projects/members.php" line="89"/>
         <source>Remove Member</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3171,7 +3354,7 @@
 <context>
     <name>Client_Projects_RenameProject</name>
     <message>
-        <location filename="../../../client/projects/renameproject.php" line="37"/>
+        <location filename="../../../client/projects/renameproject.php" line="40"/>
         <source>Rename Project</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3358,7 +3541,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../client/views/index.html.php" line="7"/>
+        <location filename="../../../client/views/index.html.php" line="3"/>
         <source>Edit personal view settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3413,6 +3596,59 @@
     <message>
         <location filename="../../../client/views/publish.html.php" line="14"/>
         <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Common_Breadcrumbs</name>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="96"/>
+        <source>General Information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="101"/>
+        <source>Event Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="106"/>
+        <source>User Accounts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="111"/>
+        <source>Issue Types</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="117"/>
+        <source>View Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="128"/>
+        <source>Project Members</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="140"/>
+        <source>Manage Views</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="146"/>
+        <source>Manage Alerts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="157"/>
+        <source>Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="162"/>
+        <source>Manage Projects</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3531,6 +3767,26 @@
     <message>
         <location filename="../../errors/setup.inc.php" line="48"/>
         <source>Current version of the database is not compatible with this version of WebIssues Server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../errors/setup.inc.php" line="52"/>
+        <source>Database Not Updated</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../errors/setup.inc.php" line="53"/>
+        <source>The database of this WebIssues Server has not been updated yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../errors/setup.inc.php" line="54"/>
+        <source>Go to the %1 page to update the database.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../errors/setup.inc.php" line="55"/>
+        <source>Server Update</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3688,28 +3944,67 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/locale.html.php" line="7"/>
+        <location filename="../../tools/locale.html.php" line="12"/>
+        <source>Formats</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../tools/locale.html.php" line="14"/>
+        <source>Customize the format of numbers, date and time. Default formats depend on the selected language.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../tools/locale.html.php" line="16"/>
         <source>Number format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/locale.html.php" line="8"/>
+        <location filename="../../tools/locale.html.php" line="17"/>
         <source>Date format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/locale.html.php" line="9"/>
+        <location filename="../../tools/locale.html.php" line="18"/>
         <source>Time format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/locale.html.php" line="10"/>
+        <location filename="../../tools/locale.html.php" line="19"/>
         <source>First day of week:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/locale.html.php" line="11"/>
+        <location filename="../../tools/locale.html.php" line="7"/>
         <source>Time zone:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Common_Tools_PageSize</name>
+    <message>
+        <location filename="../../tools/pagesize.inc.php" line="44"/>
+        <location filename="../../tools/pagesize.inc.php" line="50"/>
+        <source>Default (%1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../tools/pagesize.html.php" line="4"/>
+        <source>Page Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../tools/pagesize.html.php" line="6"/>
+        <source>The maximum number of issues and items in history which are displayed on a single page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../tools/pagesize.html.php" line="8"/>
+        <source>List of issues:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../tools/pagesize.html.php" line="9"/>
+        <source>Issue history:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3774,69 +4069,69 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="13"/>
+        <location filename="../../tools/preferences.html.php" line="15"/>
         <source>Notifications</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="15"/>
+        <location filename="../../tools/preferences.html.php" line="17"/>
         <source>Email address:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="18"/>
+        <location filename="../../tools/preferences.html.php" line="20"/>
         <source>This address will only be visible to the system administrator. You will not receive notifications if you leave this field empty.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="20"/>
+        <location filename="../../tools/preferences.html.php" line="22"/>
         <source>Alert Notifications</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="22"/>
+        <location filename="../../tools/preferences.html.php" line="24"/>
         <source>Do not include issues that I have already read</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="24"/>
+        <location filename="../../tools/preferences.html.php" line="26"/>
         <source>Summary Schedule</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="27"/>
-        <location filename="../../tools/preferences.html.php" line="50"/>
-        <source>Select All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="29"/>
         <location filename="../../tools/preferences.html.php" line="52"/>
-        <source>Unselect All</source>
+        <source>Select All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="31"/>
+        <location filename="../../tools/preferences.html.php" line="54"/>
+        <source>Unselect All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../tools/preferences.html.php" line="33"/>
         <source>Send on the following days:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="55"/>
+        <location filename="../../tools/preferences.html.php" line="57"/>
         <source>Send at the following hours:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="66"/>
+        <location filename="../../tools/preferences.html.php" line="68"/>
         <source>You will not receive summary emails if you do not select any day and hour.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="72"/>
+        <location filename="../../tools/preferences.html.php" line="74"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="73"/>
+        <location filename="../../tools/preferences.html.php" line="75"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3898,59 +4193,65 @@
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="321"/>
-        <location filename="../../views/helper.inc.php" line="327"/>
+        <location filename="../../views/helper.inc.php" line="328"/>
         <source>Modify View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="322"/>
-        <location filename="../../views/helper.inc.php" line="328"/>
-        <source>Rename View</source>
+        <location filename="../../views/helper.inc.php" line="329"/>
+        <source>Clone View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="323"/>
-        <location filename="../../views/helper.inc.php" line="329"/>
-        <source>Delete View</source>
+        <location filename="../../views/helper.inc.php" line="330"/>
+        <source>Rename View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="324"/>
+        <location filename="../../views/helper.inc.php" line="331"/>
+        <source>Delete View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../views/helper.inc.php" line="325"/>
         <source>Unpublish View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="326"/>
+        <location filename="../../views/helper.inc.php" line="327"/>
         <source>Add Personal View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="332"/>
+        <location filename="../../views/helper.inc.php" line="334"/>
         <source>Publish View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="338"/>
+        <location filename="../../views/helper.inc.php" line="340"/>
         <source>Public View Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="405"/>
+        <location filename="../../views/helper.inc.php" line="407"/>
         <source>ascending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="405"/>
+        <location filename="../../views/helper.inc.php" line="407"/>
         <source>descending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="418"/>
+        <location filename="../../views/helper.inc.php" line="420"/>
         <source>empty</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="424"/>
+        <location filename="../../views/helper.inc.php" line="426"/>
         <source>AND</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3986,87 +4287,93 @@
 <context>
     <name>Common_Views_View</name>
     <message>
-        <location filename="../../views/view.inc.php" line="53"/>
+        <location filename="../../views/view.inc.php" line="56"/>
         <source>Modify Personal View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="55"/>
+        <location filename="../../views/view.inc.php" line="59"/>
+        <location filename="../../views/view.inc.php" line="76"/>
+        <source>Clone View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../views/view.inc.php" line="62"/>
         <source>Add Personal View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="63"/>
+        <location filename="../../views/view.inc.php" line="70"/>
         <source>Default View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="66"/>
+        <location filename="../../views/view.inc.php" line="73"/>
         <source>Modify Public View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="68"/>
+        <location filename="../../views/view.inc.php" line="79"/>
         <source>Add Public View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="280"/>
+        <location filename="../../views/view.inc.php" line="291"/>
         <source>Ascending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="280"/>
+        <location filename="../../views/view.inc.php" line="291"/>
         <source>Descending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="318"/>
+        <location filename="../../views/view.inc.php" line="329"/>
         <source>is equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="319"/>
+        <location filename="../../views/view.inc.php" line="330"/>
         <source>is not equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="326"/>
+        <location filename="../../views/view.inc.php" line="337"/>
         <source>begins with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="327"/>
+        <location filename="../../views/view.inc.php" line="338"/>
         <source>contains</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="328"/>
+        <location filename="../../views/view.inc.php" line="339"/>
         <source>ends with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="329"/>
+        <location filename="../../views/view.inc.php" line="340"/>
         <source>in list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="334"/>
+        <location filename="../../views/view.inc.php" line="345"/>
         <source>is less than</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="335"/>
+        <location filename="../../views/view.inc.php" line="346"/>
         <source>is less than or equal to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="336"/>
+        <location filename="../../views/view.inc.php" line="347"/>
         <source>is greater than</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.inc.php" line="337"/>
+        <location filename="../../views/view.inc.php" line="348"/>
         <source>is greater than or equal to</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4082,92 +4389,102 @@
     </message>
     <message>
         <location filename="../../views/view.html.php" line="15"/>
-        <source>Modify the public view &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <source>Clone view &lt;strong&gt;%1&lt;/strong&gt; as a new public view.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="17"/>
+        <source>Modify the public view &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../views/view.html.php" line="19"/>
         <source>Create a new public view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="21"/>
+        <location filename="../../views/view.html.php" line="23"/>
+        <source>Clone view &lt;strong&gt;%1&lt;/strong&gt; as a new personal view.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../views/view.html.php" line="25"/>
         <source>Modify your personal view &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="23"/>
+        <location filename="../../views/view.html.php" line="27"/>
         <source>Create a new personal view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="32"/>
+        <location filename="../../views/view.html.php" line="36"/>
         <source>Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="36"/>
+        <location filename="../../views/view.html.php" line="40"/>
         <source>Columns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="40"/>
+        <location filename="../../views/view.html.php" line="44"/>
         <source>Selected columns:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="41"/>
+        <location filename="../../views/view.html.php" line="45"/>
         <source>Order</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="57"/>
+        <location filename="../../views/view.html.php" line="61"/>
         <source>Available columns:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="70"/>
-        <location filename="../../views/view.html.php" line="119"/>
+        <location filename="../../views/view.html.php" line="74"/>
+        <location filename="../../views/view.html.php" line="123"/>
         <source>Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="76"/>
+        <location filename="../../views/view.html.php" line="80"/>
         <source>Sort Order</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="78"/>
+        <location filename="../../views/view.html.php" line="82"/>
         <source>Column:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="79"/>
+        <location filename="../../views/view.html.php" line="83"/>
         <source>Order:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="87"/>
+        <location filename="../../views/view.html.php" line="91"/>
         <source>Filter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="92"/>
+        <location filename="../../views/view.html.php" line="96"/>
         <source>Active conditions:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="105"/>
+        <location filename="../../views/view.html.php" line="109"/>
         <source>Available conditions:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="127"/>
+        <location filename="../../views/view.html.php" line="131"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../views/view.html.php" line="128"/>
+        <location filename="../../views/view.html.php" line="132"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4252,7 +4569,7 @@
 <context>
     <name>System_Api_IssueManager</name>
     <message>
-        <location filename="../../../system/api/issuemanager.inc.php" line="680"/>
+        <location filename="../../../system/api/issuemanager.inc.php" line="683"/>
         <source>Deleted issue &quot;%1&quot; from folder &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4260,47 +4577,47 @@
 <context>
     <name>System_Api_ProjectManager</name>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="199"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="207"/>
         <source>Added project &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="237"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="245"/>
         <source>Renamed project &quot;%1&quot; to &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="278"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="286"/>
         <source>Deleted project &quot;%1&quot; with folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="281"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="289"/>
         <source>Deleted project &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="336"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="344"/>
         <source>Added folder &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="375"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="383"/>
         <source>Renamed folder &quot;%1&quot; to &quot;%2&quot; in project &quot;%3&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="415"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="423"/>
         <source>Deleted folder &quot;%1&quot; with issues from project &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="418"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="426"/>
         <source>Deleted folder &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="475"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="483"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4321,12 +4638,12 @@
 <context>
     <name>System_Api_SessionManager</name>
     <message>
-        <location filename="../../../system/api/sessionmanager.inc.php" line="145"/>
+        <location filename="../../../system/api/sessionmanager.inc.php" line="187"/>
         <source>Incorrect login attempt for user &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/sessionmanager.inc.php" line="161"/>
+        <location filename="../../../system/api/sessionmanager.inc.php" line="203"/>
         <source>Session opened for user &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4334,47 +4651,47 @@
 <context>
     <name>System_Api_TypeManager</name>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="272"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="294"/>
         <source>Added issue type &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="310"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="332"/>
         <source>Renamed issue type &quot;%1&quot; to &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="351"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="373"/>
         <source>Deleted issue type &quot;%1&quot; with folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="354"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="376"/>
         <source>Deleted issue type &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="408"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="430"/>
         <source>Added attribute &quot;%1&quot; to issue type &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="447"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="469"/>
         <source>Renamed attribute &quot;%1&quot; to &quot;%2&quot; of issue type &quot;%3&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="471"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="493"/>
         <source>Modified attribute &quot;%1&quot; of issue type &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="505"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="527"/>
         <source>Deleted attribute &quot;%1&quot; with values from issue type &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="508"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="530"/>
         <source>Deleted attribute &quot;%1&quot; from issue type &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4382,101 +4699,53 @@
 <context>
     <name>System_Api_UserManager</name>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="255"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="273"/>
         <source>Added user &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="285"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="303"/>
         <source>Changed password for user &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="327"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="348"/>
         <source>User &quot;%1&quot; changed own password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="365"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="386"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="397"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="418"/>
         <source>Disabled access for user &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="401"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="422"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="405"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="426"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="460"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="481"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="464"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="485"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="468"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="489"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>System_Web_Breadcrumbs</name>
-    <message>
-        <location filename="../../../system/web/breadcrumbs.inc.php" line="95"/>
-        <source>General Information</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/breadcrumbs.inc.php" line="100"/>
-        <source>Event Log</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/breadcrumbs.inc.php" line="105"/>
-        <source>User Accounts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/breadcrumbs.inc.php" line="110"/>
-        <source>Issue Types</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/breadcrumbs.inc.php" line="116"/>
-        <source>View Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/breadcrumbs.inc.php" line="127"/>
-        <source>Project Members</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/breadcrumbs.inc.php" line="139"/>
-        <source>Manage Views</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/breadcrumbs.inc.php" line="145"/>
-        <source>Manage Alerts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/breadcrumbs.inc.php" line="156"/>
-        <source>Tools</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
