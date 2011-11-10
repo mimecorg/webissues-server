@@ -563,6 +563,9 @@ class System_Api_ProjectManager extends System_Api_Base
     */
     public function getFoldersForProjects( $projects )
     {
+        if ( empty( $projects ) )
+            return array();
+
         $placeholders = array();
         $args = array();
 

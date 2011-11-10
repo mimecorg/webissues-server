@@ -212,6 +212,9 @@ class System_Api_TypeManager extends System_Api_Base
     */
     public function getAttributeTypesForIssueTypes( $types )
     {
+        if ( empty( $types ) )
+            return array();
+
         $placeholders = array();
         $args = array();
 
