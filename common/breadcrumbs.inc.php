@@ -130,25 +130,25 @@ class Common_Breadcrumbs extends System_Web_Base
 
             case self::Folder:
                 $this->append( self::Project, $object );
-                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q' ), array( 'folder' => $object[ 'folder_id' ] ) );
+                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ), array( 'folder' => $object[ 'folder_id' ] ) );
                 $this->names[] = $object[ 'folder_name' ];
                 break;
 
             case self::ManageViews:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/views/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'folder', 'vsort', 'vorder', 'vpage' ) );
+                $this->urls[] = $this->filterQueryString( '/client/views/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'folder', 'vsort', 'vorder', 'vpage' ) );
                 $this->names[] = $this->tr( 'Manage Views' );
                 break;
 
             case self::ManageAlerts:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/alerts/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'folder', 'asort', 'aorder', 'apage' ) );
+                $this->urls[] = $this->filterQueryString( '/client/alerts/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'folder', 'asort', 'aorder', 'apage' ) );
                 $this->names[] = $this->tr( 'Manage Alerts' );
                 break;
 
             case self::Issue:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'hpg', 'hflt', 'unread' ), array( 'issue' => $object[ 'issue_id' ] ) );
+                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'hpg', 'hflt', 'unread' ), array( 'issue' => $object[ 'issue_id' ] ) );
                 $this->names[] = $object[ 'issue_name' ];
                 break;
 

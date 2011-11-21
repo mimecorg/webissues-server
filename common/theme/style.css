@@ -478,3 +478,9 @@ ul.changes {
   vertical-align: -8px;
   margin-right: 5px;
 }
+
+.input-prompt {
+  position: absolute;
+  margin: 0.4em 0 0 0.3em;
+  color: #aaaaaa;
+}

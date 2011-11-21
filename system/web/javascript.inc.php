@@ -33,6 +33,7 @@ class System_Web_JavaScript extends System_Web_Base
         'cookie' => 'jquery.cookie.js',
         'datetimepicker' => 'datetimepicker.js',
         'expandcookie' => 'expandcookie.js',
+        'searchoptions' => 'searchoptions.js',
         'selection' => 'selection.js',
         'ui.autocomplete' => 'ui/jquery.ui.autocomplete.js',
         'ui.core' => 'ui/jquery.ui.core.js',
@@ -147,6 +148,25 @@ class System_Web_JavaScript extends System_Web_Base
                 buttonImage: " . $this->escape( $this->url( '/common/images/arrow-down-16.png' ) ) . ",
                 multiSelect: " . ( ( $flags & self::MultiSelect ) ? 'true' : 'false' ) . ",
                 source: " . $this->escapeArray( $items ) . " } );" );
+    }
+
+    /**
+    * Registers a search options control.
+    * @param $selector The jQuery selector of the control.
+    * @param $hiddenSelector The jQuery selector of the hidden field.
+    * @param $items Associative array of option items.
+    */
+    public function registerSearchOptions( $selector, $hiddenSelector, $items )
+    {
+        $this->registerScripts( array( 'bgiframe', 'ui.core', 'ui.widget', 'ui.position', 'ui.autocomplete', 'searchoptions' ) );
+        $this->registerCss( array( 'ui.autocomplete' ) );
+
+        $this->registerCode( "
+            $( '$selector' ).searchoptions( {
+                buttonText: " . $this->escape( $this->tr( 'Search Options' ) ) . ",
+                buttonImage: " . $this->escape( $this->url( '/common/images/find-options-16.png' ) ) . ",
+                hiddenField: " . $this->escape( $hiddenSelector ). ",
+                source: " . $this->escapeOptions( $items ) . " } );" );
     }
 
     /**
@@ -286,6 +306,14 @@ class System_Web_JavaScript extends System_Web_Base
         $escaped = array();
         foreach ( $values as $value )
             $escaped[] = $this->escape( $value );
+        return '[ ' . implode( ', ', $escaped ) . ' ]';
+    }
+
+    private function escapeOptions( $options )
+    {
+        $escaped = array();
+        foreach ( $options as $value => $label )
+            $escaped[] = '{ value: ' . $value . ', label: ' . $this->escape( $label ) . ' }';
         return '[ ' . implode( ', ', $escaped ) . ' ]';
     }
 

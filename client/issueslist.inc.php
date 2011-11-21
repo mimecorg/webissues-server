@@ -82,12 +82,14 @@ class Client_IssuesList extends System_Web_Component
         }
 
         $query = $this->request->getQueryString( 'q' );
+        $queryColumn = (int)$this->request->getQueryString( 'qc' );
 
         $this->searchForm = new System_Web_Form( 'search', $this );
         $this->searchForm->addField( 'searchBox', $query );
+        $this->searchForm->addField( 'searchOption', $queryColumn );
 
         if ( $this->searchForm->loadForm() ) {
-            $url = $this->mergeQueryString( '/client/index.php', array( 'q' => $this->searchBox ) );
+            $url = $this->mergeQueryString( '/client/index.php', array( 'q' => $this->searchBox, 'qc' => $this->searchOption ) );
             $this->response->redirect( $url );
         }
 
@@ -112,12 +114,17 @@ class Client_IssuesList extends System_Web_Component
             $queryGenerator->setViewDefinition( $definition );
 
         if ( $query != '' )
-            $queryGenerator->setSearchText( $query );
+            $queryGenerator->setSearchText( $queryColumn, $query );
 
         $this->columns = $queryGenerator->getColumnNames();
 
         $helper = new System_Web_ColumnHelper();
         $this->headers = $helper->getColumnHeaders() + $queryGenerator->getUserColumnHeaders();
+
+        foreach ( $queryGenerator->getSearchableColumns() as $column )
+            $searchOptions[ $column ] = $this->headers[ $column ];
+
+        $javaScript->registerSearchOptions( $this->searchForm->getFieldSelector( 'searchBox' ), $this->searchForm->getFieldSelector( 'searchOption' ), $searchOptions );
 
         $preferencesManager = new System_Api_PreferencesManager();
         $pageSize = $preferencesManager->getPreferenceOrSetting( 'folder_page_size' );
@@ -178,7 +185,7 @@ class Client_IssuesList extends System_Web_Component
         }
 
         $this->toolBar = new System_Web_ToolBar();
-        $this->toolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q' ) );
+        $this->toolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ) );
 
         $this->toolBar->addFixedCommand( '/client/issues/addissue.php', '/common/images/issue-new-16.png', $this->tr( 'Add Issue' ), array( 'folder' => $folderId ) );
         $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-read-16.png', $this->tr( 'Mark All As Read' ), array( 'folder' => $folderId, 'status' => 1 ) );
@@ -187,7 +194,7 @@ class Client_IssuesList extends System_Web_Component
         $this->toolBar->addFixedCommand( '/client/alerts/index.php', '/common/images/configure-alerts-16.png', $this->tr( 'Manage Alerts' ), array( 'folder' => $folderId ) );
 
         $this->viewToolBar = new System_Web_ToolBar();
-        $this->viewToolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q' ) );
+        $this->viewToolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ) );
 
         $this->viewToolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add View' ), array( 'folder' => $folderId, 'direct' => 1 ) );
         if ( $personalViewId != 0 )

@@ -75,6 +75,9 @@ class System_Api_QueryGenerator
         $type = $typeManager->getIssueTypeForFolder( $folder );
         $attributes = $typeManager->getAttributeTypesForIssueType( $type );
 
+        $viewManager = new System_Api_ViewManager();
+        $attributes = $viewManager->sortByAttributeOrder( $type, $attributes );
+
         foreach ( $attributes as $attribute )
             $this->attributes[ System_Api_Column::UserDefined + $attribute[ 'attr_id' ] ] = $attribute;
     }
@@ -119,11 +122,11 @@ class System_Api_QueryGenerator
     /**
     * Set the quick search text for the list.
     */
-    public function setSearchText( $text )
+    public function setSearchText( $column, $text )
     {
         $info = new System_Api_DefinitionInfo();
         $info->setType( 'CON' );
-        $info->setMetadata( 'column', System_Api_Column::Name );
+        $info->setMetadata( 'column', $column );
         $info->setMetadata( 'value', $text );
 
         $this->filters[] = $info;
@@ -245,7 +248,7 @@ class System_Api_QueryGenerator
                 break;
 
             default:
-                if ( $column > System_Api_Column::UserDefined ) {
+                if ( isset( $this->attributes[ $column ] ) ) {
                     $attribute = $this->attributes[ $column ];
                     $info = System_Api_DefinitionInfo::fromString( $attribute[ 'attr_def' ] );
 
@@ -318,8 +321,8 @@ class System_Api_QueryGenerator
     public function getUserColumnHeaders()
     {
         $headers = array();
-        foreach ( $this->attributes as $attribute )
-            $headers[ System_Api_Column::UserDefined + $attribute[ 'attr_id' ] ] = $attribute[ 'attr_name' ];
+        foreach ( $this->attributes as $column => $attribute )
+            $headers[ $column ] = $attribute[ 'attr_name' ];
         return $headers;
     }
 
@@ -329,6 +332,20 @@ class System_Api_QueryGenerator
     public function getAttributeForColumn( $column )
     {
         return $this->attributes[ $column ];
+    }
+
+    public function getSearchableColumns()
+    {
+        $columns = array( System_Api_Column::Name, System_Api_Column::CreatedBy, System_Api_Column::ModifiedBy );
+
+        foreach ( $this->attributes as $column => $attribute ) {
+            $info = System_Api_DefinitionInfo::fromString( $attribute[ 'attr_def' ] );
+            $type = $info->getType();
+            if ( $type == 'TEXT' || $type == 'ENUM' || $type == 'USER' )
+                $columns[] = $column;
+        }
+
+        return $columns;
     }
 
     private function generateSelect( $flags = 0 )
@@ -361,7 +378,7 @@ class System_Api_QueryGenerator
             case System_Api_Column::ModifiedBy:
                 return 'um.user_name AS modified_by';
             default:
-                if ( $column > System_Api_Column::UserDefined ) {
+                if ( isset( $this->attributes[ $column ] ) ) {
                     $attrId = $column - System_Api_Column::UserDefined;
                     return "a$attrId.attr_value AS v$attrId";
                 }
@@ -404,7 +421,7 @@ class System_Api_QueryGenerator
                     $this->addJoin( $joins, 'JOIN {users} AS um ON um.user_id = sm.user_id' );
                     break;
                 default:
-                    if ( $column > System_Api_Column::UserDefined ) {
+                    if ( isset( $this->attributes[ $column ] ) ) {
                         $attrId = $column - System_Api_Column::UserDefined;
                         $this->addJoin( $joins, "LEFT OUTER JOIN {attr_values} AS a$attrId ON a$attrId.issue_id = i.issue_id AND a$attrId.attr_id = %d", $attrId );
                     }
@@ -477,7 +494,7 @@ class System_Api_QueryGenerator
                 return $this->makeDateCondition( $expression, $type, $lower, $upper, '%d' );
 
             default:
-                if ( $column > System_Api_Column::UserDefined ) {
+                if ( isset( $this->attributes[ $column ] ) ) {
                     $attribute = $this->attributes[ $column ];
                     $info = System_Api_DefinitionInfo::fromString( $attribute[ 'attr_def' ] );
 

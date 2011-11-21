@@ -8,7 +8,7 @@
 
 <div style="float: left">
 <?php $viewForm->renderFormOpen( null, array( 'class' => 'form-inline' ) ) ?>
-<?php $viewForm->renderSelect( $this->tr( 'Select view:' ), 'viewSelect', $viewOptions, array( 'style' => 'width: 15em;' ) ) ?>
+<?php $viewForm->renderSelect( $this->tr( 'View:' ), 'viewSelect', $viewOptions, array( 'style' => 'width: 15em;' ) ) ?>
 <?php $viewForm->renderSubmit( $this->tr( 'Go' ), 'go' ) ?>
 &nbsp; <?php $viewToolBar->render() ?>
 <?php $viewForm->renderFormClose() ?>
@@ -17,6 +17,7 @@
 <div style="float: right">
 <?php $searchForm->renderFormOpen( null, array( 'class' => 'form-inline' ) ) ?>
 <?php $searchForm->renderText( null, 'searchBox', array( 'style' => 'width: 15em;' ) ) ?>
+<?php $searchForm->renderText( null, 'searchOption', array( 'type' => 'hidden' ) ) ?>
 <?php $searchForm->renderSubmit( $this->tr( 'Search' ), 'search' ) ?>
 <?php $searchForm->renderFormClose() ?>
 </div>

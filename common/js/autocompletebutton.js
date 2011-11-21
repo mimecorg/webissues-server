@@ -18,15 +18,15 @@
 **************************************************************************/
 
 ( function( $ ) {
-    $.widget( "ui.autocompletebutton", {
+    $.widget( 'ui.autocompletebutton', {
         options: {
             minLength: 0,
             multiSelect: false
         },
         _create: function() {
             var self = this;
-            self.element.bind( "keydown", function( event ) {
-                if ( event.keyCode === $.ui.keyCode.TAB && $( this ).data( "autocomplete" ).menu.active )
+            self.element.bind( 'keydown', function( event ) {
+                if ( event.keyCode === $.ui.keyCode.TAB && $( this ).data( 'autocomplete' ).menu.active )
                     event.preventDefault();
             } );
             self.element.autocomplete( {
@@ -35,7 +35,7 @@
                     var term = request.term;
                     if ( self.options.multiSelect )
                         term = term.split( /,\s*/ ).pop();
-                    var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( term ), "i" );
+                    var matcher = new RegExp( '^' + $.ui.autocomplete.escapeRegex( term ), 'i' );
                     response( $.grep( self.options.source, function( value ) {
                         return matcher.test( value.label || value.value || value );
                     } ) );
@@ -47,7 +47,7 @@
                         var parts = this.value.split( /,\s*/ );
                         parts.pop();
                         parts.push( ui.item.value );
-                        this.value = parts.join( ", " );
+                        this.value = parts.join( ', ' );
                     }
                     return false;
                 },
@@ -57,19 +57,19 @@
                     var parts = this.value.split( /,\s*/ );
                     parts.pop();
                     parts.push( ui.item.value );
-                    this.value = parts.join( ", " );
+                    this.value = parts.join( ', ' );
                     return false;
                 }
             } );
             var url = self.options.buttonImage;
             var text = self.options.buttonText;
-            button = $( '<img src="' + url + '" alt="' + text + '" title="' + text + '" class="ui-autocomplete-trigger" />' );
+            var button = $( '<img src="' + url + '" alt="' + text + '" title="' + text + '" class="ui-autocomplete-trigger" />' );
             self.element.after( button );
             button.click( function() {
-                if ( self.element.autocomplete( "widget" ).is( ":visible" ) ) {
-                    self.element.autocomplete( "close" );
+                if ( self.element.autocomplete( 'widget' ).is( ':visible' ) ) {
+                    self.element.autocomplete( 'close' );
                 } else {
-                    self.element.autocomplete( "search", "" );
+                    self.element.autocomplete( 'search', '' );
                     self.element.focus();
                 }
                 return false;

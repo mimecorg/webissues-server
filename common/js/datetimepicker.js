@@ -28,7 +28,7 @@
         this._updateDatepickerOrig( inst );
         inst.dpDiv.find( '.ui-datepicker-current' ).removeClass( 'ui-priority-secondary' ).addClass( 'ui-priority-primary' );
     };
-    $.widget( "ui.datetimepicker", {
+    $.widget( 'ui.datetimepicker', {
         options: {
             withTime: false,
             zeroTime: ''
