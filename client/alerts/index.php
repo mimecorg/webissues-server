@@ -88,7 +88,8 @@ class Client_Alerts_Index extends System_Web_Component
         $this->toolBar->setSelection( $selectedId );
 
         $this->toolBar->addFixedCommand( '/client/alerts/add.php', '/common/images/user-new-16.png', $this->tr( 'Add Alert' ) );
-        $this->toolBar->addItemCommand( '/client/alerts/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify Alert' ) );
+        if ( $this->emailEngine )
+            $this->toolBar->addItemCommand( '/client/alerts/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify Alert' ) );
         $this->toolBar->addItemCommand( '/client/alerts/delete.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Alert' ) );
 
         $javaScript = new System_Web_JavaScript( $this->view );
