@@ -62,7 +62,12 @@ class System_Api_HistoryProvider
 
         $query = 'SELECT COUNT(*) FROM {changes} WHERE issue_id = %d';
 
-        if ( $itemType != null ) {
+        if ( $itemType == System_Const::CommentsAndFiles ) {
+            $this->arguments[] = System_Const::CommentAdded;
+            $this->arguments[] = System_Const::FileAdded;
+
+            $query .= ' AND ( change_type = %d OR change_type = %d )';
+        } else if ( $itemType != null ) {
             $this->arguments[] = $itemType;
 
             $query .= ' AND change_type = %d';
@@ -96,9 +101,9 @@ class System_Api_HistoryProvider
             . ' sm.stamp_time AS modified_date, um.user_id AS modified_user, um.user_name AS modified_by';
         if ( $itemType == null )
             $query .= ', ch.attr_id, ch.value_old, ch.value_new, a.attr_name, a.attr_def, ff.folder_name AS from_folder_name, tf.folder_name AS to_folder_name';
-        if ( $itemType == null || $itemType == System_Const::CommentAdded )
+        if ( $itemType == null || $itemType == System_Const::CommentAdded || $itemType == System_Const::CommentsAndFiles )
             $query .= ', c.comment_text';
-        if ( $itemType == null || $itemType == System_Const::FileAdded )
+        if ( $itemType == null || $itemType == System_Const::FileAdded || $itemType == System_Const::CommentsAndFiles )
             $query .= ', f.file_name, f.file_size, f.file_descr';
         $query .= ' FROM {changes} AS ch'
             . ' JOIN {stamps} AS sc ON sc.stamp_id = ch.change_id'
@@ -114,17 +119,19 @@ class System_Api_HistoryProvider
             if ( !$principal->isAdministrator() )
                 $query .= ' AND tf.project_id IN ( SELECT project_id FROM {rights} WHERE user_id = %4d )';
         }
-        if ( $itemType == null || $itemType == System_Const::CommentAdded ) {
-            if ( $itemType == null )
+        if ( $itemType == null || $itemType == System_Const::CommentAdded || $itemType == System_Const::CommentsAndFiles ) {
+            if ( $itemType == null || $itemType == System_Const::CommentsAndFiles )
                 $query .= ' LEFT OUTER';
             $query .= ' JOIN {comments} AS c ON c.comment_id = ch.change_id AND ch.change_type = %2d';
         }
-        if ( $itemType == null || $itemType == System_Const::FileAdded ) {
-            if ( $itemType == null )
+        if ( $itemType == null || $itemType == System_Const::FileAdded || $itemType == System_Const::CommentsAndFiles ) {
+            if ( $itemType == null || $itemType == System_Const::CommentsAndFiles )
                 $query .= ' LEFT OUTER';
             $query .= ' JOIN {files} AS f ON f.file_id = ch.change_id AND ch.change_type = %3d';
         }
         $query .= ' WHERE ch.issue_id = %1d';
+        if ( $itemType == System_Const::CommentsAndFiles )
+            $query .= ' AND ( ch.change_type = %2d OR ch.change_type = %3d )';
 
         return $query;
     }

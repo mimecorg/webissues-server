@@ -74,7 +74,8 @@ class Client_IssueDetails extends System_Web_Component
 
         $this->filters = array(
             System_Const::CommentAdded => $this->tr( 'Only Comments' ),
-            System_Const::FileAdded => $this->tr( 'Only Attachments' ) );
+            System_Const::FileAdded => $this->tr( 'Only Attachments' ),
+            System_Const::CommentsAndFiles => $this->tr( 'Comments & Attachments' ) );
 
         $this->historyFilter = $this->request->getQueryString( 'hflt' );
         if ( ( $this->historyFilter !== null ) && !isset( $this->filters[ $this->historyFilter ] ) )
@@ -91,8 +92,6 @@ class Client_IssueDetails extends System_Web_Component
 
         $query = $historyProvider->generateCountQuery( $this->historyFilter );
         $rowCount = $connection->queryScalarArgs( $query, $historyProvider->getQueryArguments() );
-        if ( $this->historyFilter === null )
-            $rowCount++;
         $this->pager->setRowsCount( $rowCount );
 
         if ( $rowCount > 0 ) {

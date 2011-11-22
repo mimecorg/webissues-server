@@ -213,8 +213,10 @@
 <?php
     if ( $historyFilter == System_Const::CommentAdded ):
         echo $this->tr( 'There are no comments.' );
-    else:
+    elseif ( $historyFilter == System_Const::FileAdded ):
         echo $this->tr( 'There are no attachments.' );
+    else:
+        echo $this->tr( 'There are no comments or attachments.' );
     endif
 ?>
 </p>

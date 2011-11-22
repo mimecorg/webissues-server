@@ -77,6 +77,9 @@ class System_Const
     const IssueMoved = 5;
     /*@}*/
 
+    /** Special value used for filtering issue history. */
+    const CommentsAndFiles = 6;
+
     /**
     * Limits
     */
