@@ -33,9 +33,6 @@ class Client_Projects_MoveFolder extends System_Web_Component
         $folderId = (int)$this->request->getQueryString( 'folder' );
         $this->folder = $projectManager->getFolder( $folderId, System_Api_ProjectManager::RequireAdministrator );
 
-        $this->view->setDecoratorClass( 'Common_FixedBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'Move Folder' ) );
-
         $breadcrumbs = new Common_Breadcrumbs( $this );
         $breadcrumbs->initialize( Common_Breadcrumbs::ManageProjects );
 
@@ -45,11 +42,21 @@ class Client_Projects_MoveFolder extends System_Web_Component
         $projects = $projectManager->getProjects();
 
         $this->projects = array();
+        $this->canMove = false;
 
         foreach ( $projects as $project ) {
-            if ( $project[ 'project_access' ] == System_Const::AdministratorAccess )
+            if ( $project[ 'project_access' ] == System_Const::AdministratorAccess ) {
                 $this->projects[ $project[ 'project_id' ] ] = $project[ 'project_name' ];
+                if ( $project[ 'project_id' ] != $this->folder[ 'project_id' ] )
+                    $this->canMove = true;
+            }
         }
+
+        if ( $this->canMove )
+            $this->view->setDecoratorClass( 'Common_FixedBlock' );
+        else
+            $this->view->setDecoratorClass( 'Common_MessageBlock' );
+        $this->view->setSlot( 'page_title', $this->tr( 'Move Folder' ) );
 
         $this->form->addItemsRule( 'project', $this->projects );
 
@@ -60,9 +67,15 @@ class Client_Projects_MoveFolder extends System_Web_Component
             $this->form->validate();
 
             if ( $this->form->isSubmittedWith( 'ok' ) && !$this->form->hasErrors() ) {
-                $this->submit();
-                if ( !$this->form->hasErrors() )
+                if ( $this->canMove )
+                    $this->submit();
+                if ( !$this->form->hasErrors() ) {
+                    if ( $this->canMove ) {
+                        $grid = new System_Web_Grid();
+                        $grid->addExpandCookieId( 'wi_projects', $this->project );
+                    }
                     $this->response->redirect( $breadcrumbs->getParentUrl() );
+                }
             }
         }
     }

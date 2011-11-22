@@ -33,9 +33,6 @@ class Client_Issues_MoveIssue extends System_Web_Component
         $issueId = (int)$this->request->getQueryString( 'issue' );
         $this->issue = $issueManager->getIssue( $issueId, System_Api_IssueManager::RequireAdministrator );
 
-        $this->view->setDecoratorClass( 'Common_FixedBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'Move Issue' ) );
-
         $breadcrumbs = new Common_Breadcrumbs( $this );
         $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
 
@@ -47,16 +44,26 @@ class Client_Issues_MoveIssue extends System_Web_Component
         $folders = $projectManager->getFolders( System_Api_IssueManager::RequireAdministrator );
 
         $this->folders = array();
+        $this->canMove = false;
 
         foreach ( $projects as $project ) {
             $list = array();
             foreach ( $folders as $folder ) {
-                if ( $folder[ 'project_id' ] == $project[ 'project_id' ] && $folder[ 'type_id' ] == $this->issue[ 'type_id' ] )
+                if ( $folder[ 'project_id' ] == $project[ 'project_id' ] && $folder[ 'type_id' ] == $this->issue[ 'type_id' ] ) {
                     $list[ $folder[ 'folder_id' ] ] = $folder[ 'folder_name' ];
+                    if ( $folder[ 'folder_id' ] != $this->issue[ 'folder_id' ] )
+                        $this->canMove = true;
+                }
             }
             if ( !empty( $list ) )
                 $this->folders[ $project[ 'project_name' ] ] = $list;
         }
+
+        if ( $this->canMove )
+            $this->view->setDecoratorClass( 'Common_FixedBlock' );
+        else
+            $this->view->setDecoratorClass( 'Common_MessageBlock' );
+        $this->view->setSlot( 'page_title', $this->tr( 'Move Issue' ) );
 
         $this->form->addItemsRule( 'folder', $this->folders );
 
@@ -67,7 +74,8 @@ class Client_Issues_MoveIssue extends System_Web_Component
             $this->form->validate();
 
             if ( $this->form->isSubmittedWith( 'ok' ) && !$this->form->hasErrors() ) {
-                $this->submit();
+                if ( $this->canMove )
+                    $this->submit();
                 $this->response->redirect( $breadcrumbs->getParentUrl() );
             }
         }
