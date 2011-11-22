@@ -1,5 +1,15 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
+<?php if ( !empty( $members ) ): ?>
+
+<div style="float: right">
+<?php echo $this->link( '#', $this->tr( 'Select All' ), array( 'id' => 'user-select', 'style' => 'display: none' ) ) ?>
+|
+<?php echo $this->link( '#', $this->tr( 'Unselect All' ), array( 'id' => 'user-unselect', 'style' => 'display: none' ) ) ?>
+</div>
+
+<?php endif ?>
+
 <p><?php echo $this->tr( 'Add new members to project <strong>%1</strong>.', null, $project[ 'project_name' ] ) ?></p>
 
 <?php $form->renderFormOpen(); ?>
@@ -9,7 +19,7 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Users' ) ?></legend>
 
-<div class="form-checkgroup">
+<div id="user-choices" class="form-checkgroup">
 <?php foreach ( $members as $userId => $user ): ?>
 <div style="float: left; width: 25%">
 <?php $form->renderCheckBox( $user[ 'user_name' ], 'member' . $userId ) ?>

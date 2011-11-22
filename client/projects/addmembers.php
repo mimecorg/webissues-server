@@ -79,6 +79,10 @@ class Client_Projects_AddMembers extends System_Web_Component
                 $this->response->redirect( $breadcrumbs->getParentUrl() );
             }
         }
+
+        $javaScript = new System_Web_JavaScript( $this->view );
+        $javaScript->registerCheckOnOff( '#user-select', '#user-choices :checkbox', true );
+        $javaScript->registerCheckOnOff( '#user-unselect', '#user-choices :checkbox', false );
     }
 }
 
