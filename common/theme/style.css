@@ -306,6 +306,11 @@ table.info-list tr td {
   font-weight: bold;
 }
 
+.noitems {
+  color: #888888;
+  margin: 0.8em 0;
+}
+
 table.grid {
   width: 100%;
   margin: 0;

@@ -77,10 +77,12 @@ class Client_Projects_Index extends System_Web_Component
         $this->toolBar->setParameters( 'folder', 'project' );
         $this->toolBar->setSelection( $folderId, $projectId );
 
-        if ( System_Api_Principal::getCurrent()->isAdministrator() )
+        $this->isAdministrator = System_Api_Principal::getCurrent()->isAdministrator();
+
+        if ( $this->isAdministrator )
             $this->toolBar->addFixedCommand( '/client/projects/addproject.php', '/common/images/project-new-16.png', $this->tr( 'Add Project' ) );
         $this->toolBar->addItemCommand( '/client/projects/addfolder.php', '/common/images/folder-new-16.png', $this->tr( 'Add Folder' ) );
-        if ( System_Api_Principal::getCurrent()->isAdministrator() ) {
+        if ( $this->isAdministrator ) {
             $this->toolBar->addParentCommand( '/client/projects/renameproject.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Project' ) );
             $this->toolBar->addParentCommand( '/client/projects/deleteproject.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Project' ) );
         }

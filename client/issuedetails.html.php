@@ -209,7 +209,7 @@
     else:
 ?>
 
-<p>
+<p class="noitems">
 <?php
     if ( $historyFilter == System_Const::CommentAdded ):
         echo $this->tr( 'There are no comments.' );

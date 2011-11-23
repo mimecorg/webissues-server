@@ -8,6 +8,8 @@
 <?php $toolBar->render() ?>
 </div>
 
+<?php if ( !empty( $alerts ) ): ?>
+
 <table class="grid">
 <tr>
 <?php $grid->renderHeader( $this->tr( 'Name' ), 'name' ) ?>
@@ -49,7 +51,11 @@
 
 <?php $grid->renderPager() ?>
 
-</fieldset>
+<?php else: ?>
+
+<p class="noitems"><?php echo $this->tr( 'This folder has no alerts.' ) ?></p>
+
+<?php endif ?>
 
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'OK' ), 'ok' ) ?>

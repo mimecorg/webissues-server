@@ -41,9 +41,13 @@
 
 <?php $grid->renderPager() ?>
 
+<?php elseif ( $isAdministrator ): ?>
+
+<p class="noitems"><?php echo $this->tr( 'There are no projects.' ) ?></p>
+
 <?php else: ?>
 
-<p><?php echo $this->tr( 'There are no projects that you can manage.' ) ?></p>
+<p class="noitems"><?php echo $this->tr( 'There are no projects that you can manage.' ) ?></p>
 
 <?php endif ?>
 

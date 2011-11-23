@@ -5,6 +5,8 @@
 <?php $filterBar->renderFilters( $eventTypes ) ?>
 <?php $this->endSlot() ?>
 
+<?php if ( !empty( $events ) ): ?>
+
 <table class="grid">
 <tr>
 <?php $grid->renderHeader( $this->tr( 'Type' ) ) ?>
@@ -25,3 +27,9 @@
 </table>
 
 <?php $grid->renderPager() ?>
+
+<?php else: ?>
+
+<p class="noitems"><?php echo $this->tr( 'There are no events of the selected type.' ) ?></p>
+
+<?php endif ?>

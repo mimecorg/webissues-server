@@ -24,6 +24,8 @@
 
 <div style="clear: both"></div>
 
+<?php if ( !empty( $issues ) ): ?>
+
 <table class="grid">
 <tr>
 <?php
@@ -61,3 +63,17 @@
 </table>
 
 <?php $grid->renderPager() ?>
+
+<?php elseif ( !empty( $searchBox ) ): ?>
+
+<p class="noitems"><?php echo $this->tr( 'There are no issues matching the search criteria.' ) ?></p>
+
+<?php elseif ( !empty( $viewSelect ) ): ?>
+
+<p class="noitems"><?php echo $this->tr( 'There are no issues matching the selected view.' ) ?></p>
+
+<?php else: ?>
+
+<p class="noitems"><?php echo $this->tr( 'There are no issues in this folder.' ) ?></p>
+
+<?php endif ?>

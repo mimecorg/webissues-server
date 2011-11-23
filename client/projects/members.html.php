@@ -8,6 +8,8 @@
 <?php $toolBar->render() ?>
 </div>
 
+<?php if ( !empty( $members ) ): ?>
+
 <table class="grid">
 <tr>
 <?php $grid->renderHeader( $this->tr( 'Name' ), 'name' ) ?>
@@ -34,6 +36,12 @@
 </table>
 
 <?php $grid->renderPager() ?>
+
+<?php else: ?>
+
+<p class="noitems"><?php echo $this->tr( 'This project has no members.' ) ?></p>
+
+<?php endif ?>
 
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'OK' ), 'ok' ) ?>

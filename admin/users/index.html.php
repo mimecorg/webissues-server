@@ -9,6 +9,8 @@
 <?php $toolBar->render() ?>
 </div>
 
+<?php if ( !empty( $users ) ): ?>
+
 <table class="grid">
 <tr>
 <?php $grid->renderHeader( $this->tr( 'Name' ), 'name' ) ?>
@@ -40,3 +42,9 @@
 </table>
 
 <?php $grid->renderPager() ?>
+
+<?php else: ?>
+
+<p class="noitems"><?php echo $this->tr( 'There are no disabled users.' ) ?></p>
+
+<?php endif ?>

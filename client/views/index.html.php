@@ -8,6 +8,8 @@
 
 <?php $form->renderFormOpen(); ?>
 
+<?php if ( !empty( $views ) ): ?>
+
 <table class="grid">
 <tr>
 <?php $grid->renderHeader( $this->tr( 'Name' ), 'name' ) ?>
@@ -31,6 +33,12 @@
 </table>
 
 <?php $grid->renderPager() ?>
+
+<?php else: ?>
+
+<p class="noitems"><?php echo $this->tr( 'This type has no personal views.' ) ?></p>
+
+<?php endif ?>
 
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'OK' ), 'ok' ) ?>
