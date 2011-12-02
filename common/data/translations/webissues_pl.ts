@@ -2364,12 +2364,12 @@
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="145"/>
         <source>Mark As Unread</source>
-        <translation>Oznacz jako nieprzeczytane</translation>
+        <translation>Oznacz jako nieprzeczytaną</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="147"/>
         <source>Mark As Read</source>
-        <translation>Oznacz jako przeczytane</translation>
+        <translation>Oznacz jako przeczytaną</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="15"/>
