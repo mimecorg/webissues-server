@@ -1,3 +1,11 @@
+1.0-beta4 (2011-12-05)
+    * fixed crash when opening web client with no projects (bug #683)
+    * hide the Modify Alert command if emails are disabled
+    * added Comments & Attachments mode in issue history
+    * added quick search by any column
+    * show messages when lists are empty
+    * checking latest version
+
 1.0-beta3 (2011-11-02)
     * cloning issues and views
     * configure page size and history size
