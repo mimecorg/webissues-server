@@ -36,9 +36,10 @@ class System_Api_LinkLocator
     /**
     * Convert text with links to HTML.
     * @param $text The plain text to convert.
+    * @param $maxLength Optional maximum length of the text.
     * @return The HTML version of the text.
     */
-    public static function convertToHtml( $text )
+    public static function convertToHtml( $text, $maxLength = null )
     {
         $mail = "\\b\\w[^\\s@]*@[^\\s@]*\\w";
         $url = "\\b(?:mailto:|https?://|ftp://|www\\.|ftp\\.)\\S*[\\w/]";
@@ -50,6 +51,16 @@ class System_Api_LinkLocator
         for ( $i = 0; $i < count( $matches ); $i++ ) {
             $match = htmlspecialchars( $matches[ $i ] );
             if ( $i % 2 == 0 ) {
+                if ( $maxLength !== null ) {
+                    $length = mb_strlen( $match );
+                    if ( $length > $maxLength - 3 ) {
+                        if ( $maxLength > 3 )
+                            $result[] = mb_substr( $match, 0, $maxLength - 3 );
+                        $result[] = '...';
+                        break;
+                    }
+                    $maxLength -= $length;
+                }
                 $result[] = $match;
             } else {
                 if ( $match[ 0 ] == '#' )
@@ -62,6 +73,17 @@ class System_Api_LinkLocator
                     $url = 'mailto:' . $match;
                 else
                     $url = $match;
+                if ( $maxLength !== null ) {
+                    $length = mb_strlen( $match );
+                    if ( $length > $maxLength - 3 ) {
+                        if ( $maxLength > 3 )
+                            $result[] = "<a href=\"$url\">" . mb_substr( $match, 0, $maxLength - 3 ) . '...</a>';
+                        else
+                            $result[] = '...';
+                        break;
+                    }
+                    $maxLength -= $length;
+                }
                 $result[] = "<a href=\"$url\">$match</a>";
             }
         }
@@ -91,7 +113,7 @@ class System_Api_LinkLocator
     {
         if ( mb_strlen( $text ) > $maxLength ) {
             $toolTip = htmlspecialchars( $text );
-            $truncated = self::convertToHtml( mb_substr( $text, 0, $maxLength - 3 ) . '...' );
+            $truncated = self::convertToHtml( $text, $maxLength );
             return new System_Web_RawValue( "<span title=\"$toolTip\">$truncated</span>" );
         }
 
