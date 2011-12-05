@@ -121,7 +121,7 @@ class Common_Mail_Notification extends System_Web_Component
                 else if ( $column == System_Api_Column::Name )
                     $issue[ $name ] = $this->truncate( $value, 60 );
                 else
-                    $issue[ $name ] = System_Api_LinkLocator::convertAndTruncate( $value, 60 );
+                    $issue[ $name ] = System_Web_LinkLocator::convertAndTruncate( $value, 60 );
             }
             $this->issues[ $row[ 'issue_id' ] ] = $issue;
         }

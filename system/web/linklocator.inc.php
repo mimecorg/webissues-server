@@ -31,7 +31,7 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 *
 * Also the special HTML characters are converted to entities.
 */
-class System_Api_LinkLocator
+class System_Web_LinkLocator
 {
     /**
     * Convert text with links to HTML.

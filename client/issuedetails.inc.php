@@ -56,7 +56,7 @@ class Client_IssueDetails extends System_Web_Component
 
         foreach ( $this->attributeValues as &$value ) {
             $formatted = $formatter->convertAttributeValue( $value[ 'attr_def' ], $value[ 'attr_value' ], System_Api_Formatter::MultiLine );
-            $value[ 'attr_value' ] = System_Api_LinkLocator::convertToRawHtml( $formatted );
+            $value[ 'attr_value' ] = System_Web_LinkLocator::convertToRawHtml( $formatted );
         }
 
         $typeManager = new System_Api_TypeManager();
@@ -110,9 +110,9 @@ class Client_IssueDetails extends System_Web_Component
                 $item[ 'created_date' ] = $formatter->formatDateTime( $item[ 'created_date' ], System_Api_Formatter::ToLocalTimeZone );
                 $item[ 'modified_date' ] = $formatter->formatDateTime( $item[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
                 if ( isset( $item[ 'comment_text' ] ) )
-                    $item[ 'comment_text' ] = System_Api_LinkLocator::convertToRawHtml( $item[ 'comment_text' ] );
+                    $item[ 'comment_text' ] = System_Web_LinkLocator::convertToRawHtml( $item[ 'comment_text' ] );
                 if ( isset( $item[ 'file_descr' ] ) )
-                    $item[ 'file_descr' ] = System_Api_LinkLocator::convertToRawHtml( $item[ 'file_descr' ] );
+                    $item[ 'file_descr' ] = System_Web_LinkLocator::convertToRawHtml( $item[ 'file_descr' ] );
                 if ( isset( $item[ 'file_size' ] ) )
                     $item[ 'file_size' ] = $localeHelper->formatFileSize( $item[ 'file_size' ] );
                 if ( isset( $item[ 'changes' ] ) ) {
@@ -123,8 +123,8 @@ class Client_IssueDetails extends System_Web_Component
                             $newValue = $formatter->convertAttributeValue( $change[ 'attr_def' ], $newValue );
                             $oldValue = $formatter->convertAttributeValue( $change[ 'attr_def' ], $oldValue );
                         }
-                        $change[ 'value_new' ] = System_Api_LinkLocator::convertToRawHtml( $newValue );
-                        $change[ 'value_old' ] = System_Api_LinkLocator::convertToRawHtml( $oldValue );
+                        $change[ 'value_new' ] = System_Web_LinkLocator::convertToRawHtml( $newValue );
+                        $change[ 'value_old' ] = System_Web_LinkLocator::convertToRawHtml( $oldValue );
                     }
                 }
                 $item[ 'can_edit' ] = $issue[ 'project_access' ] == System_Const::AdministratorAccess || $item[ 'created_user' ] == $principal->getUserId();
