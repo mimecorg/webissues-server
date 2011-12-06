@@ -36,8 +36,17 @@ class Common_Application extends System_Web_Application
                 && !$this->request->isRelativePathUnder( '/common/errors' ) ) {
             $principal = System_Api_Principal::getCurrent();
 
-            if ( !$principal->isAuthenticated() )
-                $this->response->redirect( '/index.php' );
+            if ( !$principal->isAuthenticated() ) {
+                $url = $this->request->getRelativePath();
+                $args = array();
+                foreach ( $this->request->getQueryStrings() as $key => $value ) {
+                    if ( isset( $value ) )
+                        $args[] = $key . '=' . $value;
+                }
+                if ( !empty( $args ) )
+                    $url .= '?' . join( '&', $args );
+                $this->response->redirect( '/index.php?url=' . urlencode( $url ) );
+            }
 
             if ( $this->request->isRelativePathUnder( '/admin' ) ) {
                 if ( !$principal->isAdministrator() )

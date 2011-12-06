@@ -56,8 +56,12 @@ class Index extends System_Web_Component
                 $this->form->validate();
 
                 if ( $this->form->isSubmittedWith( 'login' ) && !$this->form->hasErrors() ) {
-                    if ( $this->submit() )
-                        $this->response->redirect( '/client/index.php' );
+                    if ( $this->submit() ) {
+                        $url = $this->request->getQueryString( 'url' );
+                        if ( $url == null || $url[ 0 ] != '/' )
+                            $url = '/client/index.php';
+                        $this->response->redirect( $url );
+                    }
                 }
             }
         }
