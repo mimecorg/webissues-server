@@ -4,7 +4,7 @@
 
 <?php $form->renderFormOpen( null, array( 'enctype' => 'multipart/form-data' ) ); ?>
 
-<?php $form->renderFile( $this->tr( 'File:' ), 'file' ); ?>
+<?php $form->renderFile( $this->tr( 'File:' ), 'file', array( 'size' => 60 ) ); ?>
 
 <?php $form->renderText( $this->tr( 'Description:' ), 'description', array( 'size' => 80 ) ); ?>
 

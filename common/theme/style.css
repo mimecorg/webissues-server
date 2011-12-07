@@ -197,6 +197,10 @@ input, button, select, textarea {
   height: 1.5em;
 }
 
+.form-field input[type=file] {
+  height: 1.9em;
+}
+
 .form-field select {
   margin: 0.2em 0 0;
   height: 1.85em;
