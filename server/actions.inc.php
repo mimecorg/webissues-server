@@ -371,12 +371,14 @@ class Server_Actions
         }
     }
 
-    public function getDetails( $issueId, $sinceStamp )
+    public function getDetails( $issueId, $sinceStamp, $markAsRead )
     {
         $this->principal->checkAuthenticated();
 
         $issueManager = new System_Api_IssueManager();
         $issue = $issueManager->getIssue( $issueId );
+
+        $this->validator->checkBooleanValue( $markAsRead );
 
         if ( $issue[ 'stamp_id' ] > $sinceStamp ) {
             $this->addRow( 'issues', $issue );
@@ -390,8 +392,10 @@ class Server_Actions
 
             $this->addTable( 'change_stubs', $issueManager->getChangeStubs( $issue, $sinceStamp ) );
 
-            $stateManager = new System_Api_StateManager();
-            $stateManager->setIssueRead( $issue, $issue[ 'stamp_id' ] );
+            if ( $markAsRead ) {
+                $stateManager = new System_Api_StateManager();
+                $stateManager->setIssueRead( $issue, $issue[ 'stamp_id' ] );
+            }
         }
     }
 
