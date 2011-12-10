@@ -37,7 +37,7 @@ class System_Api_SessionManager extends System_Api_Base
     const RequireAdministrator = 1;
     /*@}*/
 
-    private static $existingId = null;
+    private static $currentSession = null;
     private static $user = null;
 
     /**
@@ -221,7 +221,7 @@ class System_Api_SessionManager extends System_Api_Base
     */
     public function readSession( $id, &$data )
     {
-        $query = 'SELECT s.session_data, s.last_access, u.user_id, u.user_name, u.user_access'
+        $query = 'SELECT s.session_id, s.session_data, s.last_access, u.user_id, u.user_name, u.user_access'
             . ' FROM {sessions} AS s'
             . ' JOIN {users} AS u ON u.user_id = s.user_id'
             . ' WHERE s.session_id = %s';
@@ -230,7 +230,7 @@ class System_Api_SessionManager extends System_Api_Base
         if ( !$session )
             return false;
 
-        self::$existingId = $id;
+        self::$currentSession = $session;
 
         $serverManager = new System_Api_ServerManager();
         $lifetime = $serverManager->getSetting( 'session_max_lifetime' );
@@ -254,7 +254,10 @@ class System_Api_SessionManager extends System_Api_Base
     */
     public function writeSession( $id, $data )
     {
-        if ( self::$existingId == $id )
+        if ( self::$currentSession[ 'session_id' ] == $id && self::$currentSession[ 'session_data' ] == $data && ( time() - self::$currentSession[ 'last_access' ] ) < 15 )
+            return;
+
+        if ( self::$currentSession[ 'session_id' ] == $id )
             $query = 'UPDATE {sessions} SET session_data = %3s, last_access = %4d WHERE session_id = %1s';
         else
             $query = 'INSERT INTO {sessions} ( session_id, user_id, session_data, last_access ) VALUES ( %1s, %2d, %3s, %4d )';
@@ -268,7 +271,7 @@ class System_Api_SessionManager extends System_Api_Base
     */
     public function deleteSession( $id )
     {
-        if ( self::$existingId == $id ) {
+        if ( self::$currentSession[ 'session_id' ] == $id ) {
             $query = 'DELETE FROM {sessions} WHERE session_id = %s';
             $this->connection->execute( $query, $id );
         }
