@@ -1,6 +1,8 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<?php if ( isset( $user ) ): ?>
+<?php if ( $isOwn ): ?>
+<p><?php echo $this->tr( 'Configure your user preferences.' ) ?></p>
+<?php else: ?>
 <p><?php echo $this->tr( 'Configure preferences for user <strong>%1</strong>.', null, $user[ 'user_name' ] ) ?></p>
 <?php endif ?>
 

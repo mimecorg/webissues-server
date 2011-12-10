@@ -50,6 +50,7 @@ class Common_Tools_Preferences extends System_Web_Component
             $this->addNotificationFields( $fields );
 
         $this->user = $helper->getUser();
+        $this->isOwn = $this->user == null || $this->user[ 'user_id' ] == System_Api_Principal::getCurrent()->getUserId();
 
         if ( $this->form->loadForm() ) {
             if ( $this->form->isSubmittedWith( 'cancel' ) )
