@@ -4200,73 +4200,78 @@
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="4"/>
+        <source>Configure your user preferences.</source>
+        <translation>Zmień swoje ustawienia użytkownika.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/preferences.html.php" line="6"/>
         <source>Configure preferences for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation>Zmień ustawienia dla użytkownika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="15"/>
+        <location filename="../../tools/preferences.html.php" line="17"/>
         <source>Notifications</source>
         <translation>Powiadomienia</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="17"/>
+        <location filename="../../tools/preferences.html.php" line="19"/>
         <source>Email address:</source>
         <translation>Adres e-mail:</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="20"/>
+        <location filename="../../tools/preferences.html.php" line="22"/>
         <source>This address will only be visible to the system administrator. You will not receive notifications if you leave this field empty.</source>
         <translation>Ten adres będzie widoczny tylko dla administratora systemu. Nie będziesz otrzymywać powiadomień, jeśli pozostawisz to pole puste.</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="22"/>
+        <location filename="../../tools/preferences.html.php" line="24"/>
         <source>Alert Notifications</source>
         <translation>Powiadomienia alertów</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="24"/>
+        <location filename="../../tools/preferences.html.php" line="26"/>
         <source>Do not include issues that I have already read</source>
         <translation>Pomijaj sprawy, które przeczytałem</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="26"/>
+        <location filename="../../tools/preferences.html.php" line="28"/>
         <source>Summary Schedule</source>
         <translation>Harmonogram podsumowań</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="29"/>
-        <location filename="../../tools/preferences.html.php" line="52"/>
+        <location filename="../../tools/preferences.html.php" line="31"/>
+        <location filename="../../tools/preferences.html.php" line="54"/>
         <source>Select All</source>
         <translation>Zaznacz wszystkie</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="31"/>
-        <location filename="../../tools/preferences.html.php" line="54"/>
+        <location filename="../../tools/preferences.html.php" line="33"/>
+        <location filename="../../tools/preferences.html.php" line="56"/>
         <source>Unselect All</source>
         <translation>Odznacz wszystkie</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="33"/>
+        <location filename="../../tools/preferences.html.php" line="35"/>
         <source>Send on the following days:</source>
         <translation>Wysyłaj w następujące dni:</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="57"/>
+        <location filename="../../tools/preferences.html.php" line="59"/>
         <source>Send at the following hours:</source>
         <translation>Wysyłaj o następujących godzinach:</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="68"/>
+        <location filename="../../tools/preferences.html.php" line="70"/>
         <source>You will not receive summary emails if you do not select any day and hour.</source>
         <translation>Nie będziesz otrzymywać podsumowań, jeśli nie zaznaczysz żadnego dnia ani godziny.</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="74"/>
+        <location filename="../../tools/preferences.html.php" line="76"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="75"/>
+        <location filename="../../tools/preferences.html.php" line="77"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
