@@ -1,3 +1,9 @@
+1.0-rc1 (2011-12-12)
+    * added German translation
+    * fixed truncating links
+    * redirect to previous page after logging in
+    * improved usability on mobile devices
+
 1.0-beta4 (2011-12-05)
     * fixed crash when opening web client with no projects (bug #683)
     * hide the Modify Alert command if emails are disabled
