@@ -3,16 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=930, initial-scale=1" />
   <title><?php echo $pageTitle ?> | <?php echo $siteName ?></title>
   <link rel="shortcut icon" href="<?php echo $this->url( $icon ) ?>" type="image/vnd.microsoft.icon" /> 
 <?php foreach ( $cssFiles as $file ): ?>
-  <link rel="stylesheet" href="<?php echo $this->url( $file )?>" type="text/css" />
+  <link rel="stylesheet" href="<?php echo $this->url( $file ) ?>" type="text/css" />
 <?php endforeach ?>
 <?php foreach ( $cssConditional as $condition => $file ): ?>
-  <!--[if <?php echo $condition ?>]><link rel="stylesheet" href="<?php echo $this->url( $file )?>" type="text/css" /><![endif]-->
+  <!--[if <?php echo $condition ?>]><link rel="stylesheet" href="<?php echo $this->url( $file ) ?>" type="text/css" /><![endif]-->
 <?php endforeach ?>
 <?php foreach ( $scriptFiles as $file ): ?>
-  <script type="text/javascript" src="<?php echo $this->url( $file )?>"></script>
+  <script type="text/javascript" src="<?php echo $this->url( $file ) ?>"></script>
 <?php endforeach ?>
 <?php if ( !empty( $inlineCode ) ): ?>
   <script type="text/javascript">
