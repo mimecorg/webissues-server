@@ -336,10 +336,10 @@ class System_Web_Grid extends System_Web_Base
     public function renderExpandButton( $empty = false )
     {
         if ( !$empty ) {
-            echo $this->image( '/common/images/plus.png', $this->tr( 'Expand' ), array( 'class' => 'expand', 'style' => 'display: none', 'width' => 9, 'height' => 9 ) );
-            echo $this->image( '/common/images/minus.png', $this->tr( 'Collapse' ), array( 'class' => 'collapse', 'style' => 'display: none', 'width' => 9, 'height' => 9 ) );
+            echo $this->imageLink( '#', '/common/images/plus.png', $this->tr( 'Expand' ), array( 'class' => null, 'width' => 9, 'height' => 9 ), array( 'class' => 'expand', 'style' => 'display: none; cursor: default' ) );
+            echo $this->imageLink( '#', '/common/images/minus.png', $this->tr( 'Collapse' ), array( 'class' => null, 'width' => 9, 'height' => 9 ), array( 'class' => 'collapse', 'style' => 'display: none; cursor: default' ) );
         } else {
-            echo $this->image( '/common/images/blank.png', $this->tr( 'Blank' ), array( 'class' => 'blank', 'style' => 'display: none', 'width' => 9, 'height' => 9 ) );
+            echo $this->image( '/common/images/blank.png', $this->tr( 'Blank' ), array( 'class' => 'blank', 'style' => 'display: none', 'width' => 9, 'height' => 9, 'title' => null ) );
         }
     }
 
