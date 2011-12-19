@@ -30,7 +30,7 @@ if ( !function_exists( 'version_compare' ) || version_compare( PHP_VERSION, '5.2
 /**
 * Current version of WebIssues Server.
 */
-define( 'WI_VERSION', '1.0-rc1' );
+define( 'WI_VERSION', '1.0' );
 
 /**
 * Current version of the WebIssues protocol.

@@ -1,3 +1,7 @@
+1.0 (2011-12-19)
+    * updated the German translation
+    * updated jQuery UI and PHPMailer to latest version
+
 1.0-rc1 (2011-12-12)
     * added German translation
     * fixed truncating links

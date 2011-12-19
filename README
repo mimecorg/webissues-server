@@ -1,5 +1,5 @@
 WebIssues Server
-Version 1.0-rc1 (2011-12-12)
+Version 1.0 (2011-12-19)
 
 Server and Web Client for the WebIssues team collaboration system.
 
@@ -25,11 +25,11 @@ Documentation License, Version 1.3
 Icons based on the KDE Crystal theme copyright (C) 2002 and following
 years KDE Artists
 
-Includes PHPMailer copyright (C) 2004-2009 Andy Prevost
+Includes PHPMailer copyright (C) 2010-2011 Jim Jagielski
 
-Includes jQuery JavaScript Library copyright (C) 2010 John Resig
+Includes jQuery JavaScript Library copyright (C) 2011 John Resig
 
-Includes jQuery UI copyright (C) 2010 jQuery UI Authors
+Includes jQuery UI copyright (C) 2011 jQuery UI Authors
 
 
 License
@@ -64,13 +64,13 @@ Contributors:
  * Patrick Matthäi (patrick.matthaei at web de)
     - Debian packaging, patches
 
- * Azevedo Filipe (pasnox at gmail com)
+ * Filipe Azevedo (pasnox at gmail com)
     - OS X packaging, patches
 
 Translators:
 
  * Flávio Veras (flaviove at gmail com)
-    - Portuguese translation
+    - Portuguese (Brazil) translation
 
  * Dara Sarnirand (dara at sarnirand fr)
     - French translation
