@@ -4841,52 +4841,52 @@
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="273"/>
         <source>Added user &quot;%1&quot;</source>
-        <translation>Benutzer &quot;%1&quot; hinzufügen</translation>
+        <translation>Benutzer &quot;%1&quot; hinzugefügt</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="303"/>
         <source>Changed password for user &quot;%1&quot;</source>
-        <translation>Passwort für Benutzer &quot;%1&quot; ändern</translation>
+        <translation>Passwort für Benutzer &quot;%1&quot; geändert</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="348"/>
         <source>User &quot;%1&quot; changed own password</source>
-        <translation>Eigenes Passwort vom Benutzer &quot;%1&quot; ändern</translation>
+        <translation>Benutzer &quot;%1&quot; hat eigenes Passwort geändert</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="386"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Benutzer  &quot;%1&quot; in &quot;%2&quot; umbenennen</translation>
+        <translation>Benutzer  &quot;%1&quot; in &quot;%2&quot; umbenannt</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="418"/>
         <source>Disabled access for user &quot;%1&quot;</source>
-        <translation>Gesperrter Zugriff für Benutzer &quot;%1&quot;</translation>
+        <translation>Zugriff für Benutzer &quot;%1&quot; gesperrt</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="422"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
-        <translation>Normalen Zugriff für Benutzer &quot;%1&quot; erlauben</translation>
+        <translation>Regulären Zugriff für Benutzer &quot;%1&quot; erlaubt</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="426"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
-        <translation>Systemadministratorzugriff für Benutzer &quot;%1&quot; erlauben</translation>
+        <translation>Systemadministratorzugriff für Benutzer &quot;%1&quot; erlaubt</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="481"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation>Benutzer &quot;%1&quot; aus Projekt &quot;%2&quot; entfernen</translation>
+        <translation>Benutzer &quot;%1&quot; aus Projekt &quot;%2&quot; entfernt</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="485"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Normalen Zugriff für Benutzer &quot;%1&quot; des Projekts &quot;%2&quot; erlauben</translation>
+        <translation>Regulären Zugriff für Benutzer &quot;%1&quot; im Projekt &quot;%2&quot; zugewiesen</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="489"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Projekt administratorzugriff für Benutzer &quot;%1&quot; für Projekt &quot;%2&quot; erlauben</translation>
+        <translation>Projektadministratorzugriff für Benutzer &quot;%1&quot; im Projekt &quot;%2&quot; zugewiesen</translation>
     </message>
 </context>
 <context>
@@ -4927,17 +4927,17 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="54"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Eininge der eingegeben Werte sind falsch.</translation>
+        <translation>Eininge der eingegeben Werte sind ungültig.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="56"/>
         <source>Incorrect value: %1.</source>
-        <translation>Falscher Wert: %1.</translation>
+        <translation>Ungültiger Wert: %1.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="67"/>
         <source>Your session has expired; please reconnect</source>
-        <translation>Ihre Sitzung ist abgelaufeb; bitte erneut Verbinden</translation>
+        <translation>Ihre Sitzung ist abgelaufen; Bitte erneut verbinden</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="69"/>
@@ -4947,12 +4947,12 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="71"/>
         <source>Invalid login or password</source>
-        <translation>Falscher Login oder Passwort</translation>
+        <translation>Falscher Login oder falsches Passwort</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="73"/>
         <source>Project does not exist</source>
-        <translation>Dieses Projekt existiert nicht</translation>
+        <translation>Projekt existiert nicht</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="75"/>
@@ -4992,12 +4992,12 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="89"/>
         <source>A project with this name already exists</source>
-        <translation>Ein gleichnamiges Projekt existiert bereits</translation>
+        <translation>Ein  Projekt gleichen Namens existiert bereits</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="91"/>
         <source>A folder with this name already exists</source>
-        <translation>Ein gleichnamiges Verzeichnis existiert bereits</translation>
+        <translation>Ein Verzeichnis mit dem Namen existiert bereits</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="93"/>
@@ -5067,7 +5067,7 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="119"/>
         <source>Text is too short</source>
-        <translation>Ungülig gewählter Wert</translation>
+        <translation>Text ist zu kurz</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="121"/>
@@ -5097,32 +5097,32 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="131"/>
         <source>Value has incorrect format</source>
-        <translation>Zahl hat zu viele Dezimalstellen</translation>
+        <translation>Wert hat ein inkorrektes Format</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="133"/>
         <source>Date is not correct</source>
-        <translation>datum ist nicht richtig</translation>
+        <translation>Datum ist nicht korrekt</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="135"/>
         <source>Time is not correct</source>
-        <translation>Uhrzeit ist nicht richtig</translation>
+        <translation>Uhrzeit ist nicht korrekt</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="137"/>
         <source>Email address is invalid</source>
-        <translation>Email-Adresse ist falsch</translation>
+        <translation>Email-Adresse ist ungültig</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="139"/>
         <source>No matching item is selected</source>
-        <translation>Kein passendes item ist ausgewählt</translation>
+        <translation>Kein passendes Element ist ausgewählt</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="141"/>
         <source>Duplicate items are entered</source>
-        <translation>Doppelte Item Eingabe</translation>
+        <translation>Doppeltes Element wurde eingegeben</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="143"/>
@@ -5132,7 +5132,7 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="145"/>
         <source>Incompatible attribute type</source>
-        <translation>nicht kompatiber Eigenschaftentyp</translation>
+        <translation>Inkompatibler Eigenschaftentyp</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="147"/>
@@ -5147,7 +5147,7 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="151"/>
         <source>A view with this name already exists</source>
-        <translation>Eine Ansicht mit diesem Namen existiert bereits</translation>
+        <translation>Eine Ansicht gleichen Namens existiert bereits</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="153"/>
@@ -5162,12 +5162,12 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="157"/>
         <source>No items are specified</source>
-        <translation>Es sind keine items festgelegt</translation>
+        <translation>Es sind kein Element festgelegt</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="159"/>
         <source>Passwords do not match; please retype them</source>
-        <translation>Passwort passt nicht; bitte erneut eingeben</translation>
+        <translation>Passwort passt nicht; Bitte erneut eingeben</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="161"/>
@@ -5182,7 +5182,7 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="165"/>
         <source>Invalid alert email setting</source>
-        <translation>ungültige Emailalarm Einstellung</translation>
+        <translation>Ungültige Einstellungen zum Email-Alarm</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="167"/>
@@ -5197,27 +5197,27 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="171"/>
         <source>You must change your password</source>
-        <translation>Sie müssen ihr Passwort ändern</translation>
+        <translation>Sie müssen Ihr Passwort ändern</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="173"/>
         <source>Cannot reuse password; choose different password</source>
-        <translation>Passwort kann nicht wiederverwendet werden, bitte wählen sie ein Anderes</translation>
+        <translation>Passwort kann nicht wiederverwendet werden; Bitte wählen sie ein anderes</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="175"/>
         <source>The specified item was not found</source>
-        <translation>Das festgelegte item kann nicht gefunden werden</translation>
+        <translation>Das festgelegte Element  wurde nicht gefunden</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="177"/>
         <source>Value cannot contain a comma</source>
-        <translation>Der Wert kann kein Komma beinhalten</translation>
+        <translation>Der Wert darf kein Komma beinhalten</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="179"/>
         <source>Concurrency error; please try again</source>
-        <translation>Mehrfachzugriffsfehler; bitte versuchen sie es erneut</translation>
+        <translation>Mehrfachzugriffsfehler; Bitte versuchen sie es erneut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="181"/>
@@ -5281,12 +5281,12 @@
     <message>
         <location filename="../../../system/web/grid.inc.php" line="340"/>
         <source>Collapse</source>
-        <translation>fehlgeschlagen</translation>
+        <translation>Zusammenklappen</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="342"/>
         <source>Blank</source>
-        <translation>Formular</translation>
+        <translation>Blank</translation>
     </message>
 </context>
 <context>
@@ -5295,7 +5295,7 @@
         <location filename="../../../system/web/javascript.inc.php" line="118"/>
         <location filename="../../../system/web/javascript.inc.php" line="147"/>
         <source>Choose</source>
-        <translation>Wählen</translation>
+        <translation>Auswählen</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="124"/>
@@ -5423,7 +5423,7 @@
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="103"/>
         <source>%1 bytes</source>
-        <translation>%1 bytes</translation>
+        <translation>%1 Bytes</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="107"/>
