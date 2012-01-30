@@ -194,6 +194,22 @@ class System_Core_Request
         return isset( $_SERVER[ 'SERVER_SOFTWARE' ] ) ? $_SERVER[ 'SERVER_SOFTWARE' ] : null;
     }
 
+    /**
+    * Return the value of the If-Modified-Since header.
+    */
+    public function getIfModifiedSince()
+    {
+        return isset( $_SERVER[ 'HTTP_IF_MODIFIED_SINCE' ] ) ? $_SERVER[ 'HTTP_IF_MODIFIED_SINCE' ] : null;
+    }
+
+    /**
+    * Return the value of the If-None-Match header.
+    */
+    public function getIfNoneMatch()
+    {
+        return isset( $_SERVER[ 'HTTP_IF_NONE_MATCH' ] ) ? $_SERVER[ 'HTTP_IF_NONE_MATCH' ] : null;
+    }
+
     private static function stripSlashesDeep( $value )
     {
         if ( is_array( $value ) )

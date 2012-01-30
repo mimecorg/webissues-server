@@ -133,7 +133,7 @@ class System_Core_Attachment
             $fileName = rawurlencode( $fileName );
 
         header( 'Content-Length: ' . $this->size );
-        header( 'Content-Disposition: attachment; filename="' . $fileName . '"' );
+        header( 'Content-Disposition: inline; filename="' . $fileName . '"' );
 
         if ( $this->data !== null )
             echo $this->data;

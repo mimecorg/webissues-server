@@ -35,10 +35,49 @@ class Client_Issues_GetAttachment extends Common_Application
 
         $issueManager = new System_Api_IssueManager();
         $attachmentId = (int)$this->request->getQueryString( 'id' );
-        $attachment = $issueManager->getAttachment( $attachmentId );
 
-        $this->response->setContentType( 'application/octet-stream' );
-        $this->response->setAttachment( $attachment );
+        $file = $issueManager->getFile( $attachmentId );
+
+        $serverManager = new System_Api_ServerManager();
+        $server = $serverManager->getServer();
+
+        $etag = '"' . $server[ 'server_uuid' ] . '-' . sprintf( '%08x', $attachmentId ) . '"';
+
+        $this->response->setCustomHeader( 'Last-Modified', gmdate( 'D, d M Y H:i:s', $file[ 'stamp_time' ] ) . ' GMT' );
+        $this->response->setCustomHeader( 'Etag', $etag );
+
+        $this->response->setCustomHeader( 'Cache-Control', 'private, must-revalidate, max-age=0, post-check=0, pre-check=0' );
+        $this->response->setCustomHeader( 'Expires', '' );
+        $this->response->setCustomHeader( 'Pragma', '' );
+
+        $since = $this->request->getIfModifiedSince();
+        $match = $this->request->getIfNoneMatch();
+
+        if ( ( $since == null && $match == null ) || ( $since != null && @strtotime( $since ) < $file[ 'stamp_time' ] ) || ( $match != null && $match != $etag ) ) {
+            $type = $this->getContentType( $file[ 'file_name' ] );
+            $this->response->setContentType( $type );
+            
+            $attachment = $issueManager->getAttachment( $attachmentId );
+            $this->response->setAttachment( $attachment );
+        } else {
+            $this->response->setStatus( '304 Not Modified' );
+        }
+    }
+
+    private function getContentType( $fileName )
+    {
+        $extension = pathinfo( $fileName, PATHINFO_EXTENSION );
+
+        if ( $extension != null ) {
+            $extension = strtolower( $extension );
+
+            $types = System_Core_IniFile::parse( '/common/data/mimetypes.ini' );
+
+            if ( isset( $types[ $extension ] ) )
+                return $types[ $extension ];
+        }
+
+        return 'application/octet-stream';
     }
 }
 
