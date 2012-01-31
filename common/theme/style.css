@@ -373,6 +373,12 @@ table.grid tr.selected
   font-weight: normal;
 }
 
+.ui-autocomplete {
+  max-height: 19em;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .image-link {
   margin-right: 0.5em;
 }
