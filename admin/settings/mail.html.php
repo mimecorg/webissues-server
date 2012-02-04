@@ -5,7 +5,7 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'General' ) ?></legend>
 
-<p><?php echo $this->tr( 'Methods of sending emails:' ) ?></p>
+<p><?php echo $this->tr( 'Method of sending emails:' ) ?></p>
 <?php $form->renderRadioGroup( 'emailEngine', $engineOptions ) ?>
 
 <?php $form->renderText( $this->tr( 'Email address of the server:' ), 'emailFrom', array( 'size' => 40 )  ) ?>
@@ -16,6 +16,8 @@
 
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'SMTP Server' ) ?></legend>
+
+<p><?php echo $this->tr( 'Fill the information below when using a custom SMTP server.' ) ?></p>
 
 <?php $form->renderText( $this->tr( 'Server name:' ), 'smtpServer', array( 'size' => 40 )  ) ?>
 <?php $form->renderText( $this->tr( 'Port number:' ), 'smtpPort', array( 'size' => 40 )  ) ?>
@@ -31,6 +33,19 @@
 
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'Test Connection' ), 'test' ) ?>
+</div>
+
+</fieldset>
+
+<fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Hyperlinks' ) ?></legend>
+
+<p><?php echo $this->tr( 'Enter the base URL of the server, without the trailing slash, to enable hyperlinks in emails.' ) ?></p>
+
+<?php $form->renderText( $this->tr( 'Server URL:' ), 'baseUrl', array( 'size' => 40 )  ) ?>
+
+<div class="form-submit">
+<?php $form->renderSubmit( $this->tr( 'Detect' ), 'detect' ) ?>
 </div>
 
 </fieldset>

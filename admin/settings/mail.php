@@ -39,6 +39,7 @@ class Admin_Settings_Mail extends System_Web_Component
         $fields[ 'smtp_encryption' ] = 'smtpEncryption';
         $fields[ 'smtp_user' ] = 'smtpUser';
         $fields[ 'smtp_password' ] = 'smtpPassword';
+        $fields[ 'base_url' ] = 'baseUrl';
 
         $this->form = new System_Web_Form( 'settings', $this );
         foreach ( $fields as $field )
@@ -49,6 +50,9 @@ class Admin_Settings_Mail extends System_Web_Component
         if ( $this->form->loadForm() ) {
             if ( $this->form->isSubmittedWith( 'cancel' ) )
                 $this->response->redirect( '/admin/index.php' );
+
+            if ( $this->form->isSubmittedWith( 'detect' ) )
+                $this->baseUrl = WI_BASE_URL;
 
             $values = $settingHelper->validateSettings( $fields );
 

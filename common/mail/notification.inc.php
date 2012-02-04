@@ -35,11 +35,11 @@ class Common_Mail_Notification extends System_Web_Component
 
     public function prepare()
     {
-        $folderId = $this->alert[ 'folder_id' ];
-        $viewId = $this->alert[ 'view_id' ];
+        $this->folderId = $this->alert[ 'folder_id' ];
+        $this->viewId = $this->alert[ 'view_id' ];
 
         $projectManager = new System_Api_ProjectManager();
-        $folder = $projectManager->getFolder( $folderId );
+        $folder = $projectManager->getFolder( $this->folderId );
 
         $this->projectName = $folder[ 'project_name' ];
         $this->folderName = $folder[ 'folder_name' ];
@@ -51,8 +51,8 @@ class Common_Mail_Notification extends System_Web_Component
         $this->queryGenerator->setFolder( $folder );
 
         $viewManager = new System_Api_ViewManager();
-        if ( $viewId ) {
-            $view = $viewManager->getView( $viewId );
+        if ( $this->viewId ) {
+            $view = $viewManager->getView( $this->viewId );
             $definition = $view[ 'view_def' ];
             $this->viewName = $view[ 'view_name' ];
         } else {
@@ -87,6 +87,9 @@ class Common_Mail_Notification extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_Mail_Layout' );
         $this->view->setSlot( 'subject', $this->projectName . ' - ' . $this->folderName . ' - ' . $this->viewName );
 
+        $serverManager = new System_Api_ServerManager();
+        $this->baseUrl = $serverManager->getSetting( 'base_url' );
+
         $this->columns = $this->queryGenerator->getColumnNames();
 
         $helper = new System_Web_ColumnHelper();
@@ -116,12 +119,7 @@ class Common_Mail_Notification extends System_Web_Component
                         break;
                 }
 
-                if ( $column == System_Api_Column::ID )
-                    $issue[ $name ] = $value;
-                else if ( $column == System_Api_Column::Name )
-                    $issue[ $name ] = $this->truncate( $value, 60 );
-                else
-                    $issue[ $name ] = System_Web_LinkLocator::convertAndTruncate( $value, 60 );
+                $issue[ $name ] = $this->truncate( $value, 60 );
             }
             $this->issues[ $row[ 'issue_id' ] ] = $issue;
         }
