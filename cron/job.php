@@ -128,11 +128,15 @@ class Cron_Job extends System_Core_Application
                 $hour = $currentDate->format( 'G' );
 
                 if ( array_search( $day, $days ) !== false && array_search( $hour, $hours ) !== false ) {
-                    $lastDate = new DateTime( '@' . $this->last );
-                    $lastDate->setTimezone( $timezone );
+                    if ( $this->last ) {
+                        $lastDate = new DateTime( '@' . $this->last );
+                        $lastDate->setTimezone( $timezone );
 
-                    if ( $lastDate->format( 'YmdH' ) != $currentDate->format( 'YmdH' ) )
+                        if ( $lastDate->format( 'YmdH' ) != $currentDate->format( 'YmdH' ) )
+                            $includeSummary = true;
+                    } else {
                         $includeSummary = true;
+                    }
                 }
             }
 
@@ -156,6 +160,8 @@ class Cron_Job extends System_Core_Application
                 }
             }
         }
+
+        System_Api_Principal::setCurrent( null );
     }
 }
 
