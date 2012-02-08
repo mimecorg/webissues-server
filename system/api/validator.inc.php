@@ -584,6 +584,11 @@ class System_Api_Validator
                 $this->checkDecimalNumber( $value, 0, 0, 10000 );
                 break;
 
+            case 'hide_id_column':
+                if ( $value != '' )
+                    $this->checkDecimalNumber( $value, 0, 0, 1 );
+                break;
+
             case 'email_engine':
                 if ( $value != '' && $value != 'standard' && $value != 'smtp' )
                     throw new System_Api_Error( System_Api_Error::InvalidSetting );

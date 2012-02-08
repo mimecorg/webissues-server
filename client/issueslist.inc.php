@@ -118,6 +118,10 @@ class Client_IssuesList extends System_Web_Component
 
         $this->columns = $queryGenerator->getColumnNames();
 
+        $serverManager = new System_Api_ServerManager();
+        if ( $serverManager->getSetting( 'hide_id_column' ) == 1 )
+            unset( $this->columns[ System_Api_Column::ID ] );
+
         $helper = new System_Web_ColumnHelper();
         $this->headers = $helper->getColumnHeaders() + $queryGenerator->getUserColumnHeaders();
 
