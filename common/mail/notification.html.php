@@ -3,7 +3,7 @@
 <h2>
 <?php
     if ( $baseUrl != '' ):
-        echo $this->link( $this->appendQueryString( $baseUrl . '/client/index.php', array( 'folder' => $folderId, 'view' => $viewId != 0 ? $viewId : null ) ),
+        echo $this->link( $this->appendQueryString( $baseUrl . 'client/index.php', array( 'folder' => $folderId, 'view' => $viewId != 0 ? $viewId : null ) ),
             $projectName . ' - ' . $folderName . ' - ' . $viewName );
     else:
         echo $projectName . ' - ' . $folderName . ' - ' . $viewName;
@@ -23,7 +23,7 @@
 <td>
 <?php
     if ( $column == System_Api_Column::Name && $baseUrl != '' ):
-        echo $this->link( $this->appendQueryString( $baseUrl . '/client/index.php', array( 'issue' => $issueId ) ), $issue[ $name ] );
+        echo $this->link( $this->appendQueryString( $baseUrl . 'client/index.php', array( 'issue' => $issueId ) ), $issue[ $name ] );
     else:
         echo $issue[ $name ];
     endif;

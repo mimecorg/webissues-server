@@ -704,12 +704,7 @@ class System_Api_Validator
 
     private function checkBaseUrl( $value )
     {
-        $value = mb_strtolower( $value );
-
-        if ( mb_substr( $value, 0, 7 ) != 'http://' && mb_substr( $value, 0, 8 ) != 'https://' )
-            throw new System_Api_Error( System_Api_Error::InvalidSetting );
-
-        if ( mb_substr( $value, -1, 1 ) == '/' || mb_substr( $value, -4, 4 ) == '.php' )
+        if ( !preg_match( '|^https?://.+/$|', $value ) )
             throw new System_Api_Error( System_Api_Error::InvalidSetting );
     }
 

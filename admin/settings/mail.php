@@ -52,7 +52,7 @@ class Admin_Settings_Mail extends System_Web_Component
                 $this->response->redirect( '/admin/index.php' );
 
             if ( $this->form->isSubmittedWith( 'detect' ) )
-                $this->baseUrl = WI_BASE_URL;
+                $this->baseUrl = WI_BASE_URL . '/';
 
             $values = $settingHelper->validateSettings( $fields );
 
