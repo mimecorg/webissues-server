@@ -440,133 +440,148 @@
         <translation>Configurações do Servidor</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="70"/>
-        <location filename="../../../admin/settings/index.php" line="77"/>
+        <location filename="../../../admin/settings/index.php" line="71"/>
+        <location filename="../../../admin/settings/index.php" line="78"/>
         <source>%1 kB</source>
         <translation>%1 kB</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="72"/>
+        <location filename="../../../admin/settings/index.php" line="73"/>
         <source>%1 MB</source>
         <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="75"/>
+        <location filename="../../../admin/settings/index.php" line="76"/>
         <source>Never</source>
         <translation>Nunca</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="78"/>
+        <location filename="../../../admin/settings/index.php" line="79"/>
         <source>Always</source>
         <translation>Sempre</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="82"/>
+        <location filename="../../../admin/settings/index.php" line="83"/>
         <source>%1 minutes</source>
         <translation>%1 minutos</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="83"/>
+        <location filename="../../../admin/settings/index.php" line="84"/>
         <source>1 hour</source>
         <translation>1 hora</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="85"/>
+        <location filename="../../../admin/settings/index.php" line="86"/>
         <source>%1 hours</source>
         <translation>%1 horas</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="88"/>
+        <location filename="../../../admin/settings/index.php" line="89"/>
         <source>1 day</source>
         <translation>1 dia</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="90"/>
+        <location filename="../../../admin/settings/index.php" line="91"/>
         <source>%1 days</source>
         <translation>%1 dias</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="93"/>
+        <location filename="../../../admin/settings/index.php" line="94"/>
         <source>Use cron job</source>
         <translation>Cron job do usuário</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="10"/>
+        <source>View Settings</source>
+        <translation>Ver Configurações</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="12"/>
+        <source>Global view settings that affect all users and issue types.</source>
+        <translation>Global configurações de exibição que afetam todos os usuários e tipos de emissão.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="14"/>
+        <source>Hide the ID column</source>
+        <translation>Ocultar a coluna ID</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="19"/>
         <source>Limits</source>
         <translation>Limites</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="12"/>
+        <location filename="../../../admin/settings/index.html.php" line="21"/>
         <source>The maximum length (in characters) of comments and the maximum size (in bytes) of attached files that are allowed.</source>
         <translation>O comprimento máximo (em caracteres) de comentários e tamanho máximo (em bytes) de arquivos anexos que são permitidos.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="14"/>
+        <location filename="../../../admin/settings/index.html.php" line="23"/>
         <source>Maximum comment length:</source>
         <translation>Comprimento máximo do comentário:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="15"/>
+        <location filename="../../../admin/settings/index.html.php" line="24"/>
         <source>Maximum attachment size:</source>
         <translation>Tamanho máximo do anexo:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="20"/>
+        <location filename="../../../admin/settings/index.html.php" line="29"/>
         <source>Attachment Storage</source>
         <translation>Armazenar Anexo</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="22"/>
+        <location filename="../../../admin/settings/index.html.php" line="31"/>
         <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
         <translation>O tamanho máximo (em bytes) de arquivos que serão armazenados no banco de dados. Os arquivos maiores serão armazenados no sistema de arquivos.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="24"/>
+        <location filename="../../../admin/settings/index.html.php" line="33"/>
         <source>Maximum database storage size:</source>
         <translation>O tamanho máximo de armazenamento de banco de dados:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="29"/>
+        <location filename="../../../admin/settings/index.html.php" line="38"/>
         <source>Maximum Lifetime</source>
         <translation>Vida Máxima</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="31"/>
+        <location filename="../../../admin/settings/index.html.php" line="40"/>
         <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
         <translation>O tempo máximo depois do qual as sessões inativas e eventos no log de eventos são suprimidos.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="33"/>
+        <location filename="../../../admin/settings/index.html.php" line="42"/>
         <source>Session lifetime:</source>
         <translation>Vida da Seção:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="34"/>
+        <location filename="../../../admin/settings/index.html.php" line="43"/>
         <source>Event log lifetime:</source>
         <translation>Vida do log de eventos:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="39"/>
+        <location filename="../../../admin/settings/index.html.php" line="48"/>
         <source>Garbage Collection</source>
         <translation>Coleta de Lixo</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="41"/>
+        <location filename="../../../admin/settings/index.html.php" line="50"/>
         <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
         <translation>A probabilidade de coleta de lixo após cada solicitação. Se a tarefa do cron job é usada para coleta de lixo, verifique se ele está sendo executado.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="43"/>
+        <location filename="../../../admin/settings/index.html.php" line="52"/>
         <source>GC probability:</source>
         <translation>GC probabilidade:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="48"/>
+        <location filename="../../../admin/settings/index.html.php" line="57"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="49"/>
+        <location filename="../../../admin/settings/index.html.php" line="58"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -579,27 +594,27 @@
         <translation>Configurações de Email</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.php" line="70"/>
+        <location filename="../../../admin/settings/mail.php" line="74"/>
         <source>Disabled</source>
         <translation>Desabilitado</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.php" line="71"/>
+        <location filename="../../../admin/settings/mail.php" line="75"/>
         <source>Standard PHP mailer</source>
         <translation>Envio de mensagem padrão PHP</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.php" line="72"/>
+        <location filename="../../../admin/settings/mail.php" line="76"/>
         <source>Custom SMTP server</source>
         <translation>Servidor SMTP customizado</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.php" line="75"/>
+        <location filename="../../../admin/settings/mail.php" line="79"/>
         <source>None</source>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.php" line="99"/>
+        <location filename="../../../admin/settings/mail.php" line="103"/>
         <source>Please select the SMTP method of sending emails to test connection.</source>
         <translation>Por favor, selecione o método de envio de e-mails SMTP para testar a conexão.</translation>
     </message>
@@ -610,8 +625,8 @@
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="8"/>
-        <source>Methods of sending emails:</source>
-        <translation>Métodos de enviar e-mails:</translation>
+        <source>Method of sending emails:</source>
+        <translation>Método de envio de e-mails:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="11"/>
@@ -630,46 +645,71 @@
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="20"/>
+        <source>Fill the information below when using a custom SMTP server.</source>
+        <translation>Preencha as informações abaixo quando utilizar um servidor SMTP personalizado.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/mail.html.php" line="22"/>
         <source>Server name:</source>
         <translation>Nome do servidor:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.html.php" line="21"/>
+        <location filename="../../../admin/settings/mail.html.php" line="23"/>
         <source>Port number:</source>
         <translation>Porta número:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.html.php" line="22"/>
+        <location filename="../../../admin/settings/mail.html.php" line="24"/>
         <source>Encryption mode:</source>
         <translation>Modo de encriptação:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.html.php" line="23"/>
+        <location filename="../../../admin/settings/mail.html.php" line="25"/>
         <source>User name:</source>
         <translation>Nome do Usuário:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.html.php" line="24"/>
+        <location filename="../../../admin/settings/mail.html.php" line="26"/>
         <source>Password:</source>
         <translation>Senha:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.html.php" line="29"/>
+        <location filename="../../../admin/settings/mail.html.php" line="31"/>
         <source>Connection to the SMTP server was successful.</source>
         <translation>A conexão com o servidor SMTP foi bem sucedida.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.html.php" line="33"/>
+        <location filename="../../../admin/settings/mail.html.php" line="35"/>
         <source>Test Connection</source>
         <translation>Teste de Conexão</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.html.php" line="39"/>
+        <location filename="../../../admin/settings/mail.html.php" line="41"/>
+        <source>Hyperlinks</source>
+        <translation>Hyperlinks</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/mail.html.php" line="43"/>
+        <source>Enter the base URL of the server, with the trailing slash, to enable hyperlinks in emails.</source>
+        <translation>Digite a URL base do servidor, com a barra à direita, para ativar hyperlinks em e-mails.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/mail.html.php" line="45"/>
+        <source>Server URL:</source>
+        <translation>URL do servidor:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/mail.html.php" line="48"/>
+        <source>Detect</source>
+        <translation>Detectar</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/mail.html.php" line="54"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/mail.html.php" line="40"/>
+        <location filename="../../../admin/settings/mail.html.php" line="55"/>
         <source>Cancel</source>
         <translation>Cacelar</translation>
     </message>
@@ -2532,42 +2572,42 @@
         <translation>Visualizações Públicas</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="190"/>
+        <location filename="../../../client/issueslist.inc.php" line="194"/>
         <source>Add Issue</source>
         <translation>Adicionar Questão</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="191"/>
+        <location filename="../../../client/issueslist.inc.php" line="195"/>
         <source>Mark All As Read</source>
         <translation>Marcar todas como Lidas</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="192"/>
+        <location filename="../../../client/issueslist.inc.php" line="196"/>
         <source>Mark All As Unread</source>
         <translation>Marcar todas como Não Lidas</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="194"/>
+        <location filename="../../../client/issueslist.inc.php" line="198"/>
         <source>Manage Alerts</source>
         <translation>Gerenciar Alertas</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="199"/>
+        <location filename="../../../client/issueslist.inc.php" line="203"/>
         <source>Add View</source>
         <translation>Adicionar Visualização</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="201"/>
+        <location filename="../../../client/issueslist.inc.php" line="205"/>
         <source>Modify View</source>
         <translation>Modificar Visualização</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="203"/>
+        <location filename="../../../client/issueslist.inc.php" line="207"/>
         <source>Clone View</source>
         <translation>Visualizar Clone</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="193"/>
+        <location filename="../../../client/issueslist.inc.php" line="197"/>
         <source>Manage Views</source>
         <translation>Gerenciar Visualização</translation>
     </message>
@@ -3943,7 +3983,7 @@
         <translation>Todas as Ocorrências</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="20"/>
+        <location filename="../../mail/notification.html.php" line="37"/>
         <source>This is an alert email from the WebIssues Server.</source>
         <translation>Isto é um email de alerta do servidor Webissues.</translation>
     </message>
@@ -3998,38 +4038,38 @@
     </message>
     <message>
         <location filename="../../pagelayout.inc.php" line="55"/>
-        <location filename="../../pagelayout.html.php" line="34"/>
+        <location filename="../../pagelayout.html.php" line="35"/>
         <source>Web Client</source>
         <translation>Cliente Web</translation>
     </message>
     <message>
         <location filename="../../pagelayout.inc.php" line="58"/>
-        <location filename="../../pagelayout.html.php" line="32"/>
+        <location filename="../../pagelayout.html.php" line="33"/>
         <source>Administration Panel</source>
         <translation>Painel de Administração</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="36"/>
+        <location filename="../../pagelayout.html.php" line="37"/>
         <source>WebIssues %1</source>
         <translation>WebIssues %1</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="37"/>
+        <location filename="../../pagelayout.html.php" line="38"/>
         <source>Manual</source>
         <translation>Manual</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="51"/>
+        <location filename="../../pagelayout.html.php" line="52"/>
         <source>Logged in as: %1</source>
         <translation>Conectado como: %1</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="52"/>
+        <location filename="../../pagelayout.html.php" line="53"/>
         <source>Tools</source>
         <translation>Ferramentas</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="53"/>
+        <location filename="../../pagelayout.html.php" line="54"/>
         <source>Log Out</source>
         <translation>Sair</translation>
     </message>
