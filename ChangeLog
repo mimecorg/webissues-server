@@ -1,3 +1,9 @@
+1.0.1 (2012-02-20)
+    * hiding the ID column in all views
+    * including links in email notifications
+    * setting correct mimetype and caching headers for image files
+    * limiting the number of visible dropdown items
+
 1.0 (2011-12-19)
     * updated the German translation
     * updated jQuery UI and PHPMailer to latest version
