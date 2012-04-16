@@ -443,7 +443,7 @@ class System_Web_Form extends System_Web_Base
         $this->renderLabel( $label, $key, $id );
         $this->renderTag( 'select', array_merge( array( 'name' => $key, 'id' => $id ), $attributes ), true );
         foreach ( $items as $itemKey => $itemValue ) {
-            if ( is_array( $itemValue ) || is_a( $itemValue, 'Iterator' ) ) {
+            if ( is_array( $itemValue ) || is_object( $itemValue ) && is_a( $itemValue, 'Iterator' ) ) {
                 $this->renderTag( 'optgroup', array( 'label' => $itemKey ), true );
                 foreach ( $itemValue as $subItemKey => $subItemValue )
                     $this->renderTag( 'option', array( 'value' => $subItemKey, 'selected' => !strcmp( $currentValue, $subItemKey ) ), $subItemValue );

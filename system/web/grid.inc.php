@@ -350,7 +350,7 @@ class System_Web_Grid extends System_Web_Base
     */
     public function renderRowOpen( $rowId, $classes = array() )
     {
-        if ( is_a( $classes, 'System_Web_ArrayEscaper' ) )
+        if ( is_object( $classes ) && is_a( $classes, 'System_Web_ArrayEscaper' ) )
             $classes = $classes->getRawValue();
 
         $classes[] = 'row-' . $rowId;
@@ -368,7 +368,7 @@ class System_Web_Grid extends System_Web_Base
     */
     public function renderParentRowOpen( $parentId, $classes = array() )
     {
-        if ( is_a( $classes, 'System_Web_ArrayEscaper' ) )
+        if ( is_object( $classes ) && is_a( $classes, 'System_Web_ArrayEscaper' ) )
             $classes = $classes->getRawValue();
 
         $classes[] = 'parent';
@@ -388,7 +388,7 @@ class System_Web_Grid extends System_Web_Base
     */
     public function renderChildRowOpen( $rowId, $parentId, $classes = array() )
     {
-        if ( is_a( $classes, 'System_Web_ArrayEscaper' ) )
+        if ( is_object( $classes ) && is_a( $classes, 'System_Web_ArrayEscaper' ) )
             $classes = $classes->getRawValue();
 
         $classes[] = 'child';
