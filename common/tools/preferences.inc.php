@@ -134,8 +134,10 @@ class Common_Tools_Preferences extends System_Web_Component
     private function addNotificationFields( &$fields )
     {
         $fields[ 'email' ] = 'email';
+        $fields[ 'notify_details' ] = 'notifyDetails';
         $fields[ 'notify_no_read' ] = 'notifyNoRead';
         $this->form->addField( 'email' );
+        $this->form->addField( 'notifyDetails' );
         $this->form->addField( 'notifyNoRead' );
 
         $fields[ 'summary_days' ] = 'summaryDays';

@@ -655,6 +655,7 @@ class System_Api_Validator
                     $this->checkEmailAddress( $value );
                 break;
 
+            case 'notify_details':
             case 'notify_no_read':
                 if ( $value != '' )
                     $this->checkDecimalNumber( $value, 0, 0, 1 );

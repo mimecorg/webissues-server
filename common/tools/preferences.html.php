@@ -21,9 +21,10 @@
 <p><?php echo $this->tr( 'This address will only be visible to the system administrator.'
  . ' You will not receive notifications if you leave this field empty.' ) ?></p>
 
-<h4><?php echo $this->tr( 'Alert Notifications' ) ?></h4>
+<h4><?php echo $this->tr( 'Settings' ) ?></h4>
 
-<?php $form->renderCheckBox( $this->tr( 'Do not include issues that I have already read' ), 'notifyNoRead' ) ?>
+<?php $form->renderCheckBox( $this->tr( 'Include issue details in notifications and summary reports' ), 'notifyDetails' ) ?>
+<?php $form->renderCheckBox( $this->tr( 'Do not notify about issues that I have already read' ), 'notifyNoRead' ) ?>
 
 <h4><?php echo $this->tr( 'Summary Schedule' ) ?></h4>
 

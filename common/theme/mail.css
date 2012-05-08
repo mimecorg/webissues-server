@@ -19,6 +19,7 @@ h1 {
 h2 {
   font-size: 130%;
   line-height: 130%;
+  margin-top: 1em;
   margin-bottom: 0.75em;
 }
 
@@ -40,8 +41,36 @@ p {
   text-align: justify;
 }
 
+a:link, a:visited {
+  color: #027ac6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0062a0;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #5895be;
+}
+
 ul {
   list-style-type: circle;
+}
+
+table.info-list {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-collapse: collapse;
+  font: 8pt Verdana, Helvetica, Sans-Serif;
+}
+
+table.info-list tr td {
+  margin: 0;
+  padding: 0.15em 1em 0.15em 0;
+  vertical-align: top;
 }
 
 table.grid {
@@ -68,4 +97,41 @@ table.grid td {
   padding: 0.4em 0.25em;
   border-top: 1px solid #dddddd;
   vertical-align: top;
+}
+
+table.sub-pane-layout {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  font: 8pt Verdana, Helvetica, Sans-Serif;
+}
+
+table.sub-pane-layout td.top-sub-pane, table.sub-pane-layout td.bottom-sub-pane {
+  margin: 0;
+  padding: 0.5em;
+  border: 1px solid #cccccc;
+  vertical-align: top;
+}
+
+table.sub-pane-layout td.top-sub-pane {
+  width: 50%;
+}
+
+.history-info {
+  color: #666666;
+  font-size: 0.9em;
+}
+
+ul.changes {
+  margin-top: 0.5em;
+  margin-bottom: 0.75em;
+}
+
+.comment-text {
+  margin: 0.5em 0 1em 0;
+}
+
+.attachment {
+  margin: 0.5em 0 1em 0;
 }

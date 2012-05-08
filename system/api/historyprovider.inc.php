@@ -34,6 +34,7 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 class System_Api_HistoryProvider
 {
     private $issueId = 0;
+    private $sinceStamp = null;
 
     private $arguments = null;
 
@@ -50,6 +51,14 @@ class System_Api_HistoryProvider
     public function setIssueId( $issueId )
     {
         $this->issueId = $issueId;
+    }
+
+    /**
+    * Only include changes with stamp greater than specified value.
+    */
+    public function setSinceStamp( $stamp )
+    {
+        $this->sinceStamp = $stamp;
     }
 
     /**
@@ -73,6 +82,12 @@ class System_Api_HistoryProvider
             $query .= ' AND change_type = %d';
         }
 
+        if ( $this->sinceStamp != null ) {
+            $this->arguments[] = $this->sinceStamp;
+
+            $query .= ' AND change_id > %d';
+        }
+
         return $query;
     }
 
@@ -94,7 +109,7 @@ class System_Api_HistoryProvider
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $this->arguments = array( $this->issueId, System_Const::CommentAdded, System_Const::FileAdded, $principal->getUserId() );
+        $this->arguments = array( $this->issueId, System_Const::CommentAdded, System_Const::FileAdded, $principal->getUserId(), $this->sinceStamp );
 
         $query = 'SELECT ch.change_id, ch.change_type, ch.stamp_id,'
             . ' sc.stamp_time AS created_date, uc.user_id AS created_user, uc.user_name AS created_by,'
@@ -132,6 +147,8 @@ class System_Api_HistoryProvider
         $query .= ' WHERE ch.issue_id = %1d';
         if ( $itemType == System_Const::CommentsAndFiles )
             $query .= ' AND ( ch.change_type = %2d OR ch.change_type = %3d )';
+        if ( $this->sinceStamp != null )
+            $query .= ' AND ch.change_id > %5d';
 
         return $query;
     }
