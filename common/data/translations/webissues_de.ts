@@ -4374,17 +4374,17 @@
     <message>
         <location filename="../../tools/preferences.html.php" line="24"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="26"/>
         <source>Include issue details in notifications and summary reports</source>
-        <translation type="unfinished"></translation>
+        <translation>Füge Aufgabendetails in Benachrichtigungen und Übersichtsberichten ein</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="27"/>
         <source>Do not notify about issues that I have already read</source>
-        <translation type="unfinished"></translation>
+        <translation>Informiere nicht über Aufgaben, die bereits gelesen wurden</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="29"/>
