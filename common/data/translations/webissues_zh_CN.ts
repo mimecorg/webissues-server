@@ -3981,7 +3981,115 @@
         <translation>所有工作项</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="37"/>
+        <location filename="../../mail/notification.html.php" line="53"/>
+        <source>Properties</source>
+        <translation>属性</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="57"/>
+        <source>ID:</source>
+        <translation>ID：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="61"/>
+        <source>Type:</source>
+        <translation>类型：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="65"/>
+        <source>Project:</source>
+        <translation>对象：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="69"/>
+        <source>Folder:</source>
+        <translation>目录：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="73"/>
+        <source>Created date:</source>
+        <translation>创建日期：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="77"/>
+        <source>Created by:</source>
+        <translation>创建人：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="81"/>
+        <source>Modified date:</source>
+        <translation>修改时间：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="85"/>
+        <source>Modified by:</source>
+        <translation>修改人：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="93"/>
+        <source>Attributes</source>
+        <translation>属性</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="112"/>
+        <source>Issue History</source>
+        <translation>工作项历史</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="122"/>
+        <source>Issue Created</source>
+        <translation>工作项已创建</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="126"/>
+        <source>Issue Modified</source>
+        <translation>工作项已修改</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="129"/>
+        <source>Comment %1</source>
+        <translation>评论%1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="132"/>
+        <source>Attachment %1</source>
+        <translation>附件%1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="135"/>
+        <source>Issue Moved</source>
+        <translation>工作项已移动</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="145"/>
+        <source>last edited:</source>
+        <translation>上次编辑：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="163"/>
+        <location filename="../../mail/notification.html.php" line="166"/>
+        <source>Name</source>
+        <translation>名称</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="169"/>
+        <location filename="../../mail/notification.html.php" line="170"/>
+        <source>empty</source>
+        <translation>空</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="211"/>
+        <location filename="../../mail/notification.html.php" line="212"/>
+        <source>Unknown Folder</source>
+        <translation>未知目录</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="213"/>
+        <source>Folder</source>
+        <translation>目录</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="234"/>
         <source>This is an alert email from the WebIssues Server.</source>
         <translation>这是一封来自WebIssues服务器的警告邮件。</translation>
     </message>
@@ -4265,53 +4373,58 @@
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="24"/>
-        <source>Alert Notifications</source>
-        <translation>警告通知</translation>
+        <source>Settings</source>
+        <translation>设置</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="26"/>
-        <source>Do not include issues that I have already read</source>
-        <translation>不要包含我已经阅读过的工作项</translation>
+        <source>Include issue details in notifications and summary reports</source>
+        <translation>将工作项详细情况包含在通知和简报中</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="28"/>
+        <location filename="../../tools/preferences.html.php" line="27"/>
+        <source>Do not notify about issues that I have already read</source>
+        <translation>不通知我已经阅读过的工作项</translation>
+    </message>
+    <message>
+        <location filename="../../tools/preferences.html.php" line="29"/>
         <source>Summary Schedule</source>
         <translation>安排概括</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="31"/>
-        <location filename="../../tools/preferences.html.php" line="54"/>
+        <location filename="../../tools/preferences.html.php" line="32"/>
+        <location filename="../../tools/preferences.html.php" line="55"/>
         <source>Select All</source>
         <translation>全选</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="33"/>
-        <location filename="../../tools/preferences.html.php" line="56"/>
+        <location filename="../../tools/preferences.html.php" line="34"/>
+        <location filename="../../tools/preferences.html.php" line="57"/>
         <source>Unselect All</source>
         <translation>全取消选择</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="35"/>
+        <location filename="../../tools/preferences.html.php" line="36"/>
         <source>Send on the following days:</source>
         <translation>在下列日期发送：</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="59"/>
+        <location filename="../../tools/preferences.html.php" line="60"/>
         <source>Send at the following hours:</source>
         <translation>在下列时间发送：</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="70"/>
+        <location filename="../../tools/preferences.html.php" line="71"/>
         <source>You will not receive summary emails if you do not select any day and hour.</source>
         <translation>如果您不选择任何日期和日间您将不会收到总结邮件。</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="76"/>
+        <location filename="../../tools/preferences.html.php" line="77"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="77"/>
+        <location filename="../../tools/preferences.html.php" line="78"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>

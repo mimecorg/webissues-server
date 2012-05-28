@@ -3981,7 +3981,115 @@
         <translation>Toutes les demandes</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="37"/>
+        <location filename="../../mail/notification.html.php" line="53"/>
+        <source>Properties</source>
+        <translation>Propriétés</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="57"/>
+        <source>ID:</source>
+        <translation>ID :</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="61"/>
+        <source>Type:</source>
+        <translation>Type :</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="65"/>
+        <source>Project:</source>
+        <translation>Projet :</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="69"/>
+        <source>Folder:</source>
+        <translation>Dossier :</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="73"/>
+        <source>Created date:</source>
+        <translation>Créé le :</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="77"/>
+        <source>Created by:</source>
+        <translation>Créé par :</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="81"/>
+        <source>Modified date:</source>
+        <translation>Modifié le :</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="85"/>
+        <source>Modified by:</source>
+        <translation>Modifié par :</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="93"/>
+        <source>Attributes</source>
+        <translation>Attributs</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="112"/>
+        <source>Issue History</source>
+        <translation>Historique</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="122"/>
+        <source>Issue Created</source>
+        <translation>Création de la demande</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="126"/>
+        <source>Issue Modified</source>
+        <translation>Modification de la demande</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="129"/>
+        <source>Comment %1</source>
+        <translation>Commentaire %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="132"/>
+        <source>Attachment %1</source>
+        <translation>Fichier attaché %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="135"/>
+        <source>Issue Moved</source>
+        <translation>Demande déplacée</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="145"/>
+        <source>last edited:</source>
+        <translation>dernière modification :</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="163"/>
+        <location filename="../../mail/notification.html.php" line="166"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="169"/>
+        <location filename="../../mail/notification.html.php" line="170"/>
+        <source>empty</source>
+        <translation>vide</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="211"/>
+        <location filename="../../mail/notification.html.php" line="212"/>
+        <source>Unknown Folder</source>
+        <translation>Dossier inconnu</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="213"/>
+        <source>Folder</source>
+        <translation>Dossier</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="234"/>
         <source>This is an alert email from the WebIssues Server.</source>
         <translation>Ceci est un e-mail d&apos;alerte venant du serveur WebIssues.</translation>
     </message>
@@ -4265,53 +4373,58 @@
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="24"/>
-        <source>Alert Notifications</source>
-        <translation>Notifications d&apos;alertes</translation>
+        <source>Settings</source>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="26"/>
-        <source>Do not include issues that I have already read</source>
-        <translation>Ne pas inclure les demandes déjà lues</translation>
+        <source>Include issue details in notifications and summary reports</source>
+        <translation>I&amp;nclure les détails de demandes dans les rapports de notifications et de résumés</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="28"/>
+        <location filename="../../tools/preferences.html.php" line="27"/>
+        <source>Do not notify about issues that I have already read</source>
+        <translation>Ne pas notifier les demandes &amp;déjà lues</translation>
+    </message>
+    <message>
+        <location filename="../../tools/preferences.html.php" line="29"/>
         <source>Summary Schedule</source>
         <translation>Planification des envois des résumés</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="31"/>
-        <location filename="../../tools/preferences.html.php" line="54"/>
+        <location filename="../../tools/preferences.html.php" line="32"/>
+        <location filename="../../tools/preferences.html.php" line="55"/>
         <source>Select All</source>
         <translation>Tout sélectionner</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="33"/>
-        <location filename="../../tools/preferences.html.php" line="56"/>
+        <location filename="../../tools/preferences.html.php" line="34"/>
+        <location filename="../../tools/preferences.html.php" line="57"/>
         <source>Unselect All</source>
         <translation>Tout désélectionner</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="35"/>
+        <location filename="../../tools/preferences.html.php" line="36"/>
         <source>Send on the following days:</source>
         <translation>Jours d&apos;envoi :</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="59"/>
+        <location filename="../../tools/preferences.html.php" line="60"/>
         <source>Send at the following hours:</source>
         <translation>Heures d&apos;envoi :</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="70"/>
+        <location filename="../../tools/preferences.html.php" line="71"/>
         <source>You will not receive summary emails if you do not select any day and hour.</source>
         <translation>Vous ne recevrez pas d&apos;e-mails de résumé si vous n&apos;avez sélectionné ni jour ni heure.</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="76"/>
+        <location filename="../../tools/preferences.html.php" line="77"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="77"/>
+        <location filename="../../tools/preferences.html.php" line="78"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
