@@ -88,6 +88,7 @@ class Admin_Users_Index extends System_Web_Component
         $this->toolBar->addItemCommand( '/admin/users/access.php', '/common/images/edit-access-16.png', $this->tr( 'Change Access' ), array( 'access' ) );
         $this->toolBar->addItemCommand( '/admin/users/password.php', '/common/images/edit-password-16.png', $this->tr( 'Change Password' ) );
         $this->toolBar->addItemCommand( '/admin/users/rename.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename User' ) );
+        $this->toolBar->addItemCommand( '/admin/users/projects.php', '/common/images/view-members-16.png', $this->tr( 'User Projects' ) );
         $this->toolBar->addItemCommand( '/admin/users/preferences.php', '/common/images/preferences-16.png', $this->tr( 'User Preferences' ) );
 
         $javaScript = new System_Web_JavaScript( $this->view );

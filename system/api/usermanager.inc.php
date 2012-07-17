@@ -205,6 +205,63 @@ class System_Api_UserManager extends System_Api_Base
     }
 
     /**
+    * Get list of the projects of given user.
+    * @param $user The user to retrieve member projects.
+    * @return An array of associative arrays representing projects.
+    */
+    public function getUserProjects( $user )
+    {
+        $userId = $user[ 'user_id' ];
+
+        $query = 'SELECT project_id, user_id, project_access FROM {rights} WHERE user_id = %d';
+
+        return $this->connection->queryTable( $query, $userId );
+    }
+
+    /**
+    * Return the number of projects for the given user.
+    * @param $user The user to count projects.
+    * @return The number of project.
+    */
+    public function getUserProjectsCount( $user )
+    {
+        $userId = $user[ 'user_id' ];
+
+        $query = 'SELECT COUNT(*) FROM {rights} WHERE user_id = %d';
+ 
+        return $this->connection->queryScalar( $query, $userId );
+    }
+
+    /**
+    * Get paged list of the projects of given user.
+    * @param $user The user to retrieve projects.
+    * @param $orderBy The sorting order specifier.
+    * @param $limit Maximum number of rows to return.
+    * @param $offset Zero-based index of first row to return.
+    * @return An array of associative arrays representing projects.
+    */
+    public function getUserProjectsPage( $user, $orderBy, $limit, $offset )
+    {
+        $userId = $user[ 'user_id' ];
+
+        $query = 'SELECT r.project_id, r.user_id, r.project_access, p.project_name FROM {rights} AS r'
+            . ' JOIN {projects} AS p ON p.project_id = r.project_id AND r.user_id = %d';
+
+        return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $userId );
+    }
+
+    /**
+    * Return sortable column definitions for the System_Web_Grid.
+    */
+    public function getUserProjectsColumns()
+    {
+        return array(
+            'name' => 'p.project_name COLLATE LOCALE',
+            'access' => 'r.project_access'
+        );
+    }
+
+    /**
     * Check if the value is a valid user name. This is a helper method for
     * System_Api_Validator.
     * @param $value The value to validate.
