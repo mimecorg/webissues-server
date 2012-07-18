@@ -31,6 +31,9 @@ class Index extends System_Web_Component
 
     protected function execute()
     {
+        $serverManager = new System_Api_ServerManager();
+        $this->canRegister = $serverManager->getSetting( 'self_register' ) == 1 && $serverManager->getSetting( 'email_engine' ) != null;
+
         $this->view->setDecoratorClass( 'Common_MessageBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Log in to WebIssues' ) );
 

@@ -32,6 +32,7 @@ class Common_Application extends System_Web_Application
         parent::preparePage();
 
         if ( !$this->request->isRelativePath( '/index.php' )
+                && !$this->request->isRelativePath( '/register.php' )
                 && !$this->request->isRelativePathUnder( '/admin/setup' )
                 && !$this->request->isRelativePathUnder( '/common/errors' ) ) {
             $principal = System_Api_Principal::getCurrent();

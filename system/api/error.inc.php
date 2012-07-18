@@ -86,6 +86,8 @@ class System_Api_Error extends System_Core_Exception
     const CommaNotAllowed = '355 Comma Not Allowed';
     const TransactionDeadlock = '356 Transaction Deadlock';
     const ConstraintConflict = '357 Constraint Conflict';
+    const EmailAlreadyExists = '358 Email Already Exists';
+    const InvalidActivationKey = '359 Invalid Activation Key';
 
     public function __construct( $message, $wrappedException = null )
     {
