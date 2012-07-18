@@ -177,6 +177,18 @@ class Admin_Setup_Installer extends System_Web_Base
                 'pk'                => 'PRIMARY columns={"project_id","user_id"}',
                 'user_idx'          => 'INDEX columns={"user_id"}'
             ),
+            'register_requests' => array(
+                'request_id'        => 'SERIAL',
+                'user_login'        => 'VARCHAR length=40',
+                'user_name'         => 'VARCHAR length=40',
+                'user_email'        => 'VARCHAR length=40',
+                'user_passwd'       => 'VARCHAR length=255 ascii=1',
+                'request_key'       => 'CHAR length=8 ascii=1',
+                'created_time'      => 'INTEGER',
+                'is_active'         => 'INTEGER size="tiny"',
+                'is_sent'           => 'INTEGER size="tiny"',
+                'pk'                => 'PRIMARY columns={"request_id"}'
+            ),
             'server' => array(
                 'server_name'       => 'VARCHAR length=40',
                 'server_uuid'       => 'CHAR length=36 ascii=1',

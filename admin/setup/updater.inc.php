@@ -44,6 +44,26 @@ class Admin_Setup_Updater extends System_Web_Base
                 $this->connection->execute( $query, $key, $value );
         }
 
+        if ( version_compare( $version, '1.0.003' ) < 0 ) {
+            $fields = array(
+                'request_id'        => 'SERIAL',
+                'user_login'        => 'VARCHAR length=40',
+                'user_name'         => 'VARCHAR length=40',
+                'user_email'        => 'VARCHAR length=40',
+                'user_passwd'       => 'VARCHAR length=255 ascii=1',
+                'request_key'       => 'CHAR length=8 ascii=1',
+                'created_time'      => 'INTEGER',
+                'is_active'         => 'INTEGER size="tiny"',
+                'is_sent'           => 'INTEGER size="tiny"',
+                'pk'                => 'PRIMARY columns={"request_id"}'
+            );
+
+            $generator = $this->connection->getSchemaGenerator();
+
+            $generator->createTable( 'register_requests', $fields );
+            $generator->updateReferences();
+        }
+
         $query = 'DELETE FROM {sessions}';
         $this->connection->execute( $query );
 
