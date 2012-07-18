@@ -585,6 +585,7 @@ class System_Api_Validator
                 break;
 
             case 'hide_id_column':
+            case 'self_register':
                 if ( $value != '' )
                     $this->checkDecimalNumber( $value, 0, 0, 1 );
                 break;
@@ -595,6 +596,7 @@ class System_Api_Validator
                 break;
 
             case 'email_from':
+            case 'register_notify_email':
                 if ( $value != '' )
                     $this->checkEmailAddress( $value );
                 break;

@@ -35,6 +35,8 @@ class Admin_Settings_Index extends System_Web_Component
         Common_Tools_Locale::registerFields( $fields );
         Common_Tools_PageSize::registerFields( $fields );
         $fields[ 'hide_id_column' ] = 'hideIdColumn';
+        $fields[ 'self_register' ] = 'selfRegister';
+        $fields[ 'register_notify_email' ] = 'registerNotifyEmail';
         $fields[ 'comment_max_length' ] = 'commentMaxLength';
         $fields[ 'file_max_size' ] = 'fileMaxSize';
         $fields[ 'file_db_max_size' ] = 'fileDbMaxSize';
