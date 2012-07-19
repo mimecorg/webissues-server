@@ -48,8 +48,8 @@ class Admin_Users_AddProjects extends System_Web_Component
         $this->memberProjects = array_diff_key( $allProjects, $allMemberProjects );
 
         $this->form = new System_Web_Form( 'projects', $this );
-        foreach ( $this->memberProjects as $userId => $user )
-            $this->form->addField( 'project' . $userId, false );
+        foreach ( $this->memberProjects as $projectId => $project )
+            $this->form->addField( 'project' . $projectId, false );
         $this->form->addField( 'accessLevel', System_Const::NormalAccess );
 
         if ( empty( $this->memberProjects ) )

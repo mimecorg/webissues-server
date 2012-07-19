@@ -112,7 +112,7 @@ class Register extends System_Web_Component
         $registrationManager = new System_Api_RegistrationManager();
         try {
             $key = $registrationManager->generateKey();
-            $registrationManager->addRequest( $this->newLogin, $this->userName, $this->newPassword, $this->email, $key );
+            $registrationManager->addRequest( $this->login, $this->userName, $this->password, $this->email, $key );
         } catch ( System_Api_Error $ex ) {
             $this->form->getErrorHelper()->handleError( $ex->getMessage() == System_Api_Error::EmailAlreadyExists ? 'email' : 'userName', $ex );
         }
