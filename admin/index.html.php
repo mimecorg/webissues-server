@@ -11,6 +11,10 @@
 <dd><?php echo $this->tr( 'Configure notification email settings.' ) ?></dd>
 <dt><?php echo $this->imageAndTextlink( '/admin/users/index.php', '/common/images/view-users-16.png', $this->tr( 'User Accounts' ) ) ?></dt>
 <dd><?php echo $this->tr( 'Create and edit user accounts.' ) ?></dd>
+<?php if ( $canRegister ): ?>
+<dt><?php echo $this->imageAndTextlink( '/admin/register/index.php', '/common/images/user-new-16.png', $this->tr( 'Registration Requests' ) ) ?></dt>
+<dd><?php echo $this->tr( 'Approve and reject pending user registration requests.' ) ?></dd>
+<?php endif ?>
 <dt><?php echo $this->imageAndTextlink( '/admin/types/index.php', '/common/images/view-types-16.png', $this->tr( 'Issue Types' ) ) ?></dt>
 <dd><?php echo $this->tr( 'Create and edit issue types.' ) ?></dd>
 </dl>

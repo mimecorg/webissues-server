@@ -39,6 +39,7 @@ class Common_Breadcrumbs extends System_Web_Base
     const Tools = 12;
     const ManageProjects = 13;
     const UserProjects = 14;
+    const RegistrationRequests = 15;
 
     private $page = null;
 
@@ -111,6 +112,11 @@ class Common_Breadcrumbs extends System_Web_Base
                 $this->append( self::UserAccounts );
                 $this->urls[] = $this->filterQueryString( '/admin/users/projects.php', array( 'id', 'sort', 'order', 'page', 'type', 'psort', 'porder', 'ppage' ) );
                 $this->names[] = $this->tr( 'User Projects' );
+                break;
+
+            case self::RegistrationRequests:
+                $this->urls[] = $this->filterQueryString( '/admin/register/index.php', array( 'sort', 'order', 'page' ) );
+                $this->names[] = $this->tr( 'Registration Requests' );
                 break;
 
             case self::IssueTypes:
