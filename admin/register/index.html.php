@@ -11,7 +11,7 @@
 <?php $grid->renderHeader( $this->tr( 'Name' ), 'name' ) ?>
 <?php $grid->renderHeader( $this->tr( 'Login' ), 'login' ) ?>
 <?php $grid->renderHeader( $this->tr( 'Email' ), 'email' ) ?>
-<?php $grid->renderHeader( $this->tr( 'Registered Date' ), 'date' ) ?>
+<?php $grid->renderHeader( $this->tr( 'Date' ), 'date' ) ?>
 </tr>
 
 <?php foreach ( $requests as $requestId => $request ): ?>

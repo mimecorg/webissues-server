@@ -57,13 +57,24 @@ class Admin_Register_Approve extends System_Web_Component
 
             if ( $this->form->isSubmittedWith( 'ok' ) && !$this->form->hasErrors() ) {
                 $userId = $registrationManager->approveRequest( $this->register );
+
                 $userManager = new System_Api_UserManager();
                 $user = $userManager->getUser( $userId );
+
                 foreach ( $this->allProjects as $projectId => $project ) {
                     $fieldName = 'project' . $projectId;
                     if ( $this->$fieldName == 1 )
                         $userManager->grantMember( $user, $project, System_Const::NormalAccess );
                 }
+
+                $mail = System_Web_Component::createComponent( 'Common_Mail_Approve', null, $this->register );
+                $body = $mail->run();
+                $subject = $mail->getView()->getSlot( 'subject' );
+
+                $engine = new System_Mail_Engine();
+                $engine->loadSettings();
+                $engine->send( $this->register[ 'user_email' ], $this->register[ 'user_name' ], $subject, $body );
+
                 $this->response->redirect( $breadcrumbs->getParentUrl() );
             }
         }

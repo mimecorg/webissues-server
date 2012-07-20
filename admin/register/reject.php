@@ -47,6 +47,15 @@ class Admin_Register_Reject extends System_Web_Component
 
             if ( $this->form->isSubmittedWith( 'ok' ) ) {
                 $registrationManager->rejectRequest( $this->register );
+
+                $mail = System_Web_Component::createComponent( 'Common_Mail_Reject', null, $this->register );
+                $body = $mail->run();
+                $subject = $mail->getView()->getSlot( 'subject' );
+
+                $engine = new System_Mail_Engine();
+                $engine->loadSettings();
+                $engine->send( $this->register[ 'user_email' ], $this->register[ 'user_name' ], $subject, $body );
+
                 $this->response->redirect( $breadcrumbs->getParentUrl() );
             }
         }

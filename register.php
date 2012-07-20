@@ -113,6 +113,16 @@ class Register extends System_Web_Component
         try {
             $key = $registrationManager->generateKey();
             $registrationManager->addRequest( $this->login, $this->userName, $this->password, $this->email, $key );
+
+            $register = array( 'user_login' => $this->login, 'user_name' => $this->userName, 'user_email' => $this->email, 'request_key' => $key );
+
+            $mail = System_Web_Component::createComponent( 'Common_Mail_Register', null, $register );
+            $body = $mail->run();
+            $subject = $mail->getView()->getSlot( 'subject' );
+
+            $engine = new System_Mail_Engine();
+            $engine->loadSettings();
+            $engine->send( $this->email, $this->userName, $subject, $body );
         } catch ( System_Api_Error $ex ) {
             $this->form->getErrorHelper()->handleError( $ex->getMessage() == System_Api_Error::EmailAlreadyExists ? 'email' : 'userName', $ex );
         }
