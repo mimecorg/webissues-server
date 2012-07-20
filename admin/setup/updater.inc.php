@@ -62,6 +62,14 @@ class Admin_Setup_Updater extends System_Web_Base
 
             $generator->createTable( 'register_requests', $fields );
             $generator->updateReferences();
+
+            $settings = array(
+                'register_max_lifetime' => 86400
+            );
+
+            $query = 'INSERT INTO {settings} ( set_key, set_value ) VALUES ( %s, %s )';
+            foreach ( $settings as $key => $value )
+                $this->connection->execute( $query, $key, $value );
         }
 
         $query = 'DELETE FROM {sessions}';

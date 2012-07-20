@@ -42,6 +42,7 @@ class Admin_Settings_Index extends System_Web_Component
         $fields[ 'file_db_max_size' ] = 'fileDbMaxSize';
         $fields[ 'session_max_lifetime' ] = 'sessionMaxLifetime';
         $fields[ 'log_max_lifetime' ] = 'logMaxLifetime';
+        $fields[ 'register_max_lifetime' ] = 'registerMaxLifetime';
         $fields[ 'gc_divisor' ] = 'gcDivisor';
 
         $this->form = new System_Web_Form( 'settings', $this );
@@ -91,6 +92,10 @@ class Admin_Settings_Index extends System_Web_Component
         $this->logOptions[ 86400 ] = $this->tr( '1 day' );
         foreach ( array( 2, 3, 4, 5, 6, 7, 10, 14, 21, 30, 50, 70, 90, 120 ) as $i )
             $this->logOptions[ 86400 * $i ] = $this->tr( '%1 days', null, $i );
+
+        $this->registerOptions = array();
+        foreach ( array( 2, 4, 6, 12, 18, 24, 36, 48 ) as $i )
+            $this->registerOptions[ 3600 * $i ] = $this->tr( '%1 hours', null, $i );
 
         $this->gcOptions = array();
         $this->gcOptions[ 0 ] = $this->tr( 'Use cron job' );

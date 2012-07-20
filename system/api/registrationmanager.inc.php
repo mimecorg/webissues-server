@@ -76,6 +76,12 @@ class System_Api_RegistrationManager extends System_Api_Base
         if ( !( $request = $this->connection->queryRow( $query, $key ) ) )
             throw new System_Api_Error( System_Api_Error::InvalidActivationKey );
 
+        $serverManager = new System_Api_ServerManager();
+        $lifetime = $serverManager->getSetting( 'register_max_lifetime' );
+
+        if ( $request[ 'created_time' ] < time() - $lifetime )
+            throw new System_Api_Error( System_Api_Error::InvalidActivationKey );
+
         return $request;
     }
 
@@ -251,5 +257,18 @@ class System_Api_RegistrationManager extends System_Api_Base
             $eventLog->tr( 'Registration request for user "%1" rejected', null, $name ) );
 
         return $userId;
+    }
+
+    /**
+    * Remove expired registration requests that were not activated.
+    */
+    public function expireRequests()
+    {
+        $query = 'DELETE FROM {register_requests} WHERE is_active = 0 AND created_time < %d';
+
+        $serverManager = new System_Api_ServerManager();
+        $lifetime = $serverManager->getSetting( 'register_max_lifetime' );
+
+        $this->connection->execute( $query, time() - $lifetime );
     }
 }

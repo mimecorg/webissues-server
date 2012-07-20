@@ -54,6 +54,7 @@
 
 <?php $form->renderSelect( $this->tr( 'Session lifetime:' ), 'sessionMaxLifetime', $sessionOptions, array( 'style' => 'width: 10em;' ) ) ?>
 <?php $form->renderSelect( $this->tr( 'Event log lifetime:' ), 'logMaxLifetime', $logOptions, array( 'style' => 'width: 10em;' ) ) ?>
+<?php $form->renderSelect( $this->tr( 'Inactive user registration request lifetime:' ), 'registerMaxLifetime', $registerOptions, array( 'style' => 'width: 10em;' ) ) ?>
 
 </fieldset>
 

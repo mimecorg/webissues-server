@@ -577,6 +577,7 @@ class System_Api_Validator
                 break;
 
             case 'log_max_lifetime':
+            case 'register_max_lifetime':
                 $this->checkDecimalNumber( $value, 0, 300, System_Const::INT_MAX );
                 break;
 

@@ -449,6 +449,12 @@ abstract class System_Core_Application
 
         $eventLog = new System_Api_EventLog();
         $eventLog->expireEvents();
+
+        $serverManager = new System_Api_ServerManager();
+        if ( $serverManager->getSetting( 'self_register' ) == 1 ) {
+            $registrationManager = new System_Api_RegistrationManager();
+            $registrationManager->expireRequests();
+        }
     }
 
     /**

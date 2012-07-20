@@ -276,6 +276,7 @@ class Admin_Setup_Installer extends System_Web_Base
             'file_db_max_size'      => 4096,
             'session_max_lifetime'  => 7200,
             'log_max_lifetime'      => 604800,
+            'register_max_lifetime' => 86400,
             'gc_divisor'            => 100
         );
 
