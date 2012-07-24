@@ -271,4 +271,18 @@ class System_Api_RegistrationManager extends System_Api_Base
 
         $this->connection->execute( $query, time() - $lifetime );
     }
+
+    public function getRequestsToEmail()
+    {
+        $query = 'SELECT request_id, user_login, user_name, user_email, created_time FROM {register_requests} WHERE is_active = 1 AND is_sent = 0';
+
+        return $this->connection->queryTable( $query );
+    }
+
+    public function setRequestsMailed()
+    {
+        $query = 'UPDATE {register_requests} SET is_sent = 1 WHERE is_active = 1 AND is_sent = 0';
+
+        $this->connection->execute( $query );
+    }
 }

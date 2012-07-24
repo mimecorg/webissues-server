@@ -162,6 +162,29 @@ class Cron_Job extends System_Core_Application
         }
 
         System_Api_Principal::setCurrent( null );
+
+        $serverManager = new System_Api_ServerManager();
+
+        $selfRegister = $serverManager->getSetting( 'self_register' );
+        $notifyEmail = $serverManager->getSetting( 'register_notify_email' );
+
+        if ( $selfRegister == 1 && $notifyEmail != null ) {
+            $registrationManager = new System_Api_RegistrationManager();
+
+            $page = $registrationManager->getRequestsToEmail();
+
+            if ( !empty( $page ) ) {
+                $registrationManager->setRequestsMailed();
+
+                $mail = System_Web_Component::createComponent( 'Common_Mail_RegisterNotification', null, $page );
+
+                $body = $mail->run();
+                $subject = $mail->getView()->getSlot( 'subject' );
+
+                $engine->send( $notifyEmail, null, $subject, $body );
+                $this->sent++;
+            }
+        }
     }
 }
 
