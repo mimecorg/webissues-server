@@ -474,6 +474,9 @@ class System_Api_QueryGenerator
         $column = $filter->getMetadata( 'column' );
         $value = $filter->getMetadata( 'value' );
 
+        if ( $value == '' )
+            return $this->makeNullCondition( $expression, $type );
+
         switch ( $column ) {
             case System_Api_Column::ID:
                 return $this->makeNumericCondition( $expression, $type, (int)$value, '%d' );
@@ -562,6 +565,18 @@ class System_Api_QueryGenerator
         return $value;
     }
 
+    private function makeNullCondition( $expression, $type )
+    {
+        switch ( $type ) {
+            case 'EQ':
+                return "$expression IS NULL";
+            case 'NEQ':
+                return "$expression IS NOT NULL";
+            default:
+                throw new System_Core_Exception( 'Invalid operator' );
+        }
+    }
+
     private function makeStringCondition( $expression, $type, $value )
     {
         switch ( $type ) {
@@ -593,6 +608,8 @@ class System_Api_QueryGenerator
                     $this->arguments[] = $value;
                     return "$expression = %s";
                 }
+            default:
+                throw new System_Core_Exception( 'Invalid operator' );
         }
     }
 
