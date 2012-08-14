@@ -173,12 +173,22 @@
         <translation>Cuentas de Usuario</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="14"/>
+        <location filename="../../../admin/index.html.php" line="15"/>
+        <source>Registration Requests</source>
+        <translation>Solicitudes de Registro</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="16"/>
+        <source>Approve and reject pending user registration requests.</source>
+        <translation>Apruebe o Rechace las solicitudes pendientes de registro de usuario.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="18"/>
         <source>Issue Types</source>
         <translation>Tipos de Asunto</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="15"/>
+        <location filename="../../../admin/index.html.php" line="19"/>
         <source>Create and edit issue types.</source>
         <translation>Agregue y Edite tipos de Asunto.</translation>
     </message>
@@ -433,6 +443,115 @@
     </message>
 </context>
 <context>
+    <name>Admin_Register_Approve</name>
+    <message>
+        <location filename="../../../admin/register/approve.php" line="50"/>
+        <source>Approve Request</source>
+        <translation>Aprobar Solicitud</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="6"/>
+        <source>Select All</source>
+        <translation>Seleccionar Todo</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="8"/>
+        <source>Unselect All</source>
+        <translation>Quitar toda la selección</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="14"/>
+        <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt; and add the user to the selected projects.</source>
+        <translation>Apruebe la solicitud de registro para el usuario &lt;strong&gt;%1&lt;/strong&gt; y agregue al usuario al proyecto seleccionado.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="16"/>
+        <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Apruebe la solicitud de registo para el usuario &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="24"/>
+        <source>Projects</source>
+        <translation>Proyectos</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="40"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="41"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Register_Index</name>
+    <message>
+        <location filename="../../../admin/register/index.php" line="33"/>
+        <source>Registration Requests</source>
+        <translation>Solicitudes de Registro</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.php" line="61"/>
+        <source>Approve Request</source>
+        <translation>Aprobar Solicitud</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.php" line="62"/>
+        <source>Reject Request</source>
+        <translation>Negar Solicitud</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.html.php" line="11"/>
+        <source>Name</source>
+        <translation>Nombre</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.html.php" line="12"/>
+        <source>Login</source>
+        <translation>Inicio de Sesión</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.html.php" line="13"/>
+        <source>Email</source>
+        <translation>Correo Eléctronico</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.html.php" line="14"/>
+        <source>Date</source>
+        <translation>Fecha</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.html.php" line="38"/>
+        <source>There are no pending registration requests.</source>
+        <translation>No hay solicitudes de registro pendientes.</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Register_Reject</name>
+    <message>
+        <location filename="../../../admin/register/reject.php" line="37"/>
+        <source>Reject Request</source>
+        <translation>Rechazar Solicitud</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/reject.html.php" line="3"/>
+        <source>Do you want to reject registration request for user &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Desea rechazar la solicitud de registro para el usuario &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/reject.html.php" line="8"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/reject.html.php" line="9"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
     <name>Admin_Settings_Index</name>
     <message>
         <location filename="../../../admin/settings/index.php" line="33"/>
@@ -440,53 +559,54 @@
         <translation>Configuración del Servidor</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="71"/>
-        <location filename="../../../admin/settings/index.php" line="78"/>
+        <location filename="../../../admin/settings/index.php" line="74"/>
+        <location filename="../../../admin/settings/index.php" line="81"/>
         <source>%1 kB</source>
         <translation>%1 kB</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="73"/>
+        <location filename="../../../admin/settings/index.php" line="76"/>
         <source>%1 MB</source>
         <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="76"/>
+        <location filename="../../../admin/settings/index.php" line="79"/>
         <source>Never</source>
         <translation>Nunca</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="79"/>
+        <location filename="../../../admin/settings/index.php" line="82"/>
         <source>Always</source>
         <translation>Siempre</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="83"/>
+        <location filename="../../../admin/settings/index.php" line="86"/>
         <source>%1 minutes</source>
         <translation>%1 minutos</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="84"/>
+        <location filename="../../../admin/settings/index.php" line="87"/>
         <source>1 hour</source>
         <translation>1 Hora</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="86"/>
+        <location filename="../../../admin/settings/index.php" line="89"/>
+        <location filename="../../../admin/settings/index.php" line="98"/>
         <source>%1 hours</source>
         <translation>%1 horas</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="89"/>
+        <location filename="../../../admin/settings/index.php" line="92"/>
         <source>1 day</source>
         <translation>1 día</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="91"/>
+        <location filename="../../../admin/settings/index.php" line="94"/>
         <source>%1 days</source>
         <translation>%1 días</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="94"/>
+        <location filename="../../../admin/settings/index.php" line="101"/>
         <source>Use cron job</source>
         <translation>Usar trabajo Cron</translation>
     </message>
@@ -507,81 +627,111 @@
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="19"/>
+        <source>User Registration</source>
+        <translation>Registro de Usuario</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="21"/>
+        <source>This option allows users to register with administrator&apos;s approval. Sending emails needs to be enabled.</source>
+        <translation>Esta opción permite a los usuarios registrarse con la aprobación del administrador. Es necesario que el envio de correos este habilitado.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="23"/>
+        <source>Enable user registration</source>
+        <translation>Activar el registro de usuarios</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="25"/>
+        <source>Optionally send email notifications about registration requests to this address. Requires the cron job to be running.</source>
+        <translation>Opcionalmente enviar notificaciones por correo acerca de las solicitudes de registro a esta dirección. Es necesario que los trabajos de cron esten funcionando.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="27"/>
+        <source>Email address:</source>
+        <translation>Dirección de CorreoE:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="32"/>
         <source>Limits</source>
         <translation>Limites</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="21"/>
+        <location filename="../../../admin/settings/index.html.php" line="34"/>
         <source>The maximum length (in characters) of comments and the maximum size (in bytes) of attached files that are allowed.</source>
         <translation>La longitud máxima (en caracteres) de los comentarios y el tamaño máximo (en bytes) de los adjuntos que son permitidos.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="23"/>
+        <location filename="../../../admin/settings/index.html.php" line="36"/>
         <source>Maximum comment length:</source>
         <translation>Longitud máxima para los comentarios:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="24"/>
+        <location filename="../../../admin/settings/index.html.php" line="37"/>
         <source>Maximum attachment size:</source>
         <translation>Tamaño máxima para los adjuntos:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="29"/>
+        <location filename="../../../admin/settings/index.html.php" line="42"/>
         <source>Attachment Storage</source>
         <translation>Almacenamiento de Adjuntos</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="31"/>
+        <location filename="../../../admin/settings/index.html.php" line="44"/>
         <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
         <translation>El tamaño maximo (en bytes) de los archivos que serán almacenados en la base de datos. Archivos mas grandes serán almacenados en el sistema de archivos.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="33"/>
+        <location filename="../../../admin/settings/index.html.php" line="46"/>
         <source>Maximum database storage size:</source>
         <translation>Tamaño máximo de almacenamiento en la base de datos:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="38"/>
+        <location filename="../../../admin/settings/index.html.php" line="51"/>
         <source>Maximum Lifetime</source>
         <translation>Tiempo máximo de vida</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="40"/>
+        <location filename="../../../admin/settings/index.html.php" line="53"/>
         <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
         <translation>El tiempo máximo despues de que cada sesión inactiva y registro de eventos son eliminados.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="42"/>
+        <location filename="../../../admin/settings/index.html.php" line="55"/>
         <source>Session lifetime:</source>
         <translation>Tiempo de vida para la sesión:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="43"/>
+        <location filename="../../../admin/settings/index.html.php" line="56"/>
         <source>Event log lifetime:</source>
         <translation>Tiempo de vida para el registro de evento:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="48"/>
+        <location filename="../../../admin/settings/index.html.php" line="57"/>
+        <source>Inactive user registration request lifetime:</source>
+        <translation>Tiempo de vida de una solicitud de registro de usuario inactiva:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="62"/>
         <source>Garbage Collection</source>
         <translation>Colección de Basura</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="50"/>
+        <location filename="../../../admin/settings/index.html.php" line="64"/>
         <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
         <translation>La probabilidad de coleccionar basura despues de cada solicitud. Si el trabajo Cron es usado para coleccionar basura, asegurese de que se esta ejecutando.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="52"/>
+        <location filename="../../../admin/settings/index.html.php" line="66"/>
         <source>GC probability:</source>
         <translation>Probabilidad de CB:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="57"/>
+        <location filename="../../../admin/settings/index.html.php" line="71"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="58"/>
+        <location filename="../../../admin/settings/index.html.php" line="72"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -1018,205 +1168,205 @@
 <context>
     <name>Admin_Setup_Installer</name>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="254"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="266"/>
         <source>Administrator</source>
         <translation>Administrador</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="279"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="292"/>
         <source>Forum</source>
         <translation>Foro</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="285"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
         <source>Bugs</source>
         <translation>Errores</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="288"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="301"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation>Asignado a</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="295"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
         <source>Status</source>
         <comment>bug</comment>
         <translation>Estado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="300"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="340"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="348"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="313"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="369"/>
         <source>Active</source>
         <comment>bug</comment>
         <translation>Activo</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="376"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translation>Resuelto</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translation>Cerrado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="304"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="317"/>
         <source>Reason</source>
         <translation>Razón</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="307"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
         <source>Fixed</source>
         <translation>Corregido</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="307"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
         <source>Obsolete</source>
         <translation>Obsoleto</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="307"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
         <source>Duplicate</source>
         <translation>Duplicado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
         <source>As Designed</source>
         <translation>Como diseñado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
         <source>Unable To Reproduce</source>
         <translation>No disponible para reproducir</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
         <source>Test Failed</source>
         <translation>Prueba fallida</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="312"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="325"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translation>Prioridad</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="335"/>
         <source>Version</source>
         <translation>Versión</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="330"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translation>Creado por mi</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="337"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="350"/>
         <source>Active Bugs</source>
         <translation>Errores activos</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="344"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
         <source>My Active Bugs</source>
         <translation>Mis errores activos</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="352"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
         <source>Unassigned Bugs</source>
         <translation>Errores sin asignar</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="360"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="373"/>
         <source>Resolved Bugs</source>
         <translation>Errores resueltos&gt;</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="369"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
         <source>Tasks</source>
         <translation>Tareas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="372"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="385"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translation>Asignado a</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="379"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="392"/>
         <source>Status</source>
         <comment>task</comment>
         <translation>Estado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="384"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="424"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="432"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="437"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="453"/>
         <source>Active</source>
         <comment>task</comment>
         <translation>Activo</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
         <source>Closed</source>
         <comment>task</comment>
         <translation>Cerrado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="388"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="401"/>
         <source>Priority</source>
         <comment>task</comment>
         <translation>Prioridad</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="398"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="411"/>
         <source>Progress</source>
         <translation>Avance</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="406"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
         <source>Due Date</source>
         <translation>Fecha Limite</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="414"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translation>Creado por mi</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="421"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="434"/>
         <source>Active Tasks</source>
         <translation>Tareas Activas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="428"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
         <source>My Active Tasks</source>
         <translation>Mis Tareas Activas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="436"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="449"/>
         <source>Unassigned Tasks</source>
         <translation>Tareas sin asginar</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="444"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="457"/>
         <source>Completed Tasks</source>
         <translation>Tareas concluidas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="460"/>
         <source>Completed</source>
         <comment>task</comment>
         <translation>Concluidas</translation>
@@ -1884,6 +2034,69 @@
     </message>
 </context>
 <context>
+    <name>Admin_Users_AddProjects</name>
+    <message>
+        <location filename="../../../admin/users/addprojects.php" line="59"/>
+        <source>Add Projects</source>
+        <translation>Agregar Proyectos</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.php" line="62"/>
+        <source>Regular Member</source>
+        <translation>Miembro Normal</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.php" line="63"/>
+        <source>Project Administrator</source>
+        <translation>Administrador del Proyecto</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="6"/>
+        <source>Select All</source>
+        <translation>Seleccionar Todo</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="8"/>
+        <source>Unselect All</source>
+        <translation>Quitar toda la selección</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="13"/>
+        <source>Add user &lt;strong&gt;%1&lt;/strong&gt; to the selected projects.</source>
+        <translation>Agregar usuario &lt;strong&gt;%1&lt;/strong&gt; al proyecto seleccionado.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="20"/>
+        <source>Projects</source>
+        <translation>Proyectos</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="36"/>
+        <source>Access</source>
+        <translation>Acceso</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="41"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="42"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="47"/>
+        <source>There are no more available projects to add.</source>
+        <translation>No hay mas proyectos disponibles por agregar.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="50"/>
+        <source>Close</source>
+        <translation>Cerrar</translation>
+    </message>
+</context>
+<context>
     <name>Admin_Users_Index</name>
     <message>
         <location filename="../../../admin/users/index.php" line="33"/>
@@ -1964,8 +2177,127 @@
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="91"/>
+        <source>User Projects</source>
+        <translation>Proyectos del Usuario</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.php" line="92"/>
         <source>User Preferences</source>
         <translation>Preferencias del Usuario</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Users_ProjectAccess</name>
+    <message>
+        <location filename="../../../admin/users/projectaccess.php" line="37"/>
+        <source>Change Access</source>
+        <translation>Cambiar Acceso</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projectaccess.php" line="52"/>
+        <source>Regular member</source>
+        <translation>Miembro Normal</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projectaccess.php" line="53"/>
+        <source>Project administrator</source>
+        <translation>Administrador del Proyecto</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projectaccess.html.php" line="4"/>
+        <source>Set new access level to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <translation>Establecer nuevo nivel de acceso al proyecto &lt;strong&gt;%1&lt;/strong&gt; para el usuario &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projectaccess.html.php" line="11"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projectaccess.html.php" line="12"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Users_Projects</name>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="37"/>
+        <source>User Projects</source>
+        <translation>Proyectos del Usuario</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="58"/>
+        <source>Regular member</source>
+        <translation>Miembro Normal</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="59"/>
+        <source>Project administrator</source>
+        <translation>Administrador del Proyecto</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="78"/>
+        <source>Add Projects</source>
+        <translation>Agregar Proyectos</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="79"/>
+        <source>Change Access</source>
+        <translation>Cambiar Acceso</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="80"/>
+        <source>Remove Project</source>
+        <translation>Eliminar Proyecto</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="3"/>
+        <source>Projects of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Proyectos para el usuario &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="15"/>
+        <source>Name</source>
+        <translation>Nombre</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="16"/>
+        <source>Access Level</source>
+        <translation>Nivel de Acceso</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="42"/>
+        <source>This user is not a member of any project.</source>
+        <translation>Este usuario no es miembro de ningún proyecto.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="47"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Users_RemoveProject</name>
+    <message>
+        <location filename="../../../admin/users/removeproject.php" line="37"/>
+        <source>Remove Project</source>
+        <translation>Eliminar Proyecto</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/removeproject.html.php" line="4"/>
+        <source>Do you want to remove user &lt;strong&gt;%1&lt;/strong&gt; from project &lt;strong&gt;%2&lt;/strong&gt;?</source>
+        <translation>Quiere remover al usuario &lt;strong&gt;%1&lt;/strong&gt; del proyecto &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/removeproject.html.php" line="9"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/removeproject.html.php" line="10"/>
+        <source>Cancel</source>
+        <translation>Cancel</translation>
     </message>
 </context>
 <context>
@@ -3777,52 +4109,62 @@
 <context>
     <name>Common_Breadcrumbs</name>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="96"/>
+        <location filename="../../breadcrumbs.inc.php" line="98"/>
         <source>General Information</source>
         <translation>Información General</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="101"/>
+        <location filename="../../breadcrumbs.inc.php" line="103"/>
         <source>Event Log</source>
         <translation>Registro de Eventos</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="106"/>
+        <location filename="../../breadcrumbs.inc.php" line="108"/>
         <source>User Accounts</source>
         <translation>Cuentas de Usuario</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="111"/>
+        <location filename="../../breadcrumbs.inc.php" line="114"/>
+        <source>User Projects</source>
+        <translation>Proyectos del Usuario</translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="119"/>
+        <source>Registration Requests</source>
+        <translation>Solicitudes de Registro</translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="124"/>
         <source>Issue Types</source>
         <translation>Tipos de Asunto</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="117"/>
+        <location filename="../../breadcrumbs.inc.php" line="130"/>
         <source>View Settings</source>
         <translation>Configuración de las Vistas</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="128"/>
+        <location filename="../../breadcrumbs.inc.php" line="141"/>
         <source>Project Members</source>
         <translation>Miembros del Proyecto</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="140"/>
+        <location filename="../../breadcrumbs.inc.php" line="153"/>
         <source>Manage Views</source>
         <translation>Administrar Vistas</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="146"/>
+        <location filename="../../breadcrumbs.inc.php" line="159"/>
         <source>Manage Alerts</source>
         <translation>Administrar Alertas</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="157"/>
+        <location filename="../../breadcrumbs.inc.php" line="170"/>
         <source>Tools</source>
         <translation>Herramientas</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="162"/>
+        <location filename="../../breadcrumbs.inc.php" line="175"/>
         <source>Manage Projects</source>
         <translation>Administrar Proyectos</translation>
     </message>
@@ -3974,6 +4316,40 @@
     </message>
 </context>
 <context>
+    <name>Common_Mail_Approve</name>
+    <message>
+        <location filename="../../mail/approve.inc.php" line="37"/>
+        <location filename="../../mail/approve.html.php" line="3"/>
+        <source>WebIssues Server registration approved</source>
+        <translation>Registro del Servidor WebIssues aprobada</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="5"/>
+        <source>Your registration request at the WebIssues Server was approved by the administrator.</source>
+        <translation>Su solicitud de registro al Servidor WebIssues fue aprobada por el administrador.</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="7"/>
+        <source>To log in to the WebIssues Server, please visit the following URL:</source>
+        <translation>Para ingresar el Servidor WebIssues, por favor visite el siguiente URL:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="12"/>
+        <source>User name: %1</source>
+        <translation>Nombre de Usuario: %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="13"/>
+        <source>Login: %1</source>
+        <translation>Inicio de Sesión: %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="14"/>
+        <source>Email address: %1</source>
+        <translation>Dirección de Correo: %1</translation>
+    </message>
+</context>
+<context>
     <name>Common_Mail_Notification</name>
     <message>
         <location filename="../../mail/notification.inc.php" line="60"/>
@@ -4092,6 +4468,114 @@
         <location filename="../../mail/notification.html.php" line="234"/>
         <source>This is an alert email from the WebIssues Server.</source>
         <translation>Esta es una alerta de correo electrónico del servidor de WebIssues.</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Mail_Register</name>
+    <message>
+        <location filename="../../mail/register.inc.php" line="37"/>
+        <location filename="../../mail/register.html.php" line="3"/>
+        <source>WebIssues Server email verification</source>
+        <translation>Verificación de correo para el Servidor WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="5"/>
+        <source>Thank you for registering at the WebIssues Server.</source>
+        <translation>Gracias por registro al Servidor de WebIssues.</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="7"/>
+        <source>To activate your registration request, please visit the following URL:</source>
+        <translation>Para activar su solicitud de registro, por favor visite el siguiente URL:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="12"/>
+        <source>User name: %1</source>
+        <translation>Nombre de Usuario: %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="13"/>
+        <source>Login: %1</source>
+        <translation>Inicio de Sesión: %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="14"/>
+        <source>Email address: %1</source>
+        <translation>Dirección de Correo: %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="17"/>
+        <source>If you didn&apos;t register, please ignore this email.</source>
+        <translation>Si Ud no se ha registrado, por favor ignore este correo.</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Mail_RegisterNotification</name>
+    <message>
+        <location filename="../../mail/registernotification.inc.php" line="37"/>
+        <location filename="../../mail/registernotification.html.php" line="6"/>
+        <location filename="../../mail/registernotification.html.php" line="8"/>
+        <source>Registration Requests</source>
+        <translation>Solicitud de Registro</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="13"/>
+        <source>You have the following new registration requests pending for approval:</source>
+        <translation>Ud tiene las siguientes solicitudes de registro nuevas por aprobar:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="17"/>
+        <source>Name</source>
+        <translation>Nombre</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="18"/>
+        <source>Login</source>
+        <translation>Inicio de Sesión</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="19"/>
+        <source>Email</source>
+        <translation>Correo Electrónico</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="20"/>
+        <source>Date</source>
+        <translation>Fecha</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="32"/>
+        <source>This is an alert email from the WebIssues Server.</source>
+        <translation>Esta es una alerta de correo electrónico del servidor de WebIssues.</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Mail_Reject</name>
+    <message>
+        <location filename="../../mail/reject.inc.php" line="37"/>
+        <location filename="../../mail/reject.html.php" line="3"/>
+        <source>WebIssues Server registration rejected</source>
+        <translation>Solicitu de registo en el Servidor de WebIssues rechazada</translation>
+    </message>
+    <message>
+        <location filename="../../mail/reject.html.php" line="5"/>
+        <source>Sorry, your registration request at the WebIssues Server was rejected by the administrator.</source>
+        <translation>Disculpe, su solicitud de registro en el Servidor WebIssues ha sido rechazada por el administrador.</translation>
+    </message>
+    <message>
+        <location filename="../../mail/reject.html.php" line="8"/>
+        <source>User name: %1</source>
+        <translation>Nombre de Usuario: %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/reject.html.php" line="9"/>
+        <source>Login: %1</source>
+        <translation>Inicio de Sesión: %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/reject.html.php" line="10"/>
+        <source>Email address: %1</source>
+        <translation>Dirección de Correo: %1</translation>
     </message>
 </context>
 <context>
@@ -4818,7 +5302,7 @@
 <context>
     <name>Index</name>
     <message>
-        <location filename="../../../index.php" line="35"/>
+        <location filename="../../../index.php" line="38"/>
         <source>Log in to WebIssues</source>
         <translation>Iniciar Sesión en WebIssues</translation>
     </message>
@@ -4834,29 +5318,128 @@
     </message>
     <message>
         <location filename="../../../index.html.php" line="12"/>
-        <location filename="../../../index.html.php" line="23"/>
+        <source>Register new account</source>
+        <translation>Registrar nueva cuenta</translation>
+    </message>
+    <message>
+        <location filename="../../../index.html.php" line="16"/>
+        <location filename="../../../index.html.php" line="27"/>
         <source>Log in</source>
         <translation>Inicio de Sesión</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="18"/>
+        <location filename="../../../index.html.php" line="22"/>
         <source>You have to enter a new password in order to log in.</source>
         <translation>Ud debe introducir una nueva contraseña para iniciar sesión.</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="19"/>
+        <location filename="../../../index.html.php" line="23"/>
         <source>New password:</source>
         <translation>Nueva Contraseña:</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="20"/>
+        <location filename="../../../index.html.php" line="24"/>
         <source>Confirm password:</source>
         <translation>Confirmar Contraseña:</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="24"/>
+        <location filename="../../../index.html.php" line="28"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Register</name>
+    <message>
+        <location filename="../../../register.php" line="39"/>
+        <source>Register new account</source>
+        <translation>Registrar nueva cuenta</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="8"/>
+        <source>Fill the information below to begin registration. Note that administrator&apos;s approval is required before you can log in.</source>
+        <translation>Llene la siguiente información para iniciar con su registro. Considere que la aprobación del administrador es necesaria antes de que Ud pueda iniciar sesión.</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="11"/>
+        <source>User Name</source>
+        <translation>Nombre de Usuario</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="13"/>
+        <source>Enter the user name that will be visible to other users.</source>
+        <translation>Introduzca el nombre de usuario que será visible para otros usuarios.</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="15"/>
+        <source>Name:</source>
+        <translation>Nombre:</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="20"/>
+        <source>Credentials</source>
+        <translation>Credenciales</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="22"/>
+        <source>Enter login and password for your new account.</source>
+        <translation>Introduzca el nombre de inicio de sesión y contraseña para su nueva cuenta.</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="24"/>
+        <source>Login:</source>
+        <translation>Inicio de Sesión:</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="25"/>
+        <source>Password:</source>
+        <translation>Contraseña:</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="26"/>
+        <source>Confirm password:</source>
+        <translation>Confirme su contraseña:</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="31"/>
+        <source>Email Address</source>
+        <translation>Dirección de Correo</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="33"/>
+        <source>Email address:</source>
+        <translation>Dirección de CorreoE:</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="35"/>
+        <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
+        <translation>Esta dirección solo será visible para el administrador del sistema. Un correo de activación será enviado a esta dirección.</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="40"/>
+        <source>Register</source>
+        <translation>Registrar</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="41"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="47"/>
+        <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
+        <translation>Gracias por registrarse. En un corto tiempo Ud recibirá un correo de activación con las instrucciones para complementar el registro.</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="50"/>
+        <location filename="../../../register.html.php" line="59"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="56"/>
+        <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
+        <translation>Su solicitud de registro fue activada. Ud recivirá un correo de notificación cuando el administrador apruebe su solicitud.</translation>
     </message>
 </context>
 <context>
@@ -4913,6 +5496,29 @@
         <location filename="../../../system/api/projectmanager.inc.php" line="483"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
         <translation>Folder &quot;%1&quot; ha sido movido del proyecto &quot;%2&quot; al proyecto &quot;%3&quot;</translation>
+    </message>
+</context>
+<context>
+    <name>System_Api_RegistrationManager</name>
+    <message>
+        <location filename="../../../system/api/registrationmanager.inc.php" line="171"/>
+        <source>User &quot;%1&quot; registered</source>
+        <translation>Usuario &quot;%1&quot; registrado</translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/registrationmanager.inc.php" line="194"/>
+        <source>Registration request for user &quot;%1&quot; activated</source>
+        <translation>Solicitud de registro apra el usuario &quot;%1&quot; activada</translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/registrationmanager.inc.php" line="238"/>
+        <source>Registration request for user &quot;%1&quot; approved</source>
+        <translation>Solicitud de registro para el usuario &quot;%1&quot; aprobada</translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/registrationmanager.inc.php" line="257"/>
+        <source>Registration request for user &quot;%1&quot; rejected</source>
+        <translation>Solicitud de registro para el usuario &quot;%1&quot; rechazada</translation>
     </message>
 </context>
 <context>
@@ -4992,52 +5598,52 @@
 <context>
     <name>System_Api_UserManager</name>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="273"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="330"/>
         <source>Added user &quot;%1&quot;</source>
         <translation>Usuario%1 agregado</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="303"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="360"/>
         <source>Changed password for user &quot;%1&quot;</source>
         <translation>La contraseña para el usuario %1 ha sido modificada</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="348"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="405"/>
         <source>User &quot;%1&quot; changed own password</source>
         <translation>El usario %1 ha cambiado su propio password</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="386"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="443"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>El usuario &quot;%1&quot; se ha renombrado por &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="418"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="475"/>
         <source>Disabled access for user &quot;%1&quot;</source>
         <translation>Acceso denegado para el usuario &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="422"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="479"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
         <translation>Se ha otorgado acceso normal para el usuario &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="426"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="483"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
         <translation>Se ha otorgado acceso de administrador para el usuario &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="481"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="538"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation>El usuario &quot;%1&quot; se ha quitado del proyecto &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="485"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="542"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Se ha otorgado acceso normal para el usuario &quot;%1&quot; en el proyecto &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="489"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="546"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Se ha otorgado acceso de administrador para el usuario &quot;%1&quot; en el proyecto &quot;%2&quot;</translation>
     </message>
@@ -5376,6 +5982,21 @@
         <location filename="../../../system/web/errorhelper.inc.php" line="181"/>
         <source>One of the dependent objects no longer exists</source>
         <translation>Uno de los objetos dependientes ya no existe</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="183"/>
+        <source>A user with this email address already exists</source>
+        <translation>Un usuario con este correo electrónico ya existe</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="185"/>
+        <source>The activation key is invalid</source>
+        <translation>La llave de activación es invalida</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="187"/>
+        <source>Request does not exist</source>
+        <translation>La solicitud no existe</translation>
     </message>
 </context>
 <context>

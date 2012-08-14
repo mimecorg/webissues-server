@@ -173,12 +173,22 @@
         <translation>用户账户</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="14"/>
+        <location filename="../../../admin/index.html.php" line="15"/>
+        <source>Registration Requests</source>
+        <translation>注册请求</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="16"/>
+        <source>Approve and reject pending user registration requests.</source>
+        <translation>批准或拒绝用户注册请求。</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="18"/>
         <source>Issue Types</source>
         <translation>工作项类型</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="15"/>
+        <location filename="../../../admin/index.html.php" line="19"/>
         <source>Create and edit issue types.</source>
         <translation>创建和编辑工作项类型。</translation>
     </message>
@@ -433,6 +443,115 @@
     </message>
 </context>
 <context>
+    <name>Admin_Register_Approve</name>
+    <message>
+        <location filename="../../../admin/register/approve.php" line="50"/>
+        <source>Approve Request</source>
+        <translation>通过请求</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="6"/>
+        <source>Select All</source>
+        <translation>全选</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="8"/>
+        <source>Unselect All</source>
+        <translation>全取消选择</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="14"/>
+        <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt; and add the user to the selected projects.</source>
+        <translation>通过用户&lt;strong&gt;%1&lt;/strong&gt;的注册请求并将他加入到所选择的项目。</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="16"/>
+        <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>通过用户&lt;strong&gt;%1&lt;/strong&gt;的注册请求。</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="24"/>
+        <source>Projects</source>
+        <translation>项目</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="40"/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/approve.html.php" line="41"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Register_Index</name>
+    <message>
+        <location filename="../../../admin/register/index.php" line="33"/>
+        <source>Registration Requests</source>
+        <translation>注册请求</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.php" line="61"/>
+        <source>Approve Request</source>
+        <translation>同意请求</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.php" line="62"/>
+        <source>Reject Request</source>
+        <translation>拒绝请求</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.html.php" line="11"/>
+        <source>Name</source>
+        <translation>用户名</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.html.php" line="12"/>
+        <source>Login</source>
+        <translation>登录</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.html.php" line="13"/>
+        <source>Email</source>
+        <translation>Email</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.html.php" line="14"/>
+        <source>Date</source>
+        <translation>日期</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/index.html.php" line="38"/>
+        <source>There are no pending registration requests.</source>
+        <translation>没有待处理的注册请求。</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Register_Reject</name>
+    <message>
+        <location filename="../../../admin/register/reject.php" line="37"/>
+        <source>Reject Request</source>
+        <translation>拒绝请求</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/reject.html.php" line="3"/>
+        <source>Do you want to reject registration request for user &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>确定要拒绝用户&lt;strong&gt;%1&lt;/strong&gt;的注册请求吗？</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/reject.html.php" line="8"/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/register/reject.html.php" line="9"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+</context>
+<context>
     <name>Admin_Settings_Index</name>
     <message>
         <location filename="../../../admin/settings/index.php" line="33"/>
@@ -440,53 +559,54 @@
         <translation>服务器设置</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="71"/>
-        <location filename="../../../admin/settings/index.php" line="78"/>
+        <location filename="../../../admin/settings/index.php" line="74"/>
+        <location filename="../../../admin/settings/index.php" line="81"/>
         <source>%1 kB</source>
         <translation>%1KB</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="73"/>
+        <location filename="../../../admin/settings/index.php" line="76"/>
         <source>%1 MB</source>
         <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="76"/>
+        <location filename="../../../admin/settings/index.php" line="79"/>
         <source>Never</source>
         <translation>不使用</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="79"/>
+        <location filename="../../../admin/settings/index.php" line="82"/>
         <source>Always</source>
         <translation>总是</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="83"/>
+        <location filename="../../../admin/settings/index.php" line="86"/>
         <source>%1 minutes</source>
         <translation>%1 分</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="84"/>
+        <location filename="../../../admin/settings/index.php" line="87"/>
         <source>1 hour</source>
         <translation>1 小时</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="86"/>
+        <location filename="../../../admin/settings/index.php" line="89"/>
+        <location filename="../../../admin/settings/index.php" line="98"/>
         <source>%1 hours</source>
         <translation>%1 小时</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="89"/>
+        <location filename="../../../admin/settings/index.php" line="92"/>
         <source>1 day</source>
         <translation>1 天</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="91"/>
+        <location filename="../../../admin/settings/index.php" line="94"/>
         <source>%1 days</source>
         <translation>%1 天</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="94"/>
+        <location filename="../../../admin/settings/index.php" line="101"/>
         <source>Use cron job</source>
         <translation>使用Cron计划任务</translation>
     </message>
@@ -507,81 +627,111 @@
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="19"/>
+        <source>User Registration</source>
+        <translation>用户注册</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="21"/>
+        <source>This option allows users to register with administrator&apos;s approval. Sending emails needs to be enabled.</source>
+        <translation>此选项允许用户在管理员批准后注册。此功能需要开启邮件发送功能。</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="23"/>
+        <source>Enable user registration</source>
+        <translation>允许用户注册</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="25"/>
+        <source>Optionally send email notifications about registration requests to this address. Requires the cron job to be running.</source>
+        <translation>将注册请求以通知发送到此邮箱。此功能需要开启Cron。</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="27"/>
+        <source>Email address:</source>
+        <translation>邮件地址：</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="32"/>
         <source>Limits</source>
         <translation>限制</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="21"/>
+        <location filename="../../../admin/settings/index.html.php" line="34"/>
         <source>The maximum length (in characters) of comments and the maximum size (in bytes) of attached files that are allowed.</source>
         <translation>评论的最大长度（以字节为单位）和附件的最大大小。</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="23"/>
+        <location filename="../../../admin/settings/index.html.php" line="36"/>
         <source>Maximum comment length:</source>
         <translation>评论最大长度：</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="24"/>
+        <location filename="../../../admin/settings/index.html.php" line="37"/>
         <source>Maximum attachment size:</source>
         <translation>附件最大大小：</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="29"/>
+        <location filename="../../../admin/settings/index.html.php" line="42"/>
         <source>Attachment Storage</source>
         <translation>附件保存</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="31"/>
+        <location filename="../../../admin/settings/index.html.php" line="44"/>
         <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
         <translation>保存到数据库中的文件的最大大小（以字节为单位），超过此大小的文件将被保存在文件系统中。</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="33"/>
+        <location filename="../../../admin/settings/index.html.php" line="46"/>
         <source>Maximum database storage size:</source>
         <translation>数据库最大大小：</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="38"/>
+        <location filename="../../../admin/settings/index.html.php" line="51"/>
         <source>Maximum Lifetime</source>
         <translation>最大生命周期</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="40"/>
+        <location filename="../../../admin/settings/index.html.php" line="53"/>
         <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
         <translation>失活会话及事件最大存活期，超过此值的会话或事件会被自动删除。</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="42"/>
+        <location filename="../../../admin/settings/index.html.php" line="55"/>
         <source>Session lifetime:</source>
         <translation>会话生命周期：</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="43"/>
+        <location filename="../../../admin/settings/index.html.php" line="56"/>
         <source>Event log lifetime:</source>
         <translation>事件日志生命周期：</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="48"/>
+        <location filename="../../../admin/settings/index.html.php" line="57"/>
+        <source>Inactive user registration request lifetime:</source>
+        <translation>用户注册最的长未激活时间;</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="62"/>
         <source>Garbage Collection</source>
         <translation>垃圾回收</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="50"/>
+        <location filename="../../../admin/settings/index.html.php" line="64"/>
         <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
         <translation>每个请求结束后的垃圾回收可能性。如果您有Cron任务用于垃圾回收，请确定它正在运行。</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="52"/>
+        <location filename="../../../admin/settings/index.html.php" line="66"/>
         <source>GC probability:</source>
         <translation>垃圾回收可能性：</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="57"/>
+        <location filename="../../../admin/settings/index.html.php" line="71"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="58"/>
+        <location filename="../../../admin/settings/index.html.php" line="72"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
@@ -1018,205 +1168,205 @@
 <context>
     <name>Admin_Setup_Installer</name>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="254"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="266"/>
         <source>Administrator</source>
         <translation>管理员</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="279"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="292"/>
         <source>Forum</source>
         <translation>论坛</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="285"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
         <source>Bugs</source>
         <translation>缺陷</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="288"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="301"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation>指派给</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="295"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
         <source>Status</source>
         <comment>bug</comment>
         <translation>状态</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="300"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="340"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="348"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="313"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="369"/>
         <source>Active</source>
         <comment>bug</comment>
         <translation>活跃</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="376"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translation>已解决</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translation>已关闭</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="304"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="317"/>
         <source>Reason</source>
         <translation>原因</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="307"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
         <source>Fixed</source>
         <translation>已修复</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="307"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
         <source>Obsolete</source>
         <translation>已废弃</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="307"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
         <source>Duplicate</source>
         <translation>重复的</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
         <source>As Designed</source>
         <translation>符合设计</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
         <source>Unable To Reproduce</source>
         <translation>无法重现</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
         <source>Test Failed</source>
         <translation>测试失败</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="312"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="325"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translation>严重性</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="335"/>
         <source>Version</source>
         <translation>版本</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="330"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translation>我创建的</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="337"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="350"/>
         <source>Active Bugs</source>
         <translation>活跃的缺陷</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="344"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
         <source>My Active Bugs</source>
         <translation>我的活跃的缺陷</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="352"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
         <source>Unassigned Bugs</source>
         <translation>未指派的缺陷</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="360"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="373"/>
         <source>Resolved Bugs</source>
         <translation>已解决缺陷</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="369"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
         <source>Tasks</source>
         <translation>任务</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="372"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="385"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translation>指派给</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="379"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="392"/>
         <source>Status</source>
         <comment>task</comment>
         <translation>状态</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="384"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="424"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="432"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="437"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="453"/>
         <source>Active</source>
         <comment>task</comment>
         <translation>活跃</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
         <source>Closed</source>
         <comment>task</comment>
         <translation>已关闭</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="388"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="401"/>
         <source>Priority</source>
         <comment>task</comment>
         <translation>优先级</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="398"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="411"/>
         <source>Progress</source>
         <translation>进度</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="406"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
         <source>Due Date</source>
         <translation>预期日期</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="414"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translation>我创建的</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="421"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="434"/>
         <source>Active Tasks</source>
         <translation>活跃的任务</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="428"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
         <source>My Active Tasks</source>
         <translation>我的活跃的任务</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="436"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="449"/>
         <source>Unassigned Tasks</source>
         <translation>未指派的缺陷</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="444"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="457"/>
         <source>Completed Tasks</source>
         <translation>完成的任务</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="460"/>
         <source>Completed</source>
         <comment>task</comment>
         <translation>已完成</translation>
@@ -1884,6 +2034,69 @@
     </message>
 </context>
 <context>
+    <name>Admin_Users_AddProjects</name>
+    <message>
+        <location filename="../../../admin/users/addprojects.php" line="59"/>
+        <source>Add Projects</source>
+        <translation>添加项目</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.php" line="62"/>
+        <source>Regular Member</source>
+        <translation>普通成员</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.php" line="63"/>
+        <source>Project Administrator</source>
+        <translation>项目管理员</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="6"/>
+        <source>Select All</source>
+        <translation>全选</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="8"/>
+        <source>Unselect All</source>
+        <translation>全取消选择</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="13"/>
+        <source>Add user &lt;strong&gt;%1&lt;/strong&gt; to the selected projects.</source>
+        <translation>将用户&lt;strong&gt;%1&lt;/strong&gt;添加到所选项目。</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="20"/>
+        <source>Projects</source>
+        <translation>项目</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="36"/>
+        <source>Access</source>
+        <translation>访问</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="41"/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="42"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="47"/>
+        <source>There are no more available projects to add.</source>
+        <translation>没有可添加的项目。</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/addprojects.html.php" line="50"/>
+        <source>Close</source>
+        <translation>关闭</translation>
+    </message>
+</context>
+<context>
     <name>Admin_Users_Index</name>
     <message>
         <location filename="../../../admin/users/index.php" line="33"/>
@@ -1964,8 +2177,127 @@
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="91"/>
+        <source>User Projects</source>
+        <translation>用户项目</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.php" line="92"/>
         <source>User Preferences</source>
         <translation>用户偏好设置</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Users_ProjectAccess</name>
+    <message>
+        <location filename="../../../admin/users/projectaccess.php" line="37"/>
+        <source>Change Access</source>
+        <translation>修改权限</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projectaccess.php" line="52"/>
+        <source>Regular member</source>
+        <translation>普通成员</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projectaccess.php" line="53"/>
+        <source>Project administrator</source>
+        <translation>项目管理员</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projectaccess.html.php" line="4"/>
+        <source>Set new access level to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <translation>为用户&lt;strong&gt;%2&lt;/strong&gt;设置项目&lt;strong&gt;%1&lt;/strong&gt;的访问权限。</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projectaccess.html.php" line="11"/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projectaccess.html.php" line="12"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Users_Projects</name>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="37"/>
+        <source>User Projects</source>
+        <translation>用户项目</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="58"/>
+        <source>Regular member</source>
+        <translation>普通成员</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="59"/>
+        <source>Project administrator</source>
+        <translation>项目管理员</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="78"/>
+        <source>Add Projects</source>
+        <translation>添加项目</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="79"/>
+        <source>Change Access</source>
+        <translation>修改权限</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="80"/>
+        <source>Remove Project</source>
+        <translation>删除项目</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="3"/>
+        <source>Projects of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>用户&lt;strong&gt;%1&lt;/strong&gt;的项目。</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="15"/>
+        <source>Name</source>
+        <translation>用户名</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="16"/>
+        <source>Access Level</source>
+        <translation>访问级别</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="42"/>
+        <source>This user is not a member of any project.</source>
+        <translation>此用户不属于任何项目。</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="47"/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Users_RemoveProject</name>
+    <message>
+        <location filename="../../../admin/users/removeproject.php" line="37"/>
+        <source>Remove Project</source>
+        <translation>删除项目</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/removeproject.html.php" line="4"/>
+        <source>Do you want to remove user &lt;strong&gt;%1&lt;/strong&gt; from project &lt;strong&gt;%2&lt;/strong&gt;?</source>
+        <translation>确实要从项目&lt;strong&gt;%2&lt;/strong&gt;删除用户&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/removeproject.html.php" line="9"/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/removeproject.html.php" line="10"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
     </message>
 </context>
 <context>
@@ -3777,52 +4109,62 @@
 <context>
     <name>Common_Breadcrumbs</name>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="96"/>
+        <location filename="../../breadcrumbs.inc.php" line="98"/>
         <source>General Information</source>
         <translation>基本信息</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="101"/>
+        <location filename="../../breadcrumbs.inc.php" line="103"/>
         <source>Event Log</source>
         <translation>事件日志</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="106"/>
+        <location filename="../../breadcrumbs.inc.php" line="108"/>
         <source>User Accounts</source>
         <translation>用户账户</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="111"/>
+        <location filename="../../breadcrumbs.inc.php" line="114"/>
+        <source>User Projects</source>
+        <translation>用户项目</translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="119"/>
+        <source>Registration Requests</source>
+        <translation>注册请求</translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="124"/>
         <source>Issue Types</source>
         <translation>工作项类型</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="117"/>
+        <location filename="../../breadcrumbs.inc.php" line="130"/>
         <source>View Settings</source>
         <translation>查看设置</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="128"/>
+        <location filename="../../breadcrumbs.inc.php" line="141"/>
         <source>Project Members</source>
         <translation>项目成员</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="140"/>
+        <location filename="../../breadcrumbs.inc.php" line="153"/>
         <source>Manage Views</source>
         <translation>管理视图</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="146"/>
+        <location filename="../../breadcrumbs.inc.php" line="159"/>
         <source>Manage Alerts</source>
         <translation>管理警告</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="157"/>
+        <location filename="../../breadcrumbs.inc.php" line="170"/>
         <source>Tools</source>
         <translation>工具</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="162"/>
+        <location filename="../../breadcrumbs.inc.php" line="175"/>
         <source>Manage Projects</source>
         <translation>管理项目</translation>
     </message>
@@ -3974,6 +4316,40 @@
     </message>
 </context>
 <context>
+    <name>Common_Mail_Approve</name>
+    <message>
+        <location filename="../../mail/approve.inc.php" line="37"/>
+        <location filename="../../mail/approve.html.php" line="3"/>
+        <source>WebIssues Server registration approved</source>
+        <translation>WebIssues注册已通过</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="5"/>
+        <source>Your registration request at the WebIssues Server was approved by the administrator.</source>
+        <translation>你的对WebIssues的注册请求已经被管理员同意通过。</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="7"/>
+        <source>To log in to the WebIssues Server, please visit the following URL:</source>
+        <translation>请访问以下URL以登录WebIssues：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="12"/>
+        <source>User name: %1</source>
+        <translation>用户名：%1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="13"/>
+        <source>Login: %1</source>
+        <translation>登录名:%1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="14"/>
+        <source>Email address: %1</source>
+        <translation>邮件：%1</translation>
+    </message>
+</context>
+<context>
     <name>Common_Mail_Notification</name>
     <message>
         <location filename="../../mail/notification.inc.php" line="60"/>
@@ -4092,6 +4468,114 @@
         <location filename="../../mail/notification.html.php" line="234"/>
         <source>This is an alert email from the WebIssues Server.</source>
         <translation>这是一封来自WebIssues服务器的警告邮件。</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Mail_Register</name>
+    <message>
+        <location filename="../../mail/register.inc.php" line="37"/>
+        <location filename="../../mail/register.html.php" line="3"/>
+        <source>WebIssues Server email verification</source>
+        <translation>WebIssues邮件验证</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="5"/>
+        <source>Thank you for registering at the WebIssues Server.</source>
+        <translation>感谢你在WebIssues注册。</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="7"/>
+        <source>To activate your registration request, please visit the following URL:</source>
+        <translation>请访问以下URL以激活你的注册请求：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="12"/>
+        <source>User name: %1</source>
+        <translation>用户名：%1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="13"/>
+        <source>Login: %1</source>
+        <translation>登录名：%1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="14"/>
+        <source>Email address: %1</source>
+        <translation>邮件：%1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/register.html.php" line="17"/>
+        <source>If you didn&apos;t register, please ignore this email.</source>
+        <translation>如果您没有注册，请忽略此邮件。</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Mail_RegisterNotification</name>
+    <message>
+        <location filename="../../mail/registernotification.inc.php" line="37"/>
+        <location filename="../../mail/registernotification.html.php" line="6"/>
+        <location filename="../../mail/registernotification.html.php" line="8"/>
+        <source>Registration Requests</source>
+        <translation>注册请求</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="13"/>
+        <source>You have the following new registration requests pending for approval:</source>
+        <translation>你有以下注册请求等待处理：</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="17"/>
+        <source>Name</source>
+        <translation>用户名</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="18"/>
+        <source>Login</source>
+        <translation>登录名</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="19"/>
+        <source>Email</source>
+        <translation>邮件</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="20"/>
+        <source>Date</source>
+        <translation>日期</translation>
+    </message>
+    <message>
+        <location filename="../../mail/registernotification.html.php" line="32"/>
+        <source>This is an alert email from the WebIssues Server.</source>
+        <translation>这是一封来自WebIssues服务器的警告邮件。</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Mail_Reject</name>
+    <message>
+        <location filename="../../mail/reject.inc.php" line="37"/>
+        <location filename="../../mail/reject.html.php" line="3"/>
+        <source>WebIssues Server registration rejected</source>
+        <translation>WebIssues注册失败</translation>
+    </message>
+    <message>
+        <location filename="../../mail/reject.html.php" line="5"/>
+        <source>Sorry, your registration request at the WebIssues Server was rejected by the administrator.</source>
+        <translation>对不起，你在WebIssues上的注册请求被管理员拒绝。</translation>
+    </message>
+    <message>
+        <location filename="../../mail/reject.html.php" line="8"/>
+        <source>User name: %1</source>
+        <translation>用户名：%1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/reject.html.php" line="9"/>
+        <source>Login: %1</source>
+        <translation>登录名：%1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/reject.html.php" line="10"/>
+        <source>Email address: %1</source>
+        <translation>邮件地址：%1</translation>
     </message>
 </context>
 <context>
@@ -4818,7 +5302,7 @@
 <context>
     <name>Index</name>
     <message>
-        <location filename="../../../index.php" line="35"/>
+        <location filename="../../../index.php" line="38"/>
         <source>Log in to WebIssues</source>
         <translation>登录到WebIssues</translation>
     </message>
@@ -4834,29 +5318,128 @@
     </message>
     <message>
         <location filename="../../../index.html.php" line="12"/>
-        <location filename="../../../index.html.php" line="23"/>
+        <source>Register new account</source>
+        <translation>注册新账户</translation>
+    </message>
+    <message>
+        <location filename="../../../index.html.php" line="16"/>
+        <location filename="../../../index.html.php" line="27"/>
         <source>Log in</source>
         <translation>登录</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="18"/>
+        <location filename="../../../index.html.php" line="22"/>
         <source>You have to enter a new password in order to log in.</source>
         <translation>登录前，您必须输入新的密码。</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="19"/>
+        <location filename="../../../index.html.php" line="23"/>
         <source>New password:</source>
         <translation>新密码：</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="20"/>
+        <location filename="../../../index.html.php" line="24"/>
         <source>Confirm password:</source>
         <translation>确认密码：</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="24"/>
+        <location filename="../../../index.html.php" line="28"/>
         <source>Cancel</source>
         <translation>取消</translation>
+    </message>
+</context>
+<context>
+    <name>Register</name>
+    <message>
+        <location filename="../../../register.php" line="39"/>
+        <source>Register new account</source>
+        <translation>注册新账户</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="8"/>
+        <source>Fill the information below to begin registration. Note that administrator&apos;s approval is required before you can log in.</source>
+        <translation>填写下列信息开始注册。注意，你需要等待管理员通过你的请求才能登录。</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="11"/>
+        <source>User Name</source>
+        <translation>用户名</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="13"/>
+        <source>Enter the user name that will be visible to other users.</source>
+        <translation>请填写用户名，此用户名将会对其它用户可见。</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="15"/>
+        <source>Name:</source>
+        <translation>用户名：</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="20"/>
+        <source>Credentials</source>
+        <translation>密码</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="22"/>
+        <source>Enter login and password for your new account.</source>
+        <translation>输入你新账户的密码。</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="24"/>
+        <source>Login:</source>
+        <translation>登录名：</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="25"/>
+        <source>Password:</source>
+        <translation>密码：</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="26"/>
+        <source>Confirm password:</source>
+        <translation>确认密码：</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="31"/>
+        <source>Email Address</source>
+        <translation>邮件地址</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="33"/>
+        <source>Email address:</source>
+        <translation>邮件地址：</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="35"/>
+        <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
+        <translation>此地址仅对系统管理员可见。激活邮件将会被发送至此地址。</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="40"/>
+        <source>Register</source>
+        <translation>注册</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="41"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="47"/>
+        <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
+        <translation>感谢你的注册。你将收到一封激活邮件，请照邮件内容完成注册。</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="50"/>
+        <location filename="../../../register.html.php" line="59"/>
+        <source>OK</source>
+        <translation>确定</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="56"/>
+        <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
+        <translation>你的注册请求已经激活，当管理员同意的你的请求，你将收到一封通知邮件。</translation>
     </message>
 </context>
 <context>
@@ -4913,6 +5496,29 @@
         <location filename="../../../system/api/projectmanager.inc.php" line="483"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
         <translation>已经从项目“%2”中移动目录“%1”到“%3”</translation>
+    </message>
+</context>
+<context>
+    <name>System_Api_RegistrationManager</name>
+    <message>
+        <location filename="../../../system/api/registrationmanager.inc.php" line="171"/>
+        <source>User &quot;%1&quot; registered</source>
+        <translation>用户&quot;%1&quot;已注册</translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/registrationmanager.inc.php" line="194"/>
+        <source>Registration request for user &quot;%1&quot; activated</source>
+        <translation>用户&quot;%1&quot;注册请求已经激活</translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/registrationmanager.inc.php" line="238"/>
+        <source>Registration request for user &quot;%1&quot; approved</source>
+        <translation>用户&quot;%1&quot;注册请求已经通过</translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/registrationmanager.inc.php" line="257"/>
+        <source>Registration request for user &quot;%1&quot; rejected</source>
+        <translation>用户&quot;%1&quot;注册请求已经被拒绝</translation>
     </message>
 </context>
 <context>
@@ -4992,52 +5598,52 @@
 <context>
     <name>System_Api_UserManager</name>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="273"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="330"/>
         <source>Added user &quot;%1&quot;</source>
         <translation>已增加用户“%1”</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="303"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="360"/>
         <source>Changed password for user &quot;%1&quot;</source>
         <translation>用户“%1”的密码已修改</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="348"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="405"/>
         <source>User &quot;%1&quot; changed own password</source>
         <translation>用户“%1”更改了自己的密码</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="386"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="443"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>重命名用户“%1”为“%2”</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="418"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="475"/>
         <source>Disabled access for user &quot;%1&quot;</source>
         <translation>已禁止用户“%1”的访问</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="422"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="479"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
         <translation>已授权用户“%1”访问</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="426"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="483"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
         <translation>已授权管理员权限给用户“%1”</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="481"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="538"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation>已将用户“%1”从项目“%2”删除</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="485"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="542"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>已授权用户“%1”对项目“%2”的访问</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="489"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="546"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>已授权用户“%1”对项目“%2”的管理员权限</translation>
     </message>
@@ -5376,6 +5982,21 @@
         <location filename="../../../system/web/errorhelper.inc.php" line="181"/>
         <source>One of the dependent objects no longer exists</source>
         <translation>被依赖的某个对象已经不存在</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="183"/>
+        <source>A user with this email address already exists</source>
+        <translation>以此邮件注册的用户已经存在</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="185"/>
+        <source>The activation key is invalid</source>
+        <translation>激活代码无效</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="187"/>
+        <source>Request does not exist</source>
+        <translation>请求不存在</translation>
     </message>
 </context>
 <context>
