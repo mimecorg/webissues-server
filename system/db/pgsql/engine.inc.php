@@ -99,7 +99,9 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
                 $params[] = (string)$arg;
                 return '$' . count( $params ) . '::text';
             case 'b':
-                $params[] = $arg->getData();
+                $data = pg_escape_bytea( $this->connection, $arg->getData() );
+                $data = str_replace( array( "\\\\", "''" ), array( "\\", "'" ), $data );
+                $params[] = $data;
                 return '$' . count( $params ) . '::bytea';
         }
     }
@@ -118,7 +120,11 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
 
     public function createAttachment( $data, $size, $fileName )
     {
-        return new System_Core_Attachment( pg_unescape_bytea( $this->connection, $data ), $size, $fileName );
+        if ( substr( $data, 0, 2 ) == '\\x' )
+            $data = pack( 'H*', substr( $data, 2 ) );
+        else
+            $data = pg_unescape_bytea( $data );
+        return new System_Core_Attachment( $data, $size, $fileName );
     }
 
     public function getAffectedRows()
