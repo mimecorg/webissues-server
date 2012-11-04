@@ -10,7 +10,7 @@
 
 <table class="sub-pane-layout">
 <tr>
-<td class="top-sub-pane">
+<td class="top-sub-pane"<?php if ( empty( $attributeValues ) ) echo ' colspan="2"' ?>>
 
 <h3><?php echo $this->tr( 'Properties' ) ?></h3>
 
@@ -24,32 +24,21 @@
 <td><?php echo $issue[ 'type_name' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Project:' ) ?></td>
-<td><?php echo $issue[ 'project_name' ] ?></td>
+<td><?php echo $this->tr( 'Location:' ) ?></td>
+<td><?php echo $issue[ 'project_name' ] . ' &mdash; ' . $issue[ 'folder_name' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Folder:' ) ?></td>
-<td><?php echo $issue[ 'folder_name' ] ?></td>
+<td><?php echo $this->tr( 'Created:' ) ?></td>
+<td><?php echo $issue[ 'created_date' ] . ' &mdash; ' . $issue[ 'created_by' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Created date:' ) ?></td>
-<td><?php echo $issue[ 'created_date' ] ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Created by:' ) ?></td>
-<td><?php echo $issue[ 'created_by' ] ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Modified date:' ) ?></td>
-<td><?php echo $issue[ 'modified_date' ] ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Modified by:' ) ?></td>
-<td><?php echo $issue[ 'modified_by' ] ?></td>
+<td><?php echo $this->tr( 'Last Modified:' ) ?></td>
+<td><?php echo $issue[ 'modified_date' ] . ' &mdash; ' . $issue[ 'modified_by' ] ?></td>
 </tr>
 </table>
 
 </td>
+<?php if ( !empty( $attributeValues ) ): ?>
 <td class="top-sub-pane">
 
 <h3><?php echo $this->tr( 'Attributes' ) ?></h3>
@@ -64,13 +53,13 @@
 </table>
 
 </td>
+<?php endif ?>
 </tr>
 <tr>
 <td colspan="2" class="bottom-sub-pane">
 
 <div style="float: right">
-<?php $filterBar->renderNoFilter( $this->tr( 'All History' ) ) ?>
-<?php $filterBar->renderFilters( $filters ) ?>
+<?php $filterBar->renderDefaultFilters( $filters, $defaultFilter ) ?>
 </div>
 
 <h3><?php echo $this->tr( 'Issue History' ) ?></h3>
@@ -81,59 +70,45 @@
     foreach ( $history as $id => $item ):
 ?>
 
-<h4>
-<?php
-    switch ( $item[ 'change_type' ] ):
-    case System_Const::IssueCreated:
-        echo $this->tr( 'Issue Created' );
-        break;
-    case System_Const::IssueRenamed:
-    case System_Const::ValueChanged:
-        echo $this->tr( 'Issue Modified' );
-        break;
-    case System_Const::CommentAdded:
-        echo '<a class="anchor" name="item' . $id . '">' . $this->tr( 'Comment %1', null, $item[ 'change_id' ] ) . '</a>';
-        break;
-    case System_Const::FileAdded:
-        echo '<a class="anchor" name="item' . $id . '">' . $this->tr( 'Attachment %1', null, $item[ 'change_id' ] ) . '</a>';
-        break;
-    case System_Const::IssueMoved:
-        echo $this->tr( 'Issue Moved' );
-        break;
-    endswitch;
-?>
-</h4>
-
-<?php if ( $item[ 'change_type' ] == System_Const::CommentAdded && $item[ 'can_edit' ] ): ?>
+<?php if ( $item[ 'change_type' ] == System_Const::CommentAdded ): ?>
 
 <div style="float: right">
-<?php echo $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/editcomment.php', array( 'id' => $id, 'issue' => null ) ),
-    '/common/images/edit-modify-16.png', $this->tr( 'Edit' ) ) ?>
-|
-<?php echo $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/deletecomment.php', array( 'id' => $id, 'issue' => null ) ),
-    '/common/images/edit-delete-16.png', $this->tr( 'Delete' ) ) ?>
+<?php
+    if ( $item[ 'stamp_id' ] != $id ):
+        echo $this->tr( 'Last Edited:' ) . ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ' | ';
+    endif;
+    echo '<a class="anchor" name="item' . $id . '">' . $this->imageAndText( '/common/images/comment-16.png', $this->tr( 'Comment %1', null, $item[ 'change_id' ] ) ) . '</a>';
+    if ( $item[ 'can_edit' ] ):
+        echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/editcomment.php', array( 'id' => $id, 'issue' => null ) ),
+            '/common/images/edit-modify-16.png', $this->tr( 'Edit' ) );
+        echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/deletecomment.php', array( 'id' => $id, 'issue' => null ) ),
+            '/common/images/edit-delete-16.png', $this->tr( 'Delete' ) );
+    endif
+?>
 </div>
 
-<?php elseif ( $item[ 'change_type' ] == System_Const::FileAdded && $item[ 'can_edit' ] ): ?>
+<?php elseif ( $item[ 'change_type' ] == System_Const::FileAdded ): ?>
 
 <div style="float: right">
-<?php echo $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/editattachment.php', array( 'id' => $id, 'issue' => null ) ),
-    '/common/images/edit-modify-16.png', $this->tr( 'Edit' ) ) ?>
-|
-<?php echo $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/deleteattachment.php', array( 'id' => $id, 'issue' => null ) ),
-    '/common/images/edit-delete-16.png', $this->tr( 'Delete' ) ) ?>
+<?php
+    if ( $item[ 'stamp_id' ] != $id ):
+        echo $this->tr( 'Last Edited:' ) . ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ' | ';
+    endif;
+    echo '<a class="anchor" name="item' . $id . '">' . $this->imageAndText( '/common/images/file-attach-16.png', $this->tr( 'Attachment %1', null, $item[ 'change_id' ] ) ) . '</a>';
+    if ( $item[ 'can_edit' ] ):
+        echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/editattachment.php', array( 'id' => $id, 'issue' => null ) ),
+            '/common/images/edit-modify-16.png', $this->tr( 'Edit' ) );
+        echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/deleteattachment.php', array( 'id' => $id, 'issue' => null ) ),
+            '/common/images/edit-delete-16.png', $this->tr( 'Delete' ) );
+    endif
+?>
 </div>
 
 <?php endif ?>
 
-<div class="history-info">
-<?php
-    echo $item[ 'created_date' ] . ' &mdash; ' . $item[ 'created_by' ];
-    if ( $item[ 'stamp_id' ] != $id ):
-        echo ' (' . $this->tr( "last edited:" ) .  ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ')';
-    endif;
-?>
-</div>
+<h4>
+<?php echo  $item[ 'created_date' ] . ' &mdash; ' . $item[ 'created_by' ] ?>
+</h4>
 
 <?php
     switch ( $item[ 'change_type' ] ):
@@ -195,7 +170,7 @@
 <?php
     $from = ( $item[ 'from_folder_name' ] == '' ) ? $this->tr( 'Unknown Folder' ) : '"' . $item[ 'from_folder_name' ] . '"';
     $to = ( $item[ 'to_folder_name' ] == '' ) ? $this->tr( 'Unknown Folder' ) : '"' . $item[ 'to_folder_name' ] . '"';
-    echo $this->tr( 'Folder' ) . ': ' . $from . ' &rarr; ' . $to;
+    echo $this->tr( 'Issue moved from %1 to %2', null, $from, $to );
 ?>
 </li>
 </ul>

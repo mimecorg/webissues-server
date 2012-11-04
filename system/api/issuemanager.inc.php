@@ -44,6 +44,8 @@ class System_Api_IssueManager extends System_Api_Base
     const RequireAdministrator = 1;
     /** Administrator or owner access is required for the comment or file. */
     const RequireAdministratorOrOwner = 2;
+    /** Do not return attributes with empty values. */
+    const HideEmptyValues = 4;
     /*@}*/
 
     const DatabaseStorage = 0;
@@ -158,19 +160,22 @@ class System_Api_IssueManager extends System_Api_Base
 
     /**
     * Get all attributes with values for the given issue. All attributes are
-    * returned including those which have empty values. Values are sorted by
-    * attribute name.
+    * returned including those which have empty values unless HideEmptyValues
+    * is passed. Values are sorted by attribute name.
     * @param $issue The issue to retrieve values for.
+    * @param $flags If HideEmptyValues is passed, empty values are not returned.
     * @return An array of associative arrays representing values.
     */
-    public function getAllAttributeValuesForIssue( $issue )
+    public function getAllAttributeValuesForIssue( $issue, $flags = 0 )
     {
         $issueId = $issue[ 'issue_id' ];
         $typeId = $issue[ 'type_id' ];
 
         $query = 'SELECT a.attr_id, a.attr_name, a.attr_def, v.attr_value'
-            . ' FROM {attr_types} AS a'
-            . ' LEFT OUTER JOIN {attr_values} AS v ON v.attr_id = a.attr_id AND v.issue_id = %d'
+            . ' FROM {attr_types} AS a';
+        if ( !( $flags & self::HideEmptyValues ) )
+            $query .= ' LEFT OUTER';
+        $query .= ' JOIN {attr_values} AS v ON v.attr_id = a.attr_id AND v.issue_id = %d'
             . ' WHERE a.type_id = %d'
             . ' ORDER BY a.attr_name COLLATE LOCALE';
 

@@ -6,14 +6,7 @@
 
 <?php $this->insertComponent( 'Common_Tools_PageSize', $form ) ?>
 
-<fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'View Settings' ) ?></legend>
-
-<p><?php echo $this->tr( 'Global view settings that affect all users and issue types.' ) ?></p>
-
-<?php $form->renderCheckBox( $this->tr( 'Hide the ID column' ), 'hideIdColumn' ) ?>
-
-</fieldset>
+<?php $this->insertComponent( 'Common_Tools_ViewSettings', $form ) ?>
 
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'User Registration' ) ?></legend>

@@ -33,6 +33,32 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 */
 class System_Api_HistoryProvider
 {
+    /**
+    * Sort in ascending order.
+    */
+    const Ascending = 'asc';
+    /**
+    * Sort in descending order.
+    */
+    const Descending = 'desc';
+
+    /**
+    * Display all changes.
+    */
+    const AllHistory = 1;
+    /**
+    * Display only comments.
+    */
+    const Comments = 2;
+    /**
+    * Display only attachments.
+    */
+    const Files = 3;
+    /**
+    * Display comments and attachments.
+    */
+    const CommentsAndFiles = 4;
+
     private $issueId = 0;
     private $sinceStamp = null;
 
@@ -65,19 +91,23 @@ class System_Api_HistoryProvider
     * Return a query for calculating the number of items.
     * @param $itemType The type of history items.
     */
-    public function generateCountQuery( $itemType = null )
+    public function generateCountQuery( $itemType )
     {
         $this->arguments = array( $this->issueId );
 
         $query = 'SELECT COUNT(*) FROM {changes} WHERE issue_id = %d';
 
-        if ( $itemType == System_Const::CommentsAndFiles ) {
+        if ( $itemType == self::CommentsAndFiles ) {
             $this->arguments[] = System_Const::CommentAdded;
             $this->arguments[] = System_Const::FileAdded;
 
             $query .= ' AND ( change_type = %d OR change_type = %d )';
-        } else if ( $itemType != null ) {
-            $this->arguments[] = $itemType;
+        } else if ( $itemType == self::Comments ) {
+            $this->arguments[] = System_Const::CommentAdded;
+
+            $query .= ' AND change_type = %d';
+        } else if ( $itemType == self::Files ) {
+            $this->arguments[] = System_Const::FileAdded;
 
             $query .= ' AND change_type = %d';
         }
@@ -105,7 +135,7 @@ class System_Api_HistoryProvider
     * Return a query for extracting item details.
     * @param $itemType The type of history items.
     */
-    public function generateSelectQuery( $itemType = null )
+    public function generateSelectQuery( $itemType )
     {
         $principal = System_Api_Principal::getCurrent();
 
@@ -114,18 +144,18 @@ class System_Api_HistoryProvider
         $query = 'SELECT ch.change_id, ch.change_type, ch.stamp_id,'
             . ' sc.stamp_time AS created_date, uc.user_id AS created_user, uc.user_name AS created_by,'
             . ' sm.stamp_time AS modified_date, um.user_id AS modified_user, um.user_name AS modified_by';
-        if ( $itemType == null )
+        if ( $itemType == self::AllHistory )
             $query .= ', ch.attr_id, ch.value_old, ch.value_new, a.attr_name, a.attr_def, ff.folder_name AS from_folder_name, tf.folder_name AS to_folder_name';
-        if ( $itemType == null || $itemType == System_Const::CommentAdded || $itemType == System_Const::CommentsAndFiles )
+        if ( $itemType == self::AllHistory || $itemType == self::Comments || $itemType == self::CommentsAndFiles )
             $query .= ', c.comment_text';
-        if ( $itemType == null || $itemType == System_Const::FileAdded || $itemType == System_Const::CommentsAndFiles )
+        if ( $itemType == self::AllHistory || $itemType == self::Files || $itemType == self::CommentsAndFiles )
             $query .= ', f.file_name, f.file_size, f.file_descr';
         $query .= ' FROM {changes} AS ch'
             . ' JOIN {stamps} AS sc ON sc.stamp_id = ch.change_id'
             . ' JOIN {users} AS uc ON uc.user_id = sc.user_id'
             . ' JOIN {stamps} AS sm ON sm.stamp_id = ch.stamp_id'
             . ' JOIN {users} AS um ON um.user_id = sm.user_id';
-        if ( $itemType == null ) {
+        if ( $itemType == self::AllHistory ) {
             $query .= ' LEFT OUTER JOIN {attr_types} AS a ON a.attr_id = ch.attr_id'
                 . ' LEFT OUTER JOIN {folders} AS ff ON ff.folder_id = ch.from_folder_id';
             if ( !$principal->isAdministrator() )
@@ -134,18 +164,18 @@ class System_Api_HistoryProvider
             if ( !$principal->isAdministrator() )
                 $query .= ' AND tf.project_id IN ( SELECT project_id FROM {rights} WHERE user_id = %4d )';
         }
-        if ( $itemType == null || $itemType == System_Const::CommentAdded || $itemType == System_Const::CommentsAndFiles ) {
-            if ( $itemType == null || $itemType == System_Const::CommentsAndFiles )
+        if ( $itemType == self::AllHistory || $itemType == self::Comments || $itemType == self::CommentsAndFiles ) {
+            if ( $itemType == self::AllHistory || $itemType == self::CommentsAndFiles )
                 $query .= ' LEFT OUTER';
             $query .= ' JOIN {comments} AS c ON c.comment_id = ch.change_id AND ch.change_type = %2d';
         }
-        if ( $itemType == null || $itemType == System_Const::FileAdded || $itemType == System_Const::CommentsAndFiles ) {
-            if ( $itemType == null || $itemType == System_Const::CommentsAndFiles )
+        if ( $itemType == self::AllHistory || $itemType == self::Files || $itemType == self::CommentsAndFiles ) {
+            if ( $itemType == self::AllHistory || $itemType == self::CommentsAndFiles )
                 $query .= ' LEFT OUTER';
             $query .= ' JOIN {files} AS f ON f.file_id = ch.change_id AND ch.change_type = %3d';
         }
         $query .= ' WHERE ch.issue_id = %1d';
-        if ( $itemType == System_Const::CommentsAndFiles )
+        if ( $itemType == self::CommentsAndFiles )
             $query .= ' AND ( ch.change_type = %2d OR ch.change_type = %3d )';
         if ( $this->sinceStamp != null )
             $query .= ' AND ch.change_id > %5d';
@@ -165,9 +195,14 @@ class System_Api_HistoryProvider
     * Return the sorting order specifier. Items are sorted by creation date
     * from oldest to newest.
     */
-    public function getOrderBy()
+    public function getOrderBy( $order )
     {
-        return 'ch.change_id ASC';
+        if ( $order == self::Ascending )
+            return 'ch.change_id ASC';
+        else if ( $order == self::Descending )
+            return 'ch.change_id DESC';
+
+        throw new System_Core_Exception( 'Invalid sort order' );
     }
 
     /**

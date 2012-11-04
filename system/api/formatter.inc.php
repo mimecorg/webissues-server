@@ -88,6 +88,23 @@ class System_Api_Formatter
     }
 
     /**
+    * Format a date.
+    * @param $stamp The time stamp representing the date.
+    * @param $flags If ToLocalTimeZone is passed time is converted from UTC
+    * to local time zone.
+    * @return The localized formatted string.
+    */
+    public function formatDate( $stamp, $flags = 0 )
+    {
+        $date = new DateTime( "@$stamp" );
+
+        if ( $flags & self::ToLocalTimeZone )
+            $date->setTimezone( $this->getLocalTimeZone() );
+
+        return $date->format( $this->getDateFormat() );
+    }
+
+    /**
     * Convert a date to localized format.
     * @param $value The date in internal format.
     * @return The localized formatted string.

@@ -82,4 +82,25 @@ class System_Web_FilterBar extends System_Web_Base
                 echo $this->link( $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->param => $value ), $this->mergeParams ) ), $text );
         }
     }
+
+    /**
+    * Render filter options with a default filter.
+    * @param $filters An array of filter options.
+    * @param $defaultFilter The default filter.
+    */
+    public function renderDefaultFilters( $filters, $defaultFilter )
+    {
+        $first = true;
+        foreach ( $filters as $value => $text ) {
+            if ( !$first )
+                echo ' | ';
+            if ( $value == $this->value || $value == $defaultFilter && $this->value == null )
+                echo $text;
+            else if ( $value == $defaultFilter )
+                echo $this->link( $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->param => null ), $this->mergeParams ) ), $text );
+            else
+                echo $this->link( $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->param => $value ), $this->mergeParams ) ), $text );
+            $first = false;
+        }
+    }
 }

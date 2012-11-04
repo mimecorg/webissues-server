@@ -586,9 +586,19 @@ class System_Api_Validator
                 break;
 
             case 'hide_id_column':
+            case 'hide_empty_values':
             case 'self_register':
                 if ( $value != '' )
                     $this->checkDecimalNumber( $value, 0, 0, 1 );
+                break;
+
+            case 'history_order':
+                if ( $value != 'asc' && $value != 'desc' )
+                    throw new System_Api_Error( System_Api_Error::InvalidSetting );
+                break;
+
+            case 'history_filter':
+                $this->checkDecimalNumber( $value, 0, 1, 4 );
                 break;
 
             case 'email_engine':
@@ -651,6 +661,16 @@ class System_Api_Validator
             case 'history_page_size':
                 if ( $value != '' )
                     $this->checkDecimalNumber( $value, 0, 1, 100 );
+                break;
+
+            case 'history_order':
+                if ( $value != '' && $value != 'asc' && $value != 'desc' )
+                    throw new System_Api_Error( System_Api_Error::InvalidSetting );
+                break;
+
+            case 'history_filter':
+                if ( $value != '' )
+                    $this->checkDecimalNumber( $value, 0, 1, 4 );
                 break;
 
             case 'email':

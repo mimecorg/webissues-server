@@ -12,6 +12,8 @@
 
 <?php $this->insertComponent( 'Common_Tools_PageSize', $form ) ?>
 
+<?php $this->insertComponent( 'Common_Tools_ViewSettings', $form ) ?>
+
 <?php if ( $emailEngine ): ?>
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Notifications' ) ?></legend>

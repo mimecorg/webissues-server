@@ -52,7 +52,10 @@ class Client_IssueDetails extends System_Web_Component
         $stateManager = new System_Api_StateManager();
         $stateId = $stateManager->setIssueRead( $issue, $isRead ? $issue[ 'stamp_id' ] : 0 );
 
-        $this->attributeValues = $issueManager->getAllAttributeValuesForIssue( $issue );
+        $serverManager = new System_Api_ServerManager();
+        $hideEmpty = $serverManager->getSetting( 'hide_empty_values' );
+
+        $this->attributeValues = $issueManager->getAllAttributeValuesForIssue( $issue, $hideEmpty == '1' ? System_Api_IssueManager::HideEmptyValues : 0 );
 
         foreach ( $this->attributeValues as &$value ) {
             $formatted = $formatter->convertAttributeValue( $value[ 'attr_def' ], $value[ 'attr_value' ], System_Api_Formatter::MultiLine );
@@ -73,15 +76,21 @@ class Client_IssueDetails extends System_Web_Component
         $this->filterBar->setMergeParameters( array( 'hpg' => null ) );
 
         $this->filters = array(
-            System_Const::CommentAdded => $this->tr( 'Only Comments' ),
-            System_Const::FileAdded => $this->tr( 'Only Attachments' ),
-            System_Const::CommentsAndFiles => $this->tr( 'Comments & Attachments' ) );
+            System_Api_HistoryProvider::AllHistory => $this->tr( 'All History' ),
+            System_Api_HistoryProvider::Comments => $this->tr( 'Only Comments' ),
+            System_Api_HistoryProvider::Files => $this->tr( 'Only Attachments' ),
+            System_Api_HistoryProvider::CommentsAndFiles => $this->tr( 'Comments & Attachments' ) );
 
         $this->historyFilter = $this->request->getQueryString( 'hflt' );
         if ( ( $this->historyFilter !== null ) && !isset( $this->filters[ $this->historyFilter ] ) )
             throw new System_Core_Exception( 'Invalid filter' );
 
         $preferencesManager = new System_Api_PreferencesManager();
+        $this->defaultFilter = $preferencesManager->getPreferenceOrSetting( 'history_filter' );
+
+        if ( $this->historyFilter === null )
+            $this->historyFilter = $this->defaultFilter;
+
         $pageSize = $preferencesManager->getPreferenceOrSetting( 'history_page_size' );
 
         $this->pager = new System_Web_Grid();
@@ -95,8 +104,10 @@ class Client_IssueDetails extends System_Web_Component
         $this->pager->setRowsCount( $rowCount );
 
         if ( $rowCount > 0 ) {
+            $order = $preferencesManager->getPreferenceOrSetting( 'history_order' );
+
             $query = $historyProvider->generateSelectQuery( $this->historyFilter );
-            $page = $connection->queryPageArgs( $query, $historyProvider->getOrderBy(), $this->pager->getPageSize(),
+            $page = $connection->queryPageArgs( $query, $historyProvider->getOrderBy( $order ), $this->pager->getPageSize(),
                 $this->pager->getOffset(), $historyProvider->getQueryArguments() );
 
             $this->history = $historyProvider->processPage( $page );
