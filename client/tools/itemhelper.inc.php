@@ -38,13 +38,18 @@ class Client_Tools_ItemHelper extends System_Web_Base
 
         $issue = $issueManager->getIssue( $issueId );
 
+        $preferencesManager = new System_Api_PreferencesManager();
+        $filter = $preferencesManager->getPreferenceOrSetting( 'history_filter' );
+        $pageSize = $preferencesManager->getPreferenceOrSetting( 'history_page_size' );
+        $order = $preferencesManager->getPreferenceOrSetting( 'history_order' );
+
         $historyProvider = new System_Api_HistoryProvider();
         $historyProvider->setIssueId( $issueId );
 
         $connection = System_Core_Application::getInstance()->getConnection();
-
-        $query = $historyProvider->generateSimpleSelectQuery();
-        $history = $connection->queryPageArgs( $query, $historyProvider->getOrderBy(), System_Const::INT_MAX, 0, $historyProvider->getQueryArguments() );
+        
+        $query = $historyProvider->generateSimpleSelectQuery( $filter );
+        $history = $connection->queryPageArgs( $query, $historyProvider->getOrderBy( $order ), System_Const::INT_MAX, 0, $historyProvider->getQueryArguments() );
 
         $index = -1;
         foreach ( $history as $i => $item ) {
@@ -57,7 +62,7 @@ class Client_Tools_ItemHelper extends System_Web_Base
         if ( $index < 0 )
             throw new System_Api_Error( System_Api_Error::ItemNotFound );
 
-        $page = floor( ( $index + 1 ) / 20 ) + 1;
+        $page = floor( ( $index + 1 ) / $pageSize ) + 1;
         if ( $page == 1 )
             $page = null;
 

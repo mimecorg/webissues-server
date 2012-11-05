@@ -123,12 +123,22 @@ class System_Api_HistoryProvider
 
     /**
     * Return a query for extracting item identifiers only.
+    * @param $itemType The type of history items.
     */
-    public function generateSimpleSelectQuery()
+    public function generateSimpleSelectQuery( $itemType )
     {
-        $this->arguments = array( $this->issueId );
+        $this->arguments = array( $this->issueId, System_Const::CommentAdded, System_Const::FileAdded );
 
-        return 'SELECT ch.change_id FROM {changes} AS ch WHERE ch.issue_id = %d';
+        $query = 'SELECT ch.change_id FROM {changes} AS ch WHERE ch.issue_id = %1d';
+
+        if ( $itemType == self::CommentsAndFiles )
+            $query .= ' AND ( ch.change_type = %2d OR ch.change_type = %3d )';
+        else if ( $itemType == self::Comments )
+            $query .= ' AND ch.change_type = %2d';
+        else if ( $itemType == self::Files )
+            $query .= ' AND ch.change_type = %3d';
+
+        return $query;
     }
 
     /**
@@ -193,7 +203,7 @@ class System_Api_HistoryProvider
 
     /**
     * Return the sorting order specifier. Items are sorted by creation date
-    * from oldest to newest.
+    * according to the specified order.
     */
     public function getOrderBy( $order )
     {
