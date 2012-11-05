@@ -60,6 +60,30 @@ class Common_Mail_Notification extends System_Web_Component
             $this->viewName = $this->tr( 'All Issues' );
         }
 
+        $serverManager = new System_Api_ServerManager();
+        $this->baseUrl = $serverManager->getSetting( 'base_url' );
+
+        if ( $this->baseUrl != '' ) {
+            $initialView = null;
+
+            $initial = $viewManager->getViewSetting( $type, 'initial_view' );
+            $views = $viewManager->getPublicViewsForIssueType( $type );
+
+            foreach ( $views as $view ) {
+                if ( $view[ 'view_id' ] == $initial ) {
+                    $initialView = $initial;
+                    break;
+                }
+            }
+
+            if ( $this->viewId == $initialView )
+                $this->linkViewId = null;
+            else if ( $this->viewId != null )
+                $this->linkViewId = $this->viewId;
+            else
+                $this->linkViewId = 0;
+        }
+
         if ( $definition != null )
             $this->queryGenerator->setViewDefinition( $definition );
 
@@ -88,7 +112,6 @@ class Common_Mail_Notification extends System_Web_Component
         $this->view->setSlot( 'subject', $this->projectName . ' - ' . $this->folderName . ' - ' . $this->viewName );
 
         $serverManager = new System_Api_ServerManager();
-        $this->baseUrl = $serverManager->getSetting( 'base_url' );
 
         $this->columns = $this->queryGenerator->getColumnNames();
 

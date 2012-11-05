@@ -3,7 +3,7 @@
 <h1>
 <?php
     if ( $baseUrl != '' ):
-        echo $this->link( $this->appendQueryString( $baseUrl . 'client/index.php', array( 'folder' => $folderId, 'view' => $viewId != 0 ? $viewId : null ) ),
+        echo $this->link( $this->appendQueryString( $baseUrl . 'client/index.php', array( 'folder' => $folderId, 'view' => $linkViewId ) ),
             $projectName . ' - ' . $folderName . ' - ' . $viewName );
     else:
         echo $projectName . ' - ' . $folderName . ' - ' . $viewName;
