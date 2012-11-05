@@ -92,6 +92,9 @@ class Common_Mail_Notification extends System_Web_Component
 
         $this->columns = $this->queryGenerator->getColumnNames();
 
+        if ( $serverManager->getSetting( 'hide_id_column' ) == 1 )
+            unset( $this->columns[ System_Api_Column::ID ] );
+
         $helper = new System_Web_ColumnHelper();
         $this->headers = $helper->getColumnHeaders() + $this->queryGenerator->getUserColumnHeaders();
 
@@ -138,6 +141,8 @@ class Common_Mail_Notification extends System_Web_Component
             $historyProvider = new System_Api_HistoryProvider();
             $localeHelper = new System_Web_LocaleHelper();
 
+            $hideEmpty = $serverManager->getSetting( 'hide_empty_values' );
+
             foreach ( $this->page as $row ) {
                 $issueId = $row[ 'issue_id' ];
                 $issue = $issueManager->getIssue( $issueId );
@@ -147,7 +152,7 @@ class Common_Mail_Notification extends System_Web_Component
                 $detail[ 'created_date' ] = $formatter->formatDateTime( $issue[ 'created_date' ], System_Api_Formatter::ToLocalTimeZone );
                 $detail[ 'modified_date' ] = $formatter->formatDateTime( $issue[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
 
-                $attributeValues = $issueManager->getAllAttributeValuesForIssue( $issue );
+                $attributeValues = $issueManager->getAllAttributeValuesForIssue( $issue, $hideEmpty == '1' ? System_Api_IssueManager::HideEmptyValues : 0 );
 
                 foreach ( $attributeValues as &$value )
                     $value[ 'attr_value' ] = $formatter->convertAttributeValue( $value[ 'attr_def' ], $value[ 'attr_value' ], System_Api_Formatter::MultiLine );
@@ -167,9 +172,12 @@ class Common_Mail_Notification extends System_Web_Component
                 if ( $issue[ 'stamp_id' ] > $sinceStamp ) {
                     $historyProvider->setIssueId( $issueId );
                     $historyProvider->setSinceStamp( $sinceStamp );
+                    
+                    $filter = $preferencesManager->getPreferenceOrSetting( 'history_filter' );
+                    $order = $preferencesManager->getPreferenceOrSetting( 'history_order' );
 
-                    $query = $historyProvider->generateSelectQuery();
-                    $page = $connection->queryPageArgs( $query, $historyProvider->getOrderBy(), 1000, 0, $historyProvider->getQueryArguments() );
+                    $query = $historyProvider->generateSelectQuery( $filter );
+                    $page = $connection->queryPageArgs( $query, $historyProvider->getOrderBy( $order ), 1000, 0, $historyProvider->getQueryArguments() );
 
                     $history = $historyProvider->processPage( $page );
 

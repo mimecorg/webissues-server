@@ -48,7 +48,7 @@
 
 <table class="sub-pane-layout">
 <tr>
-<td class="top-sub-pane">
+<td class="top-sub-pane"<?php if ( empty( $issue[ 'attribute_values' ] ) ) echo ' colspan="2"' ?>>
 
 <h3><?php echo $this->tr( 'Properties' ) ?></h3>
 
@@ -62,32 +62,21 @@
 <td><?php echo $issue[ 'type_name' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Project:' ) ?></td>
-<td><?php echo $issue[ 'project_name' ] ?></td>
+<td><?php echo $this->tr( 'Location:' ) ?></td>
+<td><?php echo $issue[ 'project_name' ] . ' &mdash; ' . $issue[ 'folder_name' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Folder:' ) ?></td>
-<td><?php echo $issue[ 'folder_name' ] ?></td>
+<td><?php echo $this->tr( 'Created:' ) ?></td>
+<td><?php echo $issue[ 'created_date' ] . ' &mdash; ' . $issue[ 'created_by' ] ?></td>
 </tr>
 <tr>
-<td><?php echo $this->tr( 'Created date:' ) ?></td>
-<td><?php echo $issue[ 'created_date' ] ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Created by:' ) ?></td>
-<td><?php echo $issue[ 'created_by' ] ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Modified date:' ) ?></td>
-<td><?php echo $issue[ 'modified_date' ] ?></td>
-</tr>
-<tr>
-<td><?php echo $this->tr( 'Modified by:' ) ?></td>
-<td><?php echo $issue[ 'modified_by' ] ?></td>
+<td><?php echo $this->tr( 'Last Modified:' ) ?></td>
+<td><?php echo $issue[ 'modified_date' ] . ' &mdash; ' . $issue[ 'modified_by' ] ?></td>
 </tr>
 </table>
 
 </td>
+<?php if ( !empty( $issue[ 'attribute_values' ] ) ): ?>
 <td class="top-sub-pane">
 
 <h3><?php echo $this->tr( 'Attributes' ) ?></h3>
@@ -102,6 +91,7 @@
 </table>
 
 </td>
+<?php endif ?>
 </tr>
 
 <?php if ( !empty( $issue[ 'history' ] ) ): ?>
@@ -116,36 +106,8 @@
 ?>
 
 <h4>
-<?php
-    switch ( $item[ 'change_type' ] ):
-    case System_Const::IssueCreated:
-        echo $this->tr( 'Issue Created' );
-        break;
-    case System_Const::IssueRenamed:
-    case System_Const::ValueChanged:
-        echo $this->tr( 'Issue Modified' );
-        break;
-    case System_Const::CommentAdded:
-        echo $this->tr( 'Comment %1', null, $item[ 'change_id' ] );
-        break;
-    case System_Const::FileAdded:
-        echo $this->tr( 'Attachment %1', null, $item[ 'change_id' ] );
-        break;
-    case System_Const::IssueMoved:
-        echo $this->tr( 'Issue Moved' );
-        break;
-    endswitch;
-?>
+<?php echo  $item[ 'created_date' ] . ' &mdash; ' . $item[ 'created_by' ] ?>
 </h4>
-
-<div class="history-info">
-<?php
-    echo $item[ 'created_date' ] . ' &mdash; ' . $item[ 'created_by' ];
-    if ( $item[ 'stamp_id' ] != $id ):
-        echo ' (' . $this->tr( "last edited:" ) .  ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ')';
-    endif;
-?>
-</div>
 
 <?php
     switch ( $item[ 'change_type' ] ):
@@ -210,7 +172,7 @@
 <?php
     $from = ( $item[ 'from_folder_name' ] == '' ) ? $this->tr( 'Unknown Folder' ) : '"' . $item[ 'from_folder_name' ] . '"';
     $to = ( $item[ 'to_folder_name' ] == '' ) ? $this->tr( 'Unknown Folder' ) : '"' . $item[ 'to_folder_name' ] . '"';
-    echo $this->tr( 'Folder' ) . ': ' . $from . ' &rarr; ' . $to;
+    echo $this->tr( 'Issue moved from %1 to %2', null, $from, $to );
 ?>
 </li>
 </ul>
