@@ -50,16 +50,26 @@ class Client_IssuesList extends System_Web_Component
             $this->view->setSlot( 'page_title', $folder[ 'folder_name' ] );
         }
 
-        $viewParam = (int)$this->request->getQueryString( 'view' );
-
-        $this->viewForm = new System_Web_Form( 'switchView', $this );
-        $this->viewForm->addField( 'viewSelect', $viewParam );
-
         $typeManager = new System_Api_TypeManager();
         $type = $typeManager->getIssueTypeForFolder( $folder );
 
         $viewManager = new System_Api_ViewManager();
         $views = $viewManager->getViewsForIssueType( $type );
+
+        $initialView = $viewManager->getViewSetting( $type, 'initial_view' );
+
+        if ( $initialView != '' && empty( $views[ 1 ][ (int)$initialView ] ) )
+            $initialView = '';
+
+        $viewParam = $this->request->getQueryString( 'view' );
+
+        if ( $viewParam == '' && $initialView != '' )
+            $viewParam = (int)$initialView;
+        else
+            $viewParam = (int)$viewParam;
+
+        $this->viewForm = new System_Web_Form( 'switchView', $this );
+        $this->viewForm->addField( 'viewSelect', $viewParam );
 
         $this->viewOptions[ '' ] = $this->tr( 'All Issues' );
         if ( !empty( $views[ 0 ] ) )
@@ -73,10 +83,12 @@ class Client_IssuesList extends System_Web_Component
             $this->viewForm->validate();
 
             if ( !$this->viewForm->hasErrors() ) {
-                if ( $this->viewSelect != '' )
+                if ( $this->viewSelect == $initialView )
+                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'folder' => $folderId ) );
+                else if ( $this->viewSelect != '' )
                     $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'folder' => $folderId, 'view' => $this->viewSelect ) );
                 else
-                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'folder' => $folderId ) );
+                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'folder' => $folderId, 'view' => 0 ) );
                 $this->response->redirect( $url );
             }
         }

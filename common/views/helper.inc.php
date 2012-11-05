@@ -38,6 +38,8 @@ class Common_Views_Helper extends System_Web_Base
     private $conditionOperators;
     private $conditionsOperands;
     private $conditions;
+    private $publicViews = array();
+    private $initialView = null;
 
     public function __construct()
     {
@@ -227,6 +229,39 @@ class Common_Views_Helper extends System_Web_Base
         $result[ 'columns' ] = $this->getViewColumnsAsString();
         $result[ 'sort' ] = $this->getSortAsString();
         return $result;
+    }
+    
+    public function loadInitialView()
+    {
+        $this->publicViews = $this->viewManager->getPublicViewsForIssueType( $this->type );
+        $this->initialView = $this->viewManager->getViewSetting( $this->type, 'initial_view' );
+    }
+
+    public function getInitialViewName()
+    {
+        if ( $this->initialView != '' ) {
+            foreach ( $this->publicViews as $view ) {
+                if ( $view[ 'view_id' ] == $this->initialView )
+                    return $view[ 'view_name' ];
+            }
+        }
+        return $this->tr( 'All Issues' );
+    }
+
+    public function getInitialView()
+    {
+        if ( $this->initialView != '' ) {
+            foreach ( $this->publicViews as $view ) {
+                if ( $view[ 'view_id' ] == $this->initialView )
+                    return $this->initialView;
+            }
+        }
+        return '';
+    }
+
+    public function getPublicViews()
+    {
+        return $this->publicViews;
     }
 
     public function loadView( $definition )

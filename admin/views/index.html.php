@@ -37,6 +37,17 @@
 
 </fieldset>
 
+<fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Initial View' ) ?></legend>
+
+<div style="float: right">
+<?php echo $this->imageAndTextLink( $this->mergeQueryString( '/admin/views/initial.php' ), '/common/images/edit-modify-16.png', $this->tr( 'Modify' ) ) ?>
+</div>
+
+<p><?php echo $initial ?></p>
+
+</fieldset>
+
 <div class="toolbar">
 <?php $toolBar->render() ?>
 </div>

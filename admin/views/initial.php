@@ -20,7 +20,7 @@
 
 require_once( '../../system/bootstrap.inc.php' );
 
-class Admin_Views_Index extends System_Web_Component
+class Admin_Views_Initial extends System_Web_Component
 {
     protected function __construct()
     {
@@ -29,31 +29,42 @@ class Admin_Views_Index extends System_Web_Component
 
     protected function execute()
     {
-        $this->view->setDecoratorClass( 'Common_SinglePane' );
-        $this->view->setSlot( 'page_title', $this->tr( 'View Settings' ) );
+        $this->view->setDecoratorClass( 'Common_FixedBlock' );
+        $this->view->setSlot( 'page_title', $this->tr( 'Initial View' ) );
 
         $helper = new Common_Views_Helper();
         $breadcrumbs = $helper->getBreadcrumbs( $this );
 
-        $this->form = new System_Web_Form( 'views', $this );
-        if ( $this->form->loadForm() )
-            $this->response->redirect( $breadcrumbs->getParentUrl() );
-
         $this->type = $helper->getType();
 
-        $helper->initializeViewParsing();
-
-        $helper->loadOrder();
-        $this->order = $helper->getOrderAsString();
-
-        $this->defaultView = $helper->getDefaultView();
-
         $helper->loadInitialView();
-        $this->initial = $helper->getInitialViewName();
 
-        $this->grid = $helper->prepareGrid( $this );
-        $this->toolBar = $helper->prepareToolBar( $this );
+        $this->form = new System_Web_Form( 'view', $this );
+        $this->form->addField( 'initialView' );
+
+        $this->views = array();
+        $this->views[ '' ] = $this->tr( 'All Issues' );
+        foreach ( $helper->getPublicViews() as $view )
+            $this->views[ $view[ 'view_id' ] ] = $view[ 'view_name' ];
+
+        if ( $this->form->loadForm() ) {
+            if ( $this->form->isSubmittedWith( 'cancel' ) )
+                $this->response->redirect( $breadcrumbs->getParentUrl() );
+
+            if ( $this->form->isSubmittedWith( 'ok' ) ) {
+                $this->submit();
+                $this->response->redirect( $breadcrumbs->getParentUrl() );
+            }
+        } else {
+            $this->initialView = $helper->getInitialView();
+        }
+    }
+
+    private function submit()
+    {
+        $viewManager = new System_Api_ViewManager();
+        $viewManager->setViewSetting( $this->type, 'initial_view', $this->initialView );
     }
 }
 
-System_Bootstrap::run( 'Common_Application', 'Admin_Views_Index' );
+System_Bootstrap::run( 'Common_Application', 'Admin_Views_Initial' );

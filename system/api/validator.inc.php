@@ -801,12 +801,13 @@ class System_Api_Validator
 
     /**
     * Check if the view setting is valid.
+    * @param $type Issue type related to the setting.
     * @param $attributes Array of attributes of the issue type related
     * to the setting.
     * @param $key Name of the setting to validate.
     * @param $value Value of the setting to validate.
     */
-    public function checkViewSetting( $attributes, $key, $value )
+    public function checkViewSetting( $type, $attributes, $key, $value )
     {
         $this->checkString( $value, null, self::AllowEmpty );
 
@@ -828,6 +829,16 @@ class System_Api_Validator
             case 'default_view':
                 $info = System_Api_DefinitionInfo::fromString( $value );
                 $this->checkViewDefinitionInfo( $attributes, $info, false );
+                break;
+
+            case 'initial_view':
+                if ( $value != '' ) {
+                    $viewId = (int)$value;
+                    if ( (string)$viewId !== $value )
+                        throw new System_Api_Error( System_Api_Error::InvalidFormat );
+                    $viewManager = new System_Api_ViewManager();
+                    $view = $viewManager->getPublicViewForIssueType( $type, $viewId );
+                }
                 break;
 
             default:

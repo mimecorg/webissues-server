@@ -667,7 +667,7 @@ class Server_Actions
         $type = $typeManager->getIssueType( $typeId );
         $attributes = $typeManager->getAttributeTypesForIssueType( $type );
 
-        $this->validator->checkViewSetting( $attributes, $key, $newValue );
+        $this->validator->checkViewSetting( $type, $attributes, $key, $newValue );
 
         $viewManager = new System_Api_ViewManager();
         $this->setOkIf( $viewManager->setViewSetting( $type, $key, $newValue ) );
