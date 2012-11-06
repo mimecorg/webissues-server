@@ -81,25 +81,6 @@ class System_Web_JavaScript extends System_Web_Base
     }
 
     /**
-    * Register date picker controls based on click events.
-    * @param $selector The jQuery selector of the datePicker control.
-    * @param $noTimeSelector The jQuery selector on which a click 
-    * triggers a datePicker without time.
-    * @param $withTimeSelector The jQuery selector on which a click 
-    * triggers a datePicker with time.
-    */
-    public function registerDynamicDatePicker( $selector, $noTimeSelector, $withTimeSelector )
-    {
-        $this->registerCode( "
-            $( '$noTimeSelector' ).click( function() {
-                $( '$selector' ).datetimepicker( 'option', 'withTime', false );
-            } );
-            $( '$withTimeSelector' ).click( function() {
-                $( '$selector' ).datetimepicker( 'option', 'withTime', true );
-            } );" );
-    }
-
-    /**
     * Registers a date picker control.
     * @param $selector The jQuery selector of the control.
     * @param $flags If WithTime is set then time is included.
@@ -113,6 +94,13 @@ class System_Web_JavaScript extends System_Web_Base
         $localeHelper = new System_Web_LocaleHelper();
         $formatter = new System_Api_Formatter();
 
+        if ( $flags & self::WithToday )
+            $currentValue = '[' . $this->tr( 'Today' ) . ']';
+        else if ( $flags & self::WithTime )
+            $currentValue = $formatter->formatDateTime( time(), System_Api_Formatter::ToLocalTimeZone );
+        else
+            $currentValue = $formatter->formatDate( time(), System_Api_Formatter::ToLocalTimeZone );
+
         $this->registerCode( "
             $( '$selector' ).datetimepicker( {
                 buttonText: " . $this->escape( $this->tr( 'Choose' ) ) . ",
@@ -124,9 +112,10 @@ class System_Web_JavaScript extends System_Web_Base
                 nextText: " . $this->escape( $this->tr( 'Next' ) ) . ",
                 prevText: " . $this->escape( $this->tr( 'Previous' ) ) . ",
                 currentText: " . $this->escape( $this->tr( 'Today' ) ) . ",
+                currentValue: " . $this->escape( $currentValue ) . ",
                 closeText: " . $this->escape( $this->tr( 'Close' ) ) . ",
                 dateFormat: '" . $this->getDateFormat( $locale->getSettingFormat( 'date_format' ) ) . "',
-                showButtonPanel: " . ( ( $flags & self::WithToday ) ? 'true' : 'false' ) . ",
+                constrainInput: " . ( ( $flags & self::WithTime ) || ( $flags & self::WithToday ) ? 'false' : 'true' ) . ",
                 withTime: " . ( ( $flags & self::WithTime ) ? 'true' : 'false' ) . ",
                 zeroTime: '" . $formatter->convertTime( '00:00' ) . "' } );" );
     }

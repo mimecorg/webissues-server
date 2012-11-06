@@ -21,7 +21,7 @@
     $.datepicker._gotoToday = function( id ) {
         var target = $( id );
         var inst = this._getInst( target[ 0 ] );
-        this._selectDate( id, '[' + this._get(  inst, 'currentText' ) + ']' );
+        this._selectDate( id, this._get(  inst, 'currentValue' ) );
     };
     $.datepicker._updateDatepickerOrig = $.datepicker._updateDatepicker;
     $.datepicker._updateDatepicker = function( inst ) {
@@ -42,7 +42,6 @@
                 buttonImage: self.options.buttonImage,
                 buttonImageOnly: true,
                 showAnim: '',
-                showButtonPanel: true,
                 monthNamesShort: self.options.monthNamesShort,
                 dayNames: self.options.dayNames,
                 dayNamesMin: self.options.dayNamesMin,
@@ -50,12 +49,13 @@
                 nextText: self.options.nextText,
                 prevText: self.options.prevText,
                 currentText: self.options.currentText,
+                currentValue: self.options.currentValue,
                 closeText: self.options.closeText,
                 changeMonth: true,
                 changeYear: true,
                 dateFormat: self.options.dateFormat,
-                constrainInput: !self.options.showButtonPanel && !self.options.withTime,
-                showButtonPanel: self.options.showButtonPanel,
+                constrainInput: self.options.constrainInput,
+                showButtonPanel: true,
                 showOtherMonths: true,
                 selectOtherMonths: true,
                 beforeShow: function( input ) {
@@ -65,7 +65,7 @@
                     }
                 },
                 onSelect: function() {
-                    if ( self.options.withTime && this.value.length >= 1 && this.value[ 0 ] != '[' )
+                    if ( self.options.withTime && this.value.length != 0 && this.value[ 0 ] != '[' && this.value.indexOf( ' ' ) < 0 )
                         this.value += oldTime;
                 }
             } );
