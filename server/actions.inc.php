@@ -79,6 +79,12 @@ class Server_Actions
 
         foreach ( $settings as $row )
             $this->addRow( 'settings', $row );
+
+        $preferencesManager = new System_Api_PreferencesManager();
+        $settings = $preferencesManager->getSettingsAsTable();
+
+        foreach ( $settings as $row )
+            $this->addRow( 'settings', $row );
     }
 
     public function getLocale()

@@ -146,7 +146,8 @@ class System_Api_ServerManager extends System_Api_Base
         foreach ( array( 'comment_max_length', 'file_max_size' ) as $key )
             $result[] = array( 'set_key' => $key, 'set_value' => $this->getSetting( $key ) );
 
-        $result[] = array( 'set_key' => 'hide_id_column', 'set_value' => ( $this->getSetting( 'hide_id_column' ) == 1 ) ? '1' : '0' );
+        foreach ( array( 'hide_id_column', 'hide_empty_values' ) as $key )
+            $result[] = array( 'set_key' => $key, 'set_value' => ( $this->getSetting( $key ) == 1 ) ? '1' : '0' );
 
         $result[] = array( 'set_key' => 'email_enabled', 'set_value' => ( $this->getSetting( 'email_engine' ) != '' ) ? '1' : '0' );
 
