@@ -204,40 +204,44 @@ class System_Api_ViewManager extends System_Api_Base
     }
 
     /**
-    * Get the public view with given identifier associated with specified issue type.
+    * Check if the public view with given identifier associated with specified
+    * issue type exists.
     * @param $type Issue type for which the view is retrieved.
     * @param $viewId Identifier of the view.
-    * @return Array representing the view.
+    * @return @c true if the view exists.
     */
-    public function getPublicViewForIssueType( $type, $viewId )
+    public function isPublicViewForIssueType( $type, $viewId )
     {
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT view_id, type_id, view_name, view_def'
+        $query = 'SELECT view_id'
             . ' FROM {views}'
             . ' WHERE view_id = %d AND type_id = %d AND user_id IS NULL';
 
-        if ( !( $view = $this->connection->queryRow( $query, $viewId, $typeId ) ) )
-            throw new System_Api_Error( System_Api_Error::UnknownView );
-
-        return $view;
+        return ( $this->connection->queryScalar( $query, $viewId, $typeId ) !== false );
     }
 
     /**
     * Get public views associated with specified issue type.
     * @param $type Issue type for which the view is retrieved.
-    * @return Array of arrays representing the view.
+    * @return An associative array of public views view.
     */
     public function getPublicViewsForIssueType( $type )
     {
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT view_id, type_id, view_name, view_def'
+        $query = 'SELECT view_id, view_name'
             . ' FROM {views}'
             . ' WHERE type_id = %d AND user_id IS NULL'
             . ' ORDER BY view_name COLLATE LOCALE';
 
-        return $this->connection->queryTable( $query, $typeId );
+        $views = $this->connection->queryTable( $query, $typeId );
+
+        $result = array();
+        foreach ( $views as $view )
+            $result[ $view[ 'view_id' ] ] = $view[ 'view_name' ];
+
+        return $result;
     }
 
     /**

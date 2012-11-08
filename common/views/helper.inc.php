@@ -230,7 +230,7 @@ class Common_Views_Helper extends System_Web_Base
         $result[ 'sort' ] = $this->getSortAsString();
         return $result;
     }
-    
+
     public function loadInitialView()
     {
         $this->publicViews = $this->viewManager->getPublicViewsForIssueType( $this->type );
@@ -240,9 +240,9 @@ class Common_Views_Helper extends System_Web_Base
     public function getInitialViewName()
     {
         if ( $this->initialView != '' ) {
-            foreach ( $this->publicViews as $view ) {
-                if ( $view[ 'view_id' ] == $this->initialView )
-                    return $view[ 'view_name' ];
+            foreach ( $this->publicViews as $id => $name ) {
+                if ( $id == $this->initialView )
+                    return $name;
             }
         }
         return $this->tr( 'All Issues' );
@@ -251,8 +251,8 @@ class Common_Views_Helper extends System_Web_Base
     public function getInitialView()
     {
         if ( $this->initialView != '' ) {
-            foreach ( $this->publicViews as $view ) {
-                if ( $view[ 'view_id' ] == $this->initialView )
+            foreach ( $this->publicViews as $id => $name ) {
+                if ( $id == $this->initialView )
                     return $this->initialView;
             }
         }

@@ -44,8 +44,8 @@ class Admin_Views_Initial extends System_Web_Component
 
         $this->views = array();
         $this->views[ '' ] = $this->tr( 'All Issues' );
-        foreach ( $helper->getPublicViews() as $view )
-            $this->views[ $view[ 'view_id' ] ] = $view[ 'view_name' ];
+        foreach ( $helper->getPublicViews() as $id => $name )
+            $this->views[ $id ] = $name;
 
         if ( $this->form->loadForm() ) {
             if ( $this->form->isSubmittedWith( 'cancel' ) )

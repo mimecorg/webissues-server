@@ -837,7 +837,8 @@ class System_Api_Validator
                     if ( (string)$viewId !== $value )
                         throw new System_Api_Error( System_Api_Error::InvalidFormat );
                     $viewManager = new System_Api_ViewManager();
-                    $view = $viewManager->getPublicViewForIssueType( $type, $viewId );
+                    if ( !$viewManager->isPublicViewForIssueType( $type, $viewId ) )
+                        throw new System_Api_Error( System_Api_Error::UnknownView );
                 }
                 break;
 

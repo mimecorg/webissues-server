@@ -64,19 +64,12 @@ class Common_Mail_Notification extends System_Web_Component
         $this->baseUrl = $serverManager->getSetting( 'base_url' );
 
         if ( $this->baseUrl != '' ) {
-            $initialView = null;
-
             $initial = $viewManager->getViewSetting( $type, 'initial_view' );
-            $views = $viewManager->getPublicViewsForIssueType( $type );
 
-            foreach ( $views as $view ) {
-                if ( $view[ 'view_id' ] == $initial ) {
-                    $initialView = $initial;
-                    break;
-                }
-            }
+            if ( $initial != '' && $initial != $this->viewId && !$viewManager->isPublicViewForIssueType( $type, $initial ) )
+                $initial = '';
 
-            if ( $this->viewId == $initialView )
+            if ( $this->viewId == $initial )
                 $this->linkViewId = null;
             else if ( $this->viewId != null )
                 $this->linkViewId = $this->viewId;
