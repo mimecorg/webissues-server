@@ -45,7 +45,7 @@ class Common_Tools_ViewSettings extends System_Web_Component
         );
 
         $filter = array(
-            1 => $this->tr( 'Full History' ),
+            1 => $this->tr( 'All History' ),
             4 => $this->tr( 'Comments & Attachments' )
         );
 
