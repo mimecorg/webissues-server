@@ -8,6 +8,7 @@ Requirements
      * mbstring (required)
      * mysqli (required when using MySQL database)
      * pgsql (required when using PostgreSQL database)
+     * com_dotnet (required since PHP 5.3.15 / 5.4.5 when using SQL Server)
 
  * One of the following database servers:
  

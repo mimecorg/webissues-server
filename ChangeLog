@@ -1,3 +1,11 @@
+1.0.4 (2012-11-27)
+    * simplified issue properties and history
+    * added settings and preferences for history order and filter
+    * added option for hiding empty attributes
+    * added initial view for issue type
+    * added Today button when adding and editing an issue
+    * fixed handling binary files on Postgres (bug #725)
+
 1.0.3 (2012-08-15)
     * added Dutch and Spanish translations
     * user self-registration with administrator approval
