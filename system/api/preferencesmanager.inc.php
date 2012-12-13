@@ -137,8 +137,8 @@ class System_Api_PreferencesManager extends System_Api_Base
 
         $serverManager = new System_Api_ServerManager();
         return $serverManager->getSetting( $key );
+	}
 
-        }
     /**
     * Return an array of associative arrays representing preferences.
     */
