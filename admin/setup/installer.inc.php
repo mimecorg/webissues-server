@@ -273,7 +273,7 @@ class Admin_Setup_Installer extends System_Web_Base
             'folder_page_size'      => 10,
             'history_page_size'     => 20,
             'history_order'         => 'asc',
-            'history_filter'        => 1
+            'history_filter'        => 1,
             'file_max_size'         => 1048576,
             'file_db_max_size'      => 4096,
             'session_max_lifetime'  => 7200,
