@@ -852,7 +852,7 @@
 <context>
     <name>Admin_Setup_Install</name>
     <message>
-        <location filename="../../../admin/setup/install.php" line="232"/>
+        <location filename="../../../admin/setup/install.php" line="234"/>
         <source>No supported database engines are available in this PHP installation.</source>
         <translation>Il n&apos;y a aucun des moteurs de base de données supportés sur cette installation PHP.</translation>
     </message>
@@ -868,68 +868,73 @@
         <translation>Configurez votre serveur WebIssues</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="209"/>
+        <location filename="../../../admin/setup/install.php" line="211"/>
         <source>My WebIssues Server</source>
         <translation>Mon serveur WebIssues</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="257"/>
+        <location filename="../../../admin/setup/install.php" line="259"/>
         <source>Do not install any issue types</source>
         <translation>Ne pas installer de types de demande</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="258"/>
+        <location filename="../../../admin/setup/install.php" line="260"/>
         <source>Install the default set of issue types</source>
         <translation>Installer l&apos;ensemble des types de demande par défaut</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="259"/>
+        <location filename="../../../admin/setup/install.php" line="261"/>
         <source>Import data from WebIssues Server 0.8.5</source>
         <translation>Importer les données d&apos;un serveur WebIssues 0.8.5</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="278"/>
+        <location filename="../../../admin/setup/install.php" line="280"/>
         <source>Could not connect to database. Please check connection details and try again.</source>
         <translation>Connexion à la base de données impossible. Vérifiez les informations de connexion et réessayez.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="299"/>
+        <location filename="../../../admin/setup/install.php" line="302"/>
         <source>The existing version of the database cannot be used with this version of WebIssues Server.</source>
         <translation>La version existante de la base de données ne peut pas être utilisée avec cette version du serveur WebIssues.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="307"/>
-        <location filename="../../../admin/setup/install.php" line="338"/>
+        <location filename="../../../admin/setup/install.php" line="313"/>
+        <location filename="../../../admin/setup/install.php" line="344"/>
         <source>Could not retrieve information from the database.</source>
         <translation>Impossible de récupérer les informations à partir de la base de données.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="320"/>
+        <location filename="../../../admin/setup/install.php" line="326"/>
         <source>No data tables were found in the database.</source>
         <translation>Aucune table de données n&apos;a été trouvée dans la base de données.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="328"/>
+        <location filename="../../../admin/setup/install.php" line="334"/>
         <source>The existing version of the database cannot be imported.</source>
         <translation>La version de la base de données ne peut pas être importée.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="352"/>
+        <location filename="../../../admin/setup/install.php" line="358"/>
         <source>Database does not support InnoDB storage which is required by WebIssues Server.</source>
         <translation>La base de données ne supporte pas le stockage InnoDB requis par le serveur WebIssues.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="378"/>
+        <location filename="../../../admin/setup/install.php" line="384"/>
         <source>Database version %1 is older than minimum required version %2.</source>
         <translation>La version de la base de données %1 est plus ancienne que la version minimum requise %2.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="410"/>
+        <location filename="../../../admin/setup/install.php" line="416"/>
         <source>Completed the installation of the server</source>
         <translation>Installation du serveur terminée</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="437"/>
+        <location filename="../../../admin/setup/install.php" line="448"/>
+        <source>Updated database to version %1</source>
+        <translation>Base de données mise à jour vers la version %1</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="475"/>
         <source>The configuration file could not be written.</source>
         <translation>Le fichier de configuration n&apos;a pas pu être écrit.</translation>
     </message>
@@ -1045,12 +1050,12 @@
         <translation>Préfixe des tables</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="158"/>
+        <location filename="../../../admin/setup/install.html.php" line="162"/>
         <source>&amp;lt; Back</source>
         <translation>&amp;lt; Retour</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="173"/>
+        <location filename="../../../admin/setup/install.html.php" line="177"/>
         <source>Installation in progress...</source>
         <translation>Installation en cours ...</translation>
     </message>
@@ -1130,22 +1135,27 @@
         <translation>Aucun type de demande ne sera créé sur ce serveur.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="145"/>
+        <location filename="../../../admin/setup/install.html.php" line="146"/>
+        <source>The database of this WebIssues Server will be updated to version %1.</source>
+        <translation>La base de données de ce serveur WebIssues sera mise à jour vers la version %1.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="148"/>
         <source>The server is already configured. It will not be modified during the installation.</source>
         <translation>Le serveur est déjà configuré. Il ne sera pas modifié pendant l&apos;installation.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="155"/>
+        <location filename="../../../admin/setup/install.html.php" line="159"/>
         <source>Refresh</source>
         <translation>Actualiser</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="161"/>
+        <location filename="../../../admin/setup/install.html.php" line="165"/>
         <source>Next &amp;gt;</source>
         <translation>Suivant &amp;gt;</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="164"/>
+        <location filename="../../../admin/setup/install.html.php" line="168"/>
         <source>Install</source>
         <translation>Installer</translation>
     </message>
@@ -1158,200 +1168,200 @@
         <translation>Administrateur</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="292"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="294"/>
         <source>Forum</source>
         <translation>Forum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="300"/>
         <source>Bugs</source>
         <translation>Bugs</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="301"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="303"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation>Assigné à</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="310"/>
         <source>Status</source>
         <comment>bug</comment>
         <translation>État</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
         <location filename="../../../admin/setup/installer.inc.php" line="313"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="369"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="315"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="355"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>Active</source>
         <comment>bug</comment>
         <translation>Actif</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="376"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="313"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="378"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translation>Résolu</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="313"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translation>Fermé</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="317"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="319"/>
         <source>Reason</source>
         <translation>Raison</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
         <source>Fixed</source>
         <translation>Corrigé</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
         <source>Obsolete</source>
         <translation>Obsolète</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
         <source>Duplicate</source>
         <translation>Doublon</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="323"/>
         <source>As Designed</source>
         <translation>Conforme à la conception</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="323"/>
         <source>Unable To Reproduce</source>
         <translation>Impossible à reproduire</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="323"/>
         <source>Test Failed</source>
         <translation>Le test a échoué</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="325"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="327"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translation>Sévérité</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="335"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="337"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="345"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translation>Créé par moi</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="350"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="352"/>
         <source>Active Bugs</source>
         <translation>Anomalies actives</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="359"/>
         <source>My Active Bugs</source>
         <translation>Mes anomalies actives</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Unassigned Bugs</source>
         <translation>Anomalies non assignées</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="373"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="375"/>
         <source>Resolved Bugs</source>
         <translation>Anomalies résolues</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="384"/>
         <source>Tasks</source>
         <translation>Tâches</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="385"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="387"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translation>Assignée à</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="392"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="394"/>
         <source>Status</source>
         <comment>task</comment>
         <translation>État</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
         <location filename="../../../admin/setup/installer.inc.php" line="397"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="437"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="453"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="399"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="439"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="455"/>
         <source>Active</source>
         <comment>task</comment>
         <translation>Active</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
         <source>Closed</source>
         <comment>task</comment>
         <translation>Fermée</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="401"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="403"/>
         <source>Priority</source>
         <comment>task</comment>
         <translation>Priorité</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="411"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="413"/>
         <source>Progress</source>
         <translation>Avancement</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="421"/>
         <source>Due Date</source>
         <translation>À rendre le</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="429"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translation>Créée par moi</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="434"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="436"/>
         <source>Active Tasks</source>
         <translation>Tâches actives</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="443"/>
         <source>My Active Tasks</source>
         <translation>Mes tâches actives</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="449"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="451"/>
         <source>Unassigned Tasks</source>
         <translation>Tâches non assignées</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="457"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="459"/>
         <source>Completed Tasks</source>
         <translation>Tâches terminées</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="460"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="462"/>
         <source>Completed</source>
         <comment>task</comment>
         <translation>Terminée</translation>
