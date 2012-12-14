@@ -22,16 +22,41 @@ Installation
 
 Quick steps:
 
-1. Unpack the entire WebIssues Server package to the web server's document
-   root directory.
+1. Unpack the entire WebIssues server package to the root directory
+   of the web server.
 
 2. Create a database and a user account with sufficient privileges to create
    tables in that database.
 
 3. Make sure that the data/ subdirectory is writable for the web server.
 
-4. Point your browser to the admin/setup/install.php page and follow
+4. Point your browser to the URL of the WebIssues server and follow
    the instructions.
 
 For more information please refer to the manual which is included
 in the 'doc' subdirectory of this package.
+
+
+Updating
+========
+
+Quick steps:
+
+1. Backup the database.
+
+2. Delete all files and subdirectories from the directory where you installed
+   the WebIssues server, except the data/ subdirectory.
+
+3. Unpack the entire WebIssues server package to the directory where
+   the WebIssues server was previously installed.
+
+4. Point your browser to the URL of the WebIssues server and follow
+   the instructions.
+
+For more information please refer to the manual which is included
+in the 'doc' subdirectory of this package.
+
+NOTE: In order to update the WebIssues server from version 0.8.5, you must
+install a new instance of WebIssues server version 1.0 and select the option
+to migrate data from version 0.8.5 in the installer. Refer to the manual for
+more information.
