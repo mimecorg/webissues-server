@@ -142,7 +142,11 @@ case 'new_site': ?>
 <?php break;
 case 'existing_site': ?>
 
+<?php if ( $update ): ?>
+<p><?php echo $this->tr( 'The database of this WebIssues Server will be updated to version %1.', null, WI_DATABASE_VERSION ) ?></p>
+<?php else: ?>
 <p><?php echo $this->tr( 'The server is already configured. It will not be modified during the installation.' ) ?></p>
+<?php endif ?>
 
 <?php $this->insertComponent( 'Admin_Info_Server' ) ?>
 

@@ -154,9 +154,11 @@ class Admin_Setup_Install extends System_Web_Component
                     break;
                 case 'existing_site':
                     if ( $this->openConnection() ) {
-                        if ( $this->writeSiteConfiguration() ) {
-                            $this->startSession();
-                            $this->page = 'completed';
+                        if ( $this->updateDatabase() ) {
+                            if ( $this->writeSiteConfiguration() ) {
+                                $this->startSession();
+                                $this->page = 'completed';
+                            }
                         }
                     }
                     break;
@@ -293,10 +295,14 @@ class Admin_Setup_Install extends System_Web_Component
                     $serverManager = new System_Api_ServerManager();
                     $this->server = $serverManager->getServer();
 
-                    if ( $this->server[ 'db_version' ] == WI_DATABASE_VERSION ) {
-                        $this->page = 'existing_site';
-                    } else {
+                    $version = $this->server[ 'db_version' ];
+                    $current = version_compare( $version, WI_DATABASE_VERSION );
+
+                    if ( version_compare( $version, '1.0' ) < 0 || $current > 0 ) {
                         $this->form->setError( 'connection', $this->tr( 'The existing version of the database cannot be used with this version of WebIssues Server.' ) );
+                    } else {
+                        $this->update = ( $current < 0 );
+                        $this->page = 'existing_site';
                     }
                 }
             }
@@ -408,6 +414,38 @@ class Admin_Setup_Install extends System_Web_Component
             $eventLog = new System_Api_EventLog( $this );
             $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
                 $eventLog->tr( 'Completed the installation of the server' ) );
+
+            return true;
+        } catch ( System_Db_Exception $e ) {
+            $connection->close();
+
+            $this->page = 'failed';
+            $this->error = $e->__toString();
+
+            return false;
+        }
+    }
+
+    private function updateDatabase()
+    {
+        $serverManager = new System_Api_ServerManager();
+        $server = $serverManager->getServer();
+
+        $version = $server[ 'db_version' ];
+
+        if ( $version == WI_DATABASE_VERSION )
+            return true;
+
+        $connection = System_Core_Application::getInstance()->getConnection();
+
+        try {
+            $updater = new Admin_Setup_Updater( $connection );
+
+            $updater->updateDatabase( $version );
+
+            $eventLog = new System_Api_EventLog( $this );
+            $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                $eventLog->tr( 'Updated database to version %1', null, WI_DATABASE_VERSION ) );
 
             return true;
         } catch ( System_Db_Exception $e ) {
