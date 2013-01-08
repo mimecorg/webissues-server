@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl_NL">
+<TS version="2.0" language="nl">
 <context>
     <name>Admin_Events_Event</name>
     <message>
@@ -180,7 +180,7 @@
     <message>
         <location filename="../../../admin/index.html.php" line="16"/>
         <source>Approve and reject pending user registration requests.</source>
-        <translation>Goed- en afkeuren van registratie verzoeken.</translation>
+        <translation>Goed- en afkeuren van registratie verzoeken</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="18"/>
@@ -292,7 +292,7 @@
     <message>
         <location filename="../../../admin/info/index.php" line="61"/>
         <source>The cron job was not started within the last 24 hours.</source>
-        <translation>De cron job is de laatste 24 uur niet gestart.</translation>
+        <translation>De cron job is de laatste 24 uur niet gestart</translation>
     </message>
 </context>
 <context>
@@ -305,7 +305,7 @@
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="3"/>
         <source>Enter the new server name.</source>
-        <translation>Vul de nieuwe server naam in.</translation>
+        <translation>Vul de nieuwe server naam in:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="7"/>
@@ -377,7 +377,7 @@
     <message>
         <location filename="../../../admin/info/site.html.php" line="4"/>
         <source>Site Configuration</source>
-        <translation>Site configuratie</translation>
+        <translation>Site configuratie:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="8"/>
@@ -393,7 +393,7 @@
     <message>
         <location filename="../../../admin/info/site.html.php" line="20"/>
         <source>Debugging log file:</source>
-        <translation>Debug log bestand:</translation>
+        <translation>Debug log bestand</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="21"/>
@@ -476,7 +476,7 @@
     <message>
         <location filename="../../../admin/register/approve.html.php" line="24"/>
         <source>Projects</source>
-        <translation>Projecten</translation>
+        <translation>Projecten:</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="40"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../../../admin/settings/index.php" line="33"/>
         <source>Server Settings</source>
-        <translation>Server instellingen</translation>
+        <translation>Server instellingen:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="74"/>
@@ -677,7 +677,7 @@
     <message>
         <location filename="../../../admin/settings/index.html.php" line="44"/>
         <source>Maximum Lifetime</source>
-        <translation>Maximale levensduur</translation>
+        <translation>Maximale levensduur:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="46"/>
@@ -781,12 +781,12 @@
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="18"/>
         <source>SMTP Server</source>
-        <translation>SMTP server</translation>
+        <translation>SMTP server:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="20"/>
         <source>Fill the information below when using a custom SMTP server.</source>
-        <translation>Vul onderstaande informatie in bij het gebruik van een custom SMTP server.</translation>
+        <translation>Vul onderstaande informatie in bij het gebruik van een custom SMTP server:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="22"/>
@@ -816,7 +816,7 @@
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="31"/>
         <source>Connection to the SMTP server was successful.</source>
-        <translation>Verbinding met de SMTP server is gelukt.</translation>
+        <translation>Verbinding met de SMTP server is gelukt</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="35"/>
@@ -857,9 +857,9 @@
 <context>
     <name>Admin_Setup_Install</name>
     <message>
-        <location filename="../../../admin/setup/install.php" line="234"/>
+        <location filename="../../../admin/setup/install.php" line="232"/>
         <source>No supported database engines are available in this PHP installation.</source>
-        <translation>Er zijn geen ondersteunde database engines beschikbaar in deze PHP installatie.</translation>
+        <translation>Er zijn geen ondersteunde database engines beschikbaar in deze PHP installatie</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="77"/>
@@ -873,73 +873,68 @@
         <translation>Instellen van je Webssues Server</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="211"/>
+        <location filename="../../../admin/setup/install.php" line="209"/>
         <source>My WebIssues Server</source>
         <translation>Mijn WebIssues Server</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="259"/>
+        <location filename="../../../admin/setup/install.php" line="257"/>
         <source>Do not install any issue types</source>
         <translation>Installeer geen issue soorten</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="260"/>
+        <location filename="../../../admin/setup/install.php" line="258"/>
         <source>Install the default set of issue types</source>
         <translation>Installeer de standaard set issue soorten</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="261"/>
+        <location filename="../../../admin/setup/install.php" line="259"/>
         <source>Import data from WebIssues Server 0.8.5</source>
         <translation>Importeer data van WebIssues Sever 0.8.5</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="280"/>
+        <location filename="../../../admin/setup/install.php" line="278"/>
         <source>Could not connect to database. Please check connection details and try again.</source>
         <translation>Kan geen verbinding maken met de database. Controleer de instellingen van de verbinding en probeer het nog een keer.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="302"/>
+        <location filename="../../../admin/setup/install.php" line="299"/>
         <source>The existing version of the database cannot be used with this version of WebIssues Server.</source>
         <translation>De bestaande versie van de database kan niet worden gebruikt met deze versie van WebIssues Server.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="313"/>
-        <location filename="../../../admin/setup/install.php" line="344"/>
+        <location filename="../../../admin/setup/install.php" line="307"/>
+        <location filename="../../../admin/setup/install.php" line="338"/>
         <source>Could not retrieve information from the database.</source>
         <translation>Kan geen informatie uit de database ophalen.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="326"/>
+        <location filename="../../../admin/setup/install.php" line="320"/>
         <source>No data tables were found in the database.</source>
         <translation>Er zijn geen tabellen gevonden in de database.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="334"/>
+        <location filename="../../../admin/setup/install.php" line="328"/>
         <source>The existing version of the database cannot be imported.</source>
         <translation>De bestaande versie van de database kan niet worden geimporteerd.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="358"/>
+        <location filename="../../../admin/setup/install.php" line="352"/>
         <source>Database does not support InnoDB storage which is required by WebIssues Server.</source>
         <translation>Database ondersteund geen InnoDB opslag, deze is vereist voor WebIssues Server.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="384"/>
+        <location filename="../../../admin/setup/install.php" line="378"/>
         <source>Database version %1 is older than minimum required version %2.</source>
         <translation>Database versie %1 is ouder dan de minimaal vereiste versie %2.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="416"/>
+        <location filename="../../../admin/setup/install.php" line="410"/>
         <source>Completed the installation of the server</source>
-        <translation>De installatie van de server is afgerond</translation>
+        <translation>De installatie van de server is afgerond.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="448"/>
-        <source>Updated database to version %1</source>
-        <translation>Database bijgewerkt naar versie %1</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.php" line="475"/>
+        <location filename="../../../admin/setup/install.php" line="437"/>
         <source>The configuration file could not be written.</source>
         <translation>Het configuratie bestand kon niet worden weggeschreven.</translation>
     </message>
@@ -1052,15 +1047,15 @@
     <message>
         <location filename="../../../admin/setup/install.html.php" line="75"/>
         <source>Table Prefix</source>
-        <translation>Tabel voorvoegsel</translation>
+        <translation>Tabel voorvoegsel:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="162"/>
+        <location filename="../../../admin/setup/install.html.php" line="158"/>
         <source>&amp;lt; Back</source>
         <translation>&amp;lt; Terug</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="177"/>
+        <location filename="../../../admin/setup/install.html.php" line="173"/>
         <source>Installation in progress...</source>
         <translation>Installatie loopt...</translation>
     </message>
@@ -1122,7 +1117,7 @@
     <message>
         <location filename="../../../admin/setup/install.html.php" line="124"/>
         <source>The new server will be installed in the selected database.</source>
-        <translation>De nieuwe server zal worden geinstalleerd in de geselecteerde database.</translation>
+        <translation>De nieuwe server zal worden geinstalleerd in de geselecteerde database</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="128"/>
@@ -1140,27 +1135,22 @@
         <translation>Op deze server zullen geen issue soorten worden aangemaakt.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="146"/>
-        <source>The database of this WebIssues Server will be updated to version %1.</source>
-        <translation>De database van deze WebIssues Server zal worden bijgewerkt naar versie %1.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="148"/>
+        <location filename="../../../admin/setup/install.html.php" line="145"/>
         <source>The server is already configured. It will not be modified during the installation.</source>
         <translation>De server is al ingesteld. Hij zal niet veranderen tijdens de installatie.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="159"/>
+        <location filename="../../../admin/setup/install.html.php" line="155"/>
         <source>Refresh</source>
         <translation>Ververs</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="165"/>
+        <location filename="../../../admin/setup/install.html.php" line="161"/>
         <source>Next &amp;gt;</source>
         <translation>Volgende &amp;gt;</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="168"/>
+        <location filename="../../../admin/setup/install.html.php" line="164"/>
         <source>Install</source>
         <translation>Installeer</translation>
     </message>
@@ -1173,212 +1163,212 @@
         <translation>Beheerder</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="294"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="292"/>
         <source>Forum</source>
         <translation>Forum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="300"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="298"/>
         <source>Bugs</source>
         <translation>Bugs</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="303"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="301"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation>bug</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="310"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
         <source>Status</source>
         <comment>bug</comment>
         <translatorcomment>bug</translatorcomment>
         <translation>Status</translation>
     </message>
     <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
         <location filename="../../../admin/setup/installer.inc.php" line="313"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="315"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="355"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="369"/>
         <source>Active</source>
         <comment>bug</comment>
         <translatorcomment>bug</translatorcomment>
         <translation>Actief</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="313"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="378"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="376"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translatorcomment>bug</translatorcomment>
         <translation>Opgelost</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="313"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="311"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translatorcomment>bug</translatorcomment>
         <translation>Gesloten</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="319"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="317"/>
         <source>Reason</source>
         <translation>Oorzaak</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
         <source>Fixed</source>
         <translation>Opgelost</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
         <source>Obsolete</source>
         <translation>Vervallen</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="320"/>
         <source>Duplicate</source>
         <translation>Dubbel</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="323"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
         <source>As Designed</source>
         <translation>Zoals ontworpen</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="323"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
         <source>Unable To Reproduce</source>
         <translation>Niet reproduceerbaar</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="323"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="321"/>
         <source>Test Failed</source>
         <translation>Test mislukt</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="327"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="325"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translatorcomment>bug</translatorcomment>
-        <translation>Prioriteit</translation>
+        <translation>Prioriteit:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="337"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="335"/>
         <source>Version</source>
         <translation>Versie</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="345"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translatorcomment>bug</translatorcomment>
         <translation>Aangemaakt door mij</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="352"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="350"/>
         <source>Active Bugs</source>
         <translation>Actieve bugs</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="359"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
         <source>My Active Bugs</source>
         <translation>Mijn actieve bugs</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
         <source>Unassigned Bugs</source>
         <translation>Niet toegewezen bugs</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="375"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="373"/>
         <source>Resolved Bugs</source>
         <translation>Opgeloste bugs</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="384"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
         <source>Tasks</source>
         <translation>Taken</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="387"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="385"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translatorcomment>taak</translatorcomment>
         <translation>Toewezen aan</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="394"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="392"/>
         <source>Status</source>
         <comment>task</comment>
         <translatorcomment>taak</translatorcomment>
         <translation>Status</translation>
     </message>
     <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
         <location filename="../../../admin/setup/installer.inc.php" line="397"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="399"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="439"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="455"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="437"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="453"/>
         <source>Active</source>
         <comment>task</comment>
         <translatorcomment>taak</translatorcomment>
         <translation>Actief</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
         <source>Closed</source>
         <comment>task</comment>
         <translatorcomment>taak</translatorcomment>
         <translation>Gesloten</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="403"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="401"/>
         <source>Priority</source>
         <comment>task</comment>
         <translatorcomment>taak</translatorcomment>
-        <translation>Prioriteit</translation>
+        <translation>Prioriteit:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="413"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="411"/>
         <source>Progress</source>
         <translation>Voortgang</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="421"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
         <source>Due Date</source>
         <translation>Einddatum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="429"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translatorcomment>taak</translatorcomment>
         <translation>Aangemaakt door mij</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="436"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="434"/>
         <source>Active Tasks</source>
         <translation>Actieve taken</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="443"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
         <source>My Active Tasks</source>
         <translation>Mijn actieve taken</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="451"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="449"/>
         <source>Unassigned Tasks</source>
         <translation>Niet toegewezen taken</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="459"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="457"/>
         <source>Completed Tasks</source>
         <translation>Afgeronde taken</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="462"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="460"/>
         <source>Completed</source>
         <comment>task</comment>
         <translation>Afgerond</translation>
@@ -1660,7 +1650,7 @@
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="110"/>
         <source>Allow selecting only project members</source>
-        <translation>Alleen project medewerkers mogen geselecteerd worden</translation>
+        <translation>Alleen project medewerkers mogen geselecteerd worden.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="125"/>
@@ -2081,7 +2071,7 @@
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="20"/>
         <source>Projects</source>
-        <translation>Projecten</translation>
+        <translation>Projecten:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="36"/>
@@ -2149,7 +2139,7 @@
     <message>
         <location filename="../../../admin/users/index.html.php" line="48"/>
         <source>There are no disabled users.</source>
-        <translation>Er zijn geen geblokkeerde gebruikers.</translation>
+        <translation>Er zijn geen geblokkeerde gebruikers</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="62"/>
@@ -2194,7 +2184,7 @@
         <location filename="../../../admin/users/index.php" line="91"/>
         <source>User Projects</source>
         <translatorcomment>Betere vertaling na test?</translatorcomment>
-        <translation>Gebruiker projecten</translation>
+        <translation>Gebruiker projecten:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="92"/>
@@ -2240,7 +2230,7 @@
     <message>
         <location filename="../../../admin/users/projects.php" line="37"/>
         <source>User Projects</source>
-        <translation>Gebruiker projecten</translation>
+        <translation>Gebruiker projecten:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="58"/>
@@ -2386,7 +2376,7 @@
     <message>
         <location filename="../../../admin/views/index.html.php" line="41"/>
         <source>Initial View</source>
-        <translation type="unfinished"></translation>
+        <translation>Initiele view</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="59"/>
@@ -2424,7 +2414,7 @@
     <message>
         <location filename="../../../admin/views/initial.php" line="33"/>
         <source>Initial View</source>
-        <translation type="unfinished"></translation>
+        <translation>Initiele view</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.php" line="46"/>
@@ -2434,12 +2424,12 @@
     <message>
         <location filename="../../../admin/views/initial.html.php" line="3"/>
         <source>Select the initial view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecteer de initiele view voor type &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="7"/>
         <source>Initial view:</source>
-        <translation type="unfinished"></translation>
+        <translation>Initiele view</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="10"/>
@@ -2573,7 +2563,7 @@
     <message>
         <location filename="../../../client/alerts/add.html.php" line="23"/>
         <source>There are no more available views to use.</source>
-        <translation>Er zijn geen andere views beschikbaar.</translation>
+        <translation>Er zijn geen andere views beschikbaar</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/add.html.php" line="26"/>
@@ -2667,7 +2657,7 @@
     <message>
         <location filename="../../../client/alerts/index.html.php" line="15"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Naam:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="16"/>
@@ -2881,23 +2871,23 @@
     <message>
         <location filename="../../../client/issuedetails.html.php" line="27"/>
         <source>Location:</source>
-        <translation type="unfinished"></translation>
+        <translation>Locatie:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="31"/>
         <source>Created:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aangemaakt:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="35"/>
         <source>Last Modified:</source>
-        <translation type="unfinished"></translation>
+        <translation>Laatste aanpassing:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="78"/>
         <location filename="../../../client/issuedetails.html.php" line="95"/>
         <source>Last Edited:</source>
-        <translation type="unfinished"></translation>
+        <translation>Laatste wijziging:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="97"/>
@@ -2907,7 +2897,7 @@
     <message>
         <location filename="../../../client/issuedetails.html.php" line="173"/>
         <source>Issue moved from %1 to %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Issue van %1 naar %2 verplaatst</translation>
     </message>
 </context>
 <context>
@@ -2985,7 +2975,7 @@
     <message>
         <location filename="../../../client/issueslist.html.php" line="69"/>
         <source>There are no issues matching the search criteria.</source>
-        <translation>Er komen geen issues overeen met de zoektermen.</translation>
+        <translation>Er komen geen issues overeen met de zoektermen</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="73"/>
@@ -3382,12 +3372,12 @@
     <message>
         <location filename="../../../client/projectstree.html.php" line="7"/>
         <source>Projects</source>
-        <translation>Projecten</translation>
+        <translation>Projecten:</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="13"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Naam:</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="14"/>
@@ -3785,7 +3775,7 @@
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="18"/>
         <source>There are no available destination projects.</source>
-        <translation>Er zijn geen bestemming projecten beschikbaar.</translation>
+        <translation>Er zijn geen bestemming projecten beschikbaar</translation>
     </message>
 </context>
 <context>
@@ -4241,7 +4231,7 @@
     <message>
         <location filename="../../errors/handle401.html.php" line="3"/>
         <source>You have no permission to access the requested page.</source>
-        <translation>Je hebt geen toestemming om de gevraagde  pagina te bezoeken.</translation>
+        <translation>Je hebt geen toestemming om de gevraagde  pagina te bezoeken</translation>
     </message>
 </context>
 <context>
@@ -4400,22 +4390,22 @@
     <message>
         <location filename="../../mail/notification.html.php" line="65"/>
         <source>Location:</source>
-        <translation type="unfinished"></translation>
+        <translation>Locatie:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="69"/>
         <source>Created:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aangemaakt:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="73"/>
         <source>Last Modified:</source>
-        <translation type="unfinished"></translation>
+        <translation>Laatste aanpassing:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="175"/>
         <source>Issue moved from %1 to %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Issue van %1 naar %2 verplaatst</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="82"/>
@@ -4853,7 +4843,7 @@
     <message>
         <location filename="../../tools/preferences.html.php" line="29"/>
         <source>Do not notify about issues that I have already read</source>
-        <translation>Stuur geen notificaties over issues die ik al gelezen heb</translation>
+        <translation>Stuur geen notificaties over issues die ik al gelezen heb.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="31"/>
@@ -4903,12 +4893,12 @@
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="43"/>
         <source>Oldest First</source>
-        <translation type="unfinished"></translation>
+        <translation>Oudste eerst</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="44"/>
         <source>Newest First</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieuwste eerst</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="48"/>
@@ -4924,12 +4914,14 @@
         <location filename="../../tools/viewsettings.inc.php" line="54"/>
         <source>Default (%1)</source>
         <comment>order</comment>
+        <translatorcomment>volgorde</translatorcomment>
         <translation>Standaard (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="60"/>
         <source>Default (%1)</source>
         <comment>filter</comment>
+        <translatorcomment>filter</translatorcomment>
         <translation>Standaard (%1)</translation>
     </message>
     <message>
@@ -4950,22 +4942,22 @@
     <message>
         <location filename="../../tools/viewsettings.html.php" line="10"/>
         <source>Hide attributes with empty values</source>
-        <translation type="unfinished"></translation>
+        <translation>Verberg attributen met lege waarden</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="12"/>
         <source>Global view settings that affect all issue types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Globale view instellingen die betrekking hebben op alle issue soorten.</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="15"/>
         <source>Order of issue history:</source>
-        <translation type="unfinished"></translation>
+        <translation>Volgorde van de issue historie:</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="16"/>
         <source>Default filter in issue history:</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard filter van de issue historie:</translation>
     </message>
 </context>
 <context>
@@ -5298,7 +5290,7 @@
     <message>
         <location filename="../../views/view.html.php" line="83"/>
         <source>Order:</source>
-        <translation>Volgorde:</translation>
+        <translation>Volgorde</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="91"/>
@@ -5463,7 +5455,7 @@
     <message>
         <location filename="../../../register.html.php" line="31"/>
         <source>Email Address</source>
-        <translation>Email adres</translation>
+        <translation>Email adres:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="33"/>
