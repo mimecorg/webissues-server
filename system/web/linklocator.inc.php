@@ -49,19 +49,19 @@ class System_Web_LinkLocator
 
         $result = array();
         for ( $i = 0; $i < count( $matches ); $i++ ) {
-            $match = htmlspecialchars( $matches[ $i ] );
+            $match = $matches[ $i ];
             if ( $i % 2 == 0 ) {
                 if ( $maxLength !== null ) {
                     $length = mb_strlen( $match );
                     if ( $length > $maxLength - 3 ) {
                         if ( $maxLength > 3 )
-                            $result[] = mb_substr( $match, 0, $maxLength - 3 );
+                            $result[] = htmlspecialchars( mb_substr( $match, 0, $maxLength - 3 ) );
                         $result[] = '...';
                         break;
                     }
                     $maxLength -= $length;
                 }
-                $result[] = $match;
+                $result[] = htmlspecialchars( $match );
             } else {
                 if ( $match[ 0 ] == '#' )
                     $url = WI_BASE_URL . '/client/index.php?item=' . substr( $match, 1 );
@@ -73,18 +73,19 @@ class System_Web_LinkLocator
                     $url = 'mailto:' . $match;
                 else
                     $url = $match;
+                $url = htmlspecialchars( $url );
                 if ( $maxLength !== null ) {
                     $length = mb_strlen( $match );
                     if ( $length > $maxLength - 3 ) {
                         if ( $maxLength > 3 )
-                            $result[] = "<a href=\"$url\">" . mb_substr( $match, 0, $maxLength - 3 ) . '...</a>';
+                            $result[] = "<a href=\"$url\">" . htmlspecialchars( mb_substr( $match, 0, $maxLength - 3 ) ) . '...</a>';
                         else
                             $result[] = '...';
                         break;
                     }
                     $maxLength -= $length;
                 }
-                $result[] = "<a href=\"$url\">$match</a>";
+                $result[] = "<a href=\"$url\">" . htmlspecialchars( $match ) . '</a>';
             }
         }
 
