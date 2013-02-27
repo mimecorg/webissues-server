@@ -29,9 +29,10 @@ WebIssues.classParam = function( node, name ) {
 }
 
 WebIssues.autofocus = function() {
-    if ( $( 'form' ).length > 0 ) {
+    var forms = $( 'form:not(.form-inline)' );
+    if ( forms.length > 0 ) {
         var wrongInput = [];
-        var fieldError = $( '.error' );
+        var fieldError = forms.find( '.error' );
         if ( fieldError.length > 0 ) {
             wrongInput = fieldError.prev( ':input' );
             if ( wrongInput.length == 0 )
@@ -42,7 +43,7 @@ WebIssues.autofocus = function() {
         if  ( wrongInput.length > 0 )
             toHighlight = wrongInput;
         else
-            toHighlight = $( ':input:enabled' );
+            toHighlight = forms.find( ':input:enabled' );
 
         toHighlight.each( function() {
             if ( $( this ).is( ':text,:password,:radio:checked,:checkbox,select,textarea' ) ) {
