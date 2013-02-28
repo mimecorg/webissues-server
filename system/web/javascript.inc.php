@@ -33,6 +33,7 @@ class System_Web_JavaScript extends System_Web_Base
         'cookie' => 'jquery.cookie.js',
         'datetimepicker' => 'datetimepicker.js',
         'expandcookie' => 'expandcookie.js',
+        'prettify' => 'prettify.js',
         'searchoptions' => 'searchoptions.js',
         'selection' => 'selection.js',
         'ui.autocomplete' => 'ui/jquery.ui.autocomplete.js',
@@ -266,6 +267,17 @@ class System_Web_JavaScript extends System_Web_Base
                 window.open( " . $this->escape( $this->url( $url ) ) . " );
                 return false;
             } );" );
+    }
+
+    /**
+    * Register the script for pretty printing of code.
+    */
+    public function registerPrettyPrint()
+    {
+        $this->registerScripts( array( 'prettify' ) );
+
+        $this->registerCode( "
+            prettyPrint();" );
     }
 
     private function registerScripts( $scripts )

@@ -103,6 +103,8 @@ class Client_IssueDetails extends System_Web_Component
         $rowCount = $connection->queryScalarArgs( $query, $historyProvider->getQueryArguments() );
         $this->pager->setRowsCount( $rowCount );
 
+        $prettyPrint = false;
+
         if ( $rowCount > 0 ) {
             $order = $preferencesManager->getPreferenceOrSetting( 'history_order' );
 
@@ -121,7 +123,7 @@ class Client_IssueDetails extends System_Web_Component
                 $item[ 'created_date' ] = $formatter->formatDateTime( $item[ 'created_date' ], System_Api_Formatter::ToLocalTimeZone );
                 $item[ 'modified_date' ] = $formatter->formatDateTime( $item[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
                 if ( isset( $item[ 'comment_text' ] ) )
-                    $item[ 'comment_text' ] = System_Web_LinkLocator::convertToRawHtml( $item[ 'comment_text' ] );
+                    $item[ 'comment_text' ] = System_Web_MarkupProcessor::convertToRawHtml( $item[ 'comment_text' ], $prettyPrint );
                 if ( isset( $item[ 'file_descr' ] ) )
                     $item[ 'file_descr' ] = System_Web_LinkLocator::convertToRawHtml( $item[ 'file_descr' ] );
                 if ( isset( $item[ 'file_size' ] ) )
@@ -156,5 +158,10 @@ class Client_IssueDetails extends System_Web_Component
             $this->toolBar->addFixedCommand( '/client/index.php', '/common/images/issue-unread-16.png', $this->tr( 'Mark As Unread' ), array( 'unread' => 1 ) );
         else
             $this->toolBar->addFixedCommand( '/client/index.php', '/common/images/issue-16.png', $this->tr( 'Mark As Read' ), array( 'unread' => null ) );
+
+        if ( $prettyPrint ) {
+            $script = new System_Web_JavaScript( $this->view );
+            $script->registerPrettyPrint();
+        }
     }
 }

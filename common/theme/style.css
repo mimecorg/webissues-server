@@ -182,6 +182,13 @@ input, button, select, textarea {
   color: #494949;
 }
 
+textarea {
+  width: 792px;
+  height: 300px;
+  padding: 3px;
+  white-space: pre-wrap;
+}
+
 .form-field {
   margin: 0.4em 0 0.8em;
 }
@@ -461,11 +468,46 @@ ul.changes {
 
 .comment-text {
   margin: 0.5em 0 1em 0;
-  padding: 0.2em 0.3em;
+  padding: 0.5em;
   white-space: pre-wrap;
   word-wrap: break-word;
-  background-color: #f6f6f6;
+  border: 1px solid #dddddd;
 }
+
+.comment-text ul {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.quote {
+  padding: 0.3em 0.5em;
+  border: 1px dashed #dddddd;
+  background-color: #f8f8f8;
+}
+
+.quote-title {
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+.code {
+  margin: 0;
+  padding: 0.3em 0.5em;
+  border: 1px dashed #dddddd;
+  background-color: #eeeeee;
+  white-space: pre-wrap;
+}
+
+code, .code {
+  font: 9pt/150% Consolas, 'Courier New', Monospace;
+}
+
+.str { color: #880000; }
+.kwd { color: #0000ff; }
+.com { color: #008800; }
+.tag { color: #880000; }
+.atn { color: #ff0000; }
+.atv { color: #0000ff; }
 
 .multi-line {
   white-space: pre-wrap;
@@ -474,8 +516,9 @@ ul.changes {
 
 .attachment {
   margin: 0.5em 0 1em 0;
-  padding: 0.2em 0.3em;
-  background-color: #eeeeff;
+  padding: 0.5em;
+  border: 1px solid #ccccff;
+  background-color: #e2e2ff;
 }
 
 .toolbar {
