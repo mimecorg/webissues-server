@@ -87,6 +87,9 @@ class Client_Issues_Comment extends System_Web_Component
                 $this->response->redirect( $breadcrumbs->getParentUrl() );
             }
         }
+
+        $javaScript = new System_Web_JavaScript( $this->view );
+        $javaScript->registerMarkItUp( $this->form->getFieldSelector( 'commentText' ), '#commentPreview' );
     }
 
     private function submit()

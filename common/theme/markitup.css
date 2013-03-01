@@ -1,0 +1,54 @@
+.markItUpHeader ul {
+  margin: 0;
+  padding: 0;
+}
+.markItUpHeader ul li {
+  list-style: none;
+  float: left;
+  position: relative;
+}
+.markItUpHeader ul a {
+  display: block;
+  width: 16px;
+  height: 16px;
+  text-indent: -10000px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding: 3px;
+  margin: 5px 0 2px 0;
+}
+.markItUpHeader ul a:hover  {
+  background-color: #e2e2ff;
+}
+.markItUpHeader ul .markItUpSeparator {
+  margin: 8px 3px 2px 3px;
+  width: 1px;
+  height: 16px;
+  overflow: hidden;
+  background-color: #cccccc;
+}
+
+.markItUp .btnBold a {
+  background-image: url(markitup/bold.png);
+}
+.markItUp .btnItalic a {
+  background-image: url(markitup/italic.png);
+}
+.markItUp .btnInlineCode a {
+  background-image: url(markitup/inline-code.png);
+}
+.markItUp .btnLink a {
+  background-image: url(markitup/link.png);
+}
+.markItUp .btnBulletList a {
+  background-image: url(markitup/bullet-list.png); 
+}
+.markItUp .btnCodeBlock a {
+  background-image: url(markitup/code-block.png); 
+}
+.markItUp .btnQuote a {
+  background-image: url(markitup/quote.png); 
+}
+.markItUp .btnPreview a {
+  background-image: url(markitup/preview.png); 
+}

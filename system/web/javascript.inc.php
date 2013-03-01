@@ -33,6 +33,7 @@ class System_Web_JavaScript extends System_Web_Base
         'cookie' => 'jquery.cookie.js',
         'datetimepicker' => 'datetimepicker.js',
         'expandcookie' => 'expandcookie.js',
+        'markitup' => 'jquery.markitup.js',
         'prettify' => 'prettify.js',
         'searchoptions' => 'searchoptions.js',
         'selection' => 'selection.js',
@@ -44,6 +45,7 @@ class System_Web_JavaScript extends System_Web_Base
         );
 
     private $cssFiles = array(
+        'markitup' => 'markitup.css',
         'ui.autocomplete' => 'ui/jquery.ui.autocomplete.css',
         'ui.core' => 'ui/jquery.ui.core.css',
         'ui.datepicker' => 'ui/jquery.ui.datepicker.css',
@@ -278,6 +280,39 @@ class System_Web_JavaScript extends System_Web_Base
 
         $this->registerCode( "
             prettyPrint();" );
+    }
+
+    /**
+    * Register the markItUp editor.
+    */
+    public function registerMarkItUp( $textAreaSelector, $previewSelector )
+    {
+        $this->registerScripts( array( 'markitup', 'prettify' ) );
+        $this->registerCss( array( 'markitup' ) );
+
+        $this->registerCode( "
+            $( '$textAreaSelector' ).markItUp( {
+                resizeHandle: false,
+                previewParserPath: '" . WI_BASE_URL. "/client/issues/preview.php',
+                previewInElement: '$previewSelector',
+                previewAutoRefresh: false,
+                onTab: { keepDefault: false, replaceWith: '\\t' },
+                markupSet: [
+                    { name: " . $this->escape( $this->tr( 'Bold' ) ) . ", key: 'B', openWith: '**', closeWith: '**', className: 'btnBold' },
+                    { name: " . $this->escape( $this->tr( 'Italic' ) ) . ", key: 'I', openWith: '__', closeWith: '__', className: 'btnItalic' },
+                    { name: " . $this->escape( $this->tr( 'Monospace' ) ) . ", openWith: '`', closeWith: '`', className: 'btnInlineCode' },
+                    { separator: '--' },
+                    { name: " . $this->escape( $this->tr( 'Hyperlink' ) ) . ", key: 'K', openWith: '[[![' + " . $this->escape( $this->tr( 'Enter link URL:' ) )
+                        . "+ ':!:http://]!] ', closeWith: ']', placeHolder: " . $this->escape( $this->tr( 'Link text' ) ) . ", className: 'btnLink' },
+                    { separator: '--' },
+                    { name: " . $this->escape( $this->tr( 'Bullet List' ) ) . ", multiline: true, openBlockWith: '[list]\\n', closeBlockWith: '\\n[/list]', openWith: '* ', closeWith: '', className: 'btnBulletList' },
+                    { name: " . $this->escape( $this->tr( 'Quote Block' ) ) . ", multiline: true, openBlockWith: '[quote]\\n', closeBlockWith: '\\n[/quote]', openWith: '', closeWith: '', className: 'btnQuote' },
+                    { name: " . $this->escape( $this->tr( 'Code Block' ) ) . ", multiline: true, openBlockWith: '[code]\\n', closeBlockWith: '\\n[/code]', openWith: '', closeWith: '', className: 'btnCodeBlock' },
+                    { separator: '--' },
+                    { name: " . $this->escape( $this->tr( 'Preview' ) ) . ", call: 'preview', className: 'btnPreview' }
+                ]
+            } );
+            WebIssues.autofocus();" );
     }
 
     private function registerScripts( $scripts )

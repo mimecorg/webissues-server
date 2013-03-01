@@ -495,6 +495,7 @@ ul.changes {
   padding: 0.3em 0.5em;
   border: 1px dashed #dddddd;
   background-color: #eeeeee;
+  color: #000000;
   white-space: pre-wrap;
 }
 
@@ -508,6 +509,10 @@ code, .code {
 .tag { color: #880000; }
 .atn { color: #ff0000; }
 .atv { color: #0000ff; }
+
+.preview {
+  margin: 0;
+}
 
 .multi-line {
   white-space: pre-wrap;
