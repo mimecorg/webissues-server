@@ -65,6 +65,16 @@ class System_Db_Mysqli_SchemaGenerator extends System_Db_SchemaGenerator
         $this->fields = array();
     }
 
+    protected function executeAddFields( $tableName )
+    {
+        foreach ( $this->fields as $field ) {
+            $query = 'ALTER TABLE {' . $tableName . '} ADD ' . $field;
+            $this->connection->execute( $query );
+        }
+
+        $this->fields = array();
+    }
+
     private function getFieldType( $info )
     {
         switch ( $info->getType() ) {

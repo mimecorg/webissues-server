@@ -57,9 +57,26 @@ abstract class System_Db_SchemaGenerator
         $this->executeCreateTable( $tableName );
     }
 
+    /**
+    * Add a column, constraint or field to an existing table.
+    * @param $tableName The name of the table.
+    * @param $fields An associative array of field definitions.
+    */
+    public function addFields( $tableName, $fields )
+    {
+        foreach ( $fields as $fieldName => $definition ) {
+            $info = System_Api_DefinitionInfo::fromString( $definition );
+            $this->prepareTableField( $tableName, $fieldName, $info );
+        }
+
+        $this->executeAddFields( $tableName );
+    }
+
     protected abstract function prepareTableField( $tableName, $fieldName, $info );
 
     protected abstract function executeCreateTable( $tableName );
+
+    protected abstract function executeAddFields( $tableName );
 
     /**
     * Set identity insert on or off for the given table.

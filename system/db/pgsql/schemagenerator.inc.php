@@ -72,6 +72,20 @@ class System_Db_Pgsql_SchemaGenerator extends System_Db_SchemaGenerator
         $this->indexes = array();
     }
 
+    protected function executeAddFields( $tableName )
+    {
+        foreach ( $this->fields as $field ) {
+            $query = 'ALTER TABLE {' . $tableName . '} ADD ' . $field;
+            $this->connection->execute( $query );
+        }
+
+        foreach ( $this->indexes as $index )
+            $this->connection->execute( $index );
+
+        $this->fields = array();
+        $this->indexes = array();
+    }
+
     public function setIdentityInsert( $tableName, $fieldName, $on )
     {
         if ( $on == false ) {
