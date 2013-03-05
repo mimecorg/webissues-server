@@ -91,6 +91,7 @@ class Admin_Setup_Installer extends System_Web_Base
             'comments' => array(
                 'comment_id'        => 'INTEGER ref-table="changes" ref-column="change_id" on-delete="cascade"',
                 'comment_text'      => 'TEXT size="long"',
+                'comment_format'    => 'INTEGER size="tiny" default=0',
                 'pk'                => 'PRIMARY columns={"comment_id"}'
             ),
             'files' => array(
@@ -270,6 +271,7 @@ class Admin_Setup_Installer extends System_Web_Base
         $settings = array(
             'language'              => $language,
             'comment_max_length'    => 10000,
+            'default_format'        => 1,
             'folder_page_size'      => 10,
             'history_page_size'     => 20,
             'history_order'         => 'asc',

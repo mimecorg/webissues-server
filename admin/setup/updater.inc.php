@@ -83,6 +83,25 @@ class Admin_Setup_Updater extends System_Web_Base
                 $this->connection->execute( $query, $key, $value );
         }
 
+        if ( version_compare( $version, '1.1.001' ) < 0 ) {
+            $fields = array(
+                'comment_format'    => 'INTEGER size="tiny" default=0'
+            );
+
+            $generator = $this->connection->getSchemaGenerator();
+
+            $generator->addFields( 'comments', $fields );
+            $generator->updateReferences();
+
+            $settings = array(
+                'default_format'        => 1
+            );
+
+            $query = 'INSERT INTO {settings} ( set_key, set_value ) VALUES ( %s, %s )';
+            foreach ( $settings as $key => $value )
+                $this->connection->execute( $query, $key, $value );
+        }
+
         $query = 'DELETE FROM {sessions}';
         $this->connection->execute( $query );
 

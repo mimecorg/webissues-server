@@ -8,6 +8,8 @@
 
 <?php $this->insertComponent( 'Common_Tools_ViewSettings', $form ) ?>
 
+<?php $this->insertComponent( 'Common_Tools_Editing', $form ) ?>
+
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'User Registration' ) ?></legend>
 

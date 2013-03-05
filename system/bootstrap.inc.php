@@ -30,17 +30,17 @@ if ( !function_exists( 'version_compare' ) || version_compare( PHP_VERSION, '5.2
 /**
 * Current version of WebIssues Server.
 */
-define( 'WI_VERSION', '1.0.4' );
+define( 'WI_VERSION', '1.1-beta1' );
 
 /**
 * Current version of the WebIssues protocol.
 */
-define( 'WI_PROTOCOL_VERSION', '1.0' );
+define( 'WI_PROTOCOL_VERSION', '1.1-beta1' );
 
 /**
 * Current version of the WebIssues database schema.
 */
-define( 'WI_DATABASE_VERSION', '1.0.004' );
+define( 'WI_DATABASE_VERSION', '1.1.001' );
 
 /**
 * The full physical path of the entry script.

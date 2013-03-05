@@ -157,7 +157,7 @@ class System_Api_HistoryProvider
         if ( $itemType == self::AllHistory )
             $query .= ', ch.attr_id, ch.value_old, ch.value_new, a.attr_name, a.attr_def, ff.folder_name AS from_folder_name, tf.folder_name AS to_folder_name';
         if ( $itemType == self::AllHistory || $itemType == self::Comments || $itemType == self::CommentsAndFiles )
-            $query .= ', c.comment_text';
+            $query .= ', c.comment_text, c.comment_format';
         if ( $itemType == self::AllHistory || $itemType == self::Files || $itemType == self::CommentsAndFiles )
             $query .= ', f.file_name, f.file_size, f.file_descr';
         $query .= ' FROM {changes} AS ch'

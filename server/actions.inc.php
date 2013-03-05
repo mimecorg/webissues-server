@@ -470,7 +470,7 @@ class Server_Actions
         $this->setIdIf( $issueManager->setValue( $issue, $attribute, $newValue ) );
     }
 
-    public function addComment( $issueId, $text )
+    public function addComment( $issueId, $text, $format )
     {
         $this->principal->checkAuthenticated();
 
@@ -481,10 +481,12 @@ class Server_Actions
         $issue = $issueManager->getIssue( $issueId );
         $this->validator->checkString( $text, $maxLength, System_Api_Validator::MultiLine );
 
-        $this->setId( $issueManager->addComment( $issue, $text ) );
+        $this->validator->checkBooleanValue( $format );
+
+        $this->setId( $issueManager->addComment( $issue, $text, $format ) );
     }
 
-    public function editComment( $commentId, $newText )
+    public function editComment( $commentId, $newText, $newFormat )
     {
         $this->principal->checkAuthenticated();
 
@@ -495,7 +497,9 @@ class Server_Actions
         $comment = $issueManager->getComment( $commentId, System_Api_IssueManager::RequireAdministratorOrOwner );
         $this->validator->checkString( $newText, $maxLength, System_Api_Validator::MultiLine );
 
-        $this->setId( $issueManager->editComment( $comment, $newText ) );
+        $this->validator->checkBooleanValue( $newFormat );
+
+        $this->setId( $issueManager->editComment( $comment, $newText, $newFormat ) );
     }
 
     public function deleteComment( $commentId )

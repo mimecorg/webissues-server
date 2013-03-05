@@ -285,13 +285,15 @@ class System_Web_JavaScript extends System_Web_Base
     /**
     * Register the markItUp editor.
     */
-    public function registerMarkItUp( $textAreaSelector, $previewSelector )
+    public function registerMarkItUp( $textAreaSelector, $formatSelector, $previewSelector )
     {
         $this->registerScripts( array( 'markitup', 'prettify' ) );
         $this->registerCss( array( 'markitup' ) );
+        
+        $options = preg_replace( '/\\W/', '_', $textAreaSelector ) . '_options';
 
         $this->registerCode( "
-            $( '$textAreaSelector' ).markItUp( {
+            var $options = {
                 resizeHandle: false,
                 previewParserPath: '" . WI_BASE_URL. "/client/issues/preview.php',
                 previewInElement: '$previewSelector',
@@ -311,8 +313,19 @@ class System_Web_JavaScript extends System_Web_Base
                     { separator: '--' },
                     { name: " . $this->escape( $this->tr( 'Preview' ) ) . ", call: 'preview', className: 'btnPreview' }
                 ]
+            };
+            $( '$formatSelector' ).change( function() {
+                if ( $( this ).val() == '1' ) {
+                    $( '$textAreaSelector' ).markItUp( $options );
+                } else {
+                    $( '$textAreaSelector' ).markItUp( 'remove' );
+                    $( '$previewSelector' ).hide();
+                }
             } );
-            WebIssues.autofocus();" );
+            if ( $( '$formatSelector' ).val() == '1' ) {
+                $( '$textAreaSelector' ).markItUp( $options );
+                WebIssues.autofocus();
+            }" );
     }
 
     private function registerScripts( $scripts )

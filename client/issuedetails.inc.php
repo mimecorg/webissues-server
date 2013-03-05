@@ -122,8 +122,12 @@ class Client_IssueDetails extends System_Web_Component
                 $item[ 'change_id' ] = '#' . $item[ 'change_id' ];
                 $item[ 'created_date' ] = $formatter->formatDateTime( $item[ 'created_date' ], System_Api_Formatter::ToLocalTimeZone );
                 $item[ 'modified_date' ] = $formatter->formatDateTime( $item[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
-                if ( isset( $item[ 'comment_text' ] ) )
-                    $item[ 'comment_text' ] = System_Web_MarkupProcessor::convertToRawHtml( $item[ 'comment_text' ], $prettyPrint );
+                if ( isset( $item[ 'comment_text' ] ) ) {
+                    if ( $item[ 'comment_format' ] == 1 )
+                        $item[ 'comment_text' ] = System_Web_MarkupProcessor::convertToRawHtml( $item[ 'comment_text' ], $prettyPrint );
+                    else
+                        $item[ 'comment_text' ] = System_Web_LinkLocator::convertToRawHtml( $item[ 'comment_text' ], $prettyPrint );
+                }
                 if ( isset( $item[ 'file_descr' ] ) )
                     $item[ 'file_descr' ] = System_Web_LinkLocator::convertToRawHtml( $item[ 'file_descr' ] );
                 if ( isset( $item[ 'file_size' ] ) )

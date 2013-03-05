@@ -40,6 +40,7 @@ class Common_Tools_Preferences extends System_Web_Component
         Common_Tools_Locale::registerFields( $fields );
         Common_Tools_PageSize::registerFields( $fields );
         Common_Tools_ViewSettings::registerFields( $fields );
+        Common_Tools_Editing::registerFields( $fields );
 
         foreach ( $fields as $field )
             $this->form->addField( $field );

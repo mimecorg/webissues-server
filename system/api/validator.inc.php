@@ -601,6 +601,10 @@ class System_Api_Validator
                 $this->checkDecimalNumber( $value, 0, 1, 4 );
                 break;
 
+            case 'default_format':
+                $this->checkDecimalNumber( $value, 0, 0, 1 );
+                break;
+
             case 'email_engine':
                 if ( $value != '' && $value != 'standard' && $value != 'smtp' )
                     throw new System_Api_Error( System_Api_Error::InvalidSetting );
@@ -671,6 +675,11 @@ class System_Api_Validator
             case 'history_filter':
                 if ( $value != '' )
                     $this->checkDecimalNumber( $value, 0, 1, 4 );
+                break;
+
+            case 'default_format':
+                if ( $value != '' )
+                    $this->checkDecimalNumber( $value, 0, 0, 1 );
                 break;
 
             case 'email':

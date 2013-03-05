@@ -217,7 +217,7 @@ class System_Api_IssueManager extends System_Api_Base
             . ' sc.stamp_time AS created_date, sc.user_id AS created_user,'
             . ' sm.stamp_time AS modified_date, sm.user_id AS modified_user,'
             . ' ch.attr_id, ch.value_old, ch.value_new, ch.from_folder_id, ch.to_folder_id,'
-            . ' c.comment_text, f.file_name, f.file_size, f.file_descr'
+            . ' c.comment_text, c.comment_format, f.file_name, f.file_size, f.file_descr'
             . ' FROM {changes} AS ch'
             . ' JOIN {stamps} AS sc ON sc.stamp_id = ch.change_id'
             . ' JOIN {stamps} AS sm ON sm.stamp_id = ch.stamp_id'
@@ -277,7 +277,7 @@ class System_Api_IssueManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT c.comment_id, c.comment_text, i.issue_id, i.folder_id, sc.user_id,';
+        $query = 'SELECT c.comment_id, c.comment_text, c.comment_format, i.issue_id, i.folder_id, sc.user_id,';
         $query .= $principal->isAdministrator() ? ' %3d AS project_access' : ' r.project_access';
         $query .= ' FROM {comments} AS c'
             . ' JOIN {changes} AS ch ON ch.change_id = c.comment_id'
@@ -514,9 +514,10 @@ class System_Api_IssueManager extends System_Api_Base
     * Add a new comment to the issue.
     * @param $issue The issue to modify.
     * @param $text Content of the comment to add.
+    * @param $format The format of the comment.
     * @return The identifier of the new comment.
     */
-    public function addComment( $issue, $text )
+    public function addComment( $issue, $text, $format )
     {
         $principal = System_Api_Principal::getCurrent();
 
@@ -533,8 +534,8 @@ class System_Api_IssueManager extends System_Api_Base
             $query = 'INSERT INTO {changes} ( change_id, issue_id, change_type, stamp_id ) VALUES ( %d, %d, %d, %d )';
             $this->connection->execute( $query, $commentId, $issueId, System_Const::CommentAdded, $commentId );
 
-            $query = 'INSERT INTO {comments} ( comment_id, comment_text ) VALUES ( %d, %s )';
-            $this->connection->execute( $query, $commentId, $text );
+            $query = 'INSERT INTO {comments} ( comment_id, comment_text, comment_format ) VALUES ( %d, %s, %d )';
+            $this->connection->execute( $query, $commentId, $text, $format );
 
             $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
             $this->connection->execute( $query, $commentId, $issueId );
@@ -747,10 +748,11 @@ class System_Api_IssueManager extends System_Api_Base
     * Edit the specified comment.
     * @param $comment The comment to edit.
     * @param $newText The new text of the comment.
+    * @param $newFormat The new format of the comment.
     * @return @c The identifier of the change or @c null if the comment was
     * not changed.
     */
-    public function editComment( $comment, $newText )
+    public function editComment( $comment, $newText, $newFormat )
     {
         $principal = System_Api_Principal::getCurrent();
 
@@ -758,8 +760,9 @@ class System_Api_IssueManager extends System_Api_Base
         $issueId = $comment[ 'issue_id' ];
         $folderId = $comment[ 'folder_id' ];
         $oldText = $comment[ 'comment_text' ];
+        $oldFormat = $comment[ 'comment_format' ];
 
-        if ( $newText == $oldText )
+        if ( $newText == $oldText && $newFormat == $oldFormat )
             return false;
 
         $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
@@ -769,8 +772,8 @@ class System_Api_IssueManager extends System_Api_Base
             $this->connection->execute( $query, $principal->getUserId(), time() );
             $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
 
-            $query = 'UPDATE {comments} SET comment_text = %s WHERE comment_id = %d';
-            $this->connection->execute( $query, $newText, $commentId );
+            $query = 'UPDATE {comments} SET comment_text = %s, comment_format = %d WHERE comment_id = %d';
+            $this->connection->execute( $query, $newText, $newFormat, $commentId );
 
             $query = 'UPDATE {changes} SET stamp_id = %1d WHERE change_id = %2d AND stamp_id < %1d';
             $this->connection->execute( $query, $stampId, $commentId );

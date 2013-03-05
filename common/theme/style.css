@@ -511,7 +511,7 @@ code, .code {
 .atv { color: #0000ff; }
 
 .preview {
-  margin: 0;
+  margin: 0.4em 0 0.8em;
 }
 
 .multi-line {

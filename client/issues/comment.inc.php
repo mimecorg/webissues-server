@@ -43,6 +43,9 @@ class Client_Issues_Comment extends System_Web_Component
 
                 $this->oldText = '';
 
+                $preferencesManager = new System_Api_PreferencesManager();
+                $defaultFormat = $preferencesManager->getPreferenceOrSetting( 'default_format' );
+
                 $this->issueName = $this->issue[ 'issue_name' ];
                 $this->commentId = '';
 
@@ -56,6 +59,7 @@ class Client_Issues_Comment extends System_Web_Component
                 $this->issue = $issueManager->getIssue( $this->comment[ 'issue_id' ] );
 
                 $this->oldText = $this->comment[ 'comment_text' ];
+                $defaultFormat = $this->comment[ 'comment_format' ];
 
                 $this->issueName = '';
                 $this->commentId = '#' . $this->comment[ 'comment_id' ];
@@ -70,11 +74,18 @@ class Client_Issues_Comment extends System_Web_Component
         $breadcrumbs = new Common_Breadcrumbs( $this );
         $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
 
+        $this->formatOptions = array(
+            0 => $this->tr( 'Plain text' ),
+            1 => $this->tr( 'Text with markup' )
+        );
+
         $this->form = new System_Web_Form( 'issues', $this );
         $this->form->addField( 'commentText', $this->oldText );
+        $this->form->addField( 'format', $defaultFormat );
 
         $serverManager = new System_Api_ServerManager();
         $this->form->addTextRule( 'commentText', $serverManager->getSetting( 'comment_max_length' ), System_Api_Parser::MultiLine );
+        $this->form->addItemsRule( 'format', $this->formatOptions );
 
         if ( $this->form->loadForm() ) {
             if ( $this->form->isSubmittedWith( 'cancel' ) )
@@ -89,15 +100,15 @@ class Client_Issues_Comment extends System_Web_Component
         }
 
         $javaScript = new System_Web_JavaScript( $this->view );
-        $javaScript->registerMarkItUp( $this->form->getFieldSelector( 'commentText' ), '#commentPreview' );
+        $javaScript->registerMarkItUp( $this->form->getFieldSelector( 'commentText' ), $this->form->getFieldSelector( 'format' ), '#commentPreview' );
     }
 
     private function submit()
     {
         $issueManager = new System_Api_IssueManager();
         if ( $this->comment == null )
-            $issueManager->addComment( $this->issue, $this->commentText );
+            $issueManager->addComment( $this->issue, $this->commentText, $this->format );
         else
-            $issueManager->editComment( $this->comment, $this->commentText );
+            $issueManager->editComment( $this->comment, $this->commentText, $this->format );
     }
 }

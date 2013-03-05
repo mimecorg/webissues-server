@@ -12,6 +12,8 @@
 
 <div class="comment-text preview" id="commentPreview" style="display: none;"></div>
 
+<?php $form->renderSelect( $this->tr( 'Text format:' ), 'format', $formatOptions, array( 'style' => 'width: 25em;' ) ) ?>
+
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'OK' ), 'ok' ); ?>
 <?php $form->renderSubmit( $this->tr( 'Cancel' ), 'cancel' ); ?>
