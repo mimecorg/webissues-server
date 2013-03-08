@@ -89,6 +89,8 @@ class System_Api_Error extends System_Core_Exception
     const EmailAlreadyExists = '358 Email Already Exists';
     const InvalidActivationKey = '359 Invalid Activation Key';
     const UnknownRequest = '360 Unknown Request';
+    const UnknownDescription = '361 Unknown Description';
+    const DescriptionAlreadyExists = '362 Description Already Exists';
 
     public function __construct( $message, $wrappedException = null )
     {

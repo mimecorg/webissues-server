@@ -114,6 +114,12 @@ class Admin_Setup_Installer extends System_Web_Base
                 'type_idx'          => 'INDEX columns={"type_id"}',
                 'name_idx'          => 'INDEX columns={"folder_name"}'
             ),
+            'issue_descriptions' => array(
+                'issue_id'          => 'INTEGER ref-table="issues" ref-column="issue_id" on-delete="cascade"',
+                'descr_text'        => 'TEXT size="long"',
+                'descr_format'      => 'INTEGER size="tiny" default=0',
+                'pk'                => 'PRIMARY columns={"issue_id"}'
+            ),
             'issue_states' => array(
                 'state_id'          => 'SERIAL',
                 'user_id'           => 'INTEGER ref-table="users" ref-column="user_id"',
@@ -143,6 +149,8 @@ class Admin_Setup_Installer extends System_Web_Base
                 'issue_name'        => 'VARCHAR length=255',
                 'stamp_id'          => 'INTEGER ref-table="stamps" ref-column="stamp_id"',
                 'stub_id'           => 'INTEGER null=1',
+                'descr_id'          => 'INTEGER null=1',
+                'descr_stub_id'     => 'INTEGER null=1',
                 'pk'                => 'PRIMARY columns={"issue_id"}',
                 'folder_idx'        => 'INDEX columns={"folder_id"}',
                 'stamp_idx'         => 'INDEX columns={"stamp_id"}'

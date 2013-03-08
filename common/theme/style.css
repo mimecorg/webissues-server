@@ -183,10 +183,15 @@ input, button, select, textarea {
 }
 
 textarea {
-  width: 792px;
+  width: 790px;
   height: 300px;
   padding: 3px;
   white-space: pre-wrap;
+}
+
+.form-fieldset textarea {
+  width: 772px;
+  height: 100px;
 }
 
 .form-field {
@@ -447,8 +452,6 @@ table.sub-pane-layout {
 
 table.sub-pane-layout td.top-sub-pane, table.sub-pane-layout td.bottom-sub-pane {
   margin: 0;
-  border: 1px solid #dddddd;
-  padding: 0.5em;
   vertical-align: top;
 }
 
@@ -456,18 +459,24 @@ table.sub-pane-layout td.top-sub-pane {
   width: 50%;
 }
 
+.issue-history {
+  margin-bottom: 0.5em;
+}
+
+.issue-history h4 {
+  margin: 1em 0 0.5em 0;
+}
+
 .history-info {
-  color: #666666;
-  font-size: 0.9em;
+  margin-top: 1em;
 }
 
 ul.changes {
-  margin-top: 0.5em;
-  margin-bottom: 0.75em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .comment-text {
-  margin: 0.5em 0 1em 0;
   padding: 0.5em;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -480,9 +489,9 @@ ul.changes {
 }
 
 .quote {
+  margin: 0.2em 1em;
   padding: 0.3em 0.5em;
   border: 1px dashed #dddddd;
-  background-color: #f8f8f8;
 }
 
 .quote-title {
@@ -491,16 +500,18 @@ ul.changes {
 }
 
 .code {
-  margin: 0;
+  margin: 0.2em 0;
   padding: 0.3em 0.5em;
-  border: 1px dashed #dddddd;
-  background-color: #eeeeee;
+  background-color: #f8f8f8;
   color: #000000;
   white-space: pre-wrap;
 }
 
 code, .code {
   font: 9pt/150% Consolas, 'Courier New', Monospace;
+  padding: 0 0.3em;
+  background-color: #f8f8f8;
+  color: #000000;
 }
 
 .str { color: #880000; }
@@ -520,7 +531,6 @@ code, .code {
 }
 
 .attachment {
-  margin: 0.5em 0 1em 0;
   padding: 0.5em;
   border: 1px solid #ccccff;
   background-color: #e2e2ff;

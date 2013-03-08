@@ -86,6 +86,21 @@ class Client_Issues_Issue extends System_Web_Component
                     $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
                     $this->parentUrl = $breadcrumbs->getParentUrl();
                 }
+
+                $this->showDescription = true;
+
+                if ( $this->issue != null && $this->issue[ 'descr_id' ] != null ) {
+                    $descr = $issueManager->getDescription( $this->issue );
+
+                    $oldDescription = $descr[ 'descr_text' ];
+                    $defaultFormat = $descr[ 'descr_format' ];
+                } else {
+                    $oldDescription = '';
+
+                    $preferencesManager = new System_Api_PreferencesManager();
+                    $defaultFormat = $preferencesManager->getPreferenceOrSetting( 'default_format' );
+                }
+
                 break;
 
             default:
@@ -95,6 +110,20 @@ class Client_Issues_Issue extends System_Web_Component
         $this->form = new System_Web_Form( 'issues', $this );
         $this->form->addField( 'issueName', $this->oldIssueName );
         $this->form->addTextRule( 'issueName', System_Const::ValueMaxLength );
+
+        if ( $this->showDescription ) {
+            $this->formatOptions = array(
+                0 => $this->tr( 'Plain text' ),
+                1 => $this->tr( 'Text with markup' )
+            );
+
+            $this->form->addField( 'descriptionText', $oldDescription );
+            $this->form->addField( 'format', $defaultFormat );
+
+            $serverManager = new System_Api_ServerManager();
+            $this->form->addTextRule( 'descriptionText', $serverManager->getSetting( 'comment_max_length' ), System_Api_Parser::AllowEmpty | System_Api_Parser::MultiLine );
+            $this->form->addItemsRule( 'format', $this->formatOptions );
+        }
 
         $this->javaScript = new System_Web_JavaScript( $this->view );
 
@@ -112,6 +141,9 @@ class Client_Issues_Issue extends System_Web_Component
             }
         }
         $this->displayValues();
+
+        if ( $this->showDescription )
+            $this->javaScript->registerMarkItUp( $this->form->getFieldSelector( 'descriptionText' ), $this->form->getFieldSelector( 'format' ), '#descriptionPreview' );
     }
 
     private function processValues()
@@ -258,6 +290,8 @@ class Client_Issues_Issue extends System_Web_Component
         if ( $this->issue == null || $this->clone ) {
             $issueId = $issueManager->addIssue( $this->folder, $this->issueName, $this->oldValues );
             $this->issue = $issueManager->getIssue( $issueId );
+            if ( $this->descriptionText != '' )
+                $issueManager->addDescription( $this->issue, $this->descriptionText, $this->format );
             $this->parentUrl = $this->mergeQueryString( '/client/index.php', array( 'issue' => $issueId, 'folder' => null ) );
         } else {
             if ( $this->issueName !== $this->oldIssueName )

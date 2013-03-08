@@ -84,13 +84,33 @@ class Admin_Setup_Updater extends System_Web_Base
         }
 
         if ( version_compare( $version, '1.1.001' ) < 0 ) {
-            $fields = array(
-                'comment_format'    => 'INTEGER size="tiny" default=0'
+            $newTables = array(
+                'issue_descriptions' => array(
+                    'issue_id'          => 'INTEGER ref-table="issues" ref-column="issue_id" on-delete="cascade"',
+                    'descr_text'        => 'TEXT size="long"',
+                    'descr_format'      => 'INTEGER size="tiny" default=0',
+                    'pk'                => 'PRIMARY columns={"issue_id"}'
+                ),
+            );
+
+            $newFields = array(
+                'comments' => array(
+                    'comment_format'    => 'INTEGER size="tiny" default=0'
+                ),
+                'issues' => array(
+                    'descr_id'          => 'INTEGER null=1',
+                    'descr_stub_id'     => 'INTEGER null=1'
+                )
             );
 
             $generator = $this->connection->getSchemaGenerator();
 
-            $generator->addFields( 'comments', $fields );
+            foreach ( $newTables as $tableName => $fields )
+                $generator->createTable( $tableName, $fields );
+
+            foreach ( $newFields as $tableName => $fields )
+                $generator->addFields( $tableName, $fields );
+
             $generator->updateReferences();
 
             $settings = array(

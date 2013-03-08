@@ -68,6 +68,20 @@ class Client_IssueDetails extends System_Web_Component
         $viewManager = new System_Api_ViewManager();
         $this->attributeValues = $viewManager->sortByAttributeOrder( $type, $this->attributeValues );
 
+        $prettyPrint = false;
+
+        $principal = System_Api_Principal::getCurrent();
+        $this->canEditDescr = $issue[ 'project_access' ] == System_Const::AdministratorAccess || $issue[ 'created_user' ] == $principal->getUserId();
+
+        if ( $issue[ 'descr_id' ] != null ) {
+            $this->descr = $issueManager->getDescription( $issue );
+            $this->descr[ 'modified_date' ] = $formatter->formatDateTime( $this->descr[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
+            if ( $this->descr[ 'descr_format' ] == 1 )
+                $this->descr[ 'descr_text' ] = System_Web_MarkupProcessor::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
+            else
+                $this->descr[ 'descr_text' ] = System_Web_LinkLocator::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
+        }
+
         $historyProvider = new System_Api_HistoryProvider();
         $historyProvider->setIssueId( $issueId );
 
@@ -103,8 +117,6 @@ class Client_IssueDetails extends System_Web_Component
         $rowCount = $connection->queryScalarArgs( $query, $historyProvider->getQueryArguments() );
         $this->pager->setRowsCount( $rowCount );
 
-        $prettyPrint = false;
-
         if ( $rowCount > 0 ) {
             $order = $preferencesManager->getPreferenceOrSetting( 'history_order' );
 
@@ -115,8 +127,6 @@ class Client_IssueDetails extends System_Web_Component
             $this->history = $historyProvider->processPage( $page );
 
             $localeHelper = new System_Web_LocaleHelper();
-
-            $principal = System_Api_Principal::getCurrent();
 
             foreach ( $this->history as $id => &$item ) {
                 $item[ 'change_id' ] = '#' . $item[ 'change_id' ];
@@ -153,6 +163,8 @@ class Client_IssueDetails extends System_Web_Component
         $this->toolBar->addFixedCommand( '/client/issues/editissue.php', '/common/images/edit-modify-16.png', $this->tr( 'Edit Attributes' ) );
         $this->toolBar->addFixedCommand( '/client/issues/addcomment.php', '/common/images/comment-16.png', $this->tr( 'Add Comment' ) );
         $this->toolBar->addFixedCommand( '/client/issues/addattachment.php', '/common/images/file-attach-16.png', $this->tr( 'Add Attachment' ) );
+        if ( $issue[ 'descr_id' ] == null && $this->canEditDescr )
+            $this->toolBar->addFixedCommand( '/client/issues/adddescription.php', '/common/images/description-new-16.png', $this->tr( 'Add Description' ) );
         $this->toolBar->addFixedCommand( '/client/issues/cloneissue.php', '/common/images/issue-clone-16.png', $this->tr( 'Clone Issue' ) );
         if ( $issue[ 'project_access' ] == System_Const::AdministratorAccess ) {
             $this->toolBar->addFixedCommand( '/client/issues/moveissue.php', '/common/images/issue-move-16.png', $this->tr( 'Move Issue' ) );

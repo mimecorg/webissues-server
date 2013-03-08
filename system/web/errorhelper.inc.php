@@ -185,6 +185,10 @@ class System_Web_ErrorHelper extends System_Web_Base
                 return $this->tr( 'The activation key is invalid' );
             case System_Api_Error::UnknownRequest:
                 return $this->tr( 'Request does not exist' );
+            case System_Api_Error::UnknownDescription:
+                return $this->tr( 'Description does not exist' );
+            case System_Api_Error::DescriptionAlreadyExists:
+                return $this->tr( 'Description already exists' );
             default:
                 return '';
         }

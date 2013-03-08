@@ -98,8 +98,8 @@ class System_Api_IssueManager extends System_Api_Base
         if ( isset( self::$issues[ $issueId ] ) ) {
             $issue = self::$issues[ $issueId ];
         } else {
-            $query = 'SELECT i.issue_id, i.issue_name, i.stamp_id, i.stub_id, f.folder_id, f.folder_name,'
-                . ' p.project_id, p.project_name, t.type_id, t.type_name, s.state_id, s.read_id,'
+            $query = 'SELECT i.issue_id, i.issue_name, i.stamp_id, i.stub_id, i.descr_id, i.descr_stub_id,'
+                . ' f.folder_id, f.folder_name, p.project_id, p.project_name, t.type_id, t.type_name, s.state_id, s.read_id,'
                 . ' sc.stamp_time AS created_date, uc.user_id AS created_user, uc.user_name AS created_by,'
                 . ' sm.stamp_time AS modified_date, um.user_id AS modified_user, um.user_name AS modified_by,';
             $query .= $principal->isAdministrator() ? ' %3d AS project_access' : ' r.project_access';
@@ -123,6 +123,10 @@ class System_Api_IssueManager extends System_Api_Base
         }
 
         if ( $flags & self::RequireAdministrator && $issue[ 'project_access' ] != System_Const::AdministratorAccess )
+            throw new System_Api_Error( System_Api_Error::AccessDenied );
+
+        if ( $flags & self::RequireAdministratorOrOwner && $issue[ 'project_access' ] != System_Const::AdministratorAccess
+             && $issue[ 'created_user' ] != $principal->getUserId() )
             throw new System_Api_Error( System_Api_Error::AccessDenied );
 
         return $issue;
@@ -359,6 +363,29 @@ class System_Api_IssueManager extends System_Api_Base
 
         $path = $this->getAttachmentPath( $fileId );
         return System_Core_Attachment::fromFile( $path, $file[ 'file_size' ], $file[ 'file_name' ] );
+    }
+
+    /**
+    * Get the issue description.
+    * @param $issue The issue for which the description is retrieved.
+    * @return An associative array representing the description.
+    */
+    public function getDescription( $issue )
+    {
+        $issueId = $issue[ 'issue_id' ];
+
+        $query = 'SELECT id.descr_text, id.descr_format, i.issue_id, i.folder_id,'
+            . ' s.user_id AS modified_user, s.stamp_time AS modified_date, u.user_name AS modified_by'
+            . ' FROM {issue_descriptions} AS id'
+            . ' JOIN {issues} AS i ON i.issue_id = id.issue_id'
+            . ' JOIN {stamps} AS s ON s.stamp_id = i.descr_id'
+            . ' JOIN {users} AS u ON u.user_id = s.user_id'
+            . ' WHERE id.issue_id = %d';
+
+        if ( !( $descr = $this->connection->queryRow( $query, $issueId ) ) )
+            throw new System_Api_Error( System_Api_Error::UnknownDescription );
+
+        return $descr;
     }
 
     /**
@@ -923,6 +950,138 @@ class System_Api_IssueManager extends System_Api_Base
 
         if ( $file[ 'file_storage' ] == self::FileSystemStorage )
             @unlink( $this->getAttachmentPath( $fileId ) );
+
+        return $stampId;
+    }
+
+    /**
+    * Add a description to the issue.
+    * @param $issue The issue to modify.
+    * @param $text Content of the description.
+    * @param $format The format of the description.
+    * @return The identifier of the change.
+    */
+    public function addDescription( $issue, $text, $format )
+    {
+        if ( $issue[ 'descr_id' ] != null )
+            throw new System_Api_Error( System_Api_Error::DescriptionAlreadyExists );
+
+        $principal = System_Api_Principal::getCurrent();
+
+        $issueId = $issue[ 'issue_id' ];
+        $folderId = $issue[ 'folder_id' ];
+
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
+
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+
+            $query = 'INSERT INTO {issue_descriptions} ( issue_id, descr_text, descr_format ) VALUES ( %d, %s, %d )';
+            $this->connection->execute( $query, $issueId, $text, $format );
+
+            $query = 'UPDATE {issues} SET descr_id = %1d WHERE issue_id = %2d AND COALESCE( descr_id, descr_stub_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $stampId;
+    }
+
+    /**
+    * Edit the existing description of the issue.
+    * @param $descr The description to modify.
+    * @param $newText Content of the description.
+    * @param $newFormat The format of the description.
+    * @return The identifier of the change or @c null if no change was made.
+    */
+    public function editDescription( $descr, $newText, $newFormat )
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $issueId = $descr[ 'issue_id' ];
+        $folderId = $descr[ 'folder_id' ];
+        $oldText = $descr[ 'descr_text' ];
+        $oldFormat = $descr[ 'descr_format' ];
+
+        if ( $newText == $oldText && $newFormat == $oldFormat )
+            return false;
+
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
+
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+
+            $query = 'UPDATE {issue_descriptions} SET descr_text = %s, descr_format = %d  WHERE issue_id = %d';
+            $this->connection->execute( $query, $newText, $newFormat, $issueId );
+
+            $query = 'UPDATE {issues} SET descr_id = %1d WHERE issue_id = %2d AND COALESCE( descr_id, descr_stub_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $stampId;
+    }
+
+    /**
+    * Delete the description of the issue.
+    * @param $descr The description to delete.
+    * @return The identifier of the change.
+    */
+    public function deleteDescription( $descr )
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $issueId = $descr[ 'issue_id' ];
+        $folderId = $descr[ 'folder_id' ];
+
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
+
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+
+            $query = 'DELETE FROM {issue_descriptions} WHERE issue_id = %d';
+            $this->connection->execute( $query, $issueId );
+
+            $query = 'UPDATE {issues} SET descr_id = NULL, descr_stub_id = %1d WHERE issue_id = %2d AND COALESCE( descr_id, descr_stub_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {issues} SET stamp_id = %1d WHERE issue_id = %2d AND stamp_id < %1d';
+            $this->connection->execute( $query, $stampId, $issueId );
+
+            $query = 'UPDATE {folders} SET stamp_id = %1d WHERE folder_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $folderId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
         return $stampId;
     }
