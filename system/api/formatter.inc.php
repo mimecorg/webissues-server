@@ -241,6 +241,6 @@ class System_Api_Formatter
 
     private function toSingleLine( $value )
     {
-        return preg_replace( '/\\s+/', ' ', trim( $value ) );
+        return preg_replace( '/[ \t\n]+/', ' ', trim( $value, " \t\n" ) );
     }
 }

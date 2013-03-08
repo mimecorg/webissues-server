@@ -36,48 +36,25 @@ class System_Web_MarkupProcessor
         $state = array( 'mode' => '' );
         $stack = array();
 
-        $lines = explode( "\n", $text );
+        // extract new lines and starting/closing block tags
+        $tokens = preg_split( '/(\n|\[\/?(?:list|code|quote)(?:[ \t][^]\n]*)?\](?:[ \t]*\n)?)/ui', $text, -1, PREG_SPLIT_DELIM_CAPTURE );
 
         $result = array();
-        foreach ( $lines as $line ) {
-            $nl = true;
+        foreach ( $tokens as $i => $token ) {
+            if ( $i % 2 == 0 ) {
+                if ( $token == '' )
+                    continue;
 
-            // extract balanced square brackets and backticks
-            $tokens = preg_split( "/(\\[[^][]*\\]|`[^`]*`)/", $line, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
-
-            foreach ( $tokens as $index => $token ) {
-                $nl = true;
-
-                $tag = null;
-
-                // extract the contents of the square bracket
-                if ( $token[ 0 ] == '[' && preg_match( "/^\\[(\\S*)(.*)\\]$/", $token, $matches ) ) {
-                    $tag = $matches[ 1 ];
-                    $extra = trim( $matches[ 2 ] );
-                }
-
+                // ignore any formatting in a code block
                 if ( $state[ 'mode' ] == 'code' ) {
-                    // ignore all block tags in a code block, but count nested [code] and [/code] tags
-                    if ( $tag == 'code' ) {
-                        $state[ 'nest' ]++;
-                    } else if ( $tag == '/code' ) {
-                        if ( --$state[ 'nest' ] == 0 ) {
-                            $result[] = '</pre>';
-                            $state = array_pop( $stack );
-                            $nl = false;
-                            continue;
-                        }
-                    }
-
-                    // ignore any other formatting in a code block
                     $result[] = htmlspecialchars( $token );
                     continue;
                 }
 
                 // handle initial asterisks in a list block
-                if ( $state[ 'mode' ] == 'list' && ( $index == 0 || $state[ 'nest' ] == 0 ) && preg_match( "/^\s*(\\*{1,6})\s(.*)/", $token, $matches ) ) {
-                    $nest = strlen( $matches[ 1 ] );
-                    $token = $matches[ 2 ];
+                if ( $state[ 'mode' ] == 'list' && preg_match( '/^[ \t]*(\*{1,6})[ \t](.*)/', $token, $parts ) ) {
+                    $nest = strlen( $parts[ 1 ] );
+                    $token = $parts[ 2 ];
                     
                     if ( $state[ 'nest' ] == 0 )
                         $state[ 'nest' ] = 1;
@@ -91,10 +68,109 @@ class System_Web_MarkupProcessor
                     
                     $state[ 'nest' ] = $nest;
                     $result[] = '<li>';
+                }
 
-                    // check if anything remains to be processed
-                    if ( $token == '' )
+                // create an implicit list item
+                if ( $state[ 'mode' ] == 'list' && $state[ 'nest' ] == 0 ) {
+                    $state[ 'nest' ] = 1;
+                    $result[] = '<li>';
+                }
+
+                $tags = array();
+
+                // similar to System_Web_LinkLocator's automatic links, but simpler because we know the exact beginning and end of the link
+                $mail = '(?:mailto:)?[\w.%+-]+@[\w.-]+\.[a-z]{2,4}';
+                $url = '(?:(?:https?|ftp|file):\/\/|www\.|ftp\.|\\\\\\\\)[\w+&@#\/\\\\%=~|$?!:,.()-]+';
+                $id = '#\d+';
+                $link = "(?:$mail|$url|$id)";
+
+                // extract inline formatting: bold, italic, monotype and hyperlink
+                $subtokens = preg_split( '/(\*\*+|__+|`[^`]+`|\[' . $link . '(?:[ \t][^]]*)?\])/ui', $token, -1, PREG_SPLIT_DELIM_CAPTURE );
+
+                foreach ( $subtokens as $j => $subtoken ) {
+                    if ( $j % 2 == 0 ) {
+                        // handle implicit links in regular text
+                        $result[] = System_Web_LinkLocator::convertToHtml( $subtoken );
                         continue;
+                    }
+
+                    if ( $subtoken == '**' || $subtoken == '__' ) {
+                        $tag = $subtoken == '**' ? 'strong' : 'em';
+
+                        // find a matching opening tag
+                        $key = array_search( $tag, $tags );
+                        if ( $key === false ) {
+                            $tags[] = $tag;
+                            $result[] = "<$tag>";
+                        } else {
+                            while ( count( $tags ) > $key ) {
+                                $tag = array_pop( $tags );
+                                $result[] = "</$tag>";
+                            }
+                        }
+                        continue;
+                    }
+
+                    if ( $subtoken[ 0 ] == '`' ) {
+                        // display monotype text without further processing
+                        $result[] = '<code>' . htmlspecialchars( substr( $subtoken, 1, -1 ) ) . '</code>';
+                        continue;
+                    }
+
+                    if ( $subtoken[ 0 ] == '[' ) {
+                        $index = strcspn( $subtoken, " \t]" );
+                        $url = strtolower( substr( $subtoken, 1, $index - 1 ) );
+                        $title = trim( substr( $subtoken, $index, strrpos( $subtoken, ']' ) - $index ), " \t" );
+
+                        if ( $title == '' )
+                            $title = $url;
+
+                        if ( $url[ 0 ] == '#' )
+                            $url = WI_BASE_URL . '/client/index.php?item=' . substr( $url, 1 );
+                        else if ( strtolower( substr( $url, 0, 4 ) ) == 'www.' )
+                            $url = 'http://' . $url;
+                        else if ( strtolower( substr( $url, 0, 4 ) ) == 'ftp.' )
+                            $url = 'ftp://' . $url;
+                        else if ( substr( $url, 0, 2 ) == '\\\\' )
+                            $url = 'file:///' . $url;
+                        else if ( strpos( $url, ':' ) === false )
+                            $url = 'mailto:' . $url;
+
+                        $url = htmlspecialchars( $url );
+                        $result[] = "<a href=\"$url\">" . htmlspecialchars( $title ) . '</a>';
+                        continue;
+                    }
+
+                    $result[] = htmlspecialchars( $subtoken );
+                }
+
+                // pop the remaining inline tags from the stack
+                while ( !empty( $tags ) ) {
+                    $tag = array_pop( $tags );
+                    $result[] = "</$tag>";
+                }
+                
+                continue;
+            }
+
+            if ( $token[ 0 ] == '[' ) {
+                $index = strcspn( $token, " \t]" );
+                $tag = strtolower( substr( $token, 1, $index - 1 ) );
+                $extra = trim( substr( $token, $index, strrpos( $token, ']' ) - $index ), " \t" );
+
+                // ignore all block tags in a code block, but count nested [code] and [/code] tags
+                if ( $state[ 'mode' ] == 'code' ) {
+                    if ( $tag == 'code' ) {
+                        $state[ 'nest' ]++;
+                    } else if ( $tag == '/code' ) {
+                        if ( --$state[ 'nest' ] == 0 ) {
+                            $result[] = '</pre>';
+                            $state = array_pop( $stack );
+                            continue;
+                        }
+                    }
+                    $result[] = htmlspecialchars( $token );
+                    continue;
                 }
 
                 if ( $tag == '/list' || $tag == '/quote' ) {
@@ -124,7 +200,7 @@ class System_Web_MarkupProcessor
                         $nl = false;
                         continue;
                     }
-                    // fall through if not matching opening tag found; it will be handled by the generic tag case
+                    // fall through if not matching opening tag found; it will be emitted as-is
                 }
 
                 if ( $tag == 'list' ) {
@@ -156,7 +232,6 @@ class System_Web_MarkupProcessor
                         }
                     }
                     $result[] = '<pre class="code' . $classes . '">';
-                    $nl = false;
                     continue;
                 }
 
@@ -165,93 +240,17 @@ class System_Web_MarkupProcessor
                     $state = array( 'mode' => 'quote' );
                     $result[] = '<div class="quote">';
                     if ( $extra != '' ) {
-                        $title = htmlspecialchars( $extra );
+                        $title = System_Web_LinkLocator::convertToHtml( $extra );
                         if ( substr( $title, -1, 1 ) != ':' )
                             $title .= ':';
-                        $result[] = "<div class=\"quote-title\">$title</div>";
+                        $result[] = '<div class="quote-title">' . $title . '</div>';
                     }
                     $nl = false;
                     continue;
                 }
-
-                if ( $tag !== null ) {
-                    $url = null;
-
-                    if ( substr( $tag, 0, 1 ) == '#' ) {
-                        $id = substr( $tag, 1 );
-                        if ( (int)$id == $id )
-                            $url = WI_BASE_URL . '/client/index.php?item=' . $id;
-                    } else if ( substr_count( $tag, ':' ) > 0 ) {
-                        // ensure a valid protocol to prevent JavaScript injection
-                        if ( preg_match( "%^(?:mailto:|https?://|ftp://)%", $tag ) )
-                            $url = $tag;
-                    } else if ( substr_count( $tag, '@' ) > 0 ) {
-                        if ( preg_match( "/^[^\\s@]*@[^\\s@]*$/", $tag ) )
-                            $url = 'mailto:' . $tag;
-                    } else if ( substr( $tag, 0, 4 ) == 'ftp.' ) {
-                        $url = 'ftp://' . $tag;
-                    } else if ( substr_count( $tag, '.' ) > 0 ) {
-                        $url = 'http://' . $tag;
-                    }
-
-                    if ( $url != null ) {
-                        $url = htmlspecialchars( $url );
-                        $text = $extra != '' ? htmlspecialchars( $extra ) : htmlspecialchars( $tag );
-                        $result[] = "<a href=\"$url\">$text</a>";
-                        continue;
-                    }
-
-                    // display tag without further processing if URL is not valid
-                    $result[] = htmlspecialchars( $token );
-                    continue;
-                }
-
-                if ( $token[ 0 ] == '`' ) {
-                    // display monotype text without further processing
-                    $result[] = '<code>' . htmlspecialchars( substr( $token, 1, -1 ) ) . '</code>';
-                    continue;
-                }
-
-                $tags = array();
-
-                // extract sequences of asterisk and underscode characters
-                $subtokens = preg_split( "/(\\*+|_+)/", $token, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
-
-                foreach ( $subtokens as $subtoken ) {
-                    $tag = null;
-
-                    if ( $subtoken == '**' )
-                        $tag = 'strong';
-                    else if ( $subtoken == '__' )
-                        $tag = 'em';
-
-                    if ( $tag != null ) {
-                        // find a matching opening tag
-                        $key = array_search( $tag, $tags );
-                        if ( $key === false ) {
-                            $tags[] = $tag;
-                            $result[] = "<$tag>";
-                        } else {
-                            while ( count( $tags ) > $key ) {
-                                $tag = array_pop( $tags );
-                                $result[] = "</$tag>";
-                            }
-                        }
-                    } else {
-                        // handle implicit links in regular text
-                        $result[] = System_Web_LinkLocator::convertToHtml( $subtoken );
-                    }
-                }
-
-                // pop the remaining inline tags from the stack
-                while ( !empty( $tags ) ) {
-                    $tag = array_pop( $tags );
-                    $result[] = "</$tag>";
-                }
             }
 
-            if ( $nl )
-                $result[] = "\n";
+            $result[] = htmlspecialchars( $token );
         }
 
         // pop the remaining block tags from the stack
