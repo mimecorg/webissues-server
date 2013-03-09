@@ -205,9 +205,9 @@
 
 <p class="noitems">
 <?php
-    if ( $historyFilter == System_Const::CommentAdded ):
+    if ( $historyFilter == System_Api_HistoryProvider::Comments ):
         echo $this->tr( 'There are no comments.' );
-    elseif ( $historyFilter == System_Const::FileAdded ):
+    elseif ( $historyFilter == System_Api_HistoryProvider::Files ):
         echo $this->tr( 'There are no attachments.' );
     else:
         echo $this->tr( 'There are no comments or attachments.' );
