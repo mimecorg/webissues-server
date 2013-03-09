@@ -21,6 +21,9 @@
 if ( !function_exists( 'version_compare' ) || version_compare( PHP_VERSION, '5.2.1' ) < 0 )
     exit( "WebIssues Server requires PHP 5.2.1 or newer." );
 
+if ( !function_exists( 'mb_strlen' ) )
+    exit( "WebIssues Server requires the mbstring extension." );
+
 /*@{*/
 /**
 * @name Global Constants
