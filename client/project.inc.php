@@ -36,5 +36,31 @@ class Client_Project extends System_Web_Component
         $this->projectName = $project[ 'project_name' ];
 
         $this->view->setSlot( 'page_title', $project[ 'project_name' ] );
+
+        $prettyPrint = false;
+
+        $principal = System_Api_Principal::getCurrent();
+        $this->canEditDescr = $project[ 'project_access' ] == System_Const::AdministratorAccess;
+
+        if ( $project[ 'descr_id' ] != null ) {
+            $formatter = new System_Api_Formatter();
+
+            $this->descr = $projectManager->getProjectDescription( $project );
+            $this->descr[ 'modified_date' ] = $formatter->formatDateTime( $this->descr[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
+            if ( $this->descr[ 'descr_format' ] == 1 )
+                $this->descr[ 'descr_text' ] = System_Web_MarkupProcessor::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
+            else
+                $this->descr[ 'descr_text' ] = System_Web_LinkLocator::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
+        }
+
+        $this->toolBar = new System_Web_ToolBar();
+
+        if ( $project[ 'descr_id' ] == null && $this->canEditDescr )
+            $this->toolBar->addFixedCommand( '/client/projects/adddescription.php', '/common/images/description-new-16.png', $this->tr( 'Add Description' ) );
+
+        if ( $prettyPrint ) {
+            $script = new System_Web_JavaScript( $this->view );
+            $script->registerPrettyPrint();
+        }
     }
 }

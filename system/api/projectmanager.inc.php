@@ -83,13 +83,12 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        if ( !$principal->isAdministrator() ) {
-            $query = 'SELECT p.project_id, p.project_name, r.project_access FROM {projects} AS p'
-                . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %2d'
-                . ' WHERE p.project_id = %1d';
-        } else {
-            $query = 'SELECT project_id, project_name, %3d AS project_access FROM {projects} WHERE project_id = %1d';
-        }
+        $query = 'SELECT p.project_id, p.project_name, p.descr_id, p.descr_stub_id,';
+        $query .= $principal->isAdministrator() ? ' %3d AS project_access' : ' r.project_access';
+        $query .= ' FROM {projects} AS p';
+        if ( !$principal->isAdministrator() )
+            $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
+        $query .= ' WHERE project_id = %1d';
 
         if ( !( $project = $this->connection->queryRow( $query, $projectId, $principal->getUserId(), System_Const::AdministratorAccess ) ) )
             throw new System_Api_Error( System_Api_Error::UnknownProject );
@@ -174,6 +173,29 @@ class System_Api_ProjectManager extends System_Api_Base
         $folder[ 'project_name' ] = $issue[ 'project_name' ];
         $folder[ 'project_access' ] = $issue[ 'project_access' ];
         return $folder;
+    }
+
+    /**
+    * Get the project description.
+    * @param $project The project for which the description is retrieved.
+    * @return An associative array representing the description.
+    */
+    public function getProjectDescription( $project )
+    {
+        $projectId = $project[ 'project_id' ];
+
+        $query = 'SELECT pd.descr_text, pd.descr_format, p.project_id,'
+            . ' s.user_id AS modified_user, s.stamp_time AS modified_date, u.user_name AS modified_by'
+            . ' FROM {project_descriptions} AS pd'
+            . ' JOIN {projects} AS p ON p.project_id = pd.project_id'
+            . ' JOIN {stamps} AS s ON s.stamp_id = p.descr_id'
+            . ' JOIN {users} AS u ON u.user_id = s.user_id'
+            . ' WHERE pd.project_id = %d';
+
+        if ( !( $descr = $this->connection->queryRow( $query, $projectId ) ) )
+            throw new System_Api_Error( System_Api_Error::UnknownDescription );
+
+        return $descr;
     }
 
     /**
@@ -580,5 +602,116 @@ class System_Api_ProjectManager extends System_Api_Base
             . ' ORDER BY f.folder_name COLLATE LOCALE';
 
         return $this->connection->queryTableArgs( $query, $args );
+    }
+
+    /**
+    * Add a description to the project.
+    * @param $project The project to modify.
+    * @param $text Content of the description.
+    * @param $format The format of the description.
+    * @return The identifier of the change.
+    */
+    public function addProjectDescription( $project, $text, $format )
+    {
+        if ( $project[ 'descr_id' ] != null )
+            throw new System_Api_Error( System_Api_Error::DescriptionAlreadyExists );
+
+        $principal = System_Api_Principal::getCurrent();
+
+        $projectId = $project[ 'project_id' ];
+
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
+
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+
+            $query = 'INSERT INTO {project_descriptions} ( project_id, descr_text, descr_format ) VALUES ( %d, %s, %d )';
+            $this->connection->execute( $query, $projectId, $text, $format );
+
+            $query = 'UPDATE {projects} SET descr_id = %1d WHERE project_id = %2d AND COALESCE( descr_id, descr_stub_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $projectId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $stampId;
+    }
+
+    /**
+    * Edit the existing description of the project.
+    * @param $descr The description to modify.
+    * @param $newText Content of the description.
+    * @param $newFormat The format of the description.
+    * @return The identifier of the change or @c null if no change was made.
+    */
+    public function editProjectDescription( $descr, $newText, $newFormat )
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $projectId = $descr[ 'project_id' ];
+        $oldText = $descr[ 'descr_text' ];
+        $oldFormat = $descr[ 'descr_format' ];
+
+        if ( $newText == $oldText && $newFormat == $oldFormat )
+            return false;
+
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
+
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+
+            $query = 'UPDATE {project_descriptions} SET descr_text = %s, descr_format = %d  WHERE project_id = %d';
+            $this->connection->execute( $query, $newText, $newFormat, $projectId );
+
+            $query = 'UPDATE {projects} SET descr_id = %1d WHERE project_id = %2d AND COALESCE( descr_id, descr_stub_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $projectId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $stampId;
+    }
+
+    /**
+    * Delete the description of the project.
+    * @param $descr The description to delete.
+    * @return The identifier of the change.
+    */
+    public function deleteProjectDescription( $descr )
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $projectId = $descr[ 'project_id' ];
+
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::ReadCommitted );
+
+        try {
+            $query = 'INSERT INTO {stamps} ( user_id, stamp_time ) VALUES ( %d, %d )';
+            $this->connection->execute( $query, $principal->getUserId(), time() );
+            $stampId = $this->connection->getInsertId( 'stamps', 'stamp_id' );
+
+            $query = 'DELETE FROM {project_descriptions} WHERE project_id = %d';
+            $this->connection->execute( $query, $projectId );
+
+            $query = 'UPDATE {projects} SET descr_id = NULL, descr_stub_id = %1d WHERE project_id = %2d AND COALESCE( descr_id, descr_stub_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $projectId );
+
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
+
+        return $stampId;
     }
 }

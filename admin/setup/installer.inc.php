@@ -173,9 +173,17 @@ class Admin_Setup_Installer extends System_Web_Base
                 'pref_value'        => 'TEXT size="long"',
                 'pk'                => 'PRIMARY columns={"user_id","pref_key"}'
             ),
+            'project_descriptions' => array(
+                'project_id'        => 'INTEGER ref-table="projects" ref-column="project_id" on-delete="cascade"',
+                'descr_text'        => 'TEXT size="long"',
+                'descr_format'      => 'INTEGER size="tiny" default=0',
+                'pk'                => 'PRIMARY columns={"project_id"}'
+            ),
             'projects' => array(
                 'project_id'        => 'SERIAL',
                 'project_name'      => 'VARCHAR length=40',
+                'descr_id'          => 'INTEGER null=1',
+                'descr_stub_id'     => 'INTEGER null=1',
                 'pk'                => 'PRIMARY columns={"project_id"}',
                 'name_idx'          => 'INDEX columns={"project_name"}'
             ),

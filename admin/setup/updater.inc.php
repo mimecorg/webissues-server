@@ -91,6 +91,12 @@ class Admin_Setup_Updater extends System_Web_Base
                     'descr_format'      => 'INTEGER size="tiny" default=0',
                     'pk'                => 'PRIMARY columns={"issue_id"}'
                 ),
+                'project_descriptions' => array(
+                    'project_id'        => 'INTEGER ref-table="projects" ref-column="project_id" on-delete="cascade"',
+                    'descr_text'        => 'TEXT size="long"',
+                    'descr_format'      => 'INTEGER size="tiny" default=0',
+                    'pk'                => 'PRIMARY columns={"project_id"}'
+                )
             );
 
             $newFields = array(
@@ -98,6 +104,10 @@ class Admin_Setup_Updater extends System_Web_Base
                     'comment_format'    => 'INTEGER size="tiny" default=0'
                 ),
                 'issues' => array(
+                    'descr_id'          => 'INTEGER null=1',
+                    'descr_stub_id'     => 'INTEGER null=1'
+                ),
+                'projects' => array(
                     'descr_id'          => 'INTEGER null=1',
                     'descr_stub_id'     => 'INTEGER null=1'
                 )
