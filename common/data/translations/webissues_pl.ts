@@ -2870,13 +2870,13 @@
     <message>
         <location filename="../../../client/issuedetails.html.php" line="35"/>
         <source>Last Modified:</source>
-        <translation>Ostatio zmieniona:</translation>
+        <translation>Ostatnio zmieniona:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="78"/>
         <location filename="../../../client/issuedetails.html.php" line="95"/>
         <source>Last Edited:</source>
-        <translation>Ostatio zmieniony:</translation>
+        <translation>Ostatnio zmieniony:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="97"/>
@@ -4389,7 +4389,7 @@
     <message>
         <location filename="../../mail/notification.html.php" line="73"/>
         <source>Last Modified:</source>
-        <translation>Ostatio zmieniona:</translation>
+        <translation>Ostatnio zmieniona:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="175"/>

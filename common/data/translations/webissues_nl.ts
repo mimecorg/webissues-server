@@ -180,7 +180,7 @@
     <message>
         <location filename="../../../admin/index.html.php" line="16"/>
         <source>Approve and reject pending user registration requests.</source>
-        <translation>Goed- en afkeuren van registratie verzoeken</translation>
+        <translation>Goed- en afkeuren van registratie verzoeken.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="18"/>
@@ -292,7 +292,7 @@
     <message>
         <location filename="../../../admin/info/index.php" line="61"/>
         <source>The cron job was not started within the last 24 hours.</source>
-        <translation>De cron job is de laatste 24 uur niet gestart</translation>
+        <translation>De cron job is de laatste 24 uur niet gestart.</translation>
     </message>
 </context>
 <context>
@@ -305,7 +305,7 @@
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="3"/>
         <source>Enter the new server name.</source>
-        <translation>Vul de nieuwe server naam in:</translation>
+        <translation>Vul de nieuwe server naam in.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="7"/>
@@ -377,7 +377,7 @@
     <message>
         <location filename="../../../admin/info/site.html.php" line="4"/>
         <source>Site Configuration</source>
-        <translation>Site configuratie:</translation>
+        <translation>Site configuratie</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="8"/>
@@ -393,7 +393,7 @@
     <message>
         <location filename="../../../admin/info/site.html.php" line="20"/>
         <source>Debugging log file:</source>
-        <translation>Debug log bestand</translation>
+        <translation>Debug log bestand:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="21"/>
@@ -476,7 +476,7 @@
     <message>
         <location filename="../../../admin/register/approve.html.php" line="24"/>
         <source>Projects</source>
-        <translation>Projecten:</translation>
+        <translation>Projecten</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="40"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../../../admin/settings/index.php" line="33"/>
         <source>Server Settings</source>
-        <translation>Server instellingen:</translation>
+        <translation>Server instellingen</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="74"/>
@@ -677,7 +677,7 @@
     <message>
         <location filename="../../../admin/settings/index.html.php" line="44"/>
         <source>Maximum Lifetime</source>
-        <translation>Maximale levensduur:</translation>
+        <translation>Maximale levensduur</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="46"/>
@@ -781,12 +781,12 @@
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="18"/>
         <source>SMTP Server</source>
-        <translation>SMTP server:</translation>
+        <translation>SMTP server</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="20"/>
         <source>Fill the information below when using a custom SMTP server.</source>
-        <translation>Vul onderstaande informatie in bij het gebruik van een custom SMTP server:</translation>
+        <translation>Vul onderstaande informatie in bij het gebruik van een custom SMTP server.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="22"/>
@@ -816,7 +816,7 @@
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="31"/>
         <source>Connection to the SMTP server was successful.</source>
-        <translation>Verbinding met de SMTP server is gelukt</translation>
+        <translation>Verbinding met de SMTP server is gelukt.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="35"/>
@@ -859,7 +859,7 @@
     <message>
         <location filename="../../../admin/setup/install.php" line="232"/>
         <source>No supported database engines are available in this PHP installation.</source>
-        <translation>Er zijn geen ondersteunde database engines beschikbaar in deze PHP installatie</translation>
+        <translation>Er zijn geen ondersteunde database engines beschikbaar in deze PHP installatie.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="77"/>
@@ -931,7 +931,7 @@
     <message>
         <location filename="../../../admin/setup/install.php" line="410"/>
         <source>Completed the installation of the server</source>
-        <translation>De installatie van de server is afgerond.</translation>
+        <translation>De installatie van de server is afgerond</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="437"/>
@@ -1047,7 +1047,7 @@
     <message>
         <location filename="../../../admin/setup/install.html.php" line="75"/>
         <source>Table Prefix</source>
-        <translation>Tabel voorvoegsel:</translation>
+        <translation>Tabel voorvoegsel</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="158"/>
@@ -1117,7 +1117,7 @@
     <message>
         <location filename="../../../admin/setup/install.html.php" line="124"/>
         <source>The new server will be installed in the selected database.</source>
-        <translation>De nieuwe server zal worden geinstalleerd in de geselecteerde database</translation>
+        <translation>De nieuwe server zal worden geinstalleerd in de geselecteerde database.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="128"/>
@@ -1251,7 +1251,7 @@
         <source>Severity</source>
         <comment>bug</comment>
         <translatorcomment>bug</translatorcomment>
-        <translation>Prioriteit:</translation>
+        <translation>Prioriteit</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="335"/>
@@ -1327,7 +1327,7 @@
         <source>Priority</source>
         <comment>task</comment>
         <translatorcomment>taak</translatorcomment>
-        <translation>Prioriteit:</translation>
+        <translation>Prioriteit</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="411"/>
@@ -1650,7 +1650,7 @@
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="110"/>
         <source>Allow selecting only project members</source>
-        <translation>Alleen project medewerkers mogen geselecteerd worden.</translation>
+        <translation>Alleen project medewerkers mogen geselecteerd worden</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="125"/>
@@ -2071,7 +2071,7 @@
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="20"/>
         <source>Projects</source>
-        <translation>Projecten:</translation>
+        <translation>Projecten</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="36"/>
@@ -2139,7 +2139,7 @@
     <message>
         <location filename="../../../admin/users/index.html.php" line="48"/>
         <source>There are no disabled users.</source>
-        <translation>Er zijn geen geblokkeerde gebruikers</translation>
+        <translation>Er zijn geen geblokkeerde gebruikers.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="62"/>
@@ -2184,7 +2184,7 @@
         <location filename="../../../admin/users/index.php" line="91"/>
         <source>User Projects</source>
         <translatorcomment>Betere vertaling na test?</translatorcomment>
-        <translation>Gebruiker projecten:</translation>
+        <translation>Gebruiker projecten</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="92"/>
@@ -2230,7 +2230,7 @@
     <message>
         <location filename="../../../admin/users/projects.php" line="37"/>
         <source>User Projects</source>
-        <translation>Gebruiker projecten:</translation>
+        <translation>Gebruiker projecten</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="58"/>
@@ -2429,7 +2429,7 @@
     <message>
         <location filename="../../../admin/views/initial.html.php" line="7"/>
         <source>Initial view:</source>
-        <translation>Initiele view</translation>
+        <translation>Initiele view:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="10"/>
@@ -2563,7 +2563,7 @@
     <message>
         <location filename="../../../client/alerts/add.html.php" line="23"/>
         <source>There are no more available views to use.</source>
-        <translation>Er zijn geen andere views beschikbaar</translation>
+        <translation>Er zijn geen andere views beschikbaar.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/add.html.php" line="26"/>
@@ -2657,7 +2657,7 @@
     <message>
         <location filename="../../../client/alerts/index.html.php" line="15"/>
         <source>Name</source>
-        <translation>Naam:</translation>
+        <translation>Naam</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="16"/>
@@ -2975,7 +2975,7 @@
     <message>
         <location filename="../../../client/issueslist.html.php" line="69"/>
         <source>There are no issues matching the search criteria.</source>
-        <translation>Er komen geen issues overeen met de zoektermen</translation>
+        <translation>Er komen geen issues overeen met de zoektermen.</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="73"/>
@@ -3372,12 +3372,12 @@
     <message>
         <location filename="../../../client/projectstree.html.php" line="7"/>
         <source>Projects</source>
-        <translation>Projecten:</translation>
+        <translation>Projecten</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="13"/>
         <source>Name</source>
-        <translation>Naam:</translation>
+        <translation>Naam</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="14"/>
@@ -3775,7 +3775,7 @@
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="18"/>
         <source>There are no available destination projects.</source>
-        <translation>Er zijn geen bestemming projecten beschikbaar</translation>
+        <translation>Er zijn geen bestemming projecten beschikbaar.</translation>
     </message>
 </context>
 <context>
@@ -4231,7 +4231,7 @@
     <message>
         <location filename="../../errors/handle401.html.php" line="3"/>
         <source>You have no permission to access the requested page.</source>
-        <translation>Je hebt geen toestemming om de gevraagde  pagina te bezoeken</translation>
+        <translation>Je hebt geen toestemming om de gevraagde  pagina te bezoeken.</translation>
     </message>
 </context>
 <context>
@@ -4843,7 +4843,7 @@
     <message>
         <location filename="../../tools/preferences.html.php" line="29"/>
         <source>Do not notify about issues that I have already read</source>
-        <translation>Stuur geen notificaties over issues die ik al gelezen heb.</translation>
+        <translation>Stuur geen notificaties over issues die ik al gelezen heb</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="31"/>
@@ -5290,7 +5290,7 @@
     <message>
         <location filename="../../views/view.html.php" line="83"/>
         <source>Order:</source>
-        <translation>Volgorde</translation>
+        <translation>Volgorde:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="91"/>
@@ -5455,7 +5455,7 @@
     <message>
         <location filename="../../../register.html.php" line="31"/>
         <source>Email Address</source>
-        <translation>Email adres:</translation>
+        <translation>Email adres</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="33"/>
