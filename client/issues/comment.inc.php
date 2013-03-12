@@ -41,10 +41,25 @@ class Client_Issues_Comment extends System_Web_Component
                 $issueId = (int)$this->request->getQueryString( 'issue' );
                 $this->issue = $issueManager->getIssue( $issueId );
 
-                $this->oldText = '';
+                $reply = $this->request->getQueryString( 'reply' );
 
-                $preferencesManager = new System_Api_PreferencesManager();
-                $defaultFormat = $preferencesManager->getPreferenceOrSetting( 'default_format' );
+                if ( $reply == 'descr' ) {
+                    $descr = $issueManager->getDescription( $this->issue );
+
+                    $this->oldText = '[quote ' . $this->tr( 'Description' ) . "]\n" . $descr[ 'descr_text' ] . "\n[/quote]\n\n";
+                    $defaultFormat = $descr[ 'descr_format' ];
+                } else if ( $reply != null ) {
+                    $commentId = (int)$reply;
+                    $comment = $issueManager->getComment( $commentId );
+
+                    $this->oldText = '[quote ' . $this->tr( 'Comment %1', null, '#' . $commentId ) . "]\n" . $comment[ 'comment_text' ] . "\n[/quote]\n\n";
+                    $defaultFormat = $comment[ 'comment_format' ];
+                } else {
+                    $this->oldText = '';
+
+                    $preferencesManager = new System_Api_PreferencesManager();
+                    $defaultFormat = $preferencesManager->getPreferenceOrSetting( 'default_format' );
+                }
 
                 $this->issueName = $this->issue[ 'issue_name' ];
                 $this->commentId = '';
@@ -57,6 +72,8 @@ class Client_Issues_Comment extends System_Web_Component
                 $commentId = (int)$this->request->getQueryString( 'id' );
                 $this->comment = $issueManager->getComment( $commentId, System_Api_IssueManager::RequireAdministratorOrOwner );
                 $this->issue = $issueManager->getIssue( $this->comment[ 'issue_id' ] );
+
+                $reply = null;
 
                 $this->oldText = $this->comment[ 'comment_text' ];
                 $defaultFormat = $this->comment[ 'comment_format' ];
@@ -101,6 +118,9 @@ class Client_Issues_Comment extends System_Web_Component
 
         $javaScript = new System_Web_JavaScript( $this->view );
         $javaScript->registerMarkItUp( $this->form->getFieldSelector( 'commentText' ), $this->form->getFieldSelector( 'format' ), '#commentPreview' );
+
+        if ( $reply != null )
+            $javaScript->registerGoToEnd( $this->form->getFieldSelector( 'commentText' ) );
     }
 
     private function submit()

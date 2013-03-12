@@ -328,6 +328,25 @@ class System_Web_JavaScript extends System_Web_Base
             }" );
     }
 
+    /**
+    * Put the cursor at the end of the text area.
+    */
+    public function registerGoToEnd( $textAreaSelector )
+    {
+        // based on http://www.compsoft.co.uk/Blog/2010/01/using-javascript-to-put-cursor-at-end.html
+
+        $this->registerCode( "
+            $( '$textAreaSelector' ).each( function() {
+                if ( this.setSelectionRange ) {
+                    var len = $( this ).val().length * 2;
+                    this.setSelectionRange( len, len );
+                } else {
+                    $( this ).val( $( this ).val() );
+                }
+                this.scrollTop = 999999;
+            } );" );
+    }
+
     private function registerScripts( $scripts )
     {
         foreach ( $scripts as $file )

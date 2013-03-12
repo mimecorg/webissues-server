@@ -58,6 +58,7 @@
 <div style="float: right">
 <?php
         echo $this->tr( 'Last Edited:' ) . ' ' . $descr[ 'modified_date' ] . ' &mdash; ' . $descr[ 'modified_by' ];
+        echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/addcomment.php', array( 'reply' => 'descr' ) ), '/common/images/reply-16.png', $this->tr( 'Reply' ) );
         if ( $canEditDescr ):
             echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/editdescription.php' ), '/common/images/edit-modify-16.png', $this->tr( 'Edit' ) );
             echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/deletedescription.php' ), '/common/images/edit-delete-16.png', $this->tr( 'Delete' ) );
@@ -97,6 +98,7 @@
         echo $this->tr( 'Last Edited:' ) . ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ' | ';
     endif;
     echo '<a class="anchor" name="item' . $id . '">' . $this->imageAndText( '/common/images/comment-16.png', $this->tr( 'Comment %1', null, $item[ 'change_id' ] ) ) . '</a>';
+    echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/addcomment.php', array( 'reply' => $id ) ), '/common/images/reply-16.png', $this->tr( 'Reply' ) );
     if ( $item[ 'can_edit' ] ):
         echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/editcomment.php', array( 'id' => $id, 'issue' => null ) ),
             '/common/images/edit-modify-16.png', $this->tr( 'Edit' ) );
