@@ -92,8 +92,8 @@ class Client_Issues_Comment extends System_Web_Component
         $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
 
         $this->formatOptions = array(
-            0 => $this->tr( 'Plain text' ),
-            1 => $this->tr( 'Text with markup' )
+            System_Const::PlainText => $this->tr( 'Plain text' ),
+            System_Const::TextWithMarkup => $this->tr( 'Text with markup' )
         );
 
         $this->form = new System_Web_Form( 'issues', $this );

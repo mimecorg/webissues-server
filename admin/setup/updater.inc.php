@@ -142,7 +142,7 @@ class Admin_Setup_Updater extends System_Web_Base
                 . ' SELECT fc.issue_id, c.comment_text AS descr_text, %d AS descr_format'
                 . ' FROM {fc_temp} AS fc'
                 . ' INNER JOIN {comments} AS c ON c.comment_id = fc.comment_id';
-            $this->connection->execute( $query, 0 );
+            $this->connection->execute( $query, System_Const::PlainText );
 
             $query = 'UPDATE {issues}'
                 . ' SET descr_id = ( SELECT stamp_id FROM {fc_temp} WHERE {fc_temp}.issue_id = {issues}.issue_id )'

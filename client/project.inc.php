@@ -47,7 +47,7 @@ class Client_Project extends System_Web_Component
 
             $this->descr = $projectManager->getProjectDescription( $project );
             $this->descr[ 'modified_date' ] = $formatter->formatDateTime( $this->descr[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
-            if ( $this->descr[ 'descr_format' ] == 1 )
+            if ( $this->descr[ 'descr_format' ] == System_Const::TextWithMarkup )
                 $this->descr[ 'descr_text' ] = System_Web_MarkupProcessor::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
             else
                 $this->descr[ 'descr_text' ] = System_Web_LinkLocator::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
