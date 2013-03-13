@@ -47,13 +47,13 @@ class Client_Issues_Comment extends System_Web_Component
                     $descr = $issueManager->getDescription( $this->issue );
 
                     $this->oldText = '[quote ' . $this->tr( 'Description' ) . "]\n" . $descr[ 'descr_text' ] . "\n[/quote]\n\n";
-                    $defaultFormat = $descr[ 'descr_format' ];
+                    $defaultFormat = System_Const::TextWithMarkup;
                 } else if ( $reply != null ) {
                     $commentId = (int)$reply;
                     $comment = $issueManager->getComment( $commentId );
 
                     $this->oldText = '[quote ' . $this->tr( 'Comment %1', null, '#' . $commentId ) . "]\n" . $comment[ 'comment_text' ] . "\n[/quote]\n\n";
-                    $defaultFormat = $comment[ 'comment_format' ];
+                    $defaultFormat = System_Const::TextWithMarkup;
                 } else {
                     $this->oldText = '';
 
