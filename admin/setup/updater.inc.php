@@ -85,6 +85,12 @@ class Admin_Setup_Updater extends System_Web_Base
 
         if ( version_compare( $version, '1.1.001' ) < 0 ) {
             $newTables = array(
+                'fc_temp'     => array(
+                    'issue_id'          => 'INTEGER',
+                    'comment_id'        => 'INTEGER',
+                    'stamp_id'          => 'INTEGER',
+                    'pk'                => 'PRIMARY columns={"issue_id"}'
+                ),
                 'issue_descriptions' => array(
                     'issue_id'          => 'INTEGER ref-table="issues" ref-column="issue_id" on-delete="cascade"',
                     'descr_text'        => 'TEXT size="long"',
@@ -122,6 +128,33 @@ class Admin_Setup_Updater extends System_Web_Base
                 $generator->addFields( $tableName, $fields );
 
             $generator->updateReferences();
+
+            $query = 'INSERT INTO {fc_temp} ( issue_id, comment_id, stamp_id )'
+                . ' SELECT fc.issue_id, fc.comment_id, ch.stamp_id'
+                . ' FROM ( SELECT issue_id, MIN( change_id ) AS comment_id FROM {changes} WHERE change_type = %d GROUP BY issue_id ) AS fc'
+                . ' INNER JOIN {changes} AS ch ON ch.change_id = fc.comment_id'
+                . ' INNER JOIN {stamps} AS sc ON sc.stamp_id = fc.comment_id'
+                . ' INNER JOIN {stamps} AS si ON si.stamp_id = fc.issue_id'
+                . ' WHERE sc.user_id = si.user_id AND ( sc.stamp_time - si.stamp_time ) <= %d';
+            $this->connection->execute( $query, System_Const::CommentAdded, 900 );
+
+            $query = 'INSERT INTO {issue_descriptions} ( issue_id, descr_text, descr_format )'
+                . ' SELECT fc.issue_id, c.comment_text AS descr_text, %d AS descr_format'
+                . ' FROM {fc_temp} AS fc'
+                . ' INNER JOIN {comments} AS c ON c.comment_id = fc.comment_id';
+            $this->connection->execute( $query, 0 );
+
+            $query = 'UPDATE {issues}'
+                . ' SET descr_id = ( SELECT stamp_id FROM {fc_temp} WHERE {fc_temp}.issue_id = {issues}.issue_id )'
+                . ' WHERE issue_id IN ( SELECT issue_id FROM {fc_temp} )';
+            $this->connection->execute( $query );
+
+            $query = 'DELETE FROM {changes}'
+                . ' WHERE change_id IN ( SELECT comment_id FROM {fc_temp} )';
+            $this->connection->execute( $query );
+
+            $query = 'DROP TABLE {fc_temp}';
+            $this->connection->execute( $query );
 
             $settings = array(
                 'default_format'        => 1
