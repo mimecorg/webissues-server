@@ -390,6 +390,11 @@ class Server_Actions
             $this->addRow( 'issues', $issue );
             $this->addTable( 'attr_values', $issueManager->getAttributeValuesForIssue( $issue ) );
 
+            if ( $issueManager->isDescriptionModified( $issue, $sinceStamp ) )
+                $this->addRow( 'description', $issueManager->getDescription( $issue ) );
+            else if ( $issueManager->isDescriptionDeleted( $issue, $sinceStamp ) )
+                $this->addRow( 'descr_stub', $issue );
+
             $changes = $issueManager->getChanges( $issue, $sinceStamp );
 
             $this->addTable( 'changes', $changes );

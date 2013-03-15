@@ -389,6 +389,22 @@ class System_Api_IssueManager extends System_Api_Base
     }
 
     /**
+    * Return @c true if the description has been added or modified since the given stamp.
+    */
+    public function isDescriptionModified( $issue, $sinceStamp )
+    {
+        return $issue[ 'descr_id' ] != null && $issue[ 'descr_id' ] > $sinceStamp;
+    }
+
+    /**
+    * Return @c true if the description has been deleted since the given stamp.
+    */
+    public function isDescriptionDeleted( $issue, $sinceStamp )
+    {
+        return $issue[ 'descr_id' ] == null && $sinceStamp > 0 && $issue[ 'descr_stub_id' ] > $sinceStamp;
+    }
+
+    /**
     * Create a new issue in the given folder.
     * @param $folder Folder into which the issue is added.
     * @param $name Name of the issue.
