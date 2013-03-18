@@ -281,6 +281,23 @@ class Server_Actions
         $this->addTable( 'alerts', $alertManager->getAlerts() );
     }
 
+    public function getSummary( $projectId, $sinceStamp )
+    {
+        $this->principal->checkAuthenticated();
+
+        $projectManager = new System_Api_ProjectManager();
+        $project = $projectManager->getProject( $projectId );
+
+        if ( $project[ 'stamp_id' ] > $sinceStamp ) {
+            $this->addRow( 'projects', $project );
+
+            if ( $projectManager->isDescriptionModified( $project, $sinceStamp ) )
+                $this->addRow( 'project_descr', $projectManager->getProjectDescription( $project ) );
+            else if ( $projectManager->isDescriptionDeleted( $project, $sinceStamp ) )
+                $this->addRow( 'project_descr_stub', $project );
+        }
+    }
+
     public function addProject( $name )
     {
         $this->principal->checkAdministrator();
@@ -360,6 +377,48 @@ class Server_Actions
         $this->setOkIf( $projectManager->moveFolder( $folder, $project ) );
     }
 
+    public function addProjectDescription( $projectId, $text, $format )
+    {
+        $this->principal->checkAuthenticated();
+
+        $serverManager = new System_Api_ServerManager();
+        $maxLength = $serverManager->getSetting( 'comment_max_length' );
+
+        $projectManager = new System_Api_ProjectManager();
+        $project = $projectManager->getProject( $projectId, System_Api_ProjectManager::RequireAdministrator );
+        $this->validator->checkString( $text, $maxLength, System_Api_Validator::MultiLine );
+        $this->validator->checkTextFormat( $format );
+
+        $this->setId( $projectManager->addProjectDescription( $project, $text, $format ) );
+    }
+
+    public function editProjectDescription( $projectId, $newText, $newFormat )
+    {
+        $this->principal->checkAuthenticated();
+
+        $serverManager = new System_Api_ServerManager();
+        $maxLength = $serverManager->getSetting( 'comment_max_length' );
+
+        $projectManager = new System_Api_ProjectManager();
+        $project = $projectManager->getProject( $projectId, System_Api_ProjectManager::RequireAdministrator );
+        $descr = $projectManager->getProjectDescription( $project );
+        $this->validator->checkString( $newText, $maxLength, System_Api_Validator::MultiLine );
+        $this->validator->checkTextFormat( $newFormat );
+
+        $this->setIdIf( $projectManager->editProjectDescription( $descr, $newText, $newFormat ) );
+    }
+
+    public function deleteProjectDescription( $projectId )
+    {
+        $this->principal->checkAuthenticated();
+
+        $projectManager = new System_Api_ProjectManager();
+        $project = $projectManager->getProject( $projectId, System_Api_ProjectManager::RequireAdministrator );
+        $descr = $projectManager->getProjectDescription( $project );
+
+        $this->setId( $projectManager->deleteProjectDescription( $descr ) );
+    }
+    
     public function listIssues( $folderId, $sinceStamp )
     {
         $this->principal->checkAuthenticated();

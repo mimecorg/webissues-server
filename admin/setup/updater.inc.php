@@ -114,6 +114,7 @@ class Admin_Setup_Updater extends System_Web_Base
                     'descr_stub_id'     => 'INTEGER null=1'
                 ),
                 'projects' => array(
+                    'stamp_id'          => 'INTEGER null=1',
                     'descr_id'          => 'INTEGER null=1',
                     'descr_stub_id'     => 'INTEGER null=1'
                 )

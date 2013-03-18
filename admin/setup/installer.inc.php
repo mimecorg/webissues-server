@@ -182,6 +182,7 @@ class Admin_Setup_Installer extends System_Web_Base
             'projects' => array(
                 'project_id'        => 'SERIAL',
                 'project_name'      => 'VARCHAR length=40',
+                'stamp_id'          => 'INTEGER null=1',
                 'descr_id'          => 'INTEGER null=1',
                 'descr_stub_id'     => 'INTEGER null=1',
                 'pk'                => 'PRIMARY columns={"project_id"}',

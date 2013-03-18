@@ -60,12 +60,12 @@ class System_Api_ProjectManager extends System_Api_Base
         $principal = System_Api_Principal::getCurrent();
 
         if ( !$principal->isAdministrator() ) {
-            $query = 'SELECT p.project_id, p.project_name, r.project_access FROM {projects} AS p'
+            $query = 'SELECT p.project_id, p.project_name, p.stamp_id, r.project_access FROM {projects} AS p'
                 . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
         } else {
-            $query = 'SELECT p.project_id, p.project_name, %2d AS project_access FROM {projects} AS p';
+            $query = 'SELECT p.project_id, p.project_name, p.stamp_id, %2d AS project_access FROM {projects} AS p';
         }
         $query .= ' ORDER BY p.project_name COLLATE LOCALE';
 
@@ -83,7 +83,7 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT p.project_id, p.project_name, p.descr_id, p.descr_stub_id,';
+        $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.descr_id, p.descr_stub_id,';
         $query .= $principal->isAdministrator() ? ' %3d AS project_access' : ' r.project_access';
         $query .= ' FROM {projects} AS p';
         if ( !$principal->isAdministrator() )
@@ -196,6 +196,22 @@ class System_Api_ProjectManager extends System_Api_Base
             throw new System_Api_Error( System_Api_Error::UnknownDescription );
 
         return $descr;
+    }
+
+    /**
+    * Return @c true if the description has been added or modified since the given stamp.
+    */
+    public function isDescriptionModified( $project, $sinceStamp )
+    {
+        return $project[ 'descr_id' ] != null && $project[ 'descr_id' ] > $sinceStamp;
+    }
+
+    /**
+    * Return @c true if the description has been deleted since the given stamp.
+    */
+    public function isDescriptionDeleted( $project, $sinceStamp )
+    {
+        return $project[ 'descr_id' ] == null && $sinceStamp > 0 && $project[ 'descr_stub_id' ] > $sinceStamp;
     }
 
     /**
@@ -633,6 +649,9 @@ class System_Api_ProjectManager extends System_Api_Base
             $query = 'UPDATE {projects} SET descr_id = %1d WHERE project_id = %2d AND COALESCE( descr_id, descr_stub_id, 0 ) < %1d';
             $this->connection->execute( $query, $stampId, $projectId );
 
+            $query = 'UPDATE {projects} SET stamp_id = %1d WHERE project_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $projectId );
+
             $transaction->commit();
         } catch ( Exception $ex ) {
             $transaction->rollback();
@@ -673,6 +692,9 @@ class System_Api_ProjectManager extends System_Api_Base
             $query = 'UPDATE {projects} SET descr_id = %1d WHERE project_id = %2d AND COALESCE( descr_id, descr_stub_id, 0 ) < %1d';
             $this->connection->execute( $query, $stampId, $projectId );
 
+            $query = 'UPDATE {projects} SET stamp_id = %1d WHERE project_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $projectId );
+
             $transaction->commit();
         } catch ( Exception $ex ) {
             $transaction->rollback();
@@ -704,6 +726,9 @@ class System_Api_ProjectManager extends System_Api_Base
             $this->connection->execute( $query, $projectId );
 
             $query = 'UPDATE {projects} SET descr_id = NULL, descr_stub_id = %1d WHERE project_id = %2d AND COALESCE( descr_id, descr_stub_id, 0 ) < %1d';
+            $this->connection->execute( $query, $stampId, $projectId );
+
+            $query = 'UPDATE {projects} SET stamp_id = %1d WHERE project_id = %2d AND COALESCE( stamp_id, 0 ) < %1d';
             $this->connection->execute( $query, $stampId, $projectId );
 
             $transaction->commit();
