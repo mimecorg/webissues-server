@@ -485,8 +485,7 @@ class Server_Actions
         $issueManager = new System_Api_IssueManager();
         $issue = $issueManager->getIssue( $issueId );
         $this->validator->checkString( $text, $maxLength, System_Api_Validator::MultiLine );
-
-        $this->validator->checkBooleanValue( $format );
+        $this->validator->checkTextFormat( $format );
 
         $this->setId( $issueManager->addComment( $issue, $text, $format ) );
     }
@@ -501,10 +500,9 @@ class Server_Actions
         $issueManager = new System_Api_IssueManager();
         $comment = $issueManager->getComment( $commentId, System_Api_IssueManager::RequireAdministratorOrOwner );
         $this->validator->checkString( $newText, $maxLength, System_Api_Validator::MultiLine );
+        $this->validator->checkTextFormat( $newFormat );
 
-        $this->validator->checkBooleanValue( $newFormat );
-
-        $this->setId( $issueManager->editComment( $comment, $newText, $newFormat ) );
+        $this->setIdIf( $issueManager->editComment( $comment, $newText, $newFormat ) );
     }
 
     public function deleteComment( $commentId )
@@ -563,6 +561,48 @@ class Server_Actions
         $file = $issueManager->getFile( $fileId, System_Api_IssueManager::RequireAdministratorOrOwner );
 
         $this->setId( $issueManager->deleteFile( $file ) );
+    }
+
+    public function addDescription( $issueId, $text, $format )
+    {
+        $this->principal->checkAuthenticated();
+
+        $serverManager = new System_Api_ServerManager();
+        $maxLength = $serverManager->getSetting( 'comment_max_length' );
+
+        $issueManager = new System_Api_IssueManager();
+        $issue = $issueManager->getIssue( $issueId, System_Api_IssueManager::RequireAdministratorOrOwner );
+        $this->validator->checkString( $text, $maxLength, System_Api_Validator::MultiLine );
+        $this->validator->checkTextFormat( $format );
+
+        $this->setId( $issueManager->addDescription( $issue, $text, $format ) );
+    }
+
+    public function editDescription( $issueId, $newText, $newFormat )
+    {
+        $this->principal->checkAuthenticated();
+
+        $serverManager = new System_Api_ServerManager();
+        $maxLength = $serverManager->getSetting( 'comment_max_length' );
+
+        $issueManager = new System_Api_IssueManager();
+        $issue = $issueManager->getIssue( $issueId, System_Api_IssueManager::RequireAdministratorOrOwner );
+        $descr = $issueManager->getDescription( $issue );
+        $this->validator->checkString( $newText, $maxLength, System_Api_Validator::MultiLine );
+        $this->validator->checkTextFormat( $newFormat );
+
+        $this->setIdIf( $issueManager->editDescription( $descr, $newText, $newFormat ) );
+    }
+
+    public function deleteDescription( $issueId )
+    {
+        $this->principal->checkAuthenticated();
+
+        $issueManager = new System_Api_IssueManager();
+        $issue = $issueManager->getIssue( $issueId, System_Api_IssueManager::RequireAdministratorOrOwner );
+        $descr = $issueManager->getDescription( $issue );
+
+        $this->setId( $issueManager->deleteDescription( $descr ) );
     }
 
     public function findItem( $itemId )

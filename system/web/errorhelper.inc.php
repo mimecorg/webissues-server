@@ -189,6 +189,8 @@ class System_Web_ErrorHelper extends System_Web_Base
                 return $this->tr( 'Description does not exist' );
             case System_Api_Error::DescriptionAlreadyExists:
                 return $this->tr( 'Description already exists' );
+            case InvalidTextFormat::InvalidTextFormat:
+                return $this->tr( 'Text format is invalid' );
             default:
                 return '';
         }

@@ -128,10 +128,21 @@ class System_Api_Validator
     * System_Const.
     * @param $access The integer argument to validate.
     */
-    public function checkAlertEmail( $access )
+    public function checkAlertEmail( $email )
     {
-        if ( !is_int( $access ) || $access < System_Const::NoEmail || $access > System_Const::SummaryReportEmail )
+        if ( !is_int( $email ) || $email < System_Const::NoEmail || $email > System_Const::SummaryReportEmail )
             throw new System_Api_Error( System_Api_Error::InvalidAlertEmail );
+    }
+
+    /**
+    * Check if the argument is a valid text format constant as defined in
+    * System_Const.
+    * @param $format The integer argument to validate.
+    */
+    public function checkTextFormat( $format )
+    {
+        if ( !is_int( $format ) || $format < System_Const::PlainText || $format > System_Const::TextWithMarkup )
+            throw new System_Api_Error( System_Api_Error::InvalidTextFormat );
     }
 
     /**

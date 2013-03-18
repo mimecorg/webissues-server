@@ -91,6 +91,7 @@ class System_Api_Error extends System_Core_Exception
     const UnknownRequest = '360 Unknown Request';
     const UnknownDescription = '361 Unknown Description';
     const DescriptionAlreadyExists = '362 Description Already Exists';
+    const InvalidTextFormat = '363 Invalid Text Format';
 
     public function __construct( $message, $wrappedException = null )
     {
