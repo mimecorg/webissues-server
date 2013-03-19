@@ -82,17 +82,17 @@
 
 <h3><?php echo $this->tr( 'Issue History' ) ?></h3>
 
-<div class="issue-history">
-
 <?php
     if ( !empty( $history ) ):
 
     foreach ( $history as $id => $item ):
 ?>
 
+<div class="history-item">
+
 <?php if ( $item[ 'change_type' ] == System_Const::CommentAdded ): ?>
 
-<div class="history-info" style="float: right">
+<div style="float: right">
 <?php
     if ( $item[ 'stamp_id' ] != $id ):
         echo $this->tr( 'Last Edited:' ) . ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ' | ';
@@ -110,7 +110,7 @@
 
 <?php elseif ( $item[ 'change_type' ] == System_Const::FileAdded ): ?>
 
-<div class="history-info" style="float: right">
+<div style="float: right">
 <?php
     if ( $item[ 'stamp_id' ] != $id ):
         echo $this->tr( 'Last Edited:' ) . ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ' | ';
@@ -199,7 +199,11 @@
 <?php
     break;
     endswitch;
+?>
 
+</div>
+
+<?php
     endforeach;
 
     else:
@@ -218,8 +222,6 @@
 </p>
 
 <?php endif ?>
-
-</div>
 
 <?php $pager->renderPager(); ?>
 

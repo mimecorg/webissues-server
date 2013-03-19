@@ -126,7 +126,7 @@ h3 {
 h4 {
   font-size: 100%;
   line-height: 130%;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
 }
 
 p {
@@ -459,21 +459,13 @@ table.sub-pane-layout td.top-sub-pane {
   width: 50%;
 }
 
-.issue-history {
-  margin-bottom: 0.5em;
-}
-
-.issue-history h4 {
-  margin: 1em 0 0.5em 0;
-}
-
-.history-info {
-  margin-top: 1em;
+.history-item {
+  margin: 1em 0 0 0;
 }
 
 ul.changes {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.75em;
 }
 
 .comment-text {
