@@ -35,7 +35,7 @@
         echo $this->link( '/client/index.php', $this->tr( 'Web Client' ) ) . ' | ';
     endif;
     echo $this->tr( 'WebIssues %1', null, WI_VERSION ) . ' | ';
-    echo $this->link( $manualUrl, $this->tr( 'Manual' ), array( 'target' => '_blank' ) );
+    echo $this->link( $manualUrl, $this->tr( 'Manual' ) );
 ?>
   </div>
   <div id="infobar-left">
