@@ -55,26 +55,21 @@ class System_Web_MarkupProcessor
                 if ( $state[ 'mode' ] == 'list' && preg_match( '/^[ \t]*(\*{1,6})[ \t](.*)/', $token, $parts ) ) {
                     $nest = strlen( $parts[ 1 ] );
                     $token = $parts[ 2 ];
-                    
-                    if ( $state[ 'nest' ] == 0 )
-                        $state[ 'nest' ] = 1;
-                    else
-                        $result[] = '</li>';
-                    
-                    if ( $nest > $state[ 'nest' ] )
-                        $result[] = str_repeat( '<ul>', $nest - $state[ 'nest' ] );
-                    else if ( $state[ 'nest' ] > $nest )
-                        $result[] = str_repeat( '</ul>', $state[ 'nest' ] - $nest );
-                    
+
+                    if ( $nest > $state[ 'nest' ] ) {
+                        $result[] = str_repeat( '<ul><li>', $nest - $state[ 'nest' ] );
+                    } else if ( $nest > 0 ) {
+                        if ( $state[ 'nest' ] > $nest )
+                            $result[] = str_repeat( '</li></ul>', $state[ 'nest' ] - $nest );
+                        if ( !$state[ 'start' ] )
+                            $result[] = '</li><li>';
+                    }
+
                     $state[ 'nest' ] = $nest;
-                    $result[] = '<li>';
                 }
 
-                // create an implicit list item
-                if ( $state[ 'mode' ] == 'list' && $state[ 'nest' ] == 0 ) {
-                    $state[ 'nest' ] = 1;
-                    $result[] = '<li>';
-                }
+                if ( $state[ 'mode' ] == 'list' )
+                    $state[ 'start' ] = false;
 
                 $tags = array();
 
@@ -119,7 +114,7 @@ class System_Web_MarkupProcessor
 
                     if ( $subtoken[ 0 ] == '[' ) {
                         $index = strcspn( $subtoken, " \t]" );
-                        $url = strtolower( substr( $subtoken, 1, $index - 1 ) );
+                        $url = substr( $subtoken, 1, $index - 1 );
                         $title = trim( substr( $subtoken, $index, strrpos( $subtoken, ']' ) - $index ), " \t" );
 
                         if ( $title == '' )
@@ -173,6 +168,9 @@ class System_Web_MarkupProcessor
                     continue;
                 }
 
+                if ( $state[ 'mode' ] == 'list' )
+                    $state[ 'start' ] = false;
+
                 if ( $tag == '/list' || $tag == '/quote' ) {
                     // find a matching opening tag
                     $pop = 0;
@@ -190,14 +188,13 @@ class System_Web_MarkupProcessor
                         // pop the block tags from the stack
                         for ( $i = 0; $i < $pop; $i++ ) {
                             if ( $state[ 'mode' ] == 'list' )
-                                $result[] = $state[ 'nest' ] == 0 ? '</ul>' : '</li>' . str_repeat( '</ul>', $state[ 'nest' ] );
+                                $result[] = str_repeat( '</li></ul>', $state[ 'nest' ] );
                             else if ( $state[ 'mode' ] == 'code' )
                                 $result[] = '</pre>';
                             else
                                 $result[] = '</div>';
                             $state = array_pop( $stack );
                         }
-                        $nl = false;
                         continue;
                     }
                     // fall through if not matching opening tag found; it will be emitted as-is
@@ -205,16 +202,9 @@ class System_Web_MarkupProcessor
 
                 if ( $tag == 'list' ) {
                     $stack[] = $state;
-                    $state = array( 'mode' => 'list', 'nest' => 0 );
-                    $result[] = '<ul>';
-                    $nl = false;
+                    $state = array( 'mode' => 'list', 'nest' => 1, 'start' => true );
+                    $result[] = '<ul><li>';
                     continue;
-                }
-
-                // create an implicit list item (this must be done after handling nested [list] and closing tags)
-                if ( $state[ 'mode' ] == 'list' && $state[ 'nest' ] == 0 ) {
-                    $state[ 'nest' ] = 1;
-                    $result[] = '<li>';
                 }
 
                 if ( $tag == 'code' ) {
@@ -245,7 +235,6 @@ class System_Web_MarkupProcessor
                             $title .= ':';
                         $result[] = '<div class="quote-title">' . $title . '</div>';
                     }
-                    $nl = false;
                     continue;
                 }
             }
@@ -256,7 +245,7 @@ class System_Web_MarkupProcessor
         // pop the remaining block tags from the stack
         while ( !empty( $stack ) ) {
             if ( $state[ 'mode' ] == 'list' )
-                $result[] = $state[ 'nest' ] == 0 ? '</ul>' : '</li>' . str_repeat( '</ul>', $state[ 'nest' ] );
+                $result[] = str_repeat( '</li></ul>', $state[ 'nest' ] );
             else if ( $state[ 'mode' ] == 'code' )
                 $result[] = '</pre>';
             else
