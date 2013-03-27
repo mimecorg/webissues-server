@@ -32,7 +32,7 @@ class Client_Projects_AddProject extends System_Web_Component
     protected function execute()
     {
         if ( !System_Api_Principal::getCurrent()->isAdministrator() )
-                throw new System_Api_Error( System_Api_Error::AccessDenied );
+            throw new System_Api_Error( System_Api_Error::AccessDenied );
 
         $breadcrumbs = new Common_Breadcrumbs( $this );
         $breadcrumbs->initialize( Common_Breadcrumbs::ManageProjects );
@@ -41,10 +41,23 @@ class Client_Projects_AddProject extends System_Web_Component
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Add Project' ) );
 
+        $preferencesManager = new System_Api_PreferencesManager();
+        $defaultFormat = $preferencesManager->getPreferenceOrSetting( 'default_format' );
+
+        $this->formatOptions = array(
+            System_Const::PlainText => $this->tr( 'Plain text' ),
+            System_Const::TextWithMarkup => $this->tr( 'Text with markup' )
+        );
+
         $this->form = new System_Web_Form( 'projects', $this );
         $this->form->addField( 'projectName', '' );
+        $this->form->addField( 'descriptionText', '' );
+        $this->form->addField( 'format', $defaultFormat );
 
+        $serverManager = new System_Api_ServerManager();
         $this->form->addTextRule( 'projectName', System_Const::NameMaxLength );
+        $this->form->addTextRule( 'descriptionText', $serverManager->getSetting( 'comment_max_length' ), System_Api_Parser::MultiLine | System_Api_Parser::AllowEmpty );
+        $this->form->addItemsRule( 'format', $this->formatOptions );
 
         if ( $this->form->loadForm() ) {
             if ( $this->form->isSubmittedWith( 'cancel' ) )
@@ -58,6 +71,9 @@ class Client_Projects_AddProject extends System_Web_Component
                     $this->response->redirect( $this->parentUrl );
             }
         }
+
+        $javaScript = new System_Web_JavaScript( $this->view );
+        $javaScript->registerMarkItUp( $this->form->getFieldSelector( 'descriptionText' ), $this->form->getFieldSelector( 'format' ), '#descriptionPreview' );
     }
 
     private function submit()
@@ -65,6 +81,10 @@ class Client_Projects_AddProject extends System_Web_Component
         $projectManager = new System_Api_ProjectManager();
         try {
             $projectId = $projectManager->addProject( $this->projectName );
+            if ( $this->descriptionText != '' ) {
+                $project = $projectManager->getProject( $projectId );
+                $projectManager->addProjectDescription( $project, $this->descriptionText, $this->format );
+            }
         } catch ( System_Api_Error $ex ) {
             $this->form->getErrorHelper()->handleError( 'projectName', $ex );
         }
