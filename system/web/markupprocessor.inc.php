@@ -25,6 +25,30 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 */
 class System_Web_MarkupProcessor
 {
+    private $tokens;
+    private $index = 0;
+
+    private $token;
+    private $value;
+    private $extra;
+    private $rawValue;
+
+    private $result = array();
+
+    private $prettyPrint = false;
+
+    const T_END = 0;
+    const T_TEXT = 1;
+    const T_START_CODE = 2;
+    const T_START_LIST = 3;
+    const T_START_QUOTE = 4;
+    const T_END_CODE = 5;
+    const T_END_LIST = 6;
+    const T_END_QUOTE = 7;
+    const T_LINK = 8;
+    const T_BACKTICK = 9;
+    const T_NEWLINE = 10;
+
     /**
     * Convert text with markup to HTML.
     * @param $text The text to convert.
@@ -33,227 +57,12 @@ class System_Web_MarkupProcessor
     */
     public static function convertToHtml( $text, &$prettyPrint )
     {
-        $state = array( 'mode' => '' );
-        $stack = array();
-
-        // extract new lines and starting/closing block tags
-        $tokens = preg_split( '/(\n|\[\/?(?:list|code|quote)(?:[ \t][^]\n]*)?\](?:[ \t]*\n)?)/ui', $text, -1, PREG_SPLIT_DELIM_CAPTURE );
-
-        $result = array();
-        foreach ( $tokens as $i => $token ) {
-            if ( $i % 2 == 0 ) {
-                if ( $token == '' )
-                    continue;
-
-                // ignore any formatting in a code block
-                if ( $state[ 'mode' ] == 'code' ) {
-                    $result[] = htmlspecialchars( $token );
-                    continue;
-                }
-
-                // handle initial asterisks in a list block
-                if ( $state[ 'mode' ] == 'list' && preg_match( '/^[ \t]*(\*{1,6})[ \t](.*)/', $token, $parts ) ) {
-                    $nest = strlen( $parts[ 1 ] );
-                    $token = $parts[ 2 ];
-
-                    if ( $nest > $state[ 'nest' ] ) {
-                        $result[] = str_repeat( '<ul><li>', $nest - $state[ 'nest' ] );
-                    } else if ( $nest > 0 ) {
-                        if ( $state[ 'nest' ] > $nest )
-                            $result[] = str_repeat( '</li></ul>', $state[ 'nest' ] - $nest );
-                        if ( !$state[ 'start' ] )
-                            $result[] = '</li><li>';
-                    }
-
-                    $state[ 'nest' ] = $nest;
-                }
-
-                if ( $state[ 'mode' ] == 'list' )
-                    $state[ 'start' ] = false;
-
-                $tags = array();
-
-                // similar to System_Web_LinkLocator's automatic links, but simpler because we know the exact beginning and end of the link
-                $mail = '(?:mailto:)?[\w.%+-]+@[\w.-]+\.[a-z]{2,4}';
-                $url = '(?:(?:https?|ftp|file):\/\/|www\.|ftp\.|\\\\\\\\)[\w+&@#\/\\\\%=~|$?!:,.()-]+';
-                $id = '#\d+';
-                $link = "(?:$mail|$url|$id)";
-
-                // extract inline formatting: bold, italic, monotype and hyperlink
-                $subtokens = preg_split( '/(\*\*+|__+|`[^`]+`|\[' . $link . '(?:[ \t][^]]*)?\])/ui', $token, -1, PREG_SPLIT_DELIM_CAPTURE );
-
-                foreach ( $subtokens as $j => $subtoken ) {
-                    if ( $j % 2 == 0 ) {
-                        // handle implicit links in regular text
-                        $result[] = System_Web_LinkLocator::convertToHtml( $subtoken );
-                        continue;
-                    }
-
-                    if ( $subtoken == '**' || $subtoken == '__' ) {
-                        $tag = $subtoken == '**' ? 'strong' : 'em';
-
-                        // find a matching opening tag
-                        $key = array_search( $tag, $tags );
-                        if ( $key === false ) {
-                            $tags[] = $tag;
-                            $result[] = "<$tag>";
-                        } else {
-                            while ( count( $tags ) > $key ) {
-                                $tag = array_pop( $tags );
-                                $result[] = "</$tag>";
-                            }
-                        }
-                        continue;
-                    }
-
-                    if ( $subtoken[ 0 ] == '`' ) {
-                        // display monotype text without further processing
-                        $result[] = '<code>' . htmlspecialchars( substr( $subtoken, 1, -1 ) ) . '</code>';
-                        continue;
-                    }
-
-                    if ( $subtoken[ 0 ] == '[' ) {
-                        $index = strcspn( $subtoken, " \t]" );
-                        $url = substr( $subtoken, 1, $index - 1 );
-                        $title = trim( substr( $subtoken, $index, strrpos( $subtoken, ']' ) - $index ), " \t" );
-
-                        if ( $title == '' )
-                            $title = $url;
-
-                        if ( $url[ 0 ] == '#' )
-                            $url = WI_BASE_URL . '/client/index.php?item=' . substr( $url, 1 );
-                        else if ( strtolower( substr( $url, 0, 4 ) ) == 'www.' )
-                            $url = 'http://' . $url;
-                        else if ( strtolower( substr( $url, 0, 4 ) ) == 'ftp.' )
-                            $url = 'ftp://' . $url;
-                        else if ( substr( $url, 0, 2 ) == '\\\\' )
-                            $url = 'file:///' . $url;
-                        else if ( strpos( $url, ':' ) === false )
-                            $url = 'mailto:' . $url;
-
-                        $url = htmlspecialchars( $url );
-                        $result[] = "<a href=\"$url\">" . htmlspecialchars( $title ) . '</a>';
-                        continue;
-                    }
-
-                    $result[] = htmlspecialchars( $subtoken );
-                }
-
-                // pop the remaining inline tags from the stack
-                while ( !empty( $tags ) ) {
-                    $tag = array_pop( $tags );
-                    $result[] = "</$tag>";
-                }
-                
-                continue;
-            }
-
-            if ( $token[ 0 ] == '[' ) {
-                $index = strcspn( $token, " \t]" );
-                $tag = strtolower( substr( $token, 1, $index - 1 ) );
-                $extra = trim( substr( $token, $index, strrpos( $token, ']' ) - $index ), " \t" );
-
-                // ignore all block tags in a code block, but count nested [code] and [/code] tags
-                if ( $state[ 'mode' ] == 'code' ) {
-                    if ( $tag == 'code' ) {
-                        $state[ 'nest' ]++;
-                    } else if ( $tag == '/code' ) {
-                        if ( --$state[ 'nest' ] == 0 ) {
-                            $result[] = '</pre>';
-                            $state = array_pop( $stack );
-                            continue;
-                        }
-                    }
-                    $result[] = htmlspecialchars( $token );
-                    continue;
-                }
-
-                if ( $state[ 'mode' ] == 'list' )
-                    $state[ 'start' ] = false;
-
-                if ( $tag == '/list' || $tag == '/quote' ) {
-                    // find a matching opening tag
-                    $pop = 0;
-                    if ( $tag == '/' . $state[ 'mode' ] ) {
-                        $pop = 1;
-                    } else {
-                        for ( $i = count( $stack ) - 1; $i > 0; $i-- ) {
-                            if ( $tag == '/' . $stack[ $i ][ 'mode' ] ) {
-                                $pop = count( $stack ) - $i + 1;
-                                break;
-                            }
-                        }
-                    }
-                    if ( $pop > 0 ) {
-                        // pop the block tags from the stack
-                        for ( $i = 0; $i < $pop; $i++ ) {
-                            if ( $state[ 'mode' ] == 'list' )
-                                $result[] = str_repeat( '</li></ul>', $state[ 'nest' ] );
-                            else if ( $state[ 'mode' ] == 'code' )
-                                $result[] = '</pre>';
-                            else
-                                $result[] = '</div>';
-                            $state = array_pop( $stack );
-                        }
-                        continue;
-                    }
-                    // fall through if not matching opening tag found; it will be emitted as-is
-                }
-
-                if ( $tag == 'list' ) {
-                    $stack[] = $state;
-                    $state = array( 'mode' => 'list', 'nest' => 1, 'start' => true );
-                    $result[] = '<ul><li>';
-                    continue;
-                }
-
-                if ( $tag == 'code' ) {
-                    $stack[] = $state;
-                    $state = array( 'mode' => 'code', 'nest' => 1 );
-                    $classes = '';
-                    if ( $extra != '' ) {
-                        // enable pretty printing if a valid language is given
-                        $lang = strtolower( $extra );
-                        $langs = array( 'bash', 'c', 'c++', 'c#', 'css', 'html', 'java', 'javascript', 'js', 'perl', 'php', 'python', 'ruby', 'sh', 'sql', 'vb', 'xml' );
-                        if ( array_search( $lang, $langs ) !== false ) {
-                            $lang = str_replace( array( '+', '#' ), array( 'p', 's' ), $lang );
-                            $classes = ' prettyprint lang-' . $lang;
-                            $prettyPrint = true;
-                        }
-                    }
-                    $result[] = '<pre class="code' . $classes . '">';
-                    continue;
-                }
-
-                if ( $tag == 'quote' ) {
-                    $stack[] = $state;
-                    $state = array( 'mode' => 'quote' );
-                    $result[] = '<div class="quote">';
-                    if ( $extra != '' ) {
-                        $title = System_Web_LinkLocator::convertToHtml( $extra );
-                        if ( substr( $title, -1, 1 ) != ':' )
-                            $title .= ':';
-                        $result[] = '<div class="quote-title">' . $title . '</div>';
-                    }
-                    continue;
-                }
-            }
-
-            $result[] = htmlspecialchars( $token );
-        }
-
-        // pop the remaining block tags from the stack
-        while ( !empty( $stack ) ) {
-            if ( $state[ 'mode' ] == 'list' )
-                $result[] = str_repeat( '</li></ul>', $state[ 'nest' ] );
-            else if ( $state[ 'mode' ] == 'code' )
-                $result[] = '</pre>';
-            else
-                $result[] = '</div>';
-            $state = array_pop( $stack );
-        }
-
-        return implode( '', $result );
+        $processor = new System_Web_MarkupProcessor( $text );
+        $processor->next();
+        $processor->parse();
+        if ( $processor->prettyPrint )
+            $prettyPrint = true;
+        return implode( '', $processor->result );
     }
 
     /**
@@ -266,5 +75,247 @@ class System_Web_MarkupProcessor
     public static function convertToRawHtml( $text, &$prettyPrint )
     {
         return new System_Web_RawValue( self::convertToHtml( $text, $prettyPrint ) );
+    }
+
+    private function __construct( $text )
+    {
+        // similar to System_Web_LinkLocator's automatic links, but simpler because we know the exact beginning and end of the link
+        $mail = '(?:mailto:)?[\w.%+-]+@[\w.-]+\.[a-z]{2,4}';
+        $url = '(?:(?:https?|ftp|file):\/\/|www\.|ftp\.|\\\\\\\\)[\w+&@#\/\\\\%=~|$?!:,.()-]+';
+        $id = '#\d+';
+        $link = "(?:$mail|$url|$id)";
+
+        $this->tokens = preg_split( '/(\n|`[^`\n]+`|\[\/?(?:list|code|quote)(?:[ \t][^]\n]*)?\](?:[ \t]*\n)?|\[' . $link . '(?:[ \t][^]\n]*)?\])/ui', $text, -1, PREG_SPLIT_DELIM_CAPTURE );
+    }
+
+    private function next()
+    {
+        if ( $this->index < count( $this->tokens ) && ( $this->index % 2 ) == 0 ) {
+            $token = $this->tokens[ $this->index++ ];
+            if ( $token != '' ) {
+                $this->token = self::T_TEXT;
+                $this->value = $this->rawValue = $token;
+                return;
+            }
+        }
+
+        if ( $this->index < count( $this->tokens ) ) {
+            $token = $this->tokens[ $this->index++ ];
+            $this->rawValue = $token;
+
+            if ( $token[ 0 ] == '[' ) {
+                $index = strcspn( $token, " \t]" );
+                $this->value = strtolower( substr( $token, 1, $index - 1 ) );
+                $this->extra = trim( substr( $token, $index, strrpos( $token, ']' ) - $index ), " \t" );
+
+                $tag = strtolower( $this->value );
+                if ( $tag == 'code' )
+                    $this->token = self::T_START_CODE;
+                else if ( $tag == 'list' )
+                    $this->token = self::T_START_LIST;
+                else if ( $tag == 'quote' )
+                    $this->token = self::T_START_QUOTE;
+                else if ( $tag == '/code' )
+                    $this->token = self::T_END_CODE;
+                else if ( $tag == '/list' )
+                    $this->token = self::T_END_LIST;
+                else if ( $tag == '/quote' )
+                    $this->token = self::T_END_QUOTE;
+                else
+                    $this->token = self::T_LINK;
+            } else if ( $token[ 0 ] == '`' ) {
+                $this->token = self::T_BACKTICK;
+                $this->value = substr( $token, 1, -1 );
+            } else {
+                $this->token = self::T_NEWLINE;
+            }
+
+            return;
+        }
+
+        $this->token = self::T_END;
+    }
+
+    private function parse()
+    {
+        while ( $this->token != self::T_END )
+            $this->parseBlock();
+    }
+
+    private function parseBlock()
+    {
+        switch ( $this->token ) {
+            case self::T_START_CODE:
+                $classes = '';
+                if ( $this->extra != '' ) {
+                    $lang = strtolower( $this->extra );
+                    $langs = array( 'bash', 'c', 'c++', 'c#', 'css', 'html', 'java', 'javascript', 'js', 'perl', 'php', 'python', 'ruby', 'sh', 'sql', 'vb', 'xml' );
+                    if ( array_search( $lang, $langs ) !== false ) {
+                        $lang = str_replace( array( '+', '#' ), array( 'p', 's' ), $lang );
+                        $classes = ' prettyprint lang-' . $lang;
+                        $this->prettyPrint = true;
+                    }
+                }
+                $this->result[] = '<pre class="code' . $classes . '">';
+                $this->next();
+                $this->parseCode();
+                if ( $this->token == self::T_END_CODE )
+                    $this->next();
+                $this->result[] = '</pre>';
+                break;
+
+            case self::T_START_LIST:
+                $this->result[] = '<ul><li>';
+                $this->next();
+                $this->parseList();
+                if ( $this->token == self::T_END_LIST )
+                    $this->next();
+                $this->result[] = '</li></ul>';
+                break;
+
+            case self::T_START_QUOTE:
+                $this->result[] = '<div class="quote">';
+                if ( $this->extra != '' ) {
+                    $title = System_Web_LinkLocator::convertToHtml( $this->extra );
+                    if ( substr( $title, -1, 1 ) != ':' )
+                        $title .= ':';
+                    $this->result[] = '<div class="quote-title">' . $title . '</div>';
+                }
+                $this->next();
+                $this->parseQuote();
+                if ( $this->token == self::T_END_QUOTE )
+                    $this->next();
+                $this->result[] = '</div>';
+                break;
+
+            case self::T_TEXT:
+            case self::T_BACKTICK:
+            case self::T_LINK:
+                $this->parseText();
+                break;
+
+            case self::T_NEWLINE:
+                $this->result[] = "\n";
+                $this->next();
+                break;
+
+            default:
+                // ignore error (e.g. unbalanced closing tag)
+                $this->next();
+                break;
+        }
+    }
+
+    private function parseText()
+    {
+        $tags = array();
+
+        for ( ; ; ) {
+            switch ( $this->token ) {
+                case self::T_TEXT:
+                    $subtokens = preg_split( '/(\*\*+|__+)/', $this->value, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
+                    foreach ( $subtokens as $subtoken ) {
+                        if ( $subtoken == '**' || $subtoken == '__' ) {
+                            $tag = $subtoken == '**' ? 'strong' : 'em';
+                            $key = array_search( $tag, $tags );
+                            if ( $key === false ) {
+                                $tags[] = $tag;
+                                $this->result[] = '<' . $tag . '>';
+                            } else {
+                                for ( $i = count( $tags ) - 1; $i >= $key; $i-- )
+                                    $this->result[] = '</' . $tags[ $i ] . '>';
+                                array_splice( $tags, $key, 1 );
+                                for ( $i = $key; $i < count( $tags ); $i++ )
+                                    $this->result[] = '<' . $tags[ $i ] . '>';
+                            }
+                        } else {
+                            $this->result[] = System_Web_LinkLocator::convertToHtml( $subtoken );
+                        }
+                    }
+                    $this->next();
+                    break;
+
+                case self::T_BACKTICK:
+                    $this->result[] = '<code>' . htmlspecialchars( $this->value ) . '</code>';
+                    $this->next();
+                    break;
+
+                case self::T_LINK:
+                    $title = ( $this->extra != '' ) ? $this->extra : $this->value;
+                    $url = System_Web_LinkLocator::convertUrl( $this->value );
+                    $this->result[] = '<a href="' . htmlspecialchars( $url ) . '">' . htmlspecialchars( $title ) . '</a>';
+                    $this->next();
+                    break;
+
+                default:
+                    for ( $i = count( $tags ) - 1; $i >= 0; $i-- )
+                        $this->result[] = '</' . $tags[ $i ] . '>';
+                    return;
+            }
+        }
+    }
+
+    private function parseCode()
+    {
+        $nest = 1;
+
+        while ( $this->token != self::T_END ) {
+            if ( $this->token == self::T_START_CODE ) {
+                $nest++;
+            } else if ( $this->token == self::T_END_CODE ) {
+                if ( --$nest == 0 )
+                    break;
+            }
+
+            $this->result[] = htmlspecialchars( $this->rawValue );
+            $this->next();
+        }
+    }
+
+    private function parseList()
+    {
+        $nest = 1;
+
+        $level = $this->getItemLevel();
+        if ( $level > 1 ) {
+            $this->result[] = str_repeat( '<ul><li>', $level - 1 );
+            $nest = $level;
+        }
+
+        while ( $this->token != self::T_END && $this->token != self::T_END_LIST ) {
+            $this->parseBlock();
+
+            $level = $this->getItemLevel();
+            if ( $level > $nest ) {
+                $this->result[] = str_repeat( '<ul><li>', $level - $nest );
+                $nest = $level;
+            } else if ( $level > 0 ) {
+                if ( $level < $nest )
+                    $this->result[] = str_repeat( '</li></ul>', $nest - $level );
+                $this->result[] = '</li><li>';
+                $nest = $level;
+            }
+        }
+
+        if ( $nest > 1 )
+            $this->result[] = str_repeat( '</li></ul>', $nest - 1 );
+    }
+
+    private function getItemLevel()
+    {
+        if ( $this->token == self::T_TEXT && preg_match( '/^[ \t]*(\*{1,6})[ \t](.*)/', $this->value, $parts ) ) {
+            if ( $parts[ 2 ] != '' )
+                $this->value = $parts[ 2 ];
+            else
+                $this->next();
+            return strlen( $parts[ 1 ] );
+        }
+        return 0;
+    }
+
+    private function parseQuote()
+    {
+        while ( $this->token != self::T_END && $this->token != self::T_END_QUOTE )
+            $this->parseBlock();
     }
 }

@@ -66,19 +66,7 @@ class System_Web_LinkLocator
                 }
                 $result[] = htmlspecialchars( $match );
             } else {
-                if ( $match[ 0 ] == '#' )
-                    $url = WI_BASE_URL . '/client/index.php?item=' . substr( $match, 1 );
-                else if ( strtolower( substr( $match, 0, 4 ) ) == 'www.' )
-                    $url = 'http://' . $match;
-                else if ( strtolower( substr( $match, 0, 4 ) ) == 'ftp.' )
-                    $url = 'ftp://' . $match;
-                else if ( substr( $match, 0, 2 ) == '\\\\' )
-                    $url = 'file:///' . $match;
-                else if ( strpos( $match, ':' ) === false )
-                    $url = 'mailto:' . $match;
-                else
-                    $url = $match;
-                $url = htmlspecialchars( $url );
+                $url = htmlspecialchars( self::convertUrl( $url ) );
                 if ( $maxLength !== null ) {
                     $length = mb_strlen( $match );
                     if ( $length > $maxLength - 3 ) {
@@ -124,5 +112,21 @@ class System_Web_LinkLocator
         }
 
         return self::convertToRawHtml( $text );
+    }
+
+    public static function convertUrl( $url )
+    {
+        if ( $url[ 0 ] == '#' )
+            return WI_BASE_URL . '/client/index.php?item=' . substr( $url, 1 );
+        else if ( strtolower( substr( $url, 0, 4 ) ) == 'www.' )
+            return 'http://' . $url;
+        else if ( strtolower( substr( $url, 0, 4 ) ) == 'ftp.' )
+            return 'ftp://' . $url;
+        else if ( substr( $url, 0, 2 ) == '\\\\' )
+            return 'file:///' . $url;
+        else if ( strpos( $url, ':' ) === false )
+            return 'mailto:' . $url;
+        else
+            return $url;
     }
 }
