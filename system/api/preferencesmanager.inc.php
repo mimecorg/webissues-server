@@ -138,17 +138,4 @@ class System_Api_PreferencesManager extends System_Api_Base
         $serverManager = new System_Api_ServerManager();
         return $serverManager->getSetting( $key );
 	}
-
-    /**
-    * Return an array of associative arrays representing preferences.
-    */
-    public function getSettingsAsTable()
-    {
-        $result = array();
-
-        foreach ( array( 'folder_page_size', 'history_page_size', 'history_order', 'history_filter' ) as $key )
-            $result[] = array( 'set_key' => $key, 'set_value' => $this->getPreferenceOrSetting( $key ) );
-
-        return $result;
-    }
 }

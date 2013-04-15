@@ -141,15 +141,38 @@ class System_Api_ServerManager extends System_Api_Base
     */
     public function getSettingsAsTable()
     {
+        $defaults = array(
+            'time_zone' => date_default_timezone_get()
+        );
+
+        $allSettings = $this->getSettings();
+
+        $keys = array(
+            'language', 'time_zone',
+            'number_format', 'date_format', 'time_format', 'first_day_of_week',
+            'folder_page_size', 'history_page_size',
+            'hide_id_column', 'hide_empty_values', 'history_order', 'history_filter',
+            'default_format',
+            'comment_max_length', 'file_max_size'
+        );
+
+        $settings = array();
+
+        foreach ( $keys as $key ) {
+            if ( isset( $allSettings[ $key ] ) )
+                $settings[ $key ] = $allSettings[ $key ];
+            else if ( isset( $defaults[ $key ] ) )
+                $settings[ $key ] = $defaults[ $key ];
+            else
+                $settings[ $key ] = null;
+        }
+
+        $settings[ 'email_enabled' ] = ( $this->getSetting( 'email_engine' ) != null ) ? '1' : null;
+
         $result = array();
 
-        foreach ( array( 'comment_max_length', 'file_max_size' ) as $key )
-            $result[] = array( 'set_key' => $key, 'set_value' => $this->getSetting( $key ) );
-
-        foreach ( array( 'hide_id_column', 'hide_empty_values' ) as $key )
-            $result[] = array( 'set_key' => $key, 'set_value' => ( $this->getSetting( $key ) == 1 ) ? '1' : '0' );
-
-        $result[] = array( 'set_key' => 'email_enabled', 'set_value' => ( $this->getSetting( 'email_engine' ) != '' ) ? '1' : '0' );
+        foreach ( $settings as $key => $value )
+            $result[] = array( 'set_key' => $key, 'set_value' => $value );
 
         return $result;
     }

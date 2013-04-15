@@ -63,37 +63,15 @@ class Server_Actions
         $this->addRow( 'user_login', $sessionManager->login( $login, $password, $newPassword ) );
     }
 
-    public function getSettings( $language )
+    public function getSettings()
     {
         $this->principal->checkAuthenticated();
 
         $serverManager = new System_Api_ServerManager();
-        $settings = $serverManager->getSettingsAsTable();
-
-        foreach ( $settings as $row )
-            $this->addRow( 'settings', $row );
-
-        $locale = new System_Api_Locale();
-        $locale->setLanguage( $language );
-        $settings = $locale->getSettingsAsTable();
-
-        foreach ( $settings as $row )
-            $this->addRow( 'settings', $row );
-
-        $preferencesManager = new System_Api_PreferencesManager();
-        $settings = $preferencesManager->getSettingsAsTable();
-
-        foreach ( $settings as $row )
-            $this->addRow( 'settings', $row );
-    }
-
-    public function getLocale()
-    {
-        $this->principal->checkAuthenticated();
+        $this->addTable( 'settings', $serverManager->getSettingsAsTable() );
 
         $locale = new System_Api_Locale();
         $this->addTable( 'languages', $locale->getLanguagesAsTable() );
-        $this->addTable( 'formats', $locale->getFormatsAsTable() );
         $this->addTable( 'time_zones', $locale->getTimeZonesAsTable() );
     }
 
@@ -104,6 +82,7 @@ class Server_Actions
         $userManager = new System_Api_UserManager();
         $this->addTable( 'users', $userManager->getUsers() );
         $this->addTable( 'rights', $userManager->getRights() );
+        $this->addTable( 'preferences', $userManager->getPreferences() );
     }
 
     public function addUser( $login, $name, $password, $isTemp )
@@ -670,18 +649,6 @@ class Server_Actions
 
         $issueManager = new System_Api_IssueManager();
         $this->setId( $issueManager->findItem( $itemId ) );
-    }
-
-    public function listPreferences( $userId )
-    {
-        $this->principal->checkAdministratorOrSelf( $userId );
-
-        $userManager = new System_Api_UserManager();
-        $user = $userManager->getUser( $userId );
-
-        $preferencesManager = new System_Api_PreferencesManager( $user );
-
-        $this->addTable( 'preferences', $preferencesManager->getPreferencesAsTable() );
     }
 
     public function setPreference( $userId, $key, $newValue )

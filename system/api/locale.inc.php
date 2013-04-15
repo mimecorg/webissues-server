@@ -89,21 +89,6 @@ class System_Api_Locale
     }
 
     /**
-    * Return an array of associative arrays representing locale settings.
-    */
-    public function getSettingsAsTable()
-    {
-        $result = array();
-
-        foreach ( array( 'language', 'first_day_of_week', 'time_zone' ) as $key )
-            $result[] = array( 'set_key' => $key, 'set_value' => $this->getSetting( $key ) );
-        foreach ( array( 'number_format', 'date_format', 'time_format' ) as $key )
-            $result[] = array( 'set_key' => $key, 'set_value' => $this->getSettingFormat( $key ) );
-
-        return $result;
-    }
-
-    /**
     * Return value of the locale setting.
     * @param $key Name of the setting to return.
     * @return The value of the setting.
@@ -163,23 +148,6 @@ class System_Api_Locale
         $formats = System_Core_IniFile::parseRaw( '/common/data/formats.ini' );
 
         return $formats[ $key ];
-    }
-
-    /**
-    * Return an array of associative arrays representing available formats.
-    */
-    public function getFormatsAsTable()
-    {
-        $result = array();
-
-        foreach ( array( 'number_format', 'date_format', 'time_format' ) as $type ) {
-            $formats = $this->getAvailableFormats( $type );
-
-            foreach ( $formats as $key => $definition )
-                $result[] = array( 'form_type' => $type, 'form_key' => $key, 'form_def' => $definition );
-        }
-
-        return $result;
     }
 
     /**

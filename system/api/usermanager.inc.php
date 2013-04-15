@@ -261,6 +261,17 @@ class System_Api_UserManager extends System_Api_Base
         );
     }
 
+    public function getPreferences()
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $query = 'SELECT user_id, pref_key, pref_value FROM {preferences}';
+        if ( !$principal->isAdministrator() )
+            $query .= ' WHERE user_id = %d';
+
+        return $this->connection->queryTable( $query, $principal->getUserId() );
+    }
+
     /**
     * Check if the value is a valid user name. This is a helper method for
     * System_Api_Validator.
