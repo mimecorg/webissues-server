@@ -15,6 +15,9 @@
 <tr>
 <?php $grid->renderHeader( $this->tr( 'Name' ), 'name' ) ?>
 <?php $grid->renderHeader( $this->tr( 'Login' ), 'login' ) ?>
+<?php if ( $emailEngine ): ?>
+<?php $grid->renderHeader( $this->tr( 'Email' ), 'email' ) ?>
+<?php endif ?>
 <?php $grid->renderHeader( $this->tr( 'Access Level' ), 'access' ) ?>
 </tr>
 
@@ -34,6 +37,9 @@
 ?>
 </td>    
 <td><?php echo $user[ 'user_login' ] ?></td>
+<?php if ( $emailEngine ): ?>
+<td><?php echo $user[ 'user_email' ] ?></td>
+<?php endif ?>
 <td><?php echo $user[ 'access_level' ] ?></td>
 
 <?php $grid->renderRowClose() ?>

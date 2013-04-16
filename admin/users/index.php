@@ -46,6 +46,9 @@ class Admin_Users_Index extends System_Web_Component
         if ( ( $type !== null ) && !isset( $this->userTypes[ $type ] ) )
             throw new System_Core_Exception( 'Invalid user type' );
 
+        $serverManager = new System_Api_ServerManager();
+        $this->emailEngine = $serverManager->getSetting( 'email_engine' ) != '';
+
         $this->grid = new System_Web_Grid();
         $this->grid->setPageSize( 20 );
         $this->grid->setMergeParameters( array( 'id' => null ) );

@@ -108,6 +108,12 @@ class System_Api_PreferencesManager extends System_Api_Base
         if ( System_Core_Application::getInstance()->getSite()->getConfig( 'demo_mode' ) )
             System_Api_Principal::getCurrent()->checkAdministrator();
 
+        if ( $key == 'email' && $newValue != '' ) {
+            $query = 'SELECT user_id FROM {preferences} WHERE pref_key = %s AND pref_value = %s';
+            if ( $this->connection->queryScalar( $query, 'email', $newValue ) !== false )
+                throw new System_Api_Error( System_Api_Error::EmailAlreadyExists );
+        }
+
         if ( $oldValue == '' )
             $query = 'INSERT INTO {preferences} ( user_id, pref_key, pref_value ) VALUES ( %1d, %2s, %3s )';
         else if ( $newValue == '' )

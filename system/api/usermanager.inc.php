@@ -140,13 +140,15 @@ class System_Api_UserManager extends System_Api_Base
     */
     public function getUsersPage( $type, $orderBy, $limit, $offset )
     {
-        $query = 'SELECT user_id, user_login, user_name, user_access FROM {users}';
+        $query = 'SELECT u.user_id, u.user_login, u.user_name, u.user_access, p.pref_value AS user_email'
+            . ' FROM {users} AS u'
+            . ' LEFT OUTER JOIN {preferences} AS p ON p.user_id = u.user_id AND p.pref_key = %s';
         if ( $type == self::Active )
-            $query .= ' WHERE user_access <> %d';
+            $query .= ' WHERE u.user_access <> %d';
         else if ( $type == self::Disabled )
-            $query .= ' WHERE user_access = %d';
+            $query .= ' WHERE u.user_access = %d';
 
-        return $this->connection->queryPage( $query, $orderBy, $limit, $offset, System_Const::NoAccess );
+        return $this->connection->queryPage( $query, $orderBy, $limit, $offset, 'email', System_Const::NoAccess );
     }
 
     /**
@@ -155,9 +157,10 @@ class System_Api_UserManager extends System_Api_Base
     public function getUsersColumns()
     {
         return array(
-            'name' => 'user_name COLLATE LOCALE',
-            'login' => 'user_login COLLATE LOCALE',
-            'access' => 'user_access'
+            'name' => 'u.user_name COLLATE LOCALE',
+            'login' => 'u.user_login COLLATE LOCALE',
+            'email' => 'p.pref_value COLLATE LOCALE',
+            'access' => 'u.user_access'
             );
     }
 

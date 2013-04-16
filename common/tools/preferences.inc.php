@@ -64,8 +64,8 @@ class Common_Tools_Preferences extends System_Web_Component
             $values = $this->validatePreferences( $fields );
 
             if ( $this->form->isSubmittedWith( 'ok' ) && !$this->form->hasErrors() ) {
-                $this->submitPreferences( $this->user, $values );
-                $this->response->redirect( $breadcrumbs->getParentUrl() );
+                if ( $this->submitPreferences( $this->user, $values ) )
+                    $this->response->redirect( $breadcrumbs->getParentUrl() );
             }
         } else {
             $this->loadPreferences( $this->user, $fields );
@@ -128,9 +128,14 @@ class Common_Tools_Preferences extends System_Web_Component
     private function submitPreferences( $user, $values )
     {
         $preferencesManager = new System_Api_PreferencesManager( $user );
-
-        foreach ( $values as $key => $value )
-            $preferencesManager->setPreference( $key, $value );
+        try {
+            foreach ( $values as $key => $value )
+                $preferencesManager->setPreference( $key, $value );
+            return true;
+        } catch ( System_Api_Error $ex ) {
+            $this->form->getErrorHelper()->handleError( 'email', $ex );
+            return false;
+        }
     }
 
     private function addNotificationFields( &$fields )
