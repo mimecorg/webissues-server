@@ -26,9 +26,9 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Limits' ) ?></legend>
 
-<p><?php echo $this->tr( 'The maximum length (in characters) of comments and the maximum size (in bytes) of attached files that are allowed.' ) ?></p>
+<p><?php echo $this->tr( 'The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.' ) ?></p>
 
-<?php $form->renderSelect( $this->tr( 'Maximum comment length:' ), 'commentMaxLength', $commentOptions, array( 'style' => 'width: 10em;' ) ) ?>
+<?php $form->renderSelect( $this->tr( 'Maximum text length:' ), 'commentMaxLength', $commentOptions, array( 'style' => 'width: 10em;' ) ) ?>
 <?php $form->renderSelect( $this->tr( 'Maximum attachment size:' ), 'fileMaxSize', $fileOptions, array( 'style' => 'width: 10em;' ) ) ?>
 
 </fieldset>
