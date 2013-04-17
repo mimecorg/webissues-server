@@ -72,8 +72,8 @@ class Client_Projects_Description extends System_Web_Component
         $breadcrumbs->initialize( Common_Breadcrumbs::Project, $this->project );
 
         $this->formatOptions = array(
-            System_Const::PlainText => $this->tr( 'Plain text' ),
-            System_Const::TextWithMarkup => $this->tr( 'Text with markup' )
+            System_Const::PlainText => $this->tr( 'Plain Text' ),
+            System_Const::TextWithMarkup => $this->tr( 'Text with Markup' )
         );
 
         $this->form = new System_Web_Form( 'projects', $this );

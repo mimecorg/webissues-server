@@ -39,8 +39,8 @@ class Common_Tools_Editing extends System_Web_Component
         }
 
         $formats = array(
-            0 => $this->tr( 'Plain text' ),
-            1 => $this->tr( 'Text with markup' )
+            System_Const::PlainText => $this->tr( 'Plain Text' ),
+            System_Const::TextWithMarkup => $this->tr( 'Text with Markup' )
         );
 
         $this->formatOptions = array();

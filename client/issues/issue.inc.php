@@ -113,8 +113,8 @@ class Client_Issues_Issue extends System_Web_Component
 
         if ( $this->showDescription ) {
             $this->formatOptions = array(
-                0 => $this->tr( 'Plain text' ),
-                1 => $this->tr( 'Text with markup' )
+                System_Const::PlainText => $this->tr( 'Plain Text' ),
+                System_Const::TextWithMarkup => $this->tr( 'Text with Markup' )
             );
 
             $this->form->addField( 'descriptionText', $oldDescription );

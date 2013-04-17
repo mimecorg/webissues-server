@@ -45,8 +45,8 @@ class Client_Projects_AddProject extends System_Web_Component
         $defaultFormat = $preferencesManager->getPreferenceOrSetting( 'default_format' );
 
         $this->formatOptions = array(
-            System_Const::PlainText => $this->tr( 'Plain text' ),
-            System_Const::TextWithMarkup => $this->tr( 'Text with markup' )
+            System_Const::PlainText => $this->tr( 'Plain Text' ),
+            System_Const::TextWithMarkup => $this->tr( 'Text with Markup' )
         );
 
         $this->form = new System_Web_Form( 'projects', $this );
