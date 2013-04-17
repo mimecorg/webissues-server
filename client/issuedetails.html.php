@@ -147,12 +147,12 @@
         echo $this->tr( 'Name' ) . ': "' . $change[ 'value_new' ] . '"';
         break;
     case System_Const::IssueRenamed:
-        echo $this->tr( 'Name' ) . ': "' . $change[ 'value_old' ] . '" &rarr; "' . $change[ 'value_new' ] . '"';
+        echo $this->tr( 'Name' ) . ': "' . $change[ 'value_old' ] . '" &raquo; "' . $change[ 'value_new' ] . '"';
         break;
     case System_Const::ValueChanged:
         $from = ( $change[ 'value_old' ] == '' ) ? $this->tr( 'empty' ) : '"' . $change[ 'value_old' ] . '"';
         $to = ( $change[ 'value_new' ] == '' ) ? $this->tr( 'empty' ) : '"' . $change[ 'value_new' ] . '"';
-        echo $change[ 'attr_name' ] . ': ' . $from . ' &rarr; ' . $to;
+        echo $change[ 'attr_name' ] . ': ' . $from . ' &raquo; ' . $to;
         break;
     endswitch;
 ?>
