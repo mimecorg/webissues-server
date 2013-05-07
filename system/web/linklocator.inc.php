@@ -66,7 +66,7 @@ class System_Web_LinkLocator
                 }
                 $result[] = htmlspecialchars( $match );
             } else {
-                $url = htmlspecialchars( self::convertUrl( $url ) );
+                $url = htmlspecialchars( self::convertUrl( $match ) );
                 if ( $maxLength !== null ) {
                     $length = mb_strlen( $match );
                     if ( $length > $maxLength - 3 ) {
