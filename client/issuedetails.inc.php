@@ -79,7 +79,7 @@ class Client_IssueDetails extends System_Web_Component
             if ( $this->descr[ 'descr_format' ] == System_Const::TextWithMarkup )
                 $this->descr[ 'descr_text' ] = System_Web_MarkupProcessor::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
             else
-                $this->descr[ 'descr_text' ] = System_Web_LinkLocator::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
+                $this->descr[ 'descr_text' ] = System_Web_LinkLocator::convertToRawHtml( $this->descr[ 'descr_text' ] );
         }
 
         $historyProvider = new System_Api_HistoryProvider();
@@ -136,7 +136,7 @@ class Client_IssueDetails extends System_Web_Component
                     if ( $item[ 'comment_format' ] == System_Const::TextWithMarkup )
                         $item[ 'comment_text' ] = System_Web_MarkupProcessor::convertToRawHtml( $item[ 'comment_text' ], $prettyPrint );
                     else
-                        $item[ 'comment_text' ] = System_Web_LinkLocator::convertToRawHtml( $item[ 'comment_text' ], $prettyPrint );
+                        $item[ 'comment_text' ] = System_Web_LinkLocator::convertToRawHtml( $item[ 'comment_text' ] );
                 }
                 if ( isset( $item[ 'file_descr' ] ) )
                     $item[ 'file_descr' ] = System_Web_LinkLocator::convertToRawHtml( $item[ 'file_descr' ] );
