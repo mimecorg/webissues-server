@@ -1,13 +1,7 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
 <h1>
-<?php
-    if ( $baseUrl != '' ):
-        echo $this->link( $baseUrl . 'admin/register/index.php', $this->tr( 'Registration Requests' ) );
-    else:
-        echo $this->tr( 'Registration Requests' );
-    endif;
-?>
+<?php echo $this->mailLink( '/admin/register/index.php', $this->tr( 'Registration Requests' ) ); ?>
 </h1>
 
 <p><?php echo $this->tr( 'You have the following new registration requests pending for approval:' ) ?></p>

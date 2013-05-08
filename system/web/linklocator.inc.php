@@ -30,7 +30,7 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 *
 * Also the special HTML characters are converted to entities.
 */
-class System_Web_LinkLocator
+class System_Web_LinkLocator extends System_Web_Base
 {
     /**
     * Convert text with links to HTML.
@@ -116,9 +116,15 @@ class System_Web_LinkLocator
 
     public static function convertUrl( $url )
     {
-        if ( $url[ 0 ] == '#' )
-            return WI_BASE_URL . '/client/index.php?item=' . substr( $url, 1 );
-        else if ( strtolower( substr( $url, 0, 4 ) ) == 'www.' )
+        if ( $url[ 0 ] == '#' ) {
+            $baseUrl = self::getBaseUrl();
+            if ( $baseUrl != '' )
+                return $baseUrl . '/client/index.php?item=' . substr( $url, 1 );
+            else
+                return '#item' . substr( $url, 1 );
+        }
+
+        if ( strtolower( substr( $url, 0, 4 ) ) == 'www.' )
             return 'http://' . $url;
         else if ( strtolower( substr( $url, 0, 4 ) ) == 'ftp.' )
             return 'ftp://' . $url;

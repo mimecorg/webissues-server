@@ -2,12 +2,8 @@
 
 <h1>
 <?php
-    if ( $baseUrl != '' ):
-        echo $this->link( $this->appendQueryString( $baseUrl . 'client/index.php', array( 'folder' => $folderId, 'view' => $linkViewId ) ),
-            $projectName . ' - ' . $folderName . ' - ' . $viewName );
-    else:
-        echo $projectName . ' - ' . $folderName . ' - ' . $viewName;
-    endif;
+    echo $this->mailLink( $this->appendQueryString( '/client/index.php', array( 'folder' => $folderId, 'view' => $linkViewId ) ),
+        $projectName . ' - ' . $folderName . ' - ' . $viewName );
 ?>
 </h1>
 
@@ -22,8 +18,8 @@
 <?php foreach ( $columns as $column => $name ): ?>
 <td>
 <?php
-    if ( $column == System_Api_Column::Name && $baseUrl != '' ):
-        echo $this->link( $this->appendQueryString( $baseUrl . 'client/index.php', array( 'issue' => $issueId ) ), $issue[ $name ] );
+    if ( $column == System_Api_Column::Name ):
+        echo $this->mailLink( $this->appendQueryString( '/client/index.php', array( 'issue' => $issueId ) ), $issue[ $name ] );
     else:
         echo $issue[ $name ];
     endif;
@@ -37,14 +33,10 @@
 <?php foreach ( $details as $issueId => $issue ): ?>
 
 <h2>
-<?php
-    if ( $baseUrl != '' ):
-        echo $this->link( $this->appendQueryString( $baseUrl . 'client/index.php', array( 'issue' => $issueId ) ), $issue[ 'issue_name' ] );
-    else:
-        echo $issue[ 'issue_name' ];
-    endif;
-?>
+<?php echo $this->mailLink( $this->appendQueryString( '/client/index.php', array( 'issue' => $issueId ) ), $issue[ 'issue_name' ] ); ?>
 </h2>
+
+<div class="sub-pane-wrapper">
 
 <table class="sub-pane-layout">
 <tr>
@@ -94,6 +86,18 @@
 <?php endif ?>
 </tr>
 
+<?php if ( !empty( $issue[ 'description' ] ) ): ?>
+<tr>
+<td colspan="2" class="bottom-sub-pane">
+
+<h3><?php echo $this->tr( 'Description' ) ?></h3>
+
+<div class="comment-text"><?php echo $issue[ 'description' ][ 'descr_text' ] ?></div>
+
+</td>
+</tr>
+<?php endif ?>
+
 <?php if ( !empty( $issue[ 'history' ] ) ): ?>
 
 <tr>
@@ -104,6 +108,8 @@
 <?php
     foreach ( $issue[ 'history' ] as $id => $item ):
 ?>
+
+<div class="history-item">
 
 <h4>
 <?php echo  $item[ 'created_date' ] . ' &mdash; ' . $item[ 'created_by' ] ?>
@@ -152,10 +158,7 @@
 
 <div class="attachment">
 <?php
-    if ( $baseUrl != '' )
-        echo $this->link( $this->appendQueryString( $baseUrl . 'client/issues/getattachment.php', array( 'id' => $id ) ), $item[ 'file_name' ] ) . ' (' . $item[ 'file_size' ] . ')';
-    else
-        echo $item[ 'file_name' ] . ' (' . $item[ 'file_size' ] . ')';
+    echo $this->mailLink( $this->appendQueryString( '/client/issues/getattachment.php', array( 'id' => $id ) ), $item[ 'file_name' ] ) . ' (' . $item[ 'file_size' ] . ')';
     if ( $item[ 'file_descr' ] != '' ):
         echo ' &mdash; ' . $item[ 'file_descr' ];
     endif;
@@ -180,7 +183,11 @@
 <?php
     break;
     endswitch;
+?>
 
+</div>
+
+<?php
     endforeach;
 ?>
 
@@ -190,6 +197,8 @@
 <?php endif ?>
 
 </table>
+
+</div>
 
 <?php endforeach ?>
 

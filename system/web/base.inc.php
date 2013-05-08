@@ -32,6 +32,8 @@ class System_Web_Base
     protected $response = null;
     protected $translator = null;
 
+    private static $baseUrl = null;
+
     /**
     * Constructor.
     */
@@ -259,5 +261,37 @@ class System_Web_Base
         }
 
         return $text;
+    }
+
+    /**
+    * Create an HTML link if the server URL for emails is configured.
+    */
+    protected function mailLink( $url, $text, $attributes = array() )
+    {
+        $baseUrl = self::getBaseUrl();
+        if ( $baseUrl != '' )
+            return $this->link( $baseUrl . $url, $text, $attributes );
+        else
+            return $text;
+    }
+
+    /**
+    * Return WI_BASE_URL if available, otherwise the server URL for emails.
+    */
+    protected static function getBaseUrl()
+    {
+        if ( WI_BASE_URL != '' )
+            return WI_BASE_URL;
+
+        if ( self::$baseUrl === null ) {
+            $serverManager = new System_Api_ServerManager();
+            $baseUrl = $serverManager->getSetting( 'base_url' );
+            if ( $baseUrl != '' )
+                self::$baseUrl = rtrim( $baseUrl, '/' );
+            else
+                self::$baseUrl = '';
+        }
+
+        return self::$baseUrl;
     }
 }
