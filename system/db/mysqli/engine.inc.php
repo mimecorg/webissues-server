@@ -193,23 +193,29 @@ class System_Db_Mysqli_Engine implements System_Db_IEngine
             case 'version':
                 return $this->connection->server_info ;
             case 'have_innodb':
-                return $this->getVariable( $key ) == 'YES';
+                return $this->checkEngineEnabled( 'InnoDB' );
             default:
                 return null;
         }
     }
 
-    private function getVariable( $key )
+    private function checkEngineEnabled( $engine )
     {
-        $query = "SHOW VARIABLES LIKE '$key'";
-        $rs = $this->connection->query( $query );
-        if ( !$rs )
-            return false;
-        $row = $rs->fetch_assoc();
-        $rs->close();
-        if ( $row == null )
-            return null;
-        return $row[ 'Value' ];
+        $result = false;
+
+        if ( $rs = $this->connection->query( 'SHOW ENGINES' ) ) {
+            while ( $row = $rs->fetch_assoc() ) {
+                if ( $row[ 'Engine' ] == $engine ) {
+                    if ( $row[ 'Support' ] == 'YES' || $row[ 'Support' ] == 'DEFAULT' )
+                        $result = true;
+                    break;
+                }
+            }
+
+            $rs->close();
+        }
+
+        return $result;
     }
 
     public function beginTransaction( $level, $table )
