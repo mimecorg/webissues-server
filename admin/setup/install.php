@@ -35,6 +35,7 @@ class Admin_Setup_Install extends System_Web_Component
             $locale = new System_Api_Locale();
             $this->languageOptions = $locale->getAvailableLanguages();
             $this->engineOptions = $this->getDatabaseEngines();
+            $this->modeOptions = $this->getModeOptions();
             $this->dataOptions = $this->getDataOptions();
 
             $this->form = new System_Web_Form( 'install', $this );
@@ -45,12 +46,12 @@ class Admin_Setup_Install extends System_Web_Component
             $this->form->addPersistentField( 'database', 'webissues' );
             $this->form->addPersistentField( 'user', 'webissues' );
             $this->form->addPersistentField( 'password' );
+            $this->form->addPersistentField( 'mode', 'new' );
             $this->form->addPersistentField( 'prefix' );
             $this->form->addPersistentField( 'serverName' );
             $this->form->addPersistentField( 'adminPassword' );
             $this->form->addPersistentField( 'adminConfirm' );
             $this->form->addPersistentField( 'initialData', 'default' );
-            $this->form->addPersistentField( 'prefix085' );
 
             if ( $this->form->loadForm() )
                 $this->processForm();
@@ -135,7 +136,7 @@ class Admin_Setup_Install extends System_Web_Component
                     break;
                 case 'server':
                     if ( $this->openConnection() )
-                        $this->testImport();
+                        $this->page = 'new_site';
                     break;
             }
         }
@@ -186,6 +187,7 @@ class Admin_Setup_Install extends System_Web_Component
                 $this->form->addTextRule( 'database', System_Const::NameMaxLength );
                 $this->form->addTextRule( 'user', System_Const::LoginMaxLength, System_Api_Parser::AllowEmpty );
                 $this->form->addTextRule( 'password', System_Const::PasswordMaxLength, System_Api_Parser::AllowEmpty );
+                $this->form->addItemsRule( 'mode', $this->modeOptions );
                 $this->form->addTextRule( 'prefix', System_Const::NameMaxLength, System_Api_Parser::AllowEmpty );
                 break;
 
@@ -210,6 +212,7 @@ class Admin_Setup_Install extends System_Web_Component
             if ( $this->serverName === null )
                 $this->serverName = $this->tr( 'My WebIssues Server' );
 
+            $this->modeOptions = $this->getModeOptions();
             $this->dataOptions = $this->getDataOptions();
 
             return true;
@@ -240,16 +243,23 @@ class Admin_Setup_Install extends System_Web_Component
     {
         $engines = array();
 
-        if ( function_exists( 'mysqli_connect' ) )
-            $engines[ 'mysqli' ] = 'MySQL';
+        $engines[ 'mysqli' ] = 'MySQL';
+        $engines[ 'pgsql' ] = 'PostgreSQL';
 
-        if ( function_exists( 'pg_connect' ) )
-            $engines[ 'pgsql' ] = 'PostgreSQL';
-
-        if ( @class_exists( 'COM', false ) )
+        if ( strtoupper( substr( PHP_OS, 0, 3 ) ) == 'WIN' )
             $engines[ 'mssql' ] = 'SQL Server';
 
         return $engines;
+    }
+
+    private function getModeOptions()
+    {
+        $options = array();
+
+        $options[ 'new' ] = $this->tr( 'Install a new server' );
+        $options[ 'existing' ] = $this->tr( 'Use an existing server' );
+
+        return $options;
     }
 
     private function getDataOptions()
@@ -258,13 +268,17 @@ class Admin_Setup_Install extends System_Web_Component
 
         $options[ '' ] = $this->tr( 'Do not install any issue types' );
         $options[ 'default' ] = $this->tr( 'Install the default set of issue types' );
-        $options[ 'import' ] = $this->tr( 'Import data from WebIssues Server 0.8.5' );
 
         return $options;
     }
 
     private function openConnection()
     {
+        if ( !$this->checkEngine() ) {
+            $this->page = 'connection';
+            return false;
+        }
+
         $connection = System_Core_Application::getInstance()->getConnection();
 
         try {
@@ -288,9 +302,12 @@ class Admin_Setup_Install extends System_Web_Component
         $connection = System_Core_Application::getInstance()->getConnection();
 
         try {
-            if ( $this->checkPrerequisites() ) {
+            if ( !$this->checkPrerequisites() )
+                return;
+
+            if ( $this->mode == 'existing' ) {
                 if ( !$connection->checkTableExists( 'server' ) ) {
-                    $this->page = 'server';
+                    $this->form->setError( 'mode', $this->tr( 'The WebIssues tables were not found in the database. Make sure the table prefix is correct and try again.' ) );
                 } else {
                     $serverManager = new System_Api_ServerManager();
                     $this->server = $serverManager->getServer();
@@ -299,12 +316,17 @@ class Admin_Setup_Install extends System_Web_Component
                     $current = version_compare( $version, WI_DATABASE_VERSION );
 
                     if ( version_compare( $version, '1.0' ) < 0 || $current > 0 ) {
-                        $this->form->setError( 'connection', $this->tr( 'The existing version of the database cannot be used with this version of WebIssues Server.' ) );
+                        $this->form->setError( 'mode', $this->tr( 'The existing version of the database cannot be used with this version of WebIssues Server.' ) );
                     } else {
                         $this->update = ( $current < 0 );
                         $this->page = 'existing_site';
                     }
                 }
+            } else {
+                if ( $connection->checkTableExists( 'server' ) )
+                    $this->form->setError( 'mode', $this->tr( 'The WebIssues tables already exist in the database. Drop them first or use a different table prefix and try again.' ) );
+                else
+                    $this->page = 'server';
             }
         } catch ( System_Db_Exception $e ) {
             $connection->close();
@@ -314,35 +336,31 @@ class Admin_Setup_Install extends System_Web_Component
         }
     }
 
-    private function testImport()
+    private function checkEngine()
     {
-        $connection = System_Core_Application::getInstance()->getConnection();
-
-        try {
-            if ( $this->initialData == 'import' ) {
-                $connection->setPrefix( $this->prefix085 );
-
-                if ( !$connection->checkTableExists( 'server' ) ) {
-                    $this->form->setError( 'prefix085', $this->tr( 'No data tables were found in the database.' ) );
-                } else {
-                    $serverManager = new System_Api_ServerManager();
-                    $this->server = $serverManager->getServer();
-
-                    if ( $this->server[ 'db_version' ] == '0.8.5' ) {
-                        $this->page = 'new_site';
-                    } else {
-                        $this->form->setError( 'prefix085', $this->tr( 'The existing version of the database cannot be imported.' ) );
-                    }
+        switch ( $this->engine ) {
+            case 'mysqli':
+                if ( !function_exists( 'mysqli_connect' ) ) {
+                    $this->form->setError( 'engine', $this->tr( 'The \'%1\' extension is missing or disabled.', null, 'mysqli' ) );
+                    return false;
                 }
-            } else {
-                $this->page = 'new_site';
-            }
-        } catch ( System_Db_Exception $e ) {
-            $connection->close();
+                break;
 
-            $this->page = 'connection';
-            $this->form->setError( 'connection', $this->tr( 'Could not retrieve information from the database.' ) );
+            case 'pgsql':
+                if ( !function_exists( 'pg_connect' ) ) {
+                    $this->form->setError( 'engine', $this->tr( 'The \'%1\' extension is missing or disabled.', null, 'pgsql' ) );
+                    return false;
+                }
+
+            case 'mssql':
+                if ( !@class_exists( 'COM', false ) ) {
+                    $this->form->setError( 'engine', $this->tr( 'The \'%1\' extension is missing or disabled.', null, 'com_dotnet' ) );
+                    return false;
+                }
+                break;
         }
+
+        return true;
     }
 
     private function checkPrerequisites()
@@ -390,6 +408,8 @@ class Admin_Setup_Install extends System_Web_Component
 
     private function installDatabase()
     {
+        set_time_limit( 300 );
+
         $connection = System_Core_Application::getInstance()->getConnection();
 
         try {
@@ -401,13 +421,6 @@ class Admin_Setup_Install extends System_Web_Component
             switch ( $this->initialData ) {
                 case 'default':
                     $installer->installDefaultTypes();
-                    break;
-
-                case 'import':
-                    $installer->importData( $this->prefix085 );
-
-                    $issueManager = new System_Api_IssueManager();
-                    $this->hasFileSystemFiles = $issueManager->checkFileSystemFiles();
                     break;
             }
 
@@ -435,6 +448,8 @@ class Admin_Setup_Install extends System_Web_Component
 
         if ( $version == WI_DATABASE_VERSION )
             return true;
+
+        set_time_limit( 300 );
 
         $connection = System_Core_Application::getInstance()->getConnection();
 

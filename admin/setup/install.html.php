@@ -72,6 +72,15 @@ case 'connection': ?>
 </fieldset>
 
 <fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Mode' ) ?></legend>
+
+<p><?php echo $this->tr( 'Select if you want to install a new server or recreate the configuration file for an existing server:' ) ?></p>
+
+<?php $form->renderRadioGroup( 'mode', $modeOptions ) ?>
+
+</fieldset>
+
+<fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Table Prefix' ) ?></legend>
 
 <p><?php echo $this->tr( 'You can enter an optional prefix for table names. This allows installing multiple servers using the same database.' ) ?></p>
@@ -112,10 +121,6 @@ case 'server': ?>
 
 <?php $form->renderRadioGroup( 'initialData', $dataOptions ) ?>
 
-<p><?php echo $this->tr( 'When importing data, enter an optional prefix for source table names.' ) ?></p>
-
-<?php $form->renderText( $this->tr( 'Source prefix:' ), 'prefix085', array( 'size' => 40 ) ) ?>
-
 </fieldset>
 
 <?php break;
@@ -123,21 +128,23 @@ case 'new_site': ?>
 
 <p><?php echo $this->tr( 'The new server will be installed in the selected database.' ) ?></p>
 
-<?php if ( $initialData == 'default' ): ?>
+<fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Server Information' ) ?></legend>
 
-<p><?php echo $this->tr( 'The default set of issue types will be created.' ) ?></p>
+<table class="info-list info-align">
+<tr>
+<td><?php echo $this->tr( 'Server name:' ) ?></td>
+<td><?php echo $serverName ?></td>
+</tr>
+<tr>
+<td><?php echo $this->tr( 'Initial configuration:' ) ?></td>
+<td><?php echo $initialData == 'default' ? $this->tr( 'Default issue types' ) : $this->tr( 'No issue types' ) ?></td>
+</tr>
+</table>
 
-<?php elseif ( $initialData == 'import' ): ?>
+</fieldset>
 
-<p><?php echo $this->tr( 'Existing data will be imported from the following server:' ) ?></p>
-
-<?php $this->insertComponent( 'Admin_Info_Server' ) ?>
-
-<?php else: ?>
-
-<p><?php echo $this->tr( 'No issue types will be created on this server.' ) ?></p>
-
-<?php endif ?>
+<?php $this->insertComponent( 'Admin_Info_Database', array( $host, $database, $prefix ) ) ?>
 
 <?php break;
 case 'existing_site': ?>
@@ -149,6 +156,8 @@ case 'existing_site': ?>
 <?php endif ?>
 
 <?php $this->insertComponent( 'Admin_Info_Server' ) ?>
+
+<?php $this->insertComponent( 'Admin_Info_Database', array( $host, $database, $prefix ) ) ?>
 
 <?php break;
 endswitch ?>

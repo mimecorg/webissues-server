@@ -39,6 +39,8 @@ case 'update': ?>
 
 <?php $this->insertComponent( 'Admin_Info_Server' ) ?>
 
+<?php $this->insertComponent( 'Admin_Info_Database' ) ?>
+
 <?php break;
 endswitch ?>
 

@@ -112,6 +112,8 @@ class Admin_Setup_Update extends System_Web_Component
 
     private function updateDatabase()
     {
+        set_time_limit( 300 );
+
         $connection = System_Core_Application::getInstance()->getConnection();
 
         try {
