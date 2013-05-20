@@ -87,8 +87,8 @@ class System_Api_ProjectManager extends System_Api_Base
         $query .= $principal->isAdministrator() ? ' %3d AS project_access' : ' r.project_access';
         $query .= ' FROM {projects} AS p';
         if ( !$principal->isAdministrator() )
-            $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
-        $query .= ' WHERE project_id = %1d';
+            $query .= ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %2d';
+        $query .= ' WHERE p.project_id = %1d';
 
         if ( !( $project = $this->connection->queryRow( $query, $projectId, $principal->getUserId(), System_Const::AdministratorAccess ) ) )
             throw new System_Api_Error( System_Api_Error::UnknownProject );
