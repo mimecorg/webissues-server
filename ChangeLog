@@ -1,3 +1,15 @@
+1.1-beta1 (2013-05-21)
+    * added issue and project descriptions
+    * added text with markup format
+    * handle links in email notifications
+    * fixed detecting InnoDB in latest versions of MySQL
+    * increased timeout in installer and updater
+
+1.0.5 (2013-03-12)
+    * fixed truncating entities and recognizing links
+    * fixed the no comments/attachments message
+    * do not auto-focus the view combo box
+
 1.0.4-1 (2012-12-14)
     * fixed installing default server settings (bug #739)
     * allow updating the database during the installation
