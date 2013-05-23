@@ -351,6 +351,7 @@ class Admin_Setup_Install extends System_Web_Component
                     $this->form->setError( 'engine', $this->tr( 'The \'%1\' extension is missing or disabled.', null, 'pgsql' ) );
                     return false;
                 }
+                break;
 
             case 'mssql':
                 if ( !@class_exists( 'COM', false ) ) {
