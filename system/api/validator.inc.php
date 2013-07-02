@@ -616,8 +616,14 @@ class System_Api_Validator
                     throw new System_Api_Error( System_Api_Error::InvalidSetting );
                 break;
 
+            case 'inbox_engine':
+                if ( $value != '' && $value != 'imap' && $value != 'pop3' )
+                    throw new System_Api_Error( System_Api_Error::InvalidSetting );
+                break;
+
             case 'email_from':
             case 'register_notify_email':
+            case 'inbox_email':
                 if ( $value != '' )
                     $this->checkEmailAddress( $value );
                 break;
@@ -625,14 +631,20 @@ class System_Api_Validator
             case 'smtp_server':
             case 'smtp_user':
             case 'smtp_password':
+            case 'inbox_server':
+            case 'inbox_user':
+            case 'inbox_password':
+            case 'inbox_mailbox':
                 break;
 
             case 'smtp_port':
+            case 'inbox_port':
                 if ( $value != '' )
                     $this->checkDecimalNumber( $value, 0, 1, 65535 );
                 break;
 
             case 'smtp_encryption':
+            case 'inbox_encryption':
                 if ( $value != '' && $value != 'ssl' && $value != 'tls' )
                     throw new System_Api_Error( System_Api_Error::InvalidSetting );
                 break;
@@ -640,6 +652,21 @@ class System_Api_Validator
             case 'base_url':
                 if ( $value != '' )
                     $this->checkBaseUrl( $value );
+                break;
+
+            case 'inbox_no_validate':
+            case 'inbox_leave_messages':
+            case 'inbox_allow_external':
+            case 'inbox_map_folder':
+            case 'inbox_respond':
+                if ( $value != '' )
+                    $this->checkDecimalNumber( $value, 0, 0, 1 );
+                break;
+
+            case 'inbox_robot':
+            case 'inbox_default_folder':
+                if ( $value != '' )
+                    $this->checkDecimalNumber( $value, 0, 1 );
                 break;
 
             default:
