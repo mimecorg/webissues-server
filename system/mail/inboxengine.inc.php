@@ -51,39 +51,23 @@ class System_Mail_InboxEngine
     */
     public function setSettings( $settings )
     {
-        $address = $settings[ 'inbox_server' ] . ':' . $settings[ 'inbox_port' ];
+        $address = $settings[ 'inbox_server' ] . ':' . $settings[ 'inbox_port' ] . '/' . $settings[ 'inbox_engine' ];
 
-        switch ( $settings[ 'inbox_engine' ] )
-        {
-            case 'imap':
-                $address .= '/imap';
-                break;
+        if ( !empty( $settings[ 'inbox_encryption' ] ) )
+            $address .= '/' . $settings[ 'inbox_encryption' ];
 
-            case 'pop3':
-                $address .= '/pop3';
-                break;
-
-            default:
-                throw new System_Core_Exception( "Unknown inbox engine '" . $settings[ 'inbox_engine' ] . "'" );
-        }
-
-        switch ( $settings[ 'inbox_encryption' ] )
-        {
-            case 'ssl':
-                $address .= '/ssl';
-                break;
-
-            case 'tls':
-                $address .= '/tls';
-                break;
-        }
-
-        if ( $settings[ 'inbox_no_validate' ] == 1 )
+        if ( !empty( $settings[ 'inbox_no_validate' ] ) )
             $adrress .= '/novalidate-cert';
 
-        $address = '{' . $address . '}' . imap_utf7_encode( $settings[ 'inbox_mailbox' ] );
+        $address = '{' . $address . '}';
+        
+        if ( !empty( $setings[ 'inbox_mailbox' ] ) )
+            $address .= imap_utf7_encode( $settings[ 'inbox_mailbox' ] );
 
-        $this->mailbox = @imap_open( $address, $settings[ 'inbox_user' ], $settings[ 'inbox_password' ], 0, 1 );
+        if ( !empty( $settings[ 'inbox_user' ] ) )
+            $this->mailbox = @imap_open( $address, $settings[ 'inbox_user' ], $settings[ 'inbox_password' ], 0, 1 );
+        else
+            $this->mailbox = @imap_open( $address, '', '', 0, 1 );
 
         if ( $this->mailbox === false )
             $this->handleError();
@@ -144,13 +128,19 @@ class System_Mail_InboxEngine
 
         $result[ 'subject' ] = imap_utf8( $headers->subject );
 
-        foreach ( $headers->to as $addr )
-            $result[ 'to' ][] = $this->convertAddress( $addr );
+        $result[ 'to' ] = array();
+        if ( !empty( $headers->to ) ) {
+            foreach ( $headers->to as $addr )
+                $result[ 'to' ][] = $this->convertAddress( $addr );
+        }
 
-        foreach ( $headers->cc as $addr )
-            $result[ 'cc' ][] = $this->convertAddress( $addr );
+        $result[ 'cc' ] = array();
+        if ( !empty( $headers->cc ) ) {
+            foreach ( $headers->cc as $addr )
+                $result[ 'cc' ][] = $this->convertAddress( $addr );
+        }
 
-        if ( isset( $headers->reply_to[ 0 ] ) )
+        if ( !empty( $headers->reply_to[ 0 ] ) )
             $result[ 'reply_to' ] = $this->convertAddress( $headers->reply_to[ 0 ] );
 
         return $result;
@@ -226,11 +216,19 @@ class System_Mail_InboxEngine
     {
         if ( $structure->ifparameters ) {
             foreach ( $structure->parameters as $param ) {
-                if ( strtoupper( $param->attribute == $name ) )
+                if ( strtoupper( $param->attribute ) == $name )
                     return $param->value;
             }
         }
         return null;
+    }
+
+    /**
+    * Convert plain text part to UTF-8 text.
+    */
+    public function convertToUtf8( $part )
+    {
+        return @mb_convert_encoding( $part[ 'body' ], 'UTF-8', $part[ 'charset' ] );
     }
 
     /**

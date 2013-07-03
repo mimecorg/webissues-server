@@ -307,6 +307,24 @@ class System_Api_UserManager extends System_Api_Base
     }
 
     /**
+    * Get the user with specified email.
+    * @param $email Email of the user.
+    * @return Array containing the user.
+    */
+    public function getUserByEmail( $email )
+    {
+        $query = 'SELECT u.user_id, u.user_login, u.user_name, u.user_access'
+            . ' FROM {users} AS u'
+            . ' JOIN {preferences} AS p ON p.user_id = u.user_id AND p.pref_key = %s'
+            . ' WHERE p.pref_value = %s AND u.user_access > %d';
+
+        if ( !( $user = $this->connection->queryRow( $query, 'email', $email, System_Const::NoAccess ) ) )
+            throw new System_Api_Error( System_Api_Error::UnknownUser );
+
+        return $user;
+    }
+
+    /**
     * Create a new user. An error is thrown if a user with given login or name
     * already exists. The user has System_Const::NormalAccess by default.
     * @param $login The login of the user.

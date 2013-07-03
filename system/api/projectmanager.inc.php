@@ -215,6 +215,18 @@ class System_Api_ProjectManager extends System_Api_Base
     }
 
     /**
+    * Return an array of all project and folder names.
+    */
+    public function getFoldersMap()
+    {
+        $query = 'SELECT f.folder_id, f.folder_name, p.project_name'
+            . ' FROM {folders} AS f'
+            . ' JOIN {projects} AS p ON p.project_id = f.project_id';
+
+        return $this->connection->queryTable( $query );
+    }
+
+    /**
     * Create a new project. An error is thrown if a project with given name
     * already exists.
     * @param $name The name of the project to create.

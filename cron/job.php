@@ -22,12 +22,11 @@ require_once( dirname( dirname( __FILE__ ) ) . '/system/bootstrap.inc.php' );
 
 class Cron_Job extends System_Core_Application
 {
-    const TimeLimit = 10800;
-
     private $last = null;
     private $current = null;
 
-    private $sent = 0;
+    private $mailEngine = null;
+    private $inboxEngine = null;
 
     protected function __construct()
     {
@@ -44,14 +43,14 @@ class Cron_Job extends System_Core_Application
 
     protected function execute()
     {
-        set_time_limit( self::TimeLimit );
+        set_time_limit( 0 );
 
         $serverManager = new System_Api_ServerManager();
         $eventLog = new System_Api_EventLog( $this );
 
         $current = $serverManager->getSetting( 'cron_current' );
         if ( $current != null ) {
-            if ( time() - $current < self::TimeLimit )
+            if ( time() - $current < 10800 )
                 return;
 
             $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Previous cron job timed out' ) );
@@ -71,10 +70,20 @@ class Cron_Job extends System_Core_Application
         $email = $serverManager->getSetting( 'email_engine' );
         if ( $email != null )
             $this->sendNotificationEmails();
+
+        $inbox = $serverManager->getSetting( 'inbox_engine' );
+        if ( $inbox != null )
+            $this->processInboxEmails();
     }
 
     protected function cleanUp()
     {
+        if ( $this->mailEngine != null )
+            $this->mailEngine->close();
+
+        if ( $this->inboxEngine != null )
+            $this->inboxEngine->close();
+
         if ( $this->current != null ) {
             $serverManager = new System_Api_ServerManager();
             $serverManager->setSetting( 'cron_last', $this->current );
@@ -87,8 +96,6 @@ class Cron_Job extends System_Core_Application
                 $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Error, $eventLog->tr( 'Cron job finished with error' ) );
             else if ( $this->current == null )
                 $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Previous cron job is still running' ) );
-            else if ( $this->sent > 0 )
-                $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Information, $eventLog->tr( 'Cron job finished (sent %1 emails)', null, $this->sent ) );
             else
                 $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Information, $eventLog->tr( 'Cron job finished' ) );
         }
@@ -96,8 +103,10 @@ class Cron_Job extends System_Core_Application
 
     private function sendNotificationEmails()
     {
-        $engine = new System_Mail_Engine();
-        $engine->loadSettings();
+        $this->mailEngine = new System_Mail_Engine();
+        $this->mailEngine->loadSettings();
+
+        $sent = 0;
 
         $userManager = new System_Api_UserManager();
         $users = $userManager->getUsersWithEmail();
@@ -154,8 +163,8 @@ class Cron_Job extends System_Core_Application
                         $body = $mail->run();
                         $subject = $mail->getView()->getSlot( 'subject' );
 
-                        $engine->send( $preferencesManager->getPreference( 'email' ), $principal->getUserName(), $subject, $body );
-                        $this->sent++;
+                        $this->mailEngine->send( $preferencesManager->getPreference( 'email' ), $principal->getUserName(), $subject, $body );
+                        $sent++;
                     }
                 }
             }
@@ -181,10 +190,283 @@ class Cron_Job extends System_Core_Application
                 $body = $mail->run();
                 $subject = $mail->getView()->getSlot( 'subject' );
 
-                $engine->send( $notifyEmail, null, $subject, $body );
-                $this->sent++;
+                $this->mailEngine->send( $notifyEmail, null, $subject, $body );
+                $sent++;
             }
         }
+
+        if ( $sent > 0 ) {
+            $eventLog = new System_Api_EventLog( $this );
+            $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Information, $eventLog->tr( 'Sent %1 notification emails', null, $sent ) );
+        }
+    }
+
+    public function processInboxEmails()
+    {
+        $this->inboxEngine = new System_Mail_InboxEngine();
+        $this->inboxEngine->loadSettings();
+
+        $received = 0;
+
+        $messages = $this->inboxEngine->getMessages();
+
+        if ( empty( $messages ) )
+            return;
+
+        $serverManager = new System_Api_ServerManager();
+        $userManager = new System_Api_UserManager();
+        $projectManager = new System_Api_ProjectManager();
+        $issueManager = new System_Api_IssueManager();
+        $typeManager = new System_Api_TypeManager();
+        $parser = new System_Api_Parser();
+        $eventLog = new System_Api_EventLog( $this );
+
+        $allowExternal = $serverManager->getSettings( 'inbox_allow_external' ) == 1;
+
+        if ( $allowExternal ) {
+            $robotUserId = $serverManager->getSetting( 'inbox_robot' );
+            $robotUser = $userManager->getUser( $robotUserId );
+            $robotPrincipal = new System_Api_Principal( $robotUser );
+        }
+
+        $mapFolder = $serverManager->getSetting( 'inbox_map_folder' ) == 1;
+
+        if ( $mapFolder ) {
+            $inboxEmail = $serverManager->getSetting( 'inbox_email' );
+            $parts = explode( '@', $inboxEmail );
+            $mapPattern = '/^' . preg_quote( $parts[ 0 ] ) . '[+-](\w+)-(\w+)@' . preg_quote( $parts[ 1 ] ) . '$/ui';
+
+            $allFolders = $projectManager->getFoldersMap();
+        }
+
+        $defaultFolderId = $serverManager->getSetting( 'inbox_default_folder' );
+
+        $leaveMessages = $serverManager->getSetting( 'inbox_leave_messages' ) == 1;
+        $respond = $serverManager->getSetting( 'inbox_respond' ) == 1;
+
+        foreach ( $messages as $msgno ) {
+            $processed = false;
+
+            $headers = $this->inboxEngine->getHeaders( $msgno );
+
+            $fromEmail = $headers[ 'from' ][ 'email' ];
+
+            try {
+                $user = $userManager->getUserByEmail( $fromEmail );
+            } catch ( System_Api_Error $e ) {
+                $user = null;
+            }
+
+            if ( $user != null ) {
+                $principal = new System_Api_Principal( $user );
+            } else if ( $allowExternal ) {
+                $principal = $robotPrincipal;
+            } else {
+                $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Ignored inbox email from unknown address "%1"', null, $fromEmail ) );
+                $principal = null;
+            }
+
+            if ( $principal != null ) {
+                System_Api_Principal::setCurrent( $principal );
+
+                $folder = null;
+                $issue = null;
+
+                if ( preg_match( '/\[#(\d+)\]/', $headers[ 'subject' ], $matches ) ) {
+                    $issueId = $matches[ 1 ];
+                    try {
+                        $issue = $issueManager->getIssue( $issueId );
+                    } catch ( System_Api_Error $e ) {
+                        $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Ignored inbox email from "%1" because issue %2 is inaccessible', null, $fromEmail, '#' . $issueId ) );
+                    }
+                } else {
+                    $folderId = null;
+
+                    if ( $mapFolder ) {
+                        $toEmail = $this->matchRecipient( $mapPattern, $headers, $matches );
+
+                        if ( $toEmail != null ) {
+                            $matching = array();
+
+                            foreach ( $allFolders as $row ) {
+                                if ( $this->matchPart( $matches[ 1 ], $row[ 'project_name' ] ) && $this->matchPart( $matches[ 2 ], $row[ 'folder_name' ] ) )
+                                    $matching[] = $row[ 'folder_id' ];
+                            }
+
+                            if ( count( $matching ) == 1 ) {
+                                $folderId = $matching[ 0 ];
+                            } else if ( count( $matching ) > 1 ) {
+                                $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Ambiguous folder for inbox email address "%1"', null, $toEmail ) );
+                            } else {
+                                $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'No matching folder for inbox email address "%1"', null, $toEmail ) );
+                            }
+                        }
+                    }
+
+                    if ( $folderId != null ) {
+                        try {
+                            $folder = $projectManager->getFolder( $folderId );
+                        } catch ( System_Api_Error $e ) {
+                            $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Ignored inbox email from "%1" to "%2" because folder is inaccessible', null, $fromEmail, $toEmail ) );
+                        }
+                    } else if ( $defaultFolderId != null ) {
+                        try {
+                            $folder = $projectManager->getFolder( $defaultFolderId );
+                        } catch ( System_Api_Error $e ) {
+                            $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Ignored inbox email from "%1" because default folder is inaccessible', null, $fromEmail ) );
+                        }
+                    } else {
+                        $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Ignored inbox email from "%1" because folder cannot be mapped', null, $fromEmail ) );
+                    }
+                }
+
+                if ( $issue != null || $folder != null ) {
+                    $issueId = null;
+
+                    $parts = $this->inboxEngine->getStructure( $msgno );
+                    
+                    try {
+                        $text = $this->formatHeaders( $headers );
+
+                        foreach ( $parts as $part ) {
+                            if ( $part[ 'type' ] == 'plain' ) {
+                                $text .= $this->inboxEngine->convertToUtf8( $part );
+                                break;
+                            }
+                        }
+
+                        $text = mb_substr( $text, 0, $serverManager->getSetting( 'comment_max_length' ) );
+                        $text = $parser->normalizeString( $text, null, System_Api_Parser::MultiLine );
+
+                        if ( $issue == null ) {
+                            $name = $headers[ 'subject' ];
+                            $name = mb_substr( $name, 0, System_Const::ValueMaxLength );
+                            $name = $parser->normalizeString( $name, null, System_Api_Parser::AllowEmpty );
+                            if ( $name == '' )
+                                $name = $this->tr( 'No subject' );
+
+                            $values = $typeManager->getDefaultAttributeValuesForFolder( $folder );
+
+                            $issueId = $issueManager->addIssue( $folder, $name, $values );
+                            $issue = $issueManager->getIssue( $issueId );
+
+                            $issueManager->addDescription( $issue, $text, System_Const::PlainText );
+
+                            $emailId = '#' . $issueId;
+                        } else {
+                            $commentId = $issueManager->addComment( $issue, $text, System_Const::PlainText );
+                            $emailId = '#' . $commentId;
+                        }
+
+                        $received++;
+
+                        foreach ( $parts as $part ) {
+                            if ( $part[ 'type' ] == 'html' || $part[ 'type' ] == 'attachment' ) {
+                                $size = strlen( $part[ 'body' ] );
+
+                                if ( $size > $serverManager->getSetting( 'file_max_size' ) ) {
+                                    $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Attachment for message %1 from "%2" exceeded maximum size', null, $emailId, $fromEmail ) );
+                                    continue;
+                                }
+
+                                if ( $part[ 'type' ] == 'html' ) {
+                                    $name = 'message.html';
+                                    $description = $this->tr( 'HTML message for email %1', null, $emailId );
+                                } else {
+                                    $name = $part[ 'name' ];
+                                    $parser->checkString( $name, System_Const::FileNameMaxLength );
+                                    $description = $this->tr( 'Attachment for email %1', null, $emailId );
+                                }
+
+                                $attachment = new System_Core_Attachment( $part[ 'body' ], $size, $name );
+                                $issueManager->addFile( $issue, $attachment, $name, $description );
+                            }
+                        }
+                    } catch ( System_Api_Error $e ) {
+                        $eventLog->addErrorEvent( $e );
+                    }
+
+                    if ( $respond && $issueId != null ) {
+                        // TODO: send response
+                    }
+
+                    $processed = true;
+                }
+            }
+
+            if ( !$leaveMessages )
+                $this->inboxEngine->markAsDeleted( $msgno );
+            else if ( !$processed )
+                $this->inboxEngine->markAsProcessed( $msgno );
+        }
+
+        System_Api_Principal::setCurrent( null );
+
+        if ( $received > 0 )
+            $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Information, $eventLog->tr( 'Processed %1 inbox emails', null, $received ) );
+    }
+
+    private function matchRecipient( $mapPattern, $headers, &$matches )
+    {
+        foreach ( $headers[ 'to' ] as $recipient ) {
+            if ( preg_match( $mapPattern, $recipient[ 'email' ], $matches ) )
+                return $recipient[ 'email' ];
+        }
+
+        foreach ( $headers[ 'cc' ] as $recipient ) {
+            if ( preg_match( $mapPattern, $recipient[ 'email' ], $matches ) )
+                return $recipient[ 'email' ];
+        }
+
+        return null;
+    }
+
+    private function matchPart( $part, $name )
+    {
+        $name = preg_replace( '/\W+/ui', '', $name );
+
+        if ( $name != '' && mb_strripos( $name, $part ) !== false )
+            return true;
+
+        return false;
+    }
+
+    private function formatHeaders( $headers )
+    {
+        $text = $this->tr( 'From:' ) . ' ' . $this->formatAddress( $headers[ 'from' ] ) . "\n";
+
+        if ( !empty( $headers[ 'to' ] ) ) {
+            $to = array();
+            foreach ( $headers[ 'to' ] as $addr )
+                $to[] = $this->formatAddress( $addr );
+            $text .= $this->tr( 'To:' ) . ' ' . implode( '; ', $to ) . "\n";
+        }
+
+        if ( !empty( $headers[ 'cc' ] ) ) {
+            $cc = array();
+            foreach ( $headers[ 'cc' ] as $addr )
+                $cc[] = $this->formatAddress( $addr );
+            $text .= $this->tr( 'CC:' ) . ' ' . implode( '; ', $cc ) . "\n";
+        }
+
+        $text .= $this->tr( 'Subject:' ) . ' ' . $headers[ 'subject' ] . "\n\n";
+
+        return $text;
+    }
+
+    private function formatAddress( $addr )
+    {
+        $text = '';
+        if ( isset( $addr[ 'name' ] ) )
+            $text = $addr[ 'name' ] . ' ';
+        $text .= '<' . $addr[ 'email' ] . '>';
+        return $text;
+    }
+
+    private function tr( $source, $comment = null )
+    {
+        $args = func_get_args();
+        return $this->translator->translate( System_Core_Translator::SystemLanguage, get_class( $this ), $args );
     }
 }
 

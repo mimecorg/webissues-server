@@ -25,7 +25,7 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 */
 class System_Mail_Engine
 {
-    private $phpMailer;
+    private $mailer = null;
 
     /**
     * Constructor.
@@ -110,5 +110,18 @@ class System_Mail_Engine
         $this->mailer->Body = $body;
 
         $this->mailer->Send();
+    }
+
+    /**
+    * Close the connection to the server.
+    */
+    public function close()
+    {
+        if ( $this->mailer == null )
+            return;
+
+        $this->mailer->SmtpClose();
+
+        $this->mailer = null;
     }
 }

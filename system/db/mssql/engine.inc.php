@@ -144,7 +144,14 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
                 $stream = new COM( 'ADODB.Stream', null, CP_UTF8 );
                 $stream->Type = self::adTypeBinary;
                 $stream->Open();
-                $stream->LoadFromFile( $arg->getPath() );
+                if ( $arg->getPath() != null ) {
+                    $stream->LoadFromFile( $arg->getPath() );
+                } else {
+                    $path = tempnam( sys_get_temp_dir(), 'wi_' );
+                    $arg->saveAs( $path );
+                    $stream->LoadFromFile( $path );
+                    unlink( $path );
+                }
                 $stream->Position = 0;
                 $params[] = $stream->Read();
                 $stream->Close();
