@@ -2,6 +2,16 @@
 
 <?php $form->renderFormOpen() ?>
 
+<?php if ( !empty( $noImap ) ): ?>
+
+<p class="error"><?php echo $this->tr( 'Inbox settings are not avaiable because the \'IMAP\' extension is missing or disabled.' ) ?></p>
+
+<div class="form-submit">
+<?php $form->renderSubmit( $this->tr( 'OK' ), 'ok' ) ?>
+</div>
+
+<?php else: ?>
+
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'General' ) ?></legend>
 
@@ -17,7 +27,7 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Inbox Server' ) ?></legend>
 
-<p><?php echo $this->tr( 'Fill the information below to configure the POP3 or IMAP server.' ) ?></p>
+<p><?php echo $this->tr( 'Fill the information below to configure the IMAP or POP3 server.' ) ?></p>
 
 <?php $form->renderText( $this->tr( 'Server name:' ), 'inboxServer', array( 'size' => 40 )  ) ?>
 <?php $form->renderText( $this->tr( 'Port number:' ), 'inboxPort', array( 'size' => 40 )  ) ?>
@@ -75,5 +85,6 @@
 <?php $form->renderSubmit( $this->tr( 'Cancel' ), 'cancel' ) ?>
 </div>
 
-<?php $form->renderFormClose() ?>
+<?php endif ?>
 
+<?php $form->renderFormClose() ?>

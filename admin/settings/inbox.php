@@ -29,8 +29,21 @@ class Admin_Settings_Inbox extends System_Web_Component
 
     protected function execute()
     {
-        $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Inbox Settings' ) );
+
+        if ( !function_exists( 'imap_open' ) ) {
+            $this->view->setDecoratorClass( 'Common_MessageBlock' );
+
+            $this->form = new System_Web_Form( 'settings', $this );
+
+            if ( $this->form->loadForm() && $this->form->isSubmittedWith( 'ok' ) )
+                $this->response->redirect( '/admin/index.php' );
+
+            $this->noImap = true;
+            return;
+        }
+
+        $this->view->setDecoratorClass( 'Common_FixedBlock' );
 
         $fields[ 'inbox_engine' ] = 'inboxEngine';
         $fields[ 'inbox_email' ] = 'inboxEmail';
