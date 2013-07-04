@@ -94,6 +94,15 @@ class System_Mail_Engine
     }
 
     /**
+    * Change the Reply-To address of sent messages.
+    */
+    public function setReplyTo( $address )
+    {
+        $this->mailer->ClearReplyTos();
+        $this->mailer->AddReplyTo( $address );
+    }
+
+    /**
     * Send an email.
     * @param $address Address of the recipient.
     * @param $name Name of the recipient.

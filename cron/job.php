@@ -172,6 +172,8 @@ class Cron_Job extends System_Core_Application
 
         System_Api_Principal::setCurrent( null );
 
+        $this->translator->setLanguage( System_Core_Translator::UserLanguage, null );
+
         $serverManager = new System_Api_ServerManager();
 
         $selfRegister = $serverManager->getSetting( 'self_register' );
@@ -221,6 +223,11 @@ class Cron_Job extends System_Core_Application
         $parser = new System_Api_Parser();
         $eventLog = new System_Api_EventLog( $this );
 
+        $inboxEmail = $serverManager->getSetting( 'inbox_email' );
+
+        if ( $this->mailEngine != null )
+            $this->mailEngine->setReplyTo( $inboxEmail );
+
         $allowExternal = $serverManager->getSettings( 'inbox_allow_external' ) == 1;
 
         if ( $allowExternal ) {
@@ -232,7 +239,6 @@ class Cron_Job extends System_Core_Application
         $mapFolder = $serverManager->getSetting( 'inbox_map_folder' ) == 1;
 
         if ( $mapFolder ) {
-            $inboxEmail = $serverManager->getSetting( 'inbox_email' );
             $parts = explode( '@', $inboxEmail );
             $mapPattern = '/^' . preg_quote( $parts[ 0 ] ) . '[+-](\w+)-(\w+)@' . preg_quote( $parts[ 1 ] ) . '$/ui';
 
@@ -386,21 +392,34 @@ class Cron_Job extends System_Core_Application
                         $eventLog->addErrorEvent( $e );
                     }
 
-                    if ( $respond && $issueId != null ) {
-                        // TODO: send response
+                    if ( $respond && $this->mailEngine != null && $issueId != null ) {
+                        if ( $user != null ) {
+                            $locale = new System_Api_Locale();
+                            $this->translator->setLanguage( System_Core_Translator::UserLanguage, $locale->getSetting( 'language' ) );
+                        }
+
+                        $mail = System_Web_Component::createComponent( 'Common_Mail_IssueCreated', null, $issue );
+
+                        $body = $mail->run();
+                        $subject = $mail->getView()->getSlot( 'subject' );
+
+                        $this->mailEngine->send( $fromEmail, $user != null ? $user[ 'user_name' ] : null, $subject, $body );
+
+                        if ( $user != null )
+                            $this->translator->setLanguage( System_Core_Translator::UserLanguage, null );
                     }
 
                     $processed = true;
                 }
             }
 
+            System_Api_Principal::setCurrent( null );
+
             if ( !$leaveMessages )
                 $this->inboxEngine->markAsDeleted( $msgno );
             else if ( !$processed )
                 $this->inboxEngine->markAsProcessed( $msgno );
         }
-
-        System_Api_Principal::setCurrent( null );
 
         if ( $received > 0 )
             $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Information, $eventLog->tr( 'Processed %1 inbox emails', null, $received ) );
