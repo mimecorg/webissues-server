@@ -398,7 +398,7 @@ class Cron_Job extends System_Core_Application
                             $this->translator->setLanguage( System_Core_Translator::UserLanguage, $locale->getSetting( 'language' ) );
                         }
 
-                        $mail = System_Web_Component::createComponent( 'Common_Mail_IssueCreated', null, $issue );
+                        $mail = System_Web_Component::createComponent( 'Common_Mail_IssueCreated', null, array( $issue, $user ) );
 
                         $body = $mail->run();
                         $subject = $mail->getView()->getSlot( 'subject' );

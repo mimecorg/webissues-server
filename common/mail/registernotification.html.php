@@ -1,10 +1,6 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<h1>
-<?php echo $this->mailLink( '/admin/register/index.php', $this->tr( 'Registration Requests' ) ); ?>
-</h1>
-
-<p><?php echo $this->tr( 'You have the following new registration requests pending for approval:' ) ?></p>
+<p><?php echo $this->tr( 'You have the following new %1 on the WebIssues Server pending for approval:', null, $this->mailLink( '/admin/register/index.php', $this->tr( 'registration requests' ) ) ) ?></p>
 
 <table class="grid">
 <tr>
@@ -22,5 +18,3 @@
 </tr>
 <?php endforeach ?>
 </table>
-
-<p><?php echo $this->tr( 'This is an alert email from the WebIssues Server.' ) ?></p>

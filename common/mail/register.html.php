@@ -1,8 +1,6 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<h1><?php echo $this->tr( 'WebIssues Server email verification' ) ?></h1>
-
-<p><?php echo $this->tr( 'Thank you for registering at the WebIssues Server.' ) ?></p>
+<p><?php echo $this->tr( 'Thank you for registering on the WebIssues Server.' ) ?></p>
 
 <p><?php echo $this->tr( 'To activate your registration request, please visit the following URL:' ) ?></p>
 

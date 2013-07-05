@@ -1,8 +1,6 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<h1><?php echo $this->tr( 'WebIssues Server registration rejected' ) ?></h1>
-
-<p><?php echo $this->tr( 'Sorry, your registration request at the WebIssues Server was rejected by the administrator.' ) ?></p>
+<p><?php echo $this->tr( 'Sorry, your registration request on the WebIssues Server was rejected by the administrator.' ) ?></p>
 
 <ul>
 <li><?php echo $this->tr( 'User name: %1', null, $userName ) ?></li>

@@ -23,12 +23,14 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 class Common_Mail_IssueCreated extends System_Web_Component
 {
     private $issue;
+    private $user;
 
-    protected function __construct( $issue )
+    protected function __construct( $args )
     {
         parent::__construct();
 
-        $this->issue = $issue;
+        $this->issue = $args[ 0 ];
+        $this->user = $args[ 1 ];
     }
 
     protected function execute()
@@ -39,16 +41,7 @@ class Common_Mail_IssueCreated extends System_Web_Component
         $this->issueId = $this->issue[ 'issue_id' ];
         $this->issueName = $this->issue[ 'issue_name' ];
 
-        $baseUrl = self::getBaseUrl();
-
-        if ( $baseUrl != '' ) {
-            $currentUserId = System_Api_Principal::getCurrent()->getUserId();
-
-            $serverManager = new System_Api_ServerManager();
-            $robotUserId = $serverManager->getSetting( 'inbox_robot' );
-
-            if ( $currentUserId != $robotUserId )
-                $this->issueUrl = $baseUrl . $this->appendQueryString( '/client/index.php', array( 'issue' => $this->issueId ) );
-        }
+        if ( $this->user != null )
+            $this->isUser = true;
     }
 }

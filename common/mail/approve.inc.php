@@ -39,13 +39,5 @@ class Common_Mail_Approve extends System_Web_Component
         $this->login = $this->register[ 'user_login' ];
         $this->userName = $this->register[ 'user_name' ];
         $this->email = $this->register[ 'user_email' ];
-
-        $serverManager = new System_Api_ServerManager();
-        $baseUrl = $serverManager->getSetting( 'base_url' );
-
-        if ( $baseUrl == null )
-            $baseUrl = WI_BASE_URL . '/';
-
-        $this->loginUrl = $baseUrl . 'index.php';
     }
 }

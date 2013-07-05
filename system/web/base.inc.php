@@ -266,9 +266,9 @@ class System_Web_Base
     /**
     * Create an HTML link if the server URL for emails is configured.
     */
-    protected function mailLink( $url, $text, $attributes = array() )
+    protected function mailLink( $url, $text, $attributes = array(), $settingOnly = false )
     {
-        $baseUrl = self::getBaseUrl();
+        $baseUrl = self::getBaseUrl( $settingOnly );
         if ( $baseUrl != '' )
             return $this->link( $baseUrl . $url, $text, $attributes );
         else
@@ -278,9 +278,9 @@ class System_Web_Base
     /**
     * Return WI_BASE_URL if available, otherwise the server URL for emails.
     */
-    protected static function getBaseUrl()
+    protected static function getBaseUrl( $settingOnly = false )
     {
-        if ( WI_BASE_URL != '' )
+        if ( !$settingOnly && WI_BASE_URL != '' )
             return WI_BASE_URL;
 
         if ( self::$baseUrl === null ) {

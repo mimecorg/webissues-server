@@ -40,12 +40,6 @@ class Common_Mail_Register extends System_Web_Component
         $this->userName = $this->register[ 'user_name' ];
         $this->email = $this->register[ 'user_email' ];
 
-        $serverManager = new System_Api_ServerManager();
-        $baseUrl = $serverManager->getSetting( 'base_url' );
-
-        if ( $baseUrl == null )
-            $baseUrl = WI_BASE_URL . '/';
-
-        $this->activationUrl = $this->appendQueryString( $baseUrl . 'register.php', array( 'key' => $this->register[ 'request_key' ] ) );
+        $this->activationUrl = $this->appendQueryString( self::getBaseUrl() . '/register.php', array( 'key' => $this->register[ 'request_key' ] ) );
     }
 }
