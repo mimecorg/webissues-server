@@ -126,7 +126,7 @@ class System_Mail_InboxEngine
         
         $result[ 'from' ] = $this->convertAddress( $headers->from[ 0 ] );
 
-        $result[ 'subject' ] = imap_utf8( $headers->subject );
+        $result[ 'subject' ] = $this->decodeHeader( $headers->subject );
 
         $result[ 'to' ] = array();
         if ( !empty( $headers->to ) ) {
@@ -146,11 +146,33 @@ class System_Mail_InboxEngine
         return $result;
     }
 
+    private function decodeHeader( $header )
+    {
+        // NOTE: imap_utf8 returns denormalized UTF-8 in some cases
+        // NOTE: mb_decode_mimeheader incorrectly handles '_' in Q encoding
+
+        $parts = imap_mime_header_decode( $header );
+
+        if ( $parts === false )
+            return '';
+
+        $result = '';
+
+        foreach ( $parts as $part ) {
+            if ( $part->charset == 'default' )
+                $result .= $part->text;
+            else
+                $result .= @mb_convert_encoding( $part->text, 'UTF-8', $part->charset );
+        }
+
+        return $result;
+    }
+
     private function convertAddress( $addr )
     {
         $result[ 'email' ] = $addr->mailbox . '@' . $addr->host;
         if ( isset( $addr->personal ) )
-            $result[ 'name' ] = imap_utf8( $addr->personal );
+            $result[ 'name' ] = $this->decodeHeader( $addr->personal );
         return $result;
     }
 
