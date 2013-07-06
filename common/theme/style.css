@@ -230,6 +230,10 @@ textarea {
   padding: 0 0.5em;
 }
 
+.form-fieldset dl {
+  margin-left: 1.25em;
+}
+
 .form-radio {
   margin: 0.2em 0;
 }

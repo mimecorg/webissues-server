@@ -1,6 +1,7 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<h3>Information</h3>
+<fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Information' ) ?></legend>
 
 <dl>
 <dt><?php echo $this->imageAndTextlink( '/admin/info/index.php', '/common/images/status-info-16.png', $this->tr( 'General Information' ) ) ?></dt>
@@ -9,7 +10,10 @@
 <dd><?php echo $this->tr( 'Show recent entries from the event log.' ) ?></dd>
 </dl>
 
-<h3>Configuration</h3>
+</fieldset>
+
+<fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Configuration' ) ?></legend>
 
 <dl>
 <dt><?php echo $this->imageAndTextlink( '/admin/settings/index.php', '/common/images/configure-16.png', $this->tr( 'Server Settings' ) ) ?></dt>
@@ -20,7 +24,10 @@
 <dd><?php echo $this->tr( 'Configure email inbox settings.' ) ?></dd>
 </dl>
 
-<h3>Management</h3>
+</fieldset>
+
+<fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Management' ) ?></legend>
 
 <dl>
 <dt><?php echo $this->imageAndTextlink( '/admin/users/index.php', '/common/images/view-users-16.png', $this->tr( 'User Accounts' ) ) ?></dt>
@@ -32,3 +39,5 @@
 <dt><?php echo $this->imageAndTextlink( '/admin/types/index.php', '/common/images/view-types-16.png', $this->tr( 'Issue Types' ) ) ?></dt>
 <dd><?php echo $this->tr( 'Create and edit issue types.' ) ?></dd>
 </dl>
+
+</fieldset>
