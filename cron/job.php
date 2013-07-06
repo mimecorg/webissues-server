@@ -341,13 +341,18 @@ class Cron_Job extends System_Core_Application
                             }
                         }
 
-                        $text = mb_substr( $text, 0, $serverManager->getSetting( 'comment_max_length' ) );
                         $text = $parser->normalizeString( $text, null, System_Api_Parser::MultiLine );
+                        $text = preg_replace( '/\n(?:[ \t]*\n)+/', "\n\n", $text );
+
+                        $maxLength = $serverManager->getSetting( 'comment_max_length' );
+                        if ( mb_strlen( $text ) > $maxLength )
+                            $text = mb_substr( $text, 0, $maxLength - 3 ) . '...';
 
                         if ( $issue == null ) {
                             $name = $headers[ 'subject' ];
-                            $name = mb_substr( $name, 0, System_Const::ValueMaxLength );
                             $name = $parser->normalizeString( $name, null, System_Api_Parser::AllowEmpty );
+                            if ( mb_strlen( $name ) > System_Const::ValueMaxLength )
+                                $name = mb_substr( $name, 0, System_Const::ValueMaxLength - 3 ) . '...';
                             if ( $name == '' )
                                 $name = $this->tr( 'No subject' );
 
