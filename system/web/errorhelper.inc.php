@@ -191,6 +191,10 @@ class System_Web_ErrorHelper extends System_Web_Base
                 return $this->tr( 'Description already exists' );
             case InvalidTextFormat::InvalidTextFormat:
                 return $this->tr( 'Text format is invalid' );
+            case InvalidTextFormat::UnknownSubscription:
+                return $this->tr( 'Subscription does not exist' );
+            case System_Api_Error::SubscriptionAlreadyExists:
+                return $this->tr( 'Subscription already exists' );
             default:
                 return '';
         }

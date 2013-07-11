@@ -354,6 +354,7 @@ class System_Api_QueryGenerator
         if ( $flags & self::WithState ) {
             $result[] = 'i.stamp_id';
             $result[] = 's.read_id';
+            $result[] = 's.subscription_id';
         }
         if ( $flags & self::AllColumns ) {
             foreach ( $this->columns as $column )

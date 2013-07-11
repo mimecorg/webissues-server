@@ -49,7 +49,7 @@ class System_Api_StateManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT s.state_id, s.issue_id, s.read_id'
+        $query = 'SELECT s.state_id, s.issue_id, s.read_id, s.subscription_id'
             . ' FROM {issue_states} AS s';
         if ( !$principal->isAdministrator() ) {
             $query .= ' JOIN {issues} AS i ON i.issue_id = s.issue_id'
@@ -90,10 +90,15 @@ class System_Api_StateManager extends System_Api_Base
                 $this->connection->execute( $query, $stateId );
             }
 
+            $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id, subscription_id )';
             if ( $readId > 0 )
-                $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id ) VALUES ( %d, %d, %d )';
+                $query .= ' SELECT %1d AS user_id, i.issue_id, %3d AS read_id, s.subscription_id';
             else
-                $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id ) VALUES ( %d, %d, NULL )';
+                $query .= ' SELECT %1d AS user_id, i.issue_id, NULL AS read_id, s.subscription_id';
+            $query .= ' FROM {issues} AS i'
+                . ' LEFT OUTER JOIN {subscriptions} AS s ON s.issue_id = i.issue_id AND s.user_id = %1d'
+                . ' WHERE i.issue_id = %2d';
+
             $this->connection->execute( $query, $principal->getUserId(), $issueId, $readId );
 
             $stateId = $this->connection->getInsertId( 'issue_states', 'state_id' );
@@ -131,12 +136,14 @@ class System_Api_StateManager extends System_Api_Base
 
             $this->connection->execute( $query, $principal->getUserId(), $folderId );
 
-            $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id )';
+            $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id, subscription_id )';
             if ( $readId > 0 )
-                $query .= ' SELECT %1d AS user_id, i.issue_id, %3d AS read_id';
+                $query .= ' SELECT %1d AS user_id, i.issue_id, %3d AS read_id, s.subscription_id';
             else
-                $query .= ' SELECT %1d AS user_id, i.issue_id, NULL AS read_id';
-            $query .= ' FROM {issues} AS i WHERE i.folder_id = %2d';
+                $query .= ' SELECT %1d AS user_id, i.issue_id, NULL AS read_id, s.subscription_id';
+            $query .= ' FROM {issues} AS i'
+                . ' LEFT OUTER JOIN {subscriptions} AS s ON s.issue_id = i.issue_id AND s.user_id = %1d'
+                . ' WHERE i.folder_id = %2d';
 
             $this->connection->execute( $query, $principal->getUserId(), $folderId, $readId );
 
