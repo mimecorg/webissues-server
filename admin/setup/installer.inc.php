@@ -81,6 +81,7 @@ class Admin_Setup_Installer extends System_Web_Base
                 'value_new'         => 'VARCHAR length=255 null=1',
                 'from_folder_id'    => 'INTEGER null=1 ref-table="folders" ref-column="folder_id" on-delete="set-null" trigger=1',
                 'to_folder_id'      => 'INTEGER null=1 ref-table="folders" ref-column="folder_id" on-delete="set-null" trigger=1',
+                'subscription_id'   => 'INTEGER null=1',
                 'pk'                => 'PRIMARY columns={"change_id"}',
                 'issue_idx'         => 'INDEX columns={"issue_id","change_type"}',
                 'stamp_idx'         => 'INDEX columns={"stamp_id"}',
@@ -125,6 +126,7 @@ class Admin_Setup_Installer extends System_Web_Base
                 'user_id'           => 'INTEGER ref-table="users" ref-column="user_id"',
                 'issue_id'          => 'INTEGER ref-table="issues" ref-column="issue_id" on-delete="cascade"',
                 'read_id'           => 'INTEGER null=1',
+                'subscription_id'   => 'INTEGER null=1',
                 'pk'                => 'PRIMARY columns={"state_id"}',
                 'state_idx'         => 'INDEX columns={"user_id","issue_id"} unique=1',
                 'issue_idx'         => 'INDEX columns={"issue_id"}'
@@ -232,6 +234,15 @@ class Admin_Setup_Installer extends System_Web_Base
                 'stamp_time'        => 'INTEGER',
                 'pk'                => 'PRIMARY columns={"stamp_id"}',
                 'user_idx'          => 'INDEX columns={"user_id"}'
+            ),
+            'subscriptions' => array(
+                'subscription_id'   => 'SERIAL',
+                'issue_id'          => 'INTEGER ref-table="issues" ref-column="issue_id" on-delete="cascade"',
+                'user_id'           => 'INTEGER null=1 ref-table="users" ref-column="user_id"',
+                'user_email'        => 'VARCHAR length=255 null=1',
+                'stamp_id'          => 'INTEGER',
+                'pk'                => 'PRIMARY columns={"subscription_id"}',
+                'issue_idx'         => 'INDEX columns={"issue_id","user_id"}'
             ),
             'users' => array(
                 'user_id'           => 'SERIAL',

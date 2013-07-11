@@ -166,6 +166,39 @@ class Admin_Setup_Updater extends System_Web_Base
                 $this->connection->execute( $query, $key, $value );
         }
 
+        if ( version_compare( $version, '1.1.002' ) < 0 ) {
+            $newTables = array(
+                'subscriptions' => array(
+                    'subscription_id'   => 'SERIAL',
+                    'issue_id'          => 'INTEGER ref-table="issues" ref-column="issue_id" on-delete="cascade"',
+                    'user_id'           => 'INTEGER null=1 ref-table="users" ref-column="user_id"',
+                    'user_email'        => 'VARCHAR length=255 null=1',
+                    'stamp_id'          => 'INTEGER',
+                    'pk'                => 'PRIMARY columns={"subscription_id"}',
+                    'issue_idx'         => 'INDEX columns={"issue_id","user_id"}'
+                )
+            );
+
+            $newFields = array(
+                'changes' => array(
+                    'subscription_id'   => 'INTEGER null=1'
+                ),
+                'issue_states' => array(
+                    'subscription_id'   => 'INTEGER null=1'
+                )
+            );
+
+            $generator = $this->connection->getSchemaGenerator();
+
+            foreach ( $newTables as $tableName => $fields )
+                $generator->createTable( $tableName, $fields );
+
+            foreach ( $newFields as $tableName => $fields )
+                $generator->addFields( $tableName, $fields );
+
+            $generator->updateReferences();
+        }
+
         $query = 'DELETE FROM {sessions}';
         $this->connection->execute( $query );
 
