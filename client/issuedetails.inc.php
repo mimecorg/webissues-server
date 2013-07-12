@@ -174,6 +174,12 @@ class Client_IssueDetails extends System_Web_Component
             $this->toolBar->addFixedCommand( '/client/index.php', '/common/images/issue-unread-16.png', $this->tr( 'Mark As Unread' ), array( 'unread' => 1 ) );
         else
             $this->toolBar->addFixedCommand( '/client/index.php', '/common/images/issue-16.png', $this->tr( 'Mark As Read' ), array( 'unread' => null ) );
+        if ( $serverManager->getSetting( 'email_engine' ) != '' ) {
+            if ( $issue[ 'subscription_id' ] != null )
+                $this->toolBar->addFixedCommand( '/client/issues/unsubscribe.php', '/common/images/issue-unsubscribe-16.png', $this->tr( 'Unsubscribe' ) );
+            else
+                $this->toolBar->addFixedCommand( '/client/issues/subscribe.php', '/common/images/issue-subscribe-16.png', $this->tr( 'Subscribe' ) );
+        }
 
         if ( $prettyPrint ) {
             $script = new System_Web_JavaScript( $this->view );

@@ -161,6 +161,8 @@ class Client_IssuesList extends System_Web_Component
         $page = $connection->queryPageArgs( $query, $this->grid->getOrderBy(), $this->grid->getPageSize(),
             $this->grid->getOffset(), $queryGenerator->getQueryArguments() );
 
+        $this->emailEngine = $serverManager->getSetting( 'email_engine' ) != '';
+
         $formatter = new System_Api_Formatter();
 
         $this->issues = array();
@@ -168,6 +170,8 @@ class Client_IssuesList extends System_Web_Component
             $issue = array();
             $issue[ 'stamp_id' ] = $row[ 'stamp_id' ];
             $issue[ 'read_id' ] = $row[ 'read_id' ];
+            if ( $this->emailEngine )
+                $issue[ 'subscription_id' ] = $row[ 'subscription_id' ];
             foreach ( $this->columns as $column => $name ) {
                 $value = $row[ $name ];
 

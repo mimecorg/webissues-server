@@ -41,12 +41,22 @@
 <td>
 <?php
     if ( $column == System_Api_Column::Name ):
-        if ( $issue[ 'read_id' ] == null ):
-            $imageUrl = '/common/images/issue-unread-16.png';
-        elseif ( $issue[ 'read_id' ] < $issue[ 'stamp_id' ] ):
-            $imageUrl = '/common/images/issue-modified-16.png';
+        if ( $emailEngine && $issue[ 'subscription_id' ] != null ):
+            if ( $issue[ 'read_id' ] == null ):
+                $imageUrl = '/common/images/issue-unread-sub-16.png';
+            elseif ( $issue[ 'read_id' ] < $issue[ 'stamp_id' ] ):
+                $imageUrl = '/common/images/issue-modified-sub-16.png';
+            else:
+                $imageUrl = '/common/images/issue-subscribe-16.png';
+            endif;
         else:
-            $imageUrl = '/common/images/issue-16.png';
+            if ( $issue[ 'read_id' ] == null ):
+                $imageUrl = '/common/images/issue-unread-16.png';
+            elseif ( $issue[ 'read_id' ] < $issue[ 'stamp_id' ] ):
+                $imageUrl = '/common/images/issue-modified-16.png';
+            else:
+                $imageUrl = '/common/images/issue-16.png';
+            endif;
         endif;
         echo $this->imageAndTextLink( $this->mergeQueryString( WI_SCRIPT_URL, array( 'issue' => $issueId, 'folder' => null, 'hpg' => null, 'hflt' => null, 'unread' => null ) ),
             $imageUrl, $issue[ $name ], array(), array(), $issue[ 'tip_name' ] );
