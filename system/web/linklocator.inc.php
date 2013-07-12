@@ -117,7 +117,10 @@ class System_Web_LinkLocator extends System_Web_Base
     public static function convertUrl( $url )
     {
         if ( $url[ 0 ] == '#' ) {
-            $baseUrl = self::getBaseUrl();
+            if ( self::getLinkMode() == self::AutoLinks )
+                $baseUrl = WI_BASE_URL;
+            else
+                $baseUrl = self::getBaseUrl();
             if ( $baseUrl != '' )
                 return $baseUrl . '/client/index.php?item=' . substr( $url, 1 );
             else

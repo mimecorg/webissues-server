@@ -106,6 +106,8 @@ class Cron_Job extends System_Core_Application
         $this->mailEngine = new System_Mail_Engine();
         $this->mailEngine->loadSettings();
 
+        System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
+
         $sent = 0;
 
         $userManager = new System_Api_UserManager();
@@ -401,9 +403,13 @@ class Cron_Job extends System_Core_Application
                         if ( $user != null ) {
                             $locale = new System_Api_Locale();
                             $this->translator->setLanguage( System_Core_Translator::UserLanguage, $locale->getSetting( 'language' ) );
+
+                            System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
+                        } else {
+                            System_Web_Base::setLinkMode( System_Web_Base::NoInternalLinks );
                         }
 
-                        $mail = System_Web_Component::createComponent( 'Common_Mail_IssueCreated', null, array( $issue, $user ) );
+                        $mail = System_Web_Component::createComponent( 'Common_Mail_IssueCreated', null, $issue );
 
                         $body = $mail->run();
                         $subject = $mail->getView()->getSlot( 'subject' );

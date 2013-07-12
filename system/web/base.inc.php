@@ -28,10 +28,23 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 */
 class System_Web_Base
 {
+    /**
+    * @name Link Modes
+    */
+    /*@{*/
+    /** Use configured server URL only in mailLink(). */
+    const AutoLinks = 0;
+    /** Use configured server URL in System_Web_LinkLocator and mailLink(). */
+    const MailLinks = 1;
+    /** Do not use internal links in System_Web_LinkLocator and mailLink(). */
+    const NoInternalLinks = 2;
+    /*@}*/
+
     protected $request = null;
     protected $response = null;
     protected $translator = null;
 
+    private static $linkMode = self::AutoLinks;
     private static $baseUrl = null;
 
     /**
@@ -264,7 +277,8 @@ class System_Web_Base
     }
 
     /**
-    * Create an HTML link if the server URL for emails is configured.
+    * Create an HTML link if the server URL for emails is configured. Only the text
+    * is returned if server URL is not configured or link mode is set to NoInternalLinks.
     */
     protected function mailLink( $url, $text, $attributes = array(), $settingOnly = false )
     {
@@ -276,12 +290,28 @@ class System_Web_Base
     }
 
     /**
-    * Return WI_BASE_URL if available, otherwise the server URL for emails.
+    * Set the current link mode for System_Web_LinkLocator and mailLink().
     */
-    protected static function getBaseUrl( $settingOnly = false )
+    public static function setLinkMode( $mode )
     {
-        if ( !$settingOnly && WI_BASE_URL != '' )
-            return WI_BASE_URL;
+        self::$linkMode = $mode;
+    }
+
+    /**
+    * Get the current link mode.
+    */
+    public static function getLinkMode()
+    {
+        return self::$linkMode;
+    }
+
+    /**
+    * Return the server URL for emails unless the mode is set to NoInternalLinks.
+    */
+    public static function getBaseUrl()
+    {
+        if ( self::$linkMode == self::NoInternalLinks )
+            return '';
 
         if ( self::$baseUrl === null ) {
             $serverManager = new System_Api_ServerManager();

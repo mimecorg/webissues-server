@@ -23,14 +23,12 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 class Common_Mail_IssueCreated extends System_Web_Component
 {
     private $issue;
-    private $user;
 
-    protected function __construct( $args )
+    protected function __construct( $issue )
     {
         parent::__construct();
 
-        $this->issue = $args[ 0 ];
-        $this->user = $args[ 1 ];
+        $this->issue = $issue;
     }
 
     protected function execute()
@@ -41,7 +39,7 @@ class Common_Mail_IssueCreated extends System_Web_Component
         $this->issueId = $this->issue[ 'issue_id' ];
         $this->issueName = $this->issue[ 'issue_name' ];
 
-        if ( $this->user != null )
-            $this->isUser = true;
+        if ( self::getLinkMode() != self::NoInternalLinks )
+            $this->hasLinks = true;
     }
 }
