@@ -106,30 +106,27 @@ class Cron_Job extends System_Core_Application
         $this->mailEngine = new System_Mail_Engine();
         $this->mailEngine->loadSettings();
 
-        System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
-
         $sent = 0;
 
         $userManager = new System_Api_UserManager();
+        $alertManager = new System_Api_AlertManager();
+        $subscriptionManager = new System_Api_SubscriptionManager();
+
         $users = $userManager->getUsersWithEmail();
 
         foreach ( $users as $user ) {
-            $principal = new System_Api_Principal( $user );
-            System_Api_Principal::setCurrent( $principal );
+            $this->impersonateUser( $user );
 
             $includeSummary = false;
 
             $preferencesManager = new System_Api_PreferencesManager();
-            $locale = new System_Api_Locale();
-
-            $this->translator->setLanguage( System_Core_Translator::UserLanguage, $locale->getSetting( 'language' ) );
-
             $validator = new System_Api_Validator();
 
             $days = $validator->convertToIntArray( $preferencesManager->getPreference( 'summary_days' ) );
             $hours = $validator->convertToIntArray( $preferencesManager->getPreference( 'summary_hours' ) );
 
             if ( !empty( $days ) && !empty( $hours ) ) {
+                $locale = new System_Api_Locale();
                 $timezone = new DateTimeZone( $locale->getSetting( 'time_zone' ) );
 
                 $currentDate = new DateTime( '@' . $this->current );
@@ -151,32 +148,75 @@ class Cron_Job extends System_Core_Application
                 }
             }
 
-            $alertManager = new System_Api_AlertManager();
-
             $alerts = $alertManager->getAlertsToEmail( $includeSummary );
 
-            if ( !empty( $alerts ) ) {
-                $alertManager->updateAlertStamps( $includeSummary );
+            foreach ( $alerts as $alert ) {
+                $mail = System_Web_Component::createComponent( 'Common_Mail_Notification', null, $alert );
 
-                foreach ( $alerts as $alert ) {
-                    $mail = System_Web_Component::createComponent( 'Common_Mail_Notification', null, $alert );
+                if ( $mail->prepare() ) {
+                    $body = $mail->run();
+                    $subject = $mail->getView()->getSlot( 'subject' );
 
-                    if ( $mail->prepare() ) {
-                        $body = $mail->run();
-                        $subject = $mail->getView()->getSlot( 'subject' );
+                    $this->setReplyToInbox( false );
 
-                        $this->mailEngine->send( $preferencesManager->getPreference( 'email' ), $principal->getUserName(), $subject, $body );
-                        $sent++;
-                    }
+                    $this->mailEngine->send( $preferencesManager->getPreference( 'email' ), $user[ 'user_name' ], $subject, $body );
+                    $sent++;
                 }
+
+                $alertManager->updateAlertStamp( $alert );
             }
+
+            $subscriptions = $subscriptionManager->getSubscriptionsToEmail();
+
+            foreach ( $subscriptions as $subscription ) {
+                $mail = System_Web_Component::createComponent( 'Common_Mail_Subscription', null, $subscription );
+
+                if ( $mail->prepare() ) {
+                    $body = $mail->run();
+                    $subject = $mail->getView()->getSlot( 'subject' );
+
+                    $this->setReplyToInbox( true );
+
+                    $this->mailEngine->send( $preferencesManager->getPreference( 'email' ), $user[ 'user_name' ], $subject, $body );
+                    $sent++;
+                }
+
+                $subscriptionManager->updateSubscriptionStamp( $subscription );
+            }
+
+            $this->undoImpersonation();
         }
 
-        System_Api_Principal::setCurrent( null );
-
-        $this->translator->setLanguage( System_Core_Translator::UserLanguage, null );
-
         $serverManager = new System_Api_ServerManager();
+
+        $allowExternal = $serverManager->getSetting( 'inbox_allow_external' );
+
+        if ( $allowExternal == 1 ) {
+            $robotUserId = $serverManager->getSetting( 'inbox_robot' );
+            $robotUser = $userManager->getUser( $robotUserId );
+
+            $this->impersonateExternalUser( $robotUser );
+
+            $subscriptions = $subscriptionManager->getExternalSubscriptionsToEmail();
+
+            foreach ( $subscriptions as $subscription ) {
+                $mail = System_Web_Component::createComponent( 'Common_Mail_Subscription', null, $subscription );
+
+                if ( $mail->prepare() ) {
+                    $body = $mail->run();
+                    $subject = $mail->getView()->getSlot( 'subject' );
+
+                    $this->setReplyToInbox( true );
+
+                    $this->mailEngine->send( $subscription[ 'user_email' ], null, $subject, $body );
+                    $sent++;
+                }
+
+                $subscriptionManager->updateSubscriptionStamp( $subscription );
+            }
+
+            $this->undoImpersonation();
+        }
 
         $selfRegister = $serverManager->getSetting( 'self_register' );
         $notifyEmail = $serverManager->getSetting( 'register_notify_email' );
@@ -187,15 +227,19 @@ class Cron_Job extends System_Core_Application
             $page = $registrationManager->getRequestsToEmail();
 
             if ( !empty( $page ) ) {
-                $registrationManager->setRequestsMailed();
+                System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
 
                 $mail = System_Web_Component::createComponent( 'Common_Mail_RegisterNotification', null, $page );
 
                 $body = $mail->run();
                 $subject = $mail->getView()->getSlot( 'subject' );
 
+                $this->setReplyToInbox( false );
+
                 $this->mailEngine->send( $notifyEmail, null, $subject, $body );
                 $sent++;
+
+                $registrationManager->setRequestsMailed();
             }
         }
 
@@ -227,20 +271,16 @@ class Cron_Job extends System_Core_Application
 
         $inboxEmail = $serverManager->getSetting( 'inbox_email' );
 
-        if ( $this->mailEngine != null )
-            $this->mailEngine->setReplyTo( $inboxEmail );
+        $allowExternal = $serverManager->getSetting( 'inbox_allow_external' );
 
-        $allowExternal = $serverManager->getSettings( 'inbox_allow_external' ) == 1;
-
-        if ( $allowExternal ) {
+        if ( $allowExternal == 1 ) {
             $robotUserId = $serverManager->getSetting( 'inbox_robot' );
             $robotUser = $userManager->getUser( $robotUserId );
-            $robotPrincipal = new System_Api_Principal( $robotUser );
         }
 
-        $mapFolder = $serverManager->getSetting( 'inbox_map_folder' ) == 1;
+        $mapFolder = $serverManager->getSetting( 'inbox_map_folder' );
 
-        if ( $mapFolder ) {
+        if ( $mapFolder == 1 ) {
             $parts = explode( '@', $inboxEmail );
             $mapPattern = '/^' . preg_quote( $parts[ 0 ] ) . '[+-](\w+)-(\w+)@' . preg_quote( $parts[ 1 ] ) . '$/ui';
 
@@ -265,18 +305,14 @@ class Cron_Job extends System_Core_Application
                 $user = null;
             }
 
-            if ( $user != null ) {
-                $principal = new System_Api_Principal( $user );
-            } else if ( $allowExternal ) {
-                $principal = $robotPrincipal;
-            } else {
+            if ( $user != null )
+                $this->impersonateUser( $user );
+            else if ( $allowExternal == 1 )
+                $this->impersonateExternalUser( $robotUser );
+            else
                 $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Ignored inbox email from unknown address "%1"', null, $fromEmail ) );
-                $principal = null;
-            }
 
-            if ( $principal != null ) {
-                System_Api_Principal::setCurrent( $principal );
-
+            if ( $user != null || $allowExternal == 1 ) {
                 $folder = null;
                 $issue = null;
 
@@ -290,7 +326,7 @@ class Cron_Job extends System_Core_Application
                 } else {
                     $folderId = null;
 
-                    if ( $mapFolder ) {
+                    if ( $mapFolder == 1 ) {
                         $toEmail = $this->matchRecipient( $mapPattern, $headers, $matches );
 
                         if ( $toEmail != null ) {
@@ -328,9 +364,9 @@ class Cron_Job extends System_Core_Application
                     }
                 }
 
-                if ( $issue != null || $folder != null ) {
-                    $issueId = null;
+                $issueId = null;
 
+                if ( $issue != null || $folder != null ) {
                     $parts = $this->inboxEngine->getStructure( $msgno );
                     
                     try {
@@ -399,32 +435,22 @@ class Cron_Job extends System_Core_Application
                         $eventLog->addErrorEvent( $e );
                     }
 
-                    if ( $respond && $this->mailEngine != null && $issueId != null ) {
-                        if ( $user != null ) {
-                            $locale = new System_Api_Locale();
-                            $this->translator->setLanguage( System_Core_Translator::UserLanguage, $locale->getSetting( 'language' ) );
-
-                            System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
-                        } else {
-                            System_Web_Base::setLinkMode( System_Web_Base::NoInternalLinks );
-                        }
-
-                        $mail = System_Web_Component::createComponent( 'Common_Mail_IssueCreated', null, $issue );
-
-                        $body = $mail->run();
-                        $subject = $mail->getView()->getSlot( 'subject' );
-
-                        $this->mailEngine->send( $fromEmail, $user != null ? $user[ 'user_name' ] : null, $subject, $body );
-
-                        if ( $user != null )
-                            $this->translator->setLanguage( System_Core_Translator::UserLanguage, null );
-                    }
-
                     $processed = true;
                 }
-            }
 
-            System_Api_Principal::setCurrent( null );
+                if ( $respond && $this->mailEngine != null && $issueId != null ) {
+                    $mail = System_Web_Component::createComponent( 'Common_Mail_IssueCreated', null, $issue );
+
+                    $body = $mail->run();
+                    $subject = $mail->getView()->getSlot( 'subject' );
+
+                    $this->setReplyToInbox( true );
+
+                    $this->mailEngine->send( $fromEmail, $user != null ? $user[ 'user_name' ] : null, $subject, $body );
+                }
+
+                $this->undoImpersonation();
+            }
 
             if ( !$leaveMessages )
                 $this->inboxEngine->markAsDeleted( $msgno );
@@ -491,6 +517,49 @@ class Cron_Job extends System_Core_Application
             $text = $addr[ 'name' ] . ' ';
         $text .= '<' . $addr[ 'email' ] . '>';
         return $text;
+    }
+
+    private function impersonateUser( $user )
+    {
+        $principal = new System_Api_Principal( $user );
+        System_Api_Principal::setCurrent( $principal );
+
+        $locale = new System_Api_Locale();
+        $this->translator->setLanguage( System_Core_Translator::UserLanguage, $locale->getSetting( 'language' ) );
+
+        System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
+    }
+
+    private function impersonateExternalUser( $robotUser )
+    {
+        $robotPrincipal = new System_Api_Principal( $robotUser );
+        System_Api_Principal::setCurrent( $robotPrincipal );
+
+        $this->translator->setLanguage( System_Core_Translator::UserLanguage, null );
+
+        System_Web_Base::setLinkMode( System_Web_Base::NoInternalLinks );
+    }
+
+    private function undoImpersonation()
+    {
+        System_Api_Principal::setCurrent( null );
+    }
+
+    private function setReplyToInbox( $enabled )
+    {
+        $serverManager = new System_Api_ServerManager();
+        $inbox = $serverManager->getSetting( 'inbox_engine' );
+
+        if ( $inbox != null && $enabled ) {
+            $inboxEmail = $serverManager->getSetting( 'inbox_email' );
+
+            $this->mailEngine->setReplyTo( $inboxEmail, null );
+        } else {
+            $server = $serverManager->getServer();
+            $serverEmail = $serverManager->getSetting( 'email_from' );
+
+            $this->mailEngine->setReplyTo( $serverEmail, $server[ 'server_name' ] );
+        }
     }
 
     private function tr( $source, $comment = null )

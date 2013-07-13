@@ -77,7 +77,7 @@ class System_Api_SubscriptionManager extends System_Api_Base
     * @param $email The email address associated with the subscription.
     * @return Subscription as an associative array or @c false if it doesn't exist.
     */
-    public function findEmailSubscription( $issue, $email )
+    public function findExternalSubscription( $issue, $email )
     {
         $issueId = $issue[ 'issue_id' ];
 
@@ -143,7 +143,7 @@ class System_Api_SubscriptionManager extends System_Api_Base
     * @param $email The email address to create the subscription for.
     * @retrun The identifier of the subscription.
     */
-    public function addEmailSubscription( $issue, $email )
+    public function addExternalSubscription( $issue, $email )
     {
         $issueId = $issue[ 'issue_id' ];
         $stampId = $issue[ 'stamp_id' ];
@@ -230,18 +230,43 @@ class System_Api_SubscriptionManager extends System_Api_Base
     }
 
     /**
-    * Get all subscriptions for which an email should be sent.
+    * Get current user's subscriptions for which an email should be sent.
     * @return An array of associative arrays represeting subscriptions.
     */
     public function getSubscriptionsToEmail()
     {
-        $query = 'SELECT s.subscription_id, s.issue_id, s.user_id, COALESCE( p.pref_value, s.user_email ) AS user_email, s.stamp_id'
-            . ' FROM {subscriptions} AS s'
-            . ' JOIN {issues} AS i ON i.issue_id = s.issue_id'
-            . ' LEFT OUTER JOIN {preferences} AS p ON p.user_id = s.user_id AND p.pref_key = %s'
-            . ' WHERE i.stamp_id > s.stamp_id AND COALESCE( p.pref_value, s.user_email ) IS NOT NULL';
+        $principal = System_Api_Principal::getCurrent();
 
-        return $this->connection->queryTable( $query, 'email' );
+        $query = 'SELECT s.subscription_id, s.issue_id, s.stamp_id'
+            . ' FROM {subscriptions} AS s'
+            . ' JOIN {issues} AS i ON i.issue_id = s.issue_id';
+        if ( !$principal->isAdministrator() ) {
+            $query .= ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
+                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
+        }
+        $query .= ' WHERE s.user_id = %1d AND i.stamp_id > s.stamp_id';
+
+        return $this->connection->queryTable( $query, $principal->getUserId() );
+    }
+
+    /**
+    * Get external subscriptions for which an email should be sent.
+    * @return An array of associative arrays represeting subscriptions.
+    */
+    public function getExternalSubscriptionsToEmail()
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $query = 'SELECT s.subscription_id, s.issue_id, s.stamp_id, s.user_email'
+            . ' FROM {subscriptions} AS s'
+            . ' JOIN {issues} AS i ON i.issue_id = s.issue_id';
+        if ( !$principal->isAdministrator() ) {
+            $query .= ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
+                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
+        }
+        $query .= ' WHERE s.user_id IS NULL AND i.stamp_id > s.stamp_id';
+
+        return $this->connection->queryTable( $query, $principal->getUserId() );
     }
 
     /**
@@ -253,10 +278,10 @@ class System_Api_SubscriptionManager extends System_Api_Base
         $subscriptionId = $subscription[ 'subscription_id' ];
         $issueId = $subscription[ 'issue_id' ];
 
-        $query = 'UPDATE {subscription}'
+        $query = 'UPDATE {subscriptions}'
             . ' SET stamp_id = ( SELECT stamp_id FROM {issues} AS i WHERE i.issue_id = %d )'
             . ' WHERE subscription_id = %d';
 
-        $this->connection->execute( $issueId, $subscriptionId );
+        $this->connection->execute( $query, $issueId, $subscriptionId );
     }
 }

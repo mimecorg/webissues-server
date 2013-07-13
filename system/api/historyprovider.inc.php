@@ -61,6 +61,8 @@ class System_Api_HistoryProvider
 
     private $issueId = 0;
     private $sinceStamp = null;
+    private $exceptOwn = false;
+    private $exceptSubscriptionId = null;
 
     private $arguments = null;
 
@@ -88,35 +90,47 @@ class System_Api_HistoryProvider
     }
 
     /**
+    * Exclude changes made by the current user.
+    */
+    public function setExceptOwnChanges()
+    {
+        $this->exceptOwn = true;
+    }
+
+    /**
+    * Exclude changes related to the given subscription.
+    */
+    public function setExceptSubscriptionId( $subscriptionId )
+    {
+        $this->exceptSubscriptionId = $subscriptionId;
+    }
+
+    /**
     * Return a query for calculating the number of items.
     * @param $itemType The type of history items.
     */
     public function generateCountQuery( $itemType )
     {
-        $this->arguments = array( $this->issueId );
+        $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT COUNT(*) FROM {changes} WHERE issue_id = %d';
+        $this->arguments = array( $this->issueId, System_Const::CommentAdded, System_Const::FileAdded, $principal->getUserId(), $this->sinceStamp, $this->exceptSubscriptionId );
 
-        if ( $itemType == self::CommentsAndFiles ) {
-            $this->arguments[] = System_Const::CommentAdded;
-            $this->arguments[] = System_Const::FileAdded;
-
-            $query .= ' AND ( change_type = %d OR change_type = %d )';
-        } else if ( $itemType == self::Comments ) {
-            $this->arguments[] = System_Const::CommentAdded;
-
-            $query .= ' AND change_type = %d';
-        } else if ( $itemType == self::Files ) {
-            $this->arguments[] = System_Const::FileAdded;
-
-            $query .= ' AND change_type = %d';
-        }
-
-        if ( $this->sinceStamp != null ) {
-            $this->arguments[] = $this->sinceStamp;
-
-            $query .= ' AND change_id > %d';
-        }
+        $query = 'SELECT COUNT(*) FROM {changes} AS ch';
+        if ( $this->exceptOwn )
+            $query .= ' JOIN {stamps} AS sc ON sc.stamp_id = ch.change_id';
+        $query .= ' WHERE ch.issue_id = %1d';
+        if ( $itemType == self::CommentsAndFiles )
+            $query .= ' AND ( ch.change_type = %2d OR ch.change_type = %3d )';
+        else if ( $itemType == self::Comments )
+            $query .= ' AND ch.change_type = %2d';
+        else if ( $itemType == self::Files )
+            $query .= ' AND ch.change_type = %3d';
+        if ( $this->sinceStamp != null )
+            $query .= ' AND ch.change_id > %5d';
+        if ( $this->exceptOwn )
+            $query .= ' AND sc.user_id <> %4d';
+        if ( $this->exceptSubscriptionId != null )
+            $query .= ' AND COALESCE( ch.subscription_id, 0 ) <> %6d';
 
         return $query;
     }
@@ -149,7 +163,7 @@ class System_Api_HistoryProvider
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $this->arguments = array( $this->issueId, System_Const::CommentAdded, System_Const::FileAdded, $principal->getUserId(), $this->sinceStamp );
+        $this->arguments = array( $this->issueId, System_Const::CommentAdded, System_Const::FileAdded, $principal->getUserId(), $this->sinceStamp, $this->exceptSubscriptionId );
 
         $query = 'SELECT ch.change_id, ch.change_type, ch.stamp_id,'
             . ' sc.stamp_time AS created_date, uc.user_id AS created_user, uc.user_name AS created_by,'
@@ -189,6 +203,10 @@ class System_Api_HistoryProvider
             $query .= ' AND ( ch.change_type = %2d OR ch.change_type = %3d )';
         if ( $this->sinceStamp != null )
             $query .= ' AND ch.change_id > %5d';
+        if ( $this->exceptOwn )
+            $query .= ' AND sc.user_id <> %4d';
+        if ( $this->exceptSubscriptionId != null )
+            $query .= ' AND COALESCE( ch.subscription_id, 0 ) <> %6d';
 
         return $query;
     }

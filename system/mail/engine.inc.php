@@ -27,6 +27,8 @@ class System_Mail_Engine
 {
     private $mailer = null;
 
+    private $replyTo = null;
+
     /**
     * Constructor.
     */
@@ -67,6 +69,8 @@ class System_Mail_Engine
 
         $this->mailer->SetFrom( $settings[ 'email_from' ], $server[ 'server_name' ] );
 
+        $this->replyTo = $settings[ 'email_from' ];
+
         $engine = $settings[ 'email_engine' ];
 
         switch ( $engine ) {
@@ -96,10 +100,14 @@ class System_Mail_Engine
     /**
     * Change the Reply-To address of sent messages.
     */
-    public function setReplyTo( $address )
+    public function setReplyTo( $address, $name )
     {
-        $this->mailer->ClearReplyTos();
-        $this->mailer->AddReplyTo( $address );
+        if ( $this->replyTo != $address ) {
+            $this->mailer->ClearReplyTos();
+            $this->mailer->AddReplyTo( $address, $name );
+
+            $this->replyTo = $address;
+        }
     }
 
     /**

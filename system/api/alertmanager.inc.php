@@ -289,30 +289,18 @@ class System_Api_AlertManager extends System_Api_Base
     }
 
     /**
-    * Update the stamp of last sent email for alerts.
-    * @param $includeSummary If @c true, the summary notifications and reports are
-    * updated in addition to immediate notifications.
+    * Update the stamp of last sent email for given alert.
+    * @param $alert The alert to update.
     */
-    public function updateAlertStamps( $includeSummary )
+    public function updateAlertStamp( $alert )
     {
-        $principal = System_Api_Principal::getCurrent();
+        $alertId = $alert[ 'alert_id' ];
+        $folderId = $alerts[ 'folder_id' ];
 
-        if ( $includeSummary ) {
-            $query = 'UPDATE {alerts}'
-                . ' SET stamp_id = ( SELECT f.stamp_id FROM {folders} AS f WHERE f.folder_id = {alerts}.folder_id )'
-                . ' WHERE user_id = %1d AND alert_email > %2d';
-            if ( !$principal->isAdministrator() )
-                $query .= ' AND folder_id IN ( SELECT f.folder_id FROM {folders} AS f JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d )';
+        $query = 'UPDATE {alerts}'
+            . ' SET stamp_id = ( SELECT f.stamp_id FROM {folders} AS f WHERE f.folder_id = %d )'
+            . ' WHERE alert_id = %d';
 
-            $this->connection->execute( $query, $principal->getUserId(), System_Const::NoEmail );
-        } else {
-            $query = 'UPDATE {alerts}'
-                . ' SET stamp_id = ( SELECT f.stamp_id FROM {folders} AS f WHERE f.folder_id = {alerts}.folder_id )'
-                . ' WHERE user_id = %1d AND alert_email = %2d';
-            if ( !$principal->isAdministrator() )
-                $query .= ' AND folder_id IN ( SELECT f.folder_id FROM {folders} AS f JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d )';
-
-            $this->connection->execute( $query, $principal->getUserId(), System_Const::ImmediateNotificationEmail );
-        }
+        $this->connection->execute( $query, $folderId, $alertId );
     }
 }
