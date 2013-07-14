@@ -60,6 +60,7 @@ class Admin_Settings_Inbox extends System_Web_Component
         $fields[ 'inbox_map_folder' ] = 'inboxMapFolder';
         $fields[ 'inbox_default_folder' ] = 'inboxDefaultFolder';
         $fields[ 'inbox_respond' ] = 'inboxRespond';
+        $fields[ 'inbox_subscribe' ] = 'inboxSubscribe';
 
         $this->form = new System_Web_Form( 'settings', $this );
         foreach ( $fields as $field )

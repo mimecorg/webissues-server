@@ -659,6 +659,7 @@ class System_Api_Validator
             case 'inbox_allow_external':
             case 'inbox_map_folder':
             case 'inbox_respond':
+            case 'inbox_subscribe':
                 if ( $value != '' )
                     $this->checkDecimalNumber( $value, 0, 0, 1 );
                 break;
