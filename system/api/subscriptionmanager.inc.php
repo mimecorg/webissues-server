@@ -151,7 +151,7 @@ class System_Api_SubscriptionManager extends System_Api_Base
         $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'subscriptions' );
 
         try {
-            $query = 'SELECT subscription_id FROM {subscriptions} WHERE issue_id = %d AND user_id IS NULL AS user_email = %s';
+            $query = 'SELECT subscription_id FROM {subscriptions} WHERE issue_id = %d AND user_id IS NULL AND user_email = %s';
             if ( $this->connection->queryScalar( $query, $issueId, $email ) !== false )
                 throw new System_Api_Error( System_Api_Error::SubscriptionAlreadyExists );
 
@@ -219,12 +219,10 @@ class System_Api_SubscriptionManager extends System_Api_Base
     /**
     * Associate given change with a subscription.
     * @param $changeId Identifier of the change.
-    * @param $subscription The subscription to associate.
+    * @param $subscriptionId Identifier of the subscription to associate.
     */
-    public function setSubscriptionForChange( $changeId, $subscription )
+    public function setSubscriptionForChange( $changeId, $subscriptionId )
     {
-        $subscriptionId = $subscription[ 'subscription_id' ];
-
         $query = 'UPDATE {changes} SET subscription_id = %d WHERE change_id = %d';
         $this->connection->execute( $query, $subscriptionId, $changeId );
     }
@@ -237,7 +235,7 @@ class System_Api_SubscriptionManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT s.subscription_id, s.issue_id, s.stamp_id'
+        $query = 'SELECT s.subscription_id, s.issue_id, s.user_id, s.stamp_id'
             . ' FROM {subscriptions} AS s'
             . ' JOIN {issues} AS i ON i.issue_id = s.issue_id';
         if ( !$principal->isAdministrator() ) {
@@ -257,7 +255,7 @@ class System_Api_SubscriptionManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT s.subscription_id, s.issue_id, s.stamp_id, s.user_email'
+        $query = 'SELECT s.subscription_id, s.issue_id, s.user_id, s.stamp_id, s.user_email'
             . ' FROM {subscriptions} AS s'
             . ' JOIN {issues} AS i ON i.issue_id = s.issue_id';
         if ( !$principal->isAdministrator() ) {

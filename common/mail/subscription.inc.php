@@ -44,7 +44,7 @@ class Common_Mail_Subscription extends System_Web_Component
         $sinceStamp = $this->subscription[ 'stamp_id' ];
 
         if ( $this->issue[ 'descr_id' ] > $sinceStamp ) {
-            $descr = $issueManager->getDescription( $issue );
+            $descr = $issueManager->getDescription( $this->issue );
             if ( $descr[ 'modified_user' ] != $this->subscription[ 'user_id' ] )
                 $this->descr = $descr;
         }
@@ -111,7 +111,7 @@ class Common_Mail_Subscription extends System_Web_Component
             if ( $this->descr[ 'descr_format' ] == System_Const::TextWithMarkup )
                 $text = System_Web_MarkupProcessor::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
             else
-                $text = System_Web_LinkLocator::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
+                $text = System_Web_LinkLocator::convertToRawHtml( $this->descr[ 'descr_text' ] );
             $this->descr[ 'descr_text' ] = $this->convertToParagraphs( $text );
         }
 

@@ -188,7 +188,7 @@ class Common_Mail_Notification extends System_Web_Component
                     if ( $descr[ 'descr_format' ] == System_Const::TextWithMarkup )
                         $text = System_Web_MarkupProcessor::convertToRawHtml( $descr[ 'descr_text' ], $prettyPrint );
                     else
-                        $text = System_Web_LinkLocator::convertToRawHtml( $descr[ 'descr_text' ], $prettyPrint );
+                        $text = System_Web_LinkLocator::convertToRawHtml( $descr[ 'descr_text' ] );
                     $descr[ 'descr_text' ] = $this->convertToParagraphs( $text );
                     $detail[ 'description' ] = $descr;
                 }

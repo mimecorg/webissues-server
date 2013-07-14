@@ -266,6 +266,7 @@ class Cron_Job extends System_Core_Application
         $projectManager = new System_Api_ProjectManager();
         $issueManager = new System_Api_IssueManager();
         $typeManager = new System_Api_TypeManager();
+        $subscriptionManager = new System_Api_SubscriptionManager();
         $parser = new System_Api_Parser();
         $eventLog = new System_Api_EventLog( $this );
 
@@ -289,8 +290,9 @@ class Cron_Job extends System_Core_Application
 
         $defaultFolderId = $serverManager->getSetting( 'inbox_default_folder' );
 
-        $leaveMessages = $serverManager->getSetting( 'inbox_leave_messages' ) == 1;
-        $respond = $serverManager->getSetting( 'inbox_respond' ) == 1;
+        $leaveMessages = $serverManager->getSetting( 'inbox_leave_messages' );
+        $respond = $serverManager->getSetting( 'inbox_respond' );
+        $subscribe = $serverManager->getSetting( 'inbox_subscribe' );
 
         foreach ( $messages as $msgno ) {
             $processed = false;
@@ -386,6 +388,8 @@ class Cron_Job extends System_Core_Application
                         if ( mb_strlen( $text ) > $maxLength )
                             $text = mb_substr( $text, 0, $maxLength - 3 ) . '...';
 
+                        $subscriptionId = null;
+
                         if ( $issue == null ) {
                             $name = $headers[ 'subject' ];
                             $name = $parser->normalizeString( $name, null, System_Api_Parser::AllowEmpty );
@@ -399,12 +403,29 @@ class Cron_Job extends System_Core_Application
                             $issueId = $issueManager->addIssue( $folder, $name, $values );
                             $issue = $issueManager->getIssue( $issueId );
 
-                            $issueManager->addDescription( $issue, $text, System_Const::PlainText );
+                            $stampId = $issueManager->addDescription( $issue, $text, System_Const::PlainText );
+                            $issue[ 'stamp_id' ] = $stampId;
 
                             $emailId = '#' . $issueId;
+
+                            if ( $subscribe == 1 && $this->mailEngine != null ) {
+                                if ( $user != null )
+                                    $subscriptionManager->addSubscription( $issue );
+                                else
+                                    $subscriptionId = $subscriptionManager->addExternalSubscription( $issue, $fromEmail );
+                            }
                         } else {
+                            if ( $subscribe == 1 && $this->mailEngine != null && $user == null ) {
+                                $subscription = $subscriptionManager->findExternalSubscription( $issue, $fromEmail );
+                                if ( $subscription != null )
+                                    $subscriptionId = $subscription[ 'subscription_id' ];
+                            }
+
                             $commentId = $issueManager->addComment( $issue, $text, System_Const::PlainText );
                             $emailId = '#' . $commentId;
+
+                            if ( $subscriptionId != null )
+                                $subscriptionManager->setSubscriptionForChange( $commentId, $subscriptionId );
                         }
 
                         $received++;
@@ -428,7 +449,10 @@ class Cron_Job extends System_Core_Application
                                 }
 
                                 $attachment = new System_Core_Attachment( $part[ 'body' ], $size, $name );
-                                $issueManager->addFile( $issue, $attachment, $name, $description );
+                                $fileId = $issueManager->addFile( $issue, $attachment, $name, $description );
+
+                                if ( $subscriptionId != null )
+                                    $subscriptionManager->setSubscriptionForChange( $fileId, $subscriptionId );
                             }
                         }
                     } catch ( System_Api_Error $e ) {
@@ -438,7 +462,7 @@ class Cron_Job extends System_Core_Application
                     $processed = true;
                 }
 
-                if ( $respond && $this->mailEngine != null && $issueId != null ) {
+                if ( $respond == 1 && $this->mailEngine != null && $issueId != null ) {
                     $mail = System_Web_Component::createComponent( 'Common_Mail_IssueCreated', null, $issue );
 
                     $body = $mail->run();
@@ -452,7 +476,7 @@ class Cron_Job extends System_Core_Application
                 $this->undoImpersonation();
             }
 
-            if ( !$leaveMessages )
+            if ( $leaveMessages != 1 )
                 $this->inboxEngine->markAsDeleted( $msgno );
             else if ( !$processed )
                 $this->inboxEngine->markAsProcessed( $msgno );
