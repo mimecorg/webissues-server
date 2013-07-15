@@ -784,6 +784,30 @@ class Server_Actions
         $this->setOkIf( $stateManager->setFolderRead( $folder, $readId ) );
     }
 
+    public function addSubscription( $issueId )
+    {
+        $this->principal->checkAuthenticated();
+
+        $issueManager = new System_Api_IssueManager();
+        $issue = $issueManager->getIssue( $issueId );
+
+        $subscriptionManager = new System_Api_SubscriptionManager();
+        $this->setId( $subscriptionManager->addSubscription( $issue ) );
+    }
+
+    public function deleteSubscription( $issueId, $subscriptionId )
+    {
+        $this->principal->checkAuthenticated();
+
+        $issueManager = new System_Api_IssueManager();
+        $issue = $issueManager->getIssue( $issueId );
+
+        $subscriptionManager = new System_Api_SubscriptionManager();
+        $subscription = $subscriptionManager->getSubscription( $subscriptionId );
+
+        $this->setOkIf( $subscriptionManager->deleteSubscription( $issue, $subscription ) );
+    }
+
     public function addAlert( $folderId, $viewId, $alertEmail )
     {
         $this->principal->checkAuthenticated();
