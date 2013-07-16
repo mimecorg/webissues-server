@@ -294,27 +294,41 @@ class Cron_Job extends System_Core_Application
         $respond = $serverManager->getSetting( 'inbox_respond' );
         $subscribe = $serverManager->getSetting( 'inbox_subscribe' );
 
+        if ( $this->mailEngine != null )
+            $serverEmail = $serverManager->getSetting( 'email_from' );
+
         foreach ( $messages as $msgno ) {
             $processed = false;
+            $ignore = false;
 
             $headers = $this->inboxEngine->getHeaders( $msgno );
 
             $fromEmail = $headers[ 'from' ][ 'email' ];
 
-            try {
-                $user = $userManager->getUserByEmail( $fromEmail );
-            } catch ( System_Api_Error $e ) {
-                $user = null;
+            if ( $this->mailEngine != null && mb_strtoupper( $fromEmail ) == mb_strtoupper( $serverEmail ) ) {
+                $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Ignored inbox email from "%1"', null, $fromEmail ) );
+                $ignore = true;
             }
 
-            if ( $user != null )
-                $this->impersonateUser( $user );
-            else if ( $allowExternal == 1 )
-                $this->impersonateExternalUser( $robotUser );
-            else
-                $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Ignored inbox email from unknown address "%1"', null, $fromEmail ) );
+            if ( !$ignore ) {
+                try {
+                    $user = $userManager->getUserByEmail( $fromEmail );
+                } catch ( System_Api_Error $e ) {
+                    $user = null;
+                }
 
-            if ( $user != null || $allowExternal == 1 ) {
+                if ( $user == null && $allowExternal != 1 ) {
+                    $eventLog->addEvent( System_Api_EventLog::Cron, System_Api_EventLog::Warning, $eventLog->tr( 'Ignored inbox email from unknown address "%1"', null, $fromEmail ) );
+                    $ignore = true;
+                }
+            }
+
+            if ( !$ignore ) {
+                if ( $user != null )
+                    $this->impersonateUser( $user );
+                else
+                    $this->impersonateExternalUser( $robotUser );
+
                 $folder = null;
                 $issue = null;
 
@@ -509,7 +523,7 @@ class Cron_Job extends System_Core_Application
     {
         $name = preg_replace( '/\W+/ui', '', $name );
 
-        if ( $name != '' && mb_strripos( $name, $part ) !== false )
+        if ( $name != '' && mb_stripos( $name, $part ) !== false )
             return true;
 
         return false;
