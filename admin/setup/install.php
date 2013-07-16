@@ -183,10 +183,10 @@ class Admin_Setup_Install extends System_Web_Component
 
             case 'connection':
                 $this->form->addItemsRule( 'engine', $this->engineOptions );
-                $this->form->addTextRule( 'host', System_Const::NameMaxLength );
-                $this->form->addTextRule( 'database', System_Const::NameMaxLength );
-                $this->form->addTextRule( 'user', System_Const::LoginMaxLength, System_Api_Parser::AllowEmpty );
-                $this->form->addTextRule( 'password', System_Const::PasswordMaxLength, System_Api_Parser::AllowEmpty );
+                $this->form->addTextRule( 'host', System_Const::ValueMaxLength );
+                $this->form->addTextRule( 'database', System_Const::ValueMaxLength );
+                $this->form->addTextRule( 'user', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
+                $this->form->addTextRule( 'password', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
                 $this->form->addItemsRule( 'mode', $this->modeOptions );
                 $this->form->addTextRule( 'prefix', System_Const::NameMaxLength, System_Api_Parser::AllowEmpty );
                 break;
