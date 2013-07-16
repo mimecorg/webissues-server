@@ -109,8 +109,8 @@ class System_Api_PreferencesManager extends System_Api_Base
             System_Api_Principal::getCurrent()->checkAdministrator();
 
         if ( $key == 'email' && $newValue != '' ) {
-            $query = 'SELECT user_id FROM {preferences} WHERE pref_key = %s AND pref_value = %s';
-            if ( $this->connection->queryScalar( $query, 'email', $newValue ) !== false )
+            $query = 'SELECT user_id FROM {preferences} WHERE pref_key = %s AND UPPER( pref_value ) = %s';
+            if ( $this->connection->queryScalar( $query, 'email', mb_strtoupper( $newValue ) ) !== false )
                 throw new System_Api_Error( System_Api_Error::EmailAlreadyExists );
         }
 

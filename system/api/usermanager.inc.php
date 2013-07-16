@@ -316,9 +316,9 @@ class System_Api_UserManager extends System_Api_Base
         $query = 'SELECT u.user_id, u.user_login, u.user_name, u.user_access'
             . ' FROM {users} AS u'
             . ' JOIN {preferences} AS p ON p.user_id = u.user_id AND p.pref_key = %s'
-            . ' WHERE p.pref_value = %s AND u.user_access > %d';
+            . ' WHERE UPPER( p.pref_value ) = %s AND u.user_access > %d';
 
-        if ( !( $user = $this->connection->queryRow( $query, 'email', $email, System_Const::NoAccess ) ) )
+        if ( !( $user = $this->connection->queryRow( $query, 'email', mb_strtoupper( $email ), System_Const::NoAccess ) ) )
             throw new System_Api_Error( System_Api_Error::UnknownUser );
 
         return $user;

@@ -144,12 +144,12 @@ class System_Api_RegistrationManager extends System_Api_Base
             if ( $this->connection->queryScalar( $query, $login, $name ) !== false )
                 throw new System_Api_Error( System_Api_Error::UserAlreadyExists );
 
-            $query = 'SELECT user_id FROM {preferences} WHERE pref_key = %s AND pref_value = %s';
-            if ( $this->connection->queryScalar( $query, 'email', $email ) !== false )
+            $query = 'SELECT user_id FROM {preferences} WHERE pref_key = %s AND UPPER( pref_value ) = %s';
+            if ( $this->connection->queryScalar( $query, 'email', mb_strtoupper( $email ) ) !== false )
                 throw new System_Api_Error( System_Api_Error::EmailAlreadyExists );
 
-            $query = 'SELECT request_id FROM {register_requests} WHERE user_email = %s';
-            if ( $this->connection->queryScalar( $query, $email ) !== false )
+            $query = 'SELECT request_id FROM {register_requests} WHERE UPPER( user_email ) = %s';
+            if ( $this->connection->queryScalar( $query, mb_strtoupper( $email ) ) !== false )
                 throw new System_Api_Error( System_Api_Error::EmailAlreadyExists );
 
             $passwordHash = new System_Core_PasswordHash();
