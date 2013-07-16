@@ -89,7 +89,7 @@ class Register extends System_Web_Component
             $this->form->addTextRule( 'password', System_Const::PasswordMaxLength );
             $this->form->addTextRule( 'passwordConfirm', System_Const::PasswordMaxLength );
             $this->form->addPasswordRule( 'passwordConfirm', 'password' );
-            $this->form->addTextRule( 'email', System_Const::NameMaxLength );
+            $this->form->addTextRule( 'email', System_Const::ValueMaxLength );
         }
     }
 

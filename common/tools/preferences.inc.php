@@ -42,14 +42,14 @@ class Common_Tools_Preferences extends System_Web_Component
         Common_Tools_ViewSettings::registerFields( $fields );
         Common_Tools_Editing::registerFields( $fields );
 
-        foreach ( $fields as $field )
-            $this->form->addField( $field );
-
         $serverManager = new System_Api_ServerManager();
         $this->emailEngine = $serverManager->getSetting( 'email_engine' );
 
         if ( $this->emailEngine )
             $this->addNotificationFields( $fields );
+
+        foreach ( $fields as $field )
+            $this->form->addField( $field );
 
         $this->user = $helper->getUser();
         $this->isOwn = $this->user == null || $this->user[ 'user_id' ] == System_Api_Principal::getCurrent()->getUserId();
@@ -164,6 +164,8 @@ class Common_Tools_Preferences extends System_Web_Component
             $this->hours[] = $formatter->convertTime( $hour );
             $this->form->addField( 'hour' . $i, false );
         }
+
+        $this->form->addTextRule( 'email', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
     }
 
     private function formatDaysHours()
