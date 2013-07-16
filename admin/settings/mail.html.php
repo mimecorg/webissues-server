@@ -42,7 +42,7 @@
 
 <p><?php echo $this->tr( 'Enter the base URL of the server, with the trailing slash, to enable hyperlinks in emails.' ) ?></p>
 
-<?php $form->renderText( $this->tr( 'Server URL:' ), 'baseUrl', array( 'size' => 40 )  ) ?>
+<?php $form->renderText( $this->tr( 'Server URL:' ), 'baseUrl', array( 'size' => 60 )  ) ?>
 
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'Detect' ), 'detect' ) ?>
