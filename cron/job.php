@@ -384,6 +384,10 @@ class Cron_Job extends System_Core_Application
                         $text = $parser->normalizeString( $text, null, System_Api_Parser::MultiLine );
                         $text = preg_replace( '/\n(?:[ \t]*\n)+/', "\n\n", $text );
 
+                        // two separators in the same line or in two consecutive lines indicate where the text should be cut off
+                        $separator = str_repeat( '-', 11 );
+                        $text = preg_replace( '/[ \n\t]*\n[^-\n]*' . $separator . '[^-\n]*[ \n\t][^-\n]*' . $separator . '(?!-).*/s', '', $text );
+
                         $maxLength = $serverManager->getSetting( 'comment_max_length' );
                         if ( mb_strlen( $text ) > $maxLength )
                             $text = mb_substr( $text, 0, $maxLength - 3 ) . '...';
