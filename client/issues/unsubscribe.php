@@ -48,7 +48,7 @@ class Client_Issues_Unsubscribe extends System_Web_Component
             if ( $this->form->isSubmittedWith( 'ok' ) ) {
                 $subscriptionManager = new System_Api_SubscriptionManager();
                 $subscription = $subscriptionManager->getSubscriptionForIssue( $this->issue );
-                $subscriptionManager->deleteSubscription( $this->issue, $subscription );
+                $subscriptionManager->deleteSubscription( $subscription );
                 $this->response->redirect( $breadcrumbs->getParentUrl() );
             }
         }

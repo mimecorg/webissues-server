@@ -171,17 +171,14 @@ class System_Api_SubscriptionManager extends System_Api_Base
 
     /**
     * Delete a subscription.
-    * @param $issue The issue associated with the subscription.
     * @param $subscription The subscription to delete.
-    * @return @c true if the alert was deleted.
+    * @return @c true if the subscription was deleted.
     */
-    public function deleteSubscription( $issue, $subscription )
+    public function deleteSubscription( $subscription )
     {
         $subscriptionId = $subscription[ 'subscription_id' ];
         $userId = $subscription[ 'user_id' ];
-
-        if ( $issue[ 'issue_id' ] != $subscription[ 'issue_id' ] )
-            throw new System_Api_Error( System_Api_Error::UnknownSubscription );
+        $issueId = $subscription[ 'issue_id' ];
 
         $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'subscriptions' );
 
@@ -190,21 +187,21 @@ class System_Api_SubscriptionManager extends System_Api_Base
             $this->connection->execute( $query, $subscriptionId );
 
             if ( $userId != null ) {
-                $issueId = $issue[ 'issue_id' ];
-                $stateId = $issue[ 'state_id' ];
-                $readId = $issue[ 'read_id' ];
+                $query = 'SELECT state_id, read_id FROM {issue_states} WHERE user_id = %d AND issue_id = %d';
+                $state = $this->connection->queryRow( $query, $userId, $issueId );
 
-                if ( $stateId != null ) {
+                if ( $state != null ) {
                     $query = 'DELETE FROM {issue_states} WHERE state_id = %d';
-                    $this->connection->execute( $query, $stateId );
+                    $this->connection->execute( $query, $state[ 'state_id' ] );
                 }
 
-                $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id, subscription_id )';
-                if ( $readId > 0 )
-                    $query .= ' VALUES ( %1d, %2d, %3d, NULL )';
-                else
-                    $query .= ' VALUES ( %1d, %2d, NULL, NULL )';
-                $this->connection->execute( $query, $userId, $issueId, $readId );
+                if ( $state != null && $state[ 'read_id' ] != null ) {
+                    $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id, subscription_id ) VALUES ( %1d, %2d, %3d, NULL )';
+                    $this->connection->execute( $query, $userId, $issueId, $state[ 'read_id' ] );
+                } else {
+                    $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id, subscription_id ) VALUES ( %1d, %2d, NULL, NULL )';
+                    $this->connection->execute( $query, $userId, $issueId );
+                }
             }
 
             $transaction->commit();

@@ -795,17 +795,14 @@ class Server_Actions
         $this->setId( $subscriptionManager->addSubscription( $issue ) );
     }
 
-    public function deleteSubscription( $issueId, $subscriptionId )
+    public function deleteSubscription( $subscriptionId )
     {
         $this->principal->checkAuthenticated();
-
-        $issueManager = new System_Api_IssueManager();
-        $issue = $issueManager->getIssue( $issueId );
 
         $subscriptionManager = new System_Api_SubscriptionManager();
         $subscription = $subscriptionManager->getSubscription( $subscriptionId );
 
-        $this->setOkIf( $subscriptionManager->deleteSubscription( $issue, $subscription ) );
+        $this->setOkIf( $subscriptionManager->deleteSubscription( $subscription ) );
     }
 
     public function addAlert( $folderId, $viewId, $alertEmail )
