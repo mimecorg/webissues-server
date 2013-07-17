@@ -74,7 +74,7 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'Sending Emails' ) ?></legend>
 
-<p><?php echo $this->tr( 'These option enable responses and automatic subscriptions for issues created through the inbox. Sending emails needs to be enabled.' ) ?></p>
+<p><?php echo $this->tr( 'These options enable responses and automatic subscriptions for issues created through the inbox. Sending emails needs to be enabled.' ) ?></p>
 
 <?php $form->renderCheckBox( $this->tr( 'Send responses when issues are created' ), 'inboxRespond' ) ?>
 <?php $form->renderCheckBox( $this->tr( 'Subscribe senders to created issues' ), 'inboxSubscribe' ) ?>

@@ -90,11 +90,11 @@ class Admin_Settings_Inbox extends System_Web_Component
 
         $this->engineOptions = array(
             '' => $this->tr( 'Disabled' ),
-            'imap' => $this->tr( 'IMAP servers' ),
+            'imap' => $this->tr( 'IMAP server' ),
             'pop3' => $this->tr( 'POP3 server' ) );
 
         $this->encryptionOptions = array(
-            '' => $this->tr( 'None' ),
+            '' => $this->tr( 'None', 'encryption' ),
             'ssl' => 'SSL',
             'tls' => 'TLS' );
 
