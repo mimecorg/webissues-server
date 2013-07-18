@@ -1,3 +1,9 @@
+1.1-beta2 (2013-07-18)
+    * added the email inbox
+    * added support for subscriptions
+    * fixed checking requirements for Postgres engine
+    * increased the limit of database options in the installer
+
 1.1-beta1 (2013-05-21)
     * added issue and project descriptions
     * added text with markup format
