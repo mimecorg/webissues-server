@@ -39,6 +39,10 @@ class Common_Mail_IssueCreated extends System_Web_Component
         $this->issueId = $this->issue[ 'issue_id' ];
         $this->issueName = $this->issue[ 'issue_name' ];
 
+        $serverManager = new System_Api_ServerManager();
+        if ( $serverManager->getSetting( 'inbox_subscribe' ) == 1 )
+            $this->subscribe = true;
+
         if ( self::getLinkMode() != self::NoInternalLinks )
             $this->hasLinks = true;
     }
