@@ -4987,11 +4987,16 @@
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="14"/>
+        <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../mail/issuecreated.html.php" line="18"/>
         <source>You can also %1 by logging in to the WebIssues Server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mail/issuecreated.html.php" line="14"/>
+        <location filename="../../mail/issuecreated.html.php" line="18"/>
         <source>view this issue</source>
         <translation type="unfinished"></translation>
     </message>
