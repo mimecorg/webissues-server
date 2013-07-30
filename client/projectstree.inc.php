@@ -31,26 +31,32 @@ class Client_ProjectsTree extends System_Web_Component
     {
         $projectManager = new System_Api_ProjectManager();
 
-        $issueId = (int)$this->request->getQueryString( 'issue' );
-        if ( $issueId ) {
-            $issueManager = new System_Api_IssueManager();
-            $issue = $issueManager->getIssue( $issueId );
-            $folderId = $issue[ 'folder_id' ];
-            $projectId = $issue[ 'project_id' ];
-        } else {
-            $folderId = (int)$this->request->getQueryString( 'folder' );
-            if ( $folderId ) {
-                $folder = $projectManager->getFolder( $folderId );
-                $projectId = $folder[ 'project_id' ];
+        $typeId = (int)$this->request->getQueryString( 'type' );
+        if ( !$typeId ) {
+            $issueId = (int)$this->request->getQueryString( 'issue' );
+            if ( $issueId ) {
+                $issueManager = new System_Api_IssueManager();
+                $issue = $issueManager->getIssue( $issueId );
+                $folderId = $issue[ 'folder_id' ];
+                $projectId = $issue[ 'project_id' ];
             } else {
-                $projectId = (int)$this->request->getQueryString( 'project' );
+                $folderId = (int)$this->request->getQueryString( 'folder' );
+                if ( $folderId ) {
+                    $folder = $projectManager->getFolder( $folderId );
+                    $projectId = $folder[ 'project_id' ];
+                } else {
+                    $projectId = (int)$this->request->getQueryString( 'project' );
+                }
             }
         }
 
         $this->grid = new System_Web_Grid();
         $this->grid->setPageSize( 10 );
         $this->grid->setParameters( 'ppg', 'po', 'ps' );
-        $this->grid->setSelection( $folderId, $projectId );
+        if ( $typeId )
+            $this->grid->setSelection( $typeId, 'T' );
+        else
+            $this->grid->setSelection( $folderId, $projectId );
 
         $this->grid->setColumns( $projectManager->getProjectsColumns() );
         $this->grid->setDefaultSort( 'name', System_Web_Grid::Ascending );
@@ -76,6 +82,13 @@ class Client_ProjectsTree extends System_Web_Component
                 $anyProjectAdmin = true;
         }
         $this->grid->removeExpandCookieIds( 'wi_projects', $emptyProjects );
+
+        $typeManager = new System_Api_TypeManager();
+        $types = $typeManager->getAvailableIssueTypes();
+
+        $this->types = array();
+        foreach ( $types as $type )
+            $this->types[ $type[ 'type_id' ] ] = $type;
 
         $javaScript = new System_Web_JavaScript( $this->view );
         $javaScript->registerExpandCookie( 'wi_projects' );

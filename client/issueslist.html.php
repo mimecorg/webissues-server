@@ -82,6 +82,10 @@
 
 <p class="noitems"><?php echo $this->tr( 'There are no issues matching the selected view.' ) ?></p>
 
+<?php elseif ( !empty( $isType ) ): ?>
+
+<p class="noitems"><?php echo $this->tr( 'There are no issues of this type.' ) ?></p>
+
 <?php else: ?>
 
 <p class="noitems"><?php echo $this->tr( 'There are no issues in this folder.' ) ?></p>

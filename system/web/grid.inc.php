@@ -374,7 +374,7 @@ class System_Web_Grid extends System_Web_Base
         $classes[] = 'parent';
         $classes[] = 'parent-' . $parentId;
 
-        if ( $this->rowId == null && $this->parentId == $parentId )
+        if ( $this->rowId == null && $this->parentId === $parentId )
             $classes[] = 'selected';
 
         echo $this->buildTag( 'tr', array( 'class' => join( ' ', $classes ) ), true );
@@ -395,7 +395,7 @@ class System_Web_Grid extends System_Web_Base
         $classes[] = 'row-' . $rowId;
         $classes[] = 'parent-' . $parentId;
 
-        if ( $this->rowId == $rowId )
+        if ( $this->rowId === $rowId && $this->parentId === $parentId )
             $classes[] = 'selected';
 
         echo $this->buildTag( 'tr', array( 'class' => join( ' ', $classes ) ), true );

@@ -31,27 +31,39 @@ class Client_IssuesList extends System_Web_Component
     {
         $issueManager = new System_Api_IssueManager();
         $projectManager = new System_Api_ProjectManager();
+        $typeManager = new System_Api_TypeManager();
 
         $issueId = (int)$this->request->getQueryString( 'issue' );
-        if ( $issueId ) {
-            $issue = $issueManager->getIssue( $issueId );
-            $folder = $projectManager->getFolderFromIssue( $issue );
-            $folderId = $folder[ 'folder_id' ];
+        $typeId = (int)$this->request->getQueryString( 'type' );
+        if ( $typeId ) {
+            $type = $typeManager->getIssueType( $typeId );
+            $folder = null;
+            $this->folderName = $type[ 'type_name' ];
+            $this->isType = true;
+            $key = 'type';
+            $id = $typeId;
         } else {
-            $folderId = (int)$this->request->getQueryString( 'folder' );
-            $folder = $projectManager->getFolder( $folderId );
+            if ( $issueId ) {
+                $issue = $issueManager->getIssue( $issueId );
+                $folder = $projectManager->getFolderFromIssue( $issue );
+                $folderId = $folder[ 'folder_id' ];
+            } else {
+                $folderId = (int)$this->request->getQueryString( 'folder' );
+                $folder = $projectManager->getFolder( $folderId );
+            }
+            $type = $typeManager->getIssueTypeForFolder( $folder );
+            $this->folderName = $folder[ 'folder_name' ];
+            $key = 'folder';
+            $id = $folderId;
         }
-
-        $this->folderName = $folder[ 'folder_name' ];
 
         if ( !$issueId ) {
-            $breadcrumbs = new Common_Breadcrumbs( $this );
-            $breadcrumbs->initialize( Common_Breadcrumbs::Project, $folder );
-            $this->view->setSlot( 'page_title', $folder[ 'folder_name' ] );
+            if ( $folder ) {
+                $breadcrumbs = new Common_Breadcrumbs( $this );
+                $breadcrumbs->initialize( Common_Breadcrumbs::Project, $folder );
+            }
+            $this->view->setSlot( 'page_title', $this->folderName );
         }
-
-        $typeManager = new System_Api_TypeManager();
-        $type = $typeManager->getIssueTypeForFolder( $folder );
 
         $viewManager = new System_Api_ViewManager();
         $views = $viewManager->getViewsForIssueType( $type );
@@ -84,11 +96,11 @@ class Client_IssuesList extends System_Web_Component
 
             if ( !$this->viewForm->hasErrors() ) {
                 if ( $this->viewSelect == $initialView )
-                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'folder' => $folderId ) );
+                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( $key => $id ) );
                 else if ( $this->viewSelect != '' )
-                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'folder' => $folderId, 'view' => $this->viewSelect ) );
+                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( $key => $id, 'view' => $this->viewSelect ) );
                 else
-                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'folder' => $folderId, 'view' => 0 ) );
+                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( $key => $id, 'view' => 0 ) );
                 $this->response->redirect( $url );
             }
         }
@@ -110,7 +122,10 @@ class Client_IssuesList extends System_Web_Component
             $this->viewForm->getSubmitSelector( 'go' ) );
 
         $queryGenerator = new System_Api_QueryGenerator();
-        $queryGenerator->setFolder( $folder );
+        if ( $folder )
+            $queryGenerator->setFolder( $folder );
+        else
+            $queryGenerator->setIssueType( $type );
 
         $personalViewId = 0;
 
@@ -207,19 +222,19 @@ class Client_IssuesList extends System_Web_Component
         $this->toolBar = new System_Web_ToolBar();
         $this->toolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ) );
 
-        $this->toolBar->addFixedCommand( '/client/issues/addissue.php', '/common/images/issue-new-16.png', $this->tr( 'Add Issue' ), array( 'folder' => $folderId ) );
-        $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-read-16.png', $this->tr( 'Mark All As Read' ), array( 'folder' => $folderId, 'status' => 1 ) );
-        $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-unread-16.png', $this->tr( 'Mark All As Unread' ), array( 'folder' => $folderId, 'status' => 0 ) );
-        $this->toolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Manage Views' ), array( 'folder' => $folderId ) );
-        $this->toolBar->addFixedCommand( '/client/alerts/index.php', '/common/images/configure-alerts-16.png', $this->tr( 'Manage Alerts' ), array( 'folder' => $folderId ) );
+        $this->toolBar->addFixedCommand( '/client/issues/addissue.php', '/common/images/issue-new-16.png', $this->tr( 'Add Issue' ), array( $key => $id ) );
+        $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-read-16.png', $this->tr( 'Mark All As Read' ), array( $key => $id, 'status' => 1 ) );
+        $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-unread-16.png', $this->tr( 'Mark All As Unread' ), array( $key => $id, 'status' => 0 ) );
+        $this->toolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Manage Views' ), array( $key => $id ) );
+        $this->toolBar->addFixedCommand( '/client/alerts/index.php', '/common/images/configure-alerts-16.png', $this->tr( 'Manage Alerts' ), array( $key => $id ) );
 
         $this->viewToolBar = new System_Web_ToolBar();
         $this->viewToolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ) );
 
-        $this->viewToolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add View' ), array( 'folder' => $folderId, 'direct' => 1 ) );
+        $this->viewToolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add View' ), array( $key => $id, 'direct' => 1 ) );
         if ( $personalViewId != 0 )
-            $this->viewToolBar->addFixedCommand( '/client/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ), array( 'folder' => $folderId, 'id' => $personalViewId, 'direct' => 1 ) );
+            $this->viewToolBar->addFixedCommand( '/client/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ), array( $key => $id, 'id' => $personalViewId, 'direct' => 1 ) );
         if ( $viewParam != 0 )
-            $this->viewToolBar->addFixedCommand( '/client/views/clone.php', '/common/images/view-clone-16.png', $this->tr( 'Clone View' ), array( 'folder' => $folderId, 'id' => $viewParam, 'direct' => 1 ) );
+            $this->viewToolBar->addFixedCommand( '/client/views/clone.php', '/common/images/view-clone-16.png', $this->tr( 'Clone View' ), array( $key => $id, 'id' => $viewParam, 'direct' => 1 ) );
     }
 }

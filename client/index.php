@@ -43,11 +43,12 @@ class Client_Index extends System_Web_Component
         $issueId = (int)$this->request->getQueryString( 'issue' );
         $folderId = (int)$this->request->getQueryString( 'folder' );
         $projectId = (int)$this->request->getQueryString( 'project' );
+        $typeId = (int)$this->request->getQueryString( 'type' );
 
         $this->view->setSlot( 'page_title', $this->tr( 'Web Client' ) );
 
         $this->leftPaneClass = 'Client_ProjectsTree';
-        if ( $folderId || $issueId )
+        if ( $folderId || $issueId || $typeId )
             $this->topPaneClass = 'Client_IssuesList';
         else if ( $projectId )
             $this->topPaneClass = 'Client_Project';

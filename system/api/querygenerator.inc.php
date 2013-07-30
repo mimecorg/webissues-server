@@ -33,6 +33,7 @@ class System_Api_QueryGenerator
     const WithState = 2;
 
     private $folderId = 0;
+    private $typeId = 0;
     private $attributes = array();
 
     private $columns = array();
@@ -71,8 +72,24 @@ class System_Api_QueryGenerator
         $this->folderId = $folder[ 'folder_id' ];
 
         $typeManager = new System_Api_TypeManager();
-
         $type = $typeManager->getIssueTypeForFolder( $folder );
+
+        $this->loadAttributes( $type );
+    }
+
+    /**
+    * Set the type of the issues to retrieve.
+    */
+    public function setIssueType( $type )
+    {
+        $this->typeId = $type[ 'type_id' ];
+
+        $this->loadAttributes( $type );
+    }
+
+    private function loadAttributes( $type )
+    {
+        $typeManager = new System_Api_TypeManager();
         $attributes = $typeManager->getAttributeTypesForIssueType( $type );
 
         $viewManager = new System_Api_ViewManager();
@@ -402,6 +419,14 @@ class System_Api_QueryGenerator
 
         $this->arguments = array();
 
+        if ( $this->typeId != 0 ) {
+            $joins[] = 'JOIN {folders} AS f ON f.folder_id = i.folder_id';
+            if ( !$principal->isAdministrator() ) {
+                $joins[] = 'JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %d';
+                $this->arguments[] = $principal->getUserId();
+            }
+        }
+
         if ( ( $flags & self::WithState ) || $this->noRead )
             $this->addJoin( $joins, 'LEFT OUTER JOIN {issue_states} AS s ON s.issue_id = i.issue_id AND s.user_id = %d', $principal->getUserId() );
 
@@ -446,8 +471,13 @@ class System_Api_QueryGenerator
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $conditions = array( 'i.folder_id = %d' );
-        $this->arguments[] = $this->folderId;
+        if ( $this->folderId != 0 ) {
+            $conditions = array( 'i.folder_id = %d' );
+            $this->arguments[] = $this->folderId;
+        } else if ( $this->typeId != 0 ) {
+            $conditions = array( 'f.type_id = %d' );
+            $this->arguments[] = $this->typeId;
+        }
 
         if ( $this->sinceStamp != null ) {
             $conditions[] = 'i.stamp_id > %d';

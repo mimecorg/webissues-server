@@ -142,9 +142,14 @@ class Common_Breadcrumbs extends System_Web_Base
                 break;
 
             case self::Folder:
-                $this->append( self::Project, $object );
-                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ), array( 'folder' => $object[ 'folder_id' ] ) );
-                $this->names[] = $object[ 'folder_name' ];
+                if ( (int)$this->request->getQueryString( 'type' ) ) {
+                    $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ), array( 'type' => $object[ 'type_id' ] ) );
+                    $this->names[] = $object[ 'type_name' ];
+                } else {
+                    $this->append( self::Project, $object );
+                    $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ), array( 'folder' => $object[ 'folder_id' ] ) );
+                    $this->names[] = $object[ 'folder_name' ];
+                }
                 break;
 
             case self::ManageViews:
@@ -161,7 +166,7 @@ class Common_Breadcrumbs extends System_Web_Base
 
             case self::Issue:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'hpg', 'hflt', 'unread' ), array( 'issue' => $object[ 'issue_id' ] ) );
+                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'hpg', 'hflt', 'unread', 'type' ), array( 'issue' => $object[ 'issue_id' ] ) );
                 $this->names[] = $object[ 'issue_name' ];
                 break;
 
