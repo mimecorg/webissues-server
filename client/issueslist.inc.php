@@ -215,6 +215,9 @@ class Client_IssuesList extends System_Web_Component
                     $issue[ $name ] = $this->truncate( $value, 60 );
                 else
                     $issue[ $name ] = System_Web_LinkLocator::convertAndTruncate( $value, 60 );
+
+                if ( $column == System_Api_Column::Location )
+                    $issue[ 'project_name' ] = $row[ 'project_name' ];
             }
             $this->issues[ $row[ 'issue_id' ] ] = $issue;
         }

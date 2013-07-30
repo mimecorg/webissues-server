@@ -202,13 +202,30 @@ class System_Web_Grid extends System_Web_Base
         if ( isset( $order ) && isset( $this->columns[ $order ] ) ) {
             $column = $this->columns[ $order ];
 
-            if ( $sort == self::Ascending )
-                return "$column ASC";
-            else if ( $sort == self::Descending )
-                return "$column DESC";
+            return self::makeOrderBy( $column, $sort );
         }
 
         throw new System_Core_Exception( 'Invalid sort order' );
+    }
+
+    /**
+    * Create the sorting order specifier for given column and sorting order.
+    */
+    public static function makeOrderBy( $column, $sort )
+    {
+        if ( $sort == self::Ascending )
+            $order = ' ASC';
+        else if ( $sort == self::Descending )
+            $order = ' DESC';
+        else
+            throw new System_Core_Exception( 'Invalid sort order' );
+
+        $parts = explode( ', ', $column );
+
+        foreach ( $parts as &$part )
+            $part .= $order;
+
+        return implode( ', ', $parts );
     }
 
     /**

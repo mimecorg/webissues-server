@@ -33,6 +33,7 @@ class System_Api_Column
     const CreatedBy = 3;
     const ModifiedDate = 4;
     const ModifiedBy = 5;
+    const Location = 6;
 
     /**
     * Value added to attribute identifier to create a user-defined column

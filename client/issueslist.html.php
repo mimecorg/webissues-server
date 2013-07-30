@@ -60,6 +60,8 @@
         endif;
         echo $this->imageAndTextLink( $this->mergeQueryString( WI_SCRIPT_URL, array( 'issue' => $issueId, 'folder' => null, 'hpg' => null, 'hflt' => null, 'unread' => null ) ),
             $imageUrl, $issue[ $name ], array(), array(), $issue[ 'tip_name' ] );
+    elseif ( $column == System_Api_Column::Location ):
+        echo $issue[ 'project_name' ] . ' &mdash; ' . $issue[ 'folder_name' ];
     else:
         echo $issue[ $name ];
     endif

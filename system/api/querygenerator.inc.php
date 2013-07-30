@@ -118,6 +118,9 @@ class System_Api_QueryGenerator
 
         $this->columns = array_intersect( $columns, $allColumns );
 
+        if ( $this->typeId != 0 )
+            $this->columns = array_merge( array_slice( $this->columns, 0, 2 ), array( System_Api_Column::Location ), array_slice( $this->columns, 2 ) );
+
         $sortColumn = $info->getMetadata( 'sort-column' );
 
         if ( array_search( $sortColumn, $allColumns ) !== false ) {
@@ -234,14 +237,7 @@ class System_Api_QueryGenerator
     {
         $columns = $this->getGridColumns();
 
-        $order = $columns[ $this->sortColumn ];
-
-        if ( $this->sortOrder == System_Web_Grid::Ascending )
-            $order .= ' ASC';
-        else if ( $this->sortOrder == System_Web_Grid::Descending )
-            $order .= ' DESC';
-
-        return $order;
+        return System_Web_Grid::makeOrderBy( $columns[ $this->sortColumn ], $this->sortOrder );
     }
 
     /**
@@ -251,6 +247,9 @@ class System_Api_QueryGenerator
     */
     public function getColumnExpression( $column )
     {
+        if ( $column == System_Api_Column::Location )
+            return 'p.project_name COLLATE LOCALE, f.folder_name COLLATE LOCALE';
+
         $expression = $this->makeColumnSelect( $column );
 
         $pos = strpos( $expression, ' AS ' );
@@ -395,6 +394,8 @@ class System_Api_QueryGenerator
                 return 'sm.stamp_time AS modified_date';
             case System_Api_Column::ModifiedBy:
                 return 'um.user_name AS modified_by';
+            case System_Api_Column::Location:
+                return 'p.project_name, f.folder_name';
             default:
                 if ( isset( $this->attributes[ $column ] ) ) {
                     $attrId = $column - System_Api_Column::UserDefined;
@@ -421,6 +422,7 @@ class System_Api_QueryGenerator
 
         if ( $this->typeId != 0 ) {
             $joins[] = 'JOIN {folders} AS f ON f.folder_id = i.folder_id';
+            $joins[] = 'JOIN {projects} AS p ON p.project_id = f.project_id';
             if ( !$principal->isAdministrator() ) {
                 $joins[] = 'JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %d';
                 $this->arguments[] = $principal->getUserId();
