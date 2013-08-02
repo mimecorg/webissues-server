@@ -40,6 +40,8 @@ class Client_Issues_Issue extends System_Web_Component
     {
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
 
+        $projectManager = new System_Api_ProjectManager();
+
         switch ( $this->request->getScriptBaseName() ) {
             case 'editissue':
                 $issueManager = new System_Api_IssueManager();
@@ -57,7 +59,6 @@ class Client_Issues_Issue extends System_Web_Component
                 break;
 
             case 'addissue':
-                $projectManager = new System_Api_ProjectManager();
                 $folderId = (int)$this->request->getQueryString( 'folder' );
 
                 if ( $folderId != 0 ) {
@@ -72,37 +73,48 @@ class Client_Issues_Issue extends System_Web_Component
                     $this->type = $typeManager->getIssueType( $typeId );
                 }
 
-                $issueId = (int)$this->request->getQueryString( 'clone' );
+                $this->oldIssueName = '';
 
-                if ( $issueId != 0 ) {
-                    $issueManager = new System_Api_IssueManager();
-                    $this->issue = $issueManager->getIssue( $issueId );
+                $this->view->setSlot( 'page_title', $this->tr( 'Add Issue' ) );
 
-                    $this->oldIssueName = $this->issue[ 'issue_name' ];
-                    $this->clone = true;
+                $breadcrumbs = new Common_Breadcrumbs( $this );
+                if ( $folderId != 0 )
+                    $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
+                else
+                    $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->type );
+                $this->parentUrl = $breadcrumbs->getParentUrl();
 
-                    $this->view->setSlot( 'page_title', $this->tr( 'Clone Issue' ) );
-
-                    $breadcrumbs = new Common_Breadcrumbs( $this );
-                    $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
-                    $this->parentUrl = $breadcrumbs->getParentUrl();
-                } else {
-                    $this->oldIssueName = '';
-                    $this->clone = false;
-
-                    $this->view->setSlot( 'page_title', $this->tr( 'Add Issue' ) );
-
-                    $breadcrumbs = new Common_Breadcrumbs( $this );
-                    if ( $folderId != 0 )
-                        $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
-                    else
-                        $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->type );
-                    $this->parentUrl = $breadcrumbs->getParentUrl();
-                }
+                $defaultFolder = null;
 
                 $this->showDescription = true;
 
-                if ( $this->issue != null && $this->issue[ 'descr_id' ] != null ) {
+                $oldDescription = '';
+
+                $preferencesManager = new System_Api_PreferencesManager();
+                $defaultFormat = $preferencesManager->getPreferenceOrSetting( 'default_format' );
+                break;
+
+            case 'cloneissue':
+                $issueId = (int)$this->request->getQueryString( 'issue' );
+
+                $issueManager = new System_Api_IssueManager();
+                $this->issue = $issueManager->getIssue( $issueId );
+
+                $this->oldIssueName = $this->issue[ 'issue_name' ];
+                $this->clone = true;
+
+                $this->view->setSlot( 'page_title', $this->tr( 'Clone Issue' ) );
+
+                $breadcrumbs = new Common_Breadcrumbs( $this );
+                $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
+                $this->parentUrl = $breadcrumbs->getParentUrl();
+
+                $defaultFolder = $this->issue[ 'folder_id' ];
+                $typeId = $this->issue[ 'type_id' ];
+
+                $this->showDescription = true;
+
+                if ( $this->issue[ 'descr_id' ] != null ) {
                     $descr = $issueManager->getDescription( $this->issue );
 
                     $oldDescription = $descr[ 'descr_text' ];
@@ -113,7 +125,6 @@ class Client_Issues_Issue extends System_Web_Component
                     $preferencesManager = new System_Api_PreferencesManager();
                     $defaultFormat = $preferencesManager->getPreferenceOrSetting( 'default_format' );
                 }
-
                 break;
 
             default:
@@ -124,8 +135,8 @@ class Client_Issues_Issue extends System_Web_Component
         $this->form->addField( 'issueName', $this->oldIssueName );
         $this->form->addTextRule( 'issueName', System_Const::ValueMaxLength );
 
-        if ( $this->issue == null && $this->folder == null ) {
-            $this->form->addField( 'targetFolder' );
+        if ( $this->clone || ( $this->issue == null && $this->folder == null ) ) {
+            $this->form->addField( 'targetFolder', $defaultFolder );
 
             $projects = $projectManager->getProjects();
             $this->allFolders = $projectManager->getFolders();
@@ -306,7 +317,7 @@ class Client_Issues_Issue extends System_Web_Component
     {
         $this->form->validate();
 
-        if ( $this->issue == null && $this->folder == null ) {
+        if ( $this->clone || ( $this->issue == null && $this->folder == null ) ) {
             if ( $this->targetFolder != '' ) {
                 foreach ( $this->allFolders as $folder ) {
                     if ( $folder[ 'folder_id' ] == $this->targetFolder ) {

@@ -7,7 +7,7 @@
 <?php endif ?>
 
 <?php if ( !empty( $clone ) ): ?>
-<p><?php echo $this->tr( 'Clone issue <strong>%1</strong> as a new issue in folder <strong>%2</strong>.', null, $oldIssueName, $folderName ) ?></p>
+<p><?php echo $this->tr( 'Clone issue <strong>%1</strong> as a new issue in the selected folder.', null, $oldIssueName ) ?></p>
 <?php elseif ( !empty( $folderName ) ): ?>
 <p><?php echo $this->tr( 'Create a new issue in folder <strong>%1</strong>.', null, $folderName ) ?></p>
 <?php elseif ( !empty( $oldIssueName ) ): ?>
