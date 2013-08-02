@@ -295,7 +295,7 @@ class System_Api_AlertManager extends System_Api_Base
     public function updateAlertStamp( $alert )
     {
         $alertId = $alert[ 'alert_id' ];
-        $folderId = $alerts[ 'folder_id' ];
+        $folderId = $alert[ 'folder_id' ];
 
         $query = 'UPDATE {alerts}'
             . ' SET stamp_id = ( SELECT f.stamp_id FROM {folders} AS f WHERE f.folder_id = %d )'
