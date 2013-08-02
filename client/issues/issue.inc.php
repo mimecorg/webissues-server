@@ -24,8 +24,10 @@ class Client_Issues_Issue extends System_Web_Component
 {
     private $issue = null;
     private $folder = null;
+    private $type = null;
     private $parentUrl = null;
     private $projectId = null;
+    private $allFolders = null;
     private $values = null;
     private $javaScript = null;
 
@@ -57,10 +59,18 @@ class Client_Issues_Issue extends System_Web_Component
             case 'addissue':
                 $projectManager = new System_Api_ProjectManager();
                 $folderId = (int)$this->request->getQueryString( 'folder' );
-                $this->folder = $projectManager->getFolder( $folderId );
 
-                $this->projectId = $this->folder[ 'project_id' ];
-                $this->folderName = $this->folder[ 'folder_name' ];
+                if ( $folderId != 0 ) {
+                    $this->folder = $projectManager->getFolder( $folderId );
+
+                    $this->projectId = $this->folder[ 'project_id' ];
+                    $this->folderName = $this->folder[ 'folder_name' ];
+                } else {
+                    $typeId = (int)$this->request->getQueryString( 'type' );
+
+                    $typeManager = new System_Api_TypeManager();
+                    $this->type = $typeManager->getIssueType( $typeId );
+                }
 
                 $issueId = (int)$this->request->getQueryString( 'clone' );
 
@@ -83,7 +93,10 @@ class Client_Issues_Issue extends System_Web_Component
                     $this->view->setSlot( 'page_title', $this->tr( 'Add Issue' ) );
 
                     $breadcrumbs = new Common_Breadcrumbs( $this );
-                    $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
+                    if ( $folderId != 0 )
+                        $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
+                    else
+                        $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->type );
                     $this->parentUrl = $breadcrumbs->getParentUrl();
                 }
 
@@ -110,6 +123,31 @@ class Client_Issues_Issue extends System_Web_Component
         $this->form = new System_Web_Form( 'issues', $this );
         $this->form->addField( 'issueName', $this->oldIssueName );
         $this->form->addTextRule( 'issueName', System_Const::ValueMaxLength );
+
+        if ( $this->issue == null && $this->folder == null ) {
+            $this->form->addField( 'targetFolder' );
+
+            $projects = $projectManager->getProjects();
+            $this->allFolders = $projectManager->getFolders();
+
+            $this->folders = array( '' => $this->tr( 'Please Select' ) );
+
+            foreach ( $projects as $project ) {
+                $list = array();
+                foreach ( $this->allFolders as $folder ) {
+                    if ( $folder[ 'project_id' ] == $project[ 'project_id' ] && $folder[ 'type_id' ] == $typeId )
+                        $list[ $folder[ 'folder_id' ] ] = $folder[ 'folder_name' ];
+                }
+                if ( !empty( $list ) )
+                    $this->folders[ $project[ 'project_name' ] ] = $list;
+            }
+
+            if ( count( $this->folders ) == 1 )
+                $this->noFolders = true;
+
+            $this->form->addItemsRule( 'targetFolder', $this->folders );
+            $this->form->addRequiredRule( 'targetFolder' );
+        }
 
         if ( $this->showDescription ) {
             $this->formatOptions = array(
@@ -163,9 +201,12 @@ class Client_Issues_Issue extends System_Web_Component
             $issueManager = new System_Api_IssueManager();
             $type = $typeManager->getIssueTypeForIssue( $this->issue );
             $rows = $issueManager->getAllAttributeValuesForIssue( $this->issue );
-        } else {
+        } else if ( $this->folder != null ) {
             $type = $typeManager->getIssueTypeForFolder( $this->folder );
             $rows = $typeManager->getAttributeTypesForIssueType( $type );
+        } else {
+            $type = $this->type;
+            $rows = $typeManager->getAttributeTypesForIssueType( $this->type );
         }
 
         $viewManager = new System_Api_ViewManager();
@@ -224,7 +265,7 @@ class Client_Issues_Issue extends System_Web_Component
                         foreach ( $users as $user )
                             $allUsers[ $user[ 'user_id' ] ] = $user[ 'user_name' ];
                     }
-                    if ( $info->getMetadata( 'members', 0 ) ) {
+                    if ( $info->getMetadata( 'members', 0 ) && $this->projectId != null ) {
                         if ( $projectMembers === null ) {
                             $members = $userManager->getMembers( array( 'project_id' => $this->projectId ) );
                             $allMembers = array();
@@ -265,6 +306,19 @@ class Client_Issues_Issue extends System_Web_Component
     {
         $this->form->validate();
 
+        if ( $this->issue == null && $this->folder == null ) {
+            if ( $this->targetFolder != '' ) {
+                foreach ( $this->allFolders as $folder ) {
+                    if ( $folder[ 'folder_id' ] == $this->targetFolder ) {
+                        $this->projectId = $folder[ 'project_id' ];
+                        break;
+                    }
+                }
+            } else {
+                $this->form->setError( 'targetFolder', $this->tr( 'No folder selected.' ) );
+            }
+        }
+
         $parser = new System_Api_Parser();
         $parser->setProjectId( $this->projectId );
 
@@ -288,6 +342,10 @@ class Client_Issues_Issue extends System_Web_Component
         $issueManager = new System_Api_IssueManager();
 
         if ( $this->issue == null || $this->clone ) {
+            if ( $this->folder == null ) {
+                $projectManager = new System_Api_ProjectManager();
+                $this->folder = $projectManager->getFolder( $this->targetFolder );
+            }
             $issueId = $issueManager->addIssue( $this->folder, $this->issueName, $this->oldValues );
             $this->issue = $issueManager->getIssue( $issueId );
             if ( $this->descriptionText != '' )

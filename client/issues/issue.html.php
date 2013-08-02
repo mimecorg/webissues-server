@@ -12,13 +12,21 @@
 <p><?php echo $this->tr( 'Create a new issue in folder <strong>%1</strong>.', null, $folderName ) ?></p>
 <?php elseif ( !empty( $oldIssueName ) ): ?>
 <p><?php echo $this->tr( 'Edit attributes of issue <strong>%1</strong>.', null, $oldIssueName ) ?></p>
+<?php else: ?>
+<p><?php echo $this->tr( 'Create a new issue in the selected folder.' ) ?></p>
 <?php endif ?>
 
 <?php $form->renderFormOpen(); ?>
 
-<?php if ( empty( $noMembers ) ): ?>
+<?php if ( empty( $noMembers ) && empty( $noFolders ) ): ?>
 
 <?php $form->renderText( $this->tr( 'Name:' ), 'issueName', array( 'size' => 80 ) ); ?>
+
+<?php if ( !empty( $folders ) ): ?>
+
+<?php $form->renderSelect( $this->tr( 'Folder:' ), 'targetFolder', $folders, array( 'style' => 'width: 25em;' ) ) ?>
+
+<?php endif ?>
 
 <?php if ( !empty( $attributes ) ): ?>
 <fieldset class="form-fieldset">
@@ -54,7 +62,11 @@
 
 <?php else: ?>
 
+<?php if ( !empty( $noFolders ) ): ?>
+<p class="error"><?php echo $this->tr( 'There are no available folders of this type.' ) ?></p>
+<?php else: ?>
 <p class="error"><?php echo $this->tr( 'There are no available project members to assign to the issue.' ) ?></p>
+<?php endif ?>
 
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'Close' ), 'close' ); ?>
