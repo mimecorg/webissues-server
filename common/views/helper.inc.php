@@ -48,21 +48,21 @@ class Common_Views_Helper extends System_Web_Base
         $this->typeManager = new System_Api_TypeManager();
         $this->viewManager = new System_Api_ViewManager();
 
-        if ( $this->request->isRelativePathUnder( '/client' ) ) {
+        if ( $this->request->isRelativePathUnder( '/client' ) )
             $this->isPublic = false;
-
-            $projectManager = new System_Api_ProjectManager();
-            $folderId = (int)$this->request->getQueryString( 'folder' );
-            $folder = $projectManager->getFolder( $folderId );
-
-            $this->type = $this->typeManager->getIssueTypeForFolder( $folder );
-        } else if ( $this->request->isRelativePathUnder( '/admin' ) ) {
+        else if ( $this->request->isRelativePathUnder( '/admin' ) )
             $this->isPublic = true;
+        else
+            throw new System_Core_Exception( 'Invalid URL' );
 
+        $folderId = (int)$this->request->getQueryString( 'folder' );
+        if ( !$this->isPublic && $folderId != 0 ) {
+            $projectManager = new System_Api_ProjectManager();
+            $folder = $projectManager->getFolder( $folderId );
+            $this->type = $this->typeManager->getIssueTypeForFolder( $folder );
+        } else {
             $typeId = (int)$this->request->getQueryString( 'type' );
             $this->type = $this->typeManager->getIssueType( $typeId );
-        } else {
-            throw new System_Core_Exception( 'Invalid URL' );
         }
     }
 
@@ -76,14 +76,21 @@ class Common_Views_Helper extends System_Web_Base
             else
                 $breadcrumbs->initialize( Common_Breadcrumbs::ViewSettings );
         } else {
-            $projectManager = new System_Api_ProjectManager();
             $folderId = (int)$this->request->getQueryString( 'folder' );
-            $folder = $projectManager->getFolder( $folderId );
+            if ( $folderId != 0 ) {
+                $projectManager = new System_Api_ProjectManager();
+                $folder = $projectManager->getFolder( $folderId );
 
-            if ( $this->request->getScriptBaseName() == 'index' )
-                $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $folder );
-            else
-                $breadcrumbs->initialize( Common_Breadcrumbs::ManageViews, $folder );
+                if ( $this->request->getScriptBaseName() == 'index' )
+                    $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $folder );
+                else
+                    $breadcrumbs->initialize( Common_Breadcrumbs::ManageViews, $folder );
+            } else {
+                if ( $this->request->getScriptBaseName() == 'index' )
+                    $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->type );
+                else
+                    $breadcrumbs->initialize( Common_Breadcrumbs::ManageViews, $this->type );
+            }
         }
 
         return $breadcrumbs;
@@ -351,6 +358,11 @@ class Common_Views_Helper extends System_Web_Base
         $toolBar = new System_Web_ToolBar();
         $toolBar->setSelection( $selectedId );
 
+        $params = array();
+        foreach ( $this->request->getQueryStrings() as $key => $value )
+            $params[ $key ] = null;
+        $params[ 'type' ] = $this->type[ 'type_id' ];
+
         if ( $this->isPublic ) {
             $toolBar->addFixedCommand( '/admin/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add Public View' ) );
             $toolBar->addItemCommand( '/admin/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ) );
@@ -358,6 +370,7 @@ class Common_Views_Helper extends System_Web_Base
             $toolBar->addItemCommand( '/admin/views/rename.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename View' ) );
             $toolBar->addItemCommand( '/admin/views/delete.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete View' ) );
             $toolBar->addItemCommand( '/admin/views/unpublish.php', '/common/images/edit-access-16.png', $this->tr( 'Unpublish View' ) );
+            $toolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Personal View Settings' ), $params );
         } else {
             $toolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add Personal View' ) );
             $toolBar->addItemCommand( '/client/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ) );
@@ -367,11 +380,6 @@ class Common_Views_Helper extends System_Web_Base
 
             if ( System_Api_Principal::getCurrent()->isAdministrator() ) {
                 $toolBar->addItemCommand( '/client/views/publish.php', '/common/images/user-16.png', $this->tr( 'Publish View' ) );
-
-                $params = array();
-                foreach ( $this->request->getQueryStrings() as $key => $value )
-                    $params[ $key ] = null;
-                $params[ 'type' ] = $this->type[ 'type_id' ];
                 $toolBar->addFixedCommand( '/admin/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Public View Settings' ), $params );
             }
         }
@@ -386,6 +394,8 @@ class Common_Views_Helper extends System_Web_Base
     {
         $helper = new System_Web_ColumnHelper();
         $this->columns = $helper->getColumnHeaders();
+
+        unset( $this->columns[ System_Api_Column::Location ] );
 
         foreach ( $this->attributes as $attribute )
             $this->columns[ System_Api_Column::UserDefined + $attribute[ 'attr_id' ] ] = $attribute[ 'attr_name' ];

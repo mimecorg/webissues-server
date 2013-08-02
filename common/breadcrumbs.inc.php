@@ -154,7 +154,7 @@ class Common_Breadcrumbs extends System_Web_Base
 
             case self::ManageViews:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/views/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'folder', 'vsort', 'vorder', 'vpage' ) );
+                $this->urls[] = $this->filterQueryString( '/client/views/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'folder', 'type', 'vsort', 'vorder', 'vpage' ) );
                 $this->names[] = $this->tr( 'Manage Views' );
                 break;
 
