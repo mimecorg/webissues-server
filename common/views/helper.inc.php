@@ -370,7 +370,7 @@ class Common_Views_Helper extends System_Web_Base
             $toolBar->addItemCommand( '/admin/views/rename.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename View' ) );
             $toolBar->addItemCommand( '/admin/views/delete.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete View' ) );
             $toolBar->addItemCommand( '/admin/views/unpublish.php', '/common/images/edit-access-16.png', $this->tr( 'Unpublish View' ) );
-            $toolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Personal View Settings' ), $params );
+            $toolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Manage Personal Views' ), $params );
         } else {
             $toolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add Personal View' ) );
             $toolBar->addItemCommand( '/client/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ) );
