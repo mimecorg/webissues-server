@@ -22,6 +22,8 @@ require_once( '../../system/bootstrap.inc.php' );
 
 class Client_Issues_MarkAll extends System_Web_Component
 {
+    private $folders = null;
+
     protected function __construct()
     {
         parent::__construct();
@@ -31,7 +33,15 @@ class Client_Issues_MarkAll extends System_Web_Component
     {
         $projectManager = new System_Api_ProjectManager();
         $folderId = (int)$this->request->getQueryString( 'folder' );
-        $this->folder = $projectManager->getFolder( $folderId );
+        if ( $folderId != 0 ) {
+            $this->folder = $projectManager->getFolder( $folderId );
+            $this->folders = array( $this->folder );
+        } else {
+            $typeId = (int)$this->request->getQueryString( 'type' );
+            $typeManager = new System_Api_TypeManager();
+            $this->type = $typeManager->getIssueType( $typeId );
+            $this->folders = $projectManager->getFoldersByIssueType( $this->type );
+        }
 
         $this->isRead = (int)$this->request->getQueryString( 'status' );
 
@@ -42,7 +52,10 @@ class Client_Issues_MarkAll extends System_Web_Component
             $this->view->setSlot( 'page_title', $this->tr( 'Mark All As Unread' ) );
 
         $breadcrumbs = new Common_Breadcrumbs( $this );
-        $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
+        if ( $folderId != 0 )
+            $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
+        else
+            $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->type );
 
         $this->form = new System_Web_Form( 'markall', $this );
 
@@ -60,7 +73,8 @@ class Client_Issues_MarkAll extends System_Web_Component
     private function submit()
     {
         $stateManager = new System_Api_StateManager();
-        $stateManager->setFolderRead( $this->folder, $this->isRead ? $this->folder[ 'stamp_id' ] : 0 );
+        foreach ( $this->folders as $folder )
+            $stateManager->setFolderRead( $folder, $this->isRead ? $folder[ 'stamp_id' ] : 0 );
     }
 }
 

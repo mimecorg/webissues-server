@@ -162,6 +162,31 @@ class System_Api_ProjectManager extends System_Api_Base
         return $folder;
     }
 
+    /**
+    * Get list of folders of the specified type.
+    * @param $type The issue type of the folders.
+    * @param $flags If RequireAdministrator is passed only folders from
+    * projects to which the user has administrator access are returned.
+    * @return An array of associative arrays representing folders.
+    */
+    public function getFoldersByIssueType( $type, $flags = 0 )
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $typeId = $type[ 'type_id' ];
+
+        $query = 'SELECT f.folder_id, f.project_id, f.folder_name, f.type_id, f.stamp_id, t.type_name FROM {folders} AS f';
+        if ( !$principal->isAdministrator() ) {
+            $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
+            if ( $flags & self::RequireAdministrator )
+                $query .= ' AND r.project_access = %2d';
+        }
+        $query .= ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
+            . ' WHERE t.type_id = %3d';
+
+        return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::AdministratorAccess, $typeId );
+    }
+
     public function getFolderFromIssue( $issue )
     {
         $folder = array();
