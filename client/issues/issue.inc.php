@@ -110,7 +110,9 @@ class Client_Issues_Issue extends System_Web_Component
                 $this->parentUrl = $breadcrumbs->getParentUrl();
 
                 $defaultFolder = $this->issue[ 'folder_id' ];
-                $typeId = $this->issue[ 'type_id' ];
+
+                $typeManager = new System_Api_TypeManager();
+                $this->type = $typeManager->getIssueTypeForIssue( $this->issue );
 
                 $this->showDescription = true;
 
@@ -139,14 +141,14 @@ class Client_Issues_Issue extends System_Web_Component
             $this->form->addField( 'targetFolder', $defaultFolder );
 
             $projects = $projectManager->getProjects();
-            $this->allFolders = $projectManager->getFolders();
+            $this->allFolders = $projectManager->getFoldersByIssueType( $this->type );
 
             $this->folders = array( '' => $this->tr( 'Please Select' ) );
 
             foreach ( $projects as $project ) {
                 $list = array();
                 foreach ( $this->allFolders as $folder ) {
-                    if ( $folder[ 'project_id' ] == $project[ 'project_id' ] && $folder[ 'type_id' ] == $typeId )
+                    if ( $folder[ 'project_id' ] == $project[ 'project_id' ] )
                         $list[ $folder[ 'folder_id' ] ] = $folder[ 'folder_name' ];
                 }
                 if ( !empty( $list ) )

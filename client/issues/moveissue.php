@@ -39,9 +39,12 @@ class Client_Issues_MoveIssue extends System_Web_Component
         $this->form = new System_Web_Form( 'issues', $this );
         $this->form->addField( 'folder', $this->issue[ 'folder_id' ] );
 
+        $typeManager = new System_Api_TypeManager();
+        $type = $typeManager->getIssueTypeForIssue( $this->issue );
+
         $projectManager = new System_Api_ProjectManager();
         $projects = $projectManager->getProjects( System_Api_IssueManager::RequireAdministrator );
-        $folders = $projectManager->getFolders( System_Api_IssueManager::RequireAdministrator );
+        $folders = $projectManager->getFoldersByIssueType( $type, System_Api_IssueManager::RequireAdministrator );
 
         $this->folders = array();
         $this->canMove = false;
@@ -49,7 +52,7 @@ class Client_Issues_MoveIssue extends System_Web_Component
         foreach ( $projects as $project ) {
             $list = array();
             foreach ( $folders as $folder ) {
-                if ( $folder[ 'project_id' ] == $project[ 'project_id' ] && $folder[ 'type_id' ] == $this->issue[ 'type_id' ] ) {
+                if ( $folder[ 'project_id' ] == $project[ 'project_id' ] ) {
                     $list[ $folder[ 'folder_id' ] ] = $folder[ 'folder_name' ];
                     if ( $folder[ 'folder_id' ] != $this->issue[ 'folder_id' ] )
                         $this->canMove = true;
