@@ -86,6 +86,33 @@ class System_Db_Pgsql_SchemaGenerator extends System_Db_SchemaGenerator
         $this->indexes = array();
     }
 
+    protected function prepareTableFieldNull( $tableName, $fieldName, $info )
+    {
+        if ( $info->getMetadata( 'null', 0 ) )
+            $this->fields[] = $fieldName . ' DROP NOT NULL';
+        else
+            $this->fields[] = $fieldName . ' SET NOT NULL';
+    }
+
+    protected function executeModifyFields( $tableName )
+    {
+        foreach ( $this->fields as $field ) {
+            $query = 'ALTER TABLE {' . $tableName . '} ALTER COLUMN ' . $field;
+            $this->connection->execute( $query );
+        }
+
+        $this->fields = array();
+    }
+
+    public function dropIndex( $tableName, $indexName, $unique )
+    {
+        if ( $unique )
+            $query = 'ALTER TABLE {' . $tableName . '} DROP CONSTRAINT {' . $tableName . '}_' . $indexName;
+        else
+            $query = 'DROP INDEX {' . $tableName . '}_' . $indexName;
+        $this->connection->execute( $query );
+    }
+
     public function setIdentityInsert( $tableName, $fieldName, $on )
     {
         if ( $on == false ) {

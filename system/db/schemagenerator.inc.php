@@ -72,11 +72,35 @@ abstract class System_Db_SchemaGenerator
         $this->executeAddFields( $tableName );
     }
 
+    /**
+    * Add or drop the NOT NULL constraint for existing fields.
+    * @param $tableName The name of the table.
+    * @param $fields An associative array of field definitions.
+    */
+    public function modifyFieldsNull( $tableName, $fields )
+    {
+        foreach ( $fields as $fieldName => $definition ) {
+            $info = System_Api_DefinitionInfo::fromString( $definition );
+            $this->prepareTableFieldNull( $tableName, $fieldName, $info );
+        }
+
+        $this->executeModifyFields( $tableName );
+    }
+
     protected abstract function prepareTableField( $tableName, $fieldName, $info );
 
     protected abstract function executeCreateTable( $tableName );
 
     protected abstract function executeAddFields( $tableName );
+
+    protected abstract function prepareTableFieldNull( $tableName, $fieldName, $info );
+
+    protected abstract function executeModifyFields( $tableName );
+
+    /**
+    * Drop an existing index.
+    */
+    public abstract function dropIndex( $tableName, $indexName, $unique );
 
     /**
     * Set identity insert on or off for the given table.

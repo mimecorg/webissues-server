@@ -75,6 +75,27 @@ class System_Db_Mysqli_SchemaGenerator extends System_Db_SchemaGenerator
         $this->fields = array();
     }
 
+    protected function prepareTableFieldNull( $tableName, $fieldName, $info )
+    {
+        $this->fields[] = $fieldName . ' ' . $this->getFieldType( $info );
+    }
+
+    protected function executeModifyFields( $tableName )
+    {
+        foreach ( $this->fields as $field ) {
+            $query = 'ALTER TABLE {' . $tableName . '} MODIFY ' . $field;
+            $this->connection->execute( $query );
+        }
+
+        $this->fields = array();
+    }
+
+    public function dropIndex( $tableName, $indexName, $unique )
+    {
+        $query = 'ALTER TABLE {' . $tableName . '} DROP INDEX {' . $tableName . '}_' . $indexName;
+        $this->connection->execute( $query );
+    }
+
     private function getFieldType( $info )
     {
         switch ( $info->getType() ) {
@@ -103,7 +124,7 @@ class System_Db_Mysqli_SchemaGenerator extends System_Db_SchemaGenerator
                 return $this->getBlobType( $info->getMetadata( 'size', 'normal' ),
                     $info->getMetadata( 'null', 0 ) );
 
-                default:
+            default:
                 throw new System_Db_Exception( "Unknown field type '" . $info->getType() . "'" );
         }
     }

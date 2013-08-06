@@ -86,6 +86,30 @@ class System_Db_Mssql_SchemaGenerator extends System_Db_SchemaGenerator
         $this->indexes = array();
     }
 
+    protected function prepareTableFieldNull( $tableName, $fieldName, $info )
+    {
+        $this->fields[] = $fieldName . ' ' . $this->getFieldType( $info );
+    }
+
+    protected function executeModifyFields( $tableName )
+    {
+        foreach ( $this->fields as $field ) {
+            $query = 'ALTER TABLE {' . $tableName . '} ALTER COLUMN ' . $field;
+            $this->connection->execute( $query );
+        }
+
+        $this->fields = array();
+    }
+
+    public function dropIndex( $tableName, $indexName, $unique )
+    {
+        if ( $unique )
+            $query = 'ALTER TABLE {' . $tableName . '} DROP CONSTRAINT {' . $tableName . '}_' . $indexName;
+        else
+            $query = 'DROP INDEX {' . $tableName . '}_' . $indexName . ' ON {' . $tableName . '}';
+        $this->connection->execute( $query );
+    }
+
     public function setIdentityInsert( $tableName, $fieldName, $on )
     {
         $query = 'SET IDENTITY_INSERT {' . $tableName . '} ';
