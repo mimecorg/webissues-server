@@ -38,14 +38,16 @@ class Admin_Setup_Installer extends System_Web_Base
         $schema = array(
             'alerts' => array(
                 'alert_id'          => 'SERIAL',
-                'user_id'           => 'INTEGER ref-table="users" ref-column="user_id"',
-                'folder_id'         => 'INTEGER ref-table="folders" ref-column="folder_id" on-delete="cascade"',
+                'user_id'           => 'INTEGER null=1 ref-table="users" ref-column="user_id"',
+                'folder_id'         => 'INTEGER null=1 ref-table="folders" ref-column="folder_id" on-delete="cascade"',
+                'type_id'           => 'INTEGER null=1 ref-table="issue_types" ref-column="type_id" on-delete="cascade" trigger=1',
                 'view_id'           => 'INTEGER null=1 ref-table="views" ref-column="view_id" on-delete="cascade"',
                 'alert_email'       => 'INTEGER size="tiny"',
                 'stamp_id'          => 'INTEGER null=1',
                 'pk'                => 'PRIMARY columns={"alert_id"}',
-                'alert_idx'         => 'INDEX columns={"user_id","folder_id","view_id"} unique=1',
+                'alert_idx'         => 'INDEX columns={"user_id","folder_id","type_id","view_id"} unique=1',
                 'folder_idx'        => 'INDEX columns={"folder_id"}',
+                'type_idx'          => 'INDEX columns={"type_id"}',
                 'view_idx'          => 'INDEX columns={"view_id"}'
             ),
             'attr_types' => array(
@@ -187,6 +189,7 @@ class Admin_Setup_Installer extends System_Web_Base
                 'stamp_id'          => 'INTEGER null=1',
                 'descr_id'          => 'INTEGER null=1',
                 'descr_stub_id'     => 'INTEGER null=1',
+                'is_public'         => 'INTEGER size="tiny" default=0',
                 'pk'                => 'PRIMARY columns={"project_id"}',
                 'name_idx'          => 'INDEX columns={"project_name"}'
             ),
