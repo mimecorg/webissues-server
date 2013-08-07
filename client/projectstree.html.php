@@ -20,7 +20,7 @@
 
 <td colspan="2">
   <?php $grid->renderExpandButton( empty( $types ) ) ?>
-  <?php echo $this->imageAndText( '/common/images/view-types-16.png', $this->tr( 'All Issues' ) ) ?>
+  <?php echo $this->imageAndText( '/common/images/project-all-16.png', $this->tr( 'All Issues' ) ) ?>
 </td>
 
 <?php $grid->renderRowClose() ?>
@@ -29,7 +29,7 @@
 <?php $grid->renderChildRowOpen( $typeId, 'T' ) ?>
 
 <td class="first-column">
-  <?php echo $this->imageAndTextLink( $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'type' => $typeId ) ), '/common/images/type-16.png', $type[ 'type_name' ] ) ?>
+  <?php echo $this->imageAndTextLink( $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'type' => $typeId ) ), '/common/images/folder-type-16.png', $type[ 'type_name' ] ) ?>
 </td>
 <td></td>
 
