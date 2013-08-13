@@ -57,7 +57,7 @@ class System_Mail_InboxEngine
             $address .= '/' . $settings[ 'inbox_encryption' ];
 
         if ( !empty( $settings[ 'inbox_no_validate' ] ) )
-            $adrress .= '/novalidate-cert';
+            $address .= '/novalidate-cert';
 
         $address = '{' . $address . '}';
         
