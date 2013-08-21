@@ -445,7 +445,7 @@ class Common_Views_View extends System_Web_Component
             } else {
                 $viewId = $viewManager->addPersonalView( $this->type, $this->viewName, $info->toString() );
                 if ( $this->request->getQueryString( 'direct' ) )
-                    $this->parentUrl = $this->appendQueryString( '/client/index.php', array( 'folder' => $this->request->getQueryString( 'folder' ), 'view' => $viewId ) );
+                    $this->parentUrl = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'folder', 'type' ), array( 'view' => $viewId ) );
             }
         } catch ( System_Api_Error $ex ) {
             $this->form->getErrorHelper()->handleError( 'viewName', $ex );
