@@ -43,6 +43,13 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 * An optional argument position can be inserted after the %, for example
 * %%2d. When not present, consecutive arguments are taken.
 *
+* An optional ? can be inserted after the placeholder. When the value is null,
+* 0 or '', it will be replaced with NULL and the = before the placeholder will
+* be replaced with IS.
+*
+* If the % is doubled, an array of arguments should be passed. The elements
+* will be separated with commas.
+*
 * All methods have two versions. The basic version accepts substitution
 * arguments after the regular arguments, for example:
 * @code
@@ -500,12 +507,12 @@ class System_Db_Connection
         if ( strpos( $query, '%' ) === false )
             return $query;
 
-        $parts = preg_split( '/%(%?)(\d*)([dfsb])/', $query, -1, PREG_SPLIT_DELIM_CAPTURE );
+        $parts = preg_split( '/%(%?)(\d*)([dfsb])(\??)/', $query, -1, PREG_SPLIT_DELIM_CAPTURE );
 
         $result = array( $parts[ 0 ] );
         $pos = 1;
 
-        for ( $i = 1; $i < count( $parts ); $i += 4 ) {
+        for ( $i = 1; $i < count( $parts ); $i += 5 ) {
             if ( $parts[ $i + 1 ] === '' )
                 $index = $pos++;
             else
@@ -518,12 +525,19 @@ class System_Db_Connection
 
             $type = $parts[ $i + 2 ];
 
-            if ( $parts[ $i ] == '%' )
+            if ( $parts[ $i + 3 ] == '?' && $arg == null ) {
+                $top = array_pop( $result );
+                if ( substr( $top, -3, 3 ) == ' = ' )
+                    $top = substr( $top, 0, -3 ) . ' IS ';
+                $result[] = $top;
+                $result[] = 'NULL';
+            } else if ( $parts[ $i ] == '%' ) {
                 $result[] = $this->buildList( $arg, $type, $params );
-            else
+            } else {
                 $result[] = $this->engine->escapeArgument( $arg, $type, $params );
+            }
 
-            $result[] = $parts[ $i + 3 ];
+            $result[] = $parts[ $i + 4 ];
         }
 
         return implode( '', $result );
@@ -533,8 +547,8 @@ class System_Db_Connection
     {
         $result = array();
         foreach ( $list as $item )
-            $list[] = $this->engine->escapeArgument( $item, $type, $params );
-        return implode( ',', $result );
+            $result[] = $this->engine->escapeArgument( $item, $type, $params );
+        return implode( ', ', $result );
     }
 
     private function buildDebugQuery( $query, $args )
