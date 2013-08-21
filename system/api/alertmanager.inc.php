@@ -45,7 +45,7 @@ class System_Api_AlertManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT alert_id, folder_id, view_id, alert_email'
+        $query = 'SELECT alert_id, folder_id, type_id, view_id, alert_email'
             . ' FROM {alerts}'
             . ' WHERE user_id = %d';
 
@@ -92,6 +92,45 @@ class System_Api_AlertManager extends System_Api_Base
     }
 
     /**
+    * Get the total number of alerts for given issue type.
+    * @param $type Issue type for which alerts are retrieved.
+    */
+    public function getGlobalAlertsCount( $type )
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $typeId = $type[ 'type_id' ];
+
+        $query = 'SELECT COUNT(*)'
+            . ' FROM {alerts}'
+            . ' WHERE user_id = %d AND type_id = %d';
+
+        return $this->connection->queryScalar( $query, $principal->getUserId(), $typeId );
+    }
+
+    /**
+    * Get the paged list of alerts for given issue type.
+    * @param $type Issue type for which alerts are retrieved.
+    * @param $orderBy The sorting order specifier.
+    * @param $limit Maximum number of rows to return.
+    * @param $offset Zero-based index of first row to return.
+    * @return An array of associative arrays representing alerts.
+    */
+    public function getGlobalAlertsPage( $type, $orderBy, $limit, $offset )
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $typeId = $type[ 'type_id' ];
+
+        $query = 'SELECT a.alert_id, v.view_id, v.view_name, v.view_def, a.alert_email'
+            . ' FROM {alerts} AS a'
+            . ' LEFT OUTER JOIN {views} AS v ON v.view_id = a.view_id'
+            . ' WHERE a.user_id = %d AND a.type_id = %d';
+
+        return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $principal->getUserId(), $typeId );
+    }
+
+    /**
     * Check if given folder has the "All Issues" view.
     * @param $folder Folder for which alert is retrieved.
     * @return @c true if the folder has the "All Issues" view.
@@ -111,7 +150,7 @@ class System_Api_AlertManager extends System_Api_Base
 
     /**
     * Get views for which there is no alert for a given folder.
-    * @param $type Folder for which views are retrieved.
+    * @param $folder Folder for which views are retrieved.
     * @return An array of associative arrays representing views.
     */
     public function getViewsWithoutAlerts( $folder )
@@ -128,6 +167,50 @@ class System_Api_AlertManager extends System_Api_Base
             . ' ORDER BY v.view_name COLLATE LOCALE';
 
         $views = $this->connection->queryTable( $query, $principal->getUserId(), $folderId, $typeId );
+
+        $result = array();
+        foreach ( $views as $view )
+            $result[ $view[ 'is_public' ] ][ $view[ 'view_id' ] ] = $view[ 'view_name' ];
+
+        return $result;
+    }
+
+    /**
+    * Check if given issue type has the "All Issues" view.
+    * @param $folder Folder for which alert is retrieved.
+    * @return @c true if the issue type has the "All Issues" view.
+    */
+    public function hasAllIssuesGlobalAlert( $type )
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $typeId = $type[ 'type_id' ];
+
+        $query = 'SELECT alert_id'
+            . ' FROM {alerts}'
+            . ' WHERE user_id = %d AND type_id = %d AND view_id IS NULL';
+
+        return $this->connection->queryScalar( $query, $principal->getUserId(), $typeId ) !== false;
+    }
+
+    /**
+    * Get views for which there is no alert for a given issue type.
+    * @param $type Issue type for which views are retrieved.
+    * @return An array of associative arrays representing views.
+    */
+    public function getViewsWithoutGlobalAlerts( $type )
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $typeId = $type[ 'type_id' ];
+
+        $query = 'SELECT v.view_id, v.view_name, ( CASE WHEN v.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
+            . ' FROM {views} AS v'
+            . ' LEFT OUTER JOIN {alerts} AS a ON a.view_id = v.view_id AND a.user_id = %1d AND a.type_id = %2d'
+            . ' WHERE v.type_id = %2d AND ( v.user_id = %1d OR v.user_id IS NULL ) AND a.alert_id IS NULL'
+            . ' ORDER BY v.view_name COLLATE LOCALE';
+
+        $views = $this->connection->queryTable( $query, $principal->getUserId(), $typeId );
 
         $result = array();
         foreach ( $views as $view )
@@ -179,38 +262,54 @@ class System_Api_AlertManager extends System_Api_Base
 
         $folderId = $folder[ 'folder_id' ];
         $stampId = $folder[ 'stamp_id' ];
+        $viewId = ( $view != null ) ? $view[ 'view_id' ] : null;
 
         $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'alerts' );
 
         try {
-            if ( $view != null ) {
-                $viewId = $view[ 'view_id' ];
+            $query = 'SELECT alert_id FROM {alerts} WHERE user_id = %d AND folder_id = %d AND view_id = %d?';
+            if ( $this->connection->queryScalar( $query, $principal->getUserId(), $folderId, $viewId ) !== false )
+                throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
 
-                $query = 'SELECT alert_id FROM {alerts} WHERE user_id = %d AND folder_id = %d AND view_id = %d';
-                if ( $this->connection->queryScalar( $query, $principal->getUserId(), $folderId, $viewId ) !== false )
-                    throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
+            $query = 'INSERT INTO {alerts} ( user_id, folder_id, type_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, NULL, %d?, %d, %d? )';
+            $this->connection->execute( $query, $principal->getUserId(), $folderId, $viewId, $alertEmail, $stampId );
+            $alertId = $this->connection->getInsertId( 'alerts', 'alert_id' );
 
-                if ( $stampId != null ) {
-                    $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, %d, %d, %d )';
-                    $this->connection->execute( $query, $principal->getUserId(), $folderId, $viewId, $alertEmail, $stampId );
-                } else {
-                    $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, %d, %d, NULL )';
-                    $this->connection->execute( $query, $principal->getUserId(), $folderId, $viewId, $alertEmail );
-                }
-            } else {
-                $query = 'SELECT alert_id FROM {alerts} WHERE user_id = %d AND folder_id = %d AND view_id IS NULL';
-                if ( $this->connection->queryScalar( $query, $principal->getUserId(), $folderId ) !== false )
-                    throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
+            $transaction->commit();
+        } catch ( Exception $ex ) {
+            $transaction->rollback();
+            throw $ex;
+        }
 
-                if ( $stampId != null ) {
-                    $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, NULL, %d, %d )';
-                    $this->connection->execute( $query, $principal->getUserId(), $folderId, $alertEmail, $stampId );
-                } else {
-                    $query = 'INSERT INTO {alerts} ( user_id, folder_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, NULL, %d, NULL )';
-                    $this->connection->execute( $query, $principal->getUserId(), $folderId, $alertEmail );
-                }
-            }
+        return $alertId;
+    }
 
+    /**
+    * Create a new global alert. An error is thrown if such alert already exists.
+    * @param $type Issue type for which the alert is created.
+    * @param $view Optional view associated with the alert.
+    * @param $alertEmail Type of emails associated with the alert.
+    * @return The identifier of the new alert.
+    */
+    public function addGlobalAlert( $type, $view, $alertEmail )
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $typeId = $type[ 'type_id' ];
+        $viewId = ( $view != null ) ? $view[ 'view_id' ] : null;
+
+        $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'alerts' );
+
+        try {
+            $query = 'SELECT MAX( stamp_id ) FROM {folders} WHERE type_id = %d';
+            $stampId = $this->connection->queryScalar( $query, $typeId );
+
+            $query = 'SELECT alert_id FROM {alerts} WHERE user_id = %d AND type_id = %d AND view_id = %d?';
+            if ( $this->connection->queryScalar( $query, $principal->getUserId(), $typeId, $viewId ) !== false )
+                throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
+
+            $query = 'INSERT INTO {alerts} ( user_id, folder_id, type_id, view_id, alert_email, stamp_id ) VALUES ( %d, NULL, %d, %d?, %d, %d? )';
+            $this->connection->execute( $query, $principal->getUserId(), $typeId, $viewId, $alertEmail, $stampId );
             $alertId = $this->connection->getInsertId( 'alerts', 'alert_id' );
 
             $transaction->commit();
@@ -267,22 +366,19 @@ class System_Api_AlertManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
+        $query = 'SELECT a.alert_id, a.folder_id, a.type_id, a.view_id, a.alert_email, a.stamp_id'
+            . ' FROM {alerts} AS a';
+        $query .= ' WHERE a.user_id = %1d AND EXISTS ( SELECT f.folder_id FROM {folders}';
+        if ( !$principal->isAdministrator() )
+            $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
+        $query .= ' WHERE ( f.folder_id = a.folder_id OR f.type_id = a.type_id )';
+
         if ( $includeSummary ) {
-            $query = 'SELECT a.alert_id, a.folder_id, a.view_id, a.alert_email, a.stamp_id'
-                . ' FROM {alerts} AS a'
-                . ' JOIN {folders} AS f ON f.folder_id = a.folder_id';
-            if ( !$principal->isAdministrator() )
-                $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
-            $query .= ' WHERE a.user_id = %1d AND ( a.alert_email > %2d AND f.stamp_id > COALESCE( a.stamp_id, 0 ) OR a.alert_email = %3d )';
+            $query .= ' AND ( a.alert_email > %2d AND f.stamp_id > COALESCE( a.stamp_id, 0 ) OR a.alert_email = %3d ) )';
 
             return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::NoEmail, System_Const::SummaryReportEmail );
         } else {
-            $query = 'SELECT a.alert_id, a.folder_id, a.view_id, a.alert_email, a.stamp_id'
-                . ' FROM {alerts} AS a'
-                . ' JOIN {folders} AS f ON f.folder_id = a.folder_id';
-            if ( !$principal->isAdministrator() )
-                $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
-            $query .= ' WHERE a.user_id = %1d AND a.alert_email = %2d AND f.stamp_id > COALESCE( a.stamp_id, 0 )';
+            $query .= ' AND ( a.alert_email = %2d AND f.stamp_id > COALESCE( a.stamp_id, 0 ) ) )';
 
             return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::ImmediateNotificationEmail );
         }
@@ -297,10 +393,20 @@ class System_Api_AlertManager extends System_Api_Base
         $alertId = $alert[ 'alert_id' ];
         $folderId = $alert[ 'folder_id' ];
 
-        $query = 'UPDATE {alerts}'
-            . ' SET stamp_id = ( SELECT f.stamp_id FROM {folders} AS f WHERE f.folder_id = %d )'
-            . ' WHERE alert_id = %d';
+        if ( $folderId != null ) {
+            $query = 'UPDATE {alerts}'
+                . ' SET stamp_id = ( SELECT f.stamp_id FROM {folders} AS f WHERE f.folder_id = %d )'
+                . ' WHERE alert_id = %d';
 
-        $this->connection->execute( $query, $folderId, $alertId );
+            $this->connection->execute( $query, $folderId, $alertId );
+        } else {
+            $typeId = $alert[ 'type_id' ];
+
+            $query = 'UPDATE {alerts}'
+                . ' SET stamp_id = ( SELECT MAX( f.stamp_id ) FROM {folders} AS f WHERE f.type_id = %d )'
+                . ' WHERE alert_id = %d';
+
+            $this->connection->execute( $query, $typeId, $alertId );
+        }
     }
 }

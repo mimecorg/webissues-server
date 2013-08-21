@@ -22,8 +22,8 @@ require_once( '../../system/bootstrap.inc.php' );
 
 class Client_Alerts_Index extends System_Web_Component
 {
-    private $queryGenerator = null;
-    private $connection = null;
+    private $folder = null;
+    private $type = null;
 
     protected function __construct()
     {
@@ -33,14 +33,27 @@ class Client_Alerts_Index extends System_Web_Component
     protected function execute()
     {
         $projectManager = new System_Api_ProjectManager();
+        $typeManager = new System_Api_TypeManager();
+
         $folderId = (int)$this->request->getQueryString( 'folder' );
-        $this->folder = $projectManager->getFolder( $folderId );
+        if ( $folderId != 0 ) {
+            $this->folder = $projectManager->getFolder( $folderId );
+            $this->type = $typeManager->getIssueTypeForFolder( $this->folder );
+            $this->folderName = $this->folder[ 'folder_name' ];
+        } else {
+            $typeId = (int)$this->request->getQueryString( 'type' );
+            $this->type = $typeManager->getIssueType( $typeId );
+            $this->typeName = $this->type[ 'type_name' ];
+        }
 
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Manage Alerts' ) );
 
         $breadcrumbs = new Common_Breadcrumbs( $this );
-        $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
+        if ( $this->folder != null )
+            $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->folder );
+        else
+            $breadcrumbs->initialize( Common_Breadcrumbs::Folder, $this->type );
 
         $this->form = new System_Web_Form( 'views', $this );
         if ( $this->form->loadForm() )
@@ -55,10 +68,10 @@ class Client_Alerts_Index extends System_Web_Component
 
         $this->grid->setColumns( $alertManager->getAlertsColumns() );
         $this->grid->setDefaultSort( 'name', System_Web_Grid::Ascending );
-        $this->grid->setRowsCount( $alertManager->getAlertsCount( $this->folder ) );
-
-        $typeManager = new System_Api_TypeManager();
-        $type = $typeManager->getIssueTypeForFolder( $this->folder );
+        if ( $this->folder != null )
+            $this->grid->setRowsCount( $alertManager->getAlertsCount( $this->folder ) );
+        else
+            $this->grid->setRowsCount( $alertManager->getGlobalAlertsCount( $this->type ) );
 
         $viewManager = new System_Api_ViewManager();
 
@@ -67,13 +80,16 @@ class Client_Alerts_Index extends System_Web_Component
 
         $emailTypes = $helper->getEmailTypes();
 
-        $page = $alertManager->getAlertsPage( $this->folder, $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
+        if ( $this->folder != null )
+            $page = $alertManager->getAlertsPage( $this->folder, $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
+        else
+            $page = $alertManager->getGlobalAlertsPage( $this->type, $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
 
         $this->alerts = array();
         foreach ( $page as $row ) {
             if ( $row[ 'view_name' ] === null ) {
                 $row[ 'view_name' ] = $this->tr( 'All Issues' );
-                $row[ 'view_def' ] = $viewManager->getViewSetting( $type, 'default_view' );
+                $row[ 'view_def' ] = $viewManager->getViewSetting( $this->type, 'default_view' );
             }
             $row[ 'alert_email' ] = $emailTypes[ $row[ 'alert_email' ] ];
             $this->getAlertStatus( $row );
@@ -99,7 +115,10 @@ class Client_Alerts_Index extends System_Web_Component
     private function getAlertStatus( &$row )
     {
         $queryGenerator = new System_Api_QueryGenerator();
-        $queryGenerator->setFolder( $this->folder );
+        if ( $this->folder != null )
+            $queryGenerator->setFolder( $this->folder );
+        else
+            $queryGenerator->setIssueType( $this->type );
 
         if ( $row[ 'view_def' ] != null )
             $queryGenerator->setViewDefinition( $row[ 'view_def' ] );

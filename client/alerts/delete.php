@@ -29,15 +29,24 @@ class Client_Alerts_Delete extends System_Web_Component
 
     protected function execute()
     {
-        $projectManager = new System_Api_ProjectManager();
         $folderId = (int)$this->request->getQueryString( 'folder' );
-        $this->folder = $projectManager->getFolder( $folderId );
+        if ( $folderId != 0 ) {
+            $projectManager = new System_Api_ProjectManager();
+            $folder = $projectManager->getFolder( $folderId );
+        } else {
+            $typeId = (int)$this->request->getQueryString( 'type' );
+            $typeManager = new System_Api_TypeManager();
+            $type = $typeManager->getIssueType( $typeId );
+        }
 
         $this->view->setDecoratorClass( 'Common_MessageBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Delete Alert' ) );
 
         $breadcrumbs = new Common_Breadcrumbs( $this );
-        $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $this->folder );
+        if ( $folderId != 0 )
+            $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $folder );
+        else
+            $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $type );
 
         $alertId = (int)$this->request->getQueryString( 'id' );
         $alertManager = new System_Api_AlertManager();

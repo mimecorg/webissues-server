@@ -160,7 +160,7 @@ class Common_Breadcrumbs extends System_Web_Base
 
             case self::ManageAlerts:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/alerts/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'folder', 'asort', 'aorder', 'apage' ) );
+                $this->urls[] = $this->filterQueryString( '/client/alerts/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'folder', 'type', 'asort', 'aorder', 'apage' ) );
                 $this->names[] = $this->tr( 'Manage Alerts' );
                 break;
 

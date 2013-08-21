@@ -1,6 +1,10 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<p><?php echo $this->tr( 'Create a new alert for folder <strong>%1</strong>.', null, $folder[ 'folder_name' ] ) ?></p>
+<?php if ( !empty( $folderName ) ): ?>
+<p><?php echo $this->tr( 'Create a new alert for folder <strong>%1</strong>.', null, $folderName ) ?></p>
+<?php else: ?>
+<p><?php echo $this->tr( 'Create a new alert for type <strong>%1</strong>.', null, $typeName ) ?></p>
+<?php endif ?>
 
 <?php $form->renderFormOpen(); ?>
 

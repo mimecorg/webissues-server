@@ -1,6 +1,10 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<p><?php echo $this->tr( 'Edit alert settings for folder <strong>%1</strong>.', null, $folder[ 'folder_name' ] ) ?></p>
+<?php if ( !empty( $folderName ) ): ?>
+<p><?php echo $this->tr( 'Edit alert settings for folder <strong>%1</strong>.', null, $folderName ) ?></p>
+<?php else: ?>
+<p><?php echo $this->tr( 'Edit alert settings for type <strong>%1</strong>.', null, $typeName ) ?></p>
+<?php endif ?>
 
 <?php $form->renderFormOpen(); ?>
 
@@ -53,7 +57,11 @@
 
 <?php else: ?>
 
+<?php if ( !empty( $folderName ) ): ?>
 <p class="noitems"><?php echo $this->tr( 'This folder has no alerts.' ) ?></p>
+<?php else: ?>
+<p class="noitems"><?php echo $this->tr( 'This type has no alerts.' ) ?></p>
+<?php endif ?>
 
 <?php endif ?>
 

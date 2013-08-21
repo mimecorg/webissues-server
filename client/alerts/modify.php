@@ -22,9 +22,6 @@ require_once( '../../system/bootstrap.inc.php' );
 
 class Client_Alerts_Modify extends System_Web_Component
 {
-    private $alertManager;
-
-
     protected function __construct()
     {
         parent::__construct();
@@ -36,19 +33,28 @@ class Client_Alerts_Modify extends System_Web_Component
         if ( !$helper->hasEmailEngine() )
             throw new System_Core_Exception( 'Email engine is disabled' );
 
-        $projectManager = new System_Api_ProjectManager();
         $folderId = (int)$this->request->getQueryString( 'folder' );
-        $this->folder = $projectManager->getFolder( $folderId );
+        if ( $folderId != 0 ) {
+            $projectManager = new System_Api_ProjectManager();
+            $folder = $projectManager->getFolder( $folderId );
+        } else {
+            $typeId = (int)$this->request->getQueryString( 'type' );
+            $typeManager = new System_Api_TypeManager();
+            $type = $typeManager->getIssueType( $typeId );
+        }
 
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Modify Alert' ) );
 
         $breadcrumbs = new Common_Breadcrumbs( $this );
-        $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $this->folder );
+        if ( $folderId != 0 )
+            $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $folder );
+        else
+            $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $type );
 
         $alertId = (int)$this->request->getQueryString( 'id' );
-        $this->alertManager = new System_Api_AlertManager();
-        $this->alert = $this->alertManager->getAlert( $alertId );
+        $alertManager = new System_Api_AlertManager();
+        $this->alert = $alertManager->getAlert( $alertId );
 
         if ( $this->alert[ 'view_name' ] === null )
             $this->alert[ 'view_name' ] = $this->tr( 'All Issues' );
@@ -76,8 +82,9 @@ class Client_Alerts_Modify extends System_Web_Component
 
     private function submit()
     {
+        $alertManager = new System_Api_AlertManager();
         try {
-            $this->alertManager->modifyAlert( $this->alert, $this->alertEmail );
+            $alertManager->modifyAlert( $this->alert, $this->alertEmail );
         } catch ( System_Api_Error $ex ) {
             $this->form->getErrorHelper()->handleError( 'alertEmail', $ex );
         }

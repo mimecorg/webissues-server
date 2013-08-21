@@ -22,7 +22,8 @@ require_once( '../../system/bootstrap.inc.php' );
 
 class Client_Alerts_Add extends System_Web_Component
 {
-    private $alertManager = null;
+    private $folder = null;
+    private $type = null;
 
     protected function __construct()
     {
@@ -32,19 +33,50 @@ class Client_Alerts_Add extends System_Web_Component
     protected function execute()
     {
         $projectManager = new System_Api_ProjectManager();
+        $typeManager = new System_Api_TypeManager();
+
         $folderId = (int)$this->request->getQueryString( 'folder' );
-        $this->folder = $projectManager->getFolder( $folderId );
+        if ( $folderId != 0 ) {
+            $this->folder = $projectManager->getFolder( $folderId );
+            $this->type = $typeManager->getIssueTypeForFolder( $this->folder );
+            $this->folderName = $this->folder[ 'folder_name' ];
+        } else {
+            $typeId = (int)$this->request->getQueryString( 'type' );
+            $this->type = $typeManager->getIssueType( $typeId );
+            $this->typeName = $this->type[ 'type_name' ];
+        }
 
         $breadcrumbs = new Common_Breadcrumbs( $this );
-        $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $this->folder );
+        if ( $this->folder != null )
+            $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $this->folder );
+        else
+            $breadcrumbs->initialize( Common_Breadcrumbs::ManageAlerts, $this->type );
 
-        $this->alertManager = new System_Api_AlertManager();
+        $alertManager = new System_Api_AlertManager();
 
-        $this->form = new System_Web_Form( 'alert', $this );
+        $this->viewOptions = array();
+
+        if ( $this->folder != null ) {
+            if ( !$alertManager->hasAllIssuesAlert( $this->folder ) )
+                $this->viewOptions[ 0 ] = $this->tr( 'All Issues' );
+
+            $views = $alertManager->getViewsWithoutAlerts( $this->folder );
+        } else {
+            if ( !$alertManager->hasAllIssuesGlobalAlert( $this->type ) )
+                $this->viewOptions[ 0 ] = $this->tr( 'All Issues' );
+
+            $views = $alertManager->getViewsWithoutGlobalAlerts( $this->type );
+        }
+
+        if ( !empty( $views[ 0 ] ) )
+            $this->viewOptions[ $this->tr( 'Personal Views' ) ] = $views[ 0 ];
+
+        if ( !empty( $views[ 1 ] ) )
+            $this->viewOptions[ $this->tr( 'Public Views' ) ] = $views[ 1 ];
+
+        $this->form = new System_Web_Form( 'alerts', $this );
 
         $this->form->addField( 'viewId', '' );
-
-        $this->viewOptions = $this->getViewOptions();
         $this->form->addItemsRule( 'viewId', $this->viewOptions );
 
         $helper = new Client_Alerts_Helper();
@@ -77,34 +109,25 @@ class Client_Alerts_Add extends System_Web_Component
         }
     }
 
-    private function getViewOptions()
-    {
-        $options = array();
-
-        if ( !$this->alertManager->hasAllIssuesAlert( $this->folder ) )
-            $options[ 0 ] = $this->tr( 'All Issues' );
-
-        $views = $this->alertManager->getViewsWithoutAlerts( $this->folder );
-
-        if ( !empty( $views[ 0 ] ) )
-            $options[ $this->tr( 'Personal Views' ) ] = $views[ 0 ];
-
-        if ( !empty( $views[ 1 ] ) )
-            $options[ $this->tr( 'Public Views' ) ] = $views[ 1 ];
-
-        return $options;
-    }
-
     private function submit()
     {
         $view = null;
-        if ( $this->viewId != 0 )
-            $view[ 'view_id' ] = $this->viewId;
 
-        $alertEmail = ( isset( $this->alertEmail ) ) ? $this->alertEmail : System_Const::NoEmail;
+        if ( $this->viewId != 0 ) {
+            $viewManager = new System_Api_ViewManager();
+            $view = $viewManager->getView( $this->viewId );
+        }
+
+        if ( $this->emailEngine == false )
+            $this->alertEmail = System_Const::NoEmail;
+
+        $alertManager = new System_Api_AlertManager();
 
         try {
-            $this->alertManager->addAlert( $this->folder, $view, $alertEmail );
+            if ( $this->folder != null )
+                $alertManager->addAlert( $this->folder, $view, $this->alertEmail );
+            else
+                $alertManager->addGlobalAlert( $this->type, $view, $this->alertEmail );
         } catch ( System_Api_Error $ex ) {
             $this->form->getErrorHelper()->handleError( 'viewId', $ex );
         }
