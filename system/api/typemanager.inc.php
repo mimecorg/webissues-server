@@ -215,19 +215,15 @@ class System_Api_TypeManager extends System_Api_Base
         if ( empty( $types ) )
             return array();
 
-        $placeholders = array();
-        $args = array();
-
-        foreach ( $types as $type ) {
-            $placeholders[] = '%d';
-            $args[] = $type[ 'type_id' ];
-        }
+        $ids = array();
+        foreach ( $types as $type )
+            $ids[] = $type[ 'type_id' ];
 
         $query = 'SELECT attr_id, type_id, attr_name, attr_def FROM {attr_types}'
-            . ' WHERE type_id IN ( ' . join( ', ', $placeholders ) . ' )'
+            . ' WHERE type_id IN ( %%d )'
             . 'ORDER BY attr_name COLLATE LOCALE';
 
-        return $this->connection->queryTableArgs( $query, $args );
+        return $this->connection->queryTable( $query, $ids );
     }
 
     /**

@@ -360,15 +360,11 @@ class System_Api_ViewManager extends System_Api_Base
         $transaction = $this->connection->beginTransaction( System_Db_Transaction::RepeatableRead, 'views' );
 
         try {
-            if ( $isPublic ) {
-                $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id IS NULL AND view_name = %s';
-                if ( $this->connection->queryScalar( $query, $typeId, $newName ) !== false )
-                    throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
-            } else {
-                $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id = %d AND view_name = %s';
-                if ( $this->connection->queryScalar( $query, $typeId, $principal->getUserId(), $newName ) !== false )
-                    throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
-            }
+            $userId = $isPublic ? null : $principal->getUserId();
+
+            $query = 'SELECT view_id FROM {views} WHERE type_id = %d AND user_id = %d? AND view_name = %s';
+            if ( $this->connection->queryScalar( $query, $typeId, $userId, $newName ) !== false )
+                throw new System_Api_Error( System_Api_Error::ViewAlreadyExists );
 
             $query = 'UPDATE {views} SET view_name = %s WHERE view_id = %d';
             $this->connection->execute( $query, $newName, $viewId );

@@ -641,20 +641,16 @@ class System_Api_ProjectManager extends System_Api_Base
         if ( empty( $projects ) )
             return array();
 
-        $placeholders = array();
-        $args = array();
-
-        foreach ( $projects as $project ) {
-            $placeholders[] = '%d';
-            $args[] = $project[ 'project_id' ];
-        }
+        $ids = array();
+        foreach ( $projects as $project )
+            $ids[] = $project[ 'project_id' ];
 
         $query = 'SELECT f.folder_id, f.project_id, f.folder_name, f.type_id, f.stamp_id, t.type_name FROM {folders} AS f'
             . ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
-            . ' WHERE f.project_id IN ( ' . join( ', ', $placeholders ) . ' )'
+            . ' WHERE f.project_id IN ( %%d )'
             . ' ORDER BY f.folder_name COLLATE LOCALE';
 
-        return $this->connection->queryTableArgs( $query, $args );
+        return $this->connection->queryTable( $query, $ids );
     }
 
     /**

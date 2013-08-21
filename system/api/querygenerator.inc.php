@@ -631,12 +631,8 @@ class System_Api_QueryGenerator
             case 'IN':
                 $items = explode( ', ', $value );
                 if ( count( $items >= 2 ) ) {
-                    $placeholders = array();
-                    foreach ( $items as $item ) {
-                        $this->arguments[] = $item;
-                        $placeholders[] = '%s';
-                    }
-                    return "$expression IN ( " . join( ', ', $placeholders ) . ' )';
+                    $this->arguments[] = $items;
+                    return "$expression IN ( %%s )";
                 } else {
                     $this->arguments[] = $value;
                     return "$expression = %s";

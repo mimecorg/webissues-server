@@ -120,11 +120,8 @@ class System_Api_SubscriptionManager extends System_Api_Base
                 $this->connection->execute( $query, $stateId );
             }
 
-            $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id, subscription_id )';
-            if ( $readId > 0 )
-                $query .= ' VALUES ( %1d, %2d, %3d, %4d )';
-            else
-                $query .= ' VALUES ( %1d, %2d, NULL, %4d )';
+            $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id, subscription_id )'
+                . ' VALUES ( %1d, %2d, %3d?, %4d )';
             $this->connection->execute( $query, $principal->getUserId(), $issueId, $readId, $subscriptionId );
 
             $transaction->commit();
@@ -195,13 +192,10 @@ class System_Api_SubscriptionManager extends System_Api_Base
                     $this->connection->execute( $query, $state[ 'state_id' ] );
                 }
 
-                if ( $state != null && $state[ 'read_id' ] != null ) {
-                    $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id, subscription_id ) VALUES ( %1d, %2d, %3d, NULL )';
-                    $this->connection->execute( $query, $userId, $issueId, $state[ 'read_id' ] );
-                } else {
-                    $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id, subscription_id ) VALUES ( %1d, %2d, NULL, NULL )';
-                    $this->connection->execute( $query, $userId, $issueId );
-                }
+                $readId = ( $state != null ) ? $state[ 'read_id' ] : null;
+
+                $query = 'INSERT INTO {issue_states} ( user_id, issue_id, read_id, subscription_id ) VALUES ( %1d, %2d, %3d?, NULL )';
+                $this->connection->execute( $query, $userId, $issueId, $readId );
             }
 
             $transaction->commit();
