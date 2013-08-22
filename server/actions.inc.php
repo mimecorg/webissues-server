@@ -825,6 +825,26 @@ class Server_Actions
         $this->setId( $alertManager->addAlert( $folder, $view, $alertEmail ) );
     }
 
+    public function addGlobalAlert( $typeId, $viewId, $alertEmail )
+    {
+        $this->principal->checkAuthenticated();
+
+        $typeManager = new System_Api_TypeManager();
+        $type = $typeManager->getIssueType( $typeId );
+
+        if ( $viewId != 0 ) {
+            $viewManager = new System_Api_ViewManager();
+            $view = $viewManager->getView( $viewId );
+        } else {
+            $view = null;
+        }
+
+        $this->validator->checkAlertEmail( $alertEmail );
+
+        $alertManager = new System_Api_AlertManager();
+        $this->setId( $alertManager->addGlobalAlert( $type, $view, $alertEmail ) );
+    }
+
     public function modifyAlert( $alertId, $alertEmail )
     {
         $this->principal->checkAuthenticated();
