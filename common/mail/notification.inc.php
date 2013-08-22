@@ -36,19 +36,32 @@ class Common_Mail_Notification extends System_Web_Component
     public function prepare()
     {
         $this->folderId = $this->alert[ 'folder_id' ];
+        $this->typeId = $this->alert[ 'type_id' ];
         $this->viewId = $this->alert[ 'view_id' ];
 
-        $projectManager = new System_Api_ProjectManager();
-        $folder = $projectManager->getFolder( $this->folderId );
-
-        $this->projectName = $folder[ 'project_name' ];
-        $this->folderName = $folder[ 'folder_name' ];
-
         $typeManager = new System_Api_TypeManager();
-        $type = $typeManager->getIssueTypeForFolder( $folder );
+
+        if ( $this->folderId != 0 ) {
+            $projectManager = new System_Api_ProjectManager();
+            $folder = $projectManager->getFolder( $this->folderId );
+
+            $this->projectName = $folder[ 'project_name' ];
+            $this->folderName = $folder[ 'folder_name' ];
+
+            $type = $typeManager->getIssueTypeForFolder( $folder );
+        } else {
+            $typeManager = new System_Api_TypeManager();
+            $type = $typeManager->getIssueType( $this->typeId );
+            $folder = null;
+
+            $this->typeName = $type[ 'type_name' ];
+        }
 
         $this->queryGenerator = new System_Api_QueryGenerator();
-        $this->queryGenerator->setFolder( $folder );
+        if ( $folder != null )
+            $this->queryGenerator->setFolder( $folder );
+        else
+            $this->queryGenerator->setIssueType( $type );
 
         $viewManager = new System_Api_ViewManager();
         if ( $this->viewId ) {
@@ -97,7 +110,10 @@ class Common_Mail_Notification extends System_Web_Component
     protected function execute()
     {
         $this->view->setDecoratorClass( 'Common_Mail_Layout' );
-        $this->view->setSlot( 'subject', $this->projectName . ' - ' . $this->folderName . ' - ' . $this->viewName );
+        if ( !empty( $this->folderName ) )
+            $this->view->setSlot( 'subject', $this->projectName . ' - ' . $this->folderName . ' - ' . $this->viewName );
+        else
+            $this->view->setSlot( 'subject', $this->typeName . ' - ' . $this->viewName );
 
         $serverManager = new System_Api_ServerManager();
 
@@ -134,6 +150,9 @@ class Common_Mail_Notification extends System_Web_Component
                 }
 
                 $issue[ $name ] = $this->truncate( $value, 60 );
+
+                if ( $column == System_Api_Column::Location )
+                    $issue[ 'project_name' ] = $row[ 'project_name' ];
             }
             $this->issues[ $row[ 'issue_id' ] ] = $issue;
         }

@@ -2,8 +2,13 @@
 
 <h1>
 <?php
-    echo $this->mailLink( $this->appendQueryString( '/client/index.php', array( 'folder' => $folderId, 'view' => $linkViewId ) ),
-        $projectName . ' - ' . $folderName . ' - ' . $viewName );
+    if ( !empty( $folderName ) ):
+        echo $this->mailLink( $this->appendQueryString( '/client/index.php', array( 'folder' => $folderId, 'view' => $linkViewId ) ),
+            $projectName . ' &raquo; ' . $folderName . ' &raquo; ' . $viewName );
+    else:
+        echo $this->mailLink( $this->appendQueryString( '/client/index.php', array( 'type' => $typeId, 'view' => $linkViewId ) ),
+            $typeName . ' &raquo; ' . $viewName );
+    endif
 ?>
 </h1>
 
@@ -20,6 +25,8 @@
 <?php
     if ( $column == System_Api_Column::Name ):
         echo $this->mailLink( $this->appendQueryString( '/client/index.php', array( 'issue' => $issueId ) ), $issue[ $name ] );
+    elseif ( $column == System_Api_Column::Location ):
+        echo $issue[ 'project_name' ] . ' &mdash; ' . $issue[ 'folder_name' ];
     else:
         echo $issue[ $name ];
     endif;
@@ -131,12 +138,12 @@
         echo $this->tr( 'Name' ) . ': "' . $change[ 'value_new' ] . '"';
         break;
     case System_Const::IssueRenamed:
-        echo $this->tr( 'Name' ) . ': "' . $change[ 'value_old' ] . '" &rarr; "' . $change[ 'value_new' ] . '"';
+        echo $this->tr( 'Name' ) . ': "' . $change[ 'value_old' ] . '" &raquo; "' . $change[ 'value_new' ] . '"';
         break;
     case System_Const::ValueChanged:
         $from = ( $change[ 'value_old' ] == '' ) ? $this->tr( 'empty' ) : '"' . $change[ 'value_old' ] . '"';
         $to = ( $change[ 'value_new' ] == '' ) ? $this->tr( 'empty' ) : '"' . $change[ 'value_new' ] . '"';
-        echo $change[ 'attr_name' ] . ': ' . $from . ' &rarr; ' . $to;
+        echo $change[ 'attr_name' ] . ': ' . $from . ' &raquo; ' . $to;
         break;
     endswitch;
 ?>

@@ -368,7 +368,7 @@ class System_Api_AlertManager extends System_Api_Base
 
         $query = 'SELECT a.alert_id, a.folder_id, a.type_id, a.view_id, a.alert_email, a.stamp_id'
             . ' FROM {alerts} AS a';
-        $query .= ' WHERE a.user_id = %1d AND EXISTS ( SELECT f.folder_id FROM {folders}';
+        $query .= ' WHERE a.user_id = %1d AND EXISTS ( SELECT f.folder_id FROM {folders} AS f';
         if ( !$principal->isAdministrator() )
             $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
         $query .= ' WHERE ( f.folder_id = a.folder_id OR f.type_id = a.type_id )';
