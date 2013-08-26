@@ -20,7 +20,7 @@
 
 <td colspan="2">
   <?php $grid->renderExpandButton( empty( $types ) ) ?>
-  <?php echo $this->imageAndText( '/common/images/project-all-16.png', $this->tr( 'All Issues' ) ) ?>
+  <?php echo $this->imageAndText( '/common/images/project-all-16.png', $this->tr( 'All Projects' ) ) ?>
 </td>
 
 <?php $grid->renderRowClose() ?>
