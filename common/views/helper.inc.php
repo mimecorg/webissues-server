@@ -294,26 +294,25 @@ class Common_Views_Helper extends System_Web_Base
 
         $filters = $info->getMetadata( 'filters' );
         if ( $filters != null ) {
-            $nextIndex = 1;
-
             $formatter = new System_Api_Formatter();
             $expressionHelper = new System_Web_ExpressionHelper();
 
             foreach ( $filters as $filter ) {
                 $filterInfo = System_Api_DefinitionInfo::fromString( $filter );
-                $index = $nextIndex++;
 
                 $column = $filterInfo->getMetadata( 'column' );
                 $value = $filterInfo->getMetadata( 'value' );
 
-                $valueInfo = System_Api_DefinitionInfo::fromString( $this->valueDefinitions[ $column ] );
+                if ( isset( $this->valueDefinitions[ $column ] ) ) {
+                    $valueInfo = System_Api_DefinitionInfo::fromString( $this->valueDefinitions[ $column ] );
 
-                $value = $expressionHelper->formatExpression( $valueInfo->getType(), $this->valueDefinitions[ $column ], $value );
+                    $value = $expressionHelper->formatExpression( $valueInfo->getType(), $this->valueDefinitions[ $column ], $value );
 
-                $this->conditions[ $index ] = array(
-                    'column' => $column,
-                    'type' => $filterInfo->getType(),
-                    'value' => $value );
+                    $this->conditions[] = array(
+                        'column' => $column,
+                        'type' => $filterInfo->getType(),
+                        'value' => $value );
+                }
             }
         }
     }
