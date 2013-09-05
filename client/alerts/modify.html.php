@@ -1,6 +1,10 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<p><?php echo $this->tr( 'Modify alert <strong>%1</strong>.', null, $alert[ 'view_name' ] ) ?></p>
+<?php if ( $alert[ 'is_public' ] ): ?>
+<p><?php echo $this->tr( 'Modify public alert <strong>%1</strong>.', null, $alert[ 'view_name' ] ) ?></p>
+<?php else: ?>
+<p><?php echo $this->tr( 'Modify your personal alert <strong>%1</strong>.', null, $alert[ 'view_name' ] ) ?></p>
+<?php endif ?>
 
 <?php $form->renderFormOpen(); ?>
 

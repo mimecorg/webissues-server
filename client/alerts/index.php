@@ -85,6 +85,10 @@ class Client_Alerts_Index extends System_Web_Component
         else
             $page = $alertManager->getGlobalAlertsPage( $this->type, $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
 
+        $isAdmin = System_Api_Principal::getCurrent()->isAdministrator();
+        if ( !$isAdmin && $this->folder != null )
+            $isAdmin = $this->folder[ 'project_access' ] == System_Const::AdministratorAccess;
+
         $this->alerts = array();
         foreach ( $page as $row ) {
             if ( $row[ 'view_name' ] === null ) {
@@ -92,6 +96,9 @@ class Client_Alerts_Index extends System_Web_Component
                 $row[ 'view_def' ] = $viewManager->getViewSetting( $this->type, 'default_view' );
             }
             $row[ 'alert_email' ] = $emailTypes[ $row[ 'alert_email' ] ];
+            $row[ 'classes' ] = array();
+            if ( $row[ 'is_public' ] == false || $isAdmin )
+                $row[ 'classes' ][] = 'editable';
             $this->getAlertStatus( $row );
             $this->alerts[ $row[ 'alert_id' ] ] = $row;
         }
@@ -103,10 +110,12 @@ class Client_Alerts_Index extends System_Web_Component
         $this->toolBar = new System_Web_ToolBar();
         $this->toolBar->setSelection( $selectedId );
 
-        $this->toolBar->addFixedCommand( '/client/alerts/add.php', '/common/images/user-new-16.png', $this->tr( 'Add Alert' ) );
+        $this->toolBar->addFixedCommand( '/client/alerts/add.php', '/common/images/alert-new-16.png', $this->tr( 'Add Alert' ) );
+        if ( $isAdmin )
+            $this->toolBar->addFixedCommand( '/client/alerts/add.php', '/common/images/alert-public-new-16.png', $this->tr( 'Add Public Alert' ), array( 'public' => 1 ) );
         if ( $this->emailEngine )
-            $this->toolBar->addItemCommand( '/client/alerts/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify Alert' ) );
-        $this->toolBar->addItemCommand( '/client/alerts/delete.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Alert' ) );
+            $this->toolBar->addItemCommand( '/client/alerts/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify Alert' ), array( 'editable' ) );
+        $this->toolBar->addItemCommand( '/client/alerts/delete.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Alert' ), array( 'editable' ) );
 
         $javaScript = new System_Web_JavaScript( $this->view );
         $javaScript->registerSelection( $this->toolBar );

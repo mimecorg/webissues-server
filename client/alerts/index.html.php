@@ -23,19 +23,25 @@
 <?php if ( $emailEngine ): ?>
 <?php $grid->renderHeader( $this->tr( 'Email Type' ) ) ?>
 <?php endif ?>
+<?php $grid->renderHeader( $this->tr( 'Is Public' ) ) ?>
 </tr>
 
 <?php foreach ( $alerts as $alertId => $alert ): ?>
-<?php $grid->renderRowOpen( $alertId ) ?>
+<?php $grid->renderRowOpen( $alertId, $alert[ 'classes' ] ) ?>
 
 <td>
 <?php
-    if ( $alert[ 'alert_unread' ] > 0 ):
-        $image = '/common/images/alert-unread-16.png';
-    elseif ( $alert[ 'alert_modified' ] > 0 ):
-        $image = '/common/images/alert-modified-16.png';
+    if ( $alert[ 'is_public' ] ):
+        $image = '/common/images/alert-public';
     else:
-        $image = '/common/images/alert-16.png';
+        $image = '/common/images/alert';
+    endif;
+    if ( $alert[ 'alert_unread' ] > 0 ):
+        $image .= '-unread-16.png';
+    elseif ( $alert[ 'alert_modified' ] > 0 ):
+        $image .= '-modified-16.png';
+    else:
+        $image .= '-16.png';
     endif;
     echo $this->imageAndTextLink( $this->mergeQueryString( '/client/alerts/index.php', array( 'alert' => $alertId ) ),
         $image, $alert[ 'view_name' ] );
@@ -47,6 +53,7 @@
 <?php if ( $emailEngine ): ?>
 <td><?php echo $alert[ 'alert_email' ] ?></td>
 <?php endif ?>
+<td><?php echo $alert[ 'is_public' ] ? $this->tr( 'Yes' ) : $this->tr( 'No' ) ?></td>
 
 <?php $grid->renderRowClose() ?>
 <?php endforeach ?>

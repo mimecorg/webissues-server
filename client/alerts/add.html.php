@@ -1,9 +1,17 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
 <?php if ( !empty( $folderName ) ): ?>
-<p><?php echo $this->tr( 'Create a new alert for folder <strong>%1</strong>.', null, $folderName ) ?></p>
+<?php if ( !empty( $isPublic ) ): ?>
+<p><?php echo $this->tr( 'Create a new public alert for folder <strong>%1</strong>.', null, $folderName ) ?></p>
 <?php else: ?>
-<p><?php echo $this->tr( 'Create a new alert for type <strong>%1</strong>.', null, $typeName ) ?></p>
+<p><?php echo $this->tr( 'Create a new personal alert for folder <strong>%1</strong>.', null, $folderName ) ?></p>
+<?php endif ?>
+<?php else: ?>
+<?php if ( !empty( $isPublic ) ): ?>
+<p><?php echo $this->tr( 'Create a new public alert for type <strong>%1</strong>.', null, $typeName ) ?></p>
+<?php else: ?>
+<p><?php echo $this->tr( 'Create a new personal alert for type <strong>%1</strong>.', null, $typeName ) ?></p>
+<?php endif ?>
 <?php endif ?>
 
 <?php $form->renderFormOpen(); ?>

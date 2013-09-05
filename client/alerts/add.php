@@ -35,12 +35,16 @@ class Client_Alerts_Add extends System_Web_Component
         $projectManager = new System_Api_ProjectManager();
         $typeManager = new System_Api_TypeManager();
 
+        $this->isPublic = (int)$this->request->getQueryString( 'public' ) == 1;
+
         $folderId = (int)$this->request->getQueryString( 'folder' );
         if ( $folderId != 0 ) {
-            $this->folder = $projectManager->getFolder( $folderId );
+            $this->folder = $projectManager->getFolder( $folderId, $this->isPublic ? System_Api_ProjectManager::RequireAdministrator : 0 );
             $this->type = $typeManager->getIssueTypeForFolder( $this->folder );
             $this->folderName = $this->folder[ 'folder_name' ];
         } else {
+            if ( $this->isPublic && !System_Api_Principal::getCurrent()->isAdministrator() )
+                throw new System_Api_Error( System_Api_Error::AccessDenied );
             $typeId = (int)$this->request->getQueryString( 'type' );
             $this->type = $typeManager->getIssueType( $typeId );
             $this->typeName = $this->type[ 'type_name' ];
@@ -57,15 +61,15 @@ class Client_Alerts_Add extends System_Web_Component
         $this->viewOptions = array();
 
         if ( $this->folder != null ) {
-            if ( !$alertManager->hasAllIssuesAlert( $this->folder ) )
+            if ( !$alertManager->hasAllIssuesAlert( $this->folder, $this->isPublic ? System_Api_AlertManager::IsPublic : 0 ) )
                 $this->viewOptions[ 0 ] = $this->tr( 'All Issues' );
 
-            $views = $alertManager->getViewsWithoutAlerts( $this->folder );
+            $views = $alertManager->getViewsWithoutAlerts( $this->folder, $this->isPublic ? System_Api_AlertManager::IsPublic : 0 );
         } else {
-            if ( !$alertManager->hasAllIssuesGlobalAlert( $this->type ) )
+            if ( !$alertManager->hasAllIssuesGlobalAlert( $this->type, $this->isPublic ? System_Api_AlertManager::IsPublic : 0 ) )
                 $this->viewOptions[ 0 ] = $this->tr( 'All Issues' );
 
-            $views = $alertManager->getViewsWithoutGlobalAlerts( $this->type );
+            $views = $alertManager->getViewsWithoutGlobalAlerts( $this->type, $this->isPublic ? System_Api_AlertManager::IsPublic : 0 );
         }
 
         if ( !empty( $views[ 0 ] ) )
@@ -93,7 +97,10 @@ class Client_Alerts_Add extends System_Web_Component
             $this->view->setDecoratorClass( 'Common_MessageBlock' );
         else
             $this->view->setDecoratorClass( 'Common_FixedBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'Add Alert' ) );
+        if ( $this->isPublic )
+            $this->view->setSlot( 'page_title', $this->tr( 'Add Public Alert' ) );
+        else
+            $this->view->setSlot( 'page_title', $this->tr( 'Add Personal Alert' ) );
 
         if ( $this->form->loadForm() ) {
             if ( $this->form->isSubmittedWith( 'cancel' ) || $this->form->isSubmittedWith( 'close' ) )
@@ -125,9 +132,9 @@ class Client_Alerts_Add extends System_Web_Component
 
         try {
             if ( $this->folder != null )
-                $alertManager->addAlert( $this->folder, $view, $this->alertEmail );
+                $alertManager->addAlert( $this->folder, $view, $this->alertEmail, $this->isPublic ? System_Api_AlertManager::IsPublic : 0 );
             else
-                $alertManager->addGlobalAlert( $this->type, $view, $this->alertEmail );
+                $alertManager->addGlobalAlert( $this->type, $view, $this->alertEmail, $this->isPublic ? System_Api_AlertManager::IsPublic : 0 );
         } catch ( System_Api_Error $ex ) {
             $this->form->getErrorHelper()->handleError( 'viewId', $ex );
         }

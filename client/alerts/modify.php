@@ -54,7 +54,7 @@ class Client_Alerts_Modify extends System_Web_Component
 
         $alertId = (int)$this->request->getQueryString( 'id' );
         $alertManager = new System_Api_AlertManager();
-        $this->alert = $alertManager->getAlert( $alertId );
+        $this->alert = $alertManager->getAlert( $alertId, System_Api_AlertManager::AllowEdit );
 
         if ( $this->alert[ 'view_name' ] === null )
             $this->alert[ 'view_name' ] = $this->tr( 'All Issues' );

@@ -30,6 +30,16 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 class System_Api_AlertManager extends System_Api_Base
 {
     /**
+    * @name Flags
+    */
+    /*@{*/
+    /** Permission to edit the alert is required. */
+    const AllowEdit = 1;
+    /** Indicate a public alert. */
+    const IsPublic = 2;
+    /*@}*/
+
+    /**
     * Constructor.
     */
     public function __construct()
@@ -45,9 +55,14 @@ class System_Api_AlertManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT alert_id, folder_id, type_id, view_id, alert_email'
-            . ' FROM {alerts}'
-            . ' WHERE user_id = %d';
+        $query = 'SELECT a.alert_id, a.folder_id, a.type_id, a.view_id, a.alert_email, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
+            . ' FROM {alerts} AS a'
+            . ' WHERE ( a.user_id = %1d OR a.user_id IS NULL )';
+        if ( !$principal->isAdministrator() ) {
+            $query .= ' AND EXISTS ( SELECT f.folder_id FROM {folders} AS f'
+                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d'
+                . ' WHERE ( f.folder_id = a.folder_id OR f.type_id = a.type_id ) )';
+        }
 
         return $this->connection->queryTable( $query, $principal->getUserId() );
     }
@@ -64,7 +79,7 @@ class System_Api_AlertManager extends System_Api_Base
 
         $query = 'SELECT COUNT(*)'
             . ' FROM {alerts}'
-            . ' WHERE user_id = %d AND folder_id = %d';
+            . ' WHERE ( user_id = %d OR user_id IS NULL ) AND folder_id = %d';
 
         return $this->connection->queryScalar( $query, $principal->getUserId(), $folderId );
     }
@@ -83,10 +98,10 @@ class System_Api_AlertManager extends System_Api_Base
 
         $folderId = $folder[ 'folder_id' ];
 
-        $query = 'SELECT a.alert_id, v.view_id, v.view_name, v.view_def, a.alert_email'
+        $query = 'SELECT a.alert_id, v.view_id, v.view_name, v.view_def, a.alert_email, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
             . ' FROM {alerts} AS a'
             . ' LEFT OUTER JOIN {views} AS v ON v.view_id = a.view_id'
-            . ' WHERE a.user_id = %d AND a.folder_id = %d';
+            . ' WHERE ( a.user_id = %d OR a.user_id IS NULL ) AND a.folder_id = %d';
 
         return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $principal->getUserId(), $folderId );
     }
@@ -103,7 +118,7 @@ class System_Api_AlertManager extends System_Api_Base
 
         $query = 'SELECT COUNT(*)'
             . ' FROM {alerts}'
-            . ' WHERE user_id = %d AND type_id = %d';
+            . ' WHERE ( user_id = %d OR user_id IS NULL ) AND type_id = %d';
 
         return $this->connection->queryScalar( $query, $principal->getUserId(), $typeId );
     }
@@ -122,28 +137,30 @@ class System_Api_AlertManager extends System_Api_Base
 
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT a.alert_id, v.view_id, v.view_name, v.view_def, a.alert_email'
+        $query = 'SELECT a.alert_id, v.view_id, v.view_name, v.view_def, a.alert_email, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
             . ' FROM {alerts} AS a'
             . ' LEFT OUTER JOIN {views} AS v ON v.view_id = a.view_id'
-            . ' WHERE a.user_id = %d AND a.type_id = %d';
+            . ' WHERE ( a.user_id = %d OR a.user_id IS NULL ) AND a.type_id = %d';
 
         return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $principal->getUserId(), $typeId );
     }
 
     /**
-    * Check if given folder has the "All Issues" view.
+    * Check if given folder has the "All Issues" alert.
     * @param $folder Folder for which alert is retrieved.
+    * @param $flags If IsPublic is passed, only public alerts are taken into account.
     * @return @c true if the folder has the "All Issues" view.
     */
-    public function hasAllIssuesAlert( $folder )
+    public function hasAllIssuesAlert( $folder, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
         $folderId = $folder[ 'folder_id' ];
 
-        $query = 'SELECT alert_id'
-            . ' FROM {alerts}'
-            . ' WHERE user_id = %d AND folder_id = %d AND view_id IS NULL';
+        if ( $flags & self::IsPublic )
+            $query = 'SELECT alert_id FROM {alerts} WHERE user_id IS NULL AND folder_id = %2d AND view_id IS NULL';
+        else
+            $query = 'SELECT alert_id FROM {alerts} WHERE ( user_id = %1d OR user_id IS NULL ) AND folder_id = %2d AND view_id IS NULL';
 
         return $this->connection->queryScalar( $query, $principal->getUserId(), $folderId ) !== false;
     }
@@ -151,20 +168,28 @@ class System_Api_AlertManager extends System_Api_Base
     /**
     * Get views for which there is no alert for a given folder.
     * @param $folder Folder for which views are retrieved.
+    * @param $flags If IsPublic is passed, only public alerts are taken into account.
     * @return An array of associative arrays representing views.
     */
-    public function getViewsWithoutAlerts( $folder )
+    public function getViewsWithoutAlerts( $folder, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
         $folderId = $folder[ 'folder_id' ];
         $typeId = $folder[ 'type_id' ];
 
-        $query = 'SELECT v.view_id, v.view_name, ( CASE WHEN v.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
-            . ' FROM {views} AS v'
-            . ' LEFT OUTER JOIN {alerts} AS a ON a.view_id = v.view_id AND a.user_id = %1d AND a.folder_id = %2d'
-            . ' WHERE v.type_id = %3d AND ( v.user_id = %1d OR v.user_id IS NULL ) AND a.alert_id IS NULL'
-            . ' ORDER BY v.view_name COLLATE LOCALE';
+        if ( $flags & self::IsPublic ) {
+            $query = 'SELECT v.view_id, v.view_name, 1 AS is_public'
+                . ' FROM {views} AS v'
+                . ' LEFT OUTER JOIN {alerts} AS a ON a.view_id = v.view_id AND a.user_id IS NULL AND a.folder_id = %2d'
+                . ' WHERE v.type_id = %3d AND v.user_id IS NULL AND a.alert_id IS NULL';
+        } else {
+            $query = 'SELECT v.view_id, v.view_name, ( CASE WHEN v.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
+                . ' FROM {views} AS v'
+                . ' LEFT OUTER JOIN {alerts} AS a ON a.view_id = v.view_id AND ( a.user_id = %1d OR a.user_id IS NULL ) AND a.folder_id = %2d'
+                . ' WHERE v.type_id = %3d AND ( v.user_id = %1d OR v.user_id IS NULL ) AND a.alert_id IS NULL';
+        }
+        $query .= ' ORDER BY v.view_name COLLATE LOCALE';
 
         $views = $this->connection->queryTable( $query, $principal->getUserId(), $folderId, $typeId );
 
@@ -176,19 +201,21 @@ class System_Api_AlertManager extends System_Api_Base
     }
 
     /**
-    * Check if given issue type has the "All Issues" view.
+    * Check if given issue type has the "All Issues" alert.
     * @param $folder Folder for which alert is retrieved.
+    * @param $flags If IsPublic is passed, only public alerts are taken into account.
     * @return @c true if the issue type has the "All Issues" view.
     */
-    public function hasAllIssuesGlobalAlert( $type )
+    public function hasAllIssuesGlobalAlert( $type, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT alert_id'
-            . ' FROM {alerts}'
-            . ' WHERE user_id = %d AND type_id = %d AND view_id IS NULL';
+        if ( $flags & self::IsPublic )
+            $query = 'SELECT alert_id FROM {alerts} WHERE user_id IS NULL AND type_id = %2d AND view_id IS NULL';
+        else
+            $query = 'SELECT alert_id FROM {alerts} WHERE ( user_id = %1d OR user_id IS NULL ) AND type_id = %2d AND view_id IS NULL';
 
         return $this->connection->queryScalar( $query, $principal->getUserId(), $typeId ) !== false;
     }
@@ -196,19 +223,27 @@ class System_Api_AlertManager extends System_Api_Base
     /**
     * Get views for which there is no alert for a given issue type.
     * @param $type Issue type for which views are retrieved.
+    * @param $flags If IsPublic is passed, only public alerts are taken into account.
     * @return An array of associative arrays representing views.
     */
-    public function getViewsWithoutGlobalAlerts( $type )
+    public function getViewsWithoutGlobalAlerts( $type, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT v.view_id, v.view_name, ( CASE WHEN v.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
-            . ' FROM {views} AS v'
-            . ' LEFT OUTER JOIN {alerts} AS a ON a.view_id = v.view_id AND a.user_id = %1d AND a.type_id = %2d'
-            . ' WHERE v.type_id = %2d AND ( v.user_id = %1d OR v.user_id IS NULL ) AND a.alert_id IS NULL'
-            . ' ORDER BY v.view_name COLLATE LOCALE';
+        if ( $flags & self::IsPublic ) {
+            $query = 'SELECT v.view_id, v.view_name, 1 AS is_public'
+                . ' FROM {views} AS v'
+                . ' LEFT OUTER JOIN {alerts} AS a ON a.view_id = v.view_id AND a.user_id IS NULL AND a.type_id = %2d'
+                . ' WHERE v.type_id = %2d AND v.user_id IS NULL AND a.alert_id IS NULL';
+        } else {
+            $query = 'SELECT v.view_id, v.view_name, ( CASE WHEN v.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
+                . ' FROM {views} AS v'
+                . ' LEFT OUTER JOIN {alerts} AS a ON a.view_id = v.view_id AND ( a.user_id = %1d OR a.user_id IS NULL ) AND a.type_id = %2d'
+                . ' WHERE v.type_id = %2d AND ( v.user_id = %1d OR v.user_id IS NULL ) AND a.alert_id IS NULL';
+        }
+        $query .= ' ORDER BY v.view_name COLLATE LOCALE';
 
         $views = $this->connection->queryTable( $query, $principal->getUserId(), $typeId );
 
@@ -232,19 +267,36 @@ class System_Api_AlertManager extends System_Api_Base
     /**
     * Get the alert with given identifier.
     * @param $alertId Identifier of the alert.
+    * @param $flags If AllowEdit is passed an error is thrown if the user
+    * does not have permission to edit the alert.
     * @return Array representing the alert.
     */
-    public function getAlert( $alertId )
+    public function getAlert( $alertId, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT a.alert_id, v.view_id, v.view_name, a.alert_email'
-            . ' FROM {alerts} AS a'
-            . ' LEFT OUTER JOIN {views} AS v ON v.view_id = a.view_id'
-            . ' WHERE a.alert_id = %d AND a.user_id = %d';
+        if ( ( $flags & self::AllowEdit ) && !$principal->isAdministrator() ) {
+            $query = 'SELECT a.alert_id, v.view_id, v.view_name, a.alert_email, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public, r.project_access'
+                . ' FROM {alerts} AS a'
+                . ' LEFT OUTER JOIN {folders} AS f ON f.folder_id = a.folder_id'
+                . ' LEFT OUTER JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
+        } else {
+            $query = 'SELECT a.alert_id, v.view_id, v.view_name, a.alert_email, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
+                . ' FROM {alerts} AS a';
+        }
+        $query .= ' LEFT OUTER JOIN {views} AS v ON v.view_id = a.view_id'
+            . ' WHERE a.alert_id = %1d AND ( a.user_id = %2d OR a.user_id IS NULL )';
+        if ( !$principal->isAdministrator() ) {
+            $query .= ' AND EXISTS ( SELECT f.folder_id FROM {folders} AS f'
+                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d'
+                . ' WHERE ( f.folder_id = a.folder_id OR f.type_id = a.type_id ) )';
+        }
 
         if ( !( $alert = $this->connection->queryRow( $query, $alertId, $principal->getUserId() ) ) )
             throw new System_Api_Error( System_Api_Error::UnknownAlert );
+
+        if ( ( $flags & self::AllowEdit ) && !$principal->isAdministrator() && $alert[ 'is_public' ] && $alert[ 'project_access' ] != System_Const::AdministratorAccess )
+            throw new System_Api_Error( System_Api_Error::AccessDenied );
 
         return $alert;
     }
@@ -254,26 +306,36 @@ class System_Api_AlertManager extends System_Api_Base
     * @param $folder Folder for which the alert is created.
     * @param $view Optional view associated with the alert.
     * @param $alertEmail Type of emails associated with the alert.
+    * @param $flags If IsPublic is passed, a public alert is created.
     * @return The identifier of the new alert.
     */
-    public function addAlert( $folder, $view, $alertEmail )
+    public function addAlert( $folder, $view, $alertEmail, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
         $folderId = $folder[ 'folder_id' ];
         $stampId = $folder[ 'stamp_id' ];
         $viewId = ( $view != null ) ? $view[ 'view_id' ] : null;
+        $userId = ( $flags & self::IsPublic ) ? null : $principal->getUserId();
 
         $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'alerts' );
 
         try {
-            $query = 'SELECT alert_id FROM {alerts} WHERE user_id = %d AND folder_id = %d AND view_id = %d?';
-            if ( $this->connection->queryScalar( $query, $principal->getUserId(), $folderId, $viewId ) !== false )
+            if ( $flags & self::IsPublic )
+                $query = 'SELECT alert_id FROM {alerts} WHERE user_id IS NULL AND folder_id = %2d AND view_id = %3d?';
+            else
+                $query = 'SELECT alert_id FROM {alerts} WHERE ( user_id = %1d OR user_id IS NULL ) AND folder_id = %2d AND view_id = %3d?';
+            if ( $this->connection->queryScalar( $query, $userId, $folderId, $viewId ) !== false )
                 throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
 
-            $query = 'INSERT INTO {alerts} ( user_id, folder_id, type_id, view_id, alert_email, stamp_id ) VALUES ( %d, %d, NULL, %d?, %d, %d? )';
-            $this->connection->execute( $query, $principal->getUserId(), $folderId, $viewId, $alertEmail, $stampId );
+            $query = 'INSERT INTO {alerts} ( user_id, folder_id, type_id, view_id, alert_email, stamp_id ) VALUES ( %d?, %d, NULL, %d?, %d, %d? )';
+            $this->connection->execute( $query, $userId, $folderId, $viewId, $alertEmail, $stampId );
             $alertId = $this->connection->getInsertId( 'alerts', 'alert_id' );
+
+            if ( $flags & self::IsPublic ) {
+                $query = 'DELETE FROM {alerts} WHERE user_id IS NOT NULL AND folder_id = %d AND view_id = %d?';
+                $this->connection->execute( $query, $folderId, $viewId );
+            }
 
             $transaction->commit();
         } catch ( Exception $ex ) {
@@ -289,14 +351,16 @@ class System_Api_AlertManager extends System_Api_Base
     * @param $type Issue type for which the alert is created.
     * @param $view Optional view associated with the alert.
     * @param $alertEmail Type of emails associated with the alert.
+    * @param $flags If IsPublic is passed, a public alert is created.
     * @return The identifier of the new alert.
     */
-    public function addGlobalAlert( $type, $view, $alertEmail )
+    public function addGlobalAlert( $type, $view, $alertEmail, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
         $typeId = $type[ 'type_id' ];
         $viewId = ( $view != null ) ? $view[ 'view_id' ] : null;
+        $userId = ( $flags & self::IsPublic ) ? null : $principal->getUserId();
 
         $transaction = $this->connection->beginTransaction( System_Db_Transaction::Serializable, 'alerts' );
 
@@ -304,13 +368,21 @@ class System_Api_AlertManager extends System_Api_Base
             $query = 'SELECT MAX( stamp_id ) FROM {folders} WHERE type_id = %d';
             $stampId = $this->connection->queryScalar( $query, $typeId );
 
-            $query = 'SELECT alert_id FROM {alerts} WHERE user_id = %d AND type_id = %d AND view_id = %d?';
-            if ( $this->connection->queryScalar( $query, $principal->getUserId(), $typeId, $viewId ) !== false )
+            if ( $flags & self::IsPublic )
+                $query = 'SELECT alert_id FROM {alerts} WHERE user_id IS NULL AND type_id = %2d AND view_id = %3d?';
+            else
+                $query = 'SELECT alert_id FROM {alerts} WHERE ( user_id = %1d OR user_id IS NULL ) AND type_id = %2d AND view_id = %3d?';
+            if ( $this->connection->queryScalar( $query, $userId, $typeId, $viewId ) !== false )
                 throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
 
-            $query = 'INSERT INTO {alerts} ( user_id, folder_id, type_id, view_id, alert_email, stamp_id ) VALUES ( %d, NULL, %d, %d?, %d, %d? )';
-            $this->connection->execute( $query, $principal->getUserId(), $typeId, $viewId, $alertEmail, $stampId );
+            $query = 'INSERT INTO {alerts} ( user_id, folder_id, type_id, view_id, alert_email, stamp_id ) VALUES ( %d?, NULL, %d, %d?, %d, %d? )';
+            $this->connection->execute( $query, $userId, $typeId, $viewId, $alertEmail, $stampId );
             $alertId = $this->connection->getInsertId( 'alerts', 'alert_id' );
+
+            if ( $flags & self::IsPublic ) {
+                $query = 'DELETE FROM {alerts} WHERE user_id IS NOT NULL AND type_id = %d AND view_id = %d?';
+                $this->connection->execute( $query, $typeId, $viewId );
+            }
 
             $transaction->commit();
         } catch ( Exception $ex ) {
