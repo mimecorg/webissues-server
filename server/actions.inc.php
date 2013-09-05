@@ -805,16 +805,19 @@ class Server_Actions
         $this->setOkIf( $subscriptionManager->deleteSubscription( $subscription ) );
     }
 
-    public function addAlert( $folderId, $viewId, $alertEmail )
+    public function addAlert( $folderId, $viewId, $alertEmail, $isPublic )
     {
         $this->principal->checkAuthenticated();
 
         $projectManager = new System_Api_ProjectManager();
-        $folder = $projectManager->getFolder( $folderId );
+        $folder = $projectManager->getFolder( $folderId, $isPublic ? System_Api_ProjectManager::RequireAdministrator : 0 );
 
         if ( $viewId != 0 ) {
+            $typeManager = new System_Api_TypeManager();
+            $type = $typeManager->getIssueTypeForFolder( $folder );
+
             $viewManager = new System_Api_ViewManager();
-            $view = $viewManager->getView( $viewId );
+            $view = $viewManager->getViewForIssueType( $type, $viewId, $isPublic ? System_Api_ViewManager::IsPublic : 0 );
         } else {
             $view = null;
         }
@@ -822,19 +825,22 @@ class Server_Actions
         $this->validator->checkAlertEmail( $alertEmail );
 
         $alertManager = new System_Api_AlertManager();
-        $this->setId( $alertManager->addAlert( $folder, $view, $alertEmail ) );
+        $this->setId( $alertManager->addAlert( $folder, $view, $alertEmail, $isPublic ? System_Api_AlertManager::IsPublic : 0 ) );
     }
 
-    public function addGlobalAlert( $typeId, $viewId, $alertEmail )
+    public function addGlobalAlert( $typeId, $viewId, $alertEmail, $isPublic )
     {
-        $this->principal->checkAuthenticated();
+        if ( $isPublic )
+            $this->principal->checkAdministrator();
+        else
+            $this->principal->checkAuthenticated();
 
         $typeManager = new System_Api_TypeManager();
         $type = $typeManager->getIssueType( $typeId );
 
         if ( $viewId != 0 ) {
             $viewManager = new System_Api_ViewManager();
-            $view = $viewManager->getView( $viewId );
+            $view = $viewManager->getViewForIssueType( $type, $viewId, $isPublic ? System_Api_ViewManager::IsPublic : 0 );
         } else {
             $view = null;
         }
@@ -842,7 +848,7 @@ class Server_Actions
         $this->validator->checkAlertEmail( $alertEmail );
 
         $alertManager = new System_Api_AlertManager();
-        $this->setId( $alertManager->addGlobalAlert( $type, $view, $alertEmail ) );
+        $this->setId( $alertManager->addGlobalAlert( $type, $view, $alertEmail, $isPublic ? System_Api_AlertManager::IsPublic : 0 ) );
     }
 
     public function modifyAlert( $alertId, $alertEmail )

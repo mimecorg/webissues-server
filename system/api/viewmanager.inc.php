@@ -38,6 +38,8 @@ class System_Api_ViewManager extends System_Api_Base
     /*@{*/
     /** Permission to edit the view is required. */
     const AllowEdit = 1;
+    /** Indicate a public view. */
+    const IsPublic = 2;
     /*@}*/
 
     /**
@@ -181,7 +183,8 @@ class System_Api_ViewManager extends System_Api_Base
     * @param $type Issue type for which the view is retrieved.
     * @param $viewId Identifier of the view.
     * @param $flags If AllowEdit is passed an error is thrown if the user
-    * does not have permission to edit the view.
+    * does not have permission to edit the view. If IsPublic is passed
+    * the view must be a public view.
     * @return Array representing the view.
     */
     public function getViewForIssueType( $type, $viewId, $flags = 0 )
@@ -190,9 +193,15 @@ class System_Api_ViewManager extends System_Api_Base
 
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT view_id, type_id, view_name, view_def, ( CASE WHEN user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
-            . ' FROM {views}'
-            . ' WHERE view_id = %d AND type_id = %d AND ( user_id = %d OR user_id IS NULL )';
+        if ( $flags & self::IsPublic ) {
+            $query = 'SELECT view_id, type_id, view_name, view_def, 1 AS is_public'
+                . ' FROM {views}'
+                . ' WHERE view_id = %1d AND type_id = %2d AND user_id IS NULL';
+        } else {
+            $query = 'SELECT view_id, type_id, view_name, view_def, ( CASE WHEN user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
+                . ' FROM {views}'
+                . ' WHERE view_id = %1d AND type_id = %2d AND ( user_id = %3d OR user_id IS NULL )';
+        }
 
         if ( !( $view = $this->connection->queryRow( $query, $viewId, $typeId, $principal->getUserId() ) ) )
             throw new System_Api_Error( System_Api_Error::UnknownView );
