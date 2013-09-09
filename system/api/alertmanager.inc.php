@@ -276,12 +276,12 @@ class System_Api_AlertManager extends System_Api_Base
         $principal = System_Api_Principal::getCurrent();
 
         if ( ( $flags & self::AllowEdit ) && !$principal->isAdministrator() ) {
-            $query = 'SELECT a.alert_id, v.view_id, v.view_name, a.alert_email, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public, r.project_access'
+            $query = 'SELECT a.alert_id, v.view_id, v.view_name, a.alert_email, a.summary_days, a.summary_hours, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public, r.project_access'
                 . ' FROM {alerts} AS a'
                 . ' LEFT OUTER JOIN {folders} AS f ON f.folder_id = a.folder_id'
                 . ' LEFT OUTER JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
         } else {
-            $query = 'SELECT a.alert_id, v.view_id, v.view_name, a.alert_email, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
+            $query = 'SELECT a.alert_id, v.view_id, v.view_name, a.alert_email, a.summary_days, a.summary_hours, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
                 . ' FROM {alerts} AS a';
         }
         $query .= ' LEFT OUTER JOIN {views} AS v ON v.view_id = a.view_id'
@@ -306,10 +306,12 @@ class System_Api_AlertManager extends System_Api_Base
     * @param $folder Folder for which the alert is created.
     * @param $view Optional view associated with the alert.
     * @param $alertEmail Type of emails associated with the alert.
+    * @param $summaryDays List of days of week on which summary emails are sent.
+    * @param $summaryHours List of hours at which summary emails are sent.
     * @param $flags If IsPublic is passed, a public alert is created.
     * @return The identifier of the new alert.
     */
-    public function addAlert( $folder, $view, $alertEmail, $flags = 0 )
+    public function addAlert( $folder, $view, $alertEmail, $summaryDays, $summaryHours, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
@@ -328,8 +330,8 @@ class System_Api_AlertManager extends System_Api_Base
             if ( $this->connection->queryScalar( $query, $userId, $folderId, $viewId ) !== false )
                 throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
 
-            $query = 'INSERT INTO {alerts} ( user_id, folder_id, type_id, view_id, alert_email, stamp_id ) VALUES ( %d?, %d, NULL, %d?, %d, %d? )';
-            $this->connection->execute( $query, $userId, $folderId, $viewId, $alertEmail, $stampId );
+            $query = 'INSERT INTO {alerts} ( user_id, folder_id, type_id, view_id, alert_email, summary_days, summary_hours, stamp_id ) VALUES ( %d?, %d, NULL, %d?, %d, %s?, %s?, %d? )';
+            $this->connection->execute( $query, $userId, $folderId, $viewId, $alertEmail, $summaryDays, $summaryHours, $stampId );
             $alertId = $this->connection->getInsertId( 'alerts', 'alert_id' );
 
             if ( $flags & self::IsPublic ) {
@@ -351,10 +353,12 @@ class System_Api_AlertManager extends System_Api_Base
     * @param $type Issue type for which the alert is created.
     * @param $view Optional view associated with the alert.
     * @param $alertEmail Type of emails associated with the alert.
+    * @param $summaryDays List of days of week on which summary emails are sent.
+    * @param $summaryHours List of hours at which summary emails are sent.
     * @param $flags If IsPublic is passed, a public alert is created.
     * @return The identifier of the new alert.
     */
-    public function addGlobalAlert( $type, $view, $alertEmail, $flags = 0 )
+    public function addGlobalAlert( $type, $view, $alertEmail, $summaryDays, $summaryHours, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
 
@@ -375,8 +379,8 @@ class System_Api_AlertManager extends System_Api_Base
             if ( $this->connection->queryScalar( $query, $userId, $typeId, $viewId ) !== false )
                 throw new System_Api_Error( System_Api_Error::AlertAlreadyExists );
 
-            $query = 'INSERT INTO {alerts} ( user_id, folder_id, type_id, view_id, alert_email, stamp_id ) VALUES ( %d?, NULL, %d, %d?, %d, %d? )';
-            $this->connection->execute( $query, $userId, $typeId, $viewId, $alertEmail, $stampId );
+            $query = 'INSERT INTO {alerts} ( user_id, folder_id, type_id, view_id, alert_email, summary_days, summary_hours, stamp_id ) VALUES ( %d?, NULL, %d, %d?, %d, %s?, %s?, %d? )';
+            $this->connection->execute( $query, $userId, $typeId, $viewId, $alertEmail, $summaryDays, $summaryHours, $stampId );
             $alertId = $this->connection->getInsertId( 'alerts', 'alert_id' );
 
             if ( $flags & self::IsPublic ) {
@@ -397,18 +401,22 @@ class System_Api_AlertManager extends System_Api_Base
     * Modify settings of an alert.
     * @param $alert The alert to modify.
     * @param $alertEmail Type of emails associated with the alert.
+    * @param $summaryDays List of days of week on which summary emails are sent.
+    * @param $summaryHours List of hours at which summary emails are sent.
     * @return @c true if the alert was modified.
     */
-    public function modifyAlert( $alert, $alertEmail )
+    public function modifyAlert( $alert, $alertEmail, $summaryDays, $summaryHours )
     {
         $alertId = $alert[ 'alert_id' ];
         $oldEmail = $alert[ 'alert_email' ];
+        $oldDays = $alert[ 'summary_days' ];
+        $oldHours = $alert[ 'summary_hours' ];
 
-        if ( $alertEmail == $oldEmail )
+        if ( $alertEmail == $oldEmail && $summaryDays == $oldDays && $summaryHours == $oldHours )
             return false;
 
-        $query = 'UPDATE {alerts} SET alert_email = %d WHERE alert_id = %d';
-        $this->connection->execute( $query, $alertEmail, $alertId );
+        $query = 'UPDATE {alerts} SET alert_email = %d, summary_days = %s!, summary_hours = %s! WHERE alert_id = %d';
+        $this->connection->execute( $query, $alertEmail, $summaryDays, $summaryHours, $alertId );
 
         return true;
     }

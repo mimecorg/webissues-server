@@ -45,7 +45,7 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 *
 * An optional ? can be inserted after the placeholder. When the value is null,
 * 0 or '', it will be replaced with NULL and the = before the placeholder will
-* be replaced with IS.
+* be replaced with IS. When ! is used instead of ?, then = is not replaced.
 *
 * If the % is doubled, an array of arguments should be passed. The elements
 * will be separated with commas.
@@ -507,7 +507,7 @@ class System_Db_Connection
         if ( strpos( $query, '%' ) === false )
             return $query;
 
-        $parts = preg_split( '/%(%?)(\d*)([dfsb])(\??)/', $query, -1, PREG_SPLIT_DELIM_CAPTURE );
+        $parts = preg_split( '/%(%?)(\d*)([dfsb])([?!]?)/', $query, -1, PREG_SPLIT_DELIM_CAPTURE );
 
         $result = array( $parts[ 0 ] );
         $pos = 1;
@@ -530,6 +530,8 @@ class System_Db_Connection
                 if ( substr( $top, -3, 3 ) == ' = ' )
                     $top = substr( $top, 0, -3 ) . ' IS ';
                 $result[] = $top;
+                $result[] = 'NULL';
+            } else if ( $parts[ $i + 3 ] == '!' && $arg == null ) {
                 $result[] = 'NULL';
             } else if ( $parts[ $i ] == '%' ) {
                 $result[] = $this->buildList( $arg, $type, $params );
