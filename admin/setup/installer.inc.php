@@ -44,6 +44,8 @@ class Admin_Setup_Installer extends System_Web_Base
                 'view_id'           => 'INTEGER null=1 ref-table="views" ref-column="view_id" on-delete="cascade"',
                 'alert_email'       => 'INTEGER size="tiny"',
                 'stamp_id'          => 'INTEGER null=1',
+                'summary_days'      => 'VARCHAR length=255 null=1',
+                'summary_hours'     => 'VARCHAR length=255 null=1',
                 'pk'                => 'PRIMARY columns={"alert_id"}',
                 'alert_idx'         => 'INDEX columns={"user_id","folder_id","type_id","view_id"} unique=1',
                 'folder_idx'        => 'INDEX columns={"folder_id"}',

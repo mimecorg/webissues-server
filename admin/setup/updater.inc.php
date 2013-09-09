@@ -210,6 +210,8 @@ class Admin_Setup_Updater extends System_Web_Base
             $newFields = array(
                 'alerts' => array(
                     'type_id'           => 'INTEGER null=1 ref-table="issue_types" ref-column="type_id" on-delete="cascade" trigger=1',
+                    'summary_days'      => 'VARCHAR length=255 null=1',
+                    'summary_hours'     => 'VARCHAR length=255 null=1',
                     'alert_idx'         => 'INDEX columns={"user_id","folder_id","type_id","view_id"} unique=1',
                     'type_idx'          => 'INDEX columns={"type_id"}'
                 ),
@@ -229,6 +231,14 @@ class Admin_Setup_Updater extends System_Web_Base
                 $generator->addFields( $tableName, $fields );
 
             $generator->updateReferences();
+
+            $query = 'UPDATE {alerts} SET summary_days = ( SELECT pref_value FROM {preferences} AS p WHERE p.user_id = {alerts}.user_id AND p.pref_key = %s ),'
+                . ' summary_hours = ( SELECT pref_value FROM {preferences} AS p WHERE p.user_id = {alerts}.user_id AND p.pref_key = %s )'
+                . ' WHERE alert_email >= %d';
+            $this->connection->execute( $query, 'summary_days', 'summary_hours', System_Const::SummaryNotificationEmail );
+
+            $query = 'DELETE FROM {preferences} WHERE pref_key IN ( %%s )';
+            $this->connection->execute( $query, array( 'summary_days', 'summary_hours' ) );
         }
 
         $query = 'DELETE FROM {sessions}';
