@@ -58,9 +58,6 @@ class Common_Tools_Preferences extends System_Web_Component
             if ( $this->form->isSubmittedWith( 'cancel' ) )
                 $this->response->redirect( $breadcrumbs->getParentUrl() );
 
-            if ( $this->emailEngine )
-                $this->formatDaysHours();
-
             $values = $this->validatePreferences( $fields );
 
             if ( $this->form->isSubmittedWith( 'ok' ) && !$this->form->hasErrors() ) {
@@ -70,36 +67,15 @@ class Common_Tools_Preferences extends System_Web_Component
         } else {
             $this->loadPreferences( $this->user, $fields );
         }
-
-        $javaScript = new System_Web_JavaScript( $this->view );
-        $javaScript->registerCheckOnOff( '#day-select', '#day-choices :checkbox', true );
-        $javaScript->registerCheckOnOff( '#day-unselect', '#day-choices :checkbox', false );
-        $javaScript->registerCheckOnOff( '#hour-select', '#hour-choices :checkbox', true );
-        $javaScript->registerCheckOnOff( '#hour-unselect', '#hour-choices :checkbox', false );
     }
 
     private function loadPreferences( $user, $fields )
     {
         $preferencesManager = new System_Api_PreferencesManager( $user );
 
-        $parser = new System_Api_Parser();
-
         foreach ( $fields as $key => $field ) {
             $preferenceValue = $preferencesManager->getPreference( $key );
-            switch ( $key ) {
-                case 'summary_days':
-                    $summary_array = $parser->convertToIntArray( $preferenceValue );
-                    foreach ( $summary_array as $day )
-                        $this->{'day' . $day} = '1';
-                    break;
-                case 'summary_hours':
-                    $summary_array = $parser->convertToIntArray( $preferenceValue );
-                    foreach ( $summary_array as $hour )
-                        $this->{'hour' . $hour} = '1';
-                    break;
-                default:
-                    $this->$field = $preferenceValue;
-            }
+            $this->$field = $preferenceValue;
         }
     }
 
@@ -147,41 +123,6 @@ class Common_Tools_Preferences extends System_Web_Component
         $this->form->addField( 'notifyDetails' );
         $this->form->addField( 'notifyNoRead' );
 
-        $fields[ 'summary_days' ] = 'summaryDays';
-        $fields[ 'summary_hours' ] = 'summaryHours';
-
-        $helper = new System_Web_LocaleHelper();
-        $this->days = $helper->getDaysOfWeek();
-        foreach ( $this->days as $numericDay => $textDay ) {
-            $fieldName = 'day' . $numericDay;
-            $this->form->addField( $fieldName, false );
-        }
-
-        $formatter = new System_Api_Formatter();
-        $this->hours = array();
-        for ( $i = 0; $i < 24; $i++ ) {
-            $hour = sprintf( "%02d:00", $i );
-            $this->hours[] = $formatter->convertTime( $hour );
-            $this->form->addField( 'hour' . $i, false );
-        }
-
         $this->form->addTextRule( 'email', System_Const::ValueMaxLength, System_Api_Parser::AllowEmpty );
-    }
-
-    private function formatDaysHours()
-    {
-        $summary_array = array();
-        foreach ( $this->days as $key => $value ) {
-            if ( $this->{'day' . $key} == '1' )
-                $summary_array[] = $key;
-        }
-        $this->summaryDays = implode( ',', $summary_array );
-
-        $summary_array = array();
-        for ( $i = 0; $i < 24; $i++ ) {
-            if ( $this->{'hour' . $i} == '1' )
-                $summary_array[] = $i;
-        }
-        $this->summaryHours = implode( ',', $summary_array );
     }
 }

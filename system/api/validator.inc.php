@@ -135,6 +135,46 @@ class System_Api_Validator
     }
 
     /**
+    * Check if the argument is a valid set of days of week.
+    * @param $email The alert email constant.
+    * @param $value Set of days of week.
+    */
+    public function checkSummaryDays( $email, $value )
+    {
+        $this->checkString( $value, 255, self::AllowEmpty );
+
+        if ( $email == System_Const::SummaryNotificationEmail || $email == System_Const::SummaryReportEmail ) {
+            if ( $value != '' )
+                $this->checkIntArray( $value, 0, 6 );
+            else
+                throw new System_Api_Error( System_Api_Error::EmptyValue );
+        } else {
+            if ( $value != '' )
+                throw new System_Api_Error( System_Api_Error::InvalidValue );
+        }
+    }
+
+    /**
+    * Check if the argument is a valid set of hours.
+    * @param $email The alert email constant.
+    * @param $value Set of hours.
+    */
+    public function checkSummaryHours( $email, $value )
+    {
+        $this->checkString( $value, 255, self::AllowEmpty );
+
+        if ( $email == System_Const::SummaryNotificationEmail || $email == System_Const::SummaryReportEmail ) {
+            if ( $value != '' )
+                $this->checkIntArray( $value, 0, 23 );
+            else
+                throw new System_Api_Error( System_Api_Error::EmptyValue );
+        } else {
+            if ( $value != '' )
+                throw new System_Api_Error( System_Api_Error::InvalidValue );
+        }
+    }
+
+    /**
     * Check if the argument is a valid text format constant as defined in
     * System_Const.
     * @param $format The integer argument to validate.
@@ -725,16 +765,6 @@ class System_Api_Validator
             case 'notify_no_read':
                 if ( $value != '' )
                     $this->checkDecimalNumber( $value, 0, 0, 1 );
-                break;
-
-            case 'summary_days':
-                if ( $value != '' )
-                    $this->checkIntArray( $value, 0, 6 );
-                break;
-
-            case 'summary_hours':
-                if ( $value != '' )
-                    $this->checkIntArray( $value, 0, 23 );
                 break;
 
             default:
