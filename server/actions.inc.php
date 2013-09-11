@@ -805,7 +805,7 @@ class Server_Actions
         $this->setOkIf( $subscriptionManager->deleteSubscription( $subscription ) );
     }
 
-    public function addAlert( $folderId, $viewId, $alertEmail, $isPublic )
+    public function addAlert( $folderId, $viewId, $alertEmail, $summaryDays, $summaryHours, $isPublic )
     {
         $this->principal->checkAuthenticated();
 
@@ -823,12 +823,14 @@ class Server_Actions
         }
 
         $this->validator->checkAlertEmail( $alertEmail );
+        $this->validator->checkSummaryDays( $alertEmail, $summaryDays );
+        $this->validator->checkSummaryHours( $alertEmail, $summaryHours );
 
         $alertManager = new System_Api_AlertManager();
         $this->setId( $alertManager->addAlert( $folder, $view, $alertEmail, $isPublic ? System_Api_AlertManager::IsPublic : 0 ) );
     }
 
-    public function addGlobalAlert( $typeId, $viewId, $alertEmail, $isPublic )
+    public function addGlobalAlert( $typeId, $viewId, $alertEmail, $summaryDays, $summaryHours, $summaryDays, $summaryHours, $isPublic )
     {
         if ( $isPublic )
             $this->principal->checkAdministrator();
@@ -846,12 +848,14 @@ class Server_Actions
         }
 
         $this->validator->checkAlertEmail( $alertEmail );
+        $this->validator->checkSummaryDays( $alertEmail, $summaryDays );
+        $this->validator->checkSummaryHours( $alertEmail, $summaryHours );
 
         $alertManager = new System_Api_AlertManager();
-        $this->setId( $alertManager->addGlobalAlert( $type, $view, $alertEmail, $isPublic ? System_Api_AlertManager::IsPublic : 0 ) );
+        $this->setId( $alertManager->addGlobalAlert( $type, $view, $alertEmail, $summaryDays, $summaryHours, $isPublic ? System_Api_AlertManager::IsPublic : 0 ) );
     }
 
-    public function modifyAlert( $alertId, $alertEmail )
+    public function modifyAlert( $alertId, $alertEmail, $summaryDays, $summaryHours )
     {
         $this->principal->checkAuthenticated();
 
@@ -859,8 +863,10 @@ class Server_Actions
         $alert = $alertManager->getAlert( $alertId );
 
         $this->validator->checkAlertEmail( $alertEmail );
+        $this->validator->checkSummaryDays( $alertEmail, $summaryDays );
+        $this->validator->checkSummaryHours( $alertEmail, $summaryHours );
 
-        $this->setOkIf( $alertManager->modifyAlert( $alert, $alertEmail ) );
+        $this->setOkIf( $alertManager->modifyAlert( $alert, $alertEmail, $summaryDays, $summaryHours ) );
     }
 
     public function deleteAlert( $alertId )

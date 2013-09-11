@@ -55,7 +55,7 @@ class System_Api_AlertManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT a.alert_id, a.folder_id, a.type_id, a.view_id, a.alert_email, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
+        $query = 'SELECT a.alert_id, a.folder_id, a.type_id, a.view_id, a.alert_email, a.summary_days, a.summary_hours, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
             . ' FROM {alerts} AS a'
             . ' WHERE ( a.user_id = %1d OR a.user_id IS NULL )';
         if ( !$principal->isAdministrator() ) {
