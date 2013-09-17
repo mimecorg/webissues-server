@@ -200,35 +200,27 @@ class Admin_Setup_Updater extends System_Web_Base
         }
 
         if ( version_compare( $version, '1.1.003' ) < 0 ) {
-            $nullFields = array(
-                'alerts' => array(
-                    'user_id'           => 'INTEGER null=1 ref-table="users" ref-column="user_id"',
-                    'folder_id'         => 'INTEGER null=1 ref-table="folders" ref-column="folder_id" on-delete="cascade"'
-                )
+            $modifiedFields = array(
+                'user_id'           => 'INTEGER null=1 ref-table="users" ref-column="user_id"',
+                'folder_id'         => 'INTEGER null=1 ref-table="folders" ref-column="folder_id" on-delete="cascade"'
             );
 
             $newFields = array(
-                'alerts' => array(
-                    'type_id'           => 'INTEGER null=1 ref-table="issue_types" ref-column="type_id" on-delete="cascade" trigger=1',
-                    'summary_days'      => 'VARCHAR length=255 null=1',
-                    'summary_hours'     => 'VARCHAR length=255 null=1',
-                    'alert_idx'         => 'INDEX columns={"user_id","folder_id","type_id","view_id"} unique=1',
-                    'type_idx'          => 'INDEX columns={"type_id"}'
-                ),
-                'projects' => array(
-                    'is_public'         => 'INTEGER size="tiny" default=0'
-                )
+                'type_id'           => 'INTEGER null=1 ref-table="issue_types" ref-column="type_id" on-delete="cascade" trigger=1',
+                'summary_days'      => 'VARCHAR length=255 null=1',
+                'summary_hours'     => 'VARCHAR length=255 null=1',
+                'type_idx'          => 'INDEX columns={"type_id"}'
+            );
+
+            $modifiedIndexes = array(
+                'alert_idx'         => 'INDEX columns={"user_id","folder_id","type_id","view_id"} unique=1'
             );
 
             $generator = $this->connection->getSchemaGenerator();
 
-            $generator->dropIndex( 'alerts', 'alert_idx', true );
-
-            foreach ( $nullFields as $tableName => $fields )
-                $generator->modifyFieldsNull( $tableName, $fields );
-
-            foreach ( $newFields as $tableName => $fields )
-                $generator->addFields( $tableName, $fields );
+            $generator->modifyFieldsNull( 'alerts', $modifiedFields );
+            $generator->addFields( 'alerts', $newFields );
+            $generator->modifyIndexColumns( 'alerts', $modifiedIndexes );
 
             $generator->updateReferences();
 

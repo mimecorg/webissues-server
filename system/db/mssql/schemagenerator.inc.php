@@ -27,6 +27,7 @@ class System_Db_Mssql_SchemaGenerator extends System_Db_SchemaGenerator
 {
     private $fields = array();
     private $indexes = array();
+    private $alters = array();
 
     /**
     * Constructor.
@@ -74,10 +75,8 @@ class System_Db_Mssql_SchemaGenerator extends System_Db_SchemaGenerator
 
     protected function executeAddFields( $tableName )
     {
-        foreach ( $this->fields as $field ) {
-            $query = 'ALTER TABLE {' . $tableName . '} ADD ' . $field;
-            $this->connection->execute( $query );
-        }
+        $query = 'ALTER TABLE {' . $tableName . '} ADD ' . join( ",\n", $this->fields );
+        $this->connection->execute( $query );
 
         foreach ( $this->indexes as $index )
             $this->connection->execute( $index );
@@ -86,28 +85,36 @@ class System_Db_Mssql_SchemaGenerator extends System_Db_SchemaGenerator
         $this->indexes = array();
     }
 
-    protected function prepareTableFieldNull( $tableName, $fieldName, $info )
+    protected function prepareModifyFieldNull( $tableName, $fieldName, $info )
     {
-        $this->fields[] = $fieldName . ' ' . $this->getFieldType( $info );
+        $this->alters[] = 'ALTER COLUMN ' . $fieldName . ' ' . $this->getFieldType( $info );
     }
 
-    protected function executeModifyFields( $tableName )
+    protected function prepareModifyIndexColumns( $tableName, $fieldName, $info )
     {
-        foreach ( $this->fields as $field ) {
-            $query = 'ALTER TABLE {' . $tableName . '} ALTER COLUMN ' . $field;
+        $columns = $info->getMetadata( 'columns' );
+        $unique = $info->getMetadata( 'unique', 0 );
+        if ( $unique ) {
+            $this->alters[] = 'DROP CONSTRAINT {' . $tableName . '}_' . $fieldName;
+            $this->alters[] = 'ADD CONSTRAINT {' . $tableName . '}_' . $fieldName . ' UNIQUE ( ' . join( ', ', $columns ) . ' )';
+        } else {
+            $this->indexes[] = 'DROP INDEX {' . $tableName . '}_' . $fieldName . ' ON {' . $tableName . '}';
+            $this->indexes[] = 'CREATE INDEX {' . $tableName . '}_' . $fieldName . ' ON {' . $tableName . '} ( ' . join( ', ', $columns ) . ' )';
+        }
+    }
+
+    protected function executeAlterTable( $tableName )
+    {
+        foreach ( $this->alters as $alter ) {
+            $query = 'ALTER TABLE {' . $tableName . '} ' . $alter;
             $this->connection->execute( $query );
         }
 
-        $this->fields = array();
-    }
+        foreach ( $this->indexes as $index )
+            $this->connection->execute( $index );
 
-    public function dropIndex( $tableName, $indexName, $unique )
-    {
-        if ( $unique )
-            $query = 'ALTER TABLE {' . $tableName . '} DROP CONSTRAINT {' . $tableName . '}_' . $indexName;
-        else
-            $query = 'DROP INDEX {' . $tableName . '}_' . $indexName . ' ON {' . $tableName . '}';
-        $this->connection->execute( $query );
+        $this->alters = array();
+        $this->indexes = array();
     }
 
     public function setIdentityInsert( $tableName, $fieldName, $on )

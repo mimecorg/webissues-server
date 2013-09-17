@@ -26,6 +26,7 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 class System_Db_Mysqli_SchemaGenerator extends System_Db_SchemaGenerator
 {
     private $fields = array();
+    private $alters = array();
 
     /**
     * Constructor.
@@ -67,33 +68,34 @@ class System_Db_Mysqli_SchemaGenerator extends System_Db_SchemaGenerator
 
     protected function executeAddFields( $tableName )
     {
-        foreach ( $this->fields as $field ) {
-            $query = 'ALTER TABLE {' . $tableName . '} ADD ' . $field;
-            $this->connection->execute( $query );
-        }
+        foreach ( $this->fields as $field )
+            $this->alters[] = 'ADD ' . $field;
+
+        $this->executeAlterTable( $tableName );
 
         $this->fields = array();
     }
 
-    protected function prepareTableFieldNull( $tableName, $fieldName, $info )
+    protected function prepareModifyFieldNull( $tableName, $fieldName, $info )
     {
-        $this->fields[] = $fieldName . ' ' . $this->getFieldType( $info );
+        $this->alters[] = 'MODIFY ' . $fieldName . ' ' . $this->getFieldType( $info );
     }
 
-    protected function executeModifyFields( $tableName )
+    protected function prepareModifyIndexColumns( $tableName, $fieldName, $info )
     {
-        foreach ( $this->fields as $field ) {
-            $query = 'ALTER TABLE {' . $tableName . '} MODIFY ' . $field;
-            $this->connection->execute( $query );
-        }
-
-        $this->fields = array();
+        $columns = $info->getMetadata( 'columns' );
+        $unique = $info->getMetadata( 'unique', 0 );
+        $type = $unique ? 'UNIQUE KEY' : 'KEY';
+        $this->alters[] = 'DROP KEY ' . $fieldName;
+        $this->alters[] = 'ADD ' . $type . ' ' . $fieldName . ' ( ' . join( ', ', $columns ) . ' )';
     }
 
-    public function dropIndex( $tableName, $indexName, $unique )
+    protected function executeAlterTable( $tableName )
     {
-        $query = 'ALTER TABLE {' . $tableName . '} DROP INDEX {' . $tableName . '}_' . $indexName;
+        $query = 'ALTER TABLE {' . $tableName . '} ' . join( ",\n", $this->alters );
         $this->connection->execute( $query );
+
+        $this->alters = array();
     }
 
     private function getFieldType( $info )

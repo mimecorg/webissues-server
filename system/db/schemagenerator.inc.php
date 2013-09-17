@@ -81,10 +81,25 @@ abstract class System_Db_SchemaGenerator
     {
         foreach ( $fields as $fieldName => $definition ) {
             $info = System_Api_DefinitionInfo::fromString( $definition );
-            $this->prepareTableFieldNull( $tableName, $fieldName, $info );
+            $this->prepareModifyFieldNull( $tableName, $fieldName, $info );
         }
 
-        $this->executeModifyFields( $tableName );
+        $this->executeAlterTable( $tableName );
+    }
+
+    /**
+    * Modify the columns of an existing index.
+    * @param $tableName The name of the table.
+    * @param $fields An associative array of index definitions.
+    */
+    public function modifyIndexColumns( $tableName, $fields )
+    {
+        foreach ( $fields as $fieldName => $definition ) {
+            $info = System_Api_DefinitionInfo::fromString( $definition );
+            $this->prepareModifyIndexColumns( $tableName, $fieldName, $info );
+        }
+
+        $this->executeAlterTable( $tableName );
     }
 
     protected abstract function prepareTableField( $tableName, $fieldName, $info );
@@ -93,14 +108,11 @@ abstract class System_Db_SchemaGenerator
 
     protected abstract function executeAddFields( $tableName );
 
-    protected abstract function prepareTableFieldNull( $tableName, $fieldName, $info );
+    protected abstract function prepareModifyFieldNull( $tableName, $fieldName, $info );
 
-    protected abstract function executeModifyFields( $tableName );
+    protected abstract function prepareModifyIndexColumns( $tableName, $fieldName, $info );
 
-    /**
-    * Drop an existing index.
-    */
-    public abstract function dropIndex( $tableName, $indexName, $unique );
+    protected abstract function executeAlterTable( $tableName );
 
     /**
     * Set identity insert on or off for the given table.
