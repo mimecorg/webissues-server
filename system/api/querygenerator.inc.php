@@ -27,7 +27,7 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 * various criteria. Queries can be executed using appropriate methods
 * of System_Db_Connection with arguments provided by getQueryArguments().
 */
-class System_Api_QueryGenerator
+class System_Api_QueryGenerator extends System_Api_Base
 {
     const AllColumns = 1;
     const WithState = 2;
@@ -53,6 +53,8 @@ class System_Api_QueryGenerator
     */
     public function __construct()
     {
+        parent::__construct();
+
         $this->columns[] = System_Api_Column::ID;
         $this->columns[] = System_Api_Column::Name;
         $this->columns[] = System_Api_Column::ModifiedDate;
@@ -276,11 +278,11 @@ class System_Api_QueryGenerator
                             break;
 
                         case 'NUMERIC':
-                            $expression = "CAST( $expression AS decimal(14,6) )";
+                            $expression = $this->connection->castExpression( $expression, 'f' );
                             break;
 
                         case 'DATETIME':
-                            $expression = "CAST( $expression AS datetime )";
+                            $expression = $this->connection->castExpression( $expression, 't' );
                             break;
                     }
                 }
@@ -542,7 +544,7 @@ class System_Api_QueryGenerator
                             return $this->makeStringCondition( "UPPER( COALESCE( $expression, '' ) )", $type, mb_strtoupper( $value ) );
 
                         case 'NUMERIC':
-                            return $this->makeNumericCondition( "CAST( $expression AS decimal(14,6) )", $type, (float)$value, '%f' );
+                            return $this->makeNumericCondition( $this->connection->castExpression( $expression, 'f' ), $type, (float)$value, '%f' );
 
                         case 'DATETIME':
                             $value = $this->convertDateTimeValue( $value );
@@ -562,7 +564,7 @@ class System_Api_QueryGenerator
                                 $date->modify( '+1 day' );
                                 $upper = $date->format( 'Y-m-d H:i' );
                             }
-                            return $this->makeDateCondition( "CAST( $expression AS datetime )", $type, $lower, $upper, '%s' );
+                            return $this->makeDateCondition( $this->connection->castExpression( $expression, 't' ), $type, $lower, $upper, '%t' );
 
                         default:
                             throw new System_Api_Error( System_Api_Error::InvalidDefinition );

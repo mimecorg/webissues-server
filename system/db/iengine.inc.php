@@ -105,6 +105,14 @@ interface System_Db_IEngine
     public function getInsertId( $table, $column );
 
     /**
+    * Cast the expression to the given type.
+    * @param $expression An SQL expression.
+    * @param $type Letter specifying the type ('d', 'f', 's' or 't').
+    * @return The SQL expression casted to the given type.
+    */
+    public function castExpression( $expression, $type );
+
+    /**
     * Check if the table with given name exists.
     * @param $table Table name with prefix.
     * @return @c true if the table exists and @c false otherwise.

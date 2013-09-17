@@ -98,6 +98,9 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
             case 's':
                 $params[] = (string)$arg;
                 return '$' . count( $params ) . '::text';
+            case 't':
+                $params[] = (string)$arg;
+                return '$' . count( $params ) . '::timestamp';
             case 'b':
                 $data = pg_escape_bytea( $this->connection, $arg->getData() );
                 $data = str_replace( array( "\\\\", "''" ), array( "\\", "'" ), $data );
@@ -116,6 +119,22 @@ class System_Db_Pgsql_Engine implements System_Db_IEngine
     public function getLocaleCollation()
     {
         return '';
+    }
+
+    public function castExpression( $expression, $type )
+    {
+        switch ( $type ) {
+            case 'd':
+                return "CAST( $expression AS int )";
+            case 'f':
+                return "CAST( $expression AS decimal(14,6) )";
+            case 's':
+                return "CAST( $expression AS text )";
+            case 't':
+                return "CAST( $expression AS timestamp )";
+            default:
+                throw new System_Db_Exception( 'Invalid type' );
+        }
     }
 
     public function createAttachment( $data, $size, $fileName )

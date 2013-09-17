@@ -38,6 +38,7 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 *  - %%d - integer value
 *  - %%f - floating point number
 *  - %%s - utf-8 encoded string
+*  - %%t - date and time
 *  - %%b - System_Core_Attachment object containing binary data
 *
 * An optional argument position can be inserted after the %, for example
@@ -428,6 +429,17 @@ class System_Db_Connection
     }
 
     /**
+    * Cast the expression to the given type.
+    * @param $expression An SQL expression.
+    * @param $type Letter specifying the type ('d', 'f', 's' or 't').
+    * @return The SQL expression casted to the given type.
+    */
+    public function castExpression( $expression, $type )
+    {
+        return $this->engine->castExpression( $expression, $type );
+    }
+
+    /**
     * Check if the table with given name exists.
     * @param $table Table name without brackets; the prefix is automatically
     * appended.
@@ -507,7 +519,7 @@ class System_Db_Connection
         if ( strpos( $query, '%' ) === false )
             return $query;
 
-        $parts = preg_split( '/%(%?)(\d*)([dfsb])([?!]?)/', $query, -1, PREG_SPLIT_DELIM_CAPTURE );
+        $parts = preg_split( '/%(%?)(\d*)([dfsbt])([?!]?)/', $query, -1, PREG_SPLIT_DELIM_CAPTURE );
 
         $result = array( $parts[ 0 ] );
         $pos = 1;

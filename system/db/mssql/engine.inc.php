@@ -138,6 +138,7 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
                 $params[] = (float)$arg;
                 return '?';
             case 's':
+            case 't':
                 $params[] = (string)$arg;
                 return '?';
             case 'b':
@@ -223,6 +224,22 @@ class System_Db_Mssql_Engine implements System_Db_IEngine
         $rs->close();
         // NOTE: $insertId is a VARIANT of type VT_DECIMAL so it must be converted to int
         return (int)$insertId;
+    }
+
+    public function castExpression( $expression, $type )
+    {
+        switch ( $type ) {
+            case 'd':
+                return "CAST( $expression AS int )";
+            case 'f':
+                return "CAST( $expression AS decimal(14,6) )";
+            case 's':
+                return "CAST( $expression AS nvarchar(max) )";
+            case 't':
+                return "CAST( $expression AS datetime )";
+            default:
+                throw new System_Db_Exception( 'Invalid type' );
+        }
     }
 
     public function checkTableExists( $table )
