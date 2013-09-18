@@ -446,9 +446,9 @@ class System_Api_AlertManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT a.alert_id, a.folder_id, a.type_id, a.view_id, a.alert_email, a.stamp_id'
-            . ' FROM {alerts} AS a';
-        $query .= ' WHERE a.user_id = %1d AND EXISTS ( SELECT f.folder_id FROM {folders} AS f';
+        $query = 'SELECT a.alert_id, a.folder_id, a.type_id, a.view_id, a.alert_email, a.summary_days, a.summary_hours, a.stamp_id'
+            . ' FROM {alerts} AS a'
+            . ' WHERE a.user_id = %1d AND EXISTS ( SELECT f.folder_id FROM {folders} AS f';
         if ( !$principal->isAdministrator() )
             $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
         $query .= ' WHERE ( f.folder_id = a.folder_id OR f.type_id = a.type_id )';
@@ -462,6 +462,58 @@ class System_Api_AlertManager extends System_Api_Base
 
             return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::ImmediateNotificationEmail );
         }
+    }
+
+    /**
+    * Return public alerts for which emails should be sent.
+    * @param $includeSummary If @c true, the summary notifications and reports are
+    * included in addition to immediate notifications.
+    * @return An array of associative arrays representing alerts.
+    */
+    public function getPublicAlertsToEmail( $includeSummary )
+    {
+        $query = 'SELECT a.alert_id, a.folder_id, a.type_id, a.view_id, a.alert_email, a.summary_days, a.summary_hours, a.stamp_id'
+            . ' FROM {alerts} AS a'
+            . ' WHERE a.user_id IS NULL AND EXISTS ( SELECT f.folder_id FROM {folders} AS f'
+            . ' WHERE ( f.folder_id = a.folder_id OR f.type_id = a.type_id )';
+
+        if ( $includeSummary ) {
+            $query .= ' AND ( a.alert_email > %1d AND f.stamp_id > COALESCE( a.stamp_id, 0 ) OR a.alert_email = %2d ) )';
+
+            return $this->connection->queryTable( $query, System_Const::NoEmail, System_Const::SummaryReportEmail );
+        } else {
+            $query .= ' AND ( a.alert_email = %1d AND f.stamp_id > COALESCE( a.stamp_id, 0 ) ) )';
+
+            return $this->connection->queryTable( $query, System_Const::ImmediateNotificationEmail );
+        }
+    }
+
+    /**
+    * Return users for which emails related to a public alert should be sent.
+    * @param $alert The public alert to get recipients.
+    * @return An array of associative arrays representing users.
+    */
+    public function getAlertRecipients( $alert )
+    {
+        $folderId = $alert[ 'folder_id' ];
+        $typeId = $alert[ 'type_id' ];
+        $alertEmail = $alert[ 'alert_email' ];
+        $stampId = $alert[ 'stamp_id' ];
+
+        $query = 'SELECT u.user_id, u.user_name, u.user_access'
+            . ' FROM {users} AS u'
+            . ' JOIN {preferences} AS p ON p.user_id = u.user_id AND p.pref_key = %1s'
+            . ' WHERE u.user_access > %2d AND EXISTS ( SELECT f.folder_id FROM {folders} AS f';
+        if ( $folderId )
+            $query .= ' WHERE f.folder_id = %4d';
+        else
+            $query .= ' WHERE f.type_id = %5d';
+        $query .= ' AND ( u.user_access = %3d OR EXISTS ( SELECT r.project_id FROM {rights} AS r WHERE r.project_id = f.project_id AND r.user_id = u.user_id ) )';
+        if ( $alertEmail != System_Const::SummaryReportEmail && $stampId > 0 )
+            $query .= ' AND f.stamp_id > %6d';
+        $query .= ' )';
+
+        return $this->connection->queryTable( $query, 'email', System_Const::NoAccess, System_Const::AdministratorAccess, $folderId, $typeId, $stampId );
     }
 
     /**

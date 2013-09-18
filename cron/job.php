@@ -111,46 +111,54 @@ class Cron_Job extends System_Core_Application
         $userManager = new System_Api_UserManager();
         $alertManager = new System_Api_AlertManager();
         $subscriptionManager = new System_Api_SubscriptionManager();
+        $serverManager = new System_Api_ServerManager();
+
+        $includeSummary = false;
+
+        if ( $this->last ) {
+            $lastDate = new DateTime( '@' . $this->last );
+            $currentDate = new DateTime( '@' . $this->current );
+            if ( $lastDate->format( 'YmdH' ) != $currentDate->format( 'YmdH' ) )
+                $includeSummary = true;
+        } else {
+            $includeSummary = true;
+        }
 
         $users = $userManager->getUsersWithEmail();
 
         foreach ( $users as $user ) {
             $this->impersonateUser( $user );
 
-            $includeSummary = false;
-
             $preferencesManager = new System_Api_PreferencesManager();
             $validator = new System_Api_Validator();
 
-            $days = $validator->convertToIntArray( $preferencesManager->getPreference( 'summary_days' ) );
-            $hours = $validator->convertToIntArray( $preferencesManager->getPreference( 'summary_hours' ) );
-
-            if ( !empty( $days ) && !empty( $hours ) ) {
-                $locale = new System_Api_Locale();
-                $timezone = new DateTimeZone( $locale->getSetting( 'time_zone' ) );
-
-                $currentDate = new DateTime( '@' . $this->current );
-                $currentDate->setTimezone( $timezone );
-
-                $day = $currentDate->format( 'w' );
-                $hour = $currentDate->format( 'G' );
-
-                if ( array_search( $day, $days ) !== false && array_search( $hour, $hours ) !== false ) {
-                    if ( $this->last ) {
-                        $lastDate = new DateTime( '@' . $this->last );
-                        $lastDate->setTimezone( $timezone );
-
-                        if ( $lastDate->format( 'YmdH' ) != $currentDate->format( 'YmdH' ) )
-                            $includeSummary = true;
-                    } else {
-                        $includeSummary = true;
-                    }
-                }
-            }
+            $day = -1;
 
             $alerts = $alertManager->getAlertsToEmail( $includeSummary );
 
             foreach ( $alerts as $alert ) {
+                if ( $alert[ 'alert_email' ] == System_Const::SummaryNotificationEmail || $alert[ 'alert_email' ] == System_Const::SummaryReportEmail ) {
+                    if ( $alert[ 'summary_days' ] == null || $alert[ 'summary_hours' ] == null )
+                        continue;
+
+                    $days = $validator->convertToIntArray( $alert[ 'summary_days' ] );
+                    $hours = $validator->convertToIntArray( $alert[ 'summary_hours' ] );
+
+                    if ( $day < 0 ) {
+                        $locale = new System_Api_Locale();
+                        $timezone = new DateTimeZone( $locale->getSetting( 'time_zone' ) );
+
+                        $currentDate = new DateTime( '@' . $this->current );
+                        $currentDate->setTimezone( $timezone );
+
+                        $day = $currentDate->format( 'w' );
+                        $hour = $currentDate->format( 'G' );
+                    }
+
+                    if ( array_search( $day, $days ) === false || array_search( $hour, $hours ) === false )
+                        continue;
+                }
+
                 $mail = System_Web_Component::createComponent( 'Common_Mail_Notification', null, $alert );
 
                 if ( $mail->prepare() ) {
@@ -187,7 +195,59 @@ class Cron_Job extends System_Core_Application
             $this->undoImpersonation();
         }
 
-        $serverManager = new System_Api_ServerManager();
+        $day = -1;
+
+        $alerts = $alertManager->getPublicAlertsToEmail( $includeSummary );
+
+        foreach ( $alerts as $alert ) {
+            if ( $alert[ 'alert_email' ] == System_Const::SummaryNotificationEmail || $alert[ 'alert_email' ] == System_Const::SummaryReportEmail ) {
+                if ( $alert[ 'summary_days' ] == null || $alert[ 'summary_hours' ] == null )
+                    continue;
+
+                $days = $validator->convertToIntArray( $alert[ 'summary_days' ] );
+                $hours = $validator->convertToIntArray( $alert[ 'summary_hours' ] );
+
+                if ( $day < 0 ) {
+                    $currentDate = new DateTime( '@' . $this->current );
+
+                    $timezone = $serverManager->getSetting( 'time_zone' );
+                    if ( $timezone != null )
+                        $currentDate->setTimezone( new DateTimeZone( $timezone ) );
+                    else
+                        $currentDate->setTimezone( new DateTimeZone( date_default_timezone_get() ) );
+
+                    $day = $currentDate->format( 'w' );
+                    $hour = $currentDate->format( 'G' );
+                }
+
+                if ( array_search( $day, $days ) === false || array_search( $hour, $hours ) === false )
+                    continue;
+            }
+
+            $users = $alertManager->getAlertRecipients( $alert );
+
+            foreach ( $users as $user ) {
+                $this->impersonateUser( $user );
+
+                $preferencesManager = new System_Api_PreferencesManager();
+
+                $mail = System_Web_Component::createComponent( 'Common_Mail_Notification', null, $alert );
+
+                if ( $mail->prepare() ) {
+                    $body = $mail->run();
+                    $subject = $mail->getView()->getSlot( 'subject' );
+
+                    $this->setReplyToInbox( false );
+
+                    $this->mailEngine->send( $preferencesManager->getPreference( 'email' ), $user[ 'user_name' ], $subject, $body );
+                    $sent++;
+                }
+            }
+
+            $alertManager->updateAlertStamp( $alert );
+
+            $this->undoImpersonation();
+        }
 
         $allowExternal = $serverManager->getSetting( 'inbox_allow_external' );
 
