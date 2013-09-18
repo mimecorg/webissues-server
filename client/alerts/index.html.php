@@ -43,7 +43,7 @@
     else:
         $image .= '-16.png';
     endif;
-    echo $this->imageAndTextLink( $this->mergeQueryString( '/client/alerts/index.php', array( 'alert' => $alertId ) ),
+    echo $this->imageAndTextLink( $this->mergeQueryString( '/client/alerts/index.php', array( 'id' => $alertId ) ),
         $image, $alert[ 'view_name' ] );
 ?>
 </td>

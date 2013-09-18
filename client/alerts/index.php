@@ -107,8 +107,17 @@ class Client_Alerts_Index extends System_Web_Component
 
         $this->grid->setSelection( $selectedId );
 
+        $classes = array();
+        if ( $isAdmin ) {
+            $classes[] = 'editable';
+        } else if ( $selectedId ) {
+            $alert = $alertManager->getAlert( $selectedId );
+            if ( $alert[ 'is_public' ] == false )
+                $classes[] = 'editable';
+        }
+
         $this->toolBar = new System_Web_ToolBar();
-        $this->toolBar->setSelection( $selectedId );
+        $this->toolBar->setSelection( $selectedId, null, $classes );
 
         $this->toolBar->addFixedCommand( '/client/alerts/add.php', '/common/images/alert-new-16.png', $this->tr( 'Add Alert' ) );
         if ( $isAdmin )
