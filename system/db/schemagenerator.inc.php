@@ -102,6 +102,17 @@ abstract class System_Db_SchemaGenerator
         $this->executeAlterTable( $tableName );
     }
 
+    /**
+    * Create a view.
+    * @param $viewName The name of the view.
+    * @param $query The query defining the view.
+    */
+    public function createView( $viewName, $query )
+    {
+        $viewQuery = 'CREATE VIEW {' . $viewName . '} AS ' . $query;
+        $this->connection->execute( $viewQuery );
+    }
+
     protected abstract function prepareTableField( $tableName, $fieldName, $info );
 
     protected abstract function executeCreateTable( $tableName );
