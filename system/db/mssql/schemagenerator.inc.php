@@ -75,7 +75,7 @@ class System_Db_Mssql_SchemaGenerator extends System_Db_SchemaGenerator
 
     protected function executeAddFields( $tableName )
     {
-        $query = 'ALTER TABLE {' . $tableName . '} ADD ' . join( ",\n", $this->fields );
+        $query = 'ALTER TABLE {' . $tableName . '} ADD ' . join( ', ', $this->fields );
         $this->connection->execute( $query );
 
         foreach ( $this->indexes as $index )

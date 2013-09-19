@@ -92,7 +92,7 @@ class System_Db_Mysqli_SchemaGenerator extends System_Db_SchemaGenerator
 
     protected function executeAlterTable( $tableName )
     {
-        $query = 'ALTER TABLE {' . $tableName . '} ' . join( ",\n", $this->alters );
+        $query = 'ALTER TABLE {' . $tableName . '} ' . join( ', ', $this->alters );
         $this->connection->execute( $query );
 
         $this->alters = array();

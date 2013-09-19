@@ -107,7 +107,7 @@ class System_Db_Pgsql_SchemaGenerator extends System_Db_SchemaGenerator
     protected function executeAlterTable( $tableName )
     {
         if ( !empty( $this->alters ) ) {
-            $query = 'ALTER TABLE {' . $tableName . '} ' . join( ",\n", $this->alters );
+            $query = 'ALTER TABLE {' . $tableName . '} ' . join( ', ', $this->alters );
             $this->connection->execute( $query );
         }
 
