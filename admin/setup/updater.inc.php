@@ -233,6 +233,26 @@ class Admin_Setup_Updater extends System_Web_Base
             $this->connection->execute( $query, array( 'summary_days', 'summary_hours' ) );
         }
 
+        if ( version_compare( $version, '1.1.004' ) < 0 ) {
+            $newFields = array(
+                'is_public'         => 'INTEGER size="tiny" default=0'
+            );
+
+            $generator = $this->connection->getSchemaGenerator();
+
+            $generator->addFields( 'projects', $newFields );
+
+            $query = 'SELECT p.project_id, u.user_id, COALESCE( r.project_access, 1 ) AS project_access'
+                . ' FROM {projects} AS p'
+                . ' CROSS JOIN {users} AS u'
+                . ' LEFT OUTER JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = u.user_id'
+                . ' WHERE r.project_access IS NOT NULL OR p.is_public = 1';
+
+            $generator->createView( 'effective_rights', $query );
+
+            $generator->updateReferences();
+        }
+
         $query = 'DELETE FROM {sessions}';
         $this->connection->execute( $query );
 
