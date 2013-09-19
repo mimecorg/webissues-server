@@ -60,12 +60,12 @@ class System_Api_ProjectManager extends System_Api_Base
         $principal = System_Api_Principal::getCurrent();
 
         if ( !$principal->isAdministrator() ) {
-            $query = 'SELECT p.project_id, p.project_name, p.stamp_id, r.project_access FROM {projects} AS p'
+            $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.is_public, r.project_access FROM {projects} AS p'
                 . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
         } else {
-            $query = 'SELECT p.project_id, p.project_name, p.stamp_id, %2d AS project_access FROM {projects} AS p';
+            $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.is_public, %2d AS project_access FROM {projects} AS p';
         }
         $query .= ' ORDER BY p.project_name COLLATE LOCALE';
 
@@ -83,7 +83,7 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.descr_id, p.descr_stub_id,';
+        $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.descr_id, p.descr_stub_id, p.is_public,';
         $query .= $principal->isAdministrator() ? ' %3d AS project_access' : ' r.project_access';
         $query .= ' FROM {projects} AS p';
         if ( !$principal->isAdministrator() )
@@ -318,6 +318,35 @@ class System_Api_ProjectManager extends System_Api_Base
         $eventLog = new System_Api_EventLog( $this );
         $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
             $eventLog->tr( 'Renamed project "%1" to "%2"', null, $oldName, $newName ) );
+
+        return true;
+    }
+
+    /**
+    * Set global access for the project.
+    * @param $project The project to change access for.
+    * @param $isPublic Flag indicating whether public access is allowed.
+    * @return @c true if the global access was modified.
+    */
+    public function setProjectAccess( $project, $isPublic )
+    {
+        $projectId = $project[ 'project_id' ];
+        $wasPublic = $project[ 'is_public' ];
+
+        if ( $isPublic == $wasPublic )
+            return false;
+
+        $query = 'UPDATE {projects} SET is_public = %d WHERE project_id = %d';
+        $this->connection->execute( $query, $isPublic, $projectId );
+
+        $eventLog = new System_Api_EventLog( $this );
+        if ( $isPublic ) {
+            $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                $eventLog->tr( 'Enabled public access for project "%1"', null, $project[ 'project_name' ] ) );
+        } else {
+            $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+                $eventLog->tr( 'Disabled public access for project "%1"', null, $project[ 'project_name' ] ) );
+        }
 
         return true;
     }
@@ -603,12 +632,12 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
         if ( !$principal->isAdministrator() ) {
-            $query = 'SELECT p.project_id, p.project_name, r.project_access FROM {projects} AS p'
+            $query = 'SELECT p.project_id, p.project_name, p.is_public, r.project_access FROM {projects} AS p'
                 . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
         } else {
-            $query = 'SELECT p.project_id, p.project_name, %2d AS project_access FROM {projects} AS p';
+            $query = 'SELECT p.project_id, p.project_name, p.is_public, %2d AS project_access FROM {projects} AS p';
         }
 
         return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $principal->getUserId(), System_Const::AdministratorAccess );

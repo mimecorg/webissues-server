@@ -33,7 +33,7 @@
 </fieldset>
 
 <fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Access' ) ?></legend>
+<legend><?php echo $this->tr( 'Access Level' ) ?></legend>
 <?php $form->renderRadioGroup( 'accessLevel', $accessLevels ) ?>
 </fieldset>
 

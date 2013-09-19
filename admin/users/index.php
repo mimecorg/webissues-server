@@ -70,9 +70,6 @@ class Admin_Users_Index extends System_Web_Component
         $this->users = array();
         foreach ( $page as $row ) {
             $row[ 'access_level' ] = $accessLevels[ $row[ 'user_access' ] ];
-            $row[ 'classes' ] = array();
-            if ( $row[ 'user_id' ] != $principal->getUserId() )
-                $row[ 'classes' ][] = 'access';
             $this->users[ $row[ 'user_id' ] ] = $row;
         }
 
@@ -81,17 +78,12 @@ class Admin_Users_Index extends System_Web_Component
         $this->grid->setSelection( $selectedId );
 
         $this->toolBar = new System_Web_ToolBar();
-
-        $classes = array();
-        if ( $selectedId != $principal->getUserId() )
-            $classes[] = 'access';
-        $this->toolBar->setSelection( $selectedId, null, $classes );
+        $this->toolBar->setSelection( $selectedId );
 
         $this->toolBar->addFixedCommand( '/admin/users/add.php', '/common/images/user-new-16.png', $this->tr( 'Add User' ) );
-        $this->toolBar->addItemCommand( '/admin/users/access.php', '/common/images/edit-access-16.png', $this->tr( 'Change Access' ), array( 'access' ) );
         $this->toolBar->addItemCommand( '/admin/users/password.php', '/common/images/edit-password-16.png', $this->tr( 'Change Password' ) );
         $this->toolBar->addItemCommand( '/admin/users/rename.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename User' ) );
-        $this->toolBar->addItemCommand( '/admin/users/projects.php', '/common/images/view-members-16.png', $this->tr( 'User Projects' ) );
+        $this->toolBar->addItemCommand( '/admin/users/projects.php', '/common/images/edit-access-16.png', $this->tr( 'Manage Permissions' ) );
         $this->toolBar->addItemCommand( '/admin/users/preferences.php', '/common/images/preferences-16.png', $this->tr( 'User Preferences' ) );
 
         $javaScript = new System_Web_JavaScript( $this->view );

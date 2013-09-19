@@ -18,11 +18,11 @@
 <?php if ( $emailEngine ): ?>
 <?php $grid->renderHeader( $this->tr( 'Email' ), 'email' ) ?>
 <?php endif ?>
-<?php $grid->renderHeader( $this->tr( 'Access Level' ), 'access' ) ?>
+<?php $grid->renderHeader( $this->tr( 'Access' ), 'access' ) ?>
 </tr>
 
 <?php foreach ( $users as $userId => $user ): ?>
-<?php $grid->renderRowOpen( $userId, $user[ 'classes' ] ) ?>
+<?php $grid->renderRowOpen( $userId ) ?>
 
 <td>
 <?php

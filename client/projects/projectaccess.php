@@ -20,7 +20,7 @@
 
 require_once( '../../system/bootstrap.inc.php' );
 
-class Admin_Users_Access extends System_Web_Component
+class Client_Projects_ProjectAccess extends System_Web_Component
 {
     protected function __construct()
     {
@@ -29,29 +29,28 @@ class Admin_Users_Access extends System_Web_Component
 
     protected function execute()
     {
+        if ( !System_Api_Principal::getCurrent()->isAdministrator() )
+            throw new System_Api_Error( System_Api_Error::AccessDenied );
+
+        $projectManager = new System_Api_ProjectManager();
+        $projectId = (int)$this->request->getQueryString( 'project' );
+        $this->project = $projectManager->getProject( $projectId );
+
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Global Access' ) );
 
         $breadcrumbs = new Common_Breadcrumbs( $this );
-        $breadcrumbs->initialize( Common_Breadcrumbs::UserProjects );
+        $breadcrumbs->initialize( Common_Breadcrumbs::ProjectMembers );
 
-        $userId = (int)$this->request->getQueryString( 'id' );
-        $userManager = new System_Api_UserManager();
-        $this->user = $userManager->getUser( $userId );
-
-        $principal = System_Api_Principal::getCurrent();
-        if ( $userId == $principal->getUserId() )
-            throw new System_Api_Error( System_Api_Error::AccessDenied );
-
-        $this->form = new System_Web_Form( 'users', $this );
-        $this->form->addField( 'accessLevel', $this->user[ 'user_access' ] );
+        $this->form = new System_Web_Form( 'projects', $this );
+        $this->form->addField( 'isPublic', $this->project[ 'is_public' ] );
 
         $this->accessLevels = array(
-            System_Const::NoAccess => $this->tr( 'Disabled' ),
-            System_Const::NormalAccess => $this->tr( 'Regular user' ),
-            System_Const::AdministratorAccess => $this->tr( 'System administrator' ) );
+            0 => $this->tr( 'Regular project' ),
+            1 => $this->tr( 'Public project' )
+        );
 
-        $this->form->addItemsRule( 'accessLevel', $this->accessLevels );
+        $this->form->addItemsRule( 'isPublic', $this->accessLevels );
 
         if ( $this->form->loadForm() ) {
             if ( $this->form->isSubmittedWith( 'cancel' ) )
@@ -66,12 +65,16 @@ class Admin_Users_Access extends System_Web_Component
             }
         }
     }
-
-    private function submit( )
+    
+    private function submit()
     {
-        $userManager = new System_Api_UserManager();
-        $userManager->grantUser( $this->user, $this->accessLevel );
+        $projectManager = new System_Api_ProjectManager();
+        try {
+            $projectManager->setProjectAccess( $this->project, $this->isPublic );
+        } catch ( System_Api_Error $ex ) {
+            $this->form->getErrorHelper()->handleError( 'isPublic', $ex );
+        }
     }
 }
 
-System_Bootstrap::run( 'Common_Application', 'Admin_Users_Access' );
+System_Bootstrap::run( 'Common_Application', 'Client_Projects_ProjectAccess' );

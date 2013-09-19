@@ -44,12 +44,14 @@
 <td colspan="2">
   <?php $grid->renderExpandButton( empty( $project[ 'folders' ] ) ) ?>
   <?php
-    if ( $project[ 'project_access' ] == System_Const::AdministratorAccess ):
-        $image = '/common/images/project-admin-16.png';
-    else:
-        $image = '/common/images/project-16.png';
+    $imageUrl = '/common/images/project';
+    if ( $project[ 'is_public' ] ):
+        $imageUrl .= '-public';
     endif;
-    echo $this->imageAndTextLink( $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'project' => $projectId ) ), $image, $project[ 'project_name' ] )
+    if ( $project[ 'project_access' ] == System_Const::AdministratorAccess ):
+        $imageUrl .= '-admin';
+    endif;
+    echo $this->imageAndTextLink( $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'project' => $projectId ) ), $imageUrl . '-16.png', $project[ 'project_name' ] )
   ?>
 </td>
 

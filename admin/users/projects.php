@@ -34,7 +34,7 @@ class Admin_Users_Projects extends System_Web_Component
         $this->user = $userManager->getUser( $userId );
 
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'User Projects' ) );
+        $this->view->setSlot( 'page_title', $this->tr( 'Manage Permissions' ) );
 
         $breadcrumbs = new Common_Breadcrumbs( $this );
         $breadcrumbs->initialize( Common_Breadcrumbs::UserAccounts );
@@ -54,11 +54,20 @@ class Admin_Users_Projects extends System_Web_Component
 
         $page = $userManager->getUserProjectsPage( $this->user, $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
 
+        $systemLevels = array(
+            System_Const::NoAccess => $this->tr( 'Disabled' ),
+            System_Const::NormalAccess => $this->tr( 'Regular user' ),
+            System_Const::AdministratorAccess => $this->tr( 'System administrator' ) );
+
+        $this->systemLevel = $systemLevels[ $this->user[ 'user_access' ] ];
+
+        $principal = System_Api_Principal::getCurrent();
+        if ( $userId != $principal->getUserId() )
+            $this->canChangeAccess = true;
+
         $accessLevels = array(
             System_Const::NormalAccess => $this->tr( 'Regular member' ),
             System_Const::AdministratorAccess => $this->tr( 'Project administrator' ) );
-
-        $principal = System_Api_Principal::getCurrent();
 
         $this->projects = array();
         foreach ( $page as $row ) {

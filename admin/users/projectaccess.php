@@ -34,7 +34,7 @@ class Admin_Users_ProjectAccess extends System_Web_Component
         $this->user = $userManager->getUser( $userId );
 
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'Change Access' ) );
+        $this->view->setSlot( 'page_title', $this->tr( 'Project Access' ) );
 
         $breadcrumbs = new Common_Breadcrumbs( $this );
         $breadcrumbs->initialize( Common_Breadcrumbs::UserProjects, $this->user );

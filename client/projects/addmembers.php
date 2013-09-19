@@ -59,8 +59,8 @@ class Client_Projects_AddMembers extends System_Web_Component
         $this->view->setSlot( 'page_title', $this->tr( 'Add Members' ) );
 
         $this->accessLevels = array(
-            System_Const::NormalAccess => $this->tr( 'Regular Member' ),
-            System_Const::AdministratorAccess => $this->tr( 'Project Administrator' ) );
+            System_Const::NormalAccess => $this->tr( 'Regular member' ),
+            System_Const::AdministratorAccess => $this->tr( 'Project administrator' ) );
 
         $this->form->addItemsRule( 'accessLevel', $this->accessLevels );
 

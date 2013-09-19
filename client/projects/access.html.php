@@ -1,6 +1,6 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
-<p><?php echo $this->tr( 'Set new access level to project <strong>%1</strong> for user <strong>%2</strong>.',
+<p><?php echo $this->tr( 'Change access to project <strong>%1</strong> for user <strong>%2</strong>.',
     null, $project[ 'project_name' ], $user[ 'user_name' ] ); ?></p>
 
 <?php $form->renderFormOpen(); ?>

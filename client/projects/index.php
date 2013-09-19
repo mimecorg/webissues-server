@@ -49,9 +49,15 @@ class Client_Projects_Index extends System_Web_Component
         $projects = $projectManager->getProjectsPage( $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset(), System_Api_ProjectManager::RequireAdministrator );
         $folders = $projectManager->getFoldersForProjects( $projects );
 
+        $accessLevels = array(
+            0 => $this->tr( 'Regular project' ),
+            1 => $this->tr( 'Public project' )
+        );
+
         $this->projects = array();
         foreach ( $projects as $project ) {
             $project[ 'folders' ] = array();
+            $project[ 'project_access' ] = $accessLevels[ $project[ 'is_public' ] ];
             $this->projects[ $project[ 'project_id' ] ] = $project;
         }
         foreach ( $folders as $folder )
@@ -89,7 +95,7 @@ class Client_Projects_Index extends System_Web_Component
         $this->toolBar->addChildCommand( '/client/projects/renamefolder.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Folder' ) );
         $this->toolBar->addChildCommand( '/client/projects/movefolder.php', '/common/images/folder-move-16.png', $this->tr( 'Move Folder' ) );
         $this->toolBar->addChildCommand( '/client/projects/deletefolder.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Folder' ) );
-        $this->toolBar->addParentCommand( '/client/projects/members.php', '/common/images/view-members-16.png', $this->tr( 'Project Members' ) );
+        $this->toolBar->addParentCommand( '/client/projects/members.php', '/common/images/edit-access-16.png', $this->tr( 'Manage Permissions' ) );
 
         $javaScript = new System_Web_JavaScript( $this->view );
         $javaScript->registerExpandCookie( 'wi_projects' );

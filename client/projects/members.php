@@ -34,7 +34,7 @@ class Client_Projects_Members extends System_Web_Component
         $this->project = $projectManager->getProject( $projectId, System_Api_ProjectManager::RequireAdministrator );
 
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'Project Members' ) );
+        $this->view->setSlot( 'page_title', $this->tr( 'Manage Permissions' ) );
 
         $breadcrumbs = new Common_Breadcrumbs( $this );
         $breadcrumbs->initialize( Common_Breadcrumbs::ManageProjects );
@@ -55,6 +55,13 @@ class Client_Projects_Members extends System_Web_Component
         $this->grid->setRowsCount( $userManager->getMembersCount( $this->project ) );
 
         $page = $userManager->getMembersPage( $this->project, $this->grid->getOrderBy(), $this->grid->getPageSize(), $this->grid->getOffset() );
+
+        $systemLevels = array(
+            0 => $this->tr( 'Regular project' ),
+            1 => $this->tr( 'Public project' )
+        );
+
+        $this->systemLevel = $systemLevels[ $this->project[ 'is_public' ] ];
 
         $accessLevels = array(
             System_Const::NormalAccess => $this->tr( 'Regular member' ),

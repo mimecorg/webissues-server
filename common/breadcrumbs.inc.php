@@ -111,7 +111,7 @@ class Common_Breadcrumbs extends System_Web_Base
             case self::UserProjects:
                 $this->append( self::UserAccounts );
                 $this->urls[] = $this->filterQueryString( '/admin/users/projects.php', array( 'id', 'sort', 'order', 'page', 'type', 'psort', 'porder', 'ppage' ) );
-                $this->names[] = $this->tr( 'User Projects' );
+                $this->names[] = $this->tr( 'Manage Permissions' );
                 break;
 
             case self::RegistrationRequests:
@@ -138,7 +138,7 @@ class Common_Breadcrumbs extends System_Web_Base
             case self::ProjectMembers:
                 $this->append( self::ManageProjects );
                 $this->urls[] = $this->filterQueryString( '/client/projects/members.php', array( 'project', 'sort', 'order', 'page', 'msort', 'morder', 'mpage' ) );
-                $this->names[] = $this->tr( 'Project Members' );
+                $this->names[] = $this->tr( 'Manage Permissions' );
                 break;
 
             case self::Folder:
