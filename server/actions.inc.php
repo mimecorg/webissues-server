@@ -398,6 +398,17 @@ class Server_Actions
         $this->setId( $projectManager->deleteProjectDescription( $descr ) );
     }
     
+    public function setProjectAccess( $projectId, $isPublic )
+    {
+        $this->principal->checkAuthenticated();
+
+        $projectManager = new System_Api_ProjectManager();
+        $project = $projectManager->getProject( $projectId, System_Api_ProjectManager::RequireAdministrator );
+        $this->validator->checkBooleanValue( $isPublic );
+
+        $this->setOkIf( $projectManager->setProjectAccess( $project, $isPublic ) );
+    }
+
     public function listIssues( $folderId, $sinceStamp )
     {
         $this->principal->checkAuthenticated();
