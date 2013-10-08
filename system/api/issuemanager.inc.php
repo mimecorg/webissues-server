@@ -114,7 +114,7 @@ class System_Api_IssueManager extends System_Api_Base
                 . ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
                 . ' LEFT OUTER JOIN {issue_states} AS s ON s.issue_id = i.issue_id AND s.user_id = %2d';
             if ( !$principal->isAdministrator() )
-                $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
+                $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
             $query .= ' WHERE i.issue_id = %1d';
 
             if ( !( $issue = $this->connection->queryRow( $query, $issueId, $principal->getUserId(), System_Const::AdministratorAccess ) ) )
@@ -290,7 +290,7 @@ class System_Api_IssueManager extends System_Api_Base
             . ' JOIN {stamps} AS sc ON sc.stamp_id = ch.change_id';
         if ( !$principal->isAdministrator() ) {
             $query .= ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
+                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
         }
         $query .= ' WHERE c.comment_id = %1d';
 
@@ -323,7 +323,7 @@ class System_Api_IssueManager extends System_Api_Base
             . ' JOIN {stamps} AS sc ON sc.stamp_id = ch.change_id';
         if ( !$principal->isAdministrator() ) {
             $query .= ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
+                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
         }
         $query .= ' WHERE fl.file_id = %1d';
 
@@ -352,7 +352,7 @@ class System_Api_IssueManager extends System_Api_Base
             $query .= ' JOIN {changes} AS ch ON ch.change_id = fl.file_id'
                 . ' JOIN {issues} AS i ON i.issue_id = ch.issue_id'
                 . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
+                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
         }
         $query .= ' WHERE fl.file_id = %1d';
 
@@ -667,7 +667,7 @@ class System_Api_IssueManager extends System_Api_Base
         $query = 'SELECT i.issue_id FROM {issues} AS i';
         if ( !$principal->isAdministrator() ) {
             $query .= ' JOIN {folders} AS f ON f.folder_id = i.folder_id';
-            $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
         }
         $query .= ' WHERE i.issue_id = %1d';
 
@@ -678,7 +678,7 @@ class System_Api_IssueManager extends System_Api_Base
         if ( !$principal->isAdministrator() ) {
             $query .= ' JOIN {issues} AS i ON i.issue_id = ch.issue_id'
                 . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %4d';
+                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %4d';
         }
         $query .= ' WHERE ch.change_id = %1d AND ch.change_type >= %2d AND ch.change_type <= %3d';
 

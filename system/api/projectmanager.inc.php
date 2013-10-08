@@ -61,7 +61,7 @@ class System_Api_ProjectManager extends System_Api_Base
 
         if ( !$principal->isAdministrator() ) {
             $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.is_public, r.project_access FROM {projects} AS p'
-                . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
+                . ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
         } else {
@@ -87,7 +87,7 @@ class System_Api_ProjectManager extends System_Api_Base
         $query .= $principal->isAdministrator() ? ' %3d AS project_access' : ' r.project_access';
         $query .= ' FROM {projects} AS p';
         if ( !$principal->isAdministrator() )
-            $query .= ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %2d';
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %2d';
         $query .= ' WHERE p.project_id = %1d';
 
         if ( !( $project = $this->connection->queryRow( $query, $projectId, $principal->getUserId(), System_Const::AdministratorAccess ) ) )
@@ -111,7 +111,7 @@ class System_Api_ProjectManager extends System_Api_Base
 
         $query = 'SELECT f.folder_id, f.project_id, f.folder_name, f.type_id, f.stamp_id, t.type_name FROM {folders} AS f';
         if ( !$principal->isAdministrator() ) {
-            $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
         }
@@ -147,7 +147,7 @@ class System_Api_ProjectManager extends System_Api_Base
                 . ' JOIN {projects} AS p ON p.project_id = f.project_id'
                 . ' JOIN {issue_types} AS t ON t.type_id = f.type_id';
             if ( !$principal->isAdministrator() )
-                $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
+                $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
             $query .= ' WHERE f.folder_id = %1d';
 
             if ( !( $folder = $this->connection->queryRow( $query, $folderId, $principal->getUserId(), System_Const::AdministratorAccess ) ) )
@@ -177,7 +177,7 @@ class System_Api_ProjectManager extends System_Api_Base
 
         $query = 'SELECT f.folder_id, f.project_id, f.folder_name, f.type_id, f.stamp_id, t.type_name FROM {folders} AS f';
         if ( !$principal->isAdministrator() ) {
-            $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
         }
@@ -609,7 +609,7 @@ class System_Api_ProjectManager extends System_Api_Base
         $principal = System_Api_Principal::getCurrent();
         if ( !$principal->isAdministrator() ) {
             $query = 'SELECT COUNT(*) FROM {projects} AS p'
-                . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
+                . ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
         } else {
@@ -633,7 +633,7 @@ class System_Api_ProjectManager extends System_Api_Base
         $principal = System_Api_Principal::getCurrent();
         if ( !$principal->isAdministrator() ) {
             $query = 'SELECT p.project_id, p.project_name, p.is_public, r.project_access FROM {projects} AS p'
-                . ' JOIN {rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
+                . ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
         } else {

@@ -60,7 +60,7 @@ class System_Api_AlertManager extends System_Api_Base
             . ' WHERE ( a.user_id = %1d OR a.user_id IS NULL )';
         if ( !$principal->isAdministrator() ) {
             $query .= ' AND EXISTS ( SELECT f.folder_id FROM {folders} AS f'
-                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d'
+                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d'
                 . ' WHERE ( f.folder_id = a.folder_id OR f.type_id = a.type_id ) )';
         }
 
@@ -279,7 +279,7 @@ class System_Api_AlertManager extends System_Api_Base
             $query = 'SELECT a.alert_id, v.view_id, v.view_name, a.alert_email, a.summary_days, a.summary_hours, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public, r.project_access'
                 . ' FROM {alerts} AS a'
                 . ' LEFT OUTER JOIN {folders} AS f ON f.folder_id = a.folder_id'
-                . ' LEFT OUTER JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
+                . ' LEFT OUTER JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
         } else {
             $query = 'SELECT a.alert_id, v.view_id, v.view_name, a.alert_email, a.summary_days, a.summary_hours, ( CASE WHEN a.user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
                 . ' FROM {alerts} AS a';
@@ -288,7 +288,7 @@ class System_Api_AlertManager extends System_Api_Base
             . ' WHERE a.alert_id = %1d AND ( a.user_id = %2d OR a.user_id IS NULL )';
         if ( !$principal->isAdministrator() ) {
             $query .= ' AND EXISTS ( SELECT f.folder_id FROM {folders} AS f'
-                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d'
+                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d'
                 . ' WHERE ( f.folder_id = a.folder_id OR f.type_id = a.type_id ) )';
         }
 
@@ -450,7 +450,7 @@ class System_Api_AlertManager extends System_Api_Base
             . ' FROM {alerts} AS a'
             . ' WHERE a.user_id = %1d AND EXISTS ( SELECT f.folder_id FROM {folders} AS f';
         if ( !$principal->isAdministrator() )
-            $query .= ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
         $query .= ' WHERE ( f.folder_id = a.folder_id OR f.type_id = a.type_id )';
 
         if ( $includeSummary ) {
@@ -508,7 +508,7 @@ class System_Api_AlertManager extends System_Api_Base
             $query .= ' WHERE f.folder_id = %4d';
         else
             $query .= ' WHERE f.type_id = %5d';
-        $query .= ' AND ( u.user_access = %3d OR EXISTS ( SELECT r.project_id FROM {rights} AS r WHERE r.project_id = f.project_id AND r.user_id = u.user_id ) )';
+        $query .= ' AND ( u.user_access = %3d OR EXISTS ( SELECT r.project_id FROM {effective_rights} AS r WHERE r.project_id = f.project_id AND r.user_id = u.user_id ) )';
         if ( $alertEmail != System_Const::SummaryReportEmail && $stampId > 0 )
             $query .= ' AND f.stamp_id > %6d';
         $query .= ' )';

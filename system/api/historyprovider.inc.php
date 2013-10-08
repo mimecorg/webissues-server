@@ -183,10 +183,10 @@ class System_Api_HistoryProvider
             $query .= ' LEFT OUTER JOIN {attr_types} AS a ON a.attr_id = ch.attr_id'
                 . ' LEFT OUTER JOIN {folders} AS ff ON ff.folder_id = ch.from_folder_id';
             if ( !$principal->isAdministrator() )
-                $query .= ' AND ff.project_id IN ( SELECT project_id FROM {rights} WHERE user_id = %4d )';
+                $query .= ' AND ff.project_id IN ( SELECT project_id FROM {effective_rights} WHERE user_id = %4d )';
             $query .= ' LEFT OUTER JOIN {folders} AS tf ON tf.folder_id = ch.to_folder_id';
             if ( !$principal->isAdministrator() )
-                $query .= ' AND tf.project_id IN ( SELECT project_id FROM {rights} WHERE user_id = %4d )';
+                $query .= ' AND tf.project_id IN ( SELECT project_id FROM {effective_rights} WHERE user_id = %4d )';
         }
         if ( $itemType == self::AllHistory || $itemType == self::Comments || $itemType == self::CommentsAndFiles ) {
             if ( $itemType == self::AllHistory || $itemType == self::CommentsAndFiles )

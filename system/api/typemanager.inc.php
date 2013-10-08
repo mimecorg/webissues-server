@@ -272,7 +272,7 @@ class System_Api_TypeManager extends System_Api_Base
 
         $query = 'SELECT t.type_id, t.type_name FROM {issue_types} AS t';
         if ( !$principal->isAdministrator() ) {
-            $query .= ' WHERE t.type_id IN ( SELECT f.type_id FROM {folders} AS f JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %d )';
+            $query .= ' WHERE t.type_id IN ( SELECT f.type_id FROM {folders} AS f JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %d )';
         }
         $query .= ' ORDER BY t.type_name COLLATE LOCALE';
 

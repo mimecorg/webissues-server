@@ -426,7 +426,7 @@ class System_Api_QueryGenerator extends System_Api_Base
             $joins[] = 'JOIN {folders} AS f ON f.folder_id = i.folder_id';
             $joins[] = 'JOIN {projects} AS p ON p.project_id = f.project_id';
             if ( !$principal->isAdministrator() ) {
-                $joins[] = 'JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %d';
+                $joins[] = 'JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %d';
                 $this->arguments[] = $principal->getUserId();
             }
         }

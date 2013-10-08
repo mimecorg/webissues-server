@@ -54,7 +54,7 @@ class System_Api_StateManager extends System_Api_Base
         if ( !$principal->isAdministrator() ) {
             $query .= ' JOIN {issues} AS i ON i.issue_id = s.issue_id'
                 . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
+                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
         }
         $query .= ' WHERE s.user_id = %1d AND s.state_id > %2d';
 
