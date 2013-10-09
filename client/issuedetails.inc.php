@@ -49,8 +49,11 @@ class Client_IssueDetails extends System_Web_Component
 
         $isRead = (int)$this->request->getQueryString( 'unread' ) == 0;
 
-        $stateManager = new System_Api_StateManager();
-        $stateId = $stateManager->setIssueRead( $issue, $isRead ? $issue[ 'stamp_id' ] : 0 );
+        $principal = System_Api_Principal::getCurrent();
+        if ( $principal->isAuthenticated() ) {
+            $stateManager = new System_Api_StateManager();
+            $stateId = $stateManager->setIssueRead( $issue, $isRead ? $issue[ 'stamp_id' ] : 0 );
+        }
 
         $serverManager = new System_Api_ServerManager();
         $hideEmpty = $serverManager->getSetting( 'hide_empty_values' );
@@ -70,7 +73,6 @@ class Client_IssueDetails extends System_Web_Component
 
         $prettyPrint = false;
 
-        $principal = System_Api_Principal::getCurrent();
         $this->canEditDescr = $issue[ 'project_access' ] == System_Const::AdministratorAccess || $issue[ 'created_user' ] == $principal->getUserId();
 
         if ( $issue[ 'descr_id' ] != null ) {
@@ -158,27 +160,31 @@ class Client_IssueDetails extends System_Web_Component
             }
         }
 
+        $this->canReply = $principal->isAuthenticated();
+
         $this->toolBar = new System_Web_ToolBar();
 
-        $this->toolBar->addFixedCommand( '/client/issues/editissue.php', '/common/images/edit-modify-16.png', $this->tr( 'Edit Attributes' ) );
-        $this->toolBar->addFixedCommand( '/client/issues/addcomment.php', '/common/images/comment-16.png', $this->tr( 'Add Comment' ) );
-        $this->toolBar->addFixedCommand( '/client/issues/addattachment.php', '/common/images/file-attach-16.png', $this->tr( 'Add Attachment' ) );
-        if ( $issue[ 'descr_id' ] == null && $this->canEditDescr )
-            $this->toolBar->addFixedCommand( '/client/issues/adddescription.php', '/common/images/description-new-16.png', $this->tr( 'Add Description' ) );
-        $this->toolBar->addFixedCommand( '/client/issues/cloneissue.php', '/common/images/issue-clone-16.png', $this->tr( 'Clone Issue' ) );
-        if ( $issue[ 'project_access' ] == System_Const::AdministratorAccess ) {
-            $this->toolBar->addFixedCommand( '/client/issues/moveissue.php', '/common/images/issue-move-16.png', $this->tr( 'Move Issue' ) );
-            $this->toolBar->addFixedCommand( '/client/issues/deleteissue.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Issue' ) );
-        }
-        if ( $isRead )
-            $this->toolBar->addFixedCommand( '/client/index.php', '/common/images/issue-unread-16.png', $this->tr( 'Mark As Unread' ), array( 'unread' => 1 ) );
-        else
-            $this->toolBar->addFixedCommand( '/client/index.php', '/common/images/issue-16.png', $this->tr( 'Mark As Read' ), array( 'unread' => null ) );
-        if ( $serverManager->getSetting( 'email_engine' ) != '' ) {
-            if ( $issue[ 'subscription_id' ] != null )
-                $this->toolBar->addFixedCommand( '/client/issues/unsubscribe.php', '/common/images/issue-unsubscribe-16.png', $this->tr( 'Unsubscribe' ) );
+        if ( $principal->isAuthenticated() ) {
+            $this->toolBar->addFixedCommand( '/client/issues/editissue.php', '/common/images/edit-modify-16.png', $this->tr( 'Edit Attributes' ) );
+            $this->toolBar->addFixedCommand( '/client/issues/addcomment.php', '/common/images/comment-16.png', $this->tr( 'Add Comment' ) );
+            $this->toolBar->addFixedCommand( '/client/issues/addattachment.php', '/common/images/file-attach-16.png', $this->tr( 'Add Attachment' ) );
+            if ( $issue[ 'descr_id' ] == null && $this->canEditDescr )
+                $this->toolBar->addFixedCommand( '/client/issues/adddescription.php', '/common/images/description-new-16.png', $this->tr( 'Add Description' ) );
+            $this->toolBar->addFixedCommand( '/client/issues/cloneissue.php', '/common/images/issue-clone-16.png', $this->tr( 'Clone Issue' ) );
+            if ( $issue[ 'project_access' ] == System_Const::AdministratorAccess ) {
+                $this->toolBar->addFixedCommand( '/client/issues/moveissue.php', '/common/images/issue-move-16.png', $this->tr( 'Move Issue' ) );
+                $this->toolBar->addFixedCommand( '/client/issues/deleteissue.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Issue' ) );
+            }
+            if ( $isRead )
+                $this->toolBar->addFixedCommand( '/client/index.php', '/common/images/issue-unread-16.png', $this->tr( 'Mark As Unread' ), array( 'unread' => 1 ) );
             else
-                $this->toolBar->addFixedCommand( '/client/issues/subscribe.php', '/common/images/issue-subscribe-16.png', $this->tr( 'Subscribe' ) );
+                $this->toolBar->addFixedCommand( '/client/index.php', '/common/images/issue-16.png', $this->tr( 'Mark As Read' ), array( 'unread' => null ) );
+            if ( $serverManager->getSetting( 'email_engine' ) != '' ) {
+                if ( $issue[ 'subscription_id' ] != null )
+                    $this->toolBar->addFixedCommand( '/client/issues/unsubscribe.php', '/common/images/issue-unsubscribe-16.png', $this->tr( 'Unsubscribe' ) );
+                else
+                    $this->toolBar->addFixedCommand( '/client/issues/subscribe.php', '/common/images/issue-subscribe-16.png', $this->tr( 'Subscribe' ) );
+            }
         }
 
         if ( $prettyPrint ) {

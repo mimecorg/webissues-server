@@ -271,9 +271,10 @@ class System_Api_TypeManager extends System_Api_Base
         $principal = System_Api_Principal::getCurrent();
 
         $query = 'SELECT t.type_id, t.type_name FROM {issue_types} AS t';
-        if ( !$principal->isAdministrator() ) {
+        if ( !$principal->isAuthenticated() )
+            $query .= ' WHERE t.type_id IN ( SELECT f.type_id FROM {folders} AS f JOIN {projects} AS p ON p.project_id = f.project_id WHERE p.is_public = 1 )';
+        else if ( !$principal->isAdministrator() )
             $query .= ' WHERE t.type_id IN ( SELECT f.type_id FROM {folders} AS f JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %d )';
-        }
         $query .= ' ORDER BY t.type_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query, $principal->getUserId() );

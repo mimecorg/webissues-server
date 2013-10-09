@@ -30,8 +30,16 @@ class Client_Issues_GetAttachment extends Common_Application
     protected function execute()
     {
         $principal = System_Api_Principal::getCurrent();
-        if ( !$principal->isAuthenticated() )
-            $this->response->redirect( '/index.php' );
+        if ( !$principal->isAuthenticated() ) {
+            $redirect = true;
+
+            $serverManager = new System_Api_ServerManager();
+            if ( $serverManager->getSetting( 'anonymous_access' ) == 1 )
+                $redirect = false;
+
+            if ( $redirect )
+                $this->redirectToLoginPage();
+        }
 
         $issueManager = new System_Api_IssueManager();
         $attachmentId = (int)$this->request->getQueryString( 'id' );

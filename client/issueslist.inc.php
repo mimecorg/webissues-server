@@ -222,22 +222,28 @@ class Client_IssuesList extends System_Web_Component
             $this->issues[ $row[ 'issue_id' ] ] = $issue;
         }
 
+        $principal = System_Api_Principal::getCurrent();
+
         $this->toolBar = new System_Web_ToolBar();
         $this->toolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ) );
 
-        $this->toolBar->addFixedCommand( '/client/issues/addissue.php', '/common/images/issue-new-16.png', $this->tr( 'Add Issue' ), array( $key => $id ) );
-        $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-read-16.png', $this->tr( 'Mark All As Read' ), array( $key => $id, 'status' => 1 ) );
-        $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-unread-16.png', $this->tr( 'Mark All As Unread' ), array( $key => $id, 'status' => 0 ) );
-        $this->toolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Manage Views' ), array( $key => $id ) );
-        $this->toolBar->addFixedCommand( '/client/alerts/index.php', '/common/images/configure-alerts-16.png', $this->tr( 'Manage Alerts' ), array( $key => $id ) );
+        if ( $principal->isAuthenticated() ) {
+            $this->toolBar->addFixedCommand( '/client/issues/addissue.php', '/common/images/issue-new-16.png', $this->tr( 'Add Issue' ), array( $key => $id ) );
+            $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-read-16.png', $this->tr( 'Mark All As Read' ), array( $key => $id, 'status' => 1 ) );
+            $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-unread-16.png', $this->tr( 'Mark All As Unread' ), array( $key => $id, 'status' => 0 ) );
+            $this->toolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Manage Views' ), array( $key => $id ) );
+            $this->toolBar->addFixedCommand( '/client/alerts/index.php', '/common/images/configure-alerts-16.png', $this->tr( 'Manage Alerts' ), array( $key => $id ) );
+        }
 
         $this->viewToolBar = new System_Web_ToolBar();
         $this->viewToolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ) );
 
-        $this->viewToolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add View' ), array( $key => $id, 'direct' => 1 ) );
-        if ( $personalViewId != 0 )
-            $this->viewToolBar->addFixedCommand( '/client/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ), array( $key => $id, 'id' => $personalViewId, 'direct' => 1 ) );
-        if ( $viewParam != 0 )
-            $this->viewToolBar->addFixedCommand( '/client/views/clone.php', '/common/images/view-clone-16.png', $this->tr( 'Clone View' ), array( $key => $id, 'id' => $viewParam, 'direct' => 1 ) );
+        if ( $principal->isAuthenticated() ) {
+            $this->viewToolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add View' ), array( $key => $id, 'direct' => 1 ) );
+            if ( $personalViewId != 0 )
+                $this->viewToolBar->addFixedCommand( '/client/views/modify.php', '/common/images/edit-modify-16.png', $this->tr( 'Modify View' ), array( $key => $id, 'id' => $personalViewId, 'direct' => 1 ) );
+            if ( $viewParam != 0 )
+                $this->viewToolBar->addFixedCommand( '/client/views/clone.php', '/common/images/view-clone-16.png', $this->tr( 'Clone View' ), array( $key => $id, 'id' => $viewParam, 'direct' => 1 ) );
+        }
     }
 }

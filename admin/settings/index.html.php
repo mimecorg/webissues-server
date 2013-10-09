@@ -11,6 +11,15 @@
 <?php $this->insertComponent( 'Common_Tools_Editing', $form ) ?>
 
 <fieldset class="form-fieldset">
+<legend><?php echo $this->tr( 'Anonymous Access' ) ?></legend>
+
+<p><?php echo $this->tr( 'This option enables read-only access to public projects without logging in.' ) ?></p>
+
+<?php $form->renderCheckBox( $this->tr( 'Enable anonymous access' ), 'anonymousAccess' ) ?>
+
+</fieldset>
+
+<fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'User Registration' ) ?></legend>
 
 <p><?php echo $this->tr( 'This option allows users to register with administrator\'s approval. Sending emails needs to be enabled.' ) ?></p>

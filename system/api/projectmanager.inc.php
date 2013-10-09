@@ -139,18 +139,22 @@ class System_Api_ProjectManager extends System_Api_Base
             $folder = self::$folders[ $folderId ];
         } else {
             $query = 'SELECT f.folder_id, f.folder_name, f.type_id, f.stamp_id, p.project_id, p.project_name, t.type_name,';
-            if ( !$principal->isAdministrator() )
+            if ( !$principal->isAuthenticated() )
+                $query .= ' %4d AS project_access';
+            else if ( !$principal->isAdministrator() )
                 $query .= ' r.project_access';
             else
                 $query .= ' %3d AS project_access';
             $query .= ' FROM {folders} AS f'
                 . ' JOIN {projects} AS p ON p.project_id = f.project_id'
                 . ' JOIN {issue_types} AS t ON t.type_id = f.type_id';
-            if ( !$principal->isAdministrator() )
+            if ( $principal->isAuthenticated() && !$principal->isAdministrator() )
                 $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
             $query .= ' WHERE f.folder_id = %1d';
+            if ( !$principal->isAuthenticated() )
+                $query .= ' AND p.is_public = 1';
 
-            if ( !( $folder = $this->connection->queryRow( $query, $folderId, $principal->getUserId(), System_Const::AdministratorAccess ) ) )
+            if ( !( $folder = $this->connection->queryRow( $query, $folderId, $principal->getUserId(), System_Const::AdministratorAccess, System_Const::NormalAccess ) ) )
                 throw new System_Api_Error( System_Api_Error::UnknownFolder );
 
             self::$folders[ $folderId ] = $folder;
@@ -607,7 +611,9 @@ class System_Api_ProjectManager extends System_Api_Base
     public function getProjectsCount( $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
-        if ( !$principal->isAdministrator() ) {
+        if ( !$principal->isAuthenticated() ) {
+            $query = 'SELECT COUNT(*) FROM {projects} AS p WHERE p.is_public = 1';
+        } else if ( !$principal->isAdministrator() ) {
             $query = 'SELECT COUNT(*) FROM {projects} AS p'
                 . ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
@@ -631,7 +637,9 @@ class System_Api_ProjectManager extends System_Api_Base
     public function getProjectsPage( $orderBy, $limit, $offset, $flags = 0 )
     {
         $principal = System_Api_Principal::getCurrent();
-        if ( !$principal->isAdministrator() ) {
+        if ( !$principal->isAuthenticated() ) {
+            $query = 'SELECT p.project_id, p.project_name, p.is_public, %3d AS project_access FROM {projects} AS p WHERE p.is_public = 1';
+        } else if ( !$principal->isAdministrator() ) {
             $query = 'SELECT p.project_id, p.project_name, p.is_public, r.project_access FROM {projects} AS p'
                 . ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
@@ -640,7 +648,7 @@ class System_Api_ProjectManager extends System_Api_Base
             $query = 'SELECT p.project_id, p.project_name, p.is_public, %2d AS project_access FROM {projects} AS p';
         }
 
-        return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $principal->getUserId(), System_Const::AdministratorAccess );
+        return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $principal->getUserId(), System_Const::AdministratorAccess, System_Const::NormalAccess );
     }
 
     /**

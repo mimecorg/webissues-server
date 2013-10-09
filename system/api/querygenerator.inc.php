@@ -368,16 +368,26 @@ class System_Api_QueryGenerator extends System_Api_Base
 
     private function generateSelect( $flags = 0 )
     {
+        $principal = System_Api_Principal::getCurrent();
+
         $result = array();
+
         if ( $flags & self::WithState ) {
             $result[] = 'i.stamp_id';
-            $result[] = 's.read_id';
-            $result[] = 's.subscription_id';
+            if ( $principal->isAuthenticated() ) {
+                $result[] = 's.read_id';
+                $result[] = 's.subscription_id';
+            } else {
+                $result[] = 'i.stamp_id AS read_id';
+                $result[] = 'NULL AS subscription_id';
+            }
         }
+
         if ( $flags & self::AllColumns ) {
             foreach ( $this->columns as $column )
                 $result[] = $this->makeColumnSelect( $column );
         }
+
         return implode( ', ', $result );
     }
 
@@ -425,13 +435,13 @@ class System_Api_QueryGenerator extends System_Api_Base
         if ( $this->typeId != 0 ) {
             $joins[] = 'JOIN {folders} AS f ON f.folder_id = i.folder_id';
             $joins[] = 'JOIN {projects} AS p ON p.project_id = f.project_id';
-            if ( !$principal->isAdministrator() ) {
+            if ( $principal->isAuthenticated() && !$principal->isAdministrator() ) {
                 $joins[] = 'JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %d';
                 $this->arguments[] = $principal->getUserId();
             }
         }
 
-        if ( ( $flags & self::WithState ) || $this->noRead )
+        if ( ( ( $flags & self::WithState ) || $this->noRead ) && $principal->isAuthenticated() )
             $this->addJoin( $joins, 'LEFT OUTER JOIN {issue_states} AS s ON s.issue_id = i.issue_id AND s.user_id = %d', $principal->getUserId() );
 
         foreach ( $columns as $column ) {
@@ -481,6 +491,9 @@ class System_Api_QueryGenerator extends System_Api_Base
         } else if ( $this->typeId != 0 ) {
             $conditions = array( 'f.type_id = %d' );
             $this->arguments[] = $this->typeId;
+
+            if ( !$principal->isAuthenticated()  )
+                $conditions[] = 'p.is_public = 1';
         }
 
         if ( $this->sinceStamp != null ) {

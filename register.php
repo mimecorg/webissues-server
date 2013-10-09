@@ -36,7 +36,7 @@ class Register extends System_Web_Component
             throw new System_Api_Error( System_Api_Error::AccessDenied );
 
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'Register new account' ) );
+        $this->view->setSlot( 'page_title', $this->tr( 'Register New Account' ) );
 
         if ( System_Api_Principal::getCurrent()->isAuthenticated() ) {
             $sessionManager = new System_Api_SessionManager();

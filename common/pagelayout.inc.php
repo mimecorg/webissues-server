@@ -35,6 +35,10 @@ class Common_PageLayout extends System_Web_Component
         $this->isAdministrator = $principal->isAdministrator();
         $this->userName = $principal->getUserName();
 
+        $this->isAnonymous = false;
+        $this->canLogIn = false;
+        $this->canRegister = false;
+
         $application = System_Core_Application::getInstance();
 
         $this->siteName = $this->tr( 'WebIssues' );
@@ -43,6 +47,12 @@ class Common_PageLayout extends System_Web_Component
                 $serverManager = new System_Api_ServerManager();
                 $server = $serverManager->getServer();
                 $this->siteName = $server[ 'server_name' ];
+
+                if ( !$principal->isAuthenticated() ) {
+                    $this->isAnonymous = $serverManager->getSetting( 'anonymous_access' ) == 1;
+                    $this->canLogIn = $this->isAnonymous && $this->request->isRelativePathUnder( '/client' );
+                    $this->canRegister = $this->canLogIn && $serverManager->getSetting( 'self_register' ) == 1 && $serverManager->getSetting( 'email_engine' ) != null;
+                }
             }
         } catch ( Exception $ex ) {
             $application->handleException( $ex );

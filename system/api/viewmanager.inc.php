@@ -193,7 +193,7 @@ class System_Api_ViewManager extends System_Api_Base
 
         $typeId = $type[ 'type_id' ];
 
-        if ( $flags & self::IsPublic ) {
+        if ( $flags & self::IsPublic || !$principal->isAuthenticated() ) {
             $query = 'SELECT view_id, type_id, view_name, view_def, 1 AS is_public'
                 . ' FROM {views}'
                 . ' WHERE view_id = %1d AND type_id = %2d AND user_id IS NULL';
@@ -265,10 +265,16 @@ class System_Api_ViewManager extends System_Api_Base
 
         $typeId = $type[ 'type_id' ];
 
-        $query = 'SELECT view_id, view_name, ( CASE WHEN user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
-            . ' FROM {views}'
-            . ' WHERE type_id = %d AND ( user_id = %d OR user_id IS NULL )'
-            . ' ORDER BY view_name COLLATE LOCALE';
+        if ( !$principal->isAuthenticated() ) {
+            $query = 'SELECT view_id, view_name, 1 AS is_public'
+                . ' FROM {views}'
+                . ' WHERE type_id = %d AND user_id IS NULL';
+        } else {
+            $query = 'SELECT view_id, view_name, ( CASE WHEN user_id IS NULL THEN 1 ELSE 0 END ) AS is_public'
+                . ' FROM {views}'
+                . ' WHERE type_id = %d AND ( user_id = %d OR user_id IS NULL )';
+        }
+        $query .= ' ORDER BY view_name COLLATE LOCALE';
 
         $views = $this->connection->queryTable( $query, $typeId, $principal->getUserId() );
 

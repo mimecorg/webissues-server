@@ -8,9 +8,7 @@ case 'login': ?>
 <?php $form->renderText( $this->tr( 'Login:' ), 'login', array( 'size' => 40 ) ) ?>
 <?php $form->renderPassword( $this->tr( 'Password:' ), 'password', array( 'size' => 40 ) ) ?>
 
-<?php if ( $canRegister ): ?>
-<p><?php echo $this->link( $this->url( '/register.php' ), $this->tr( 'Register new account' ) ) ?></p>
-<?php endif ?>
+<p><?php $toolBar->render() ?></p>
 
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'Log in' ), 'login' ) ?>

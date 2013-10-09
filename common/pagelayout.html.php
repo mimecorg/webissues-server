@@ -28,7 +28,7 @@
   <div id="site-name"><?php echo $siteName ?></div>
   <div id="header-right">
 <?php
-    if ( $isAuthenticated ):
+    if ( $isAuthenticated || $isAnonymous ):
         if ( $isAdministrator ):
             echo $this->link( '/admin/index.php', $this->tr( 'Administration Panel' ) ) . ' | ';
         endif;
@@ -52,6 +52,11 @@
         echo $this->tr( 'Logged in as: %1', null, $userName ) . ' | ';
         echo $this->link( '/client/tools/index.php', $this->tr( 'Tools' ) ) . ' | ';
         echo $this->link( '/index.php', $this->tr( 'Log Out' ) );
+    elseif ( $canLogIn ):
+        echo $this->link( '/index.php', $this->tr( 'Log In' ) );
+        if ( $canRegister ):
+            echo ' | ' . $this->link( '/register.php', $this->tr( 'Register' ) );
+        endif;
     endif;
 ?>
   </div>

@@ -31,9 +31,6 @@ class Index extends System_Web_Component
 
     protected function execute()
     {
-        $serverManager = new System_Api_ServerManager();
-        $this->canRegister = $serverManager->getSetting( 'self_register' ) == 1 && $serverManager->getSetting( 'email_engine' ) != null;
-
         $this->view->setDecoratorClass( 'Common_MessageBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Log in to WebIssues' ) );
 
@@ -70,6 +67,16 @@ class Index extends System_Web_Component
         }
 
         $this->initializeRules();
+
+        $this->toolBar = new System_Web_Toolbar();
+
+        $serverManager = new System_Api_ServerManager();
+    
+        if ( $serverManager->getSetting( 'anonymous_access' ) == 1 )
+            $this->toolBar->addFixedCommand( '/client/index.php', '/common/images/user-disabled-16.png', $this->tr( 'Anonymous Access' ) );
+
+        if ( $serverManager->getSetting( 'self_register' ) == 1 && $serverManager->getSetting( 'email_engine' ) != null )
+            $this->toolBar->addFixedCommand( '/register.php', '/common/images/user-new-16.png', $this->tr( 'Register New Account' ) );
     }
 
     private function initializeRules()
