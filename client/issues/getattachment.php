@@ -34,8 +34,10 @@ class Client_Issues_GetAttachment extends Common_Application
             $redirect = true;
 
             $serverManager = new System_Api_ServerManager();
-            if ( $serverManager->getSetting( 'anonymous_access' ) == 1 )
+            if ( $serverManager->getSetting( 'anonymous_access' ) == 1 ) {
+                $this->isAnonymous = true;
                 $redirect = false;
+            }
 
             if ( $redirect )
                 $this->redirectToLoginPage();
