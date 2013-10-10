@@ -84,13 +84,20 @@ class System_Api_ProjectManager extends System_Api_Base
         $principal = System_Api_Principal::getCurrent();
 
         $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.descr_id, p.descr_stub_id, p.is_public,';
-        $query .= $principal->isAdministrator() ? ' %3d AS project_access' : ' r.project_access';
+        if ( !$principal->isAuthenticated() )
+            $query .= ' %4d AS project_access';
+        else if ( !$principal->isAdministrator() )
+            $query .= ' r.project_access';
+        else
+            $query .= ' %3d AS project_access';
         $query .= ' FROM {projects} AS p';
-        if ( !$principal->isAdministrator() )
+        if ( $principal->isAuthenticated() && !$principal->isAdministrator() )
             $query .= ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %2d';
         $query .= ' WHERE p.project_id = %1d';
+        if ( !$principal->isAuthenticated() )
+            $query .= ' AND p.is_public = 1';
 
-        if ( !( $project = $this->connection->queryRow( $query, $projectId, $principal->getUserId(), System_Const::AdministratorAccess ) ) )
+        if ( !( $project = $this->connection->queryRow( $query, $projectId, $principal->getUserId(), System_Const::AdministratorAccess, System_Const::NormalAccess ) ) )
             throw new System_Api_Error( System_Api_Error::UnknownProject );
 
         if ( $flags & self::RequireAdministrator && $project[ 'project_access' ] != System_Const::AdministratorAccess )
