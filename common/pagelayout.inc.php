@@ -50,8 +50,13 @@ class Common_PageLayout extends System_Web_Component
 
                 if ( !$principal->isAuthenticated() ) {
                     $this->isAnonymous = $serverManager->getSetting( 'anonymous_access' ) == 1;
-                    $this->canLogIn = $this->isAnonymous && $this->request->isRelativePathUnder( '/client' );
-                    $this->canRegister = $this->canLogIn && $serverManager->getSetting( 'self_register' ) == 1 && $serverManager->getSetting( 'email_engine' ) != null;
+                    if ( $this->isAnonymous ) {
+                        $this->canLogIn = $this->request->isRelativePathUnder( '/client' );
+                        if ( $this->canLogIn ) {
+                            $this->loginPageUrl = $application->getLoginPageUrl();
+                            $this->canRegister = $serverManager->getSetting( 'self_register' ) == 1 && $serverManager->getSetting( 'email_engine' ) != null;
+                        }
+                    }
                 }
             }
         } catch ( Exception $ex ) {

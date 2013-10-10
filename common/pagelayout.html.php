@@ -53,7 +53,7 @@
         echo $this->link( '/client/tools/index.php', $this->tr( 'Tools' ) ) . ' | ';
         echo $this->link( '/index.php', $this->tr( 'Log Out' ) );
     elseif ( $canLogIn ):
-        echo $this->link( '/index.php', $this->tr( 'Log In' ) );
+        echo $this->link( $loginPageUrl, $this->tr( 'Log In' ) );
         if ( $canRegister ):
             echo ' | ' . $this->link( '/register.php', $this->tr( 'Register' ) );
         endif;

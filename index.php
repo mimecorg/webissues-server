@@ -69,6 +69,7 @@ class Index extends System_Web_Component
         $this->initializeRules();
 
         $this->toolBar = new System_Web_Toolbar();
+        $this->toolBar->setFilterParameters( array() );
 
         $serverManager = new System_Api_ServerManager();
     
