@@ -50,7 +50,11 @@
 <?php
     if ( $isAuthenticated ):
         echo $this->tr( 'Logged in as: %1', null, $userName ) . ' | ';
+    endif;
+    if ( $isAuthenticated || $canLogIn ):
         echo $this->link( '/client/tools/index.php', $this->tr( 'Tools' ) ) . ' | ';
+    endif;
+    if ( $isAuthenticated ):
         echo $this->link( '/index.php', $this->tr( 'Log Out' ) );
     elseif ( $canLogIn ):
         echo $this->link( $loginPageUrl, $this->tr( 'Log In' ) );

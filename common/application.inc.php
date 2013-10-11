@@ -42,7 +42,10 @@ class Common_Application extends System_Web_Application
             if ( !$principal->isAuthenticated() ) {
                 $redirect = true;
 
-                if ( $this->request->isRelativePath( '/client/index.php' ) ) {
+                if ( $this->request->isRelativePath( '/client/index.php' )
+                        || $this->request->isRelativePath( '/client/tools/index.php' )
+                        || $this->request->isRelativePath( '/client/tools/gotoitem.php' )
+                        || $this->request->isRelativePath( '/client/tools/about.php' ) ) {
                     $serverManager = new System_Api_ServerManager();
                     if ( $serverManager->getSetting( 'anonymous_access' ) == 1 ) {
                         $this->isAnonymous = true;

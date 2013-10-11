@@ -31,6 +31,9 @@ class Client_Tools_Index extends System_Web_Component
     {
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Tools' ) );
+
+        $principal = System_Api_Principal::getCurrent();
+        $this->isAuthenticated = $principal->isAuthenticated();
     }
 }
 
