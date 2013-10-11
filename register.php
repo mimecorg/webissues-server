@@ -35,6 +35,8 @@ class Register extends System_Web_Component
         if ( $serverManager->getSetting( 'self_register' ) != 1 || $serverManager->getSetting( 'email_engine' ) == null )
             throw new System_Api_Error( System_Api_Error::AccessDenied );
 
+        $this->autoApprove = $serverManager->getSetting( 'register_auto_approve' ) == 1;
+
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Register New Account' ) );
 
@@ -66,8 +68,13 @@ class Register extends System_Web_Component
         } else {
             $key = $this->request->getQueryString( 'key' );
             if ( $key != null ) {
-                $this->activate( $key );
-                $this->page = 'activated';
+                if ( $this->autoApprove ) {
+                    $this->approve( $key );
+                    $this->page = 'approved';
+                } else {
+                    $this->activate( $key );
+                    $this->page = 'activated';
+                }
             }
         }
 
@@ -133,6 +140,13 @@ class Register extends System_Web_Component
         $registrationManager = new System_Api_RegistrationManager();
         $request = $registrationManager->getRequestWithKey( $key );
         $registrationManager->activateRequest( $request );
+    }
+
+    private function approve( $key )
+    {
+        $registrationManager = new System_Api_RegistrationManager();
+        $request = $registrationManager->getRequestWithKey( $key );
+        $registrationManager->approveRequest( $request );
     }
 }
 

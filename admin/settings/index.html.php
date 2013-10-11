@@ -22,11 +22,15 @@
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'User Registration' ) ?></legend>
 
-<p><?php echo $this->tr( 'This option allows users to register with administrator\'s approval. Sending emails needs to be enabled.' ) ?></p>
+<p><?php echo $this->tr( 'This option allows users to self-register. Sending emails needs to be enabled.' ) ?></p>
 
 <?php $form->renderCheckBox( $this->tr( 'Enable user registration' ), 'selfRegister' ) ?>
 
-<p><?php echo $this->tr( 'Optionally send email notifications about registration requests to this address. Requires the cron job to be running.' ) ?></p>
+<p><?php echo $this->tr( 'This option allows users to register without administrator\'s approval. Registered users only have access to public projects by default.' ) ?></p>
+
+<?php $form->renderCheckBox( $this->tr( 'Enable automatic approval' ), 'registerAutoApprove' ) ?>
+
+<p><?php echo $this->tr( 'Optionally send email notifications about pending registration requests to this address. Requires the cron job to be running.' ) ?></p>
 
 <?php $form->renderText( $this->tr( 'Email address:' ), 'registerNotifyEmail', array( 'size' => 40 ) ) ?>
 

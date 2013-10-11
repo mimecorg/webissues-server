@@ -279,9 +279,10 @@ class Cron_Job extends System_Core_Application
         }
 
         $selfRegister = $serverManager->getSetting( 'self_register' );
+        $autoApprove = $serverManager->getSetting( 'register_auto_approve' );
         $notifyEmail = $serverManager->getSetting( 'register_notify_email' );
 
-        if ( $selfRegister == 1 && $notifyEmail != null ) {
+        if ( $selfRegister == 1 && $autoApprove != 1 && $notifyEmail != null ) {
             $registrationManager = new System_Api_RegistrationManager();
 
             $page = $registrationManager->getRequestsToEmail();

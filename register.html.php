@@ -5,7 +5,14 @@
 <?php switch ( $page ):
 case 'register': ?>
 
-<p><?php echo $this->tr( 'Fill the information below to begin registration. Note that administrator\'s approval is required before you can log in.' ) ?></p>
+<p>
+<?php
+    echo $this->tr( 'Fill the information below to begin registration.' );
+    if ( !$autoApprove ):
+        echo $this->tr( 'Note that administrator\'s approval is required before you can log in.' );
+    endif
+?>
+</p>
 
 <fieldset class="form-fieldset">
 <legend><?php echo $this->tr( 'User Name' ) ?></legend>
@@ -54,6 +61,15 @@ case 'registered': ?>
 case 'activated': ?>
 
 <p><?php echo $this->tr( 'Your registration request was activated. You will receive a notification email when the administrator approves your request.' ) ?></p>
+
+<div class="form-submit">
+<?php $form->renderSubmit( $this->tr( 'OK' ), 'ok' ) ?>
+</div>
+
+<?php break;
+case 'approved': ?>
+
+<p><?php echo $this->tr( 'Your registration request was activated. You can now log in to the server using your login and password.' ) ?></p>
 
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'OK' ), 'ok' ) ?>

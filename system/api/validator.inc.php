@@ -634,6 +634,7 @@ class System_Api_Validator
             case 'hide_id_column':
             case 'hide_empty_values':
             case 'self_register':
+            case 'register_auto_approve':
             case 'anonymous_access':
                 if ( $value != '' )
                     $this->checkDecimalNumber( $value, 0, 0, 1 );

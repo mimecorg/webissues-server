@@ -34,6 +34,7 @@ class Admin_Index extends System_Web_Component
 
         $serverManager = new System_Api_ServerManager();
         $this->canRegister = $serverManager->getSetting( 'self_register' ) == 1 && $serverManager->getSetting( 'email_engine' ) != null;
+        $this->autoApprove = $serverManager->getSetting( 'register_auto_approve' ) == 1;
     }
 }
 
