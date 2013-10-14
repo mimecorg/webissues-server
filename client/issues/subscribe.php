@@ -39,6 +39,10 @@ class Client_Issues_Subscribe extends System_Web_Component
         $breadcrumbs = new Common_Breadcrumbs( $this );
         $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
 
+        $preferences = new System_Api_PreferencesManager();
+        if ( $preferences->getPreference( 'email' ) == null )
+            $this->noEmailAddress = true;
+
         $this->form = new System_Web_Form( 'issues', $this );
 
         if ( $this->form->loadForm() ) {

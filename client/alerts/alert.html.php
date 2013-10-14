@@ -38,6 +38,10 @@
 <p><?php echo $this->tr( 'Send the following type of emails for this alert:' ) ?></p>
 <?php $form->renderRadioGroup( 'alertEmail', $emailTypes ) ?>
 
+<?php if ( !empty( $noEmailAddress ) ): ?>
+<p class="error"><?php echo $this->tr( 'Warning: You will not receive any emails until you enter an email address in your preferences.' ) ?></p>
+<?php endif ?>
+
 </fieldset>
 
 <fieldset class="form-fieldset">

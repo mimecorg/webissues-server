@@ -108,6 +108,12 @@ class Client_Alerts_Alert extends System_Web_Component
             $oldEmail = System_Const::NoEmail;
         }
 
+        if ( $this->emailEngine && !$this->isPublic ) {
+            $preferences = new System_Api_PreferencesManager();
+            if ( $preferences->getPreference( 'email' ) == null )
+                $this->noEmailAddress = true;
+        }
+
         $this->form = new System_Web_Form( 'alerts', $this );
 
         if ( $baseName == 'add' ) {

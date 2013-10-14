@@ -4,6 +4,10 @@
 
 <p><?php echo $this->tr( 'You will receive email notifications when someone else modifies this issue, adds a comment or attachment.' ) ?></p>
 
+<?php if ( !empty( $noEmailAddress ) ): ?>
+<p class="error"><?php echo $this->tr( 'Warning: You will not receive any emails until you enter an email address in your preferences.' ) ?></p>
+<?php endif ?>
+
 <?php $form->renderFormOpen(); ?>
 
 <div class="form-submit">
