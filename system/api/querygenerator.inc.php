@@ -250,7 +250,7 @@ class System_Api_QueryGenerator extends System_Api_Base
     public function getColumnExpression( $column )
     {
         if ( $column == System_Api_Column::Location )
-            return 'p.project_name COLLATE LOCALE, f.folder_name COLLATE LOCALE';
+            return 'p.project_name COLLATE LOCALE, f.folder_name COLLATE LOCALE, i.issue_id ASC';
 
         $expression = $this->makeColumnSelect( $column );
 
@@ -288,6 +288,9 @@ class System_Api_QueryGenerator extends System_Api_Base
                 }
                 break;
         }
+
+        if ( $column != System_Api_Column::ID )
+            $expression .= ', i.issue_id ASC';
 
         return $expression;
     }

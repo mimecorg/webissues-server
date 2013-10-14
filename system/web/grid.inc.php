@@ -222,8 +222,10 @@ class System_Web_Grid extends System_Web_Base
 
         $parts = explode( ', ', $column );
 
-        foreach ( $parts as &$part )
-            $part .= $order;
+        foreach ( $parts as &$part ) {
+            if ( substr( $part, -4 ) != ' ASC' && substr( $part, -5 ) != ' DESC' )
+                $part .= $order;
+        }
 
         return implode( ', ', $parts );
     }
