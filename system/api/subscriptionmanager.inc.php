@@ -246,13 +246,13 @@ class System_Api_SubscriptionManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT s.subscription_id, s.issue_id, s.user_id, s.stamp_id, s.user_email'
+        $query = 'SELECT s.subscription_id, s.issue_id, s.user_id, s.stamp_id, s.user_email, p.is_public'
             . ' FROM {subscriptions} AS s'
-            . ' JOIN {issues} AS i ON i.issue_id = s.issue_id';
-        if ( !$principal->isAdministrator() ) {
-            $query .= ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
-        }
+            . ' JOIN {issues} AS i ON i.issue_id = s.issue_id'
+            . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
+            . ' JOIN {projects} AS p ON p.project_id = f.project_id';
+        if ( !$principal->isAdministrator() )
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
         $query .= ' WHERE s.user_id IS NULL AND i.stamp_id > s.stamp_id';
 
         return $this->connection->queryTable( $query, $principal->getUserId() );

@@ -99,7 +99,7 @@ class System_Api_IssueManager extends System_Api_Base
             $issue = self::$issues[ $issueId ];
         } else {
             $query = 'SELECT i.issue_id, i.issue_name, i.stamp_id, i.stub_id, i.descr_id, i.descr_stub_id,'
-                . ' f.folder_id, f.folder_name, p.project_id, p.project_name, t.type_id, t.type_name,'
+                . ' f.folder_id, f.folder_name, p.project_id, p.project_name, p.is_public, t.type_id, t.type_name,'
                 . ' s.state_id, s.read_id, s.subscription_id,'
                 . ' sc.stamp_time AS created_date, uc.user_id AS created_user, uc.user_name AS created_by,'
                 . ' sm.stamp_time AS modified_date, um.user_id AS modified_user, um.user_name AS modified_by,';

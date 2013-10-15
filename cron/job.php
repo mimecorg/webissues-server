@@ -162,6 +162,8 @@ class Cron_Job extends System_Core_Application
                 $mail = System_Web_Component::createComponent( 'Common_Mail_Notification', null, $alert );
 
                 if ( $mail->prepare() ) {
+                    System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
+
                     $body = $mail->run();
                     $subject = $mail->getView()->getSlot( 'subject' );
 
@@ -180,6 +182,8 @@ class Cron_Job extends System_Core_Application
                 $mail = System_Web_Component::createComponent( 'Common_Mail_Subscription', null, $subscription );
 
                 if ( $mail->prepare() ) {
+                    System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
+
                     $body = $mail->run();
                     $subject = $mail->getView()->getSlot( 'subject' );
 
@@ -234,6 +238,8 @@ class Cron_Job extends System_Core_Application
                 $mail = System_Web_Component::createComponent( 'Common_Mail_Notification', null, $alert );
 
                 if ( $mail->prepare() ) {
+                    System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
+
                     $body = $mail->run();
                     $subject = $mail->getView()->getSlot( 'subject' );
 
@@ -254,6 +260,7 @@ class Cron_Job extends System_Core_Application
         if ( $allowExternal == 1 ) {
             $robotUserId = $serverManager->getSetting( 'inbox_robot' );
             $robotUser = $userManager->getUser( $robotUserId );
+            $anonymousAccess = $serverManager->getSetting( 'anonymous_access' );
 
             $this->impersonateExternalUser( $robotUser );
 
@@ -263,6 +270,11 @@ class Cron_Job extends System_Core_Application
                 $mail = System_Web_Component::createComponent( 'Common_Mail_Subscription', null, $subscription );
 
                 if ( $mail->prepare() ) {
+                    if ( $anonymousAccess == 1 && $subscription[ 'is_public' ] == 1 )
+                        System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
+                    else
+                        System_Web_Base::setLinkMode( System_Web_Base::NoInternalLinks );
+
                     $body = $mail->run();
                     $subject = $mail->getView()->getSlot( 'subject' );
 
@@ -288,9 +300,9 @@ class Cron_Job extends System_Core_Application
             $page = $registrationManager->getRequestsToEmail();
 
             if ( !empty( $page ) ) {
-                System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
-
                 $mail = System_Web_Component::createComponent( 'Common_Mail_RegisterNotification', null, $page );
+
+                System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
 
                 $body = $mail->run();
                 $subject = $mail->getView()->getSlot( 'subject' );
@@ -354,6 +366,8 @@ class Cron_Job extends System_Core_Application
         $leaveMessages = $serverManager->getSetting( 'inbox_leave_messages' );
         $respond = $serverManager->getSetting( 'inbox_respond' );
         $subscribe = $serverManager->getSetting( 'inbox_subscribe' );
+
+        $anonymousAccess = $serverManager->getSetting( 'anonymous_access' );
 
         if ( $this->mailEngine != null )
             $serverEmail = $serverManager->getSetting( 'email_from' );
@@ -544,6 +558,11 @@ class Cron_Job extends System_Core_Application
                 if ( $respond == 1 && $this->mailEngine != null && $issueId != null ) {
                     $mail = System_Web_Component::createComponent( 'Common_Mail_IssueCreated', null, $issue );
 
+                    if ( $user != null || $anonymousAccess == 1 && $issue[ 'is_public' ] == 1 )
+                        System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
+                    else
+                        System_Web_Base::setLinkMode( System_Web_Base::NoInternalLinks );
+
                     $body = $mail->run();
                     $subject = $mail->getView()->getSlot( 'subject' );
 
@@ -629,8 +648,6 @@ class Cron_Job extends System_Core_Application
 
         $locale = new System_Api_Locale();
         $this->translator->setLanguage( System_Core_Translator::UserLanguage, $locale->getSetting( 'language' ) );
-
-        System_Web_Base::setLinkMode( System_Web_Base::MailLinks );
     }
 
     private function impersonateExternalUser( $robotUser )
@@ -639,8 +656,6 @@ class Cron_Job extends System_Core_Application
         System_Api_Principal::setCurrent( $robotPrincipal );
 
         $this->translator->setLanguage( System_Core_Translator::UserLanguage, null );
-
-        System_Web_Base::setLinkMode( System_Web_Base::NoInternalLinks );
     }
 
     private function undoImpersonation()

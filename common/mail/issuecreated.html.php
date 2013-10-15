@@ -15,5 +15,5 @@
 <?php endif ?>
 
 <?php if ( !empty( $hasLinks ) ): ?>
-<p><?php echo $this->tr( 'You can also %1 by logging in to the WebIssues Server.', null, $this->mailLink( $this->appendQueryString( '/client/index.php', array( 'issue' => $issueId ) ), $this->tr( 'view this issue' ) ) ) ?></p>
+<p><?php echo $this->tr( 'You can also %1 in the WebIssues Server.', null, $this->mailLink( $this->appendQueryString( '/client/index.php', array( 'issue' => $issueId ) ), $this->tr( 'view this issue' ) ) ) ?></p>
 <?php endif ?>
