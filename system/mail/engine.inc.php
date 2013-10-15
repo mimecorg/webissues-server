@@ -20,6 +20,31 @@
 
 if ( !defined( 'WI_VERSION' ) ) die( -1 );
 
+function PHPMailerAutoload( $className )
+{
+    $path = WI_ROOT_DIR . '/system/mail/class.' . strtolower( $className ) . '.php';
+    if ( is_readable( $path ) )
+        include_once( $path );
+}
+
+spl_autoload_register( 'PHPMailerAutoload' );
+
+class System_Mail_PHPMailer extends PHPMailer
+{
+    public function __construct()
+    {
+        parent::__construct( true );
+    }
+
+    /**
+     * Do not validate the address becaue WebIssues already handles it.
+     */
+    public static function validateAddress( $address, $patternselect = 'auto' )
+    {
+        return true;
+    }
+};
+
 /**
 * Engine for sending email messages using PHPMailer.
 */
@@ -36,8 +61,7 @@ class System_Mail_Engine
     {
         require_once( WI_ROOT_DIR . '/system/mail/class.phpmailer.php' );
 
-        $this->mailer = new PHPMailer( true );
-        $this->mailer->PluginDir = WI_ROOT_DIR . '/system/mail/';
+        $this->mailer = new System_Mail_PHPMailer();
 
         $this->mailer->CharSet = 'UTF-8';
         $this->mailer->LE = "\n";
@@ -46,7 +70,7 @@ class System_Mail_Engine
         $language = $translator->getLanguage( System_Core_Translator::SystemLanguage );
 
         if ( $language != null && $language != 'en_US' )
-            $this->mailer->SetLanguage( $language, WI_ROOT_DIR . '/system/mail/language/' );
+            $this->mailer->setLanguage( $language, WI_ROOT_DIR . '/system/mail/language/' );
     }
 
     /**
@@ -67,7 +91,7 @@ class System_Mail_Engine
         $serverManager = new System_Api_ServerManager();
         $server = $serverManager->getServer();
 
-        $this->mailer->SetFrom( $settings[ 'email_from' ], $server[ 'server_name' ] );
+        $this->mailer->setFrom( $settings[ 'email_from' ], $server[ 'server_name' ] );
 
         $this->replyTo = $settings[ 'email_from' ];
 
@@ -75,7 +99,7 @@ class System_Mail_Engine
 
         switch ( $engine ) {
             case 'smtp':
-                $this->mailer->IsSMTP();
+                $this->mailer->isSMTP();
                 $this->mailer->Host = $settings[ 'smtp_server' ];
                 $this->mailer->Port = $settings[ 'smtp_port' ];
                 if ( !empty( $settings[ 'smtp_encryption' ] ) )
@@ -89,7 +113,7 @@ class System_Mail_Engine
                 break;
 
             case 'standard':
-                $this->mailer->IsMail();
+                $this->mailer->isMail();
                 break;
 
             default:
@@ -103,8 +127,8 @@ class System_Mail_Engine
     public function setReplyTo( $address, $name )
     {
         if ( $this->replyTo != $address ) {
-            $this->mailer->ClearReplyTos();
-            $this->mailer->AddReplyTo( $address, $name );
+            $this->mailer->clearReplyTos();
+            $this->mailer->addReplyTo( $address, $name );
 
             $this->replyTo = $address;
         }
@@ -119,14 +143,14 @@ class System_Mail_Engine
     */
     public function send( $address, $name, $subject, $body )
     {
-        $this->mailer->ClearAddresses();
-        $this->mailer->AddAddress( $address, $name );
+        $this->mailer->clearAddresses();
+        $this->mailer->addAddress( $address, $name );
 
-        $this->mailer->IsHTML();
+        $this->mailer->isHTML();
         $this->mailer->Subject = $subject;
         $this->mailer->Body = $body;
 
-        $this->mailer->Send();
+        $this->mailer->send();
     }
 
     /**
@@ -137,7 +161,7 @@ class System_Mail_Engine
         if ( $this->mailer == null )
             return;
 
-        $this->mailer->SmtpClose();
+        $this->mailer->smtpClose();
 
         $this->mailer = null;
     }

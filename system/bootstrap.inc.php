@@ -72,7 +72,7 @@ define( 'WI_BASE_URL', System_Bootstrap::getBaseUrl() );
 /*@}*/
 
 /**
-* Implementation of the class auto-load mechanism (see http://php.net/__autoload).
+* Implementation of the class auto-load mechanism (see http://php.net/spl_autoload_register).
 *
 * For the mechanism to work, file name must be the same as class name except
 * all characters are converted to lowercase, underscore is replaced with path
@@ -82,11 +82,14 @@ define( 'WI_BASE_URL', System_Bootstrap::getBaseUrl() );
 *
 * @relates System_Bootstrap
 */
-function __autoload( $className )
+function WebIssuesAutoload( $className )
 {
-    $path = str_replace( '_', '/', strtolower( $className ) );
-    include_once( WI_ROOT_DIR . '/' . $path . '.inc.php' );
+    $path = WI_ROOT_DIR . '/' . str_replace( '_', '/', strtolower( $className ) ) . '.inc.php';
+    if ( is_readable( $path ) )
+        include_once( $path );
 }
+
+spl_autoload_register( 'WebIssuesAutoload' );
 
 /**
 * Main entry point for all scripts.
