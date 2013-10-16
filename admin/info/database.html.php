@@ -1,7 +1,7 @@
 <?php if ( !defined( 'WI_VERSION' ) ) die( -1 ); ?>
 
 <fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Database' ) ?></legend>
+<legend><?php echo $this->tr( 'Database Configuration' ) ?></legend>
 
 <table class="info-list info-align">
 <tr>

@@ -34,31 +34,79 @@ class Admin_Info_Index extends System_Web_Component
 
         $this->form = new System_Web_Form( $this, 'info' );
 
-        $connection = System_Core_Application::getInstance()->getConnection();
-
-        $this->dbServer = $connection->getParameter( 'server' );
-        $this->dbVersion = $connection->getParameter( 'version' );
-
-        $site = System_Core_Application::getInstance()->getSite();
-
-        $this->dbHost = $site->getConfig( 'db_host' );
-        $this->dbDatabase = $site->getConfig( 'db_database' );
-        $this->dbPrefix = $site->getConfig( 'db_prefix' );
-
         $serverManager = new System_Api_ServerManager();
 
-        $current = $serverManager->getSetting( 'cron_current' );
-        if ( $current != null )
-            $this->cronCurrent = true;
+        $anonymousAccess = $serverManager->getSetting( 'anonymous_access' );
+        if ( $anonymousAccess == 1 )
+            $this->anonymous = $this->tr( 'enabled', 'anonymous access' );
+        else
+            $this->anonymous = $this->tr( 'disabled', 'anonymous access' );
 
-        $last = $serverManager->getSetting( 'cron_last' );
-        if ( $last != null ) {
-            $formatter = new System_Api_Formatter();
-            $this->cronLast = $formatter->formatDateTime( $last, System_Api_Formatter::ToLocalTimeZone );
+        $selfRegister = $serverManager->getSetting( 'self_register' );
+        if ( $selfRegister == 1 )
+            $this->register = $this->tr( 'enabled', 'user registration' );
+        else
+            $this->register = $this->tr( 'disabled', 'user registration' );
+
+        $emailEngine = $serverManager->getSetting( 'email_engine' );
+        if ( $emailEngine == 'standard' ) 
+            $this->email = $this->tr( 'standard PHP mailer' );
+        else if ( $emailEngine == 'smtp' )
+            $this->email = $this->tr( 'SMTP server' );
+        else
+            $this->email = $this->tr( 'disabled', 'sending emails' );
+
+        if ( $emailEngine != null )
+            $this->emailFrom = $serverManager->getSetting( 'email_from' );
+        if ( $emailEngine == 'smtp' )
+            $this->emailServer = $serverManager->getSetting( 'smtp_server' );
+
+        $inboxEngine = $serverManager->getSetting( 'inbox_engine' );
+        if ( $inboxEngine == 'pop3' ) {
+            $this->inbox = $this->tr( 'POP3 server' );
+        } else if ( $inboxEngine == 'imap' ) {
+            $this->inbox = $this->tr( 'IMAP server' );
+        } else {
+            $this->inbox = $this->tr( 'disabled', 'email inbox' );
         }
 
-        if ( $current == null && ( $last == null || time() - $last > 86400 ) )
-            $this->form->setError( 'cron', $this->tr( 'The cron job was not started within the last 24 hours.' ) );
+        if ( $inboxEngine != null ) {
+            $this->inboxEmail = $serverManager->getSetting( 'inbox_email' );
+            $this->inboxServer = $serverManager->getSetting( 'inbox_server' );
+        }
+
+        $cronLast = $serverManager->getSetting( 'cron_current' );
+        if ( $cronLast == null )
+            $cronLast = $serverManager->getSetting( 'cron_last' );
+
+        $current = time();
+
+        if ( $cronLast != null )
+            $this->cron = $this->formatTime( $current - $cronLast );
+        else
+            $this->cron = $this->tr( 'never' );
+
+        if ( $selfRegister == 1 && $emailEngine == null )
+            $this->form->setError( 'register', $this->tr( 'User self-registration requires sending emails to be configured.' ) );
+
+        if ( ( $emailEngine != null || $inboxEngine != null ) && ( $cronLast == null || $current - $cronLast > 86400 ) )
+            $this->form->setError( 'cron', $this->tr( 'Sending or receiving emails requires the cron job to be running.' ) );
+    }
+
+    private function formatTime( $seconds )
+    {
+        if ( $seconds < 120 )
+            return $this->tr( '%1 seconds ago', null, $seconds );
+
+        $minutes = floor( $seconds / 60 );
+        if ( $minutes < 120 )
+            return $this->tr( '%1 minutes ago', null, $minutes );
+
+        $hours = floor( $minutes / 60 );
+        if ( $hours <= 24 )
+            return $this->tr( '%1 hours ago', null, $hours );
+
+        return $this->tr( 'more than %1 hours ago', null, 24 );
     }
 }
 

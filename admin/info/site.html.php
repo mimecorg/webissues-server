@@ -31,7 +31,7 @@
 </fieldset>
 
 <fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Environment' ) ?></legend>
+<legend><?php echo $this->tr( 'Environment Information' ) ?></legend>
 
 <table class="info-list info-align">
 <tr>
