@@ -64,7 +64,7 @@ WebIssues.autoalign = function() {
                 maxW = w;
         } );
         info.each( function() {
-            $( this ).find( 'td' ).first().css( 'width', maxW );
+            $( this ).find( 'td' ).first().css( 'width', Math.ceil( maxW ) );
         } );
     }
 }
