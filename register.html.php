@@ -9,7 +9,7 @@ case 'register': ?>
 <?php
     echo $this->tr( 'Fill the information below to begin registration.' );
     if ( !$autoApprove ):
-        echo $this->tr( 'Note that administrator\'s approval is required before you can log in.' );
+        echo ' ' . $this->tr( 'Note that administrator\'s approval is required before you can log in.' );
     endif
 ?>
 </p>
