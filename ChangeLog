@@ -1,3 +1,16 @@
+1.1-rc1 (2013-10-29)
+    * added global lists of issues
+    * added public alerts; moved summary schedule to individual alerts
+    * added public projects; redesign of project and user permission pages
+    * added anonymous mode; auto-approval of registration requests
+    * added Czech and Russian translation
+    * fixed problem with infinitely sent alerts
+    * fixed IMAP certificate validation
+    * fixed crash in view settings when attribute used in a filter was deleted
+    * fixed sorting by date column in Postgres
+    * fixed sorting by non-unique column
+    * updated PHPMailer to latest version
+
 1.1-beta2 (2013-07-18)
     * added the email inbox
     * added support for subscriptions
