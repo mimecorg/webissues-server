@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="zh_CN">
+<TS version="2.0" language="ru">
 <context>
     <name>Admin_Events_Event</name>
     <message>
         <location filename="../../../admin/events/event.php" line="33"/>
         <source>Event Details</source>
-        <translation>事件详情</translation>
+        <translation>Сведения о событии</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="7"/>
         <source>Type:</source>
-        <translation>类型：</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="11"/>
         <source>Severity:</source>
-        <translation>安全性：</translation>
+        <translation>Серьезность:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="18"/>
         <source>Date:</source>
-        <translation>日期：</translation>
+        <translation>Дата:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="22"/>
         <source>Message:</source>
-        <translation>消息：</translation>
+        <translation>Сообщение:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="26"/>
         <source>User name:</source>
-        <translation>用户名：</translation>
+        <translation>Имя пользователя:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="30"/>
         <source>Host name:</source>
-        <translation>主机名：</translation>
+        <translation>Имя хоста:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="36"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
 </context>
 <context>
@@ -49,37 +49,37 @@
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Information</source>
-        <translation>信息</translation>
+        <translation>Информация</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Warning</source>
-        <translation>警告</translation>
+        <translation>Внимание</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Error</source>
-        <translation>错误</translation>
+        <translation>Ошибка</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="49"/>
         <source>Errors</source>
-        <translation>错误</translation>
+        <translation>Ошибки</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="50"/>
         <source>Access</source>
-        <translation>访问</translation>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="51"/>
         <source>Audit</source>
-        <translation>审查</translation>
+        <translation>Аудит</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="52"/>
         <source>Cron</source>
-        <translation>Cron计划任务</translation>
+        <translation>Периодическая операция</translation>
     </message>
 </context>
 <context>
@@ -87,32 +87,32 @@
     <message>
         <location filename="../../../admin/events/index.php" line="33"/>
         <source>Event Log</source>
-        <translation>事件日志</translation>
+        <translation>Журнал событий</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="4"/>
         <source>All Events</source>
-        <translation>所有事件</translation>
+        <translation>Все события</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="12"/>
         <source>Type</source>
-        <translation>类型</translation>
+        <translation>Тип</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="13"/>
         <source>Date</source>
-        <translation>日期</translation>
+        <translation>Дата</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="14"/>
         <source>Message</source>
-        <translation>信息</translation>
+        <translation>Сообщение</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="33"/>
         <source>There are no events of the selected type.</source>
-        <translation>暂无所选类型的事件。</translation>
+        <translation>Нет событий выбранного типа.</translation>
     </message>
 </context>
 <context>
@@ -120,130 +120,130 @@
     <message>
         <location filename="../../../admin/index.php" line="33"/>
         <source>Administration Panel</source>
-        <translation>管理面板</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="7"/>
-        <source>General Information</source>
-        <translation>基本信息</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="8"/>
-        <source>Show information about this server.</source>
-        <translation>显示此服务器信息。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="9"/>
-        <source>Event Log</source>
-        <translation>事件日志</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="10"/>
-        <source>Show recent entries from the event log.</source>
-        <translation>显示最近事件日志条目。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="16"/>
-        <source>Configuration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="19"/>
-        <source>Server Settings</source>
-        <translation>服务器设置</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="20"/>
-        <source>Configure default language and other settings for this server.</source>
-        <translation>为此服务器配置默认语言。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="21"/>
-        <source>Email Settings</source>
-        <translation>邮件设置</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="22"/>
-        <source>Configure notification email settings.</source>
-        <translation>配置邮件通知设置。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="23"/>
-        <source>Inbox Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="24"/>
-        <source>Configure email inbox settings.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="30"/>
-        <source>Management</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="34"/>
-        <source>Create and edit user accounts.</source>
-        <translation>创建和编辑用户账户。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/index.html.php" line="33"/>
-        <source>User Accounts</source>
-        <translation>用户账户</translation>
+        <translation>Панель администрирования</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="4"/>
         <source>Information</source>
-        <translation type="unfinished">信息</translation>
+        <translation>Информация</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="7"/>
+        <source>General Information</source>
+        <translation>Главная информация</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="8"/>
+        <source>Show information about this server.</source>
+        <translation>Показать информацию об этом сервере.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="9"/>
+        <source>Event Log</source>
+        <translation>Журнал событий</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="10"/>
+        <source>Show recent entries from the event log.</source>
+        <translation>Показать недавние записи из журнала событий.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="16"/>
+        <source>Configuration</source>
+        <translation>Настройки</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="19"/>
+        <source>Server Settings</source>
+        <translation>Настройки сервера</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="20"/>
+        <source>Configure default language and other settings for this server.</source>
+        <translation>Установить язык по умолчанию и другие настройки этого сервера.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="21"/>
+        <source>Email Settings</source>
+        <translation>Настройки e-mail</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="22"/>
+        <source>Configure notification email settings.</source>
+        <translation>Установить параметры e-mail оповещений.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="23"/>
+        <source>Inbox Settings</source>
+        <translation>Настройки ящика входящих сообщений</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="24"/>
+        <source>Configure email inbox settings.</source>
+        <translation>Установить параметры ящика входящих сообщений.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="30"/>
+        <source>Management</source>
+        <translation>Управление</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="33"/>
+        <source>User Accounts</source>
+        <translation>Учетные записи пользователей</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="34"/>
+        <source>Create and edit user accounts.</source>
+        <translation>Создать и редактировать учетные записи.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="36"/>
         <source>Registration Requests</source>
-        <translation>注册请求</translation>
+        <translation>Запросы на регистрацию</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="37"/>
         <source>Approve and reject pending user registration requests.</source>
-        <translation>批准或拒绝用户注册请求。</translation>
+        <translation>Подтверждение и отклонение запросов на регистрацию пользователей.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="39"/>
         <source>Issue Types</source>
-        <translation>工作项类型</translation>
+        <translation>Типы задач</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="40"/>
         <source>Create and edit issue types.</source>
-        <translation>创建和编辑工作项类型。</translation>
+        <translation>Создать и редактировать типы задач.</translation>
     </message>
 </context>
 <context>
     <name>Admin_Info_Database</name>
     <message>
         <location filename="../../../admin/info/database.html.php" line="4"/>
-        <source>Database</source>
-        <translation type="unfinished">数据库</translation>
+        <source>Database Configuration</source>
+        <translation>Настройки базы данных</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="8"/>
         <source>Database server:</source>
-        <translation type="unfinished">数据库服务器：</translation>
+        <translation>Сервер базы данных:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="12"/>
         <source>Host name:</source>
-        <translation type="unfinished">主机名：</translation>
+        <translation>Имя хоста:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="16"/>
         <source>Database name:</source>
-        <translation type="unfinished">数据库名：</translation>
+        <translation>Имя базы данных:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="20"/>
         <source>Table prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation>Префикс таблиц:</translation>
     </message>
 </context>
 <context>
@@ -251,32 +251,32 @@
     <message>
         <location filename="../../../admin/info/generateuuid.php" line="33"/>
         <source>Generate New Unique ID</source>
-        <translation>生成新的唯一标识</translation>
+        <translation>Сгенерировать новый уникальный идентификатор</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="3"/>
         <source>A new, random unique identifier will be assigned to this server.</source>
-        <translation>为此服务器指定一个新的随机唯一标识。</translation>
+        <translation>Новый, случайный уникальный идентификатор будет назначен этому серверу.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="9"/>
         <source>Current ID:</source>
-        <translation>当前唯一标识：</translation>
+        <translation>Текущий идентификатор:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="13"/>
         <source>New ID:</source>
-        <translation>新的唯一标识：</translation>
+        <translation>Новый идентификатор:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="19"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="20"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -284,67 +284,153 @@
     <message>
         <location filename="../../../admin/info/index.php" line="33"/>
         <source>General Information</source>
-        <translation>基本信息</translation>
+        <translation>Главная информация</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="8"/>
-        <source>Database</source>
-        <translation>数据库</translation>
+        <location filename="../../../admin/info/index.php" line="41"/>
+        <source>enabled</source>
+        <comment>anonymous access</comment>
+        <translation>включено</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="12"/>
-        <source>Database server:</source>
-        <translation>数据库服务器：</translation>
+        <location filename="../../../admin/info/index.php" line="43"/>
+        <source>disabled</source>
+        <comment>anonymous access</comment>
+        <translation>отключено</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="16"/>
-        <source>Host name:</source>
-        <translation>主机名：</translation>
+        <location filename="../../../admin/info/index.php" line="47"/>
+        <source>enabled</source>
+        <comment>user registration</comment>
+        <translation>включено</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="20"/>
-        <source>Database name:</source>
-        <translation>数据库名：</translation>
+        <location filename="../../../admin/info/index.php" line="49"/>
+        <source>disabled</source>
+        <comment>user registration</comment>
+        <translation>отключено</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="24"/>
-        <source>Table prefix:</source>
-        <translation>数据表前缀：</translation>
+        <location filename="../../../admin/info/index.php" line="53"/>
+        <source>standard PHP mailer</source>
+        <translation>Стандартный отправитель PHP</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="32"/>
-        <source>Cron Job</source>
-        <translation>Cron计划任务</translation>
+        <location filename="../../../admin/info/index.php" line="55"/>
+        <source>SMTP server</source>
+        <translation>SMTP сервер</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="36"/>
-        <source>Cron is running:</source>
-        <translation>Cron正在运行：</translation>
+        <location filename="../../../admin/info/index.php" line="57"/>
+        <source>disabled</source>
+        <comment>sending emails</comment>
+        <translation>отключено</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="37"/>
-        <source>yes</source>
-        <translation>是</translation>
+        <location filename="../../../admin/info/index.php" line="66"/>
+        <source>POP3 server</source>
+        <translation>Сервер POP3</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="37"/>
-        <source>no</source>
-        <translation>否</translation>
+        <location filename="../../../admin/info/index.php" line="68"/>
+        <source>IMAP server</source>
+        <translation>Сервер IMAP</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="70"/>
+        <source>disabled</source>
+        <comment>email inbox</comment>
+        <translation>отключено</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="90"/>
+        <source>User self-registration requires sending emails to be configured.</source>
+        <translation>Саморегистрация пользователей требует настройки отправки электронных сообщений.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="93"/>
+        <source>Sending or receiving emails requires the cron job to be running.</source>
+        <translation>Отправка и получение сообщений требует настройки периодической операции.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="99"/>
+        <source>%1 seconds ago</source>
+        <translation>%1 секунд назад</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="103"/>
+        <source>%1 minutes ago</source>
+        <translation>%1 минут назад</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="107"/>
+        <source>%1 hours ago</source>
+        <translation>%1 часов назад</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="109"/>
+        <source>more than %1 hours ago</source>
+        <translation>более чем %1 часов назад</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="87"/>
+        <source>never</source>
+        <translation>никогда</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="4"/>
+        <source>About WebIssues</source>
+        <translation>О WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="10"/>
+        <source>Server Configuration</source>
+        <translation>Настройки сервера</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="14"/>
+        <source>Anonymous access:</source>
+        <translation>Анонимный доступ:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="18"/>
+        <source>User registration:</source>
+        <translation>Регистрация пользователей:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="23"/>
+        <source>Sending emails:</source>
+        <translation>Настройки электронной почты:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="28"/>
+        <source>Outgoing address:</source>
+        <translation>Исходящий адрес:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="34"/>
+        <source>Outgoing server:</source>
+        <translation>Исходящий сервер:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="40"/>
-        <source>Cron last run:</source>
-        <translation>Cron上次运行：</translation>
+        <source>Email inbox:</source>
+        <translation>Входящие электронные сообщения:</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="41"/>
-        <source>never</source>
-        <translation>从未运行</translation>
+        <location filename="../../../admin/info/index.html.php" line="45"/>
+        <source>Inbox address:</source>
+        <translation>Адрес входящих сообщений:</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.php" line="61"/>
-        <source>The cron job was not started within the last 24 hours.</source>
-        <translation>过去24小时内Cron未启动过。</translation>
+        <location filename="../../../admin/info/index.html.php" line="51"/>
+        <source>Inbox server:</source>
+        <translation>Сервер входящих сообщений:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="57"/>
+        <source>Cron last started:</source>
+        <translation>Последний запуск периодической операции:</translation>
     </message>
 </context>
 <context>
@@ -352,27 +438,27 @@
     <message>
         <location filename="../../../admin/info/renameserver.php" line="33"/>
         <source>Rename Server</source>
-        <translation>重命名服务器</translation>
+        <translation>Переименовать сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="3"/>
         <source>Enter the new server name.</source>
-        <translation>请输入新服务器名称。</translation>
+        <translation>Введите новое имя сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="7"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -380,32 +466,32 @@
     <message>
         <location filename="../../../admin/info/server.inc.php" line="37"/>
         <source>Rename Server</source>
-        <translation>重命名服务器</translation>
+        <translation>Переименовать сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.inc.php" line="38"/>
         <source>Generate New Unique ID</source>
-        <translation>生成新的唯一标识</translation>
+        <translation>Сгенерировать новый уникальный идентификатор</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="4"/>
         <source>Server Information</source>
-        <translation>服务器信息</translation>
+        <translation>Информация о сервере</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="14"/>
         <source>Database version:</source>
-        <translation>数据库版本：</translation>
+        <translation>Версия базы данных:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="18"/>
         <source>Server name:</source>
-        <translation>服务器名：</translation>
+        <translation>Имя сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="22"/>
         <source>Unique ID:</source>
-        <translation>唯一标识：</translation>
+        <translation>Уникальный идентификатор:</translation>
     </message>
 </context>
 <context>
@@ -414,85 +500,85 @@
         <location filename="../../../admin/info/site.inc.php" line="53"/>
         <location filename="../../../admin/info/site.inc.php" line="55"/>
         <source>Cannot access directory &apos;%1&apos;.</source>
-        <translation>无法访问目录‘%1’。</translation>
+        <translation>Нет доступа к директории &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.inc.php" line="57"/>
         <source>Cannot access file &apos;%1&apos;.</source>
-        <translation>无法访问文件‘%1’。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/info/site.html.php" line="12"/>
-        <source>Base URL address:</source>
-        <translation>基本URL地址：</translation>
+        <translation>Нет доступа к файлу &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="4"/>
         <source>Site Configuration</source>
-        <translation>站点配置</translation>
+        <translation>Настройки сайта</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="8"/>
         <source>Site name:</source>
-        <translation>站点名称：</translation>
+        <translation>Имя сайта:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/site.html.php" line="12"/>
+        <source>Base URL address:</source>
+        <translation>Базовый адрес URL:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="16"/>
         <source>Site directory:</source>
-        <translation>网站目录：</translation>
+        <translation>Директория сайта:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="20"/>
         <source>Debugging log file:</source>
-        <translation>调试日志文件：</translation>
+        <translation>Файл журнала отладки:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="21"/>
         <source>disabled</source>
         <comment>log file</comment>
-        <translation>禁用</translation>
+        <translation>отключено</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="24"/>
         <source>Debugging information:</source>
-        <translation>调试信息：</translation>
+        <translation>Отладочная информация:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="25"/>
         <source>enabled</source>
         <comment>debug info</comment>
-        <translation>启用</translation>
+        <translation>включено</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="25"/>
         <source>disabled</source>
         <comment>debug info</comment>
-        <translation>禁用</translation>
+        <translation>отключено</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="34"/>
-        <source>Environment</source>
-        <translation>环境</translation>
+        <source>Environment Information</source>
+        <translation>Информация окружения</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="38"/>
         <source>PHP version:</source>
-        <translation>PHP版本：</translation>
+        <translation>Версия PHP:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="42"/>
         <source>Web server:</source>
-        <translation>Web服务器：</translation>
+        <translation>Веб сервер:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="46"/>
         <source>Operating system:</source>
-        <translation>操作系统：</translation>
+        <translation>Операционная система:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="50"/>
         <source>Host name:</source>
-        <translation>主机名：</translation>
+        <translation>Имя хоста:</translation>
     </message>
 </context>
 <context>
@@ -500,42 +586,42 @@
     <message>
         <location filename="../../../admin/register/approve.php" line="50"/>
         <source>Approve Request</source>
-        <translation>通过请求</translation>
+        <translation>Подтвердить запрос</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="6"/>
         <source>Select All</source>
-        <translation>全选</translation>
+        <translation>Выбрать все</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>全取消选择</translation>
+        <translation>Отменить выбор</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="14"/>
         <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt; and add the user to the selected projects.</source>
-        <translation>通过用户&lt;strong&gt;%1&lt;/strong&gt;的注册请求并将他加入到所选择的项目。</translation>
+        <translation>Подтвердить регистрацию пользователя  &lt;strong&gt;%1&lt;/strong&gt; и добавить пользователя к выбранным проектам.</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="16"/>
         <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>通过用户&lt;strong&gt;%1&lt;/strong&gt;的注册请求。</translation>
+        <translation>Подтвердить регистрацию пользователя  &lt;strong&gt;%1&lt;/strong&gt; .</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="24"/>
         <source>Projects</source>
-        <translation>项目</translation>
+        <translation>Проекты</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="40"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="41"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -543,42 +629,42 @@
     <message>
         <location filename="../../../admin/register/index.php" line="33"/>
         <source>Registration Requests</source>
-        <translation>注册请求</translation>
+        <translation>Запросы на регистрацию</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.php" line="61"/>
         <source>Approve Request</source>
-        <translation>同意请求</translation>
+        <translation>Подтвердить запрос</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.php" line="62"/>
         <source>Reject Request</source>
-        <translation>拒绝请求</translation>
+        <translation>Отклонить запрос</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="11"/>
         <source>Name</source>
-        <translation>用户名</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="12"/>
         <source>Login</source>
-        <translation>登录</translation>
+        <translation>Логин</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="13"/>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="14"/>
         <source>Date</source>
-        <translation>日期</translation>
+        <translation>Дата</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="38"/>
         <source>There are no pending registration requests.</source>
-        <translation>没有待处理的注册请求。</translation>
+        <translation>Нет запросов на регистрацию.</translation>
     </message>
 </context>
 <context>
@@ -586,22 +672,22 @@
     <message>
         <location filename="../../../admin/register/reject.php" line="37"/>
         <source>Reject Request</source>
-        <translation>拒绝请求</translation>
+        <translation>Отклонить запрос</translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="3"/>
         <source>Do you want to reject registration request for user &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定要拒绝用户&lt;strong&gt;%1&lt;/strong&gt;的注册请求吗？</translation>
+        <translation>Вы хотите отменить запрос на регистрацию пользователя &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="8"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -609,206 +695,206 @@
     <message>
         <location filename="../../../admin/settings/inbox.php" line="32"/>
         <source>Inbox Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки ящика входящих сообщений</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="92"/>
         <source>Disabled</source>
-        <translation type="unfinished">禁用</translation>
+        <translation>Отключено</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="93"/>
         <source>IMAP server</source>
-        <translation type="unfinished"></translation>
+        <translation>Сервер IMAP</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="94"/>
         <source>POP3 server</source>
-        <translation type="unfinished"></translation>
+        <translation>Сервер POP3</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="97"/>
         <source>None</source>
         <comment>encryption</comment>
-        <translation type="unfinished">无</translation>
+        <translation>Не используется</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="104"/>
         <source>None</source>
         <comment>user</comment>
-        <translation type="unfinished">无</translation>
+        <translation>Не используется</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="113"/>
         <source>None</source>
         <comment>folder</comment>
-        <translation type="unfinished">无</translation>
+        <translation>Не используется</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="140"/>
         <source>Cannot leave messages on the server in POP3 mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нельзя оставлять сообщения на сервере в режиме POP3.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="152"/>
         <source>Please select the method of receiving emails to test connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Пожалуйста, укажите метод получения сообщений для тестового соединения.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="7"/>
         <source>Inbox settings are not avaiable because the &apos;IMAP&apos; extension is missing or disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки входящих сообщений недоступны, потому что расширение IMAP отсутствует или отключено.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="10"/>
         <location filename="../../../admin/settings/inbox.html.php" line="85"/>
         <source>OK</source>
-        <translation type="unfinished">确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="16"/>
         <source>General</source>
-        <translation type="unfinished">一般</translation>
+        <translation>Основные</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="18"/>
         <source>Method of receiving emails:</source>
-        <translation type="unfinished"></translation>
+        <translation>Метод получения сообщений:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="21"/>
         <source>Inbox email address:</source>
-        <translation type="unfinished"></translation>
+        <translation>E-mail адрес входящих сообщений:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="23"/>
         <source>If receiving emails is enabled, make sure that the cron job is running.</source>
-        <translation type="unfinished"></translation>
+        <translation>Если включено получение электронных сообщений, убедитесь что периодическая операция также активирована.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="28"/>
         <source>Inbox Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Сервер входящих сообщений</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="30"/>
         <source>Fill the information below to configure the IMAP or POP3 server.</source>
-        <translation type="unfinished"></translation>
+        <translation>Заполните поля внизу для настройки сервера IMAP или POP3.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="32"/>
         <source>Server name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="33"/>
         <source>Port number:</source>
-        <translation type="unfinished">端口：</translation>
+        <translation>Номер порта:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="34"/>
         <source>Encryption mode:</source>
-        <translation type="unfinished">加密方式：</translation>
+        <translation>Режим шифрования:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="35"/>
         <source>User name:</source>
-        <translation type="unfinished">用户名：</translation>
+        <translation>Имя пользователя:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="36"/>
         <source>Password:</source>
-        <translation type="unfinished">密码：</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="37"/>
         <source>Mailbox name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя ящика:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="39"/>
         <source>Do not validate server certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Не проверять сертификат сервера</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="40"/>
         <source>Leave processed messages on the server</source>
-        <translation type="unfinished"></translation>
+        <translation>Оставлять обработанные сообщения на сервере</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="45"/>
         <source>Connection to the inbox server was successful.</source>
-        <translation type="unfinished"></translation>
+        <translation>Соединение с сервером входящих сообщений прошло успешно.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="49"/>
         <source>Test Connection</source>
-        <translation type="unfinished">测试连接</translation>
+        <translation>Проверить</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="55"/>
         <source>External Users</source>
-        <translation type="unfinished"></translation>
+        <translation>Внешние пользователи</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="57"/>
         <source>This option enables receiving emails from addresses which are not assigned to any user in the system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Эта опция включает получение электронных сообщений с адресов, не принадлежащих пользователям системы.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="59"/>
         <source>Accept messages from external users</source>
-        <translation type="unfinished"></translation>
+        <translation>Принимать сообщения от внешних пользователей</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="60"/>
         <source>Robot user account:</source>
-        <translation type="unfinished"></translation>
+        <translation>Учетная запись для автомата:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="65"/>
         <source>Folder Mapping</source>
-        <translation type="unfinished"></translation>
+        <translation>Сопоставление папок</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="67"/>
         <source>This option enables mapping the inbox email address extensions to project and folder name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Эта опция включает сопоставление расширений электронных адресов с проектами и именами папок.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="69"/>
         <source>Map address extensions to project and folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Сопоставить расширение адреса с проектом и папкой</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="70"/>
         <source>Default folder:</source>
-        <translation type="unfinished"></translation>
+        <translation>Папка по умолчанию:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="75"/>
         <source>Sending Emails</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки электронной почты</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="77"/>
         <source>These options enable responses and automatic subscriptions for issues created through the inbox. Sending emails needs to be enabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Эта опция включает ответы и автоматические подписки на задачи, созданные через электронные сообщения. Отправка сообщений должна быть активирована.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="79"/>
         <source>Send responses when issues are created</source>
-        <translation type="unfinished"></translation>
+        <translation>Отправлять сообщения когда созданы задачи</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="80"/>
         <source>Subscribe senders to created issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Подписывать отправителя на созданные задачи</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="86"/>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -816,169 +902,194 @@
     <message>
         <location filename="../../../admin/settings/index.php" line="33"/>
         <source>Server Settings</source>
-        <translation>服务器设置</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="75"/>
-        <location filename="../../../admin/settings/index.php" line="82"/>
-        <source>%1 kB</source>
-        <translation>%1KB</translation>
+        <translation>Настройки сервера</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="77"/>
+        <location filename="../../../admin/settings/index.php" line="84"/>
+        <source>%1 kB</source>
+        <translation>%1 КБ</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.php" line="79"/>
         <source>%1 MB</source>
-        <translation>%1 MB</translation>
+        <translation>%1 МБ</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="80"/>
+        <location filename="../../../admin/settings/index.php" line="82"/>
         <source>Never</source>
-        <translation>不使用</translation>
+        <translation>Никогда</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="83"/>
+        <location filename="../../../admin/settings/index.php" line="85"/>
         <source>Always</source>
-        <translation>总是</translation>
+        <translation>Всегда</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="87"/>
+        <location filename="../../../admin/settings/index.php" line="89"/>
         <source>%1 minutes</source>
-        <translation>%1 分</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="88"/>
-        <source>1 hour</source>
-        <translation>1 小时</translation>
+        <translation>%1 минут</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="90"/>
-        <location filename="../../../admin/settings/index.php" line="99"/>
-        <source>%1 hours</source>
-        <translation>%1 小时</translation>
+        <source>1 hour</source>
+        <translation>1 час</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="93"/>
-        <source>1 day</source>
-        <translation>1 天</translation>
+        <location filename="../../../admin/settings/index.php" line="92"/>
+        <location filename="../../../admin/settings/index.php" line="101"/>
+        <source>%1 hours</source>
+        <translation>%1 часов</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="95"/>
+        <source>1 day</source>
+        <translation>1 день</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.php" line="97"/>
         <source>%1 days</source>
-        <translation>%1 天</translation>
+        <translation>%1 дней</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="102"/>
+        <location filename="../../../admin/settings/index.php" line="104"/>
         <source>Use cron job</source>
-        <translation>使用Cron计划任务</translation>
+        <translation>Использовать периодические операции</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="14"/>
+        <location filename="../../../admin/settings/index.html.php" line="23"/>
         <source>User Registration</source>
-        <translation>用户注册</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="16"/>
-        <source>This option allows users to register with administrator&apos;s approval. Sending emails needs to be enabled.</source>
-        <translation>此选项允许用户在管理员批准后注册。此功能需要开启邮件发送功能。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="18"/>
-        <source>Enable user registration</source>
-        <translation>允许用户注册</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="20"/>
-        <source>Optionally send email notifications about registration requests to this address. Requires the cron job to be running.</source>
-        <translation>将注册请求以通知发送到此邮箱。此功能需要开启Cron。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="22"/>
-        <source>Email address:</source>
-        <translation>邮件地址：</translation>
+        <translation>Регистрация пользователя</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="27"/>
+        <source>Enable user registration</source>
+        <translation>Включить регистрацию пользователей</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="35"/>
+        <source>Email address:</source>
+        <translation>Адрес e-mail:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="40"/>
         <source>Limits</source>
-        <translation>限制</translation>
+        <translation>Ограничения</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="14"/>
+        <source>Anonymous Access</source>
+        <translation>Анонимный доступ</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="16"/>
+        <source>This option enables read-only access to public projects without logging in.</source>
+        <translation>Эта опция разрешает доступ для чтения публичных проектов без авторизации.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="18"/>
+        <source>Enable anonymous access</source>
+        <translation>Разрешить анонимный доступ</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="25"/>
+        <source>This option allows users to self-register. Sending emails needs to be enabled.</source>
+        <translation>Эта опция разрешает саморегистрацию пользователей. Требуется настройка отправки сообщений.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="29"/>
-        <source>The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.</source>
-        <translation type="unfinished"></translation>
+        <source>This option allows users to register without administrator&apos;s approval. Registered users only have access to public projects by default.</source>
+        <translation>Эта опция разрешает регистрацию пользователей без подтверждения администратора. Зарегистрированные пользователи по умолчанию получат доступ только к публичным проектам.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="31"/>
+        <source>Enable automatic approval</source>
+        <translation>Разрешить автоматическое подтверждение</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="33"/>
+        <source>Optionally send email notifications about pending registration requests to this address. Requires the cron job to be running.</source>
+        <translation>Опционально отправлять на этот адрес электронные оповещения об ожидающих подтверждения запросов на регистрацию. Требуется настройка периодической операции.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="42"/>
+        <source>The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.</source>
+        <translation>Максимальная длина (в символах) комментариев и описаний, и максимальный размер (в байтах) разрешенных вложений.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="44"/>
         <source>Maximum text length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальная длина текста:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="32"/>
+        <location filename="../../../admin/settings/index.html.php" line="45"/>
         <source>Maximum attachment size:</source>
-        <translation>附件最大大小：</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="37"/>
-        <source>Attachment Storage</source>
-        <translation>附件保存</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="39"/>
-        <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
-        <translation>保存到数据库中的文件的最大大小（以字节为单位），超过此大小的文件将被保存在文件系统中。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="41"/>
-        <source>Maximum database storage size:</source>
-        <translation>数据库最大大小：</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="46"/>
-        <source>Maximum Lifetime</source>
-        <translation>最大生命周期</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="48"/>
-        <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
-        <translation>失活会话及事件最大存活期，超过此值的会话或事件会被自动删除。</translation>
+        <translation>Максимальный размер вложений:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="50"/>
-        <source>Session lifetime:</source>
-        <translation>会话生命周期：</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="51"/>
-        <source>Event log lifetime:</source>
-        <translation>事件日志生命周期：</translation>
+        <source>Attachment Storage</source>
+        <translation>Хранилище вложений</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="52"/>
-        <source>Inactive user registration request lifetime:</source>
-        <translation>用户注册最的长未激活时间：</translation>
+        <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
+        <translation>Максимальный размер (в байтах) файлов, хранимых в базе данных. Файлы большего размера будут храниться в файловой системе.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="57"/>
-        <source>Garbage Collection</source>
-        <translation>垃圾回收</translation>
+        <location filename="../../../admin/settings/index.html.php" line="54"/>
+        <source>Maximum database storage size:</source>
+        <translation>Максимальный размер хранимых данных:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="59"/>
-        <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
-        <translation>每个请求结束后的垃圾回收可能性。如果您有Cron任务用于垃圾回收，请确定它正在运行。</translation>
+        <source>Maximum Lifetime</source>
+        <translation>Максимальное время существования</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="61"/>
+        <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
+        <translation>Максимальное время, после которого неактивные сессии и события в журнале сообщений будут удаляться.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="63"/>
+        <source>Session lifetime:</source>
+        <translation>Время существования сессии:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="64"/>
+        <source>Event log lifetime:</source>
+        <translation>Время существования журнала сообщений:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="65"/>
+        <source>Inactive user registration request lifetime:</source>
+        <translation>Время существования запросов на регистрацию:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="70"/>
+        <source>Garbage Collection</source>
+        <translation>Сборка мусора</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="72"/>
+        <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
+        <translation>Вероятность сборки мусора после каждого запроса. Если периодическая операция используется для сборки мусора, убедитесь что она активирована.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="74"/>
         <source>GC probability:</source>
-        <translation>垃圾回收可能性：</translation>
+        <translation>Вероятность сборки мусора:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="66"/>
+        <location filename="../../../admin/settings/index.html.php" line="79"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="67"/>
+        <location filename="../../../admin/settings/index.html.php" line="80"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -986,658 +1097,658 @@
     <message>
         <location filename="../../../admin/settings/mail.php" line="33"/>
         <source>Email Settings</source>
-        <translation>邮件设置</translation>
+        <translation>Настройки e-mail</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="74"/>
         <source>Disabled</source>
-        <translation>禁用</translation>
+        <translation>Отключено</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="75"/>
         <source>Standard PHP mailer</source>
-        <translation>标准PHP Mailer</translation>
+        <translation>Стандартный отправитель PHP</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="76"/>
         <source>Custom SMTP server</source>
-        <translation>自定义SMTP服务器</translation>
+        <translation>Произвольный SMTP сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="79"/>
         <source>None</source>
-        <translation>无</translation>
+        <translation>Не используется</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="103"/>
         <source>Please select the SMTP method of sending emails to test connection.</source>
-        <translation>请选择发送测试邮件的SMTP方法。</translation>
+        <translation>Пожалуйста, выберите SMTP метод отправки сообщений тестовому соединению.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="6"/>
         <source>General</source>
-        <translation>一般</translation>
+        <translation>Основные</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="8"/>
         <source>Method of sending emails:</source>
-        <translation>邮件发送方式：</translation>
+        <translation>Метод отправки сообщений:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="11"/>
         <source>Email address of the server:</source>
-        <translation>服务器的邮件地址：</translation>
+        <translation>E-mail адрес сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="13"/>
         <source>If sending emails is enabled, make sure that the cron job is running.</source>
-        <translation>如果启用了邮件发送，请确认Cron任务正在运行。</translation>
+        <translation>Если отправка сообщений включена, убедитесь, что периодическая операция активирована.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="18"/>
         <source>SMTP Server</source>
-        <translation>SMTP服务器</translation>
+        <translation>SMTP сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="20"/>
         <source>Fill the information below when using a custom SMTP server.</source>
-        <translation>当使用SMTP服务器时，请填写下列信息。</translation>
+        <translation>Введите необходимую информацию, если используется произвольный сервер SMTP.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="22"/>
         <source>Server name:</source>
-        <translation>服务器名称：</translation>
+        <translation>Имя сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="23"/>
         <source>Port number:</source>
-        <translation>端口：</translation>
+        <translation>Номер порта:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="24"/>
         <source>Encryption mode:</source>
-        <translation>加密方式：</translation>
+        <translation>Режим шифрования:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="25"/>
         <source>User name:</source>
-        <translation>用户名：</translation>
+        <translation>Имя пользователя:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="26"/>
         <source>Password:</source>
-        <translation>密码：</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="31"/>
         <source>Connection to the SMTP server was successful.</source>
-        <translation>连接SMTP服务器成功。</translation>
+        <translation>Соединение с SMTP сервером прошло успешно.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="35"/>
         <source>Test Connection</source>
-        <translation>测试连接</translation>
+        <translation>Проверить</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="41"/>
         <source>Hyperlinks</source>
-        <translation>超链接</translation>
+        <translation>Гиперссылки</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="43"/>
         <source>Enter the base URL of the server, with the trailing slash, to enable hyperlinks in emails.</source>
-        <translation>输入末尾带斜杠（/）的基本URL以允许邮件中使用超链接。</translation>
+        <translation>Введите базовый URL адрес сервера, с начальными косыми чертами, чтобы использовать гиперссылки в e-mail сообщениях.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="45"/>
         <source>Server URL:</source>
-        <translation>服务器URL：</translation>
+        <translation>URL сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="48"/>
         <source>Detect</source>
-        <translation>自动检测</translation>
+        <translation>Определить</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="54"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="55"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
     <name>Admin_Setup_Install</name>
     <message>
-        <location filename="../../../admin/setup/install.php" line="237"/>
-        <source>No supported database engines are available in this PHP installation.</source>
-        <translation>当前安装程序没有支持的数据库引擎可用。</translation>
-    </message>
-    <message>
         <location filename="../../../admin/setup/install.php" line="78"/>
         <location filename="../../../admin/setup/install.html.php" line="9"/>
         <source>Server Configuration</source>
-        <translation>服务器配置</translation>
+        <translation>Настройки сервера</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="79"/>
         <source>Configure your WebIssues Server</source>
-        <translation>配置你的WebIssues服务器</translation>
+        <translation>Настройте свой сервер WebIssues</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="213"/>
         <source>My WebIssues Server</source>
-        <translation>我的WebIssues服务器</translation>
+        <translation>Мой сервер WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="237"/>
+        <source>No supported database engines are available in this PHP installation.</source>
+        <translation>Поддерживаемые базы данных в текущей установке PHP не обнаружены.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="259"/>
         <source>Install a new server</source>
-        <translation type="unfinished"></translation>
+        <translation>Установить новый сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="260"/>
         <source>Use an existing server</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать существующий сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="269"/>
         <source>Do not install any issue types</source>
-        <translation>不安装任务默认工作项类型</translation>
+        <translation>Не устанавливать типы задач</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="270"/>
         <source>Install the default set of issue types</source>
-        <translation>安装默认工作项类型</translation>
+        <translation>Установить набор типов задач по умолчанию</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="344"/>
         <location filename="../../../admin/setup/install.php" line="351"/>
         <location filename="../../../admin/setup/install.php" line="358"/>
         <source>The &apos;%1&apos; extension is missing or disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Расширение %1 отсутствует или отключено.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="294"/>
         <source>Could not connect to database. Please check connection details and try again.</source>
-        <translation>无法连接到数据库。请检查连接设置，然后重新尝试。</translation>
+        <translation>Не удалось подключиться к базе данных. Проверьте соединение и повторите попытку.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="310"/>
         <source>The WebIssues tables were not found in the database. Make sure the table prefix is correct and try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>Таблицы WebIssues не найдены в базе данных. Убедитесь, что префикс таблиц верный, и повторите попытку.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="319"/>
         <source>The existing version of the database cannot be used with this version of WebIssues Server.</source>
-        <translation>WebIssues无法使用当前数据库。</translation>
+        <translation>Существующая версия базы данных не может быть использована с этим сервером WebIssues.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="327"/>
         <source>The WebIssues tables already exist in the database. Drop them first or use a different table prefix and try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>Таблицы WebIssues уже находятся в базе данных. Сначала удалите их, либо используйте другой префикс и повторите попытку.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="335"/>
         <source>Could not retrieve information from the database.</source>
-        <translation>无法获取数据库信息。</translation>
+        <translation>Не удалось получить информацию из базы данных.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="377"/>
         <source>Database does not support InnoDB storage which is required by WebIssues Server.</source>
-        <translation>WebIssues需要InnoDB支持，但是您的数据库不支持InnoDB。</translation>
+        <translation>База данных не поддерживает хранилище InnoDB, необходимое серверу WebIssues.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="403"/>
         <source>Database version %1 is older than minimum required version %2.</source>
-        <translation>数据库版本%1低于最小需求版本%2。</translation>
+        <translation>База данных версии %1 старше минимально требуемой версии %2.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="430"/>
         <source>Completed the installation of the server</source>
-        <translation>安装完成</translation>
+        <translation>Установка сервера завершена</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="464"/>
         <source>Updated database to version %1</source>
-        <translation>升级数据库服务器到版本：%1</translation>
+        <translation>База данных обновлена до версии %1</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="491"/>
         <source>The configuration file could not be written.</source>
-        <translation>无法写入配置文件。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="17"/>
-        <source>Administration Panel</source>
-        <translation>管理面板</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="37"/>
-        <source>Select language used during the installation.</source>
-        <translation>选择安装语言。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="39"/>
-        <source>Language:</source>
-        <translation>语言：</translation>
+        <translation>Не удалась запись в файл настроек.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="6"/>
         <source>The configuration file of this WebIssues Server already exists.</source>
-        <translation>配置文件已经存在。</translation>
+        <translation>Файл настроек сервера WebIssues уже существует.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="8"/>
         <source>For security reasons, you must first delete the server configuration file and then run the %1 page again.</source>
-        <translation>为安全考虑，您必须删除配置文件，然后再次运行%1。</translation>
+        <translation>В целях безопасности удалите файл настроек и затем запустите страницу %1 снова.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="14"/>
         <source>Installation of your WebIssues Server was successfully completed.</source>
-        <translation>WebIssues成功安装。</translation>
+        <translation>Установка сервера WebIssues окончена успешно.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="16"/>
         <source>Go to the %1 to continue the configuration of this server.</source>
-        <translation>转至%1继续配置服务器。</translation>
+        <translation>Перейти к %1 для продолжения настроек сервера.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="54"/>
-        <source>Database Engine</source>
-        <translation>数据库引擎</translation>
+        <location filename="../../../admin/setup/install.html.php" line="17"/>
+        <source>Administration Panel</source>
+        <translation>Панель администрирования</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="95"/>
-        <source>Please enter the parameters of the new server.</source>
-        <translation>请输入新服务器的参数。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="100"/>
-        <source>Enter the name of this server.</source>
-        <translation>输入服务器名称。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="109"/>
-        <source>The Administrator user account will be created allowing you to log in to the server and change its settings.</source>
-        <translation>管理员账户将已创建，该账户允许您登录和管理设置。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="98"/>
-        <location filename="../../../admin/setup/install.html.php" line="132"/>
-        <source>Server Information</source>
-        <translation>服务器信息</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="51"/>
-        <source>Please enter information required to connect to the database.</source>
-        <translation>请输入连接数据库的必要信息。</translation>
+        <location filename="../../../admin/setup/install.html.php" line="20"/>
+        <source>Do not forget to copy attachments stored in the file system from the old version of the server.</source>
+        <translation>Не забудьте скопировать вложения, хранящиеся в файловой системе, из старой версии сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="26"/>
         <source>Installation failed with the following fatal error:</source>
-        <translation>安装程序因下列错误而终止：</translation>
+        <translation>Установка не выполнения из-за следующей фатальной ошибки:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="37"/>
+        <source>Select language used during the installation.</source>
+        <translation>Выберите язык для процесса установки.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="39"/>
+        <source>Language:</source>
+        <translation>Язык:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="44"/>
         <source>This wizard will help you configure the WebIssues Server.</source>
-        <translation>此向导将帮助您配置WebIssues服务器。</translation>
+        <translation>Этот мастер поможет Вам настроить сервер WebIssues.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="51"/>
+        <source>Please enter information required to connect to the database.</source>
+        <translation>Введите информацию для соединения с базой данных.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="54"/>
+        <source>Database Engine</source>
+        <translation>Ядро базы данных</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="56"/>
         <source>Select the type of the database to use:</source>
-        <translation>请选择数据库类型：</translation>
+        <translation>Выберите тип используемой базы данных:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="63"/>
         <source>Connection Details</source>
-        <translation>连接详情</translation>
+        <translation>Информация о соединении</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="65"/>
         <source>Host name:</source>
-        <translation>主机名：</translation>
+        <translation>Имя хоста:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="66"/>
         <source>Database name:</source>
-        <translation>数据库名：</translation>
+        <translation>Имя базы данных:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="67"/>
         <source>User name:</source>
-        <translation>用户名：</translation>
+        <translation>Имя пользователя:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="68"/>
         <location filename="../../../admin/setup/install.html.php" line="112"/>
         <source>Password:</source>
-        <translation>密码：</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="75"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="77"/>
         <source>Select if you want to install a new server or recreate the configuration file for an existing server:</source>
-        <translation type="unfinished"></translation>
+        <translation>Укажите, хотите Вы установить новый сервер или воссоздать файл настроек для текущего сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="84"/>
         <source>Table Prefix</source>
-        <translation>表前缀</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="140"/>
-        <source>Initial configuration:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="141"/>
-        <source>Default issue types</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="141"/>
-        <source>No issue types</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="171"/>
-        <source>&amp;lt; Back</source>
-        <translation>&amp;lt; 返回</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="186"/>
-        <source>Installation in progress...</source>
-        <translation>安装程序正在执行...</translation>
+        <translation>Префикс таблиц</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="86"/>
         <source>You can enter an optional prefix for table names. This allows installing multiple servers using the same database.</source>
-        <translation>您可以输入可选的表前缀，这样您可以使用同一数据库安装多个WebIssues服务器。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="20"/>
-        <source>Do not forget to copy attachments stored in the file system from the old version of the server.</source>
-        <translation>别忘记拷贝老版服务器中的附件。</translation>
+        <translation>Вы можете ввести опциональный префикс для имен таблиц. Это позволит настроить несколько серверов для работы с одной базой данных.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="88"/>
         <source>Table prefix:</source>
-        <translation>表前缀：</translation>
+        <translation>Префикс таблиц:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="95"/>
+        <source>Please enter the parameters of the new server.</source>
+        <translation>Введите параметры нового сервера.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="98"/>
+        <location filename="../../../admin/setup/install.html.php" line="132"/>
+        <source>Server Information</source>
+        <translation>Информация о сервере</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="100"/>
+        <source>Enter the name of this server.</source>
+        <translation>Введите имя сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="102"/>
         <location filename="../../../admin/setup/install.html.php" line="136"/>
         <source>Server name:</source>
-        <translation>服务器名：</translation>
+        <translation>Имя сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="107"/>
         <source>Administrator Account</source>
-        <translation>管理员账号</translation>
+        <translation>Учетная запись Администратора</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="109"/>
+        <source>The Administrator user account will be created allowing you to log in to the server and change its settings.</source>
+        <translation>Созданная учетная запись Администратора позволит подключиться к серверу и изменить настройки.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="111"/>
         <source>Login:</source>
-        <translation>登录：</translation>
+        <translation>Логин:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="113"/>
         <source>Confirm password:</source>
-        <translation>确认密码：</translation>
+        <translation>Подтвердите пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="118"/>
         <source>Initial Configuration</source>
-        <translation>初始配置</translation>
+        <translation>Начальные настройки</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="120"/>
         <source>Select the initial configuration of this server:</source>
-        <translation>选择初始配置：</translation>
+        <translation>Выберите начальные настройки сервера:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="140"/>
+        <source>Initial configuration:</source>
+        <translation>Начальные настройки:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="141"/>
+        <source>Default issue types</source>
+        <translation>Типы задач по умолчанию</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="141"/>
+        <source>No issue types</source>
+        <translation>Нет типов задач</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="129"/>
         <source>The new server will be installed in the selected database.</source>
-        <translation>新服务器将被安装到选择的数据库中。</translation>
+        <translation>Новый сервер будет установлен в выбранную базу данных.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="153"/>
         <source>The database of this WebIssues Server will be updated to version %1.</source>
-        <translation>WebIssues的数据库将被升级到版本 %1。</translation>
+        <translation>База данных этого сервера WebIssues будет обновлена до версии %1.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="155"/>
         <source>The server is already configured. It will not be modified during the installation.</source>
-        <translation>此服务器已配置。安装程序将不会做任何更改。</translation>
+        <translation>Этот сервер уже настроен. Его настройки не будет изменены во время установки.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="168"/>
         <source>Refresh</source>
-        <translation>刷新</translation>
+        <translation>Обновить</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="171"/>
+        <source>&amp;lt; Back</source>
+        <translation>&amp;lt; Назад</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="174"/>
         <source>Next &amp;gt;</source>
-        <translation>下一步 &amp;gt;</translation>
+        <translation>Вперед &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="177"/>
         <source>Install</source>
-        <translation>安装</translation>
+        <translation>Установить</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="186"/>
+        <source>Installation in progress...</source>
+        <translation>Установка...</translation>
     </message>
 </context>
 <context>
     <name>Admin_Setup_Installer</name>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="295"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
         <source>Administrator</source>
-        <translation>管理员</translation>
+        <translation>Администратор</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="324"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="337"/>
         <source>Forum</source>
-        <translation>论坛</translation>
+        <translation>Форум</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="330"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
         <source>Bugs</source>
-        <translation>缺陷</translation>
+        <translation>Ошибки</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="333"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="346"/>
         <source>Assigned To</source>
         <comment>bug</comment>
-        <translation>指派给</translation>
+        <translation>Назначено</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="340"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
         <source>Status</source>
         <comment>bug</comment>
-        <translation>状态</translation>
+        <translation>Статус</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="345"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="385"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="393"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="401"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="398"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="406"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="414"/>
         <source>Active</source>
         <comment>bug</comment>
-        <translation>活跃</translation>
+        <translation>Активно</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="408"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="421"/>
         <source>Resolved</source>
         <comment>bug</comment>
-        <translation>已解决</translation>
+        <translation>Решено</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
         <source>Closed</source>
         <comment>bug</comment>
-        <translation>已关闭</translation>
+        <translation>Закрыто</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="349"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="362"/>
         <source>Reason</source>
-        <translation>原因</translation>
+        <translation>Причина</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="352"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
         <source>Fixed</source>
-        <translation>已修复</translation>
+        <translation>Исправлено</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="352"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
         <source>Obsolete</source>
-        <translation>已废弃</translation>
+        <translation>Устарело</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="352"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
         <source>Duplicate</source>
-        <translation>重复的</translation>
+        <translation>Дубликат</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>As Designed</source>
-        <translation>符合设计</translation>
+        <translation>Не ошибка</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Unable To Reproduce</source>
-        <translation>无法重现</translation>
+        <translation>Не репродуцируется</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Test Failed</source>
-        <translation>测试失败</translation>
+        <translation>Тест не окончен</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Severity</source>
         <comment>bug</comment>
-        <translation>严重性</translation>
+        <translation>Серьезность</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="380"/>
         <source>Version</source>
-        <translation>版本</translation>
+        <translation>Версия</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="375"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="388"/>
         <source>Created By Me</source>
         <comment>bug</comment>
-        <translation>我创建的</translation>
+        <translation>Создано мной</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
         <source>Active Bugs</source>
-        <translation>活跃的缺陷</translation>
+        <translation>Активные ошибки</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="389"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="402"/>
         <source>My Active Bugs</source>
-        <translation>我的活跃的缺陷</translation>
+        <translation>Мои активные ошибки</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="410"/>
         <source>Unassigned Bugs</source>
-        <translation>未指派的缺陷</translation>
+        <translation>Не назначенные ошибки</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="405"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="418"/>
         <source>Resolved Bugs</source>
-        <translation>已解决缺陷</translation>
+        <translation>Исправленные ошибки</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="414"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
         <source>Tasks</source>
-        <translation>任务</translation>
+        <translation>Задачи</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="417"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="430"/>
         <source>Assigned To</source>
         <comment>task</comment>
-        <translation>指派给</translation>
+        <translation>Назначено</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="424"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="437"/>
         <source>Status</source>
         <comment>task</comment>
-        <translation>状态</translation>
+        <translation>Статус</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="429"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="469"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="477"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="485"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="482"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="490"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="498"/>
         <source>Active</source>
         <comment>task</comment>
-        <translation>活跃</translation>
+        <translation>Активно</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
-        <source>Closed</source>
-        <comment>task</comment>
-        <translation>已关闭</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="433"/>
-        <source>Priority</source>
-        <comment>task</comment>
-        <translation>优先级</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="443"/>
-        <source>Progress</source>
-        <translation>进度</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="451"/>
-        <source>Due Date</source>
-        <translation>预期日期</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="459"/>
-        <source>Created By Me</source>
-        <comment>task</comment>
-        <translation>我创建的</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="466"/>
-        <source>Active Tasks</source>
-        <translation>活跃的任务</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="473"/>
-        <source>My Active Tasks</source>
-        <translation>我的活跃的任务</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="481"/>
-        <source>Unassigned Tasks</source>
-        <translation>未指派的缺陷</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="489"/>
-        <source>Completed Tasks</source>
-        <translation>完成的任务</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="492"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="505"/>
         <source>Completed</source>
         <comment>task</comment>
-        <translation>已完成</translation>
+        <translation>Завершено</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
+        <source>Closed</source>
+        <comment>task</comment>
+        <translation>Закрыто</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="446"/>
+        <source>Priority</source>
+        <comment>task</comment>
+        <translation>Приоритет</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="456"/>
+        <source>Progress</source>
+        <translation>Прогресс</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="464"/>
+        <source>Due Date</source>
+        <translation>К сроку</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="472"/>
+        <source>Created By Me</source>
+        <comment>task</comment>
+        <translation>Создано мной</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="479"/>
+        <source>Active Tasks</source>
+        <translation>Активные задачи</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="486"/>
+        <source>My Active Tasks</source>
+        <translation>Мои активные задачи</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="494"/>
+        <source>Unassigned Tasks</source>
+        <translation>Неназначенные задачи</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/installer.inc.php" line="502"/>
+        <source>Completed Tasks</source>
+        <translation>Завершенные задачи</translation>
     </message>
 </context>
 <context>
@@ -1645,82 +1756,82 @@
     <message>
         <location filename="../../../admin/setup/update.php" line="50"/>
         <source>Server Update</source>
-        <translation>服务器更新</translation>
+        <translation>Обновление сервера</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.php" line="51"/>
         <source>Update your WebIssues Server</source>
-        <translation>升级你的WebIssues服务器</translation>
+        <translation>Обновить Ваш сервер WebIssues</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.php" line="126"/>
         <source>Updated database to version %1</source>
-        <translation>升级数据库服务器到版本：%1</translation>
+        <translation>База данных обновлена до версии %1</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="6"/>
         <source>The database of this WebIssues Server is already up to date.</source>
-        <translation>此WebIssues的数据库已经是最新的。</translation>
+        <translation>Этот сервер WebIssues уже использует актуальную версию базы данных.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="11"/>
         <source>Update of your WebIssues Server was successfully completed.</source>
-        <translation>WebIssues服务器更新成功。</translation>
+        <translation>Обновление сервера WebIssues завершено успешно.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="13"/>
         <source>Go to the %1 to continue the configuration of this server.</source>
-        <translation>转至%1继续配置服务器。</translation>
+        <translation>Перейти к %1 для продолжения настроек сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="14"/>
         <source>Administration Panel</source>
-        <translation>管理面板</translation>
+        <translation>Панель администрирования</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="19"/>
         <source>Update failed with the following fatal error:</source>
-        <translation>升级因此下列错误而终止：</translation>
+        <translation>Обновление не выполнено из-за следующей фатальной ошибки:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="30"/>
         <source>Log in as administrator in order to update the server.</source>
-        <translation>以管理员登录以升级服务器。</translation>
+        <translation>Войти с учетной записью Администратора для обновления сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="32"/>
         <source>Login:</source>
-        <translation>登录：</translation>
+        <translation>Логин:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="33"/>
         <source>Password:</source>
-        <translation>密码：</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="38"/>
         <source>The database of this WebIssues Server will be updated to version %1.</source>
-        <translation>WebIssues的数据库将被升级到版本 %1。</translation>
+        <translation>База данных этого сервера WebIssues будет обновлена до версии %1.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="50"/>
         <source>&amp;lt; Back</source>
-        <translation>&amp;lt; 上一步</translation>
+        <translation>&amp;lt; Назад</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="53"/>
         <source>Next &amp;gt;</source>
-        <translation>下一步 &amp;gt;</translation>
+        <translation>Вперед &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="56"/>
         <source>Update</source>
-        <translation>升级</translation>
+        <translation>Обновить</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="65"/>
         <source>Update in progress...</source>
-        <translation>正在升级...</translation>
+        <translation>Обновление...</translation>
     </message>
 </context>
 <context>
@@ -1728,22 +1839,22 @@
     <message>
         <location filename="../../../admin/types/addtype.php" line="33"/>
         <source>Add Type</source>
-        <translation>增加类型</translation>
+        <translation>Добавить тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="5"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="8"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -1751,177 +1862,177 @@
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="45"/>
         <source>Issue Types</source>
-        <translation>工作项类型</translation>
+        <translation>Типы задач</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="62"/>
         <source>Modify Attribute</source>
-        <translation>修改属性</translation>
+        <translation>Изменить атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="74"/>
         <source>Add Attribute</source>
-        <translation>添加属性</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="81"/>
-        <source>Allow entering custom values</source>
-        <translation>允许输入自定义数据</translation>
+        <translation>Добавить атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="320"/>
         <source>Date only</source>
-        <translation>仅日期</translation>
+        <translation>Только дата</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="321"/>
         <source>Date and time without time zone conversion</source>
-        <translation>不经时区转换的日期和时间</translation>
+        <translation>Дата и время без конвертации часового пояса</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="322"/>
         <source>Date and time using local time zone</source>
-        <translation>使用当地时区的日期和时间</translation>
+        <translation>Дата и время используя локальный часовой пояс</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="438"/>
         <source>Invalid value</source>
-        <translation>无效值</translation>
+        <translation>Неверное значение</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>您输入的数据有误。</translation>
+        <translation>Некоторые из введенных значений некорректны.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="15"/>
         <source>Create a new attribute in type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>在类型%1中创建一个新的属性。</translation>
+        <translation>Создать новый атрибут типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="17"/>
         <source>Modify attribute &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>修改%1属性。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="126"/>
-        <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Изменить атрибут &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="21"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="25"/>
+        <source>Attribute Type</source>
+        <translation>Тип атрибута</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="29"/>
+        <source>Go</source>
+        <translation>Перейти</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="35"/>
         <location filename="../../../admin/types/attribute.html.php" line="68"/>
         <source>Attribute Details</source>
-        <translation>属性详细</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="65"/>
-        <source>Specify details of &lt;strong&gt;%1&lt;/strong&gt; attribute.</source>
-        <translation>指定属性%1的详细数据。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="75"/>
-        <location filename="../../../admin/types/attribute.html.php" line="91"/>
-        <source>Minimum length:</source>
-        <translation>最小长度：</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="76"/>
-        <location filename="../../../admin/types/attribute.html.php" line="92"/>
-        <source>Maximum length:</source>
-        <translation>最大长度：</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="85"/>
-        <source>Enter one dropdown list item per line.</source>
-        <translation>输入下拉列表项，每行代表一个。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="87"/>
-        <source>Dropdown list items:</source>
-        <translation>下拉列表项：</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="97"/>
-        <source>Decimal places:</source>
-        <translation>小数位：</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="98"/>
-        <source>Minimum value:</source>
-        <translation>最小值：</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="99"/>
-        <source>Maximum value:</source>
-        <translation>最大值：</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="100"/>
-        <source>Strip trailing decimal zeros</source>
-        <translation>去除十进制数尾部的0</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="48"/>
-        <source>Common Settings</source>
-        <translation>一般设置</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="25"/>
-        <source>Attribute Type</source>
-        <translation>属性类型</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/attribute.html.php" line="29"/>
-        <source>Go</source>
-        <translation>确定</translation>
+        <translation>Информация об атрибуте</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="38"/>
         <source>Edit</source>
-        <translation>编辑</translation>
+        <translation>Редактировать</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="48"/>
+        <source>Common Settings</source>
+        <translation>Общие настройки</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="50"/>
         <source>Attribute is required</source>
-        <translation>必须属性</translation>
+        <translation>Требуется атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="54"/>
         <location filename="../../../admin/types/attribute.html.php" line="56"/>
         <source>Default value:</source>
-        <translation>默认值：</translation>
+        <translation>Значение по умолчанию:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="65"/>
+        <source>Specify details of &lt;strong&gt;%1&lt;/strong&gt; attribute.</source>
+        <translation>Укажите информацию об атрибуте &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="73"/>
         <source>Allow entering multiple lines of text</source>
-        <translation>允许输入多行</translation>
+        <translation>Разрешить многострочный ввод текста</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="75"/>
+        <location filename="../../../admin/types/attribute.html.php" line="91"/>
+        <source>Minimum length:</source>
+        <translation>Минимальная длина:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="76"/>
+        <location filename="../../../admin/types/attribute.html.php" line="92"/>
+        <source>Maximum length:</source>
+        <translation>Максимальная длина:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="81"/>
+        <source>Allow entering custom values</source>
+        <translation>Разрешить ввод произвольных значений</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="83"/>
         <location filename="../../../admin/types/attribute.html.php" line="112"/>
         <source>Allow selecting multiple items</source>
-        <translation>允许选择多个选项</translation>
+        <translation>Разрешить выбор нескольких значений</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="85"/>
+        <source>Enter one dropdown list item per line.</source>
+        <translation>Введите один выпадающий список на строку.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="87"/>
+        <source>Dropdown list items:</source>
+        <translation>Элементы выпадающего списка:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="89"/>
         <source>The following settings can only be used when entering custom values is allowed and selecting multiple items is not allowed.</source>
-        <translation>下面的设置仅当自定义值和允许选择多项被启用是生效。</translation>
+        <translation>Следующие настройки могут быть использованы, если разрешен ввод произвольных значений и запрещен выбор нескольких значений.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="97"/>
+        <source>Decimal places:</source>
+        <translation>Десятичный разряд:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="98"/>
+        <source>Minimum value:</source>
+        <translation>Минимальное значение:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="99"/>
+        <source>Maximum value:</source>
+        <translation>Максимальное значение:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="100"/>
+        <source>Strip trailing decimal zeros</source>
+        <translation>Убрать начальные нули</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="110"/>
         <source>Allow selecting only project members</source>
-        <translation>仅允许选择项目成员</translation>
+        <translation>Разрешить выбор только участников проекта</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="125"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/attribute.html.php" line="126"/>
+        <source>Cancel</source>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -1929,27 +2040,27 @@
     <message>
         <location filename="../../../admin/types/deleteattribute.php" line="33"/>
         <source>Delete Attribute</source>
-        <translation>删除属性</translation>
+        <translation>Удалить атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="3"/>
         <source>Are you sure you want to delete attribute &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定您要删除属性&lt;strong&gt;%1&lt;/strong&gt;？</translation>
+        <translation>Вы действительно хотите удалить атрибут &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All current and historical values of this attribute will be deleted.</source>
-        <translation>&lt;strong&gt;警告：&lt;/strong&gt; 所有该属性的历史数据都会被删除。</translation>
+        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Все текущие и прошлые значения этого атрибута будут удалены.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="12"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -1957,123 +2068,123 @@
     <message>
         <location filename="../../../admin/types/deletetype.php" line="33"/>
         <source>Delete Type</source>
-        <translation>删除类型</translation>
+        <translation>Удалить тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="3"/>
         <source>Are you sure you want to delete type &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定您要删除类型&lt;strong&gt;%1&lt;/strong&gt;？</translation>
+        <translation>Вы действительно хотите удалить тип &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues of this type will be permanently deleted.</source>
-        <translation>&lt;strong&gt;警告：&lt;/strong&gt; 所有该类型的目录均会被永久删除。</translation>
+        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Все папки и задачи этого типа будут удалены.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="12"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
     <name>Admin_Types_Helper</name>
     <message>
-        <location filename="../../../admin/types/helper.inc.php" line="131"/>
-        <source>Text</source>
-        <translation>文本</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/helper.inc.php" line="132"/>
-        <source>Dropdown list</source>
-        <translation>下拉列表</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/helper.inc.php" line="134"/>
-        <source>Date &amp; time</source>
-        <translation>日期和时间</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/helper.inc.php" line="133"/>
-        <source>Numeric</source>
-        <translation>数字</translation>
-    </message>
-    <message>
         <location filename="../../../admin/types/helper.inc.php" line="69"/>
         <source>Multiple lines</source>
-        <translation>多行</translation>
+        <translation>Многострочные значения</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="72"/>
         <location filename="../../../admin/types/helper.inc.php" line="88"/>
         <source>Min. length: %1</source>
-        <translation>最小长度：%1</translation>
+        <translation>Мин. длина: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="75"/>
         <location filename="../../../admin/types/helper.inc.php" line="91"/>
         <source>Max. length: %1</source>
-        <translation>最大长度：%1</translation>
+        <translation>Макс. длина: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="80"/>
         <source>Editable</source>
-        <translation>可编辑的</translation>
+        <translation>Редактируемое</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="82"/>
         <location filename="../../../admin/types/helper.inc.php" line="120"/>
         <source>Multiple selection</source>
-        <translation>多选</translation>
+        <translation>Несколько значений</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="85"/>
         <source>Items: %1</source>
-        <translation>选项：%1</translation>
+        <translation>Элементы: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="98"/>
         <source>Decimal places: %1</source>
-        <translation>小数位：%1</translation>
+        <translation>Разряд: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="101"/>
         <source>Min. value: %1</source>
-        <translation>最小值：%1</translation>
+        <translation>Мин. значение: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="104"/>
         <source>Max. value: %1</source>
-        <translation>最大值：%1</translation>
+        <translation>Макс. значение: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="106"/>
         <source>Strip zeros</source>
-        <translation>去除多余的0</translation>
+        <translation>Убрать нули</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="111"/>
         <source>With time</source>
-        <translation>日期</translation>
+        <translation>Со временем</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="113"/>
         <source>Local time zone</source>
-        <translation>本地时区</translation>
+        <translation>Локальный часовой пояс</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="118"/>
         <source>Members only</source>
-        <translation>仅成员</translation>
+        <translation>Только участники</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/helper.inc.php" line="131"/>
+        <source>Text</source>
+        <translation>Текст</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/helper.inc.php" line="132"/>
+        <source>Dropdown list</source>
+        <translation>Выпадающий список</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/helper.inc.php" line="133"/>
+        <source>Numeric</source>
+        <translation>Число</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/helper.inc.php" line="134"/>
+        <source>Date &amp; time</source>
+        <translation>Дата и время</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="135"/>
         <source>User</source>
-        <translation>用户</translation>
+        <translation>Пользователь</translation>
     </message>
 </context>
 <context>
@@ -2081,87 +2192,87 @@
     <message>
         <location filename="../../../admin/types/index.php" line="33"/>
         <source>Issue Types</source>
-        <translation>工作项类型</translation>
+        <translation>Типы задач</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="60"/>
         <source>Yes</source>
-        <translation>是</translation>
+        <translation>Да</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="60"/>
         <source>No</source>
-        <translation>否</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/index.php" line="87"/>
-        <source>Rename Type</source>
-        <translation>重命名类型</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/index.php" line="88"/>
-        <source>Delete Type</source>
-        <translation>删除类型</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/index.php" line="90"/>
-        <source>Rename Attribute</source>
-        <translation>重命名属性</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/index.php" line="91"/>
-        <source>Delete Attribute</source>
-        <translation>删除属性</translation>
+        <translation>Нет</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="85"/>
         <source>Add Type</source>
-        <translation>添加类型</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/index.html.php" line="11"/>
-        <source>Name</source>
-        <translation>名称</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/index.html.php" line="12"/>
-        <source>Type</source>
-        <translation>类型</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/index.html.php" line="13"/>
-        <source>Default Value</source>
-        <translation>默认值</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/index.html.php" line="14"/>
-        <source>Required</source>
-        <translation>必须的</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/index.html.php" line="15"/>
-        <source>Details</source>
-        <translation>详细</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/types/index.html.php" line="52"/>
-        <source>There are no issue types.</source>
-        <translation>没有工作项类型。</translation>
+        <translation>Добавить тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="86"/>
         <source>Add Attribute</source>
-        <translation>添加属性</translation>
+        <translation>Добавить атрибут</translation>
     </message>
     <message>
-        <location filename="../../../admin/types/index.php" line="92"/>
-        <source>View Settings</source>
-        <translation>查看设置</translation>
+        <location filename="../../../admin/types/index.php" line="87"/>
+        <source>Rename Type</source>
+        <translation>Переименовать тип</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/index.php" line="88"/>
+        <source>Delete Type</source>
+        <translation>Удалить тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="89"/>
         <source>Modify Attribute</source>
-        <translation>修改属性</translation>
+        <translation>Изменить атрибут</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/index.php" line="90"/>
+        <source>Rename Attribute</source>
+        <translation>Переименовать атрибут</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/index.php" line="91"/>
+        <source>Delete Attribute</source>
+        <translation>Удалить атрибут</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/index.php" line="92"/>
+        <source>View Settings</source>
+        <translation>Настройки представлений</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/index.html.php" line="11"/>
+        <source>Name</source>
+        <translation>Имя</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/index.html.php" line="12"/>
+        <source>Type</source>
+        <translation>Тип</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/index.html.php" line="13"/>
+        <source>Default Value</source>
+        <translation>Значение по умолчанию</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/index.html.php" line="14"/>
+        <source>Required</source>
+        <translation>Требуется</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/index.html.php" line="15"/>
+        <source>Details</source>
+        <translation>Подробности</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/types/index.html.php" line="52"/>
+        <source>There are no issue types.</source>
+        <translation>Нет типов задач.</translation>
     </message>
 </context>
 <context>
@@ -2169,27 +2280,27 @@
     <message>
         <location filename="../../../admin/types/renameattribute.php" line="33"/>
         <source>Rename Attribute</source>
-        <translation>重命名属性</translation>
+        <translation>Переименовать атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="3"/>
         <source>Enter the new name of attribute &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>输入属性&lt;strong&gt;%1&lt;/strong&gt;的新名称。</translation>
+        <translation>Введите новое имя атрибута &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="7"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -2197,65 +2308,65 @@
     <message>
         <location filename="../../../admin/types/renametype.php" line="33"/>
         <source>Rename Type</source>
-        <translation>重命名类型</translation>
+        <translation>Переименовать тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="3"/>
         <source>Enter the new name of type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>输入类型&lt;strong&gt;%1&lt;/strong&gt;的新名称。</translation>
+        <translation>Введите новое имя типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="7"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
     <name>Admin_Users_Access</name>
     <message>
         <location filename="../../../admin/users/access.php" line="33"/>
-        <source>Change Access</source>
-        <translation>更改访问设置</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/access.php" line="51"/>
-        <source>Regular user</source>
-        <translation>常规用户</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/access.php" line="52"/>
-        <source>System administrator</source>
-        <translation>系统管理员</translation>
+        <source>Global Access</source>
+        <translation>Глобальный доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="50"/>
         <source>Disabled</source>
-        <translation>禁用</translation>
+        <translation>Отключено</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/access.php" line="51"/>
+        <source>Regular user</source>
+        <translation>Обычный пользователь</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/access.php" line="52"/>
+        <source>System administrator</source>
+        <translation>Системный администратор</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="3"/>
-        <source>Set new access level for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>为&lt;strong&gt;%1&lt;/strong&gt;设置新的访问级别。</translation>
+        <source>Change global access for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Установить глобальный доступ для пользователя &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -2263,42 +2374,42 @@
     <message>
         <location filename="../../../admin/users/add.php" line="33"/>
         <source>Add User</source>
-        <translation>增加用户</translation>
+        <translation>Добавить пользователя</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="5"/>
         <source>Name:</source>
-        <translation>姓名：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="6"/>
         <source>Login:</source>
-        <translation>登录：</translation>
+        <translation>Логин:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="7"/>
         <source>Password:</source>
-        <translation>密码：</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="8"/>
         <source>Confirm password:</source>
-        <translation>确认密码：</translation>
+        <translation>Подтвердите пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="9"/>
         <source>User must change password at next logon.</source>
-        <translation>要求用户下次登录必须修改密码。</translation>
+        <translation>Пользователь должен изменить пароль при следующем входе.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="12"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -2306,62 +2417,62 @@
     <message>
         <location filename="../../../admin/users/addprojects.php" line="59"/>
         <source>Add Projects</source>
-        <translation>添加项目</translation>
+        <translation>Добавить проекты</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.php" line="62"/>
-        <source>Regular Member</source>
-        <translation>普通成员</translation>
+        <source>Regular member</source>
+        <translation>Обычный пользователь</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.php" line="63"/>
-        <source>Project Administrator</source>
-        <translation>项目管理员</translation>
+        <source>Project administrator</source>
+        <translation>Администратор проекта</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="6"/>
         <source>Select All</source>
-        <translation>全选</translation>
+        <translation>Выбрать все</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>全取消选择</translation>
+        <translation>Отменить выбор</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="13"/>
         <source>Add user &lt;strong&gt;%1&lt;/strong&gt; to the selected projects.</source>
-        <translation>将用户&lt;strong&gt;%1&lt;/strong&gt;添加到所选项目。</translation>
+        <translation>Добавить пользователя &lt;strong&gt;%1&lt;/strong&gt; к выбранным проектам.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="20"/>
         <source>Projects</source>
-        <translation>项目</translation>
+        <translation>Проекты</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="36"/>
         <source>Access</source>
-        <translation>访问</translation>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="41"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="42"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="47"/>
         <source>There are no more available projects to add.</source>
-        <translation>没有可添加的项目。</translation>
+        <translation>Нет проектов для добавления.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="50"/>
         <source>Close</source>
-        <translation>关闭</translation>
+        <translation>Закрыть</translation>
     </message>
 </context>
 <context>
@@ -2369,185 +2480,205 @@
     <message>
         <location filename="../../../admin/users/index.php" line="33"/>
         <source>User Accounts</source>
-        <translation>用户账户</translation>
+        <translation>Учетные записи пользователей</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="40"/>
         <source>Active</source>
-        <translation>活跃</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.php" line="90"/>
-        <source>Add User</source>
-        <translation>增加用户</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.html.php" line="4"/>
-        <source>All Users</source>
-        <translation>所有用户</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.html.php" line="16"/>
-        <source>Name</source>
-        <translation>姓名</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.html.php" line="17"/>
-        <source>Login</source>
-        <translation>登录</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.html.php" line="19"/>
-        <source>Email</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.html.php" line="21"/>
-        <source>Access Level</source>
-        <translation>访问级别</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.html.php" line="54"/>
-        <source>There are no disabled users.</source>
-        <translation>没有被禁用的用户。</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.php" line="65"/>
-        <source>Regular user</source>
-        <translation>常规用户</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.php" line="66"/>
-        <source>System administrator</source>
-        <translation>系统管理员</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.php" line="91"/>
-        <source>Change Access</source>
-        <translation>更改访问设置</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.php" line="93"/>
-        <source>Rename User</source>
-        <translation>重命名用户</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.php" line="92"/>
-        <source>Change Password</source>
-        <translation>确认密码</translation>
+        <translation>Активно</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="41"/>
         <source>Disabled</source>
         <comment>filter</comment>
-        <translation>禁用</translation>
+        <translation>Отключено</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="64"/>
         <source>Disabled</source>
         <comment>user</comment>
-        <translation>禁用</translation>
+        <translation>Отключено</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="94"/>
-        <source>User Projects</source>
-        <translation>用户项目</translation>
+        <location filename="../../../admin/users/index.php" line="65"/>
+        <source>Regular user</source>
+        <translation>Обычный пользователь</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="95"/>
+        <location filename="../../../admin/users/index.php" line="66"/>
+        <source>System administrator</source>
+        <translation>Системный администратор</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.php" line="83"/>
+        <source>Add User</source>
+        <translation>Добавить пользователя</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.php" line="86"/>
+        <source>Manage Permissions</source>
+        <translation>Управление разрешениями</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.php" line="84"/>
+        <source>Change Password</source>
+        <translation>Изменить пароль</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.php" line="85"/>
+        <source>Rename User</source>
+        <translation>Переименовать пользователя</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.php" line="87"/>
         <source>User Preferences</source>
-        <translation>用户偏好设置</translation>
+        <translation>Пользовательские предпочтения</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.html.php" line="4"/>
+        <source>All Users</source>
+        <translation>Все пользователи</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.html.php" line="16"/>
+        <source>Name</source>
+        <translation>Имя</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.html.php" line="17"/>
+        <source>Login</source>
+        <translation>Логин</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.html.php" line="19"/>
+        <source>Email</source>
+        <translation>E-mail</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.html.php" line="21"/>
+        <source>Access</source>
+        <translation>Доступ</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.html.php" line="54"/>
+        <source>There are no disabled users.</source>
+        <translation>Нет отключенных пользователей.</translation>
     </message>
 </context>
 <context>
     <name>Admin_Users_ProjectAccess</name>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="37"/>
-        <source>Change Access</source>
-        <translation>修改权限</translation>
+        <source>Project Access</source>
+        <translation>Доступ к проекту</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="52"/>
         <source>Regular member</source>
-        <translation>普通成员</translation>
+        <translation>Обычный пользователь</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="53"/>
         <source>Project administrator</source>
-        <translation>项目管理员</translation>
+        <translation>Администратор проекта</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="4"/>
-        <source>Set new access level to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>为用户&lt;strong&gt;%2&lt;/strong&gt;设置项目&lt;strong&gt;%1&lt;/strong&gt;的访问权限。</translation>
+        <source>Change access to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <translation>Изменить доступ к проекту &lt;strong&gt;%1&lt;/strong&gt; для пользователя &lt;strong&gt;%2&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="11"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="12"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
     <name>Admin_Users_Projects</name>
     <message>
         <location filename="../../../admin/users/projects.php" line="37"/>
-        <source>User Projects</source>
-        <translation>用户项目</translation>
+        <source>Manage Permissions</source>
+        <translation>Управление разрешениями</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="58"/>
-        <source>Regular member</source>
-        <translation>普通成员</translation>
+        <source>Disabled</source>
+        <translation>Отключено</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="59"/>
+        <source>Regular user</source>
+        <translation>Обычный пользователь</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="60"/>
+        <source>System administrator</source>
+        <translation>Системный администратор</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="69"/>
+        <source>Regular member</source>
+        <translation>Обычный пользователь</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="70"/>
         <source>Project administrator</source>
-        <translation>项目管理员</translation>
+        <translation>Администратор проекта</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.php" line="78"/>
+        <location filename="../../../admin/users/projects.php" line="87"/>
         <source>Add Projects</source>
-        <translation>添加项目</translation>
+        <translation>Добавить проекты</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.php" line="79"/>
+        <location filename="../../../admin/users/projects.php" line="88"/>
         <source>Change Access</source>
-        <translation>修改权限</translation>
+        <translation>Изменить доступ</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.php" line="80"/>
+        <location filename="../../../admin/users/projects.php" line="89"/>
         <source>Remove Project</source>
-        <translation>删除项目</translation>
+        <translation>Удалить проект</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="28"/>
+        <source>Name</source>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="3"/>
-        <source>Projects of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>用户&lt;strong&gt;%1&lt;/strong&gt;的项目。</translation>
+        <source>Edit permissions of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Редактировать разрешения пользователя &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.html.php" line="15"/>
-        <source>Name</source>
-        <translation>用户名</translation>
+        <location filename="../../../admin/users/projects.html.php" line="8"/>
+        <source>Global Access</source>
+        <translation>Глобальный адрес</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.html.php" line="16"/>
-        <source>Access Level</source>
-        <translation>访问级别</translation>
+        <location filename="../../../admin/users/projects.html.php" line="12"/>
+        <source>Change</source>
+        <translation>Изменить</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.html.php" line="42"/>
+        <location filename="../../../admin/users/projects.html.php" line="29"/>
+        <source>Access</source>
+        <translation>Доступ</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="55"/>
         <source>This user is not a member of any project.</source>
-        <translation>此用户不属于任何项目。</translation>
+        <translation>Этот пользователь не является участником ни одного проекта.</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.html.php" line="47"/>
+        <location filename="../../../admin/users/projects.html.php" line="60"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
 </context>
 <context>
@@ -2555,22 +2686,22 @@
     <message>
         <location filename="../../../admin/users/removeproject.php" line="37"/>
         <source>Remove Project</source>
-        <translation>删除项目</translation>
+        <translation>Удалить проект</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="4"/>
         <source>Do you want to remove user &lt;strong&gt;%1&lt;/strong&gt; from project &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>确实要从项目&lt;strong&gt;%2&lt;/strong&gt;删除用户&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
+        <translation>Удалить пользователя &lt;strong&gt;%1&lt;/strong&gt; из проекта &lt;strong&gt;%2&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="9"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="10"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -2578,27 +2709,27 @@
     <message>
         <location filename="../../../admin/users/rename.php" line="33"/>
         <source>Rename User</source>
-        <translation>重命名用户</translation>
+        <translation>Переименовать пользователя</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="3"/>
         <source>Enter the new name of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>输入用户&lt;strong&gt;%1&lt;/strong&gt;的新名称。</translation>
+        <translation>Введите новое имя пользователя &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="7"/>
         <source>Name:</source>
-        <translation>姓名：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -2606,74 +2737,74 @@
     <message>
         <location filename="../../../admin/views/index.php" line="33"/>
         <source>View Settings</source>
-        <translation>查看设置</translation>
+        <translation>Настройки представлений</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="3"/>
         <source>Edit public view settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>编辑&lt;strong&gt;%1&lt;/strong&gt;的公开显示设置。</translation>
+        <translation>Редактировать настройки публичного представления для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="9"/>
         <source>Order of Attributes</source>
-        <translation>属性顺序</translation>
+        <translation>Порядок атрибутов</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="12"/>
         <location filename="../../../admin/views/index.html.php" line="24"/>
         <location filename="../../../admin/views/index.html.php" line="44"/>
         <source>Modify</source>
-        <translation>修改</translation>
+        <translation>Изменить</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="21"/>
         <source>Default View</source>
-        <translation>默认视图</translation>
+        <translation>Представление по умолчанию</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="29"/>
         <source>Columns:</source>
-        <translation>列：</translation>
+        <translation>Колонки:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="33"/>
         <source>Sort By:</source>
-        <translation>排序：</translation>
+        <translation>Сортировать:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="41"/>
         <source>Initial View</source>
-        <translation type="unfinished"></translation>
+        <translation>Исходное представление</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="59"/>
         <source>Name</source>
-        <translation>名称</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="60"/>
         <source>Columns</source>
-        <translation>列</translation>
+        <translation>Колонки</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="61"/>
         <source>Sort By</source>
-        <translation>排序</translation>
+        <translation>Сортировать</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="62"/>
         <source>Filter</source>
-        <translation>过滤</translation>
+        <translation>Фильтр</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="83"/>
         <source>This type has no public views.</source>
-        <translation>此类型没有公开视图。</translation>
+        <translation>Этот тип не имеет публичных представлений.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="88"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
 </context>
 <context>
@@ -2681,32 +2812,32 @@
     <message>
         <location filename="../../../admin/views/initial.php" line="33"/>
         <source>Initial View</source>
-        <translation type="unfinished"></translation>
+        <translation>Исходное представление</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.php" line="46"/>
         <source>All Issues</source>
-        <translation>所有工作项</translation>
+        <translation>Все задачи</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="3"/>
         <source>Select the initial view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите исходное представление для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="7"/>
         <source>Initial view:</source>
-        <translation type="unfinished"></translation>
+        <translation>Исходное представление:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -2714,42 +2845,42 @@
     <message>
         <location filename="../../../admin/views/order.php" line="33"/>
         <source>Order of Attributes</source>
-        <translation>属性顺序</translation>
+        <translation>Порядок атрибутов</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="3"/>
         <source>Modify the order of attributes for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>编辑类型&lt;strong&gt;%1&lt;/strong&gt;的属性顺序。</translation>
+        <translation>Изменить порядок атрибутов типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="8"/>
         <source>Attributes</source>
-        <translation>属性</translation>
+        <translation>Атрибуты</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="12"/>
         <source>Name</source>
-        <translation>名称</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="13"/>
         <source>Order</source>
-        <translation>顺序</translation>
+        <translation>Порядок</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="24"/>
         <source>Update</source>
-        <translation>更新</translation>
+        <translation>Обновить</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="30"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="31"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -2757,113 +2888,202 @@
     <message>
         <location filename="../../../admin/views/unpublish.php" line="33"/>
         <source>Unpublish View</source>
-        <translation>取消发布视图</translation>
+        <translation>Сделать представление приватным</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="4"/>
         <source>Are you sure you want to convert public view &lt;strong&gt;%1&lt;/strong&gt; to your personal view?</source>
-        <translation>确定将公开视图&lt;strong&gt;%1&lt;/strong&gt;转换为您的私有视图？</translation>
+        <translation>Вы действительно хотите конвертировать публичное представление &lt;strong&gt;%1&lt;/strong&gt; в приватное?</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="6"/>
         <source>View &lt;strong&gt;%1&lt;/strong&gt; cannot be unpublished.</source>
-        <translation>视图&lt;strong&gt;%1&lt;/strong&gt;无法被取消发布。</translation>
+        <translation>Представление &lt;strong&gt;%1&lt;/strong&gt; нельзя сделать приватным.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="12"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="14"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
-    <name>Client_Alerts_Add</name>
+    <name>Client_Alerts_Alert</name>
     <message>
-        <location filename="../../../client/alerts/add.php" line="64"/>
-        <source>Add Alert</source>
-        <translation>添加警告</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/add.php" line="85"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="78"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="89"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="94"/>
         <source>All Issues</source>
-        <translation>添加所有工作项</translation>
+        <translation>Все задачи</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.php" line="90"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="100"/>
         <source>Personal Views</source>
-        <translation>个人视图</translation>
+        <translation>Приватные представления</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.php" line="93"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="103"/>
         <source>Public Views</source>
-        <translation>公共视图</translation>
+        <translation>Публичные представления</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="3"/>
-        <source>Create a new alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>为&lt;strong&gt;%1&lt;/strong&gt;目录创建新的警告。</translation>
+        <location filename="../../../client/alerts/alert.inc.php" line="158"/>
+        <source>Add Public Alert</source>
+        <translation>Добавить публичное оповещение</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="9"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="160"/>
+        <source>Add Personal Alert</source>
+        <translation>Добавить приватное оповещение</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.inc.php" line="163"/>
+        <source>Modify Alert</source>
+        <translation>Изменить оповещение</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.inc.php" line="226"/>
+        <source>No days selected</source>
+        <translation>Дни не выбраны</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.inc.php" line="238"/>
+        <source>No hours selected</source>
+        <translation>Часы не выбраны</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="7"/>
+        <source>Modify public alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Изменить публичное оповещение &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="9"/>
+        <source>Create a new public alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Создать новое публичное оповещение для папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="11"/>
+        <source>Create a new public alert for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Создать новое публичное оповещение для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="15"/>
+        <source>Modify your personal alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Изменить ваше приватное оповещение &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="17"/>
+        <source>Create a new personal alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Создать новое приватное оповещение для папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="19"/>
+        <source>Create a new personal alert for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Создать новое приватное оповещение для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="30"/>
         <source>View:</source>
-        <translation>视图：</translation>
+        <translation>Представление:</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="12"/>
+        <location filename="../../../client/alerts/alert.html.php" line="36"/>
+        <source>Email Type</source>
+        <translation>Тип e-mail</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="38"/>
         <source>Send the following type of emails for this alert:</source>
-        <translation>为此警告发送下列下列邮件类型：</translation>
+        <translation>Отправить следующие типы e-mail сообщений для этого оповещения:</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="17"/>
+        <location filename="../../../client/alerts/alert.html.php" line="42"/>
+        <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
+        <translation>Внимание: Вы не будете получать никаких сообщений если не введете свой электронный адрес в персональных настройках.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="48"/>
+        <source>Summary Schedule</source>
+        <translation>Расписание сводок</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="51"/>
+        <location filename="../../../client/alerts/alert.html.php" line="76"/>
+        <source>Select All</source>
+        <translation>Выбрать все</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="53"/>
+        <location filename="../../../client/alerts/alert.html.php" line="78"/>
+        <source>Unselect All</source>
+        <translation>Отменить выбор</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="55"/>
+        <source>Send summary emails on the following days:</source>
+        <translation>Отправлять сообщения со сводками по следующим дням:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="81"/>
+        <source>Send summary emails at the following hours:</source>
+        <translation>Отправлять сообщения со сводками по следующим часам:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="99"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="18"/>
+        <location filename="../../../client/alerts/alert.html.php" line="100"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="23"/>
+        <location filename="../../../client/alerts/alert.html.php" line="105"/>
         <source>There are no more available views to use.</source>
-        <translation>没有更多视图可用。</translation>
+        <translation>Не доступных представлений.</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="26"/>
+        <location filename="../../../client/alerts/alert.html.php" line="108"/>
         <source>Close</source>
-        <translation>关闭</translation>
+        <translation>Закрыть</translation>
     </message>
 </context>
 <context>
     <name>Client_Alerts_Delete</name>
     <message>
-        <location filename="../../../client/alerts/delete.php" line="37"/>
+        <location filename="../../../client/alerts/delete.php" line="43"/>
         <source>Delete Alert</source>
-        <translation>删除警告</translation>
+        <translation>Удалить оповещение</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/delete.php" line="47"/>
+        <location filename="../../../client/alerts/delete.php" line="56"/>
         <source>All Issues</source>
-        <translation>添加工作项</translation>
+        <translation>Все задачи</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/delete.html.php" line="3"/>
-        <source>Are you sure you want to delete alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定删除警告&lt;strong&gt;%1&lt;/strong&gt;？</translation>
+        <location filename="../../../client/alerts/delete.html.php" line="4"/>
+        <source>Are you sure you want to delete public alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Вы действительно хотите удалить публичное оповещение &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/delete.html.php" line="8"/>
+        <location filename="../../../client/alerts/delete.html.php" line="6"/>
+        <source>Are you sure you want to delete your personal alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Вы действительно хотите удалить свое приватное оповещение &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/delete.html.php" line="12"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/delete.html.php" line="9"/>
+        <location filename="../../../client/alerts/delete.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -2871,407 +3091,409 @@
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="39"/>
         <source>None</source>
-        <translation>无</translation>
+        <translation>Не используется</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="40"/>
         <source>Immediate notifications</source>
-        <translation>即时通知</translation>
+        <translation>Немедленные оповещения</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="41"/>
         <source>Summary of notifications</source>
-        <translation>通知概括</translation>
+        <translation>Сводка оповещений</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="42"/>
         <source>Summary reports</source>
-        <translation>报告概括</translation>
+        <translation>Сводка отчетов</translation>
     </message>
 </context>
 <context>
     <name>Client_Alerts_Index</name>
     <message>
-        <location filename="../../../client/alerts/index.php" line="40"/>
+        <location filename="../../../client/alerts/index.php" line="50"/>
         <source>Manage Alerts</source>
-        <translation>管理警告</translation>
+        <translation>Оповещения</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.php" line="75"/>
+        <location filename="../../../client/alerts/index.php" line="95"/>
         <source>All Issues</source>
-        <translation>所有工作项</translation>
+        <translation>Все задачи</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.php" line="90"/>
+        <location filename="../../../client/alerts/index.php" line="122"/>
         <source>Add Alert</source>
-        <translation>添加警告</translation>
+        <translation>Добавить оповещение</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.php" line="92"/>
+        <location filename="../../../client/alerts/index.php" line="124"/>
+        <source>Add Public Alert</source>
+        <translation>Добавить публичное оповещение</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.php" line="126"/>
         <source>Modify Alert</source>
-        <translation>修改警告</translation>
+        <translation>Изменить оповещение</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.php" line="93"/>
+        <location filename="../../../client/alerts/index.php" line="127"/>
         <source>Delete Alert</source>
-        <translation>删除警告</translation>
+        <translation>Удалить оповещение</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="3"/>
+        <location filename="../../../client/alerts/index.html.php" line="4"/>
         <source>Edit alert settings for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>为&lt;strong&gt;%1&lt;/strong&gt;目录修改警告设置。</translation>
+        <translation>Редактировать настройки оповещений для папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="15"/>
+        <location filename="../../../client/alerts/index.html.php" line="6"/>
+        <source>Edit alert settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Редактировать настройки оповещений для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="19"/>
         <source>Name</source>
-        <translation>名称</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/index.html.php" line="16"/>
-        <source>Total</source>
-        <translation>总数</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/index.html.php" line="17"/>
-        <source>Unread</source>
-        <translation>未阅读</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/index.html.php" line="18"/>
-        <source>Modified</source>
-        <translation>已修改</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="20"/>
+        <source>Total</source>
+        <translation>Всего</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="21"/>
+        <source>Unread</source>
+        <translation>Не прочитано</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="22"/>
+        <source>Modified</source>
+        <translation>Изменено</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="24"/>
         <source>Email Type</source>
-        <translation>邮件类型</translation>
+        <translation>Тип e-mail</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="26"/>
+        <source>Is Public</source>
+        <translation>Публичный</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="56"/>
+        <source>Yes</source>
+        <translation>Да</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="56"/>
+        <source>No</source>
+        <translation>Нет</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="68"/>
         <source>This folder has no alerts.</source>
-        <translation>此目录没有警告。</translation>
+        <translation>Эта папка не имеет оповещений.</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="61"/>
+        <location filename="../../../client/alerts/index.html.php" line="70"/>
+        <source>This type has no alerts.</source>
+        <translation>Этот тип не имеет оповещений.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="76"/>
         <source>OK</source>
-        <translation>确定</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Alerts_Modify</name>
-    <message>
-        <location filename="../../../client/alerts/modify.php" line="44"/>
-        <source>Modify Alert</source>
-        <translation>修改警告</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/modify.php" line="54"/>
-        <source>All Issues</source>
-        <translation>所有工作项</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/modify.html.php" line="3"/>
-        <source>Modify alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>修改警告&lt;strong&gt;%1&lt;/strong&gt;。</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/modify.html.php" line="7"/>
-        <source>Send the following type of emails for this alert:</source>
-        <translation>为此警告发送下列下列邮件类型：</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/modify.html.php" line="11"/>
-        <source>OK</source>
-        <translation>确定</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/modify.html.php" line="12"/>
-        <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Готово</translation>
     </message>
 </context>
 <context>
     <name>Client_Index</name>
     <message>
-        <location filename="../../../client/index.php" line="47"/>
+        <location filename="../../../client/index.php" line="48"/>
         <source>Web Client</source>
-        <translation>Web客户端</translation>
+        <translation>Веб клиент</translation>
     </message>
 </context>
 <context>
     <name>Client_IssueDetails</name>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="94"/>
-        <source>Only Comments</source>
-        <translation>仅评论</translation>
-    </message>
-    <message>
         <location filename="../../../client/issuedetails.inc.php" line="95"/>
-        <source>Only Attachments</source>
-        <translation>仅附件</translation>
+        <source>All History</source>
+        <translation>Вся история</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="96"/>
+        <source>Only Comments</source>
+        <translation>Только комментарии</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="97"/>
+        <source>Only Attachments</source>
+        <translation>Только вложения</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="98"/>
         <source>Comments &amp; Attachments</source>
-        <translation>评论和附件</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.inc.php" line="163"/>
-        <source>Edit Attributes</source>
-        <translation>编辑属性</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.inc.php" line="164"/>
-        <source>Add Comment</source>
-        <translation>添加评论</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.inc.php" line="165"/>
-        <source>Add Attachment</source>
-        <translation>添加附件</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.inc.php" line="167"/>
-        <source>Add Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Комментарии и вложения</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="168"/>
-        <source>Clone Issue</source>
-        <translation>关闭工作项</translation>
+        <source>Edit Attributes</source>
+        <translation>Редактировать атрибуты</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="169"/>
+        <source>Add Comment</source>
+        <translation>Добавить комментарий</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="170"/>
+        <source>Add Attachment</source>
+        <translation>Добавить вложение</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="172"/>
+        <source>Add Description</source>
+        <translation>Добавить описание</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="173"/>
+        <source>Clone Issue</source>
+        <translation>Клонировать</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="175"/>
         <source>Move Issue</source>
-        <translation>移动工作项</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.inc.php" line="171"/>
-        <source>Delete Issue</source>
-        <translation>删除工作项</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.inc.php" line="174"/>
-        <source>Mark As Unread</source>
-        <translation>标记为未读</translation>
+        <translation>Переместить</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="176"/>
-        <source>Mark As Read</source>
-        <translation>标记为已读</translation>
+        <source>Delete Issue</source>
+        <translation>Удалить</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="179"/>
-        <source>Unsubscribe</source>
-        <translation type="unfinished"></translation>
+        <source>Mark As Unread</source>
+        <translation>Пометить как непрочитанное</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="181"/>
+        <source>Mark As Read</source>
+        <translation>Пометить как прочитанное</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="184"/>
+        <source>Unsubscribe</source>
+        <translation>Отписаться</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="186"/>
         <source>Subscribe</source>
-        <translation type="unfinished"></translation>
+        <translation>Подписаться</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="17"/>
         <source>ID:</source>
-        <translation>ID：</translation>
+        <translation>Идентификатор:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="21"/>
         <source>Type:</source>
-        <translation>类型：</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.inc.php" line="93"/>
-        <source>All History</source>
-        <translation>所有历史</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.html.php" line="63"/>
-        <location filename="../../../client/issuedetails.html.php" line="104"/>
-        <location filename="../../../client/issuedetails.html.php" line="121"/>
-        <source>Edit</source>
-        <translation>编辑</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.html.php" line="64"/>
-        <location filename="../../../client/issuedetails.html.php" line="106"/>
-        <location filename="../../../client/issuedetails.html.php" line="123"/>
-        <source>Delete</source>
-        <translation>删除</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.html.php" line="192"/>
-        <location filename="../../../client/issuedetails.html.php" line="193"/>
-        <source>Unknown Folder</source>
-        <translation>未知目录</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.html.php" line="215"/>
-        <source>There are no comments.</source>
-        <translation>没有评论。</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.html.php" line="217"/>
-        <source>There are no attachments.</source>
-        <translation>没有附件。</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.html.php" line="219"/>
-        <source>There are no comments or attachments.</source>
-        <translation>没有评论和附件。</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.html.php" line="83"/>
-        <source>Issue History</source>
-        <translation>工作项历史</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.html.php" line="147"/>
-        <location filename="../../../client/issuedetails.html.php" line="150"/>
-        <source>Name</source>
-        <translation>名称</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.html.php" line="153"/>
-        <location filename="../../../client/issuedetails.html.php" line="154"/>
-        <source>empty</source>
-        <translation>空</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.html.php" line="100"/>
-        <source>Comment %1</source>
-        <translation>评论%1</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="25"/>
         <source>Location:</source>
-        <translation type="unfinished"></translation>
+        <translation>Расположение:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="29"/>
         <source>Created:</source>
-        <translation type="unfinished"></translation>
+        <translation>Создано:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="33"/>
         <source>Last Modified:</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменено:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="85"/>
+        <source>Issue History</source>
+        <translation>История задачи</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="60"/>
-        <location filename="../../../client/issuedetails.html.php" line="98"/>
-        <location filename="../../../client/issuedetails.html.php" line="116"/>
+        <location filename="../../../client/issuedetails.html.php" line="100"/>
+        <location filename="../../../client/issuedetails.html.php" line="120"/>
         <source>Last Edited:</source>
-        <translation type="unfinished"></translation>
+        <translation>Последняя редакция:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="61"/>
-        <location filename="../../../client/issuedetails.html.php" line="101"/>
+        <location filename="../../../client/issuedetails.html.php" line="102"/>
+        <source>Comment %1</source>
+        <translation>Комментарий %1</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="65"/>
+        <location filename="../../../client/issuedetails.html.php" line="108"/>
+        <location filename="../../../client/issuedetails.html.php" line="125"/>
+        <source>Edit</source>
+        <translation>Редактировать</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="62"/>
+        <location filename="../../../client/issuedetails.html.php" line="104"/>
         <source>Reply</source>
-        <translation type="unfinished"></translation>
+        <translation>Ответить</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="69"/>
+        <location filename="../../../client/issuedetails.html.php" line="66"/>
+        <location filename="../../../client/issuedetails.html.php" line="110"/>
+        <location filename="../../../client/issuedetails.html.php" line="127"/>
+        <source>Delete</source>
+        <translation>Удалить</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="71"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="118"/>
+        <location filename="../../../client/issuedetails.html.php" line="122"/>
         <source>Attachment %1</source>
-        <translation>附件%1</translation>
+        <translation>Вложение %1</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="194"/>
+        <location filename="../../../client/issuedetails.html.php" line="151"/>
+        <location filename="../../../client/issuedetails.html.php" line="154"/>
+        <source>Name</source>
+        <translation>Имя</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="157"/>
+        <location filename="../../../client/issuedetails.html.php" line="158"/>
+        <source>empty</source>
+        <translation>пусто</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="196"/>
+        <location filename="../../../client/issuedetails.html.php" line="197"/>
+        <source>Unknown Folder</source>
+        <translation>Неизвестная папка</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="198"/>
         <source>Issue moved from %1 to %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Задача перемещена из %1 в %2</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="219"/>
+        <source>There are no comments.</source>
+        <translation>Нет комментариев.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="221"/>
+        <source>There are no attachments.</source>
+        <translation>Нет вложений.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="223"/>
+        <source>There are no comments or attachments.</source>
+        <translation>Нет комментариев или вложений.</translation>
     </message>
 </context>
 <context>
     <name>Client_IssuesList</name>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="74"/>
+        <location filename="../../../client/issueslist.inc.php" line="86"/>
         <source>All Issues</source>
-        <translation>所有工作项</translation>
+        <translation>Все задачи</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="76"/>
+        <location filename="../../../client/issueslist.inc.php" line="88"/>
         <source>Personal Views</source>
-        <translation>用户工作项</translation>
+        <translation>Приватные представления</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="78"/>
+        <location filename="../../../client/issueslist.inc.php" line="90"/>
         <source>Public Views</source>
-        <translation>公开视图</translation>
+        <translation>Публичные представления</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="210"/>
+        <location filename="../../../client/issueslist.inc.php" line="231"/>
         <source>Add Issue</source>
-        <translation>添加工作项</translation>
+        <translation>Добавить задачу</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="211"/>
+        <location filename="../../../client/issueslist.inc.php" line="232"/>
         <source>Mark All As Read</source>
-        <translation>标记所有为已读</translation>
+        <translation>Пометить все как прочитанные</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="212"/>
+        <location filename="../../../client/issueslist.inc.php" line="233"/>
         <source>Mark All As Unread</source>
-        <translation>标记所有为未读</translation>
+        <translation>Пометить все как непрочитанные</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="214"/>
-        <source>Manage Alerts</source>
-        <translation>管理警告</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issueslist.inc.php" line="219"/>
-        <source>Add View</source>
-        <translation>管理视图</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issueslist.inc.php" line="221"/>
-        <source>Modify View</source>
-        <translation>修改视图</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issueslist.inc.php" line="223"/>
-        <source>Clone View</source>
-        <translation>复制视图</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issueslist.inc.php" line="213"/>
+        <location filename="../../../client/issueslist.inc.php" line="234"/>
         <source>Manage Views</source>
-        <translation>管理视图</translation>
+        <translation>Представления</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.inc.php" line="235"/>
+        <source>Manage Alerts</source>
+        <translation>Оповещения</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.inc.php" line="242"/>
+        <source>Add View</source>
+        <translation>Добавить представление</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.inc.php" line="244"/>
+        <source>Modify View</source>
+        <translation>Изменить представление</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.inc.php" line="246"/>
+        <source>Clone View</source>
+        <translation>Клонировать представление</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="11"/>
         <source>View:</source>
-        <translation>视图：</translation>
+        <translation>Представление:</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="12"/>
         <source>Go</source>
-        <translation>执行</translation>
+        <translation>Перейти</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="21"/>
         <source>Search</source>
-        <translation>搜索</translation>
+        <translation>Искать</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="79"/>
+        <location filename="../../../client/issueslist.html.php" line="81"/>
         <source>There are no issues matching the search criteria.</source>
-        <translation>没有相符的工作项。</translation>
+        <translation>Не найдены задачи, соответствующие критериям поиска.</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="83"/>
+        <location filename="../../../client/issueslist.html.php" line="85"/>
         <source>There are no issues matching the selected view.</source>
-        <translation>没有相符的视图。</translation>
+        <translation>Нет задач, соответствующих критериям выбранного представления.</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="87"/>
+        <location filename="../../../client/issueslist.html.php" line="89"/>
+        <source>There are no issues of this type.</source>
+        <translation>Для этого типа нет задач.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.html.php" line="93"/>
         <source>There are no issues in this folder.</source>
-        <translation>此目录没有条目。</translation>
+        <translation>В этой папке нет задач.</translation>
     </message>
 </context>
 <context>
@@ -3279,80 +3501,52 @@
     <message>
         <location filename="../../../client/issues/addattachment.php" line="40"/>
         <source>Add Attachment</source>
-        <translation>添加附件</translation>
+        <translation>Добавить вложение</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="74"/>
         <source>No file uploaded</source>
-        <translation>没有文件被上传</translation>
+        <translation>Файл не отправлен</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="76"/>
         <source>An error occurred while uploading the file</source>
-        <translation>上传过程中发生了一个错误</translation>
+        <translation>При отправке файла произошла ошибка</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="80"/>
         <source>File too large</source>
-        <translation>文件太大</translation>
+        <translation>Файл слишком большой</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="88"/>
         <source>Invalid file name</source>
-        <translation>文件名无效</translation>
+        <translation>Неверное имя файла</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="3"/>
         <source>Add an attachment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>给工作项&lt;strong&gt;%1&lt;/strong&gt;添加一个附件。</translation>
+        <translation>Добавить вложение к задаче &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="7"/>
         <source>File:</source>
-        <translation>文件：</translation>
+        <translation>Файл:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="9"/>
         <source>Description:</source>
-        <translation>描述：</translation>
+        <translation>Описание:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="12"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>取消</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_CloneIssue</name>
-    <message>
-        <location filename="../../../client/issues/cloneissue.php" line="37"/>
-        <source>Clone Issue</source>
-        <translation>复制工作项</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/cloneissue.html.php" line="3"/>
-        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; to a folder of the same type.</source>
-        <translation>以相同名称复制工作项&lt;strong&gt;%1&lt;/strong&gt;到一个目录。</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/cloneissue.html.php" line="7"/>
-        <source>Folder:</source>
-        <translation>目录：</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/cloneissue.html.php" line="10"/>
-        <source>OK</source>
-        <translation>确定</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/cloneissue.html.php" line="11"/>
-        <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -3360,62 +3554,62 @@
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="49"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="55"/>
         <source>Comment %1</source>
-        <translation type="unfinished">评论%1</translation>
+        <translation>Комментарий %1</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="67"/>
         <source>Add Comment</source>
-        <translation>添加评论</translation>
+        <translation>Добавить комментарий</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="84"/>
         <source>Edit Comment</source>
-        <translation>编辑评论</translation>
+        <translation>Редактировать комментарий</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="95"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Простой текст</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="96"/>
         <source>Text with Markup</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст с разметкой</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="4"/>
         <source>Add comment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>为工作项&lt;strong&gt;%1&lt;/strong&gt;添加评论。</translation>
+        <translation>Добавить комментарий к задаче &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="6"/>
         <source>Edit comment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>编辑评论&lt;strong&gt;%1&lt;/strong&gt;。</translation>
+        <translation>Редактировать комментарий &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="11"/>
         <source>Comment:</source>
-        <translation>评论：</translation>
+        <translation>Комментарий:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="15"/>
         <source>Text format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат текста:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="18"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="19"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -3423,22 +3617,22 @@
     <message>
         <location filename="../../../client/issues/deleteattachment.php" line="38"/>
         <source>Delete Attachment</source>
-        <translation>删除附件</translation>
+        <translation>Удалить вложение</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteattachment.html.php" line="3"/>
         <source>Are you sure you want to delete attachment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定要删除附件&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
+        <translation>Вы действительно хотите удалить вложение &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteattachment.html.php" line="8"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteattachment.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -3446,22 +3640,22 @@
     <message>
         <location filename="../../../client/issues/deletecomment.php" line="40"/>
         <source>Delete Comment</source>
-        <translation>删除附件</translation>
+        <translation>Удалить комментарий</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletecomment.html.php" line="3"/>
         <source>Are you sure you want to delete comment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定要删除评论&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
+        <translation>Вы действительно хотите удалить комментарий &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletecomment.html.php" line="8"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletecomment.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -3469,22 +3663,22 @@
     <message>
         <location filename="../../../client/issues/deletedescription.php" line="41"/>
         <source>Delete Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить описание</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletedescription.html.php" line="3"/>
         <source>Are you sure you want to delete description for issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы действительно хотите удалить описание задачи &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletedescription.html.php" line="8"/>
         <source>OK</source>
-        <translation type="unfinished">确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletedescription.html.php" line="9"/>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -3492,27 +3686,27 @@
     <message>
         <location filename="../../../client/issues/deleteissue.php" line="37"/>
         <source>Delete Issue</source>
-        <translation>删除工作项</translation>
+        <translation>Удалить</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="3"/>
         <source>Are you sure you want to delete issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定您要删除工作项&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
+        <translation>Вы действительно хотите удалить задачу &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="5"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; The entire issue history will be permanently deleted.</source>
-        <translation>&lt;strong&gt;警告：&lt;/strong&gt; 整个工作项会被永久删除。</translation>
+        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Вся история задачи будет удалена.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -3520,52 +3714,52 @@
     <message>
         <location filename="../../../client/issues/description.inc.php" line="53"/>
         <source>Add Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить описание</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.inc.php" line="64"/>
         <source>Edit Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать описание</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.inc.php" line="75"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Простой текст</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.inc.php" line="76"/>
         <source>Text with Markup</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст с разметкой</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="4"/>
         <source>Add description to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить описание к задаче &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="6"/>
         <source>Edit description of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать описание задачи &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="11"/>
         <source>Description:</source>
-        <translation type="unfinished">描述：</translation>
+        <translation>Описание:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="15"/>
         <source>Text format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат текста:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="18"/>
         <source>OK</source>
-        <translation type="unfinished">确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="19"/>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -3573,197 +3767,232 @@
     <message>
         <location filename="../../../client/issues/editattachment.php" line="40"/>
         <source>Edit Attachment</source>
-        <translation>编辑附件</translation>
+        <translation>Редактировать вложение</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.php" line="59"/>
         <source>Invalid file name</source>
-        <translation>无效的文件名</translation>
+        <translation>Неверное имя файла</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="3"/>
         <source>Edit attachment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>编辑附件&lt;strong&gt;%1&lt;/strong&gt;。</translation>
+        <translation>Редактировать вложение &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="7"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="9"/>
         <source>Description:</source>
-        <translation>描述：</translation>
+        <translation>Описание:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="12"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
     <name>Client_Issues_Issue</name>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="50"/>
+        <location filename="../../../client/issues/issue.inc.php" line="54"/>
         <source>Edit Attributes</source>
-        <translation>编辑属性</translation>
+        <translation>Редактировать атрибуты</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="74"/>
+        <location filename="../../../client/issues/issue.inc.php" line="106"/>
         <source>Clone Issue</source>
-        <translation>复制工作项</translation>
+        <translation>Клонировать</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="83"/>
-        <source>Add Issue</source>
-        <translation>添加工作项</translation>
+        <location filename="../../../client/issues/issue.inc.php" line="146"/>
+        <source>Please Select</source>
+        <translation>Пожалуйста выберите</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="116"/>
+        <location filename="../../../client/issues/issue.inc.php" line="167"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Простой текст</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="117"/>
+        <location filename="../../../client/issues/issue.inc.php" line="168"/>
         <source>Text with Markup</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст с разметкой</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.inc.php" line="331"/>
+        <source>No folder selected.</source>
+        <translation>Не выбрана папка.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.inc.php" line="78"/>
+        <source>Add Issue</source>
+        <translation>Добавить задачу</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>您输入的数据有误。</translation>
+        <translation>Некоторые из введенных значений некорректны.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="10"/>
-        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in folder &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>复制工作项&lt;strong&gt;%1&lt;/strong&gt;到目录&lt;strong&gt;%2&lt;/strong&gt;作为一个新工作项。</translation>
+        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in the selected folder.</source>
+        <translation>Клонировать задачу &lt;strong&gt;%1&lt;/strong&gt; как новую в указанной папке.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="12"/>
         <source>Create a new issue in folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>在目录&lt;strong&gt;%1&lt;/strong&gt;创建一个新工作项。</translation>
+        <translation>Создать новую задачу в папке &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="14"/>
         <source>Edit attributes of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>编辑工作项&lt;strong&gt;%1&lt;/strong&gt;的属性。</translation>
+        <translation>Редактировать атрибуты задачи &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="21"/>
+        <location filename="../../../client/issues/issue.html.php" line="16"/>
+        <source>Create a new issue in the selected folder.</source>
+        <translation>Создать новую задачу в выбранной папке.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="23"/>
         <source>Name:</source>
-        <translation>姓名：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="25"/>
+        <location filename="../../../client/issues/issue.html.php" line="27"/>
+        <source>Folder:</source>
+        <translation>Папка:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="33"/>
         <source>Attributes</source>
-        <translation>属性</translation>
+        <translation>Атрибуты</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="29"/>
+        <location filename="../../../client/issues/issue.html.php" line="37"/>
         <source>%1:</source>
-        <translation>%1：</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="43"/>
-        <source>Description:</source>
-        <translation type="unfinished">描述：</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="47"/>
-        <source>Text format:</source>
-        <translation type="unfinished"></translation>
+        <translation>%1:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="51"/>
+        <source>Description:</source>
+        <translation>Описание:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="55"/>
+        <source>Text format:</source>
+        <translation>Формат текста:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="59"/>
         <source>OK</source>
-        <translation>确定</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="52"/>
-        <source>Cancel</source>
-        <translation>取消</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="57"/>
-        <source>There are no available project members to assign to the issue.</source>
-        <translation>没有为该工作项指派项目成员。</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="60"/>
+        <source>Cancel</source>
+        <translation>Отмена</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="66"/>
+        <source>There are no available folders of this type.</source>
+        <translation>Нет доступных папок этого типа.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="68"/>
+        <source>There are no available project members to assign to the issue.</source>
+        <translation>Нет участников проекта, которым можно было назначить эту задачу.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="72"/>
         <source>Close</source>
-        <translation>关闭</translation>
+        <translation>Закрыть</translation>
     </message>
 </context>
 <context>
     <name>Client_Issues_MarkAll</name>
     <message>
-        <location filename="../../../client/issues/markall.php" line="40"/>
+        <location filename="../../../client/issues/markall.php" line="50"/>
         <source>Mark All As Read</source>
-        <translation>标记所有为已读</translation>
+        <translation>Пометить все как прочитанные</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/markall.php" line="42"/>
+        <location filename="../../../client/issues/markall.php" line="52"/>
         <source>Mark All As Unread</source>
-        <translation>标记所有为未读</translation>
+        <translation>Пометить все как непрочитанные</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/markall.html.php" line="4"/>
+        <location filename="../../../client/issues/markall.html.php" line="5"/>
         <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>你确实要将目录&lt;strong&gt;%1&lt;/strong&gt;中的工作项标记为已读？</translation>
+        <translation>Вы действительно хотите пометить все задачи в папке &lt;strong&gt;%1&lt;/strong&gt; как прочитанные?</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/markall.html.php" line="6"/>
+        <location filename="../../../client/issues/markall.html.php" line="7"/>
         <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>你确实要将目录&lt;strong&gt;%1&lt;/strong&gt;中的工作项标记为未读？</translation>
+        <translation>Вы действительно хотите пометить все задачи в папке &lt;strong&gt;%1&lt;/strong&gt; как непрочитанные?</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/markall.html.php" line="12"/>
-        <source>OK</source>
-        <translation>确定</translation>
+        <location filename="../../../client/issues/markall.html.php" line="11"/>
+        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
+        <translation>Вы действительно хотите пометить все задачи типа &lt;strong&gt;%1&lt;/strong&gt; как прочитанные?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="13"/>
+        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
+        <translation>Вы действительно хотите пометить все задачи типа &lt;strong&gt;%1&lt;/strong&gt; как непрочитанные?</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/markall.html.php" line="20"/>
+        <source>OK</source>
+        <translation>Готово</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/markall.html.php" line="21"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
     <name>Client_Issues_MoveIssue</name>
     <message>
-        <location filename="../../../client/issues/moveissue.php" line="66"/>
+        <location filename="../../../client/issues/moveissue.php" line="69"/>
         <source>Move Issue</source>
-        <translation>移动工作项</translation>
+        <translation>Переместить</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="3"/>
         <source>Move issue &lt;strong&gt;%1&lt;/strong&gt; to another folder of the same type.</source>
-        <translation>移动工作项&lt;strong&gt;%1&lt;/strong&gt;到另一个相同类型的目录。</translation>
+        <translation>Клонировать задачу &lt;strong&gt;%1&lt;/strong&gt; в другую папку с тем же типом.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="9"/>
         <source>Folder:</source>
-        <translation>目录：</translation>
+        <translation>Папка:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="12"/>
         <location filename="../../../client/issues/moveissue.html.php" line="21"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="18"/>
         <source>There are no available destination folders.</source>
-        <translation>没有可用的目标目录。</translation>
+        <translation>Нет доступных папок назначения.</translation>
     </message>
 </context>
 <context>
@@ -3771,12 +4000,12 @@
     <message>
         <location filename="../../../client/issues/preview.php" line="53"/>
         <source>Error: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка: %1.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/preview.php" line="55"/>
         <source>An unexpected error occured while processing the request.</source>
-        <translation type="unfinished">处理请求时发生了一个意外错误。</translation>
+        <translation>При обработке запроса возникла непредвиденная ошибка.</translation>
     </message>
 </context>
 <context>
@@ -3784,27 +4013,32 @@
     <message>
         <location filename="../../../client/issues/subscribe.php" line="37"/>
         <source>Subscribe To Issue</source>
-        <translation type="unfinished"></translation>
+        <translation>Подписаться на задачу</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="3"/>
         <source>You are about to subscribe to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы будете подписаны на задачу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="5"/>
         <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы будете получать электронные оповещения когда кто-то редактирует эту задачу, добавляет комментарий или вложение.</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="10"/>
+        <location filename="../../../client/issues/subscribe.html.php" line="8"/>
+        <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
+        <translation>Внимание: Вы не будете получать никаких сообщений если не введете свой электронный адрес в персональных настройках.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/subscribe.html.php" line="14"/>
         <source>OK</source>
-        <translation type="unfinished">确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="11"/>
+        <location filename="../../../client/issues/subscribe.html.php" line="15"/>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -3812,27 +4046,27 @@
     <message>
         <location filename="../../../client/issues/unsubscribe.php" line="37"/>
         <source>Unsubscribe From Issue</source>
-        <translation type="unfinished"></translation>
+        <translation>Отписаться от задачи</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="3"/>
         <source>You are about to unsubscribe from issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы будете отписаны от задачи &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="5"/>
         <source>You will no longer receive email notifications for this issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы больше не будете получать электронных оповещений об этой задаче.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="10"/>
         <source>OK</source>
-        <translation type="unfinished">确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="11"/>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -3840,88 +4074,93 @@
     <message>
         <location filename="../../../client/project.inc.php" line="59"/>
         <source>Add Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить описание</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="12"/>
         <source>Last Edited:</source>
-        <translation type="unfinished"></translation>
+        <translation>Последняя редакция:</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="14"/>
         <source>Edit</source>
-        <translation type="unfinished">编辑</translation>
+        <translation>Редактировать</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="15"/>
         <source>Delete</source>
-        <translation type="unfinished">删除</translation>
+        <translation>Удалить</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="20"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание</translation>
     </message>
 </context>
 <context>
     <name>Client_ProjectsTree</name>
     <message>
+        <location filename="../../../client/projectstree.inc.php" line="100"/>
+        <source>Manage Projects</source>
+        <translation>Управление проектами</translation>
+    </message>
+    <message>
         <location filename="../../../client/projectstree.html.php" line="7"/>
         <source>Projects</source>
-        <translation>项目</translation>
+        <translation>Проекты</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="13"/>
         <source>Name</source>
-        <translation>名称</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="14"/>
         <source>Type</source>
-        <translation>类型</translation>
+        <translation>Тип</translation>
     </message>
     <message>
-        <location filename="../../../client/projectstree.html.php" line="53"/>
+        <location filename="../../../client/projectstree.html.php" line="23"/>
+        <source>All Projects</source>
+        <translation>Все проекты</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projectstree.html.php" line="79"/>
         <source>There are no projects.</source>
-        <translation>没有项目。</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projectstree.inc.php" line="87"/>
-        <source>Manage Projects</source>
-        <translation>管理项目</translation>
+        <translation>Нет проектов.</translation>
     </message>
 </context>
 <context>
     <name>Client_Projects_Access</name>
     <message>
         <location filename="../../../client/projects/access.php" line="37"/>
-        <source>Change Access</source>
-        <translation>修改权限</translation>
+        <source>User Access</source>
+        <translation>Доступ пользователя</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.php" line="56"/>
         <source>Regular member</source>
-        <translation>普通成员</translation>
+        <translation>Обычный пользователь</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.php" line="57"/>
         <source>Project administrator</source>
-        <translation>项目管理员</translation>
+        <translation>Администратор проекта</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="4"/>
-        <source>Set new access level to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>为用户&lt;strong&gt;%2&lt;/strong&gt;设置项目&lt;strong&gt;%1&lt;/strong&gt;的访问权限。</translation>
+        <source>Change access to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <translation>Изменить доступ к проекту &lt;strong&gt;%1&lt;/strong&gt; для пользователя &lt;strong&gt;%2&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="11"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="12"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -3929,42 +4168,42 @@
     <message>
         <location filename="../../../client/projects/addfolder.php" line="57"/>
         <source>Add Folder</source>
-        <translation>添加目录</translation>
+        <translation>Добавить папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="3"/>
         <source>Create a new folder in project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>在文项目&lt;strong&gt;%1&lt;/strong&gt;中创建一个新目录。</translation>
+        <translation>Создать новую папку в проекте &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="9"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="11"/>
         <source>Type:</source>
-        <translation>类型：</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="14"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="20"/>
         <source>There are no available issue types to use.</source>
-        <translation>没有可用的工作项类型。</translation>
+        <translation>Не доступных типов задач.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="23"/>
         <source>Close</source>
-        <translation>关闭</translation>
+        <translation>Закрыть</translation>
     </message>
 </context>
 <context>
@@ -3972,62 +4211,62 @@
     <message>
         <location filename="../../../client/projects/addmembers.php" line="59"/>
         <source>Add Members</source>
-        <translation>添加成员</translation>
+        <translation>Добавить участников</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.php" line="62"/>
-        <source>Regular Member</source>
-        <translation>普通成员</translation>
+        <source>Regular member</source>
+        <translation>Обычный пользователь</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.php" line="63"/>
-        <source>Project Administrator</source>
-        <translation>项目管理员</translation>
+        <source>Project administrator</source>
+        <translation>Администратор проекта</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="6"/>
         <source>Select All</source>
-        <translation>全选</translation>
+        <translation>Выбрать все</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>全取消选择</translation>
+        <translation>Отменить выбор</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="13"/>
         <source>Add new members to project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>添加一个新成员到项目&lt;strong&gt;%1&lt;/strong&gt;。</translation>
+        <translation>Добавить участника проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="20"/>
         <source>Users</source>
-        <translation>用户</translation>
+        <translation>Пользователи</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="36"/>
         <source>Access</source>
-        <translation>访问</translation>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="41"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="42"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="47"/>
         <source>There are no more available users to add.</source>
-        <translation>没有更多的用户可以添加。</translation>
+        <translation>Не доступных для добавления пользователей.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="50"/>
         <source>Close</source>
-        <translation>关闭</translation>
+        <translation>Закрыть</translation>
     </message>
 </context>
 <context>
@@ -4035,42 +4274,42 @@
     <message>
         <location filename="../../../client/projects/addproject.php" line="42"/>
         <source>Add Project</source>
-        <translation>添加项目</translation>
+        <translation>Добавить проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.php" line="48"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Простой текст</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.php" line="49"/>
         <source>Text with Markup</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст с разметкой</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="5"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="7"/>
         <source>Description:</source>
-        <translation type="unfinished">描述：</translation>
+        <translation>Описание:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="11"/>
         <source>Text format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат текста:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="14"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4078,22 +4317,22 @@
     <message>
         <location filename="../../../client/projects/deletedescription.php" line="41"/>
         <source>Delete Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить описание</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="3"/>
         <source>Are you sure you want to delete description for project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы действительно хотите удалить описание проекта &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="8"/>
         <source>OK</source>
-        <translation type="unfinished">确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="9"/>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4101,27 +4340,27 @@
     <message>
         <location filename="../../../client/projects/deletefolder.php" line="37"/>
         <source>Delete Folder</source>
-        <translation>删除目录</translation>
+        <translation>Удалить папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="3"/>
         <source>Are you sure you want to delete folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定您要删除目录&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
+        <translation>Вы действительно хотите удалить папку &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All issues in this folder will be permanently deleted.</source>
-        <translation>&lt;strong&gt;警告：&lt;/strong&gt; 所有该目录下的工作项均会被永久删除。</translation>
+        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Все задачи будут удалены.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="12"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4129,27 +4368,27 @@
     <message>
         <location filename="../../../client/projects/deleteproject.php" line="40"/>
         <source>Delete Project</source>
-        <translation>删除项目</translation>
+        <translation>Удалить проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="3"/>
         <source>Are you sure you want to delete project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定要删除项目&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
+        <translation>Вы действительно хотите удалить проект &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues in this project will be permanently deleted.</source>
-        <translation>&lt;strong&gt;警告：&lt;/strong&gt;所有该项目里的目录和工作项均会被永久删除。</translation>
+        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Все папки и задачи этого проекта будут удалены.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="12"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4157,52 +4396,52 @@
     <message>
         <location filename="../../../client/projects/description.inc.php" line="53"/>
         <source>Add Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить описание</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="64"/>
         <source>Edit Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать описание</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="75"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Простой текст</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="76"/>
         <source>Text with Markup</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст с разметкой</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="4"/>
         <source>Add description to project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить описание к проекту &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="6"/>
         <source>Edit description of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать описание проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="11"/>
         <source>Description:</source>
-        <translation type="unfinished">描述：</translation>
+        <translation>Описание:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="15"/>
         <source>Text format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат текста:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="18"/>
         <source>OK</source>
-        <translation type="unfinished">确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="19"/>
         <source>Cancel</source>
-        <translation type="unfinished">取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4210,130 +4449,165 @@
     <message>
         <location filename="../../../client/projects/index.php" line="33"/>
         <source>Manage Projects</source>
-        <translation>管理项目</translation>
+        <translation>Управление проектами</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="83"/>
-        <source>Add Project</source>
-        <translation>添加项目</translation>
+        <location filename="../../../client/projects/index.php" line="53"/>
+        <source>Regular project</source>
+        <translation>Обычный проект</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="84"/>
-        <source>Add Folder</source>
-        <translation>添加目录</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/index.php" line="86"/>
-        <source>Rename Project</source>
-        <translation>重命名项目</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/index.php" line="87"/>
-        <source>Delete Project</source>
-        <translation>删除项目</translation>
+        <location filename="../../../client/projects/index.php" line="54"/>
+        <source>Public project</source>
+        <translation>Публичный проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="89"/>
-        <source>Rename Folder</source>
-        <translation>重命名目录</translation>
+        <source>Add Project</source>
+        <translation>Добавить проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="90"/>
-        <source>Move Folder</source>
-        <translation>移动目录</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/index.php" line="91"/>
-        <source>Delete Folder</source>
-        <translation>删除目录</translation>
+        <source>Add Folder</source>
+        <translation>Добавить папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="92"/>
-        <source>Project Members</source>
-        <translation>项目成员</translation>
+        <source>Rename Project</source>
+        <translation>Переименовать проект</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="93"/>
+        <source>Delete Project</source>
+        <translation>Удалить проект</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="95"/>
+        <source>Rename Folder</source>
+        <translation>Переименовать папку</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="96"/>
+        <source>Move Folder</source>
+        <translation>Переместить папку</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="97"/>
+        <source>Delete Folder</source>
+        <translation>Удалить папку</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="98"/>
+        <source>Manage Permissions</source>
+        <translation>Управление разрешениями</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="13"/>
         <source>Name</source>
-        <translation>名称</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="14"/>
         <source>Type</source>
-        <translation>类型</translation>
+        <translation>Тип</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.html.php" line="46"/>
-        <source>There are no projects.</source>
-        <translation>没有项目。</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/index.html.php" line="50"/>
-        <source>There are no projects that you can manage.</source>
-        <translation>没有项目可以管理。</translation>
+        <location filename="../../../client/projects/index.html.php" line="15"/>
+        <source>Access</source>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="55"/>
+        <source>There are no projects.</source>
+        <translation>Нет проектов.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.html.php" line="59"/>
+        <source>There are no projects that you can manage.</source>
+        <translation>Нет проектов для редактирования.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.html.php" line="64"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
 </context>
 <context>
     <name>Client_Projects_Members</name>
     <message>
         <location filename="../../../client/projects/members.php" line="37"/>
-        <source>Project Members</source>
-        <translation>项目成员</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/members.php" line="87"/>
-        <source>Add Members</source>
-        <translation>添加成员</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/members.html.php" line="3"/>
-        <source>Members of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>项目&lt;strong&gt;%1&lt;/strong&gt;的成员。</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/members.html.php" line="15"/>
-        <source>Name</source>
-        <translation>名称</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/members.html.php" line="16"/>
-        <source>Access Level</source>
-        <translation>访问级别</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/members.html.php" line="42"/>
-        <source>This project has no members.</source>
-        <translation>该项目没有成员。</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/members.html.php" line="47"/>
-        <source>OK</source>
-        <translation>确定</translation>
+        <source>Manage Permissions</source>
+        <translation>Управление разрешениями</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="60"/>
-        <source>Regular member</source>
-        <translation>普通成员</translation>
+        <source>Regular project</source>
+        <translation>Обычный проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="61"/>
+        <source>Public project</source>
+        <translation>Публичный проект</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.php" line="67"/>
+        <source>Regular member</source>
+        <translation>Обычный пользователь</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.php" line="68"/>
         <source>Project administrator</source>
-        <translation>项目管理员</translation>
+        <translation>Администратор проекта</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.php" line="88"/>
+        <location filename="../../../client/projects/members.php" line="94"/>
+        <source>Add Members</source>
+        <translation>Добавить участников</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.php" line="95"/>
         <source>Change Access</source>
-        <translation>更改访问设置</translation>
+        <translation>Изменить доступ</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.php" line="89"/>
+        <location filename="../../../client/projects/members.php" line="96"/>
         <source>Remove Member</source>
-        <translation>删除成员</translation>
+        <translation>Удалить участника</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.html.php" line="26"/>
+        <source>Name</source>
+        <translation>Имя</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.html.php" line="3"/>
+        <source>Edit permissions of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Редактировать разрешения проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.html.php" line="8"/>
+        <source>Global Access</source>
+        <translation>Глобальный доступ</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.html.php" line="11"/>
+        <source>Change</source>
+        <translation>Изменить</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.html.php" line="27"/>
+        <source>Access</source>
+        <translation>Доступ</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.html.php" line="53"/>
+        <source>This project has no members.</source>
+        <translation>Этот проект не имеет участников.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.html.php" line="58"/>
+        <source>OK</source>
+        <translation>Готово</translation>
     </message>
 </context>
 <context>
@@ -4341,33 +4615,66 @@
     <message>
         <location filename="../../../client/projects/movefolder.php" line="59"/>
         <source>Move Folder</source>
-        <translation>移动目录</translation>
+        <translation>Переместить папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="3"/>
         <source>Move folder &lt;strong&gt;%1&lt;/strong&gt; to another project.</source>
-        <translation>移动目录&lt;strong&gt;%1&lt;/strong&gt;到另一个项目。</translation>
+        <translation>Переместить папку &lt;strong&gt;%1&lt;/strong&gt; в другой проект.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="9"/>
         <source>Project:</source>
-        <translation>项目：</translation>
+        <translation>Проект:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="12"/>
         <location filename="../../../client/projects/movefolder.html.php" line="21"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="18"/>
         <source>There are no available destination projects.</source>
-        <translation>没有可用的目标项目。</translation>
+        <translation>Нет доступных проектов.</translation>
+    </message>
+</context>
+<context>
+    <name>Client_Projects_ProjectAccess</name>
+    <message>
+        <location filename="../../../client/projects/projectaccess.php" line="40"/>
+        <source>Global Access</source>
+        <translation>Глобальный доступ</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/projectaccess.php" line="49"/>
+        <source>Regular project</source>
+        <translation>Обычный проект</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/projectaccess.php" line="50"/>
+        <source>Public project</source>
+        <translation>Публичный проект</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/projectaccess.html.php" line="3"/>
+        <source>Change global access for project &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Установить глобальный доступ для проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/projectaccess.html.php" line="10"/>
+        <source>OK</source>
+        <translation>Готово</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/projectaccess.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4375,22 +4682,22 @@
     <message>
         <location filename="../../../client/projects/removemember.php" line="37"/>
         <source>Remove Member</source>
-        <translation>删除成员</translation>
+        <translation>Удалить участника</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="4"/>
         <source>Do you want to remove user &lt;strong&gt;%1&lt;/strong&gt; from project &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>确实要从项目&lt;strong&gt;%2&lt;/strong&gt;删除用户&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
+        <translation>Удалить пользователя &lt;strong&gt;%1&lt;/strong&gt; из проекта &lt;strong&gt;%2&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="9"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="10"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4398,27 +4705,27 @@
     <message>
         <location filename="../../../client/projects/renamefolder.php" line="37"/>
         <source>Rename Folder</source>
-        <translation>重命名目录</translation>
+        <translation>Переименовать папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="3"/>
         <source>Enter the new name of folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>输入目录&lt;strong&gt;%1&lt;/strong&gt;的新名称。</translation>
+        <translation>Введите новое имя папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="7"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4426,27 +4733,27 @@
     <message>
         <location filename="../../../client/projects/renameproject.php" line="40"/>
         <source>Rename Project</source>
-        <translation>重命名项目</translation>
+        <translation>Переименовать проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="3"/>
         <source>Enter the new name of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>输入项目&lt;strong&gt;%1&lt;/strong&gt;的新名称。</translation>
+        <translation>Введите новое имя проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="7"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4454,7 +4761,7 @@
     <message>
         <location filename="../../../client/tools/about.php" line="33"/>
         <source>About WebIssues</source>
-        <translation>关于WebIssues</translation>
+        <translation>О WebIssues</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="5"/>
@@ -4464,107 +4771,107 @@
     <message>
         <location filename="../../../client/tools/about.html.php" line="7"/>
         <source>Issue tracking and team collaboration system.</source>
-        <translation>工作项跟踪和团队管理系统。</translation>
+        <translation>Система отслеживания задач и совместной работы.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="12"/>
         <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</source>
-        <translation>此程序是一个免费软件：你可以在GNU协议（版本3或更新）下使用，传播或者修改它。</translation>
+        <translation>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="14"/>
         <source>Copyright &amp;copy; 2006 Michał Męciński</source>
-        <translation>Michał Męciński版权所有 2006</translation>
+        <translation>Copyright &amp;copy; 2006 Michał Męciński</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="15"/>
         <source>Copyright &amp;copy; 2007-2013 WebIssues Team</source>
-        <translation>WebIssues团队版权所有 &amp;copy; 2007-2013</translation>
+        <translation>Copyright &amp;copy; 2007-2013 WebIssues Team</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="18"/>
         <source>Help</source>
-        <translation>帮助</translation>
+        <translation>Помощь</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="20"/>
         <source>Open the WebIssues Manual for help.</source>
-        <translation>打开用户手册。</translation>
+        <translation>Открыть руководство пользователя WebIssues.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="23"/>
         <source>Manual</source>
-        <translation>用户手册</translation>
+        <translation>Руководство</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="29"/>
         <source>Website</source>
-        <translation>站点</translation>
+        <translation>Веб сайт</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="31"/>
         <source>Visit %1 for more information about WebIssues.</source>
-        <translation>访问%1以获得更多关于WebIssues的信息。</translation>
+        <translation>Посетить %1 для получения дополнительной информации об WebIssues.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="36"/>
         <source>Donations</source>
-        <translation>捐赠</translation>
+        <translation>Пожертвования</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="38"/>
         <source>If you like this program, your donation will help us dedicate more time for it, support it and implement new features.</source>
-        <translation>如果您喜欢本系统， 您的捐赠将帮助我们花更多的时间去完善它，增强它。</translation>
+        <translation>Если Вам нравится программа, Ваши пожертвования помогут нам посвятить ей больше времени для поддержки и добавления новых функций.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="41"/>
         <source>Donate</source>
-        <translation>捐赠</translation>
+        <translation>Помочь</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="49"/>
         <source>Latest Version</source>
-        <translation>最新版本</translation>
+        <translation>Последняя версия</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="56"/>
         <source>Your version of WebIssues is up to date.</source>
-        <translation>您的WebIssues已经是最新版。</translation>
+        <translation>Вы используете актуальную версию WebIssues.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="63"/>
         <source>The latest version of WebIssues is %1.</source>
-        <translation>当前最新版WebIssues是 %1。</translation>
+        <translation>Актуальная версия WebIssues %1.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="66"/>
         <source>Release Notes</source>
-        <translation>发布说明</translation>
+        <translation>Заметки о версии</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="67"/>
         <source>Download</source>
-        <translation>下载</translation>
+        <translation>Загрузить</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="75"/>
         <source>Checking for latest version failed.</source>
-        <translation>检查最新版本出错。</translation>
+        <translation>Сбой проверки актуальной версии.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="82"/>
         <source>Check for latest version of WebIssues.</source>
-        <translation>检查最新版本的WebIssues。</translation>
+        <translation>Проверить актуальную версию WebIssues.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="85"/>
         <source>Check</source>
-        <translation>检查</translation>
+        <translation>Проверить</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="98"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
 </context>
 <context>
@@ -4572,27 +4879,27 @@
     <message>
         <location filename="../../../client/tools/gotoitem.php" line="33"/>
         <source>Go To Item</source>
-        <translation>转至条目</translation>
+        <translation>Перейти к элементу</translation>
     </message>
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="3"/>
         <source>Enter the identifier of an issue, comment or attachment.</source>
-        <translation>输入工作项的标识，评论或附件。</translation>
+        <translation>Введите идентификатор задачи, комментария или вложения.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="7"/>
         <source>ID:</source>
-        <translation>ID：</translation>
+        <translation>Идентификатор:</translation>
     </message>
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4600,47 +4907,47 @@
     <message>
         <location filename="../../../client/tools/index.php" line="33"/>
         <source>Tools</source>
-        <translation>工具</translation>
+        <translation>Инструменты</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="4"/>
         <source>Go To Item</source>
-        <translation>转至条目</translation>
+        <translation>Перейти к элементу</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="5"/>
         <source>Go to item with given identifier.</source>
-        <translation>转至给定标识的条目。</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/index.html.php" line="6"/>
-        <source>Change Password</source>
-        <translation>修改密码</translation>
+        <translation>Перейти к элементу с указанным идентификатором.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="7"/>
-        <source>Change your password.</source>
-        <translation>修改您的密码。</translation>
+        <source>Change Password</source>
+        <translation>Изменить пароль</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="8"/>
-        <source>User Preferences</source>
-        <translation>用户偏好设置</translation>
+        <source>Change your password.</source>
+        <translation>Измените свой  пароль.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="9"/>
-        <source>Configure your user preferences.</source>
-        <translation>配置您的用户偏好设置。</translation>
+        <source>User Preferences</source>
+        <translation>Пользовательские предпочтения</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="10"/>
-        <source>About WebIssues</source>
-        <translation>关于WebIssues</translation>
+        <source>Configure your user preferences.</source>
+        <translation>Настройте свои предпочтения.</translation>
     </message>
     <message>
-        <location filename="../../../client/tools/index.html.php" line="11"/>
+        <location filename="../../../client/tools/index.html.php" line="12"/>
+        <source>About WebIssues</source>
+        <translation>О WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../../client/tools/index.html.php" line="13"/>
         <source>Show information about WebIssues.</source>
-        <translation>显示服务器信息。</translation>
+        <translation>Показать информацию о WebIssues.</translation>
     </message>
 </context>
 <context>
@@ -4648,42 +4955,42 @@
     <message>
         <location filename="../../../client/views/index.php" line="33"/>
         <source>Manage Views</source>
-        <translation>管理视图</translation>
+        <translation>Представления</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="3"/>
         <source>Edit personal view settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>为类型 &lt;strong&gt;%1&lt;/strong&gt;管理个人视图。</translation>
+        <translation>Редактировать приватные представления у типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="15"/>
         <source>Name</source>
-        <translation>名称</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="16"/>
         <source>Columns</source>
-        <translation>列</translation>
+        <translation>Колонки</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="17"/>
         <source>Sort By</source>
-        <translation>排序</translation>
+        <translation>Сортировать</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="18"/>
         <source>Filter</source>
-        <translation>过滤</translation>
+        <translation>Фильтр</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="39"/>
         <source>This type has no personal views.</source>
-        <translation>此类型没有个人视图。</translation>
+        <translation>Этот тип не имеет приватных представлений.</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="44"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
 </context>
 <context>
@@ -4691,27 +4998,27 @@
     <message>
         <location filename="../../../client/views/publish.php" line="36"/>
         <source>Publish View</source>
-        <translation>公共视图</translation>
+        <translation>Сделать представление публичным</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="4"/>
         <source>Are you sure you want to convert your personal view &lt;strong&gt;%1&lt;/strong&gt; to a public view?</source>
-        <translation>确定将您的私有视图&lt;strong&gt;%1&lt;/strong&gt;转换为公开图？</translation>
+        <translation>Вы действительно хотите конвертировать Ваше приватное представление &lt;strong&gt;%1&lt;/strong&gt; в публичное?</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="6"/>
         <source>View &lt;strong&gt;%1&lt;/strong&gt; cannot be published.</source>
-        <translation>视图&lt;strong&gt;%1&lt;/strong&gt;无法被发布。</translation>
+        <translation>Представление &lt;strong&gt;%1&lt;/strong&gt; нельзя сделать публичным.</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="12"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="14"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -4719,93 +5026,89 @@
     <message>
         <location filename="../../breadcrumbs.inc.php" line="98"/>
         <source>General Information</source>
-        <translation>基本信息</translation>
+        <translation>Главная информация</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="103"/>
         <source>Event Log</source>
-        <translation>事件日志</translation>
+        <translation>Журнал событий</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="108"/>
         <source>User Accounts</source>
-        <translation>用户账户</translation>
-    </message>
-    <message>
-        <location filename="../../breadcrumbs.inc.php" line="114"/>
-        <source>User Projects</source>
-        <translation>用户项目</translation>
+        <translation>Учетные записи пользователей</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="119"/>
         <source>Registration Requests</source>
-        <translation>注册请求</translation>
+        <translation>Запросы на регистрацию</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="124"/>
         <source>Issue Types</source>
-        <translation>工作项类型</translation>
+        <translation>Типы задач</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="130"/>
         <source>View Settings</source>
-        <translation>查看设置</translation>
+        <translation>Настройки представлений</translation>
     </message>
     <message>
+        <location filename="../../breadcrumbs.inc.php" line="114"/>
         <location filename="../../breadcrumbs.inc.php" line="141"/>
-        <source>Project Members</source>
-        <translation>项目成员</translation>
+        <source>Manage Permissions</source>
+        <translation>Управление разрешениями</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="153"/>
+        <location filename="../../breadcrumbs.inc.php" line="158"/>
         <source>Manage Views</source>
-        <translation>管理视图</translation>
+        <translation>Представления</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="159"/>
+        <location filename="../../breadcrumbs.inc.php" line="164"/>
         <source>Manage Alerts</source>
-        <translation>管理警告</translation>
-    </message>
-    <message>
-        <location filename="../../breadcrumbs.inc.php" line="170"/>
-        <source>Tools</source>
-        <translation>工具</translation>
+        <translation>Оповещения</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="175"/>
+        <source>Tools</source>
+        <translation>Инструменты</translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="180"/>
         <source>Manage Projects</source>
-        <translation>管理项目</translation>
+        <translation>Управление проектами</translation>
     </message>
 </context>
 <context>
     <name>Common_Errors_Debug</name>
     <message>
-        <location filename="../../errors/debug.html.php" line="3"/>
-        <source>The following error(s) occured while processing the request:</source>
-        <translation>处理请求时因下列错误而终止：</translation>
-    </message>
-    <message>
         <location filename="../../errors/debug.inc.php" line="33"/>
         <source>Unexpected Error</source>
-        <translation>未预知的错误</translation>
+        <translation>Непредвиденная ошибка</translation>
+    </message>
+    <message>
+        <location filename="../../errors/debug.html.php" line="3"/>
+        <source>The following error(s) occured while processing the request:</source>
+        <translation>При обработке запроса возникли следующие ошибки:</translation>
     </message>
 </context>
 <context>
     <name>Common_Errors_General</name>
     <message>
+        <location filename="../../errors/general.inc.php" line="33"/>
+        <source>Unexpected Error</source>
+        <translation>Непредвиденная ошибка</translation>
+    </message>
+    <message>
         <location filename="../../errors/general.html.php" line="3"/>
         <source>An unexpected error occured while processing the request.</source>
-        <translation>处理请求时发生了一个意外错误。</translation>
+        <translation>При обработке запроса возникла непредвиденная ошибка.</translation>
     </message>
     <message>
         <location filename="../../errors/general.html.php" line="6"/>
         <source>Reason: %1.</source>
-        <translation>原因：%1。</translation>
-    </message>
-    <message>
-        <location filename="../../errors/general.inc.php" line="33"/>
-        <source>Unexpected Error</source>
-        <translation>未预知错误</translation>
+        <translation>Причина: %1.</translation>
     </message>
 </context>
 <context>
@@ -4813,17 +5116,17 @@
     <message>
         <location filename="../../errors/handle401.php" line="35"/>
         <source>Unauthorized</source>
-        <translation>未授权</translation>
+        <translation>Не авторизовано</translation>
     </message>
     <message>
         <location filename="../../errors/handle401.php" line="45"/>
         <source>Unauthorized: %1</source>
-        <translation>未授权：%1</translation>
+        <translation>Не авторизовано: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle401.html.php" line="3"/>
         <source>You have no permission to access the requested page.</source>
-        <translation>您没有此页面的访问权限。</translation>
+        <translation>У Вас нет прав доступа к запрошенной странице.</translation>
     </message>
 </context>
 <context>
@@ -4831,17 +5134,17 @@
     <message>
         <location filename="../../errors/handle403.php" line="35"/>
         <source>Access Forbidden</source>
-        <translation>访问被拒绝</translation>
+        <translation>Доступ запрещен</translation>
     </message>
     <message>
         <location filename="../../errors/handle403.php" line="45"/>
         <source>Access forbidden: %1</source>
-        <translation>访问被拒绝：%1</translation>
+        <translation>Доступ запрещен: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle403.html.php" line="3"/>
         <source>You have no permission to access the requested page.</source>
-        <translation>您没有此页面的访问权限。</translation>
+        <translation>У Вас нет прав доступа к запрошенной странице.</translation>
     </message>
 </context>
 <context>
@@ -4849,17 +5152,17 @@
     <message>
         <location filename="../../errors/handle404.php" line="35"/>
         <source>Page Not Found</source>
-        <translation>页面未找到</translation>
+        <translation>Страница не найдена</translation>
     </message>
     <message>
         <location filename="../../errors/handle404.php" line="45"/>
         <source>Page not found: %1</source>
-        <translation>页面未找到：%1</translation>
+        <translation>Страница не найдена: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle404.html.php" line="3"/>
         <source>The requested page was not found.</source>
-        <translation>没有找到请求的页面。</translation>
+        <translation>Запрошенная страница не найдена.</translation>
     </message>
 </context>
 <context>
@@ -4867,52 +5170,52 @@
     <message>
         <location filename="../../errors/setup.inc.php" line="39"/>
         <source>Server Not Configured</source>
-        <translation>服务器未被配置</translation>
+        <translation>Сервер не настроен</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="40"/>
         <source>This WebIssues Server has not been configured yet.</source>
-        <translation>此WebIssues服务器还没有被配置。</translation>
+        <translation>Сервер WebIssues еще не настроен.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="41"/>
         <source>Go to the %1 page to configure this server.</source>
-        <translation>转至%1 以继续配置此服务器。</translation>
+        <translation>Перейти к странице %1 для настройки сервера.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="42"/>
         <source>Server Configuration</source>
-        <translation>服务器配置</translation>
+        <translation>Настройки сервера</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="46"/>
         <source>Wrong Database Version</source>
-        <translation>错误的数据库版本</translation>
+        <translation>Неверная версия базы данных</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="48"/>
         <source>Current version of the database is not compatible with this version of WebIssues Server.</source>
-        <translation>当前版本的数据库和当前版本的WebIssues不兼容。</translation>
+        <translation>Текущая версия базы данных не совместима с этим сервером WebIssues.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="52"/>
         <source>Database Not Updated</source>
-        <translation>数据库没有更新</translation>
+        <translation>База данных не обновлена</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="53"/>
         <source>The database of this WebIssues Server has not been updated yet.</source>
-        <translation>此WebIssues服务器的数据库还没有被更新。</translation>
+        <translation>База данных этого сервера WebIssues еще не обновлена.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="54"/>
         <source>Go to the %1 page to update the database.</source>
-        <translation>转至%1 以更新数据库。</translation>
+        <translation>Перейти к странице %1 для обновления базы данных.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="55"/>
         <source>Server Update</source>
-        <translation>服务器更新</translation>
+        <translation>Обновление сервера</translation>
     </message>
 </context>
 <context>
@@ -4920,7 +5223,7 @@
     <message>
         <location filename="../../fixedblock.inc.php" line="34"/>
         <source>Untitled block</source>
-        <translation>未命名区域</translation>
+        <translation>Безымянный блок</translation>
     </message>
 </context>
 <context>
@@ -4928,37 +5231,37 @@
     <message>
         <location filename="../../mail/approve.inc.php" line="37"/>
         <source>WebIssues Server registration approved</source>
-        <translation>WebIssues注册已通过</translation>
+        <translation>Регистрация сервера WebIssues подтверждена</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="3"/>
         <source>Your registration request on the WebIssues Server was approved by the administrator.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ваш запрос на регистрацию на сервере WebIssues был подтвержден администратором.</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="5"/>
         <source>You can now %1 using your login and password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Теперь вы можете %1 используя имя своей учетной записи и пароль.</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="5"/>
         <source>log in to the server</source>
-        <translation type="unfinished"></translation>
+        <translation>подключиться к серверу</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="8"/>
         <source>User name: %1</source>
-        <translation>用户名：%1</translation>
+        <translation>Имя пользователя: %1</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="9"/>
         <source>Login: %1</source>
-        <translation>登录名:%1</translation>
+        <translation>Логин: %1</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="10"/>
         <source>Email address: %1</source>
-        <translation>邮件：%1</translation>
+        <translation>Адрес e-mail: %1</translation>
     </message>
 </context>
 <context>
@@ -4966,118 +5269,118 @@
     <message>
         <location filename="../../mail/issuecreated.html.php" line="3"/>
         <source>Your email was successfully registered on the WebIssues Server as the following issue:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ваш адрес электронной почты был успешно зарегистрирован на сервере WebIssues для следующей задачи:</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="6"/>
         <source>ID: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>ID: %1</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="7"/>
         <source>Name: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя: %1</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="11"/>
         <source>You can add comments and attachments to this issue by responding to this email. Include %1 in the subject when sending emails regarding this issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы можете добавлять комментарии и вложения к этой задаче отвечая на это сообщение. Включите %1 в тему сообщения во время отправки для этой задачи.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="14"/>
         <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы будете получать электронные оповещения когда кто-то редактирует эту задачу, добавляет комментарий или вложение.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="18"/>
-        <source>You can also %1 by logging in to the WebIssues Server.</source>
-        <translation type="unfinished"></translation>
+        <source>You can also %1 in the WebIssues Server.</source>
+        <translation>Вы также можете %1 на сервере WebIssues.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="18"/>
         <source>view this issue</source>
-        <translation type="unfinished"></translation>
+        <translation>просмотреть эту задачу</translation>
     </message>
 </context>
 <context>
     <name>Common_Mail_Notification</name>
     <message>
-        <location filename="../../mail/notification.inc.php" line="60"/>
+        <location filename="../../mail/notification.inc.php" line="73"/>
         <source>All Issues</source>
-        <translation>所有工作项</translation>
+        <translation>Все задачи</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="45"/>
+        <location filename="../../mail/notification.html.php" line="52"/>
         <source>Properties</source>
-        <translation>属性</translation>
+        <translation>Свойства</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="49"/>
+        <location filename="../../mail/notification.html.php" line="56"/>
         <source>ID:</source>
-        <translation>ID：</translation>
+        <translation>Идентификатор:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="53"/>
+        <location filename="../../mail/notification.html.php" line="60"/>
         <source>Type:</source>
-        <translation>类型：</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="57"/>
+        <location filename="../../mail/notification.html.php" line="64"/>
         <source>Location:</source>
-        <translation type="unfinished"></translation>
+        <translation>Расположение:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="61"/>
+        <location filename="../../mail/notification.html.php" line="68"/>
         <source>Created:</source>
-        <translation type="unfinished"></translation>
+        <translation>Создано:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="65"/>
+        <location filename="../../mail/notification.html.php" line="72"/>
         <source>Last Modified:</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменено:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="93"/>
-        <source>Description</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../mail/notification.html.php" line="178"/>
-        <source>Issue moved from %1 to %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../mail/notification.html.php" line="74"/>
+        <location filename="../../mail/notification.html.php" line="81"/>
         <source>Attributes</source>
-        <translation>属性</translation>
+        <translation>Атрибуты</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="106"/>
+        <location filename="../../mail/notification.html.php" line="100"/>
+        <source>Description</source>
+        <translation>Описание</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="113"/>
         <source>Issue History</source>
-        <translation>工作项历史</translation>
+        <translation>История задачи</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="131"/>
-        <location filename="../../mail/notification.html.php" line="134"/>
-        <source>Name</source>
-        <translation>名称</translation>
-    </message>
-    <message>
-        <location filename="../../mail/notification.html.php" line="137"/>
         <location filename="../../mail/notification.html.php" line="138"/>
+        <location filename="../../mail/notification.html.php" line="141"/>
+        <source>Name</source>
+        <translation>Имя</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="144"/>
+        <location filename="../../mail/notification.html.php" line="145"/>
         <source>empty</source>
-        <translation>空</translation>
+        <translation>пусто</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="176"/>
-        <location filename="../../mail/notification.html.php" line="177"/>
+        <location filename="../../mail/notification.html.php" line="183"/>
+        <location filename="../../mail/notification.html.php" line="184"/>
         <source>Unknown Folder</source>
-        <translation>未知目录</translation>
+        <translation>Неизвестная папка</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="205"/>
+        <location filename="../../mail/notification.html.php" line="185"/>
+        <source>Issue moved from %1 to %2</source>
+        <translation>Задача перемещена из %1 в %2</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="212"/>
         <source>This is an alert email from the WebIssues Server.</source>
-        <translation>这是一封来自WebIssues服务器的警告邮件。</translation>
+        <translation>Это оповещение сервера WebIssues.</translation>
     </message>
 </context>
 <context>
@@ -5085,37 +5388,37 @@
     <message>
         <location filename="../../mail/register.inc.php" line="37"/>
         <source>WebIssues Server email verification</source>
-        <translation>WebIssues邮件验证</translation>
+        <translation>Проверка e-mail адреса сервера WebIssues</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="3"/>
         <source>Thank you for registering on the WebIssues Server.</source>
-        <translation type="unfinished"></translation>
+        <translation>Благодарим за регистрацию на сервере WebIssues.</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="5"/>
         <source>To activate your registration request, please visit the following URL:</source>
-        <translation>请访问以下URL以激活你的注册请求：</translation>
+        <translation>Для активации Вашего регистрационного запроса перейдите на следующую страницу:</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="10"/>
         <source>User name: %1</source>
-        <translation>用户名：%1</translation>
+        <translation>Имя пользователя: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="11"/>
         <source>Login: %1</source>
-        <translation>登录名：%1</translation>
+        <translation>Логин: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="12"/>
         <source>Email address: %1</source>
-        <translation>邮件：%1</translation>
+        <translation>Адрес e-mail: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="15"/>
         <source>If you didn&apos;t register, please ignore this email.</source>
-        <translation>如果您没有注册，请忽略此邮件。</translation>
+        <translation>Если Вы не регистрировались, то проигнорируйте это сообщение.</translation>
     </message>
 </context>
 <context>
@@ -5123,37 +5426,37 @@
     <message>
         <location filename="../../mail/registernotification.html.php" line="3"/>
         <source>You have the following new %1 on the WebIssues Server pending for approval:</source>
-        <translation type="unfinished"></translation>
+        <translation>У вас есть следующие новые %1, ожидающие подтверждения на сервере WebIssues:</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="3"/>
         <source>registration requests</source>
-        <translation type="unfinished"></translation>
+        <translation>запросы на регистрацию</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="7"/>
         <source>Name</source>
-        <translation>用户名</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="8"/>
         <source>Login</source>
-        <translation>登录名</translation>
+        <translation>Логин</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="9"/>
         <source>Email</source>
-        <translation>邮件</translation>
+        <translation>E-mail</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="10"/>
         <source>Date</source>
-        <translation>日期</translation>
+        <translation>Дата</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.inc.php" line="37"/>
         <source>WebIssues Server registration requests</source>
-        <translation type="unfinished"></translation>
+        <translation>Запросы на регистрацию сервера Webissues</translation>
     </message>
 </context>
 <context>
@@ -5161,27 +5464,27 @@
     <message>
         <location filename="../../mail/reject.inc.php" line="37"/>
         <source>WebIssues Server registration rejected</source>
-        <translation>WebIssues注册失败</translation>
+        <translation>Регистрация на сервере WebIssues отклонена</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="3"/>
         <source>Sorry, your registration request on the WebIssues Server was rejected by the administrator.</source>
-        <translation type="unfinished"></translation>
+        <translation>К сожалению, ваш запрос на регистрацию на сервере Webissues был отклонен администратором.</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="6"/>
         <source>User name: %1</source>
-        <translation>用户名：%1</translation>
+        <translation>Имя пользователя: %1</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="7"/>
         <source>Login: %1</source>
-        <translation>登录名：%1</translation>
+        <translation>Логин: %1</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="8"/>
         <source>Email address: %1</source>
-        <translation>邮件地址：%1</translation>
+        <translation>Адрес e-mail: %1</translation>
     </message>
 </context>
 <context>
@@ -5189,85 +5492,85 @@
     <message>
         <location filename="../../mail/subscription.html.php" line="4"/>
         <source>Include your response above this line</source>
-        <translation type="unfinished"></translation>
+        <translation>Включите свой ответ выше этой линии</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="6"/>
         <source>You can add comments and attachments to this issue by responding to this email. Include %1 in the subject when sending emails regarding this issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы можете добавлять комментарии и вложения к этой задаче отвечая на это сообщение. Включите %1 в тему сообщения во время отправки для этой задачи.</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="19"/>
         <source>Properties</source>
-        <translation type="unfinished">属性</translation>
+        <translation>Свойства</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="23"/>
         <source>ID:</source>
-        <translation type="unfinished">ID：</translation>
+        <translation>Идентификатор:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="27"/>
         <source>Type:</source>
-        <translation type="unfinished">类型：</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="31"/>
         <source>Location:</source>
-        <translation type="unfinished"></translation>
+        <translation>Расположение:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="35"/>
         <source>Created:</source>
-        <translation type="unfinished"></translation>
+        <translation>Создано:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="39"/>
         <source>Last Modified:</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменено:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="48"/>
         <source>Attributes</source>
-        <translation type="unfinished">属性</translation>
+        <translation>Атрибуты</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="67"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="79"/>
         <source>Issue History</source>
-        <translation type="unfinished">工作项历史</translation>
+        <translation>История задачи</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="104"/>
         <location filename="../../mail/subscription.html.php" line="107"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="110"/>
         <location filename="../../mail/subscription.html.php" line="111"/>
         <source>empty</source>
-        <translation type="unfinished">空</translation>
+        <translation>пусто</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="149"/>
         <location filename="../../mail/subscription.html.php" line="150"/>
         <source>Unknown Folder</source>
-        <translation type="unfinished">未知目录</translation>
+        <translation>Неизвестная папка</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="151"/>
         <source>Issue moved from %1 to %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Задача перемещена из %1 в %2</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="175"/>
         <source>This is a subscription email from the WebIssues Server.</source>
-        <translation type="unfinished"></translation>
+        <translation>Это сообщение подписки с сервера Webissues.</translation>
     </message>
 </context>
 <context>
@@ -5275,22 +5578,22 @@
     <message>
         <location filename="../../mail/testconnection.inc.php" line="37"/>
         <source>Test message from WebIssues Server</source>
-        <translation>来自WebIssues服务器的测试邮件</translation>
+        <translation>Тестовое сообщение сервера WebIssues</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="3"/>
         <source>This email was sent by the WebIssues Server to test connection to the SMTP server.</source>
-        <translation>此邮件是WebIssues服务器为测试SMTP服务器设置而发送的。</translation>
+        <translation>Это сообщение было отправлено сервером WebIssues для тестирования SMTP сервера.</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="6"/>
         <source>Server name: %1</source>
-        <translation>服务器名：%1</translation>
+        <translation>Имя сервера: %1</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="7"/>
         <source>Port: %1</source>
-        <translation>端口：%1</translation>
+        <translation>Порт: %1</translation>
     </message>
 </context>
 <context>
@@ -5298,32 +5601,32 @@
     <message>
         <location filename="../../messageblock.inc.php" line="34"/>
         <source>Untitled message</source>
-        <translation>未命名消息</translation>
+        <translation>Безымянное сообщение</translation>
     </message>
 </context>
 <context>
     <name>Common_PageLayout</name>
     <message>
-        <location filename="../../pagelayout.inc.php" line="40"/>
+        <location filename="../../pagelayout.inc.php" line="44"/>
         <source>WebIssues</source>
         <translation>WebIssues</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="51"/>
+        <location filename="../../pagelayout.inc.php" line="66"/>
         <source>Untitled page</source>
-        <translation>未命名页面</translation>
+        <translation>Безымянная страница</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="55"/>
+        <location filename="../../pagelayout.inc.php" line="70"/>
         <location filename="../../pagelayout.html.php" line="35"/>
         <source>Web Client</source>
-        <translation>Web客户端</translation>
+        <translation>Веб клиент</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="58"/>
+        <location filename="../../pagelayout.inc.php" line="73"/>
         <location filename="../../pagelayout.html.php" line="33"/>
         <source>Administration Panel</source>
-        <translation>管理面板</translation>
+        <translation>Панель администрирования</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="37"/>
@@ -5333,22 +5636,32 @@
     <message>
         <location filename="../../pagelayout.html.php" line="38"/>
         <source>Manual</source>
-        <translation>用户手册</translation>
+        <translation>Руководство</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="52"/>
         <source>Logged in as: %1</source>
-        <translation>登录为：%1</translation>
+        <translation>Вход выполнен под именем: %1</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="53"/>
+        <location filename="../../pagelayout.html.php" line="55"/>
         <source>Tools</source>
-        <translation>工具</translation>
+        <translation>Инструменты</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="54"/>
+        <location filename="../../pagelayout.html.php" line="58"/>
         <source>Log Out</source>
-        <translation>退出登录</translation>
+        <translation>Выйти</translation>
+    </message>
+    <message>
+        <location filename="../../pagelayout.html.php" line="60"/>
+        <source>Log In</source>
+        <translation>Войти</translation>
+    </message>
+    <message>
+        <location filename="../../pagelayout.html.php" line="62"/>
+        <source>Register</source>
+        <translation>Регистрация</translation>
     </message>
 </context>
 <context>
@@ -5356,7 +5669,7 @@
     <message>
         <location filename="../../singlepane.inc.php" line="34"/>
         <source>Untitled page</source>
-        <translation>未命名页面</translation>
+        <translation>Безымянная страница</translation>
     </message>
 </context>
 <context>
@@ -5364,33 +5677,33 @@
     <message>
         <location filename="../../tools/editing.inc.php" line="42"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Простой текст</translation>
     </message>
     <message>
         <location filename="../../tools/editing.inc.php" line="43"/>
         <source>Text with Markup</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст с разметкой</translation>
     </message>
     <message>
         <location filename="../../tools/editing.inc.php" line="48"/>
         <source>Default (%1)</source>
         <comment>format</comment>
-        <translation type="unfinished">默认(%1)</translation>
+        <translation>Умолчания (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="4"/>
         <source>Editing</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактирование</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="6"/>
         <source>The default format used for new comments and descriptions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат по умолчанию для комментариев и описаний.</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="8"/>
         <source>Default text format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Текстовый формат по умолчанию:</translation>
     </message>
 </context>
 <context>
@@ -5399,7 +5712,7 @@
         <location filename="../../tools/locale.inc.php" line="55"/>
         <source>Default (%1)</source>
         <comment>language</comment>
-        <translation>默认(%1)</translation>
+        <translation>Умолчания (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="60"/>
@@ -5407,64 +5720,64 @@
         <location filename="../../tools/locale.inc.php" line="74"/>
         <source>Default</source>
         <comment>format</comment>
-        <translation>默认</translation>
+        <translation>По умолчанию</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="82"/>
         <source>Default</source>
         <comment>day of week</comment>
-        <translation>默认</translation>
+        <translation>По умолчанию</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="98"/>
         <source>Default (%1)</source>
         <comment>time zone</comment>
-        <translation>默认(%1)</translation>
+        <translation>Умолчания (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="4"/>
         <source>Regional Options</source>
-        <translation>常规选项</translation>
+        <translation>Региональные установки</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="6"/>
         <source>Language:</source>
-        <translation>语言：</translation>
-    </message>
-    <message>
-        <location filename="../../tools/locale.html.php" line="12"/>
-        <source>Formats</source>
-        <translation>格式</translation>
-    </message>
-    <message>
-        <location filename="../../tools/locale.html.php" line="14"/>
-        <source>Customize the format of numbers, date and time. Default formats depend on the selected language.</source>
-        <translation>自定义数字格式，日期和时间。默认格式取决于所选择的语言。</translation>
-    </message>
-    <message>
-        <location filename="../../tools/locale.html.php" line="16"/>
-        <source>Number format:</source>
-        <translation>数字格式：</translation>
-    </message>
-    <message>
-        <location filename="../../tools/locale.html.php" line="17"/>
-        <source>Date format:</source>
-        <translation>日期格式：</translation>
-    </message>
-    <message>
-        <location filename="../../tools/locale.html.php" line="18"/>
-        <source>Time format:</source>
-        <translation>时间格式：</translation>
-    </message>
-    <message>
-        <location filename="../../tools/locale.html.php" line="19"/>
-        <source>First day of week:</source>
-        <translation>每周第一天：</translation>
+        <translation>Язык:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="7"/>
         <source>Time zone:</source>
-        <translation>时区：</translation>
+        <translation>Часовой пояс:</translation>
+    </message>
+    <message>
+        <location filename="../../tools/locale.html.php" line="12"/>
+        <source>Formats</source>
+        <translation>Форматы</translation>
+    </message>
+    <message>
+        <location filename="../../tools/locale.html.php" line="14"/>
+        <source>Customize the format of numbers, date and time. Default formats depend on the selected language.</source>
+        <translation>Настроить форматы чисел, даты и времени. Форматы по умолчанию зависят от выбранного языка.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/locale.html.php" line="16"/>
+        <source>Number format:</source>
+        <translation>Числовой формат:</translation>
+    </message>
+    <message>
+        <location filename="../../tools/locale.html.php" line="17"/>
+        <source>Date format:</source>
+        <translation>Формат даты:</translation>
+    </message>
+    <message>
+        <location filename="../../tools/locale.html.php" line="18"/>
+        <source>Time format:</source>
+        <translation>Формат времени:</translation>
+    </message>
+    <message>
+        <location filename="../../tools/locale.html.php" line="19"/>
+        <source>First day of week:</source>
+        <translation>Первый день недели:</translation>
     </message>
 </context>
 <context>
@@ -5473,27 +5786,27 @@
         <location filename="../../tools/pagesize.inc.php" line="44"/>
         <location filename="../../tools/pagesize.inc.php" line="50"/>
         <source>Default (%1)</source>
-        <translation>默认(%1)</translation>
+        <translation>Умолчания (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="4"/>
         <source>Page Size</source>
-        <translation>页面大小</translation>
+        <translation>Размер страницы</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="6"/>
         <source>The maximum number of issues and items in history which are displayed on a single page.</source>
-        <translation>在单个页面中显示历史条目的最大数量。</translation>
+        <translation>Максимальное число задач и записей истории, которые можно показывать на одной странице.</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="8"/>
         <source>List of issues:</source>
-        <translation>工作项列表：</translation>
+        <translation>Список задач:</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="9"/>
         <source>Issue history:</source>
-        <translation>工作项历史：</translation>
+        <translation>История задачи:</translation>
     </message>
 </context>
 <context>
@@ -5501,47 +5814,47 @@
     <message>
         <location filename="../../tools/password.inc.php" line="33"/>
         <source>Change Password</source>
-        <translation>修改密码</translation>
+        <translation>Изменить пароль</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="4"/>
         <source>Enter your new password.</source>
-        <translation>修改您的密码。</translation>
+        <translation>Введите новый  пароль.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="6"/>
         <source>Enter the new password for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>请为用户&lt;strong&gt;%1&lt;/strong&gt;输入新的密码。</translation>
+        <translation>Введите новый пароль для пользователя &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="12"/>
         <source>Current password:</source>
-        <translation>当前密码：</translation>
+        <translation>Текущий пароль:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="15"/>
         <source>New password:</source>
-        <translation>新密码：</translation>
+        <translation>Новый пароль:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="16"/>
         <source>Confirm password:</source>
-        <translation>确认密码：</translation>
+        <translation>Подтвердите пароль:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="19"/>
         <source>User must change password at next logon.</source>
-        <translation>要求用户下次登录必须修改密码。</translation>
+        <translation>Пользователь должен изменить пароль при следующем входе.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="23"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="24"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -5549,89 +5862,52 @@
     <message>
         <location filename="../../tools/preferences.inc.php" line="33"/>
         <source>User Preferences</source>
-        <translation>用户偏好设置</translation>
+        <translation>Пользовательские предпочтения</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="4"/>
         <source>Configure your user preferences.</source>
-        <translation>配置您的用户偏好设置。</translation>
+        <translation>Настройте свои предпочтения.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="6"/>
         <source>Configure preferences for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>为用户&lt;strong&gt;%1&lt;/strong&gt;配置偏好设置。</translation>
+        <translation>Настройте предпочтения для пользователя &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="21"/>
         <source>Notifications</source>
-        <translation>通知</translation>
+        <translation>Уведомления</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="23"/>
         <source>Email address:</source>
-        <translation>邮件地址：</translation>
+        <translation>Адрес e-mail:</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="26"/>
         <source>This address will only be visible to the system administrator. You will not receive notifications if you leave this field empty.</source>
-        <translation>此邮件地址仅会对系统管理员可见。如果您将此处留空，您将不会收到通知。</translation>
+        <translation>Этот адрес будет доступен только администратору. Вы не сможете получать оповещения если оставите это поле пустым.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="28"/>
-        <source>Settings</source>
-        <translation>设置</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="30"/>
         <source>Include issue details in notifications and summary reports</source>
-        <translation>将工作项详细情况包含在通知和简报中</translation>
+        <translation>Включить в оповещения и сводки отчетов информацию о задачах</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="31"/>
+        <location filename="../../tools/preferences.html.php" line="29"/>
         <source>Do not notify about issues that I have already read</source>
-        <translation>不通知我已经阅读过的工作项</translation>
+        <translation>Не оповещать о задачах, которые я уже прочитал</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="33"/>
-        <source>Summary Schedule</source>
-        <translation>安排概括</translation>
+        <location filename="../../tools/preferences.html.php" line="35"/>
+        <source>OK</source>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="36"/>
-        <location filename="../../tools/preferences.html.php" line="59"/>
-        <source>Select All</source>
-        <translation>全选</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="38"/>
-        <location filename="../../tools/preferences.html.php" line="61"/>
-        <source>Unselect All</source>
-        <translation>全取消选择</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="40"/>
-        <source>Send on the following days:</source>
-        <translation>在下列日期发送：</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="64"/>
-        <source>Send at the following hours:</source>
-        <translation>在下列时间发送：</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="75"/>
-        <source>You will not receive summary emails if you do not select any day and hour.</source>
-        <translation>如果您不选择任何日期和日间您将不会收到总结邮件。</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="81"/>
-        <source>OK</source>
-        <translation>确定</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="82"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -5639,69 +5915,69 @@
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="43"/>
         <source>Oldest First</source>
-        <translation type="unfinished"></translation>
+        <translation>Сначала старейший</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="44"/>
         <source>Newest First</source>
-        <translation type="unfinished"></translation>
+        <translation>Сначала новейший</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="48"/>
         <source>All History</source>
-        <translation>所有历史</translation>
+        <translation>Вся история</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="49"/>
         <source>Comments &amp; Attachments</source>
-        <translation>评论和附件</translation>
+        <translation>Комментарии и вложения</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="54"/>
         <source>Default (%1)</source>
         <comment>order</comment>
-        <translation>默认(%1)</translation>
+        <translation>Умолчания (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="60"/>
         <source>Default (%1)</source>
         <comment>filter</comment>
-        <translation>默认(%1)</translation>
+        <translation>Умолчания (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="4"/>
         <source>View Settings</source>
-        <translation>查看设置</translation>
+        <translation>Настройки представлений</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="7"/>
         <source>Global view settings that affect all users and issue types.</source>
-        <translation>全局设置将影响所有的用户和工作项类型。</translation>
+        <translation>Глобальные настройки представлений для всех пользователей и всех типов задач.</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="9"/>
         <source>Hide the ID column</source>
-        <translation>隐藏唯一标识列</translation>
+        <translation>Скрыть колонку идентификаторов</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="10"/>
         <source>Hide attributes with empty values</source>
-        <translation type="unfinished"></translation>
+        <translation>Скрыть атрибуты без значений</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="12"/>
         <source>Global view settings that affect all issue types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Глобальные настройки представлений для всех типов задач.</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="15"/>
         <source>Order of issue history:</source>
-        <translation type="unfinished"></translation>
+        <translation>Порядок записей в истории задач:</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="16"/>
         <source>Default filter in issue history:</source>
-        <translation type="unfinished"></translation>
+        <translation>Фильтр по умолчанию для истории задач:</translation>
     </message>
 </context>
 <context>
@@ -5709,124 +5985,129 @@
     <message>
         <location filename="../../views/delete.inc.php" line="33"/>
         <source>Delete View</source>
-        <translation>删除视图</translation>
+        <translation>Удалить представление</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="6"/>
         <source>Are you sure you want to delete public view &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定您要删除视图&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
+        <translation>Вы действительно хотите удалить публичное представление &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="8"/>
         <source>Are you sure you want to delete your personal view &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>确定您要删除您的私有视图&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
+        <translation>Вы действительно хотите удалить приватное представление &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="16"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="17"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
     <name>Common_Views_Helper</name>
     <message>
-        <location filename="../../views/helper.inc.php" line="103"/>
+        <location filename="../../views/helper.inc.php" line="110"/>
         <source>begins with</source>
-        <translation>开始于</translation>
+        <translation>начинается с</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="104"/>
+        <location filename="../../views/helper.inc.php" line="111"/>
         <source>contains</source>
-        <translation>包含</translation>
+        <translation>содержит</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="105"/>
+        <location filename="../../views/helper.inc.php" line="112"/>
         <source>ends with</source>
-        <translation>结束于</translation>
+        <translation>заканчивается на</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="106"/>
+        <location filename="../../views/helper.inc.php" line="113"/>
         <source>in</source>
-        <translation>在</translation>
+        <translation>в</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="248"/>
+        <location filename="../../views/helper.inc.php" line="255"/>
         <source>All Issues</source>
-        <translation>所有工作项</translation>
+        <translation>Все задачи</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="355"/>
-        <source>Add Public View</source>
-        <translation>添加公共视图</translation>
-    </message>
-    <message>
-        <location filename="../../views/helper.inc.php" line="356"/>
-        <location filename="../../views/helper.inc.php" line="363"/>
-        <source>Modify View</source>
-        <translation>修改视图</translation>
-    </message>
-    <message>
-        <location filename="../../views/helper.inc.php" line="357"/>
-        <location filename="../../views/helper.inc.php" line="364"/>
-        <source>Clone View</source>
-        <translation>复制视图</translation>
-    </message>
-    <message>
-        <location filename="../../views/helper.inc.php" line="358"/>
-        <location filename="../../views/helper.inc.php" line="365"/>
-        <source>Rename View</source>
-        <translation>重命名视图</translation>
-    </message>
-    <message>
-        <location filename="../../views/helper.inc.php" line="359"/>
         <location filename="../../views/helper.inc.php" line="366"/>
-        <source>Delete View</source>
-        <translation>删除视图</translation>
+        <source>Add Public View</source>
+        <translation>Добавить публичное представление</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="360"/>
-        <source>Unpublish View</source>
-        <translation>取消发布视图</translation>
+        <location filename="../../views/helper.inc.php" line="367"/>
+        <location filename="../../views/helper.inc.php" line="375"/>
+        <source>Modify View</source>
+        <translation>Изменить представление</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="362"/>
-        <source>Add Personal View</source>
-        <translation>添加个人视图</translation>
+        <location filename="../../views/helper.inc.php" line="368"/>
+        <location filename="../../views/helper.inc.php" line="376"/>
+        <source>Clone View</source>
+        <translation>Клонировать представление</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="369"/>
+        <location filename="../../views/helper.inc.php" line="377"/>
+        <source>Rename View</source>
+        <translation>Переименовать представление</translation>
+    </message>
+    <message>
+        <location filename="../../views/helper.inc.php" line="370"/>
+        <location filename="../../views/helper.inc.php" line="378"/>
+        <source>Delete View</source>
+        <translation>Удалить представление</translation>
+    </message>
+    <message>
+        <location filename="../../views/helper.inc.php" line="371"/>
+        <source>Unpublish View</source>
+        <translation>Сделать представление приватным</translation>
+    </message>
+    <message>
+        <location filename="../../views/helper.inc.php" line="372"/>
+        <source>Manage Personal Views</source>
+        <translation>Управление приватными представлениями</translation>
+    </message>
+    <message>
+        <location filename="../../views/helper.inc.php" line="374"/>
+        <source>Add Personal View</source>
+        <translation>Добавить приватное представление</translation>
+    </message>
+    <message>
+        <location filename="../../views/helper.inc.php" line="381"/>
         <source>Publish View</source>
-        <translation>发布视图</translation>
+        <translation>Сделать представление публичным</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="375"/>
+        <location filename="../../views/helper.inc.php" line="382"/>
         <source>Public View Settings</source>
-        <translation>发布视图设置</translation>
+        <translation>Настройки публичных представлений</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="442"/>
+        <location filename="../../views/helper.inc.php" line="451"/>
         <source>ascending</source>
-        <translation>升序</translation>
+        <translation>возрастающий</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="442"/>
+        <location filename="../../views/helper.inc.php" line="451"/>
         <source>descending</source>
-        <translation>降序</translation>
+        <translation>убывающий</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="455"/>
+        <location filename="../../views/helper.inc.php" line="464"/>
         <source>empty</source>
-        <translation>空</translation>
+        <translation>пусто</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="461"/>
+        <location filename="../../views/helper.inc.php" line="470"/>
         <source>AND</source>
-        <translation>和</translation>
+        <translation>И</translation>
     </message>
 </context>
 <context>
@@ -5834,27 +6115,27 @@
     <message>
         <location filename="../../views/rename.inc.php" line="33"/>
         <source>Rename View</source>
-        <translation>重命名视图</translation>
+        <translation>Переименовать представление</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="3"/>
         <source>Enter the new name for view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>输入视图&lt;strong&gt;%1&lt;/strong&gt;的新名称。</translation>
+        <translation>Введите новое имя для представления &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="7"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="10"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -5862,204 +6143,204 @@
     <message>
         <location filename="../../views/view.inc.php" line="56"/>
         <source>Modify Personal View</source>
-        <translation>修改个人视图</translation>
+        <translation>Изменить приватное представление</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="59"/>
         <location filename="../../views/view.inc.php" line="76"/>
         <source>Clone View</source>
-        <translation>复制视图</translation>
+        <translation>Клонировать представление</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="62"/>
         <source>Add Personal View</source>
-        <translation>添加个人视图</translation>
+        <translation>Добавить приватное представление</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="70"/>
         <source>Default View</source>
-        <translation>默认视图</translation>
+        <translation>Представление по умолчанию</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="73"/>
         <source>Modify Public View</source>
-        <translation>修改公共视图</translation>
+        <translation>Изменить публичное представление</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="79"/>
         <source>Add Public View</source>
-        <translation>添加公共视图</translation>
+        <translation>Добавить публичное представление</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="291"/>
         <source>Ascending</source>
-        <translation>升序</translation>
+        <translation>Возрастающий</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="291"/>
         <source>Descending</source>
-        <translation>降序</translation>
+        <translation>Убывающий</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="329"/>
         <source>is equal to</source>
-        <translation>相等于</translation>
+        <translation>совпадает с</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="330"/>
         <source>is not equal to</source>
-        <translation>不等于</translation>
+        <translation>не совпадает с</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="337"/>
         <source>begins with</source>
-        <translation>始于</translation>
+        <translation>начинается с</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="338"/>
         <source>contains</source>
-        <translation>包含</translation>
+        <translation>содержит</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="339"/>
         <source>ends with</source>
-        <translation>结束于</translation>
+        <translation>заканчивается на</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="340"/>
         <source>in list</source>
-        <translation>在列</translation>
+        <translation>в списке</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="345"/>
         <source>is less than</source>
-        <translation>小于</translation>
+        <translation>меньше</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="346"/>
         <source>is less than or equal to</source>
-        <translation>小于等于</translation>
+        <translation>меньше или равно</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="347"/>
         <source>is greater than</source>
-        <translation>大于</translation>
+        <translation>больше</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="348"/>
         <source>is greater than or equal to</source>
-        <translation>大于等于</translation>
+        <translation>больше или равно</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>您输入的数据有误。</translation>
+        <translation>Некоторые из введенных значений некорректны.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="12"/>
         <source>Modify the default view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>编辑类型&lt;strong&gt;%1&lt;/strong&gt;的默认视图。</translation>
+        <translation>Изменить исходное представление для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="15"/>
         <source>Clone view &lt;strong&gt;%1&lt;/strong&gt; as a new public view.</source>
-        <translation>复制视图&lt;strong&gt;%1&lt;/strong&gt;为一个公共视图。</translation>
+        <translation>Клонировать представление &lt;strong&gt;%1&lt;/strong&gt; как новое публичное.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="17"/>
         <source>Modify the public view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>修改公共视图&lt;strong&gt;%1&lt;/strong&gt;。</translation>
+        <translation>Изменить публичное представление &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="19"/>
         <source>Create a new public view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>为类型&lt;strong&gt;%1&lt;/strong&gt;创建一个新的视图。</translation>
+        <translation>Создать новое представление для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="23"/>
         <source>Clone view &lt;strong&gt;%1&lt;/strong&gt; as a new personal view.</source>
-        <translation>复制视图&lt;strong&gt;%1&lt;/strong&gt;为一个新的个人视图。</translation>
+        <translation>Клонировать представление &lt;strong&gt;%1&lt;/strong&gt; как новое приватное.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="25"/>
         <source>Modify your personal view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>修改个人视图&lt;strong&gt;%1&lt;/strong&gt;。</translation>
+        <translation>Изменить приватное представление &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="27"/>
         <source>Create a new personal view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>为类型&lt;strong&gt;%1&lt;/strong&gt;创建一个新的个人视图。</translation>
+        <translation>Создать новое приватное представление для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="36"/>
         <source>Name:</source>
-        <translation>名称：</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="40"/>
         <source>Columns</source>
-        <translation>列</translation>
+        <translation>Колонки</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="44"/>
         <source>Selected columns:</source>
-        <translation>选择列：</translation>
+        <translation>Выбрать колонки:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="45"/>
         <source>Order</source>
-        <translation>顺序</translation>
+        <translation>Порядок</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="61"/>
         <source>Available columns:</source>
-        <translation>可用的列：</translation>
+        <translation>Доступные колонки:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="74"/>
         <location filename="../../views/view.html.php" line="123"/>
         <source>Update</source>
-        <translation>更新</translation>
+        <translation>Обновить</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="80"/>
         <source>Sort Order</source>
-        <translation>排序</translation>
+        <translation>Порядок сортировки</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="82"/>
         <source>Column:</source>
-        <translation>列：</translation>
+        <translation>Колонка:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="83"/>
         <source>Order:</source>
-        <translation>顺序：</translation>
+        <translation>Порядок:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="91"/>
         <source>Filter</source>
-        <translation>过滤</translation>
+        <translation>Фильтр</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="96"/>
         <source>Active conditions:</source>
-        <translation>当前条件：</translation>
+        <translation>Активные колонки:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="109"/>
         <source>Available conditions:</source>
-        <translation>可用条件：</translation>
+        <translation>Доступные условия:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="131"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="132"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
@@ -6067,316 +6348,342 @@
     <message>
         <location filename="../../../cron/job.php" line="56"/>
         <source>Previous cron job timed out</source>
-        <translation>上一次的Cron任务超时</translation>
+        <translation>Предыдущая периодическая операция не завершилась</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="64"/>
         <source>Cron job started</source>
-        <translation>Cron任务已经启动</translation>
+        <translation>Периодическая операция запущена</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="96"/>
         <source>Cron job finished with error</source>
-        <translation>Cron任务完成，但是有错误</translation>
+        <translation>Периодическая операция завершилась с ошибкой</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="98"/>
         <source>Previous cron job is still running</source>
-        <translation>上一次的Cron任务还在运行</translation>
-    </message>
-    <message>
-        <location filename="../../../cron/job.php" line="248"/>
-        <source>Sent %1 notification emails</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../cron/job.php" line="309"/>
-        <source>Ignored inbox email from &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Предыдущая периодическая операция все еще выполняется</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="321"/>
+        <source>Sent %1 notification emails</source>
+        <translation>Отправлено %1 оповещений</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="384"/>
+        <source>Ignored inbox email from &quot;%1&quot;</source>
+        <translation>Проигнорировано входящее сообщение &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="396"/>
         <source>Ignored inbox email from unknown address &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Проигнорировано входящее сообщение с неизвестного адреса &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="340"/>
+        <location filename="../../../cron/job.php" line="415"/>
         <source>Ignored inbox email from &quot;%1&quot; because issue %2 is inaccessible</source>
-        <translation type="unfinished"></translation>
+        <translation>Проигнорировано входящее сообщение &quot;%1&quot; потому что задача &quot;%2&quot; недоступна</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="359"/>
+        <location filename="../../../cron/job.php" line="434"/>
         <source>Ambiguous folder for inbox email address &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Неоднозначное имя папки для входящих сообщений адреса &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="361"/>
+        <location filename="../../../cron/job.php" line="436"/>
         <source>No matching folder for inbox email address &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Не найдена подходящая папка для входящих сообщений адреса &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="370"/>
+        <location filename="../../../cron/job.php" line="445"/>
         <source>Ignored inbox email from &quot;%1&quot; to &quot;%2&quot; because folder is inaccessible</source>
-        <translation type="unfinished"></translation>
+        <translation>Проигнорировано входящее сообщение от &quot;%1&quot; потому что папка &quot;%2&quot; недоступна</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="376"/>
+        <location filename="../../../cron/job.php" line="451"/>
         <source>Ignored inbox email from &quot;%1&quot; because default folder is inaccessible</source>
-        <translation type="unfinished"></translation>
+        <translation>Проигнорировано входящее сообщение от &quot;%1&quot; потому что папка по умолчанию недоступна</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="379"/>
+        <location filename="../../../cron/job.php" line="454"/>
         <source>Ignored inbox email from &quot;%1&quot; because folder cannot be mapped</source>
-        <translation type="unfinished"></translation>
+        <translation>Проигнорировано входящее сообщение от &quot;%1&quot; потому что папка не может быть сопоставлена</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="417"/>
+        <location filename="../../../cron/job.php" line="492"/>
         <source>No subject</source>
-        <translation type="unfinished"></translation>
+        <translation>Без темы</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="456"/>
+        <location filename="../../../cron/job.php" line="531"/>
         <source>Attachment for message %1 from &quot;%2&quot; exceeded maximum size</source>
-        <translation type="unfinished"></translation>
+        <translation>Вложение для сообщения %1 от &quot;%2&quot; превышает допустимый размер</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="462"/>
+        <location filename="../../../cron/job.php" line="537"/>
         <source>HTML message for email %1</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML сообщение для адреса %1</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="466"/>
+        <location filename="../../../cron/job.php" line="541"/>
         <source>Attachment for email %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Вложение для адреса %1</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="504"/>
+        <location filename="../../../cron/job.php" line="584"/>
         <source>Processed %1 inbox emails</source>
-        <translation type="unfinished"></translation>
+        <translation>Обработано %1 входящих сообщений</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="534"/>
+        <location filename="../../../cron/job.php" line="614"/>
         <source>From:</source>
-        <translation type="unfinished"></translation>
+        <translation>От:</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="540"/>
+        <location filename="../../../cron/job.php" line="620"/>
         <source>To:</source>
-        <translation type="unfinished"></translation>
+        <translation>Кому:</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="547"/>
+        <location filename="../../../cron/job.php" line="627"/>
         <source>CC:</source>
-        <translation type="unfinished"></translation>
+        <translation>Копия:</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="550"/>
+        <location filename="../../../cron/job.php" line="630"/>
         <source>Subject:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тема:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="100"/>
         <source>Cron job finished</source>
-        <translation>Cron任务完成</translation>
+        <translation>Периодическая операция завершена</translation>
     </message>
 </context>
 <context>
     <name>Index</name>
     <message>
-        <location filename="../../../index.php" line="38"/>
+        <location filename="../../../index.php" line="35"/>
         <source>Log in to WebIssues</source>
-        <translation>登录到WebIssues</translation>
+        <translation>Войти в WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../../index.php" line="77"/>
+        <source>Anonymous Access</source>
+        <translation>Анонимный доступ</translation>
+    </message>
+    <message>
+        <location filename="../../../index.php" line="80"/>
+        <source>Register New Account</source>
+        <translation>Зарегистрировать новую учетную запись</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="8"/>
         <source>Login:</source>
-        <translation>登录：</translation>
+        <translation>Логин:</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="9"/>
         <source>Password:</source>
-        <translation>密码：</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="12"/>
-        <source>Register new account</source>
-        <translation>注册新账户</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="16"/>
-        <location filename="../../../index.html.php" line="27"/>
+        <location filename="../../../index.html.php" line="14"/>
+        <location filename="../../../index.html.php" line="25"/>
         <source>Log in</source>
-        <translation>登录</translation>
+        <translation>Войти</translation>
+    </message>
+    <message>
+        <location filename="../../../index.html.php" line="20"/>
+        <source>You have to enter a new password in order to log in.</source>
+        <translation>Необходимо ввести пароль для входа.</translation>
+    </message>
+    <message>
+        <location filename="../../../index.html.php" line="21"/>
+        <source>New password:</source>
+        <translation>Новый пароль:</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="22"/>
-        <source>You have to enter a new password in order to log in.</source>
-        <translation>登录前，您必须输入新的密码。</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="23"/>
-        <source>New password:</source>
-        <translation>新密码：</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="24"/>
         <source>Confirm password:</source>
-        <translation>确认密码：</translation>
+        <translation>Подтвердите пароль:</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="28"/>
+        <location filename="../../../index.html.php" line="26"/>
         <source>Cancel</source>
-        <translation>取消</translation>
+        <translation>Отмена</translation>
     </message>
 </context>
 <context>
     <name>Register</name>
     <message>
-        <location filename="../../../register.php" line="39"/>
-        <source>Register new account</source>
-        <translation>注册新账户</translation>
+        <location filename="../../../register.html.php" line="10"/>
+        <source>Fill the information below to begin registration.</source>
+        <translation>Введите необходимую информацию для начала регистрации.</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="8"/>
-        <source>Fill the information below to begin registration. Note that administrator&apos;s approval is required before you can log in.</source>
-        <translation>填写下列信息开始注册。注意，你需要等待管理员通过你的请求才能登录。</translation>
+        <location filename="../../../register.html.php" line="12"/>
+        <source>Note that administrator&apos;s approval is required before you can log in.</source>
+        <translation>Обратите внимание, что для входа потребуется подтверждение администратора.</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="11"/>
+        <location filename="../../../register.html.php" line="18"/>
         <source>User Name</source>
-        <translation>用户名</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="13"/>
-        <source>Enter the user name that will be visible to other users.</source>
-        <translation>请填写用户名，此用户名将会对其它用户可见。</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="15"/>
-        <source>Name:</source>
-        <translation>用户名：</translation>
+        <translation>Имя пользователя</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="20"/>
-        <source>Credentials</source>
-        <translation>密码</translation>
+        <source>Enter the user name that will be visible to other users.</source>
+        <translation>Введите имя пользователя, которое будет видимо другим участникам.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="22"/>
+        <source>Name:</source>
+        <translation>Имя:</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="27"/>
+        <source>Credentials</source>
+        <translation>Учетные данные</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="29"/>
         <source>Enter login and password for your new account.</source>
-        <translation>输入你新账户的密码。</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="24"/>
-        <source>Login:</source>
-        <translation>登录名：</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="25"/>
-        <source>Password:</source>
-        <translation>密码：</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="26"/>
-        <source>Confirm password:</source>
-        <translation>确认密码：</translation>
+        <translation>Введите логин и пароль для своей учетной записи.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="31"/>
-        <source>Email Address</source>
-        <translation>邮件地址</translation>
+        <source>Login:</source>
+        <translation>Логин:</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="32"/>
+        <source>Password:</source>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="33"/>
-        <source>Email address:</source>
-        <translation>邮件地址：</translation>
+        <source>Confirm password:</source>
+        <translation>Подтвердите пароль:</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="35"/>
-        <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
-        <translation>此地址仅对系统管理员可见。激活邮件将会被发送至此地址。</translation>
+        <location filename="../../../register.html.php" line="38"/>
+        <source>Email Address</source>
+        <translation>Адрес e-mail</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="40"/>
-        <source>Register</source>
-        <translation>注册</translation>
+        <source>Email address:</source>
+        <translation>Адрес e-mail:</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="41"/>
-        <source>Cancel</source>
-        <translation>取消</translation>
+        <location filename="../../../register.html.php" line="42"/>
+        <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
+        <translation>Этот адрес будет доступен только администратору. Активационное сообщение будет отправлено на этот адрес.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="47"/>
+        <source>Register</source>
+        <translation>Регистрация</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="48"/>
+        <source>Cancel</source>
+        <translation>Отмена</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="54"/>
         <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
-        <translation>感谢你的注册。你将收到一封激活邮件，请照邮件内容完成注册。</translation>
+        <translation>Спасибо за регистрацию. Вскоре Вы получите активационное сообщение с инструкциями по завершению регистрации.</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="50"/>
-        <location filename="../../../register.html.php" line="59"/>
+        <location filename="../../../register.html.php" line="57"/>
+        <location filename="../../../register.html.php" line="66"/>
+        <location filename="../../../register.html.php" line="75"/>
         <source>OK</source>
-        <translation>确定</translation>
+        <translation>Готово</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="56"/>
+        <location filename="../../../register.html.php" line="63"/>
         <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
-        <translation>你的注册请求已经激活，当管理员同意的你的请求，你将收到一封通知邮件。</translation>
+        <translation>Ваш запрос на регистрацию был активирован. Вы получите извещение по электронной почте после подтверждения администратором.</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="72"/>
+        <source>Your registration request was activated. You can now log in to the server using your login and password.</source>
+        <translation>Ваш запрос на регистрацию активирован. Теперь вы можете войти в систему используя свой логин и пароль.</translation>
+    </message>
+    <message>
+        <location filename="../../../register.php" line="41"/>
+        <source>Register New Account</source>
+        <translation>Зарегистрировать новую учетную запись</translation>
     </message>
 </context>
 <context>
     <name>System_Api_IssueManager</name>
     <message>
-        <location filename="../../../system/api/issuemanager.inc.php" line="733"/>
+        <location filename="../../../system/api/issuemanager.inc.php" line="758"/>
         <source>Deleted issue &quot;%1&quot; from folder &quot;%2&quot;</source>
-        <translation>从目录“%2”删除工作项“%1”</translation>
+        <translation>Удалена задача &quot;%1&quot; из папки &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
     <name>System_Api_ProjectManager</name>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="257"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="293"/>
         <source>Added project &quot;%1&quot;</source>
-        <translation>已经添加项目“%1”</translation>
+        <translation>Добавлен проект &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="295"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="331"/>
         <source>Renamed project &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>已重命名项目“%1”为“%2”</translation>
+        <translation>Проект &quot;%1&quot; переименован в &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="336"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="356"/>
+        <source>Enabled public access for project &quot;%1&quot;</source>
+        <translation>Разрешен публичный доступ к проекту &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/projectmanager.inc.php" line="359"/>
+        <source>Disabled public access for project &quot;%1&quot;</source>
+        <translation>Запрещен публичный доступ к проекту &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/projectmanager.inc.php" line="401"/>
         <source>Deleted project &quot;%1&quot; with folders</source>
-        <translation>项目“%1”及目录已经删除</translation>
+        <translation>Удален проект &quot;%1&quot; вместе с папками</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="339"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="404"/>
         <source>Deleted project &quot;%1&quot;</source>
-        <translation>项目“%1”已经删除</translation>
+        <translation>Удален проект &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="394"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="459"/>
         <source>Added folder &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>已经在项目“%2”添加目录“%1”</translation>
+        <translation>Добавлена папка &quot;%1&quot; в проект &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="433"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="498"/>
         <source>Renamed folder &quot;%1&quot; to &quot;%2&quot; in project &quot;%3&quot;</source>
-        <translation>已经在项目“%3”中重命名目录“%1”为“%2”</translation>
+        <translation>Папка &quot;%1&quot; переименована в &quot;%2&quot; в проекте &quot;%3&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="473"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="538"/>
         <source>Deleted folder &quot;%1&quot; with issues from project &quot;%2&quot;</source>
-        <translation>已经从项目“%2”中删除目录“%1”及工作项</translation>
+        <translation>Удалена папка &quot;%1&quot; вместе с задачами в проекте &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="476"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="541"/>
         <source>Deleted folder &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation>已经从项目“%2”中删除目录“%1”</translation>
+        <translation>Удалена папка &quot;%1&quot; в проекте &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="533"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="598"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
-        <translation>已经从项目“%2”中移动目录“%1”到“%3”</translation>
+        <translation>Папка &quot;%1&quot; перемещена из проекта &quot;%2&quot; в &quot;%3&quot;</translation>
     </message>
 </context>
 <context>
@@ -6384,22 +6691,22 @@
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="171"/>
         <source>User &quot;%1&quot; registered</source>
-        <translation>用户&quot;%1&quot;已注册</translation>
+        <translation>Пользователь &quot;%1&quot; зарегистрирован</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="194"/>
         <source>Registration request for user &quot;%1&quot; activated</source>
-        <translation>用户&quot;%1&quot;注册请求已经激活</translation>
+        <translation>Запрос на регистрацию пользователя &quot;%1&quot; активирован</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="238"/>
         <source>Registration request for user &quot;%1&quot; approved</source>
-        <translation>用户&quot;%1&quot;注册请求已经通过</translation>
+        <translation>Запрос на регистрацию пользователя &quot;%1&quot; подтвержден</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="257"/>
         <source>Registration request for user &quot;%1&quot; rejected</source>
-        <translation>用户&quot;%1&quot;注册请求已经被拒绝</translation>
+        <translation>Запрос на регистрацию пользователя &quot;%1&quot; отклонен</translation>
     </message>
 </context>
 <context>
@@ -6407,12 +6714,12 @@
     <message>
         <location filename="../../../system/api/servermanager.inc.php" line="78"/>
         <source>Renamed the server from &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>已经命名服务器“%1”为“%2”</translation>
+        <translation>Сервер &quot;%1&quot; переименован в &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/servermanager.inc.php" line="103"/>
         <source>Changed the unique identifier of the server</source>
-        <translation>更改此服务器的唯一ID</translation>
+        <translation>Изменен уникальный идентификатор сервера</translation>
     </message>
 </context>
 <context>
@@ -6420,60 +6727,60 @@
     <message>
         <location filename="../../../system/api/sessionmanager.inc.php" line="187"/>
         <source>Incorrect login attempt for user &quot;%1&quot;</source>
-        <translation>用户“%1”登录失败</translation>
+        <translation>Неудачная попытка входа пользователя &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/sessionmanager.inc.php" line="203"/>
         <source>Session opened for user &quot;%1&quot;</source>
-        <translation>用户“%1”的会话已经打开</translation>
+        <translation>Для пользователя &quot;%1&quot; открыта сессия</translation>
     </message>
 </context>
 <context>
     <name>System_Api_TypeManager</name>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="297"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="311"/>
         <source>Added issue type &quot;%1&quot;</source>
-        <translation>工作项类型“%1”已添加</translation>
+        <translation>Добавлен тип задач &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="335"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="349"/>
         <source>Renamed issue type &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>已重命名类型“%1”为“%2”</translation>
+        <translation>Тип задач &quot;%1&quot; переименован в &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="376"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="390"/>
         <source>Deleted issue type &quot;%1&quot; with folders</source>
-        <translation>工作项类型“%1”及目录已删除</translation>
+        <translation>Удален тип задач &quot;%1&quot; вместе с папками</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="379"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="393"/>
         <source>Deleted issue type &quot;%1&quot;</source>
-        <translation>工作项类型“%1”已删除</translation>
+        <translation>Удален тип задач &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="433"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="447"/>
         <source>Added attribute &quot;%1&quot; to issue type &quot;%2&quot;</source>
-        <translation>工作项类型“%2”的属性“%1”已经添加</translation>
+        <translation>Добавлен атрибут &quot;%1&quot; к  задачам типа &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="472"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="486"/>
         <source>Renamed attribute &quot;%1&quot; to &quot;%2&quot; of issue type &quot;%3&quot;</source>
-        <translation>工作项类型“%3”的属性“%1”已重命名为“%2”</translation>
+        <translation>Атрибут &quot;%1&quot; переименован в &quot;%2&quot; для задач типа &quot;%3&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="496"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="510"/>
         <source>Modified attribute &quot;%1&quot; of issue type &quot;%2&quot;</source>
-        <translation>工作项类型“%2”的属性“%1”已经被修改</translation>
+        <translation>Изменен атрибут &quot;%1&quot; задач типа &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="530"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="544"/>
         <source>Deleted attribute &quot;%1&quot; with values from issue type &quot;%2&quot;</source>
-        <translation>工作项类型“%2”的属性“%1”及值已删除</translation>
+        <translation>Удален атрибут &quot;%1&quot; вместе со значениями у задач типа &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="533"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="547"/>
         <source>Deleted attribute &quot;%1&quot; from issue type &quot;%2&quot;</source>
-        <translation>工作项类型“%2”的属性“%1”已删除</translation>
+        <translation>Удален атрибут &quot;%1&quot; задач типа &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -6481,52 +6788,52 @@
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="362"/>
         <source>Added user &quot;%1&quot;</source>
-        <translation>已增加用户“%1”</translation>
+        <translation>Добавлен пользователь &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="392"/>
         <source>Changed password for user &quot;%1&quot;</source>
-        <translation>用户“%1”的密码已修改</translation>
+        <translation>Изменен пароль пользователя &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="437"/>
         <source>User &quot;%1&quot; changed own password</source>
-        <translation>用户“%1”更改了自己的密码</translation>
+        <translation>Пользователь &quot;%1&quot; сменил свой пароль</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="475"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>重命名用户“%1”为“%2”</translation>
+        <translation>Пользователь &quot;%1&quot; переименован в &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="507"/>
         <source>Disabled access for user &quot;%1&quot;</source>
-        <translation>已禁止用户“%1”的访问</translation>
+        <translation>Отключен доступ пользователю &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="511"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
-        <translation>已授权用户“%1”访问</translation>
+        <translation>Пользователю &quot;%1&quot; предоставлен обычный уровень доступа</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="515"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
-        <translation>已授权管理员权限给用户“%1”</translation>
+        <translation>Пользователю &quot;%1&quot; добавлен административный уровень доступа</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="570"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation>已将用户“%1”从项目“%2”删除</translation>
+        <translation>Пользователь &quot;%1&quot; удален из проекта &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="574"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>已授权用户“%1”对项目“%2”的访问</translation>
+        <translation>Пользователю &quot;%1&quot; предоставлен обычный уровень доступа в проекте &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="578"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>已授权用户“%1”对项目“%2”的管理员权限</translation>
+        <translation>Пользователю &quot;%1&quot; предоставлен административный уровень доступа в проекте &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -6534,375 +6841,380 @@
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="42"/>
         <source>ID</source>
-        <translation>ID</translation>
+        <translation>Идентификатор</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="43"/>
         <source>Name</source>
-        <translation>名称</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="44"/>
         <source>Created By</source>
-        <translation>创建人</translation>
+        <translation>Кем создано</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="45"/>
         <source>Created Date</source>
-        <translation>创建日期</translation>
+        <translation>Создано</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="46"/>
         <source>Modified By</source>
-        <translation>修改人</translation>
+        <translation>Кем изменено</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="47"/>
         <source>Modified Date</source>
-        <translation>修改时间</translation>
+        <translation>Изменено</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/columnhelper.inc.php" line="48"/>
+        <source>Location</source>
+        <translation>Расположение</translation>
     </message>
 </context>
 <context>
     <name>System_Web_ErrorHelper</name>
     <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="71"/>
-        <source>Invalid login or password</source>
-        <translation>用户名或密码错误</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="89"/>
-        <source>A project with this name already exists</source>
-        <translation>相同名称的项目已经存在</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="91"/>
-        <source>A folder with this name already exists</source>
-        <translation>相同名称的目录已经存在</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="93"/>
-        <source>A user with this login or name already exists</source>
-        <translation>用户名已经存在</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="95"/>
-        <source>A type with this name already exists</source>
-        <translation>相同名称的类型已经存在</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="97"/>
-        <source>An attribute with this name already exists</source>
-        <translation>相同名称的属性已经存在</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="117"/>
-        <source>Required value is missing</source>
-        <translation>缺少必要的值</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="119"/>
-        <source>Text is too short</source>
-        <translation>文件太短</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="121"/>
-        <source>Text is too long</source>
-        <translation>文本太长</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="123"/>
-        <source>Number is too small</source>
-        <translation>数字太小</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="125"/>
-        <source>Number is too big</source>
-        <translation>数字太大</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="131"/>
-        <source>Value has incorrect format</source>
-        <translation>值格式不正确</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="133"/>
-        <source>Date is not correct</source>
-        <translation>日期不正确</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="135"/>
-        <source>Time is not correct</source>
-        <translation>时间不正确</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="137"/>
-        <source>Email address is invalid</source>
-        <translation>邮件地址无效</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="139"/>
-        <source>No matching item is selected</source>
-        <translation>没有选择匹配的项</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="141"/>
-        <source>Duplicate items are entered</source>
-        <translation>重入了重复的项</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/errorhelper.inc.php" line="127"/>
-        <source>Number has too many decimal digits</source>
-        <translation>数字小数位太多</translation>
-    </message>
-    <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="54"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>您输入的数据有误。</translation>
+        <translation>Некоторые из введенных значений некорректны.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="56"/>
         <source>Incorrect value: %1.</source>
-        <translation>错误的值：“%1”。</translation>
+        <translation>Некорректное значение: %1.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="67"/>
         <source>Your session has expired; please reconnect</source>
-        <translation>您的会话已过期，请重新连接</translation>
+        <translation>Ваша сессия истекла, подключитесь снова</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="69"/>
         <source>You have no permission to perform this operation</source>
-        <translation>您不具备此操作的权限</translation>
+        <translation>У Вас нет прав на данную операцию</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="71"/>
+        <source>Invalid login or password</source>
+        <translation>Неверный логин или пароль</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="73"/>
         <source>Project does not exist</source>
-        <translation>项目不存在</translation>
+        <translation>Проект не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="75"/>
         <source>Folder does not exist</source>
-        <translation>目录不存在</translation>
+        <translation>Папка не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="77"/>
         <source>Issue does not exist</source>
-        <translation>工作项不存在</translation>
+        <translation>Задача не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="79"/>
         <source>Attachment does not exist</source>
-        <translation>附件不存在</translation>
+        <translation>Вложение не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="81"/>
         <source>User does not exist</source>
-        <translation>用户不存在</translation>
+        <translation>Пользователь не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="83"/>
         <source>Type does not exist</source>
-        <translation>类型不存在</translation>
+        <translation>Тип не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="85"/>
         <source>Attribute does not exist</source>
-        <translation>属性不存在</translation>
+        <translation>Атрибут не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="87"/>
         <source>Event does not exist</source>
-        <translation>事件不存在</translation>
+        <translation>Событие не существует</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="89"/>
+        <source>A project with this name already exists</source>
+        <translation>Проект с таким именем уже существует</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="91"/>
+        <source>A folder with this name already exists</source>
+        <translation>Папка с таким именем уже существует</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="93"/>
+        <source>A user with this login or name already exists</source>
+        <translation>Пользователь с таким именем или логином уже существует</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="95"/>
+        <source>A type with this name already exists</source>
+        <translation>Тип с таким именем уже существует</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="97"/>
+        <source>An attribute with this name already exists</source>
+        <translation>Атрибут с таким именем уже существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="99"/>
         <source>Project cannot be deleted</source>
-        <translation>无法删除项目</translation>
+        <translation>Проект нельзя удалить</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="101"/>
         <source>Folder cannot be deleted</source>
-        <translation>无法删除目录</translation>
+        <translation>Папку нельзя удалить</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="103"/>
         <source>Type cannot be deleted</source>
-        <translation>无法删除类型</translation>
+        <translation>Тип нельзя удалить</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="105"/>
         <source>Text contains invalid characters</source>
-        <translation>文本包含无效的字符</translation>
+        <translation>Текст содержит недопустимые символы</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="107"/>
         <source>Access level is invalid</source>
-        <translation>访问级别无效</translation>
+        <translation>Уровень доступа неверный</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="109"/>
         <source>Value is invalid</source>
-        <translation>值无效</translation>
+        <translation>Значение не верно</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="111"/>
         <source>Definition is invalid</source>
-        <translation>定义无效</translation>
+        <translation>Определение не верно</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="113"/>
         <source>Invalid preference value</source>
-        <translation>无效的预设值</translation>
+        <translation>Неверное значение свойства</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="115"/>
         <source>Invalid setting value</source>
-        <translation>无效的设置值</translation>
+        <translation>Неверное значение свойства</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="117"/>
+        <source>Required value is missing</source>
+        <translation>Отсутствует требующееся значение</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="119"/>
+        <source>Text is too short</source>
+        <translation>Текст слишком короткий</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="121"/>
+        <source>Text is too long</source>
+        <translation>Текст слишком длинный</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="123"/>
+        <source>Number is too small</source>
+        <translation>Число слишком маленькое</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="125"/>
+        <source>Number is too big</source>
+        <translation>Число слишком большое</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="127"/>
+        <source>Number has too many decimal digits</source>
+        <translation>Число имеет слишком много цифр</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="129"/>
         <source>Number has too many digits</source>
-        <translation>数字位数太多</translation>
+        <translation>Число имеет слишком много цифр</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="131"/>
+        <source>Value has incorrect format</source>
+        <translation>Значение имеет неверный формат</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="133"/>
+        <source>Date is not correct</source>
+        <translation>Дата не верна</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="135"/>
+        <source>Time is not correct</source>
+        <translation>Время не верно</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="137"/>
+        <source>Email address is invalid</source>
+        <translation>Адрес электронной почты не верный</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="139"/>
+        <source>No matching item is selected</source>
+        <translation>Подходящее значение не выбрано</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="141"/>
+        <source>Duplicate items are entered</source>
+        <translation>Введены дублирующиеся значения</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="143"/>
         <source>Minimum value is greater than maximum value</source>
-        <translation>最小值大于最大值</translation>
+        <translation>Минимальное значение превышает максимальное</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="145"/>
         <source>Incompatible attribute type</source>
-        <translation>不兼容的属性类型</translation>
+        <translation>Несовместимый тип атрибутов</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="147"/>
         <source>View does not exist</source>
-        <translation>视图不存在</translation>
+        <translation>Представление не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="149"/>
         <source>Column does not exist</source>
-        <translation>列不存在</translation>
+        <translation>Колонка не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="151"/>
         <source>A view with this name already exists</source>
-        <translation>相同名称的视图已经存在</translation>
+        <translation>Представление с таким именем уже существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="153"/>
         <source>A required column is missing</source>
-        <translation>一个必须的列缺失</translation>
+        <translation>Необходимая колонка отсутствует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="155"/>
         <source>An attribute is missing</source>
-        <translation>一个必须的属性缺失</translation>
+        <translation>Атрибут отсутствует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="157"/>
         <source>No items are specified</source>
-        <translation>没有指定项</translation>
+        <translation>Элементы не определены</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="159"/>
         <source>Passwords do not match; please retype them</source>
-        <translation>密码不匹配，请重新输入</translation>
+        <translation>Пароли не соответствуют, введите их заново</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="161"/>
         <source>Alert does not exist</source>
-        <translation>警告不存在</translation>
+        <translation>Оповещение не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="163"/>
         <source>Alert already exists</source>
-        <translation>警告已存在</translation>
+        <translation>Оповещение уже существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="165"/>
         <source>Invalid alert email setting</source>
-        <translation>无效的警告邮件设置</translation>
+        <translation>Неверный адрес электронной почты для оповещения</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="167"/>
         <source>Comment does not exist</source>
-        <translation>评论不存在</translation>
+        <translation>Комментарий не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="169"/>
         <source>Attribute cannot be deleted</source>
-        <translation>无法删除属性</translation>
+        <translation>Атрибут нельзя удалить</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="171"/>
         <source>You must change your password</source>
-        <translation>您必须修改您的密码</translation>
+        <translation>Вам необходимо изменить пароль</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="173"/>
         <source>Cannot reuse password; choose different password</source>
-        <translation>不能重用密码，请选择另外一个密码</translation>
+        <translation>Нельзя использовать пароль повторно, введите новый пароль</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="175"/>
         <source>The specified item was not found</source>
-        <translation>无法找到指定的项</translation>
+        <translation>Указанный элемент не найден</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="177"/>
         <source>Value cannot contain a comma</source>
-        <translation>值不能包含逗号</translation>
+        <translation>Значение не может содержать запятую</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="179"/>
         <source>Concurrency error; please try again</source>
-        <translation>并行错误，请重试</translation>
+        <translation>Ошибка одновременного доступа, повторите попытку</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="181"/>
         <source>One of the dependent objects no longer exists</source>
-        <translation>被依赖的某个对象已经不存在</translation>
+        <translation>Один из необходимых объектов уже не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="183"/>
         <source>Another user already uses this email address</source>
-        <translation type="unfinished"></translation>
+        <translation>Другой пользователь уже использует этот электронный адрес</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="189"/>
         <source>Description does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="191"/>
         <source>Description already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание уже существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="193"/>
         <source>Text format is invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат текста неверен</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="195"/>
         <source>Subscription does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Подписка не существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="197"/>
         <source>Subscription already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>Подписка уже существует</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="185"/>
         <source>The activation key is invalid</source>
-        <translation>激活代码无效</translation>
+        <translation>Код активации неверный</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="187"/>
         <source>Request does not exist</source>
-        <translation>请求不存在</translation>
+        <translation>Запрос не существует</translation>
     </message>
 </context>
 <context>
@@ -6912,146 +7224,146 @@
         <location filename="../../../system/web/expressionhelper.inc.php" line="79"/>
         <location filename="../../../system/web/expressionhelper.inc.php" line="93"/>
         <source>Me</source>
-        <translation>我</translation>
+        <translation>Я</translation>
     </message>
     <message>
         <location filename="../../../system/web/expressionhelper.inc.php" line="46"/>
         <location filename="../../../system/web/expressionhelper.inc.php" line="81"/>
         <source>Today</source>
-        <translation>今天</translation>
+        <translation>Сегодня</translation>
     </message>
 </context>
 <context>
     <name>System_Web_Grid</name>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="236"/>
+        <location filename="../../../system/web/grid.inc.php" line="255"/>
         <source>Ascending</source>
-        <translation>升序</translation>
+        <translation>Возрастающий</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="236"/>
+        <location filename="../../../system/web/grid.inc.php" line="255"/>
         <source>Decending</source>
-        <translation>降序</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/grid.inc.php" line="277"/>
-        <source>&amp;laquo; first</source>
-        <translation>&amp;laquo; 第一页</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/grid.inc.php" line="278"/>
-        <source>&amp;lt; previous</source>
-        <translation>&amp;lt; 前一页</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/grid.inc.php" line="295"/>
-        <source>next &amp;gt;</source>
-        <translation>下一页 &amp;gt;</translation>
+        <translation>Убывающий</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="296"/>
+        <source>&amp;laquo; first</source>
+        <translation>&amp;laquo; первый</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/grid.inc.php" line="297"/>
+        <source>&amp;lt; previous</source>
+        <translation>&amp;lt; предыдущий</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/grid.inc.php" line="314"/>
+        <source>next &amp;gt;</source>
+        <translation>следующий &amp;gt;</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/grid.inc.php" line="315"/>
         <source>last &amp;raquo;</source>
-        <translation>最后一页 &amp;raquo;</translation>
+        <translation>последний &amp;raquo;</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="339"/>
+        <location filename="../../../system/web/grid.inc.php" line="358"/>
         <source>Expand</source>
-        <translation>展开</translation>
+        <translation>Развернуть</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="340"/>
+        <location filename="../../../system/web/grid.inc.php" line="359"/>
         <source>Collapse</source>
-        <translation>折起</translation>
+        <translation>Свернуть</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="342"/>
+        <location filename="../../../system/web/grid.inc.php" line="361"/>
         <source>Blank</source>
-        <translation>空白</translation>
+        <translation>Чистый</translation>
     </message>
 </context>
 <context>
     <name>System_Web_JavaScript</name>
     <message>
+        <location filename="../../../system/web/javascript.inc.php" line="101"/>
+        <location filename="../../../system/web/javascript.inc.php" line="117"/>
+        <source>Today</source>
+        <translation>Сегодня</translation>
+    </message>
+    <message>
         <location filename="../../../system/web/javascript.inc.php" line="109"/>
         <location filename="../../../system/web/javascript.inc.php" line="139"/>
         <source>Choose</source>
-        <translation>选择</translation>
+        <translation>Выбрать</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="115"/>
         <source>Next</source>
-        <translation>下一步</translation>
+        <translation>Следующий</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="116"/>
         <source>Previous</source>
-        <translation>上一步</translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="303"/>
-        <source>Bold</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="304"/>
-        <source>Italic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="305"/>
-        <source>Monospace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="307"/>
-        <source>Hyperlink</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="307"/>
-        <source>Enter link URL:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="308"/>
-        <source>Link text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="310"/>
-        <source>Bullet List</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="311"/>
-        <source>Quote Block</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="312"/>
-        <source>Code Block</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="314"/>
-        <source>Preview</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../system/web/javascript.inc.php" line="101"/>
-        <location filename="../../../system/web/javascript.inc.php" line="117"/>
-        <source>Today</source>
-        <translation>今天</translation>
+        <translation>Предыдущий</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="119"/>
         <source>Close</source>
-        <translation>关闭</translation>
+        <translation>Закрыть</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="158"/>
         <source>Search Options</source>
-        <translation>搜索选项</translation>
+        <translation>Свойства поиска</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="303"/>
+        <source>Bold</source>
+        <translation>Жирный</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="304"/>
+        <source>Italic</source>
+        <translation>Курсив</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="305"/>
+        <source>Monospace</source>
+        <translation>Моноширинный</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="307"/>
+        <source>Hyperlink</source>
+        <translation>Гиперссылка</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="307"/>
+        <source>Enter link URL:</source>
+        <translation>Введите URL ссылки:</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="308"/>
+        <source>Link text</source>
+        <translation>Текст ссылки</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="310"/>
+        <source>Bullet List</source>
+        <translation>Список</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="311"/>
+        <source>Quote Block</source>
+        <translation>Блок с цитатой</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="312"/>
+        <source>Code Block</source>
+        <translation>Блок кода</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="314"/>
+        <source>Preview</source>
+        <translation>Просмотр</translation>
     </message>
 </context>
 <context>
@@ -7059,112 +7371,112 @@
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="42"/>
         <source>Sunday</source>
-        <translation>星期日</translation>
+        <translation>Воскресенье</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="43"/>
         <source>Monday</source>
-        <translation>星期一</translation>
+        <translation>Понедельник</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="44"/>
         <source>Tuesday</source>
-        <translation>星期二</translation>
+        <translation>Вторник</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="45"/>
         <source>Wednesday</source>
-        <translation>星期三</translation>
+        <translation>Среда</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="46"/>
         <source>Thursday</source>
-        <translation>星期四</translation>
+        <translation>Четверг</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="47"/>
         <source>Friday</source>
-        <translation>星期五</translation>
+        <translation>Пятница</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="48"/>
         <source>Saturday</source>
-        <translation>星期六</translation>
+        <translation>Суббота</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="68"/>
         <source>January</source>
-        <translation>一月</translation>
+        <translation>Январь</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="69"/>
         <source>February</source>
-        <translation>二月</translation>
+        <translation>Февраль</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="70"/>
         <source>March</source>
-        <translation>三月</translation>
+        <translation>Март</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="71"/>
         <source>April</source>
-        <translation>四月</translation>
+        <translation>Апрель</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="72"/>
         <source>May</source>
-        <translation>五月</translation>
+        <translation>Май</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="73"/>
         <source>June</source>
-        <translation>六月</translation>
+        <translation>Июнь</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="74"/>
         <source>July</source>
-        <translation>七月</translation>
+        <translation>Июль</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="75"/>
         <source>August</source>
-        <translation>八月</translation>
+        <translation>Август</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="76"/>
         <source>September</source>
-        <translation>九月</translation>
+        <translation>Сентябрь</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="77"/>
         <source>October</source>
-        <translation>十月</translation>
+        <translation>Октябрь</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="78"/>
         <source>November</source>
-        <translation>十一月</translation>
+        <translation>Ноябрь</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="79"/>
         <source>December</source>
-        <translation>十二月</translation>
+        <translation>Декабрь</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="103"/>
         <source>%1 bytes</source>
-        <translation>%1 字节</translation>
+        <translation>%1 байт</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="107"/>
         <source>%1 kB</source>
-        <translation>%1 KB</translation>
+        <translation>%1 КБ</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="110"/>
         <source>%1 MB</source>
-        <translation>%1 MB</translation>
+        <translation>%1 МБ</translation>
     </message>
 </context>
 </TS>

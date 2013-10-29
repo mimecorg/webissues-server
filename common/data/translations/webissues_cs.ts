@@ -79,7 +79,7 @@
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="52"/>
         <source>Cron</source>
-        <translation>CRON</translation>
+        <translation>Cron</translation>
     </message>
 </context>
 <context>
@@ -123,74 +123,127 @@
         <translation>Administrativní panel</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="4"/>
+        <location filename="../../../admin/index.html.php" line="7"/>
         <source>General Information</source>
         <translation>Základní informace</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="5"/>
+        <location filename="../../../admin/index.html.php" line="8"/>
         <source>Show information about this server.</source>
         <translation>Zobrazit informace o tomto serveru.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="6"/>
+        <location filename="../../../admin/index.html.php" line="9"/>
         <source>Event Log</source>
         <translation>Log událostí</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="7"/>
+        <location filename="../../../admin/index.html.php" line="10"/>
         <source>Show recent entries from the event log.</source>
         <translation>Zobrazit požadované záznamy z logu událostí.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="8"/>
+        <location filename="../../../admin/index.html.php" line="16"/>
+        <source>Configuration</source>
+        <translation>Konfigurace</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="19"/>
         <source>Server Settings</source>
         <translation>Nastavení serveru</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="9"/>
+        <location filename="../../../admin/index.html.php" line="20"/>
         <source>Configure default language and other settings for this server.</source>
         <translation>Nastavit výchozí jazyk a ostatní nastavení serveru.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="10"/>
+        <location filename="../../../admin/index.html.php" line="21"/>
         <source>Email Settings</source>
         <translation>Nastavení e-mailu</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="11"/>
+        <location filename="../../../admin/index.html.php" line="22"/>
         <source>Configure notification email settings.</source>
         <translation>Konfigurace e-mailu pro zasílání upozornění.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="13"/>
+        <location filename="../../../admin/index.html.php" line="23"/>
+        <source>Inbox Settings</source>
+        <translation>Nastavení schránky</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="24"/>
+        <source>Configure email inbox settings.</source>
+        <translation>Nastavení příchozí e-mailové schránky.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="30"/>
+        <source>Management</source>
+        <translation>Správa</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="34"/>
         <source>Create and edit user accounts.</source>
         <translation>Vytvořit, nebo změnit uživatele.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="12"/>
+        <location filename="../../../admin/index.html.php" line="33"/>
         <source>User Accounts</source>
         <translation>Uživatelské účty</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="15"/>
+        <location filename="../../../admin/index.html.php" line="4"/>
+        <source>Information</source>
+        <translation>Informace</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="36"/>
         <source>Registration Requests</source>
         <translation>Registrační požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="16"/>
+        <location filename="../../../admin/index.html.php" line="37"/>
         <source>Approve and reject pending user registration requests.</source>
         <translation>Schválit, nebo zamítnout registrační požadavky.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="18"/>
+        <location filename="../../../admin/index.html.php" line="39"/>
         <source>Issue Types</source>
         <translation>Typy problémů</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="19"/>
+        <location filename="../../../admin/index.html.php" line="40"/>
         <source>Create and edit issue types.</source>
         <translation>Vytvořit, nebo upravit typy problémů.</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Info_Database</name>
+    <message>
+        <location filename="../../../admin/info/database.html.php" line="4"/>
+        <source>Database Configuration</source>
+        <translation>Nastavení databáze</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/database.html.php" line="8"/>
+        <source>Database server:</source>
+        <translation>Databázový server:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/database.html.php" line="12"/>
+        <source>Host name:</source>
+        <translation>Název serveru:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/database.html.php" line="16"/>
+        <source>Database name:</source>
+        <translation>Název databáze:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/database.html.php" line="20"/>
+        <source>Table prefix:</source>
+        <translation>Prefix tabulek:</translation>
     </message>
 </context>
 <context>
@@ -234,64 +287,150 @@
         <translation>Základní informace</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="8"/>
-        <source>Database</source>
-        <translation>Databáze</translation>
+        <location filename="../../../admin/info/index.php" line="41"/>
+        <source>enabled</source>
+        <comment>anonymous access</comment>
+        <translation>povolen</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="12"/>
-        <source>Database server:</source>
-        <translation>Databázový server:</translation>
+        <location filename="../../../admin/info/index.php" line="43"/>
+        <source>disabled</source>
+        <comment>anonymous access</comment>
+        <translation>zakázán</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="16"/>
-        <source>Host name:</source>
-        <translation>Název hosta:</translation>
+        <location filename="../../../admin/info/index.php" line="47"/>
+        <source>enabled</source>
+        <comment>user registration</comment>
+        <translation>povolena</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="20"/>
-        <source>Database name:</source>
-        <translation>Název databáze:</translation>
+        <location filename="../../../admin/info/index.php" line="49"/>
+        <source>disabled</source>
+        <comment>user registration</comment>
+        <translation>zakázána</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="24"/>
-        <source>Table prefix:</source>
-        <translation>Prefix tabulek:</translation>
+        <location filename="../../../admin/info/index.php" line="53"/>
+        <source>standard PHP mailer</source>
+        <translation>Sstandarní PHP mail</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="32"/>
-        <source>Cron Job</source>
-        <translation>CRON</translation>
+        <location filename="../../../admin/info/index.php" line="55"/>
+        <source>SMTP server</source>
+        <translation>SMTP server</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="36"/>
-        <source>Cron is running:</source>
-        <translation>CRON pracuje:</translation>
+        <location filename="../../../admin/info/index.php" line="57"/>
+        <source>disabled</source>
+        <comment>sending emails</comment>
+        <translation>zakázáno</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="37"/>
-        <source>yes</source>
-        <translation>ano</translation>
+        <location filename="../../../admin/info/index.php" line="66"/>
+        <source>POP3 server</source>
+        <translation>POP3 server</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="37"/>
-        <source>no</source>
-        <translation>ne</translation>
+        <location filename="../../../admin/info/index.php" line="68"/>
+        <source>IMAP server</source>
+        <translation>IMAP server</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="40"/>
-        <source>Cron last run:</source>
-        <translation>Poslední start CRONu:</translation>
+        <location filename="../../../admin/info/index.php" line="70"/>
+        <source>disabled</source>
+        <comment>email inbox</comment>
+        <translation>zakázán</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.html.php" line="41"/>
+        <location filename="../../../admin/info/index.php" line="90"/>
+        <source>User self-registration requires sending emails to be configured.</source>
+        <translation>Uživatelská registrace uživatelů vyžaduje nastavení e-mailu.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="93"/>
+        <source>Sending or receiving emails requires the cron job to be running.</source>
+        <translation>Odesílání a příjem zpráv vyžaduje běžící službu Cron.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="99"/>
+        <source>%1 seconds ago</source>
+        <translation>%1 sekund starý</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="103"/>
+        <source>%1 minutes ago</source>
+        <translation>%1 minut starý</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="107"/>
+        <source>%1 hours ago</source>
+        <translation>%1 hodin starý</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="109"/>
+        <source>more than %1 hours ago</source>
+        <translation>starší, než %1 hodin</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.php" line="87"/>
         <source>never</source>
         <translation>nikdy</translation>
     </message>
     <message>
-        <location filename="../../../admin/info/index.php" line="61"/>
-        <source>The cron job was not started within the last 24 hours.</source>
-        <translation>CRON nebyl za posledních 24 hodin spuštěn.</translation>
+        <location filename="../../../admin/info/index.html.php" line="4"/>
+        <source>About WebIssues</source>
+        <translation>O systému WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="10"/>
+        <source>Server Configuration</source>
+        <translation>Konfigurace serveru</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="14"/>
+        <source>Anonymous access:</source>
+        <translation>Anonymní přístup:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="18"/>
+        <source>User registration:</source>
+        <translation>Resistrace uživatele:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="23"/>
+        <source>Sending emails:</source>
+        <translation>Odesílání e-mailů:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="28"/>
+        <source>Outgoing address:</source>
+        <translation>Odchozí adresa:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="34"/>
+        <source>Outgoing server:</source>
+        <translation>Odchozí server:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="40"/>
+        <source>Email inbox:</source>
+        <translation>E-mailová schránka:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="45"/>
+        <source>Inbox address:</source>
+        <translation>Příchozí adresa:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="51"/>
+        <source>Inbox server:</source>
+        <translation>Příchozí server:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/info/index.html.php" line="57"/>
+        <source>Cron last started:</source>
+        <translation>Poslední spuštění cronu:</translation>
     </message>
 </context>
 <context>
@@ -418,8 +557,8 @@
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="34"/>
-        <source>Environment</source>
-        <translation>Prostředí</translation>
+        <source>Environment Information</source>
+        <translation>Informace o prostředí</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="38"/>
@@ -552,6 +691,213 @@
     </message>
 </context>
 <context>
+    <name>Admin_Settings_Inbox</name>
+    <message>
+        <location filename="../../../admin/settings/inbox.php" line="32"/>
+        <source>Inbox Settings</source>
+        <translation>Nastavení příchozí schránky</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.php" line="92"/>
+        <source>Disabled</source>
+        <translation>Zakázán</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.php" line="93"/>
+        <source>IMAP server</source>
+        <translation>IMAP server</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.php" line="94"/>
+        <source>POP3 server</source>
+        <translation>POP3 server</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.php" line="97"/>
+        <source>None</source>
+        <comment>encryption</comment>
+        <translation>žádné</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.php" line="104"/>
+        <source>None</source>
+        <comment>user</comment>
+        <translation>Žádný</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.php" line="113"/>
+        <source>None</source>
+        <comment>folder</comment>
+        <translation>Žádná</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.php" line="140"/>
+        <source>Cannot leave messages on the server in POP3 mode.</source>
+        <translation>V režimu POP3 nelze zanechávat zprávy na serveru.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.php" line="152"/>
+        <source>Please select the method of receiving emails to test connection.</source>
+        <translation>Prosím vyberte metodu příjimání zpráv pro otestování spojení.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="7"/>
+        <source>Inbox settings are not avaiable because the &apos;IMAP&apos; extension is missing or disabled.</source>
+        <translation>Nastavení příchozí pošty je zakázáno protože IMAP rozšíření chybí, nebo je zakázáno.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="10"/>
+        <location filename="../../../admin/settings/inbox.html.php" line="85"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="16"/>
+        <source>General</source>
+        <translation>Hlavní</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="18"/>
+        <source>Method of receiving emails:</source>
+        <translation>Metoda příjimání e-mailů:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="21"/>
+        <source>Inbox email address:</source>
+        <translation>Adresa příchozích e-mailů:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="23"/>
+        <source>If receiving emails is enabled, make sure that the cron job is running.</source>
+        <translation>Pokud je nastaveno přijímání zpráv, zkontrolujte, zda pracuje cron.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="28"/>
+        <source>Inbox Server</source>
+        <translation>Server příchozí pošty</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="30"/>
+        <source>Fill the information below to configure the IMAP or POP3 server.</source>
+        <translation>Zadejte informace o IMAP, nebo POP3 serveru níže.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="32"/>
+        <source>Server name:</source>
+        <translation>Název serveru:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="33"/>
+        <source>Port number:</source>
+        <translation>Číslo portu:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="34"/>
+        <source>Encryption mode:</source>
+        <translation>Typ šifrování:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="35"/>
+        <source>User name:</source>
+        <translation>Uživatelské jméno:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="36"/>
+        <source>Password:</source>
+        <translation>Heslo:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="37"/>
+        <source>Mailbox name:</source>
+        <translation>Název schránky:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="39"/>
+        <source>Do not validate server certificate</source>
+        <translation>Nelze ověřit certifikát serveru</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="40"/>
+        <source>Leave processed messages on the server</source>
+        <translation>Zachovat stažené zprávy na serveru</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="45"/>
+        <source>Connection to the inbox server was successful.</source>
+        <translation>Spojení se serverem příchozí pošty je funkční.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="49"/>
+        <source>Test Connection</source>
+        <translation>Test spojení</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="55"/>
+        <source>External Users</source>
+        <translation>Externí uživatelé</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="57"/>
+        <source>This option enables receiving emails from addresses which are not assigned to any user in the system.</source>
+        <translation>Tato volba povolí příjem zpráv od uživatelů, kteří nejsou registrování na tomto serveru.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="59"/>
+        <source>Accept messages from external users</source>
+        <translation>Akceptovat zprávy od externích uživatelů</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="60"/>
+        <source>Robot user account:</source>
+        <translation>Uživatelský účet robota:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="65"/>
+        <source>Folder Mapping</source>
+        <translation>Mapování složek</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="67"/>
+        <source>This option enables mapping the inbox email address extensions to project and folder name.</source>
+        <translation>Tato volba povolí mapování příchozích zpráv do projektů a složek.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="69"/>
+        <source>Map address extensions to project and folder</source>
+        <translation>Mapovat rozšíření adresy na projekt a složku</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="70"/>
+        <source>Default folder:</source>
+        <translation>Výchozí složka:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="75"/>
+        <source>Sending Emails</source>
+        <translation>Odesílání e-mailů</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="77"/>
+        <source>These options enable responses and automatic subscriptions for issues created through the inbox. Sending emails needs to be enabled.</source>
+        <translation>Tato volba povolí přijímání a automatické registrace problémů vytvořených přes e-mail. Zasílání e-mailů musí být povoleno.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="79"/>
+        <source>Send responses when issues are created</source>
+        <translation>Odeslat odpověď při vytvoření problému</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="80"/>
+        <source>Subscribe senders to created issues</source>
+        <translation>Přidat odesílatele pro vytváření problémů</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/inbox.html.php" line="86"/>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
+    </message>
+</context>
+<context>
     <name>Admin_Settings_Index</name>
     <message>
         <location filename="../../../admin/settings/index.php" line="33"/>
@@ -559,164 +905,189 @@
         <translation>Nastavení serveru</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="74"/>
-        <location filename="../../../admin/settings/index.php" line="81"/>
+        <location filename="../../../admin/settings/index.php" line="77"/>
+        <location filename="../../../admin/settings/index.php" line="84"/>
         <source>%1 kB</source>
         <translation>%1 kB</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="76"/>
+        <location filename="../../../admin/settings/index.php" line="79"/>
         <source>%1 MB</source>
         <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="79"/>
+        <location filename="../../../admin/settings/index.php" line="82"/>
         <source>Never</source>
         <translation>Nikdy</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="82"/>
+        <location filename="../../../admin/settings/index.php" line="85"/>
         <source>Always</source>
         <translation>Vždy</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="86"/>
+        <location filename="../../../admin/settings/index.php" line="89"/>
         <source>%1 minutes</source>
         <translation>%1 minut</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="87"/>
+        <location filename="../../../admin/settings/index.php" line="90"/>
         <source>1 hour</source>
         <translation>1 hodina</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="89"/>
-        <location filename="../../../admin/settings/index.php" line="98"/>
+        <location filename="../../../admin/settings/index.php" line="92"/>
+        <location filename="../../../admin/settings/index.php" line="101"/>
         <source>%1 hours</source>
         <translation>%1 hodin</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="92"/>
+        <location filename="../../../admin/settings/index.php" line="95"/>
         <source>1 day</source>
         <translation>1 den</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="94"/>
+        <location filename="../../../admin/settings/index.php" line="97"/>
         <source>%1 days</source>
         <translation>%1 dní</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="101"/>
+        <location filename="../../../admin/settings/index.php" line="104"/>
         <source>Use cron job</source>
         <translation>Použít CRON</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="12"/>
+        <location filename="../../../admin/settings/index.html.php" line="23"/>
         <source>User Registration</source>
         <translation>Registrace uživatele</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="14"/>
-        <source>This option allows users to register with administrator&apos;s approval. Sending emails needs to be enabled.</source>
-        <translation>Tato volba umožňuje uživatelům zaregistrovat se souhlasem správce. Odesílání e-mailů musí být povoleno.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="16"/>
+        <location filename="../../../admin/settings/index.html.php" line="27"/>
         <source>Enable user registration</source>
         <translation>Povolit registraci uživatelů</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="18"/>
-        <source>Optionally send email notifications about registration requests to this address. Requires the cron job to be running.</source>
-        <translation>Volitelně zasílat upozornění o registračních požadavcích na tuto adresu. CRON musí být povolen.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="20"/>
+        <location filename="../../../admin/settings/index.html.php" line="35"/>
         <source>Email address:</source>
         <translation>E-mailová adresa:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="25"/>
+        <location filename="../../../admin/settings/index.html.php" line="40"/>
         <source>Limits</source>
         <translation>Limity</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="27"/>
-        <source>The maximum length (in characters) of comments and the maximum size (in bytes) of attached files that are allowed.</source>
-        <translation>Maximální délka (ve znacích), komentářů a maximální velikost (v bajtech), připojených souborů, které jsou povoleny.</translation>
+        <location filename="../../../admin/settings/index.html.php" line="14"/>
+        <source>Anonymous Access</source>
+        <translation>Anonymní přístup</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="16"/>
+        <source>This option enables read-only access to public projects without logging in.</source>
+        <translation>Tato volba umožní přístup do veřejných projektů bez přihlášení - pouze pro čtení.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="18"/>
+        <source>Enable anonymous access</source>
+        <translation>Povolit anonymní přístup</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="25"/>
+        <source>This option allows users to self-register. Sending emails needs to be enabled.</source>
+        <translation>Tato volba povolí automatickou registraci. Odesílání zpráv musí být povoleno.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="29"/>
-        <source>Maximum comment length:</source>
-        <translation>Maximální délka komentáře:</translation>
+        <source>This option allows users to register without administrator&apos;s approval. Registered users only have access to public projects by default.</source>
+        <translation>Tato volba umožní registraci uživatelů bez schválení administrátorem. Registrovaní uživatelé maj defaultněí přístup pouze k veřejným projektům.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="30"/>
+        <location filename="../../../admin/settings/index.html.php" line="31"/>
+        <source>Enable automatic approval</source>
+        <translation>Povolit automatickou registraci</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="33"/>
+        <source>Optionally send email notifications about pending registration requests to this address. Requires the cron job to be running.</source>
+        <translation>Je možné dostávat upozornění o čekajících registracích an tuto adresu. Cron musí být aktivní.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="42"/>
+        <source>The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.</source>
+        <translation>Maximální délka (znaků) v komentářích a popisech a maximální délka (v bajtech) přiložených souborů.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="44"/>
+        <source>Maximum text length:</source>
+        <translation>MAximální délka textu:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="45"/>
         <source>Maximum attachment size:</source>
         <translation>Maximální velikost přílohy:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="35"/>
+        <location filename="../../../admin/settings/index.html.php" line="50"/>
         <source>Attachment Storage</source>
         <translation>Umístění příloh</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="37"/>
+        <location filename="../../../admin/settings/index.html.php" line="52"/>
         <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
         <translation>Maximální velikost (v bajtech) souborů, které budou uloženy v databázi. Větší soubory budou uloženy v souborovém systému.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="39"/>
+        <location filename="../../../admin/settings/index.html.php" line="54"/>
         <source>Maximum database storage size:</source>
         <translation>Maximální velikost souboru v databázi:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="44"/>
+        <location filename="../../../admin/settings/index.html.php" line="59"/>
         <source>Maximum Lifetime</source>
         <translation>Maximální životnost</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="46"/>
+        <location filename="../../../admin/settings/index.html.php" line="61"/>
         <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
         <translation>Maximální doba, za kterou se zruší neaktivní relace a události v protokolu událostí.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="48"/>
+        <location filename="../../../admin/settings/index.html.php" line="63"/>
         <source>Session lifetime:</source>
         <translation>Životnost relace:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="49"/>
+        <location filename="../../../admin/settings/index.html.php" line="64"/>
         <source>Event log lifetime:</source>
         <translation>Životnost logů:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="50"/>
+        <location filename="../../../admin/settings/index.html.php" line="65"/>
         <source>Inactive user registration request lifetime:</source>
         <translation>Životnost žádosti o registraci:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="55"/>
+        <location filename="../../../admin/settings/index.html.php" line="70"/>
         <source>Garbage Collection</source>
         <translation>Garbage Collection</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="57"/>
+        <location filename="../../../admin/settings/index.html.php" line="72"/>
         <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
         <translation>Pravděpodobnost GC po každém požadavku. Pokud je pro GC využit CRON, ujistěte se, že je funkční.</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="59"/>
+        <location filename="../../../admin/settings/index.html.php" line="74"/>
         <source>GC probability:</source>
         <translation>GC pravděpodobnost:</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="64"/>
+        <location filename="../../../admin/settings/index.html.php" line="79"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="65"/>
+        <location filename="../../../admin/settings/index.html.php" line="80"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
@@ -852,89 +1223,100 @@
 <context>
     <name>Admin_Setup_Install</name>
     <message>
-        <location filename="../../../admin/setup/install.php" line="234"/>
+        <location filename="../../../admin/setup/install.php" line="237"/>
         <source>No supported database engines are available in this PHP installation.</source>
         <translation>Vaše instalace PHP nedisponuje žádným s podporovaných serverů.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="77"/>
+        <location filename="../../../admin/setup/install.php" line="78"/>
         <location filename="../../../admin/setup/install.html.php" line="9"/>
         <source>Server Configuration</source>
         <translation>Konfigurace serveru</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="78"/>
+        <location filename="../../../admin/setup/install.php" line="79"/>
         <source>Configure your WebIssues Server</source>
         <translation>Nakonfigurujte Váš WebIssues server</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="211"/>
+        <location filename="../../../admin/setup/install.php" line="213"/>
         <source>My WebIssues Server</source>
         <translation>Můj WebIssues server</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="259"/>
+        <source>Install a new server</source>
+        <translation>Instalovat nový server</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="260"/>
+        <source>Use an existing server</source>
+        <translation>Použít existující server</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="269"/>
         <source>Do not install any issue types</source>
         <translation>Neinstalovat žádné typy problémů</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="260"/>
+        <location filename="../../../admin/setup/install.php" line="270"/>
         <source>Install the default set of issue types</source>
         <translation>Nainstalovat výchozí typy problémů</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="261"/>
-        <source>Import data from WebIssues Server 0.8.5</source>
-        <translation>Importovat data z WebIssues serveru v. 0.8.5</translation>
+        <location filename="../../../admin/setup/install.php" line="344"/>
+        <location filename="../../../admin/setup/install.php" line="351"/>
+        <location filename="../../../admin/setup/install.php" line="358"/>
+        <source>The &apos;%1&apos; extension is missing or disabled.</source>
+        <translation>Rozšíření &apos;%1&apos; chybí, nebo je zakázané.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="280"/>
+        <location filename="../../../admin/setup/install.php" line="294"/>
         <source>Could not connect to database. Please check connection details and try again.</source>
         <translation>Nelze připojit databázi. Prosím ověřte prarametry spojení a opakujte znovu.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="302"/>
+        <location filename="../../../admin/setup/install.php" line="310"/>
+        <source>The WebIssues tables were not found in the database. Make sure the table prefix is correct and try again.</source>
+        <translation>Tabulky systému WebIssues neexistují v databázi. Zkontrolujte prefix tabulek a opakujte znovu.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="319"/>
         <source>The existing version of the database cannot be used with this version of WebIssues Server.</source>
         <translation>Existující verze databáze není podporována touto verzí WebIssues serveru.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="313"/>
-        <location filename="../../../admin/setup/install.php" line="344"/>
+        <location filename="../../../admin/setup/install.php" line="327"/>
+        <source>The WebIssues tables already exist in the database. Drop them first or use a different table prefix and try again.</source>
+        <translation>Tabulky systému WebIssues již v databázi existují. Nejdříve je odstraňte, nebo zvolte jiný prefix tabuleka poté akci opakujte.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.php" line="335"/>
         <source>Could not retrieve information from the database.</source>
         <translation>Nelze získat informace o databázi.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="326"/>
-        <source>No data tables were found in the database.</source>
-        <translation>V databázi neexistují datové tabulky.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.php" line="334"/>
-        <source>The existing version of the database cannot be imported.</source>
-        <translation>Existující verze databáze nemůže být importována.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.php" line="358"/>
+        <location filename="../../../admin/setup/install.php" line="377"/>
         <source>Database does not support InnoDB storage which is required by WebIssues Server.</source>
         <translation>Databáze nepodporuje tabulky typu InnoDB, které WebIssue server vyžaduje.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="384"/>
+        <location filename="../../../admin/setup/install.php" line="403"/>
         <source>Database version %1 is older than minimum required version %2.</source>
         <translation>Verze databáze %1 je starší, než minimální požadovaná verze %2.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="416"/>
+        <location filename="../../../admin/setup/install.php" line="430"/>
         <source>Completed the installation of the server</source>
         <translation>Instalace serveru dokončena</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="448"/>
+        <location filename="../../../admin/setup/install.php" line="464"/>
         <source>Updated database to version %1</source>
         <translation>Databáze byla aktualizována na verzi %1</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.php" line="475"/>
+        <location filename="../../../admin/setup/install.php" line="491"/>
         <source>The configuration file could not be written.</source>
         <translation>Nelze zapsat konfigurační soubor.</translation>
     </message>
@@ -979,22 +1361,23 @@
         <translation>Databázový stroj</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="86"/>
+        <location filename="../../../admin/setup/install.html.php" line="95"/>
         <source>Please enter the parameters of the new server.</source>
         <translation>Prosím zadejte parametry nového serveru.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="91"/>
+        <location filename="../../../admin/setup/install.html.php" line="100"/>
         <source>Enter the name of this server.</source>
         <translation>Zadejte název tohoto serveru.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="100"/>
+        <location filename="../../../admin/setup/install.html.php" line="109"/>
         <source>The Administrator user account will be created allowing you to log in to the server and change its settings.</source>
         <translation>Účet administrátora byl vytvořen a umožní Vám přihlášení a konfiguraci serveru.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="89"/>
+        <location filename="../../../admin/setup/install.html.php" line="98"/>
+        <location filename="../../../admin/setup/install.html.php" line="132"/>
         <source>Server Information</source>
         <translation>Informace o serveru</translation>
     </message>
@@ -1040,27 +1423,52 @@
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="68"/>
-        <location filename="../../../admin/setup/install.html.php" line="103"/>
+        <location filename="../../../admin/setup/install.html.php" line="112"/>
         <source>Password:</source>
         <translation>Heslo:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="75"/>
+        <source>Mode</source>
+        <translation>Mód</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="77"/>
+        <source>Select if you want to install a new server or recreate the configuration file for an existing server:</source>
+        <translation>Vyberte, zda chcete instalovat nový server, nebo aktualizovat konfigurační soubor stávajícího serveru:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="84"/>
         <source>Table Prefix</source>
         <translation>Prefix tabulek</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="162"/>
+        <location filename="../../../admin/setup/install.html.php" line="140"/>
+        <source>Initial configuration:</source>
+        <translation>Výchozí konfigurace:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="141"/>
+        <source>Default issue types</source>
+        <translation>Výchozí typ problému</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="141"/>
+        <source>No issue types</source>
+        <translation>Nejsou typy problémů</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/setup/install.html.php" line="171"/>
         <source>&amp;lt; Back</source>
         <translation>&amp;lt; Zpět</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="177"/>
+        <location filename="../../../admin/setup/install.html.php" line="186"/>
         <source>Installation in progress...</source>
         <translation>Instalace probíhá...</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="77"/>
+        <location filename="../../../admin/setup/install.html.php" line="86"/>
         <source>You can enter an optional prefix for table names. This allows installing multiple servers using the same database.</source>
         <translation>Můžete zadat prefix tabulek. Prefix Vám umožní instalaci více serverů do jedné databáze.</translation>
     </message>
@@ -1070,92 +1478,68 @@
         <translation>Nezapomeňte zkopírovat přílohy uložené v souborovém systému staré verze serveru.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="79"/>
+        <location filename="../../../admin/setup/install.html.php" line="88"/>
         <source>Table prefix:</source>
         <translation>Prefix tabulek:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="93"/>
+        <location filename="../../../admin/setup/install.html.php" line="102"/>
+        <location filename="../../../admin/setup/install.html.php" line="136"/>
         <source>Server name:</source>
         <translation>Název serveru:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="98"/>
+        <location filename="../../../admin/setup/install.html.php" line="107"/>
         <source>Administrator Account</source>
         <translation>Administrativní účet</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="102"/>
+        <location filename="../../../admin/setup/install.html.php" line="111"/>
         <source>Login:</source>
         <translation>Login:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="104"/>
+        <location filename="../../../admin/setup/install.html.php" line="113"/>
         <source>Confirm password:</source>
         <translation>Heslo znovu:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="109"/>
+        <location filename="../../../admin/setup/install.html.php" line="118"/>
         <source>Initial Configuration</source>
         <translation>Výchozí konfigurace</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="111"/>
+        <location filename="../../../admin/setup/install.html.php" line="120"/>
         <source>Select the initial configuration of this server:</source>
         <translation>Vyberte výchozí konfiguraci serveru:</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="115"/>
-        <source>When importing data, enter an optional prefix for source table names.</source>
-        <translation>Při importu dat, zadejte volitelný prefix pro názvy zdrojových tabulek.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="117"/>
-        <source>Source prefix:</source>
-        <translation>Zdrojový prefix:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="124"/>
+        <location filename="../../../admin/setup/install.html.php" line="129"/>
         <source>The new server will be installed in the selected database.</source>
         <translation>Nový server bude nainstalován do vybrané databáze.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="128"/>
-        <source>The default set of issue types will be created.</source>
-        <translation>Bude vytvořena výchozí sada typů problémů.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="132"/>
-        <source>Existing data will be imported from the following server:</source>
-        <translation>Existující data budou importována z následujícího serveru:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="138"/>
-        <source>No issue types will be created on this server.</source>
-        <translation>Nebudou vytvořeny výchozí typy problémů.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/setup/install.html.php" line="146"/>
+        <location filename="../../../admin/setup/install.html.php" line="153"/>
         <source>The database of this WebIssues Server will be updated to version %1.</source>
         <translation>Databáze tohoto serveru bude aktualizována na verzi %1.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="148"/>
+        <location filename="../../../admin/setup/install.html.php" line="155"/>
         <source>The server is already configured. It will not be modified during the installation.</source>
         <translation>Tento server je již nakonfigurován. Toto se nesmí měnit v průběhu instalace.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="159"/>
+        <location filename="../../../admin/setup/install.html.php" line="168"/>
         <source>Refresh</source>
         <translation>Obnovit</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="165"/>
+        <location filename="../../../admin/setup/install.html.php" line="174"/>
         <source>Next &amp;gt;</source>
         <translation>Další &amp;gt;</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/install.html.php" line="168"/>
+        <location filename="../../../admin/setup/install.html.php" line="177"/>
         <source>Install</source>
         <translation>Instalovat</translation>
     </message>
@@ -1163,205 +1547,205 @@
 <context>
     <name>Admin_Setup_Installer</name>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="266"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
         <source>Administrator</source>
         <translation>Administrátor</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="294"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="337"/>
         <source>Forum</source>
         <translation>Fórum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="300"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
         <source>Bugs</source>
         <translation>Problémy</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="303"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="346"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation>Přiřazeno komu</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="310"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
         <source>Status</source>
         <comment>bug</comment>
         <translation>Status</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="313"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="315"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="355"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="398"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="406"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="414"/>
         <source>Active</source>
         <comment>bug</comment>
         <translation>Aktivní</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="313"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="378"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="421"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translation>Vyřešeno</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="313"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translation>Uzavřeno</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="319"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="362"/>
         <source>Reason</source>
         <translation>Důvod</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
         <source>Fixed</source>
         <translation>Opraveno</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
         <source>Obsolete</source>
         <translation>Zastaralý</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="322"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
         <source>Duplicate</source>
         <translation>Duplicitní</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="323"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>As Designed</source>
         <translation>Jak je</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="323"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Unable To Reproduce</source>
         <translation>Nelze nasimulovat</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="323"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Test Failed</source>
         <translation>Test selhal</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="327"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translation>Závažnost</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="337"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="380"/>
         <source>Version</source>
         <translation>Verze</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="345"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="388"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translation>Vytvořeno mnou</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="352"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
         <source>Active Bugs</source>
         <translation>Aktivní problémy</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="359"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="402"/>
         <source>My Active Bugs</source>
         <translation>Moje aktivní problémy</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="410"/>
         <source>Unassigned Bugs</source>
         <translation>Nepřiřazené problémy</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="375"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="418"/>
         <source>Resolved Bugs</source>
         <translation>Byřešené problémy</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="384"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
         <source>Tasks</source>
         <translation>Požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="387"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="430"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translation>Přiřazen komu</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="394"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="437"/>
         <source>Status</source>
         <comment>task</comment>
         <translation>Status</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="399"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="439"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="455"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="482"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="490"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="498"/>
         <source>Active</source>
         <comment>task</comment>
         <translation>Aktivní</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
         <source>Closed</source>
         <comment>task</comment>
         <translation>Uzavřený</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="403"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="446"/>
         <source>Priority</source>
         <comment>task</comment>
         <translation>Priorita</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="413"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="456"/>
         <source>Progress</source>
         <translation>Průběžný stav</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="421"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="464"/>
         <source>Due Date</source>
         <translation>Do data</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="429"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="472"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translation>Vytvořeno mnou</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="436"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="479"/>
         <source>Active Tasks</source>
         <translation>Aktivní požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="443"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="486"/>
         <source>My Active Tasks</source>
         <translation>Moje aktivní požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="451"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="494"/>
         <source>Unassigned Tasks</source>
         <translation>Nepřiřazené požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="459"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="502"/>
         <source>Completed Tasks</source>
         <translation>Dokončené požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="462"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="505"/>
         <source>Completed</source>
         <comment>task</comment>
         <translation>Dokončen</translation>
@@ -1380,7 +1764,7 @@
         <translation>Aktualizovat Váš WebIssue server</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/update.php" line="124"/>
+        <location filename="../../../admin/setup/update.php" line="126"/>
         <source>Updated database to version %1</source>
         <translation>Databáze aktualizována na verzi: %1</translation>
     </message>
@@ -1430,22 +1814,22 @@
         <translation>Databáze WebIssues serveru bude aktualizována na verzi %1.</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/update.html.php" line="48"/>
+        <location filename="../../../admin/setup/update.html.php" line="50"/>
         <source>&amp;lt; Back</source>
         <translation>&amp;lt; Zpět</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/update.html.php" line="51"/>
+        <location filename="../../../admin/setup/update.html.php" line="53"/>
         <source>Next &amp;gt;</source>
         <translation>Další &amp;gt;</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/update.html.php" line="54"/>
+        <location filename="../../../admin/setup/update.html.php" line="56"/>
         <source>Update</source>
         <translation>Aktualizovat</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/update.html.php" line="63"/>
+        <location filename="../../../admin/setup/update.html.php" line="65"/>
         <source>Update in progress...</source>
         <translation>Aktualizace probíhá...</translation>
     </message>
@@ -1952,8 +2336,8 @@
     <name>Admin_Users_Access</name>
     <message>
         <location filename="../../../admin/users/access.php" line="33"/>
-        <source>Change Access</source>
-        <translation>Změnit práva</translation>
+        <source>Global Access</source>
+        <translation>Globální přístup</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="51"/>
@@ -1972,8 +2356,8 @@
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="3"/>
-        <source>Set new access level for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Nastavit novou úroveň práv pro uživatele &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <source>Change global access for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Změnit globální přístup pro uživatele &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="10"/>
@@ -2038,12 +2422,12 @@
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.php" line="62"/>
-        <source>Regular Member</source>
+        <source>Regular member</source>
         <translation>Běžný uživatel</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.php" line="63"/>
-        <source>Project Administrator</source>
+        <source>Project administrator</source>
         <translation>Administrátor projektu</translation>
     </message>
     <message>
@@ -2105,9 +2489,14 @@
         <translation>Aktivní</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="87"/>
+        <location filename="../../../admin/users/index.php" line="83"/>
         <source>Add User</source>
         <translation>Přidat uživatele</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.php" line="86"/>
+        <source>Manage Permissions</source>
+        <translation>Spravovat práva</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="4"/>
@@ -2125,37 +2514,37 @@
         <translation>Login</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.html.php" line="18"/>
-        <source>Access Level</source>
-        <translation>Přístupová práva</translation>
+        <location filename="../../../admin/users/index.html.php" line="19"/>
+        <source>Email</source>
+        <translation>E-mail</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.html.php" line="48"/>
+        <location filename="../../../admin/users/index.html.php" line="21"/>
+        <source>Access</source>
+        <translation>Přístup</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/index.html.php" line="54"/>
         <source>There are no disabled users.</source>
         <translation>Nejsou žádní blokovaní uživatelé.</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="62"/>
+        <location filename="../../../admin/users/index.php" line="65"/>
         <source>Regular user</source>
         <translation>Běžný uživatel</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="63"/>
+        <location filename="../../../admin/users/index.php" line="66"/>
         <source>System administrator</source>
         <translation>Systémový administrátor</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="88"/>
-        <source>Change Access</source>
-        <translation>Změnit práva</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.php" line="90"/>
+        <location filename="../../../admin/users/index.php" line="85"/>
         <source>Rename User</source>
         <translation>Přejmenovat uživatele</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="89"/>
+        <location filename="../../../admin/users/index.php" line="84"/>
         <source>Change Password</source>
         <translation>Změnit heslo</translation>
     </message>
@@ -2166,18 +2555,13 @@
         <translation>Zakázán</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="61"/>
+        <location filename="../../../admin/users/index.php" line="64"/>
         <source>Disabled</source>
         <comment>user</comment>
         <translation>Zablokován</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/index.php" line="91"/>
-        <source>User Projects</source>
-        <translation>Projekty uživatele</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/index.php" line="92"/>
+        <location filename="../../../admin/users/index.php" line="87"/>
         <source>User Preferences</source>
         <translation>Nastavení uživatele</translation>
     </message>
@@ -2186,8 +2570,8 @@
     <name>Admin_Users_ProjectAccess</name>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="37"/>
-        <source>Change Access</source>
-        <translation>Změnit práva</translation>
+        <source>Project Access</source>
+        <translation>Přístup k projektu</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="52"/>
@@ -2201,8 +2585,8 @@
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="4"/>
-        <source>Set new access level to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Zvolit novou úrověň pro projekt &lt;strong&gt;%1&lt;/strong&gt;pro uživatele &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <source>Change access to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <translation>Změnit přístup uživatele &lt;strong&gt;%2&lt;/strong&gt; k projektu  &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="11"/>
@@ -2219,56 +2603,81 @@
     <name>Admin_Users_Projects</name>
     <message>
         <location filename="../../../admin/users/projects.php" line="37"/>
-        <source>User Projects</source>
-        <translation>Projekty uživatele</translation>
+        <source>Manage Permissions</source>
+        <translation>Správa práv</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="58"/>
+        <source>Disabled</source>
+        <translation>Zakázáno</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="59"/>
+        <source>Regular user</source>
+        <translation>Běžný uživatel</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="60"/>
+        <source>System administrator</source>
+        <translation>Systémový administrátor</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.php" line="69"/>
         <source>Regular member</source>
         <translation>Běžný uživatel</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.php" line="59"/>
+        <location filename="../../../admin/users/projects.php" line="70"/>
         <source>Project administrator</source>
         <translation>Administrátor projektu</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.php" line="78"/>
+        <location filename="../../../admin/users/projects.php" line="87"/>
         <source>Add Projects</source>
         <translation>Přidat projekty</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.php" line="79"/>
+        <location filename="../../../admin/users/projects.php" line="88"/>
         <source>Change Access</source>
         <translation>Změnit práva</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.php" line="80"/>
+        <location filename="../../../admin/users/projects.php" line="89"/>
         <source>Remove Project</source>
         <translation>Odstranit projekt</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.html.php" line="3"/>
-        <source>Projects of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Projekty uživatele &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/users/projects.html.php" line="15"/>
+        <location filename="../../../admin/users/projects.html.php" line="28"/>
         <source>Name</source>
         <translation>Název</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.html.php" line="16"/>
-        <source>Access Level</source>
-        <translation>Práva</translation>
+        <location filename="../../../admin/users/projects.html.php" line="3"/>
+        <source>Edit permissions of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Upravit práva uživatele &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.html.php" line="42"/>
+        <location filename="../../../admin/users/projects.html.php" line="8"/>
+        <source>Global Access</source>
+        <translation>Globální přístup</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="12"/>
+        <source>Change</source>
+        <translation>Změnit</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="29"/>
+        <source>Access</source>
+        <translation>Přístup</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/users/projects.html.php" line="55"/>
         <source>This user is not a member of any project.</source>
         <translation>Uživatel nemá přiřazen žádný server.</translation>
     </message>
     <message>
-        <location filename="../../../admin/users/projects.html.php" line="47"/>
+        <location filename="../../../admin/users/projects.html.php" line="60"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -2504,59 +2913,143 @@
     </message>
 </context>
 <context>
-    <name>Client_Alerts_Add</name>
+    <name>Client_Alerts_Alert</name>
     <message>
-        <location filename="../../../client/alerts/add.php" line="64"/>
-        <source>Add Alert</source>
-        <translation>Přidat upozornění</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/add.php" line="85"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="78"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="89"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="94"/>
         <source>All Issues</source>
         <translation>Všechny problémy</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.php" line="90"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="100"/>
         <source>Personal Views</source>
-        <translation>Soukromé pohledy</translation>
+        <translation>Uživatelské pohledy</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.php" line="93"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="103"/>
         <source>Public Views</source>
         <translation>Veřejné pohledy</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="3"/>
-        <source>Create a new alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Vytvořit nové upozornění pro složku &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <location filename="../../../client/alerts/alert.inc.php" line="158"/>
+        <source>Add Public Alert</source>
+        <translation>Přidat veřejný poplach</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="9"/>
+        <location filename="../../../client/alerts/alert.inc.php" line="160"/>
+        <source>Add Personal Alert</source>
+        <translation>Přidat soukromý poplach</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.inc.php" line="163"/>
+        <source>Modify Alert</source>
+        <translation>Upravit upozornění</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.inc.php" line="226"/>
+        <source>No days selected</source>
+        <translation>Nejsou vybrány dny</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.inc.php" line="238"/>
+        <source>No hours selected</source>
+        <translation>Nejsou zvoleny hodiny</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="7"/>
+        <source>Modify public alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Upravit veřejný poplach &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="9"/>
+        <source>Create a new public alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Vytvořit nový veřejný poplach pro složku &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="11"/>
+        <source>Create a new public alert for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Vytvořit nový veřejný poplach pro typ &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="15"/>
+        <source>Modify your personal alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Upravit soukromý poplach &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="17"/>
+        <source>Create a new personal alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Vytvořit nový soukromý poplach pro složku &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="19"/>
+        <source>Create a new personal alert for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Vytvořit nový soukromý poplach pro typ &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="30"/>
         <source>View:</source>
         <translation>Pohled:</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="12"/>
+        <location filename="../../../client/alerts/alert.html.php" line="36"/>
+        <source>Email Type</source>
+        <translation>Typ e-mailu</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="38"/>
         <source>Send the following type of emails for this alert:</source>
         <translation>Pro toho upozornění použít následující typ e-mailu:</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="17"/>
+        <location filename="../../../client/alerts/alert.html.php" line="42"/>
+        <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
+        <translation>Varování: Dokud nezadáte svou e-mailovou adresu v preferencích neobdržíte žádnou zprávu.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="48"/>
+        <source>Summary Schedule</source>
+        <translation>Plánování souhrnu</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="51"/>
+        <location filename="../../../client/alerts/alert.html.php" line="76"/>
+        <source>Select All</source>
+        <translation>Vybrat vše</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="53"/>
+        <location filename="../../../client/alerts/alert.html.php" line="78"/>
+        <source>Unselect All</source>
+        <translation>Zrušit výběr</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="55"/>
+        <source>Send summary emails on the following days:</source>
+        <translation>Posílat souhrné zprávy v následujících dnech:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="81"/>
+        <source>Send summary emails at the following hours:</source>
+        <translation>Posílat souhrné zprávy v následujících hodinách:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/alert.html.php" line="99"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="18"/>
+        <location filename="../../../client/alerts/alert.html.php" line="100"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="23"/>
+        <location filename="../../../client/alerts/alert.html.php" line="105"/>
         <source>There are no more available views to use.</source>
         <translation>Nejsou žádné dostupné náhledy pro použití.</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/add.html.php" line="26"/>
+        <location filename="../../../client/alerts/alert.html.php" line="108"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
@@ -2564,27 +3057,32 @@
 <context>
     <name>Client_Alerts_Delete</name>
     <message>
-        <location filename="../../../client/alerts/delete.php" line="37"/>
+        <location filename="../../../client/alerts/delete.php" line="43"/>
         <source>Delete Alert</source>
         <translation>Vymazat upozornění</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/delete.php" line="47"/>
+        <location filename="../../../client/alerts/delete.php" line="56"/>
         <source>All Issues</source>
         <translation>Všechny problémy</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/delete.html.php" line="3"/>
-        <source>Are you sure you want to delete alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Opravdu chcete vymazat upozornění &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <location filename="../../../client/alerts/delete.html.php" line="4"/>
+        <source>Are you sure you want to delete public alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Opravdu chcete odstranit veřejný poplach &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/delete.html.php" line="8"/>
+        <location filename="../../../client/alerts/delete.html.php" line="6"/>
+        <source>Are you sure you want to delete your personal alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Opravdu chcete odstranit svůj soukromý poplach &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/delete.html.php" line="12"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/delete.html.php" line="9"/>
+        <location filename="../../../client/alerts/delete.html.php" line="13"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
@@ -2615,108 +3113,105 @@
 <context>
     <name>Client_Alerts_Index</name>
     <message>
-        <location filename="../../../client/alerts/index.php" line="40"/>
+        <location filename="../../../client/alerts/index.php" line="50"/>
         <source>Manage Alerts</source>
         <translation>Zpráva upozornění</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.php" line="75"/>
+        <location filename="../../../client/alerts/index.php" line="95"/>
         <source>All Issues</source>
         <translation>Všechny problémy</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.php" line="90"/>
+        <location filename="../../../client/alerts/index.php" line="122"/>
         <source>Add Alert</source>
         <translation>Přidat upozornění</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.php" line="92"/>
+        <location filename="../../../client/alerts/index.php" line="124"/>
+        <source>Add Public Alert</source>
+        <translation>Přidat veřejný poplach</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.php" line="126"/>
         <source>Modify Alert</source>
         <translation>Upravit upozornění</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.php" line="93"/>
+        <location filename="../../../client/alerts/index.php" line="127"/>
         <source>Delete Alert</source>
         <translation>Vymazat upozornění</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="3"/>
+        <location filename="../../../client/alerts/index.html.php" line="4"/>
         <source>Edit alert settings for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation>Upravit upozornění pro složku &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="15"/>
+        <location filename="../../../client/alerts/index.html.php" line="6"/>
+        <source>Edit alert settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Upravit nastavení poplachu pro typ &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="19"/>
         <source>Name</source>
         <translation>Jméno</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="16"/>
+        <location filename="../../../client/alerts/index.html.php" line="20"/>
         <source>Total</source>
         <translation>Celkem</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="17"/>
+        <location filename="../../../client/alerts/index.html.php" line="21"/>
         <source>Unread</source>
         <translation>Nepřečtené</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="18"/>
+        <location filename="../../../client/alerts/index.html.php" line="22"/>
         <source>Modified</source>
         <translation>Změněné</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="20"/>
+        <location filename="../../../client/alerts/index.html.php" line="24"/>
         <source>Email Type</source>
         <translation>Typ e-mailu</translation>
     </message>
     <message>
+        <location filename="../../../client/alerts/index.html.php" line="26"/>
+        <source>Is Public</source>
+        <translation>Je veřejný</translation>
+    </message>
+    <message>
         <location filename="../../../client/alerts/index.html.php" line="56"/>
+        <source>Yes</source>
+        <translation>Ano</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="56"/>
+        <source>No</source>
+        <translation>Ne</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="68"/>
         <source>This folder has no alerts.</source>
         <translation>Složka nemá upozornění.</translation>
     </message>
     <message>
-        <location filename="../../../client/alerts/index.html.php" line="61"/>
+        <location filename="../../../client/alerts/index.html.php" line="70"/>
+        <source>This type has no alerts.</source>
+        <translation>Tento typ nemá žádné poplachy.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/alerts/index.html.php" line="76"/>
         <source>OK</source>
         <translation>OK</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Alerts_Modify</name>
-    <message>
-        <location filename="../../../client/alerts/modify.php" line="44"/>
-        <source>Modify Alert</source>
-        <translation>Upravit upozornění</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/modify.php" line="54"/>
-        <source>All Issues</source>
-        <translation>Všechny problémy</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/modify.html.php" line="3"/>
-        <source>Modify alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Upravit upozornění &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/modify.html.php" line="7"/>
-        <source>Send the following type of emails for this alert:</source>
-        <translation>Pro toho upozornění použít následující typ e-mailu:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/modify.html.php" line="11"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/alerts/modify.html.php" line="12"/>
-        <source>Cancel</source>
-        <translation>Zrušit</translation>
     </message>
 </context>
 <context>
     <name>Client_Index</name>
     <message>
-        <location filename="../../../client/index.php" line="47"/>
+        <location filename="../../../client/index.php" line="48"/>
         <source>Web Client</source>
         <translation>Webový klient</translation>
     </message>
@@ -2724,168 +3219,187 @@
 <context>
     <name>Client_IssueDetails</name>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="80"/>
+        <location filename="../../../client/issuedetails.inc.php" line="96"/>
         <source>Only Comments</source>
         <translation>Pouze komentáře</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="81"/>
+        <location filename="../../../client/issuedetails.inc.php" line="97"/>
         <source>Only Attachments</source>
         <translation>Pouze přílohy</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="82"/>
+        <location filename="../../../client/issuedetails.inc.php" line="98"/>
         <source>Comments &amp; Attachments</source>
         <translation>Komentáře a přílohy</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="147"/>
+        <location filename="../../../client/issuedetails.inc.php" line="168"/>
         <source>Edit Attributes</source>
         <translation>Upravit atributy</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="148"/>
+        <location filename="../../../client/issuedetails.inc.php" line="169"/>
         <source>Add Comment</source>
         <translation>Přidat komentář</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="149"/>
+        <location filename="../../../client/issuedetails.inc.php" line="170"/>
         <source>Add Attachment</source>
         <translation>Přidat přílohu</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="150"/>
+        <location filename="../../../client/issuedetails.inc.php" line="172"/>
+        <source>Add Description</source>
+        <translation>Přidat popis</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.inc.php" line="173"/>
         <source>Clone Issue</source>
         <translation>Klonovat problém</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="152"/>
+        <location filename="../../../client/issuedetails.inc.php" line="175"/>
         <source>Move Issue</source>
         <translation>Přesunout problém</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="153"/>
+        <location filename="../../../client/issuedetails.inc.php" line="176"/>
         <source>Delete Issue</source>
         <translation>Vymazat problém</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="156"/>
+        <location filename="../../../client/issuedetails.inc.php" line="179"/>
         <source>Mark As Unread</source>
         <translation>Označit jako nepřečtené</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="158"/>
+        <location filename="../../../client/issuedetails.inc.php" line="181"/>
         <source>Mark As Read</source>
         <translation>Označit jako přečtené</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="15"/>
-        <source>Properties</source>
-        <translation>Vlastnosti</translation>
+        <location filename="../../../client/issuedetails.inc.php" line="184"/>
+        <source>Unsubscribe</source>
+        <translation>Odhlásit se</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="19"/>
+        <location filename="../../../client/issuedetails.inc.php" line="186"/>
+        <source>Subscribe</source>
+        <translation>Přihlásit se</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="17"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="23"/>
+        <location filename="../../../client/issuedetails.html.php" line="21"/>
         <source>Type:</source>
         <translation>Typ:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="44"/>
-        <source>Attributes</source>
-        <translation>Atributy</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issuedetails.inc.php" line="79"/>
+        <location filename="../../../client/issuedetails.inc.php" line="95"/>
         <source>All History</source>
         <translation>Celá hystorie</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="83"/>
-        <location filename="../../../client/issuedetails.html.php" line="100"/>
+        <location filename="../../../client/issuedetails.html.php" line="65"/>
+        <location filename="../../../client/issuedetails.html.php" line="108"/>
+        <location filename="../../../client/issuedetails.html.php" line="125"/>
         <source>Edit</source>
         <translation>Upravit</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="85"/>
-        <location filename="../../../client/issuedetails.html.php" line="102"/>
+        <location filename="../../../client/issuedetails.html.php" line="66"/>
+        <location filename="../../../client/issuedetails.html.php" line="110"/>
+        <location filename="../../../client/issuedetails.html.php" line="127"/>
         <source>Delete</source>
         <translation>Vymazat</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="171"/>
-        <location filename="../../../client/issuedetails.html.php" line="172"/>
+        <location filename="../../../client/issuedetails.html.php" line="196"/>
+        <location filename="../../../client/issuedetails.html.php" line="197"/>
         <source>Unknown Folder</source>
         <translation>Neznámá složka</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="190"/>
+        <location filename="../../../client/issuedetails.html.php" line="219"/>
         <source>There are no comments.</source>
         <translation>Nejsou žádné komentáře.</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="192"/>
+        <location filename="../../../client/issuedetails.html.php" line="221"/>
         <source>There are no attachments.</source>
         <translation>Nejsou žádné přílohy.</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="194"/>
+        <location filename="../../../client/issuedetails.html.php" line="223"/>
         <source>There are no comments or attachments.</source>
         <translation>Nejsou žádné přílohy ani komentáře.</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="65"/>
+        <location filename="../../../client/issuedetails.html.php" line="85"/>
         <source>Issue History</source>
         <translation>Hystorie problému</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="126"/>
-        <location filename="../../../client/issuedetails.html.php" line="129"/>
+        <location filename="../../../client/issuedetails.html.php" line="151"/>
+        <location filename="../../../client/issuedetails.html.php" line="154"/>
         <source>Name</source>
         <translation>Název</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="132"/>
-        <location filename="../../../client/issuedetails.html.php" line="133"/>
+        <location filename="../../../client/issuedetails.html.php" line="157"/>
+        <location filename="../../../client/issuedetails.html.php" line="158"/>
         <source>empty</source>
         <translation>prázdné</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="80"/>
+        <location filename="../../../client/issuedetails.html.php" line="102"/>
         <source>Comment %1</source>
         <translation>Komentář %1</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="27"/>
+        <location filename="../../../client/issuedetails.html.php" line="25"/>
         <source>Location:</source>
         <translation>Umístění:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="31"/>
+        <location filename="../../../client/issuedetails.html.php" line="29"/>
         <source>Created:</source>
         <translation>Vytvořeno:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="35"/>
+        <location filename="../../../client/issuedetails.html.php" line="33"/>
         <source>Last Modified:</source>
         <translation>Poslední změna:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="78"/>
-        <location filename="../../../client/issuedetails.html.php" line="95"/>
+        <location filename="../../../client/issuedetails.html.php" line="60"/>
+        <location filename="../../../client/issuedetails.html.php" line="100"/>
+        <location filename="../../../client/issuedetails.html.php" line="120"/>
         <source>Last Edited:</source>
         <translation>Poslední úprava:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="97"/>
+        <location filename="../../../client/issuedetails.html.php" line="62"/>
+        <location filename="../../../client/issuedetails.html.php" line="104"/>
+        <source>Reply</source>
+        <translation>Odpověď</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="71"/>
+        <source>Description</source>
+        <translation>Popis</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issuedetails.html.php" line="122"/>
         <source>Attachment %1</source>
         <translation>Příloha %1</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="173"/>
+        <location filename="../../../client/issuedetails.html.php" line="198"/>
         <source>Issue moved from %1 to %2</source>
         <translation>Problém přesunut z  %1 do %2</translation>
     </message>
@@ -2893,57 +3407,57 @@
 <context>
     <name>Client_IssuesList</name>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="74"/>
+        <location filename="../../../client/issueslist.inc.php" line="86"/>
         <source>All Issues</source>
         <translation>Všechny problémy</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="76"/>
+        <location filename="../../../client/issueslist.inc.php" line="88"/>
         <source>Personal Views</source>
         <translation>Uživatelské pohledy</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="78"/>
+        <location filename="../../../client/issueslist.inc.php" line="90"/>
         <source>Public Views</source>
         <translation>Veřejné pohledy</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="206"/>
+        <location filename="../../../client/issueslist.inc.php" line="231"/>
         <source>Add Issue</source>
         <translation>Přidat problém</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="207"/>
+        <location filename="../../../client/issueslist.inc.php" line="232"/>
         <source>Mark All As Read</source>
         <translation>Označit vše jako přečtené</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="208"/>
+        <location filename="../../../client/issueslist.inc.php" line="233"/>
         <source>Mark All As Unread</source>
         <translation>Označit vše jako nepřečtené</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="210"/>
+        <location filename="../../../client/issueslist.inc.php" line="235"/>
         <source>Manage Alerts</source>
         <translation>Spravovat upozornění</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="215"/>
+        <location filename="../../../client/issueslist.inc.php" line="242"/>
         <source>Add View</source>
         <translation>Přidat pohled</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="217"/>
+        <location filename="../../../client/issueslist.inc.php" line="244"/>
         <source>Modify View</source>
         <translation>Upravit pohled</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="219"/>
+        <location filename="../../../client/issueslist.inc.php" line="246"/>
         <source>Clone View</source>
         <translation>Klonovat pohled</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="209"/>
+        <location filename="../../../client/issueslist.inc.php" line="234"/>
         <source>Manage Views</source>
         <translation>Správa pohledů</translation>
     </message>
@@ -2964,17 +3478,22 @@
         <translation>Hledat</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="69"/>
+        <location filename="../../../client/issueslist.html.php" line="81"/>
         <source>There are no issues matching the search criteria.</source>
         <translation>Nejsou žádné problémy odpovídající kritériím hledání.</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="73"/>
+        <location filename="../../../client/issueslist.html.php" line="85"/>
         <source>There are no issues matching the selected view.</source>
         <translation>Nejsou žádné problémy odpovídající vybranému pohledu.</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="77"/>
+        <location filename="../../../client/issueslist.html.php" line="89"/>
+        <source>There are no issues of this type.</source>
+        <translation>Nejsou žádné problému tohoto typu.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.html.php" line="93"/>
         <source>There are no issues in this folder.</source>
         <translation>Ve složce nejsou žádné problémy.</translation>
     </message>
@@ -3033,44 +3552,36 @@
     </message>
 </context>
 <context>
-    <name>Client_Issues_CloneIssue</name>
-    <message>
-        <location filename="../../../client/issues/cloneissue.php" line="37"/>
-        <source>Clone Issue</source>
-        <translation>Klonovat problém</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/cloneissue.html.php" line="3"/>
-        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; to a folder of the same type.</source>
-        <translation>Klonovat problém &lt;strong&gt;%1&lt;/strong&gt; do složky stejného typu.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/cloneissue.html.php" line="7"/>
-        <source>Folder:</source>
-        <translation>Složka:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/cloneissue.html.php" line="10"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/cloneissue.html.php" line="11"/>
-        <source>Cancel</source>
-        <translation>Zrušit</translation>
-    </message>
-</context>
-<context>
     <name>Client_Issues_Comment</name>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="49"/>
+        <source>Description</source>
+        <translation>Popis</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/comment.inc.php" line="55"/>
+        <source>Comment %1</source>
+        <translation>Komentář %1</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/comment.inc.php" line="67"/>
         <source>Add Comment</source>
         <translation>Přidat komentář</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/comment.inc.php" line="63"/>
+        <location filename="../../../client/issues/comment.inc.php" line="84"/>
         <source>Edit Comment</source>
         <translation>Upravit komentář</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/comment.inc.php" line="95"/>
+        <source>Plain Text</source>
+        <translation>Prostý text</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/comment.inc.php" line="96"/>
+        <source>Text with Markup</source>
+        <translation>Formátovaný text</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="4"/>
@@ -3088,12 +3599,17 @@
         <translation>Komentář:</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/comment.html.php" line="14"/>
+        <location filename="../../../client/issues/comment.html.php" line="15"/>
+        <source>Text format:</source>
+        <translation>Formát textu:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/comment.html.php" line="18"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/comment.html.php" line="15"/>
+        <location filename="../../../client/issues/comment.html.php" line="19"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
@@ -3145,6 +3661,29 @@
     </message>
 </context>
 <context>
+    <name>Client_Issues_DeleteDescription</name>
+    <message>
+        <location filename="../../../client/issues/deletedescription.php" line="41"/>
+        <source>Delete Description</source>
+        <translation>Vymazat popis</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/deletedescription.html.php" line="3"/>
+        <source>Are you sure you want to delete description for issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Opravdu chcete vymazat popis pro problém &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/deletedescription.html.php" line="8"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/deletedescription.html.php" line="9"/>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
+    </message>
+</context>
+<context>
     <name>Client_Issues_DeleteIssue</name>
     <message>
         <location filename="../../../client/issues/deleteissue.php" line="37"/>
@@ -3168,6 +3707,59 @@
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
+    </message>
+</context>
+<context>
+    <name>Client_Issues_Description</name>
+    <message>
+        <location filename="../../../client/issues/description.inc.php" line="53"/>
+        <source>Add Description</source>
+        <translation>Přidat popis</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/description.inc.php" line="64"/>
+        <source>Edit Description</source>
+        <translation>Upravit popis</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/description.inc.php" line="75"/>
+        <source>Plain Text</source>
+        <translation>Prostý text</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/description.inc.php" line="76"/>
+        <source>Text with Markup</source>
+        <translation>Formátovaný text</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/description.html.php" line="4"/>
+        <source>Add description to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Přidat popis k problému &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/description.html.php" line="6"/>
+        <source>Edit description of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Upravit popis problému &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/description.html.php" line="11"/>
+        <source>Description:</source>
+        <translation>Popis:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/description.html.php" line="15"/>
+        <source>Text format:</source>
+        <translation>Formát textu:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/description.html.php" line="18"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/description.html.php" line="19"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
@@ -3213,17 +3805,37 @@
 <context>
     <name>Client_Issues_Issue</name>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="50"/>
+        <location filename="../../../client/issues/issue.inc.php" line="54"/>
         <source>Edit Attributes</source>
         <translation>Upravit atributy</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="74"/>
+        <location filename="../../../client/issues/issue.inc.php" line="106"/>
         <source>Clone Issue</source>
         <translation>Klonovat problém</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.inc.php" line="83"/>
+        <location filename="../../../client/issues/issue.inc.php" line="146"/>
+        <source>Please Select</source>
+        <translation>Prosím vyberte</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.inc.php" line="167"/>
+        <source>Plain Text</source>
+        <translation>Prostý text</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.inc.php" line="168"/>
+        <source>Text with Markup</source>
+        <translation>Formátovaný text</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.inc.php" line="331"/>
+        <source>No folder selected.</source>
+        <translation>Není vybrána složka.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.inc.php" line="78"/>
         <source>Add Issue</source>
         <translation>Přidat problém</translation>
     </message>
@@ -3234,8 +3846,8 @@
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="10"/>
-        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in folder &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Klonovat problém &lt;strong&gt;%1&lt;/strong&gt; jako nový problém ve složce &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in the selected folder.</source>
+        <translation>Klonovat problém &lt;strong&gt;%1&lt;/strong&gt;.jako nový ve vybrané složce.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="12"/>
@@ -3248,37 +3860,62 @@
         <translation>Upravit atributy problému &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="21"/>
+        <location filename="../../../client/issues/issue.html.php" line="16"/>
+        <source>Create a new issue in the selected folder.</source>
+        <translation>Založit problém ve vybrané složce.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="23"/>
         <source>Name:</source>
         <translation>Jméno:</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="25"/>
+        <location filename="../../../client/issues/issue.html.php" line="27"/>
+        <source>Folder:</source>
+        <translation>Složka:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="33"/>
         <source>Attributes</source>
         <translation>Atributy</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="29"/>
+        <location filename="../../../client/issues/issue.html.php" line="37"/>
         <source>%1:</source>
         <translation>%1:</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="43"/>
+        <location filename="../../../client/issues/issue.html.php" line="51"/>
+        <source>Description:</source>
+        <translation>Popis:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="55"/>
+        <source>Text format:</source>
+        <translation>Formát textu:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="59"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="44"/>
+        <location filename="../../../client/issues/issue.html.php" line="60"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="49"/>
+        <location filename="../../../client/issues/issue.html.php" line="66"/>
+        <source>There are no available folders of this type.</source>
+        <translation>Nejsou dostupné složky tohoto typu.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/issue.html.php" line="68"/>
         <source>There are no available project members to assign to the issue.</source>
         <translation>Není dostupný žádný uživatel, kterému lze přiřadit problém.</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/issue.html.php" line="52"/>
+        <location filename="../../../client/issues/issue.html.php" line="72"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
@@ -3286,32 +3923,42 @@
 <context>
     <name>Client_Issues_MarkAll</name>
     <message>
-        <location filename="../../../client/issues/markall.php" line="40"/>
+        <location filename="../../../client/issues/markall.php" line="50"/>
         <source>Mark All As Read</source>
         <translation>Označit vše jako přečtené</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/markall.php" line="42"/>
+        <location filename="../../../client/issues/markall.php" line="52"/>
         <source>Mark All As Unread</source>
         <translation>Označit vše jako nepřečtené</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/markall.html.php" line="4"/>
+        <location filename="../../../client/issues/markall.html.php" line="5"/>
         <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
         <translation>Opravdu chcete označit všechny problémy ve složce &lt;strong&gt;%1&lt;/strong&gt; jako přečtené?</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/markall.html.php" line="6"/>
+        <location filename="../../../client/issues/markall.html.php" line="7"/>
         <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
         <translation>Opravdu chcete označit všechny problémy ve složce &lt;strong&gt;%1&lt;/strong&gt; jako nepřečtené?</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/markall.html.php" line="12"/>
+        <location filename="../../../client/issues/markall.html.php" line="11"/>
+        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
+        <translation>Opravdu chcete označit všechny problémy typu &lt;strong&gt;%1&lt;/strong&gt;.jako přečtené?</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/markall.html.php" line="13"/>
+        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
+        <translation>Opravdu chcete označit všechny problémy typu &lt;strong&gt;%1&lt;/strong&gt;.jako nepřečtené?</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/markall.html.php" line="20"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../client/issues/markall.html.php" line="13"/>
+        <location filename="../../../client/issues/markall.html.php" line="21"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
@@ -3319,7 +3966,7 @@
 <context>
     <name>Client_Issues_MoveIssue</name>
     <message>
-        <location filename="../../../client/issues/moveissue.php" line="66"/>
+        <location filename="../../../client/issues/moveissue.php" line="69"/>
         <source>Move Issue</source>
         <translation>Přesunout problém</translation>
     </message>
@@ -3351,11 +3998,105 @@
     </message>
 </context>
 <context>
+    <name>Client_Issues_Preview</name>
+    <message>
+        <location filename="../../../client/issues/preview.php" line="53"/>
+        <source>Error: %1.</source>
+        <translation>Chyba: %1.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/preview.php" line="55"/>
+        <source>An unexpected error occured while processing the request.</source>
+        <translation>Během zpracování požadavku došlo k neznámé chybě.</translation>
+    </message>
+</context>
+<context>
+    <name>Client_Issues_Subscribe</name>
+    <message>
+        <location filename="../../../client/issues/subscribe.php" line="37"/>
+        <source>Subscribe To Issue</source>
+        <translation>Registrovat se k problému</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/subscribe.html.php" line="3"/>
+        <source>You are about to subscribe to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Chystáte se přidat k problému &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/subscribe.html.php" line="5"/>
+        <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
+        <translation>Obdržíte e-mail při změně problému, přidání komentáře, nebo přílohy.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/subscribe.html.php" line="8"/>
+        <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
+        <translation>Varování: Neobdržíte žádné e-maily dokud nezadáte svoji adresu v nastavení.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/subscribe.html.php" line="14"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/subscribe.html.php" line="15"/>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
+    </message>
+</context>
+<context>
+    <name>Client_Issues_Unsubscribe</name>
+    <message>
+        <location filename="../../../client/issues/unsubscribe.php" line="37"/>
+        <source>Unsubscribe From Issue</source>
+        <translation>Odhlásit z problému</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/unsubscribe.html.php" line="3"/>
+        <source>You are about to unsubscribe from issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Chystáte se odhlásit z problému &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/unsubscribe.html.php" line="5"/>
+        <source>You will no longer receive email notifications for this issue.</source>
+        <translation>Již nebudete dostávat zprávy týkající se totoho problému.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/unsubscribe.html.php" line="10"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/unsubscribe.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
+    </message>
+</context>
+<context>
     <name>Client_Project</name>
     <message>
-        <location filename="../../../client/project.html.php" line="5"/>
-        <source>No folder selected.</source>
-        <translation>Není vybrána složka.</translation>
+        <location filename="../../../client/project.inc.php" line="59"/>
+        <source>Add Description</source>
+        <translation>Přidat popis</translation>
+    </message>
+    <message>
+        <location filename="../../../client/project.html.php" line="12"/>
+        <source>Last Edited:</source>
+        <translation>Poslední úprava:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/project.html.php" line="14"/>
+        <source>Edit</source>
+        <translation>Upravit</translation>
+    </message>
+    <message>
+        <location filename="../../../client/project.html.php" line="15"/>
+        <source>Delete</source>
+        <translation>Vymazat</translation>
+    </message>
+    <message>
+        <location filename="../../../client/project.html.php" line="20"/>
+        <source>Description</source>
+        <translation>Popis</translation>
     </message>
 </context>
 <context>
@@ -3376,12 +4117,17 @@
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../../../client/projectstree.html.php" line="53"/>
+        <location filename="../../../client/projectstree.html.php" line="23"/>
+        <source>All Projects</source>
+        <translation>Všechny projekty</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projectstree.html.php" line="79"/>
         <source>There are no projects.</source>
         <translation>Nejsou žádné projekty.</translation>
     </message>
     <message>
-        <location filename="../../../client/projectstree.inc.php" line="87"/>
+        <location filename="../../../client/projectstree.inc.php" line="100"/>
         <source>Manage Projects</source>
         <translation>Správa projektů</translation>
     </message>
@@ -3390,8 +4136,8 @@
     <name>Client_Projects_Access</name>
     <message>
         <location filename="../../../client/projects/access.php" line="37"/>
-        <source>Change Access</source>
-        <translation>Změnit práva</translation>
+        <source>User Access</source>
+        <translation>Uživatelský přístup</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.php" line="56"/>
@@ -3405,8 +4151,8 @@
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="4"/>
-        <source>Set new access level to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Nastavit přístupovou úroveň pro projekt &lt;strong&gt;%1&lt;/strong&gt; pro uživatele &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <source>Change access to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <translation>Změnit přístupová práva k projektu &lt;strong&gt;%1&lt;/strong&gt; pro uživatele &lt;strong&gt;%2&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="11"/>
@@ -3471,12 +4217,12 @@
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.php" line="62"/>
-        <source>Regular Member</source>
+        <source>Regular member</source>
         <translation>Běžný uživatel</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.php" line="63"/>
-        <source>Project Administrator</source>
+        <source>Project administrator</source>
         <translation>Administrátor projektu</translation>
     </message>
     <message>
@@ -3533,17 +4279,60 @@
         <translation>Přidat projekt</translation>
     </message>
     <message>
+        <location filename="../../../client/projects/addproject.php" line="48"/>
+        <source>Plain Text</source>
+        <translation>Prostý text</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/addproject.php" line="49"/>
+        <source>Text with Markup</source>
+        <translation>Formátovaný text</translation>
+    </message>
+    <message>
         <location filename="../../../client/projects/addproject.html.php" line="5"/>
         <source>Name:</source>
         <translation>Jméno:</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/addproject.html.php" line="8"/>
+        <location filename="../../../client/projects/addproject.html.php" line="7"/>
+        <source>Description:</source>
+        <translation>Popis:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/addproject.html.php" line="11"/>
+        <source>Text format:</source>
+        <translation>Formát textu:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/addproject.html.php" line="14"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/addproject.html.php" line="9"/>
+        <location filename="../../../client/projects/addproject.html.php" line="15"/>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
+    </message>
+</context>
+<context>
+    <name>Client_Projects_DeleteDescription</name>
+    <message>
+        <location filename="../../../client/projects/deletedescription.php" line="41"/>
+        <source>Delete Description</source>
+        <translation>Vymazat popis</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/deletedescription.html.php" line="3"/>
+        <source>Are you sure you want to delete description for project &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Opravdu chcete vymazat popis projektu &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/deletedescription.html.php" line="8"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/deletedescription.html.php" line="9"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
@@ -3605,6 +4394,59 @@
     </message>
 </context>
 <context>
+    <name>Client_Projects_Description</name>
+    <message>
+        <location filename="../../../client/projects/description.inc.php" line="53"/>
+        <source>Add Description</source>
+        <translation>Přidat popis</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/description.inc.php" line="64"/>
+        <source>Edit Description</source>
+        <translation>Upravit popis</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/description.inc.php" line="75"/>
+        <source>Plain Text</source>
+        <translation>Prostý text</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/description.inc.php" line="76"/>
+        <source>Text with Markup</source>
+        <translation>Formátovaný text</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/description.html.php" line="4"/>
+        <source>Add description to project &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Přidat popis k projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/description.html.php" line="6"/>
+        <source>Edit description of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Upravit popis projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/description.html.php" line="11"/>
+        <source>Description:</source>
+        <translation>Popis:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/description.html.php" line="15"/>
+        <source>Text format:</source>
+        <translation>Formát textu:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/description.html.php" line="18"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/description.html.php" line="19"/>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
+    </message>
+</context>
+<context>
     <name>Client_Projects_Index</name>
     <message>
         <location filename="../../../client/projects/index.php" line="33"/>
@@ -3612,44 +4454,54 @@
         <translation>Správa projektů</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="83"/>
+        <location filename="../../../client/projects/index.php" line="53"/>
+        <source>Regular project</source>
+        <translation>Běžný projekt</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="54"/>
+        <source>Public project</source>
+        <translation>Veřejný projekt</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="89"/>
         <source>Add Project</source>
         <translation>Přidat projekt</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="84"/>
+        <location filename="../../../client/projects/index.php" line="90"/>
         <source>Add Folder</source>
         <translation>Přidat složku</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="86"/>
+        <location filename="../../../client/projects/index.php" line="92"/>
         <source>Rename Project</source>
         <translation>Přejmenovat projekt</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="87"/>
+        <location filename="../../../client/projects/index.php" line="93"/>
         <source>Delete Project</source>
         <translation>Vymazat projekt</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="89"/>
+        <location filename="../../../client/projects/index.php" line="95"/>
         <source>Rename Folder</source>
         <translation>Přejmenovat složku</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="90"/>
+        <location filename="../../../client/projects/index.php" line="96"/>
         <source>Move Folder</source>
         <translation>Přesunout složku</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="91"/>
+        <location filename="../../../client/projects/index.php" line="97"/>
         <source>Delete Folder</source>
         <translation>Vymazat složku</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="92"/>
-        <source>Project Members</source>
-        <translation>Uživatelé projektu</translation>
+        <location filename="../../../client/projects/index.php" line="98"/>
+        <source>Manage Permissions</source>
+        <translation>Nastavení práv</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="13"/>
@@ -3662,17 +4514,22 @@
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.html.php" line="46"/>
+        <location filename="../../../client/projects/index.html.php" line="15"/>
+        <source>Access</source>
+        <translation>Přístup</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.html.php" line="55"/>
         <source>There are no projects.</source>
         <translation>Nejsou žádné projekty.</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.html.php" line="50"/>
+        <location filename="../../../client/projects/index.html.php" line="59"/>
         <source>There are no projects that you can manage.</source>
         <translation>Nejsou žádné projekty, které by jste mohl spravovat.</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.html.php" line="55"/>
+        <location filename="../../../client/projects/index.html.php" line="64"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -3680,57 +4537,77 @@
 <context>
     <name>Client_Projects_Members</name>
     <message>
-        <location filename="../../../client/projects/members.php" line="37"/>
-        <source>Project Members</source>
-        <translation>Uživatelé projektu</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/members.php" line="87"/>
+        <location filename="../../../client/projects/members.php" line="94"/>
         <source>Add Members</source>
         <translation>Přidat uživatele</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.html.php" line="3"/>
-        <source>Members of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Uživatelé projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/projects/members.html.php" line="15"/>
+        <location filename="../../../client/projects/members.html.php" line="26"/>
         <source>Name</source>
         <translation>Jméno</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.html.php" line="16"/>
-        <source>Access Level</source>
-        <translation>Práva</translation>
+        <location filename="../../../client/projects/members.html.php" line="3"/>
+        <source>Edit permissions of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Upravit oprávnění pr projekt &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.html.php" line="42"/>
+        <location filename="../../../client/projects/members.html.php" line="8"/>
+        <source>Global Access</source>
+        <translation>Glovální přístup</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.html.php" line="11"/>
+        <source>Change</source>
+        <translation>Změnit</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.html.php" line="27"/>
+        <source>Access</source>
+        <translation>Přístup</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.html.php" line="53"/>
         <source>This project has no members.</source>
         <translation>Projekt nemá uživatele.</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.html.php" line="47"/>
+        <location filename="../../../client/projects/members.html.php" line="58"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
+        <location filename="../../../client/projects/members.php" line="37"/>
+        <source>Manage Permissions</source>
+        <translation>Správa práv</translation>
+    </message>
+    <message>
         <location filename="../../../client/projects/members.php" line="60"/>
+        <source>Regular project</source>
+        <translation>Běžný projekt</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.php" line="61"/>
+        <source>Public project</source>
+        <translation>Veřejný projekt</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/members.php" line="67"/>
         <source>Regular member</source>
         <translation>Běžný uživatel</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.php" line="61"/>
+        <location filename="../../../client/projects/members.php" line="68"/>
         <source>Project administrator</source>
         <translation>Administrátor projektu</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.php" line="88"/>
+        <location filename="../../../client/projects/members.php" line="95"/>
         <source>Change Access</source>
         <translation>Změnit přístup</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/members.php" line="89"/>
+        <location filename="../../../client/projects/members.php" line="96"/>
         <source>Remove Member</source>
         <translation>Odstranit uživatele</translation>
     </message>
@@ -3767,6 +4644,39 @@
         <location filename="../../../client/projects/movefolder.html.php" line="18"/>
         <source>There are no available destination projects.</source>
         <translation>Žádné cílové projekty nejsou k dispozici.</translation>
+    </message>
+</context>
+<context>
+    <name>Client_Projects_ProjectAccess</name>
+    <message>
+        <location filename="../../../client/projects/projectaccess.php" line="40"/>
+        <source>Global Access</source>
+        <translation>Globální přístup</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/projectaccess.php" line="49"/>
+        <source>Regular project</source>
+        <translation>Běžný projekt</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/projectaccess.php" line="50"/>
+        <source>Public project</source>
+        <translation>Veřejný projekt</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/projectaccess.html.php" line="3"/>
+        <source>Change global access for project &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Změnit globální přístup k projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/projectaccess.html.php" line="10"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/projectaccess.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
     </message>
 </context>
 <context>
@@ -4012,32 +4922,32 @@
         <translation>Jít na problém se zadaným identifikátorem.</translation>
     </message>
     <message>
-        <location filename="../../../client/tools/index.html.php" line="6"/>
+        <location filename="../../../client/tools/index.html.php" line="7"/>
         <source>Change Password</source>
         <translation>Změnit heslo</translation>
     </message>
     <message>
-        <location filename="../../../client/tools/index.html.php" line="7"/>
+        <location filename="../../../client/tools/index.html.php" line="8"/>
         <source>Change your password.</source>
         <translation>Změnit Vaše heslo.</translation>
     </message>
     <message>
-        <location filename="../../../client/tools/index.html.php" line="8"/>
+        <location filename="../../../client/tools/index.html.php" line="9"/>
         <source>User Preferences</source>
         <translation>Uživatelská nastavení</translation>
     </message>
     <message>
-        <location filename="../../../client/tools/index.html.php" line="9"/>
+        <location filename="../../../client/tools/index.html.php" line="10"/>
         <source>Configure your user preferences.</source>
         <translation>Upravit Vaše osobní nastavení.</translation>
     </message>
     <message>
-        <location filename="../../../client/tools/index.html.php" line="10"/>
+        <location filename="../../../client/tools/index.html.php" line="12"/>
         <source>About WebIssues</source>
         <translation>O systému WebIssues</translation>
     </message>
     <message>
-        <location filename="../../../client/tools/index.html.php" line="11"/>
+        <location filename="../../../client/tools/index.html.php" line="13"/>
         <source>Show information about WebIssues.</source>
         <translation>Zobrazit informace o systému WebIssues.</translation>
     </message>
@@ -4131,11 +5041,6 @@
         <translation>Uživatelské účty</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="114"/>
-        <source>User Projects</source>
-        <translation>Projekty uživatele</translation>
-    </message>
-    <message>
         <location filename="../../breadcrumbs.inc.php" line="119"/>
         <source>Registration Requests</source>
         <translation>Registrační požadavky</translation>
@@ -4151,27 +5056,28 @@
         <translation>Zobrazit nastavení</translation>
     </message>
     <message>
+        <location filename="../../breadcrumbs.inc.php" line="114"/>
         <location filename="../../breadcrumbs.inc.php" line="141"/>
-        <source>Project Members</source>
-        <translation>Uživatelé projektu</translation>
+        <source>Manage Permissions</source>
+        <translation>Nastavení práv</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="153"/>
+        <location filename="../../breadcrumbs.inc.php" line="158"/>
         <source>Manage Views</source>
         <translation>Spravovat pohledy</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="159"/>
+        <location filename="../../breadcrumbs.inc.php" line="164"/>
         <source>Manage Alerts</source>
         <translation>Spravovat upozornění</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="170"/>
+        <location filename="../../breadcrumbs.inc.php" line="175"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="175"/>
+        <location filename="../../breadcrumbs.inc.php" line="180"/>
         <source>Manage Projects</source>
         <translation>Správa projektů</translation>
     </message>
@@ -4327,108 +5233,156 @@
     <name>Common_Mail_Approve</name>
     <message>
         <location filename="../../mail/approve.inc.php" line="37"/>
-        <location filename="../../mail/approve.html.php" line="3"/>
         <source>WebIssues Server registration approved</source>
         <translation>Vaše registrace na serveru WebIssues byla schálena</translation>
     </message>
     <message>
-        <location filename="../../mail/approve.html.php" line="5"/>
-        <source>Your registration request at the WebIssues Server was approved by the administrator.</source>
+        <location filename="../../mail/approve.html.php" line="3"/>
+        <source>Your registration request on the WebIssues Server was approved by the administrator.</source>
         <translation>Váš registrační požadavek na serveru WebIssues byl schválen administrátorem.</translation>
     </message>
     <message>
-        <location filename="../../mail/approve.html.php" line="7"/>
-        <source>To log in to the WebIssues Server, please visit the following URL:</source>
-        <translation>Pro přihlášení na server WebIssue navštivte následující odkaz:</translation>
+        <location filename="../../mail/approve.html.php" line="5"/>
+        <source>You can now %1 using your login and password.</source>
+        <translation>Nyní %1 můžete použít svoje jméno a heslo.</translation>
     </message>
     <message>
-        <location filename="../../mail/approve.html.php" line="12"/>
+        <location filename="../../mail/approve.html.php" line="5"/>
+        <source>log in to the server</source>
+        <translation>přihlásit se na server</translation>
+    </message>
+    <message>
+        <location filename="../../mail/approve.html.php" line="8"/>
         <source>User name: %1</source>
         <translation>Uživatel: %1</translation>
     </message>
     <message>
-        <location filename="../../mail/approve.html.php" line="13"/>
+        <location filename="../../mail/approve.html.php" line="9"/>
         <source>Login: %1</source>
-        <translation></translation>
+        <translation>Login: %1</translation>
     </message>
     <message>
-        <location filename="../../mail/approve.html.php" line="14"/>
+        <location filename="../../mail/approve.html.php" line="10"/>
         <source>Email address: %1</source>
         <translation>E-mailová adresa: %1</translation>
     </message>
 </context>
 <context>
+    <name>Common_Mail_IssueCreated</name>
+    <message>
+        <location filename="../../mail/issuecreated.html.php" line="3"/>
+        <source>Your email was successfully registered on the WebIssues Server as the following issue:</source>
+        <translation>Váš e-mail byl v pořádku přiřazen k problému:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/issuecreated.html.php" line="6"/>
+        <source>ID: %1</source>
+        <translation>ID: %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/issuecreated.html.php" line="7"/>
+        <source>Name: %1</source>
+        <translation>Název: %1</translation>
+    </message>
+    <message>
+        <location filename="../../mail/issuecreated.html.php" line="11"/>
+        <source>You can add comments and attachments to this issue by responding to this email. Include %1 in the subject when sending emails regarding this issue.</source>
+        <translation>Můžete přidávat komentáře a přílohy odpodí na tento e-mail. Přidejte předmět %1 do odeslané zprávy pro správnou identifikaci problému.</translation>
+    </message>
+    <message>
+        <location filename="../../mail/issuecreated.html.php" line="14"/>
+        <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
+        <translation>Obdržíte e-mail při každé změně problému.</translation>
+    </message>
+    <message>
+        <location filename="../../mail/issuecreated.html.php" line="18"/>
+        <source>You can also %1 in the WebIssues Server.</source>
+        <translatorcomment>Neznám kontext</translatorcomment>
+        <translation>Můžete také %1 na WebIssues severu.</translation>
+    </message>
+    <message>
+        <location filename="../../mail/issuecreated.html.php" line="18"/>
+        <source>view this issue</source>
+        <translation>Zobrazit tento problém</translation>
+    </message>
+</context>
+<context>
     <name>Common_Mail_Notification</name>
     <message>
-        <location filename="../../mail/notification.inc.php" line="60"/>
+        <location filename="../../mail/notification.inc.php" line="73"/>
         <source>All Issues</source>
         <translation>Všechny problémy</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="53"/>
+        <location filename="../../mail/notification.html.php" line="52"/>
         <source>Properties</source>
         <translation>Vlastnosti</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="57"/>
+        <location filename="../../mail/notification.html.php" line="56"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="61"/>
+        <location filename="../../mail/notification.html.php" line="60"/>
         <source>Type:</source>
         <translation>Typ:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="65"/>
+        <location filename="../../mail/notification.html.php" line="64"/>
         <source>Location:</source>
         <translation>Umístění:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="69"/>
+        <location filename="../../mail/notification.html.php" line="68"/>
         <source>Created:</source>
         <translation>Vytvořeno:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="73"/>
+        <location filename="../../mail/notification.html.php" line="72"/>
         <source>Last Modified:</source>
         <translation>Poslední změna:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="175"/>
+        <location filename="../../mail/notification.html.php" line="100"/>
+        <source>Description</source>
+        <translation>Popis</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="185"/>
         <source>Issue moved from %1 to %2</source>
         <translation>Problém přesunut z %1 do %2</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="82"/>
+        <location filename="../../mail/notification.html.php" line="81"/>
         <source>Attributes</source>
         <translation>Atributy</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="102"/>
+        <location filename="../../mail/notification.html.php" line="113"/>
         <source>Issue History</source>
         <translation>Hystorie problému</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="125"/>
-        <location filename="../../mail/notification.html.php" line="128"/>
+        <location filename="../../mail/notification.html.php" line="138"/>
+        <location filename="../../mail/notification.html.php" line="141"/>
         <source>Name</source>
         <translation>Název</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="131"/>
-        <location filename="../../mail/notification.html.php" line="132"/>
+        <location filename="../../mail/notification.html.php" line="144"/>
+        <location filename="../../mail/notification.html.php" line="145"/>
         <source>empty</source>
         <translation>prázdný</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="173"/>
-        <location filename="../../mail/notification.html.php" line="174"/>
+        <location filename="../../mail/notification.html.php" line="183"/>
+        <location filename="../../mail/notification.html.php" line="184"/>
         <source>Unknown Folder</source>
         <translation>Neznámá složka</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="196"/>
+        <location filename="../../mail/notification.html.php" line="212"/>
         <source>This is an alert email from the WebIssues Server.</source>
         <translation>Toto je upozornění ze serveru WebIssues.</translation>
     </message>
@@ -4437,37 +5391,36 @@
     <name>Common_Mail_Register</name>
     <message>
         <location filename="../../mail/register.inc.php" line="37"/>
-        <location filename="../../mail/register.html.php" line="3"/>
         <source>WebIssues Server email verification</source>
         <translation>E-mailové upozornění ze serveru WebIssues</translation>
     </message>
     <message>
-        <location filename="../../mail/register.html.php" line="5"/>
-        <source>Thank you for registering at the WebIssues Server.</source>
-        <translation>Děkujeme za registraci na WebIssue serveru.</translation>
+        <location filename="../../mail/register.html.php" line="3"/>
+        <source>Thank you for registering on the WebIssues Server.</source>
+        <translation>Děkujeme za registraci na WebIssues serveru.</translation>
     </message>
     <message>
-        <location filename="../../mail/register.html.php" line="7"/>
+        <location filename="../../mail/register.html.php" line="5"/>
         <source>To activate your registration request, please visit the following URL:</source>
         <translation>Pro aktivaci Vašeho registračního požadavku navštivte prosím adresu:</translation>
     </message>
     <message>
-        <location filename="../../mail/register.html.php" line="12"/>
+        <location filename="../../mail/register.html.php" line="10"/>
         <source>User name: %1</source>
         <translation>Uživatel: %1</translation>
     </message>
     <message>
-        <location filename="../../mail/register.html.php" line="13"/>
+        <location filename="../../mail/register.html.php" line="11"/>
         <source>Login: %1</source>
         <translation>Login: %1</translation>
     </message>
     <message>
-        <location filename="../../mail/register.html.php" line="14"/>
+        <location filename="../../mail/register.html.php" line="12"/>
         <source>Email address: %1</source>
         <translation>E-mailová adresa: %1</translation>
     </message>
     <message>
-        <location filename="../../mail/register.html.php" line="17"/>
+        <location filename="../../mail/register.html.php" line="15"/>
         <source>If you didn&apos;t register, please ignore this email.</source>
         <translation>Pokud jste se neregistroval, ignorujte prosím tuto zprávu.</translation>
     </message>
@@ -4475,70 +5428,153 @@
 <context>
     <name>Common_Mail_RegisterNotification</name>
     <message>
-        <location filename="../../mail/registernotification.inc.php" line="37"/>
-        <location filename="../../mail/registernotification.html.php" line="6"/>
-        <location filename="../../mail/registernotification.html.php" line="8"/>
-        <source>Registration Requests</source>
-        <translation>Registrační požadavek</translation>
+        <location filename="../../mail/registernotification.html.php" line="3"/>
+        <source>You have the following new %1 on the WebIssues Server pending for approval:</source>
+        <translation>Na webIssues serveru máte %1 čekající na schválení:</translation>
     </message>
     <message>
-        <location filename="../../mail/registernotification.html.php" line="13"/>
-        <source>You have the following new registration requests pending for approval:</source>
-        <translation>Máte nové registrační požadavky čekající na schválení:</translation>
+        <location filename="../../mail/registernotification.html.php" line="3"/>
+        <source>registration requests</source>
+        <translation>registrační požadavek</translation>
     </message>
     <message>
-        <location filename="../../mail/registernotification.html.php" line="17"/>
+        <location filename="../../mail/registernotification.html.php" line="7"/>
         <source>Name</source>
         <translation>Jméno</translation>
     </message>
     <message>
-        <location filename="../../mail/registernotification.html.php" line="18"/>
+        <location filename="../../mail/registernotification.html.php" line="8"/>
         <source>Login</source>
         <translation>Login</translation>
     </message>
     <message>
-        <location filename="../../mail/registernotification.html.php" line="19"/>
+        <location filename="../../mail/registernotification.html.php" line="9"/>
         <source>Email</source>
         <translation>E-mail</translation>
     </message>
     <message>
-        <location filename="../../mail/registernotification.html.php" line="20"/>
+        <location filename="../../mail/registernotification.html.php" line="10"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../../mail/registernotification.html.php" line="32"/>
-        <source>This is an alert email from the WebIssues Server.</source>
-        <translation>Toto je upozornění z WebIssues serveru.</translation>
+        <location filename="../../mail/registernotification.inc.php" line="37"/>
+        <source>WebIssues Server registration requests</source>
+        <translation>Registrační požadavek serveru WebIssue</translation>
     </message>
 </context>
 <context>
     <name>Common_Mail_Reject</name>
     <message>
         <location filename="../../mail/reject.inc.php" line="37"/>
-        <location filename="../../mail/reject.html.php" line="3"/>
         <source>WebIssues Server registration rejected</source>
         <translation>Registrace na server WebIssues byla zamítnuta</translation>
     </message>
     <message>
-        <location filename="../../mail/reject.html.php" line="5"/>
-        <source>Sorry, your registration request at the WebIssues Server was rejected by the administrator.</source>
-        <translation>Promiňte, ale Váš požadavek byl správcem serveru WebIssue zamítnut.</translation>
+        <location filename="../../mail/reject.html.php" line="3"/>
+        <source>Sorry, your registration request on the WebIssues Server was rejected by the administrator.</source>
+        <translation>Promiňte, ale administrátor serveru WebIssues Váš požadavek zamítnul.</translation>
     </message>
     <message>
-        <location filename="../../mail/reject.html.php" line="8"/>
+        <location filename="../../mail/reject.html.php" line="6"/>
         <source>User name: %1</source>
         <translation>Uživatel: %1</translation>
     </message>
     <message>
-        <location filename="../../mail/reject.html.php" line="9"/>
+        <location filename="../../mail/reject.html.php" line="7"/>
         <source>Login: %1</source>
         <translation>Login: %1</translation>
     </message>
     <message>
-        <location filename="../../mail/reject.html.php" line="10"/>
+        <location filename="../../mail/reject.html.php" line="8"/>
         <source>Email address: %1</source>
         <translation>E-mail: %1</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Mail_Subscription</name>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="4"/>
+        <source>Include your response above this line</source>
+        <translation>Vaši odpověď vložte nad tuto čáru</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="6"/>
+        <source>You can add comments and attachments to this issue by responding to this email. Include %1 in the subject when sending emails regarding this issue.</source>
+        <translation>Můžete přidávat komentáře a přílohy odpovědí na tuto zprávu. Do záhlaví přidejte %1 pro správnou identifikaci problému.</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="19"/>
+        <source>Properties</source>
+        <translation>Vlastnosti</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="23"/>
+        <source>ID:</source>
+        <translation>ID:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="27"/>
+        <source>Type:</source>
+        <translation>Typ:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="31"/>
+        <source>Location:</source>
+        <translation>Umístění:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="35"/>
+        <source>Created:</source>
+        <translation>Vytvořeno:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="39"/>
+        <source>Last Modified:</source>
+        <translation>Poslední změna:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="48"/>
+        <source>Attributes</source>
+        <translation>Atributy</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="67"/>
+        <source>Description</source>
+        <translation>Popis</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="79"/>
+        <source>Issue History</source>
+        <translation>Hystorie problému</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="104"/>
+        <location filename="../../mail/subscription.html.php" line="107"/>
+        <source>Name</source>
+        <translation>Jméno</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="110"/>
+        <location filename="../../mail/subscription.html.php" line="111"/>
+        <source>empty</source>
+        <translation>prázdný</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="149"/>
+        <location filename="../../mail/subscription.html.php" line="150"/>
+        <source>Unknown Folder</source>
+        <translation>Neznámá složka</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="151"/>
+        <source>Issue moved from %1 to %2</source>
+        <translation>Problém přesunut z %1 do %2</translation>
+    </message>
+    <message>
+        <location filename="../../mail/subscription.html.php" line="175"/>
+        <source>This is a subscription email from the WebIssues Server.</source>
+        <translation>Toto je registrační e-mail ze serveru WebIssues.</translation>
     </message>
 </context>
 <context>
@@ -4550,21 +5586,16 @@
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="3"/>
-        <source>Test Message</source>
-        <translation>Testovací zpráva</translation>
-    </message>
-    <message>
-        <location filename="../../mail/testconnection.html.php" line="5"/>
         <source>This email was sent by the WebIssues Server to test connection to the SMTP server.</source>
         <translation>Tento e-mail byl odeslán serverem WebIssue z důvodu kontroly nastavení SMTP serveru.</translation>
     </message>
     <message>
-        <location filename="../../mail/testconnection.html.php" line="8"/>
+        <location filename="../../mail/testconnection.html.php" line="6"/>
         <source>Server name: %1</source>
         <translation>Název serveru: %1</translation>
     </message>
     <message>
-        <location filename="../../mail/testconnection.html.php" line="9"/>
+        <location filename="../../mail/testconnection.html.php" line="7"/>
         <source>Port: %1</source>
         <translation>Port: %1</translation>
     </message>
@@ -4580,23 +5611,23 @@
 <context>
     <name>Common_PageLayout</name>
     <message>
-        <location filename="../../pagelayout.inc.php" line="40"/>
+        <location filename="../../pagelayout.inc.php" line="44"/>
         <source>WebIssues</source>
         <translation>WebIssues</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="51"/>
+        <location filename="../../pagelayout.inc.php" line="66"/>
         <source>Untitled page</source>
         <translation>Nepojmenovaná stránka</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="55"/>
+        <location filename="../../pagelayout.inc.php" line="70"/>
         <location filename="../../pagelayout.html.php" line="35"/>
         <source>Web Client</source>
         <translation>Webový klient</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="58"/>
+        <location filename="../../pagelayout.inc.php" line="73"/>
         <location filename="../../pagelayout.html.php" line="33"/>
         <source>Administration Panel</source>
         <translation>Administrativní panel</translation>
@@ -4617,14 +5648,24 @@
         <translation>Přihlášen jako: %1</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="53"/>
+        <location filename="../../pagelayout.html.php" line="55"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.html.php" line="54"/>
+        <location filename="../../pagelayout.html.php" line="58"/>
         <source>Log Out</source>
         <translation>Odhlásit se</translation>
+    </message>
+    <message>
+        <location filename="../../pagelayout.html.php" line="60"/>
+        <source>Log In</source>
+        <translation>Přihlásit se</translation>
+    </message>
+    <message>
+        <location filename="../../pagelayout.html.php" line="62"/>
+        <source>Register</source>
+        <translation>Registrovat</translation>
     </message>
 </context>
 <context>
@@ -4633,6 +5674,40 @@
         <location filename="../../singlepane.inc.php" line="34"/>
         <source>Untitled page</source>
         <translation>Bezejmenná stránka</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Tools_Editing</name>
+    <message>
+        <location filename="../../tools/editing.inc.php" line="42"/>
+        <source>Plain Text</source>
+        <translation>Prostý text</translation>
+    </message>
+    <message>
+        <location filename="../../tools/editing.inc.php" line="43"/>
+        <source>Text with Markup</source>
+        <translation>Formátovaný text</translation>
+    </message>
+    <message>
+        <location filename="../../tools/editing.inc.php" line="48"/>
+        <source>Default (%1)</source>
+        <comment>format</comment>
+        <translation>Výchozí (%1)</translation>
+    </message>
+    <message>
+        <location filename="../../tools/editing.html.php" line="4"/>
+        <source>Editing</source>
+        <translation>Úprava</translation>
+    </message>
+    <message>
+        <location filename="../../tools/editing.html.php" line="6"/>
+        <source>The default format used for new comments and descriptions.</source>
+        <translation>Výchozí formát pro nové komentáře a popisy.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/editing.html.php" line="8"/>
+        <source>Default text format:</source>
+        <translation>Výchozí textový formát:</translation>
     </message>
 </context>
 <context>
@@ -4804,24 +5879,19 @@
         <translation>Nastavení uživatele &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="19"/>
+        <location filename="../../tools/preferences.html.php" line="21"/>
         <source>Notifications</source>
         <translation>Upozornění</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="21"/>
+        <location filename="../../tools/preferences.html.php" line="23"/>
         <source>Email address:</source>
         <translation>E-mailová adresa:</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="24"/>
+        <location filename="../../tools/preferences.html.php" line="26"/>
         <source>This address will only be visible to the system administrator. You will not receive notifications if you leave this field empty.</source>
         <translation>Tato adresa bude zobrazena pouze administrátorovi systému. Pokud ji nevyplníte nebudete dostávat upozornění.</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="26"/>
-        <source>Settings</source>
-        <translation>Nastavení</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="28"/>
@@ -4834,44 +5904,12 @@
         <translation>Neupozorňovat na problémy, které jsem již přečetl</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="31"/>
-        <source>Summary Schedule</source>
-        <translation>Plánování souhrnu</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="34"/>
-        <location filename="../../tools/preferences.html.php" line="57"/>
-        <source>Select All</source>
-        <translation>Vybrat vše</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="36"/>
-        <location filename="../../tools/preferences.html.php" line="59"/>
-        <source>Unselect All</source>
-        <translation>Zrušit výběr</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="38"/>
-        <source>Send on the following days:</source>
-        <translation>Odesílat v následujících dnech:</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="62"/>
-        <source>Send at the following hours:</source>
-        <translation>Odesílat v těchto hodinách:</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="73"/>
-        <source>You will not receive summary emails if you do not select any day and hour.</source>
-        <translation>Nedostanete žádné upozornění pokud nevyberete žádnou hodinu, nebo den.</translation>
-    </message>
-    <message>
-        <location filename="../../tools/preferences.html.php" line="79"/>
+        <location filename="../../tools/preferences.html.php" line="35"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="80"/>
+        <location filename="../../tools/preferences.html.php" line="36"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
@@ -4977,96 +6015,101 @@
 <context>
     <name>Common_Views_Helper</name>
     <message>
-        <location filename="../../views/helper.inc.php" line="103"/>
+        <location filename="../../views/helper.inc.php" line="110"/>
         <source>begins with</source>
         <translation>začíná na</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="104"/>
+        <location filename="../../views/helper.inc.php" line="111"/>
         <source>contains</source>
         <translation>obsahuje</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="105"/>
+        <location filename="../../views/helper.inc.php" line="112"/>
         <source>ends with</source>
         <translation>končí na</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="106"/>
+        <location filename="../../views/helper.inc.php" line="113"/>
         <source>in</source>
         <translation>z</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="248"/>
+        <location filename="../../views/helper.inc.php" line="255"/>
         <source>All Issues</source>
         <translation>Všechny problémy</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="355"/>
+        <location filename="../../views/helper.inc.php" line="366"/>
         <source>Add Public View</source>
         <translation>Přidat veřejný pohled</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="356"/>
-        <location filename="../../views/helper.inc.php" line="363"/>
+        <location filename="../../views/helper.inc.php" line="367"/>
+        <location filename="../../views/helper.inc.php" line="375"/>
         <source>Modify View</source>
         <translation>Upravit pohled</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="357"/>
-        <location filename="../../views/helper.inc.php" line="364"/>
+        <location filename="../../views/helper.inc.php" line="368"/>
+        <location filename="../../views/helper.inc.php" line="376"/>
         <source>Clone View</source>
         <translation>Klonovat pohled</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="358"/>
-        <location filename="../../views/helper.inc.php" line="365"/>
+        <location filename="../../views/helper.inc.php" line="369"/>
+        <location filename="../../views/helper.inc.php" line="377"/>
         <source>Rename View</source>
         <translation>Přejmenovat pohled</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="359"/>
-        <location filename="../../views/helper.inc.php" line="366"/>
+        <location filename="../../views/helper.inc.php" line="370"/>
+        <location filename="../../views/helper.inc.php" line="378"/>
         <source>Delete View</source>
         <translation>Smazat pohled</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="360"/>
+        <location filename="../../views/helper.inc.php" line="371"/>
         <source>Unpublish View</source>
         <translation>Změnit na soukromý</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="362"/>
+        <location filename="../../views/helper.inc.php" line="372"/>
+        <source>Manage Personal Views</source>
+        <translation>Spravovat soukromé pohledy</translation>
+    </message>
+    <message>
+        <location filename="../../views/helper.inc.php" line="374"/>
         <source>Add Personal View</source>
         <translation>Přidat soukromý pohled</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="369"/>
+        <location filename="../../views/helper.inc.php" line="381"/>
         <source>Publish View</source>
         <translation>Změnit na veřejný</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="375"/>
+        <location filename="../../views/helper.inc.php" line="382"/>
         <source>Public View Settings</source>
         <translation>Nastavení veřejného pohledu</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="442"/>
+        <location filename="../../views/helper.inc.php" line="451"/>
         <source>ascending</source>
         <translation>vzestupně</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="442"/>
+        <location filename="../../views/helper.inc.php" line="451"/>
         <source>descending</source>
         <translation>sestupně</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="455"/>
+        <location filename="../../views/helper.inc.php" line="464"/>
         <source>empty</source>
         <translation>prázdný</translation>
     </message>
     <message>
-        <location filename="../../views/helper.inc.php" line="461"/>
+        <location filename="../../views/helper.inc.php" line="470"/>
         <source>AND</source>
         <translation>AND</translation>
     </message>
@@ -5307,32 +6350,117 @@
 <context>
     <name>Cron_Job</name>
     <message>
-        <location filename="../../../cron/job.php" line="57"/>
+        <location filename="../../../cron/job.php" line="56"/>
         <source>Previous cron job timed out</source>
         <translation>Předešlému zpracování CRONU vypršel čas</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="65"/>
+        <location filename="../../../cron/job.php" line="64"/>
         <source>Cron job started</source>
         <translation>CRON spuštěn</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="87"/>
+        <location filename="../../../cron/job.php" line="96"/>
         <source>Cron job finished with error</source>
         <translation>CRON skončil s chybou</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="89"/>
+        <location filename="../../../cron/job.php" line="98"/>
         <source>Previous cron job is still running</source>
         <translation>Předešlý CRON ještě probíhá</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="91"/>
-        <source>Cron job finished (sent %1 emails)</source>
-        <translation>CRON byl dokončen (odesláno %1 zpráv)</translation>
+        <location filename="../../../cron/job.php" line="321"/>
+        <source>Sent %1 notification emails</source>
+        <translation>Odesláno %1 notifikačních e-mailů</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="93"/>
+        <location filename="../../../cron/job.php" line="384"/>
+        <source>Ignored inbox email from &quot;%1&quot;</source>
+        <translation>Ignorován přízhozí e-mail od &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="396"/>
+        <source>Ignored inbox email from unknown address &quot;%1&quot;</source>
+        <translation>Ignorován příchozí e-mail z neznámé adresy &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="415"/>
+        <source>Ignored inbox email from &quot;%1&quot; because issue %2 is inaccessible</source>
+        <translation>Ignorován příchozí e-mail od &quot;%1&quot; protože problém %2 je nedostupný</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="434"/>
+        <source>Ambiguous folder for inbox email address &quot;%1&quot;</source>
+        <translation>Nejasná složka pro příchozí e-mailovou adresu &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="436"/>
+        <source>No matching folder for inbox email address &quot;%1&quot;</source>
+        <translation>Neexistuje odpovídající složka pro příchozí adresu &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="445"/>
+        <source>Ignored inbox email from &quot;%1&quot; to &quot;%2&quot; because folder is inaccessible</source>
+        <translation>Příchozí e-mail od  &quot;%1&quot; byl ignorován  protože složka &quot;%2&quot; není dostupná</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="451"/>
+        <source>Ignored inbox email from &quot;%1&quot; because default folder is inaccessible</source>
+        <translation>Ignorován příchozí e-mail od &quot;%1&quot;protože je výchozí složka nedostupná</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="454"/>
+        <source>Ignored inbox email from &quot;%1&quot; because folder cannot be mapped</source>
+        <translation>Ignorován příchozí e-mail od &quot;%1&quot;protože složka není namapovaná</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="492"/>
+        <source>No subject</source>
+        <translation>Bez předmětu</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="531"/>
+        <source>Attachment for message %1 from &quot;%2&quot; exceeded maximum size</source>
+        <translation>Příloha e-mailu %1 od &quot;%2&quot; přesahuje maximální veliost</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="537"/>
+        <source>HTML message for email %1</source>
+        <translation>HTML zpráva pro e-mail %1</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="541"/>
+        <source>Attachment for email %1</source>
+        <translation>Příloha pro e-mail %1</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="584"/>
+        <source>Processed %1 inbox emails</source>
+        <translation>Zpracování %1 příchozích zpráv</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="614"/>
+        <source>From:</source>
+        <translation>Od:</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="620"/>
+        <source>To:</source>
+        <translation>Komu:</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="627"/>
+        <source>CC:</source>
+        <translation>Kopie:</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="630"/>
+        <source>Subject:</source>
+        <translation>Předmět:</translation>
+    </message>
+    <message>
+        <location filename="../../../cron/job.php" line="100"/>
         <source>Cron job finished</source>
         <translation>CRON dokončen</translation>
     </message>
@@ -5340,9 +6468,19 @@
 <context>
     <name>Index</name>
     <message>
-        <location filename="../../../index.php" line="38"/>
+        <location filename="../../../index.php" line="35"/>
         <source>Log in to WebIssues</source>
         <translation>Přihlásit se do správy problémů</translation>
+    </message>
+    <message>
+        <location filename="../../../index.php" line="77"/>
+        <source>Anonymous Access</source>
+        <translation>Anonymní přístup</translation>
+    </message>
+    <message>
+        <location filename="../../../index.php" line="80"/>
+        <source>Register New Account</source>
+        <translation>Registrace nového uživatele</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="8"/>
@@ -5355,33 +6493,28 @@
         <translation>Heslo:</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="12"/>
-        <source>Register new account</source>
-        <translation>Registrovat nového uživatele</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="16"/>
-        <location filename="../../../index.html.php" line="27"/>
+        <location filename="../../../index.html.php" line="14"/>
+        <location filename="../../../index.html.php" line="25"/>
         <source>Log in</source>
         <translation>Přihlásit se</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="22"/>
+        <location filename="../../../index.html.php" line="20"/>
         <source>You have to enter a new password in order to log in.</source>
         <translation>Pro přihlášení musíte zadat nové heslo.</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="23"/>
+        <location filename="../../../index.html.php" line="21"/>
         <source>New password:</source>
         <translation>Nové heslo:</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="24"/>
+        <location filename="../../../index.html.php" line="22"/>
         <source>Confirm password:</source>
         <translation>Heslo znovu:</translation>
     </message>
     <message>
-        <location filename="../../../index.html.php" line="28"/>
+        <location filename="../../../index.html.php" line="26"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
@@ -5389,101 +6522,112 @@
 <context>
     <name>Register</name>
     <message>
-        <location filename="../../../register.php" line="39"/>
-        <source>Register new account</source>
-        <translation>Registrace nového uživatele</translation>
+        <location filename="../../../register.html.php" line="10"/>
+        <source>Fill the information below to begin registration.</source>
+        <translation>Pro zahájení registrace vyplňte údaje níže.</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="8"/>
-        <source>Fill the information below to begin registration. Note that administrator&apos;s approval is required before you can log in.</source>
-        <translation>Vyplňte údaje níže pro zahájení registrace. Pozor, administrátor bude muset schválit Vaši registraci před 1. přihlášením.</translation>
+        <location filename="../../../register.html.php" line="12"/>
+        <source>Note that administrator&apos;s approval is required before you can log in.</source>
+        <translation>Pozor, admonistrátor musí Váš požadavek schválit před 1. přihlášením.</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="11"/>
+        <location filename="../../../register.html.php" line="18"/>
         <source>User Name</source>
         <translation>Uživatelské jméno</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="13"/>
+        <location filename="../../../register.html.php" line="20"/>
         <source>Enter the user name that will be visible to other users.</source>
         <translation>Zadejte jméno, které bude viditelné pro ostatní uživatele.</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="15"/>
+        <location filename="../../../register.html.php" line="22"/>
         <source>Name:</source>
         <translation>Jméno:</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="20"/>
+        <location filename="../../../register.html.php" line="27"/>
         <source>Credentials</source>
         <translation>Přihlašovací údaje</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="22"/>
+        <location filename="../../../register.html.php" line="29"/>
         <source>Enter login and password for your new account.</source>
         <translation>Zadejte login a heslo nového uživatele.</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="24"/>
+        <location filename="../../../register.html.php" line="31"/>
         <source>Login:</source>
         <translation>Login:</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="25"/>
+        <location filename="../../../register.html.php" line="32"/>
         <source>Password:</source>
         <translation>Heslo:</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="26"/>
+        <location filename="../../../register.html.php" line="33"/>
         <source>Confirm password:</source>
         <translation>Heslo znovu:</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="31"/>
+        <location filename="../../../register.html.php" line="38"/>
         <source>Email Address</source>
         <translation>E-mailová adresa</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="33"/>
+        <location filename="../../../register.html.php" line="40"/>
         <source>Email address:</source>
         <translation>E-mailová adresa:</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="35"/>
+        <location filename="../../../register.html.php" line="42"/>
         <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
         <translation>E-mail uvidí pouze administrátor. Aktivační e-mail bude zaslán na tuto adresu.</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="40"/>
+        <location filename="../../../register.html.php" line="47"/>
         <source>Register</source>
         <translation>Registrovat</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="41"/>
+        <location filename="../../../register.html.php" line="48"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="47"/>
+        <location filename="../../../register.html.php" line="54"/>
         <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
         <translation>Děkujeme za registraci. Brzy obdržíte aktivační e-mail a krátké instrukce k dokončení registrace.</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="50"/>
-        <location filename="../../../register.html.php" line="59"/>
+        <location filename="../../../register.html.php" line="57"/>
+        <location filename="../../../register.html.php" line="66"/>
+        <location filename="../../../register.html.php" line="75"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="56"/>
+        <location filename="../../../register.html.php" line="63"/>
         <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
         <translation>Vaše registrace byla přijata. Jakmile administrátor registraci schválí obdržíte informační e-mail.</translation>
+    </message>
+    <message>
+        <location filename="../../../register.html.php" line="72"/>
+        <source>Your registration request was activated. You can now log in to the server using your login and password.</source>
+        <translation>Vaše registyrace byla schválena. Nyní se můžete přihlásit Vaším jménem a heslem.</translation>
+    </message>
+    <message>
+        <location filename="../../../register.php" line="41"/>
+        <source>Register New Account</source>
+        <translation>Registrace nového uživatele</translation>
     </message>
 </context>
 <context>
     <name>System_Api_IssueManager</name>
     <message>
-        <location filename="../../../system/api/issuemanager.inc.php" line="688"/>
+        <location filename="../../../system/api/issuemanager.inc.php" line="758"/>
         <source>Deleted issue &quot;%1&quot; from folder &quot;%2&quot;</source>
         <translation>Vymazat problém &quot;%1&quot; ze složky &quot;%2&quot;</translation>
     </message>
@@ -5491,47 +6635,57 @@
 <context>
     <name>System_Api_ProjectManager</name>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="207"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="293"/>
         <source>Added project &quot;%1&quot;</source>
         <translation>Přidán projekt &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="245"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="331"/>
         <source>Renamed project &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>Projekt přejmenován z &quot;%1&quot; na &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="286"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="356"/>
+        <source>Enabled public access for project &quot;%1&quot;</source>
+        <translation>Povolen veřejný přístup k projektu &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/projectmanager.inc.php" line="359"/>
+        <source>Disabled public access for project &quot;%1&quot;</source>
+        <translation>Veřejný přístup k projektu &quot;%1&quot; není povolen</translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/projectmanager.inc.php" line="401"/>
         <source>Deleted project &quot;%1&quot; with folders</source>
         <translation>Projekt &quot;%1&quot; byl odstraněn včetně složek</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="289"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="404"/>
         <source>Deleted project &quot;%1&quot;</source>
         <translation>Projekt &quot;%1&quot; byl vymazán</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="344"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="459"/>
         <source>Added folder &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Do projektu &quot;%2&quot; byla přidána složka &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="383"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="498"/>
         <source>Renamed folder &quot;%1&quot; to &quot;%2&quot; in project &quot;%3&quot;</source>
         <translation>Složka &quot;%1&quot; v projektu &quot;%3&quot; byla přejmenována na &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="423"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="538"/>
         <source>Deleted folder &quot;%1&quot; with issues from project &quot;%2&quot;</source>
         <translation>Složka &quot;%1&quot; včetně problémů byla odstraněna z projektu &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="426"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="541"/>
         <source>Deleted folder &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation>Složka &quot;%1&quot; byla odstraněna z projektu &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="483"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="598"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
         <translation>Složka &quot;%1&quot; byla přesunuta z projektu &quot;%2&quot; do &quot;%3&quot;</translation>
     </message>
@@ -5588,47 +6742,47 @@
 <context>
     <name>System_Api_TypeManager</name>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="297"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="311"/>
         <source>Added issue type &quot;%1&quot;</source>
         <translation>Přidán problém typu &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="335"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="349"/>
         <source>Renamed issue type &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>Přejmenován problém typu &quot;%1&quot; na &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="376"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="390"/>
         <source>Deleted issue type &quot;%1&quot; with folders</source>
         <translation>Vymazán problém typu &quot;%1&quot; se složkami</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="379"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="393"/>
         <source>Deleted issue type &quot;%1&quot;</source>
         <translation>Vymazán problém typu &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="433"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="447"/>
         <source>Added attribute &quot;%1&quot; to issue type &quot;%2&quot;</source>
         <translation>Přidán atribut &quot;%1&quot; pro problém typu &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="472"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="486"/>
         <source>Renamed attribute &quot;%1&quot; to &quot;%2&quot; of issue type &quot;%3&quot;</source>
         <translation>Přejmenován atribut &quot;%1&quot; na &quot;%2&quot; u problému typu &quot;%3&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="496"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="510"/>
         <source>Modified attribute &quot;%1&quot; of issue type &quot;%2&quot;</source>
         <translation>Upraven atribut &quot;%1&quot; u problému typu &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="530"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="544"/>
         <source>Deleted attribute &quot;%1&quot; with values from issue type &quot;%2&quot;</source>
         <translation>Vymazat atribut &quot;%1&quot; s hodnotami z problému typu &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="533"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="547"/>
         <source>Deleted attribute &quot;%1&quot; from issue type &quot;%2&quot;</source>
         <translation>Vymazat atribut &quot;%1&quot; z problému typu &quot;%2&quot;</translation>
     </message>
@@ -5636,52 +6790,52 @@
 <context>
     <name>System_Api_UserManager</name>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="330"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="362"/>
         <source>Added user &quot;%1&quot;</source>
         <translation>Přidán uživatel &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="360"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="392"/>
         <source>Changed password for user &quot;%1&quot;</source>
         <translation>Změněno heslo uživatele &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="405"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="437"/>
         <source>User &quot;%1&quot; changed own password</source>
         <translation>Uživatel &quot;%1&quot; změnil svoje heslo</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="443"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="475"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>Uživatel &quot;%1&quot; přejmenován na &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="475"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="507"/>
         <source>Disabled access for user &quot;%1&quot;</source>
         <translation>Přístup uživatele &quot;%1&quot; byl zablokován</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="479"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="511"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
         <translation>Uživateli &quot;%1&quot; byla přidělena běžná práva</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="483"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="515"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
         <translation>Uživateli &quot;%1&quot; byla přidělena administrátorská práva</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="538"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="570"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation>Uživatel &quot;%2&quot; byl odebrán z projektu &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="542"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="574"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Uživatel &quot;%1&quot; získal běžný přístup k projektu &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="546"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="578"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Uživatel &quot;%1&quot; získal administrativní přístup k projektu &quot;%2&quot;</translation>
     </message>
@@ -5717,6 +6871,11 @@
         <location filename="../../../system/web/columnhelper.inc.php" line="47"/>
         <source>Modified Date</source>
         <translation>Datum úpravy</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/columnhelper.inc.php" line="48"/>
+        <source>Location</source>
+        <translation>Umístění</translation>
     </message>
 </context>
 <context>
@@ -6023,8 +7182,33 @@
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="183"/>
-        <source>A user with this email address already exists</source>
-        <translation>Uživatel s tímto e-mailem již existuje</translation>
+        <source>Another user already uses this email address</source>
+        <translation>Jiný uživatel již používá tuto e-mailovou adresu</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="189"/>
+        <source>Description does not exist</source>
+        <translation>Popis neexistuje</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="191"/>
+        <source>Description already exists</source>
+        <translation>Popis již existuje</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="193"/>
+        <source>Text format is invalid</source>
+        <translation>Nesprávný formát textu</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="195"/>
+        <source>Subscription does not exist</source>
+        <translation>Zasílání novinek neexistuje</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/errorhelper.inc.php" line="197"/>
+        <source>Subscription already exists</source>
+        <translation>Zasílání novinek již existuje</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="185"/>
@@ -6056,47 +7240,47 @@
 <context>
     <name>System_Web_Grid</name>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="236"/>
+        <location filename="../../../system/web/grid.inc.php" line="255"/>
         <source>Ascending</source>
         <translation>Vzestupně</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="236"/>
+        <location filename="../../../system/web/grid.inc.php" line="255"/>
         <source>Decending</source>
         <translation>Sestupně</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="277"/>
+        <location filename="../../../system/web/grid.inc.php" line="296"/>
         <source>&amp;laquo; first</source>
         <translation>&amp;laquo; první</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="278"/>
+        <location filename="../../../system/web/grid.inc.php" line="297"/>
         <source>&amp;lt; previous</source>
         <translation>&amp;lt; předešlý</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="295"/>
+        <location filename="../../../system/web/grid.inc.php" line="314"/>
         <source>next &amp;gt;</source>
         <translation>další &amp;gt;</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="296"/>
+        <location filename="../../../system/web/grid.inc.php" line="315"/>
         <source>last &amp;raquo;</source>
         <translation>poslední &amp;raquo;</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="339"/>
+        <location filename="../../../system/web/grid.inc.php" line="358"/>
         <source>Expand</source>
         <translation>Rozbalit</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="340"/>
+        <location filename="../../../system/web/grid.inc.php" line="359"/>
         <source>Collapse</source>
         <translation>Sbalit</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="342"/>
+        <location filename="../../../system/web/grid.inc.php" line="361"/>
         <source>Blank</source>
         <translation>Prázdný</translation>
     </message>
@@ -6104,34 +7288,84 @@
 <context>
     <name>System_Web_JavaScript</name>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="106"/>
-        <location filename="../../../system/web/javascript.inc.php" line="136"/>
+        <location filename="../../../system/web/javascript.inc.php" line="109"/>
+        <location filename="../../../system/web/javascript.inc.php" line="139"/>
         <source>Choose</source>
         <translation>Vybrat</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="112"/>
+        <location filename="../../../system/web/javascript.inc.php" line="115"/>
         <source>Next</source>
         <translation>Další</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="113"/>
+        <location filename="../../../system/web/javascript.inc.php" line="116"/>
         <source>Previous</source>
         <translation>Předešlý</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="98"/>
-        <location filename="../../../system/web/javascript.inc.php" line="114"/>
+        <location filename="../../../system/web/javascript.inc.php" line="303"/>
+        <source>Bold</source>
+        <translation>Tučné</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="304"/>
+        <source>Italic</source>
+        <translation>Zkosené</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="305"/>
+        <source>Monospace</source>
+        <translation>Monospace</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="307"/>
+        <source>Hyperlink</source>
+        <translation>Odkaz</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="307"/>
+        <source>Enter link URL:</source>
+        <translation>Zadejte URL:</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="308"/>
+        <source>Link text</source>
+        <translation>Text odkazu</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="310"/>
+        <source>Bullet List</source>
+        <translation>Odrážky</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="311"/>
+        <source>Quote Block</source>
+        <translation>Citace</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="312"/>
+        <source>Code Block</source>
+        <translation>Blok kódu</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="314"/>
+        <source>Preview</source>
+        <translation>Náhled</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="101"/>
+        <location filename="../../../system/web/javascript.inc.php" line="117"/>
         <source>Today</source>
         <translation>Dnes</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="116"/>
+        <location filename="../../../system/web/javascript.inc.php" line="119"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="155"/>
+        <location filename="../../../system/web/javascript.inc.php" line="158"/>
         <source>Search Options</source>
         <translation>Volby hledání</translation>
     </message>
