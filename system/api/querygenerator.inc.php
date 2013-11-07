@@ -536,6 +536,8 @@ class System_Api_QueryGenerator extends System_Api_Base
             case System_Api_Column::CreatedBy:
             case System_Api_Column::ModifiedBy:
                 $value = $this->convertUserValue( $value );
+                if ( $value == '' )
+                    return $this->makeNullCondition( $expression, $type );
                 return $this->makeStringCondition( "UPPER( $expression )", $type, mb_strtoupper( $value ) );
 
             case System_Api_Column::CreatedDate:
@@ -557,6 +559,8 @@ class System_Api_QueryGenerator extends System_Api_Base
                         case 'ENUM':
                         case 'USER':
                             $value = $this->convertUserValue( $value );
+                            if ( $value == '' )
+                                return $this->makeNullCondition( "COALESCE( $expression, '' )", $type );
                             return $this->makeStringCondition( "UPPER( COALESCE( $expression, '' ) )", $type, mb_strtoupper( $value ) );
 
                         case 'NUMERIC':
@@ -620,6 +624,10 @@ class System_Api_QueryGenerator extends System_Api_Base
     {
         switch ( $type ) {
             case 'EQ':
+            case 'CON':
+            case 'BEG':
+            case 'END':
+            case 'IN':
                 return "$expression IS NULL";
             case 'NEQ':
                 return "$expression IS NOT NULL";
