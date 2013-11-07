@@ -111,7 +111,7 @@ class System_Api_SessionManager extends System_Api_Base
             throw $ex;
         }
 
-        if ( $isTemp ) {
+        if ( $user != null && $isTemp ) {
             $this->logout();
             throw new System_Api_Error( System_Api_Error::MustChangePassword );
         }
