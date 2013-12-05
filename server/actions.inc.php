@@ -836,12 +836,13 @@ class Server_Actions
         $this->validator->checkAlertEmail( $alertEmail );
         $this->validator->checkSummaryDays( $alertEmail, $summaryDays );
         $this->validator->checkSummaryHours( $alertEmail, $summaryHours );
+        $this->validator->checkBooleanValue( $isPublic );
 
         $alertManager = new System_Api_AlertManager();
-        $this->setId( $alertManager->addAlert( $folder, $view, $alertEmail, $isPublic ? System_Api_AlertManager::IsPublic : 0 ) );
+        $this->setId( $alertManager->addAlert( $folder, $view, $alertEmail, $summaryDays, $summaryHours, $isPublic ? System_Api_AlertManager::IsPublic : 0 ) );
     }
 
-    public function addGlobalAlert( $typeId, $viewId, $alertEmail, $summaryDays, $summaryHours, $summaryDays, $summaryHours, $isPublic )
+    public function addGlobalAlert( $typeId, $viewId, $alertEmail, $summaryDays, $summaryHours, $isPublic )
     {
         if ( $isPublic )
             $this->principal->checkAdministrator();
@@ -861,6 +862,7 @@ class Server_Actions
         $this->validator->checkAlertEmail( $alertEmail );
         $this->validator->checkSummaryDays( $alertEmail, $summaryDays );
         $this->validator->checkSummaryHours( $alertEmail, $summaryHours );
+        $this->validator->checkBooleanValue( $isPublic );
 
         $alertManager = new System_Api_AlertManager();
         $this->setId( $alertManager->addGlobalAlert( $type, $view, $alertEmail, $summaryDays, $summaryHours, $isPublic ? System_Api_AlertManager::IsPublic : 0 ) );
