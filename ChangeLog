@@ -1,3 +1,6 @@
+1.1.1 (2013-12-05)
+    * fixed adding alerts through Desktop Client
+
 1.1 (2013-11-12)
     * added Dutch and German translation
     * fixed handling [Me] in anonymous mode
