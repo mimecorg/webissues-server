@@ -35,14 +35,21 @@ class Common_Tools_PageSize extends System_Web_Component
 
         if ( !$settingsMode ) {
             $serverManager = new System_Api_ServerManager();
+            $defaultProject = $serverManager->getSetting( 'project_page_size' );
             $defaultFolder = $serverManager->getSetting( 'folder_page_size' );
             $defaultHistory = $serverManager->getSetting( 'history_page_size' );
         }
 
-        $this->folderOptions = array();
+        $this->projectOptions = array();
+        if ( !$settingsMode )
+            $this->projectOptions[ '' ] = $this->tr( 'Default (%1)', null, $defaultProject );
+        foreach ( array( 5, 10, 15, 20, 25, 30 ) as $i )
+            $this->projectOptions[ $i ] = $i;
+
+            $this->folderOptions = array();
         if ( !$settingsMode )
             $this->folderOptions[ '' ] = $this->tr( 'Default (%1)', null, $defaultFolder );
-        foreach ( array( 5, 10, 15, 20, 25 ) as $i )
+        foreach ( array( 5, 10, 15, 20, 25, 30 ) as $i )
             $this->folderOptions[ $i ] = $i;
 
         $this->historyOptions = array();
@@ -54,6 +61,7 @@ class Common_Tools_PageSize extends System_Web_Component
 
     public static function registerFields( &$fields )
     {
+        $fields[ 'project_page_size' ] = 'projectPageSize';
         $fields[ 'folder_page_size' ] = 'folderPageSize';
         $fields[ 'history_page_size' ] = 'historyPageSize';
     }

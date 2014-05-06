@@ -38,8 +38,11 @@ class Client_Projects_Index extends System_Web_Component
 
         $projectManager = new System_Api_ProjectManager();
 
+        $preferencesManager = new System_Api_PreferencesManager();
+        $pageSize = $preferencesManager->getPreferenceOrSetting( 'project_page_size' );
+
         $this->grid = new System_Web_Grid();
-        $this->grid->setPageSize( 10 );
+        $this->grid->setPageSize( $pageSize );
         $this->grid->setMergeParameters( array( 'project' => null, 'folder' => null ) );
 
         $this->grid->setColumns( $projectManager->getProjectsColumns() );

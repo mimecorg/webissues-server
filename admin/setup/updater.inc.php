@@ -253,6 +253,16 @@ class Admin_Setup_Updater extends System_Web_Base
             $generator->updateReferences();
         }
 
+        if ( version_compare( $version, '1.1.005' ) < 0 ) {
+            $settings = array(
+                'project_page_size'     => 10
+            );
+
+            $query = 'INSERT INTO {settings} ( set_key, set_value ) VALUES ( %s, %s )';
+            foreach ( $settings as $key => $value )
+                $this->connection->execute( $query, $key, $value );
+        }
+
         $query = 'DELETE FROM {sessions}';
         $this->connection->execute( $query );
 

@@ -601,6 +601,7 @@ class System_Api_Validator
                     $this->checkLocale( $key, $value );
                 break;
 
+            case 'project_page_size':
             case 'folder_page_size':
             case 'history_page_size':
                 $this->checkDecimalNumber( $value, 0, 1, 100 );
@@ -737,6 +738,7 @@ class System_Api_Validator
                     $this->checkLocale( $key, $value );
                 break;
 
+            case 'project_page_size':
             case 'folder_page_size':
             case 'history_page_size':
                 if ( $value != '' )

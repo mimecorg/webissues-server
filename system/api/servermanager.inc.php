@@ -150,7 +150,7 @@ class System_Api_ServerManager extends System_Api_Base
         $keys = array(
             'language', 'time_zone',
             'number_format', 'date_format', 'time_format', 'first_day_of_week',
-            'folder_page_size', 'history_page_size',
+            'project_page_size', 'folder_page_size', 'history_page_size',
             'hide_id_column', 'hide_empty_values', 'history_order', 'history_filter',
             'default_format',
             'comment_max_length', 'file_max_size'

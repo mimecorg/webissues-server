@@ -313,6 +313,7 @@ class Admin_Setup_Installer extends System_Web_Base
             'language'              => $language,
             'comment_max_length'    => 10000,
             'default_format'        => 1,
+            'project_page_size'     => 10,
             'folder_page_size'      => 10,
             'history_page_size'     => 20,
             'history_order'         => 'asc',

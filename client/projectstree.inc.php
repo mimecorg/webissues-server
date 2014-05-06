@@ -50,8 +50,11 @@ class Client_ProjectsTree extends System_Web_Component
             }
         }
 
+        $preferencesManager = new System_Api_PreferencesManager();
+        $pageSize = $preferencesManager->getPreferenceOrSetting( 'project_page_size' );
+
         $this->grid = new System_Web_Grid();
-        $this->grid->setPageSize( 10 );
+        $this->grid->setPageSize( $pageSize );
         $this->grid->setParameters( 'ppg', 'po', 'ps' );
         if ( $typeId )
             $this->grid->setSelection( $typeId, 'T' );
