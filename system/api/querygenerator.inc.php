@@ -147,7 +147,7 @@ class System_Api_QueryGenerator extends System_Api_Base
     public function setSearchText( $column, $text )
     {
         $info = new System_Api_DefinitionInfo();
-        $info->setType( 'CON' );
+        $info->setType( $column == System_Api_Column::ID ? 'EQ' : 'CON' );
         $info->setMetadata( 'column', $column );
         $info->setMetadata( 'value', $text );
 
@@ -357,7 +357,7 @@ class System_Api_QueryGenerator extends System_Api_Base
 
     public function getSearchableColumns()
     {
-        $columns = array( System_Api_Column::Name, System_Api_Column::CreatedBy, System_Api_Column::ModifiedBy );
+        $columns = array( System_Api_Column::ID, System_Api_Column::Name, System_Api_Column::CreatedBy, System_Api_Column::ModifiedBy );
 
         foreach ( $this->attributes as $column => $attribute ) {
             $info = System_Api_DefinitionInfo::fromString( $attribute[ 'attr_def' ] );
