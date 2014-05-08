@@ -68,6 +68,9 @@ class Client_Issues_ExportCsv extends System_Web_Component
             if ( $this->form->isSubmittedWith( 'ok' ) && !$this->form->hasErrors() )
                 $this->response->redirect( $this->mergeQueryString( '/client/issues/generatecsv.php', array( 'report' => $this->report ) ) );
         }
+
+        $javaScript = new System_Web_JavaScript( $this->view );
+        $javaScript->registerChangeText( $this->form->getSubmitSelector( 'ok' ), $this->form->getSubmitSelector( 'cancel' ), $this->tr( 'Close' ) );
     }
 }
 

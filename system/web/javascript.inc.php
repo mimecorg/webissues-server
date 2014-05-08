@@ -347,6 +347,15 @@ class System_Web_JavaScript extends System_Web_Base
             } );" );
     }
 
+    public function registerChangeText( $triggerSelector, $targetSelector, $text )
+    {
+        $this->registerCode( "
+            $( '$triggerSelector' ).click( function() {
+                $( '$targetSelector' ).val( " . $this->escape( $text ) . " );
+                return true;
+            } );" );
+    }
+
     private function registerScripts( $scripts )
     {
         foreach ( $scripts as $file )
