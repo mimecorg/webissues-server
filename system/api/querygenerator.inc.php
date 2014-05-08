@@ -108,12 +108,7 @@ class System_Api_QueryGenerator extends System_Api_Base
     {
         $info = System_Api_DefinitionInfo::fromString( $definition );
 
-        $allColumns = array(
-            System_Api_Column::ID, System_Api_Column::Name,
-            System_Api_Column::CreatedDate, System_Api_Column::CreatedBy,
-            System_Api_Column::ModifiedDate, System_Api_Column::ModifiedBy
-        );
-        $allColumns = array_merge( $allColumns, array_keys( $this->attributes ) );
+        $allColumns = $this->getAvailableColumns();
 
         $validator = new System_Api_Validator();
         $columns = $validator->convertToIntArray( $info->getMetadata( 'columns' ) );
@@ -139,6 +134,27 @@ class System_Api_QueryGenerator extends System_Api_Base
                     $this->filters[] = $filterInfo;
             }
         }
+    }
+
+    /**
+    * Include all available system and user columns in the view.
+    */
+    public function includeAvailableColumns()
+    {
+        $this->columns = $this->getAvailableColumns();
+
+        if ( $this->typeId != 0 )
+            $this->columns = array_merge( array_slice( $this->columns, 0, 2 ), array( System_Api_Column::Location ), array_slice( $this->columns, 2 ) );
+    }
+
+    private function getAvailableColumns()
+    {
+        $systemColumns = array(
+            System_Api_Column::ID, System_Api_Column::Name,
+            System_Api_Column::CreatedDate, System_Api_Column::CreatedBy,
+            System_Api_Column::ModifiedDate, System_Api_Column::ModifiedBy
+        );
+        return array_merge( $systemColumns, array_keys( $this->attributes ) );
     }
 
     /**

@@ -82,7 +82,7 @@ class Client_Issues_GenerateCsv extends Common_Application
         $query = $this->request->getQueryString( 'q' );
         $queryColumn = (int)$this->request->getQueryString( 'qc' );
 
-        $report = (int)$this->request->getQueryString( 'report' );
+        $reportType = (int)$this->request->getQueryString( 'report' );
 
         $queryGenerator = new System_Api_QueryGenerator();
         if ( $folder )
@@ -101,14 +101,17 @@ class Client_Issues_GenerateCsv extends Common_Application
             $definition = $viewManager->getViewSetting( $type, 'default_view' );
         }
         if ( $definition != null )
-            $queryGenerator->setViewDefinition( $definition, $report == 1 );
+            $queryGenerator->setViewDefinition( $definition );
 
         if ( $query != '' )
             $queryGenerator->setSearchText( $queryColumn, $query );
 
+        if ( $reportType == 1 )
+            $queryGenerator->includeAvailableColumns();
+
         $columns = $queryGenerator->getColumnNames();
 
-        if ( $report != 1 ) {
+        if ( $reportType != 1 ) {
             $serverManager = new System_Api_ServerManager();
             if ( $serverManager->getSetting( 'hide_id_column' ) == 1 )
                 unset( $columns[ System_Api_Column::ID ] );
@@ -167,7 +170,9 @@ class Client_Issues_GenerateCsv extends Common_Application
             $lines[] = $this->mergeCsvCells( $cells );
         }
 
-        $report = join( "\r\n", $lines ) . "\r\n";
+        $bom = "\xEF\xBB\xBF";
+
+        $report = $bom . join( "\r\n", $lines );
 
         $this->response->setContentType( 'text/csv' );
         $this->response->setCustomHeader( 'Content-Disposition', 'attachment; filename="report.csv"' );

@@ -233,6 +233,7 @@ class Client_IssuesList extends System_Web_Component
             $this->toolBar->addFixedCommand( '/client/issues/markall.php', '/common/images/folder-unread-16.png', $this->tr( 'Mark All As Unread' ), array( $key => $id, 'status' => 0 ) );
             $this->toolBar->addFixedCommand( '/client/views/index.php', '/common/images/configure-views-16.png', $this->tr( 'Manage Views' ), array( $key => $id ) );
             $this->toolBar->addFixedCommand( '/client/alerts/index.php', '/common/images/configure-alerts-16.png', $this->tr( 'Manage Alerts' ), array( $key => $id ) );
+            $this->toolBar->addFixedCommand( '/client/issues/exportcsv.php', '/common/images/export-csv-16.png', $this->tr( 'Export To CSV' ), array( $key => $id ) );
         }
 
         $this->viewToolBar = new System_Web_ToolBar();
