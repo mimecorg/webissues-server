@@ -42,12 +42,14 @@ class System_Web_MarkupProcessor
     const T_START_CODE = 2;
     const T_START_LIST = 3;
     const T_START_QUOTE = 4;
-    const T_END_CODE = 5;
-    const T_END_LIST = 6;
-    const T_END_QUOTE = 7;
-    const T_LINK = 8;
-    const T_BACKTICK = 9;
-    const T_NEWLINE = 10;
+    const T_START_RTL = 5;
+    const T_END_CODE = 6;
+    const T_END_LIST = 7;
+    const T_END_QUOTE = 8;
+    const T_END_RTL = 9;
+    const T_LINK = 10;
+    const T_BACKTICK = 11;
+    const T_NEWLINE = 12;
 
     /**
     * Convert text with markup to HTML.
@@ -85,7 +87,7 @@ class System_Web_MarkupProcessor
         $id = '#\d+';
         $link = "(?:$mail|$url|$id)";
 
-        $this->tokens = preg_split( '/(\n|`[^`\n]+`|\[\/?(?:list|code|quote)(?:[ \t][^]\n]*)?\](?:[ \t]*\n)?|\[' . $link . '(?:[ \t][^]\n]*)?\])/ui', $text, -1, PREG_SPLIT_DELIM_CAPTURE );
+        $this->tokens = preg_split( '/(\n|`[^`\n]+`|\[\/?(?:list|code|quote|rtl)(?:[ \t][^]\n]*)?\](?:[ \t]*\n)?|\[' . $link . '(?:[ \t][^]\n]*)?\])/ui', $text, -1, PREG_SPLIT_DELIM_CAPTURE );
     }
 
     private function next()
@@ -115,12 +117,16 @@ class System_Web_MarkupProcessor
                     $this->token = self::T_START_LIST;
                 else if ( $tag == 'quote' )
                     $this->token = self::T_START_QUOTE;
+                else if ( $tag == 'rtl' )
+                    $this->token = self::T_START_RTL;
                 else if ( $tag == '/code' )
                     $this->token = self::T_END_CODE;
                 else if ( $tag == '/list' )
                     $this->token = self::T_END_LIST;
                 else if ( $tag == '/quote' )
                     $this->token = self::T_END_QUOTE;
+                else if ( $tag == '/rtl' )
+                    $this->token = self::T_END_RTL;
                 else
                     $this->token = self::T_LINK;
             } else if ( $token[ 0 ] == '`' ) {
@@ -184,6 +190,15 @@ class System_Web_MarkupProcessor
                 $this->next();
                 $this->parseQuote();
                 if ( $this->token == self::T_END_QUOTE )
+                    $this->next();
+                $this->result[] = '</div>';
+                break;
+
+            case self::T_START_RTL:
+                $this->result[] = '<div class="rtl">';
+                $this->next();
+                $this->parseRtl();
+                if ( $this->token == self::T_END_RTL )
                     $this->next();
                 $this->result[] = '</div>';
                 break;
@@ -316,6 +331,12 @@ class System_Web_MarkupProcessor
     private function parseQuote()
     {
         while ( $this->token != self::T_END && $this->token != self::T_END_QUOTE )
+            $this->parseBlock();
+    }
+
+    private function parseRtl()
+    {
+        while ( $this->token != self::T_END && $this->token != self::T_END_RTL )
             $this->parseBlock();
     }
 }

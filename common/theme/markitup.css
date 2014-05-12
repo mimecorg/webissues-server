@@ -49,6 +49,9 @@
 .markItUp .btnQuote a {
   background-image: url(markitup/quote.png); 
 }
+.markItUp .btnRtl a {
+  background-image: url(markitup/rtl.png); 
+}
 .markItUp .btnPreview a {
   background-image: url(markitup/preview.png); 
 }

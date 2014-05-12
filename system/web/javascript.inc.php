@@ -310,6 +310,7 @@ class System_Web_JavaScript extends System_Web_Base
                     { name: " . $this->escape( $this->tr( 'Bullet List' ) ) . ", multiline: true, openBlockWith: '[list]\\n', closeBlockWith: '\\n[/list]', openWith: '* ', closeWith: '', className: 'btnBulletList' },
                     { name: " . $this->escape( $this->tr( 'Quote Block' ) ) . ", openBlockWith: '[quote]\\n', closeBlockWith: '\\n[/quote]', className: 'btnQuote' },
                     { name: " . $this->escape( $this->tr( 'Code Block' ) ) . ", openBlockWith: '[code]\\n', closeBlockWith: '\\n[/code]', className: 'btnCodeBlock' },
+                    { name: " . $this->escape( $this->tr( 'Right-To-Left Text' ) ) . ", openBlockWith: '[rtl]\\n', closeBlockWith: '\\n[/rtl]', className: 'btnRtl' },
                     { separator: '--' },
                     { name: " . $this->escape( $this->tr( 'Preview' ) ) . ", call: 'preview', className: 'btnPreview' }
                 ]

@@ -171,6 +171,10 @@ code, .code {
   color: #000000;
 }
 
+.rtl {
+  direction: rtl;
+}
+
 .attachment {
   padding: 0.5em;
   border: 1px solid #ccccff;
