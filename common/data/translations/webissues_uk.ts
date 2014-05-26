@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl">
+<TS version="2.0" language="uk">
 <context>
     <name>Admin_Events_Event</name>
     <message>
         <location filename="../../../admin/events/event.php" line="33"/>
         <source>Event Details</source>
-        <translation>Event Details</translation>
+        <translation>Деталі події</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="7"/>
         <source>Type:</source>
-        <translation>Soort:</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="11"/>
         <source>Severity:</source>
-        <translation>Prioriteit:</translation>
+        <translation>Серйозність:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="18"/>
         <source>Date:</source>
-        <translation>Datum:</translation>
+        <translation>Дата:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="22"/>
         <source>Message:</source>
-        <translation>Bericht:</translation>
+        <translation>Повідомлення:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="26"/>
         <source>User name:</source>
-        <translation>Gebruikersnaam:</translation>
+        <translation>Ім&apos;я користувача:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="30"/>
         <source>Host name:</source>
-        <translation>Host naam:</translation>
+        <translation>Ім&apos;я хосту:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="36"/>
@@ -49,32 +49,32 @@
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Information</source>
-        <translation>Informatie</translation>
+        <translation>Інформація</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Warning</source>
-        <translation>Waarschuwing</translation>
+        <translation>Попередження</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Error</source>
-        <translation>Fout</translation>
+        <translation>Помилка</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="49"/>
         <source>Errors</source>
-        <translation>Fouten</translation>
+        <translation>Помилки</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="50"/>
         <source>Access</source>
-        <translation>Toegang</translation>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="51"/>
         <source>Audit</source>
-        <translation>Audit</translation>
+        <translation>Аудит</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="52"/>
@@ -87,32 +87,32 @@
     <message>
         <location filename="../../../admin/events/index.php" line="33"/>
         <source>Event Log</source>
-        <translation>Event log</translation>
+        <translation>Лоґ подій</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="4"/>
         <source>All Events</source>
-        <translation>Alle Events</translation>
+        <translation>Всі події</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="12"/>
         <source>Type</source>
-        <translation>Soort</translation>
+        <translation>Тип</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="13"/>
         <source>Date</source>
-        <translation>Datum</translation>
+        <translation>Дата</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="14"/>
         <source>Message</source>
-        <translation>Bericht</translation>
+        <translation>Повідомлення</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="33"/>
         <source>There are no events of the selected type.</source>
-        <translation>Er zijn geen events van het geselecteerde soort.</translation>
+        <translation>Нема подій вибраного типу.</translation>
     </message>
 </context>
 <context>
@@ -120,102 +120,102 @@
     <message>
         <location filename="../../../admin/index.php" line="33"/>
         <source>Administration Panel</source>
-        <translation>Beheerders scherm</translation>
+        <translation>Панель адміністратора</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="7"/>
         <source>General Information</source>
-        <translation>Algemene informatie</translation>
+        <translation>Загальна інформація</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="8"/>
         <source>Show information about this server.</source>
-        <translation>Toon informatie over deze server.</translation>
+        <translation>Показати інформацію про той сервер.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="9"/>
         <source>Event Log</source>
-        <translation>Event log</translation>
+        <translation>Лоґ подій</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="10"/>
         <source>Show recent entries from the event log.</source>
-        <translation>Toon recente regels uit het event log.</translation>
+        <translation>Показати останні події з щоденника подій.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="16"/>
         <source>Configuration</source>
-        <translation>Configuratie</translation>
+        <translation>Налаштування</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="19"/>
         <source>Server Settings</source>
-        <translation>Server instellingen</translation>
+        <translation>Налаштування сервера</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="20"/>
         <source>Configure default language and other settings for this server.</source>
-        <translation>Instellen van standaard taal en andere voorkeuren op deze server.</translation>
+        <translation>Зміна мови за замовчуванням і інші параметри сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="21"/>
         <source>Email Settings</source>
-        <translation>Email instellingen</translation>
+        <translation>Налаштування електронної пошти</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="22"/>
         <source>Configure notification email settings.</source>
-        <translation>Email instellen voor notificaties.</translation>
+        <translation>Змінити налаштування електронної пошти.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="23"/>
         <source>Inbox Settings</source>
-        <translation>Inbox instellingen</translation>
+        <translation>Налаштування для вхідної пошти</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="24"/>
         <source>Configure email inbox settings.</source>
-        <translation>Configureer e-mail inbox instellingen.</translation>
+        <translation>Налаштувати вхідну пошту </translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="30"/>
         <source>Management</source>
-        <translation>Beheer</translation>
+        <translation>Управління</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="34"/>
         <source>Create and edit user accounts.</source>
-        <translation>Aanmaken en beheren van gebruiker accounts.</translation>
+        <translation>Створення і редагування облікових записів користувача.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="33"/>
         <source>User Accounts</source>
-        <translation>Gebruikers accounts</translation>
+        <translation>Облікові записи користувача</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="4"/>
         <source>Information</source>
-        <translation>Informatie</translation>
+        <translation>Інформація</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="36"/>
         <source>Registration Requests</source>
-        <translation>Registratie verzoeken</translation>
+        <translation>Запити на реєстрацію</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="37"/>
         <source>Approve and reject pending user registration requests.</source>
-        <translation>Goed- en afkeuren van registratie verzoeken.</translation>
+        <translation>Підтвердження та відхилення запитів на реєстрацію користувачів.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="39"/>
         <source>Issue Types</source>
-        <translation>Soorten issues</translation>
+        <translation>Типи завдань</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="40"/>
         <source>Create and edit issue types.</source>
-        <translation>Aanmaken en beheren van soorten issues.</translation>
+        <translation>Створення та редагування типів завдань.</translation>
     </message>
 </context>
 <context>
@@ -223,27 +223,27 @@
     <message>
         <location filename="../../../admin/info/database.html.php" line="4"/>
         <source>Database Configuration</source>
-        <translation>Databank configuratie</translation>
+        <translation>Налаштування БД</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="8"/>
         <source>Database server:</source>
-        <translation>Database server:</translation>
+        <translation>Сервер бази даних:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="12"/>
         <source>Host name:</source>
-        <translation>Host naam:</translation>
+        <translation>Ім&apos;я хосту:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="16"/>
         <source>Database name:</source>
-        <translation>Database naam:</translation>
+        <translation>Ім&apos;я бази даних:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="20"/>
         <source>Table prefix:</source>
-        <translation>Tabel voorvoegsel:</translation>
+        <translation>Префікс таблиць:</translation>
     </message>
 </context>
 <context>
@@ -251,22 +251,22 @@
     <message>
         <location filename="../../../admin/info/generateuuid.php" line="33"/>
         <source>Generate New Unique ID</source>
-        <translation>Genereer een nieuw uniek ID</translation>
+        <translation>Згенерувати новий унікальний ID</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="3"/>
         <source>A new, random unique identifier will be assigned to this server.</source>
-        <translation>Een nieuw willekeurig uniek ID zal aan deze server toegekend worden.</translation>
+        <translation>Новий випадковий унікальний ідентифікатор буде присвоєно цьому серверу.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="9"/>
         <source>Current ID:</source>
-        <translation>Huidig ID:</translation>
+        <translation>Поточний ID:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="13"/>
         <source>New ID:</source>
-        <translation>Nieuw ID:</translation>
+        <translation>Новий ID:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="19"/>
@@ -276,7 +276,7 @@
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="20"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -284,153 +284,153 @@
     <message>
         <location filename="../../../admin/info/index.php" line="33"/>
         <source>General Information</source>
-        <translation>Algemene informatie</translation>
+        <translation>Загальна інформація</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="41"/>
         <source>enabled</source>
         <comment>anonymous access</comment>
-        <translation>ingeschakeld</translation>
+        <translation>ввімкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="43"/>
         <source>disabled</source>
         <comment>anonymous access</comment>
-        <translation>uitgeschakeld</translation>
+        <translation>вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="47"/>
         <source>enabled</source>
         <comment>user registration</comment>
-        <translation>ingeschakeld</translation>
+        <translation>ввімкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="49"/>
         <source>disabled</source>
         <comment>user registration</comment>
-        <translation>uitgeschakeld</translation>
+        <translation>вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="53"/>
         <source>standard PHP mailer</source>
-        <translation>standaard PHP mailer</translation>
+        <translation>Стандартний PHP mailer</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="55"/>
         <source>SMTP server</source>
-        <translation>SMTP server</translation>
+        <translation>SMPT сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="57"/>
         <source>disabled</source>
         <comment>sending emails</comment>
-        <translation>uitgeschakeld</translation>
+        <translation>вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="66"/>
         <source>POP3 server</source>
-        <translation>POP3 server</translation>
+        <translation>POP3 сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="68"/>
         <source>IMAP server</source>
-        <translation>IMAP server</translation>
+        <translation>IMAP сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="70"/>
         <source>disabled</source>
         <comment>email inbox</comment>
-        <translation>uitgeschakeld</translation>
+        <translation>вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="90"/>
         <source>User self-registration requires sending emails to be configured.</source>
-        <translation>Voor zelf-registratie van gebruikers is de configuratie van e-mails noodzakelijk.</translation>
+        <translation>Самостійна реєстрація користувачів вимагає налаштованої функції надсилання електронних листів.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="93"/>
         <source>Sending or receiving emails requires the cron job to be running.</source>
-        <translation>Verzenden of ontvangen van e-mails vereist het uitvoeren van een cron job.</translation>
+        <translation>Надсилання та отримання електронних листів вимагає запущеного завдання cron.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="99"/>
         <source>%1 seconds ago</source>
-        <translation>%1 seconden geleden</translation>
+        <translation>%1 секунд тому</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="103"/>
         <source>%1 minutes ago</source>
-        <translation>%1 minuten geleden</translation>
+        <translation>%1 хвилин тому</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="107"/>
         <source>%1 hours ago</source>
-        <translation>%1 uren geleden</translation>
+        <translation>1% годин тому</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="109"/>
         <source>more than %1 hours ago</source>
-        <translation>meer dan %1 uur geleden</translation>
+        <translation>більше ніж %1 годин тому</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="87"/>
         <source>never</source>
-        <translation>nooit</translation>
+        <translation>ніколи</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="4"/>
         <source>About WebIssues</source>
-        <translation>Over WebIssues</translation>
+        <translation>Про WebIssues</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="10"/>
         <source>Server Configuration</source>
-        <translation>Server instellen</translation>
+        <translation>Конфігурація сервера</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="14"/>
         <source>Anonymous access:</source>
-        <translation>Anonieme toegang:</translation>
+        <translation>Анонімний доступ:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="18"/>
         <source>User registration:</source>
-        <translation>Gebruikersregistratie:</translation>
+        <translation>Реєстрація користувачів:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="23"/>
         <source>Sending emails:</source>
-        <translation>E-mail verzenden:</translation>
+        <translation>Надсилання листів:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="28"/>
         <source>Outgoing address:</source>
-        <translation>Uitgaand adres:</translation>
+        <translation>Адреса для вихідної пошти:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="34"/>
         <source>Outgoing server:</source>
-        <translation>Uitgaande server:</translation>
+        <translation>Сервер для вихідної пошти:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="40"/>
         <source>Email inbox:</source>
-        <translation>E-mail inbox:</translation>
+        <translation>Вхідна пошта:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="45"/>
         <source>Inbox address:</source>
-        <translation>Inbox adres:</translation>
+        <translation>Адреса для вхідної пошти:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="51"/>
         <source>Inbox server:</source>
-        <translation>Inbox server:</translation>
+        <translation>Сервер для вхідної пошти:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="57"/>
         <source>Cron last started:</source>
-        <translation>Cron laatst gestart:</translation>
+        <translation>Останній запуск Cron:</translation>
     </message>
 </context>
 <context>
@@ -438,17 +438,17 @@
     <message>
         <location filename="../../../admin/info/renameserver.php" line="33"/>
         <source>Rename Server</source>
-        <translation>Hernoemen Server</translation>
+        <translation>Перейменувати сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="3"/>
         <source>Enter the new server name.</source>
-        <translation>Vul de nieuwe server naam in.</translation>
+        <translation>Введіть нову назву сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="10"/>
@@ -458,7 +458,7 @@
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -466,32 +466,32 @@
     <message>
         <location filename="../../../admin/info/server.inc.php" line="37"/>
         <source>Rename Server</source>
-        <translation>Hernoemen Server</translation>
+        <translation>Перейменувати сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.inc.php" line="38"/>
         <source>Generate New Unique ID</source>
-        <translation>Genereer een nieuw uniek ID</translation>
+        <translation>Згенерувати новий унікальний ID</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="4"/>
         <source>Server Information</source>
-        <translation>Server informatie</translation>
+        <translation>Інформація про сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="14"/>
         <source>Database version:</source>
-        <translation>Database versie:</translation>
+        <translation>Версія бази даних:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="18"/>
         <source>Server name:</source>
-        <translation>Server naam:</translation>
+        <translation>Ім&apos;я сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="22"/>
         <source>Unique ID:</source>
-        <translation>Uniek ID:</translation>
+        <translation>Унікальний ID:</translation>
     </message>
 </context>
 <context>
@@ -500,85 +500,85 @@
         <location filename="../../../admin/info/site.inc.php" line="53"/>
         <location filename="../../../admin/info/site.inc.php" line="55"/>
         <source>Cannot access directory &apos;%1&apos;.</source>
-        <translation>Geen toegang to de folder &apos;%1&apos;.</translation>
+        <translation>Немає доступу до каталогу &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.inc.php" line="57"/>
         <source>Cannot access file &apos;%1&apos;.</source>
-        <translation>Geen toegang tot bestand &apos;%1&apos;.</translation>
+        <translation>Немає доступу до файлу &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="12"/>
         <source>Base URL address:</source>
-        <translation>Basis adres URL:</translation>
+        <translation>Основна адреса URL:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="4"/>
         <source>Site Configuration</source>
-        <translation>Site configuratie</translation>
+        <translation>Конфігурація сайту</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="8"/>
         <source>Site name:</source>
-        <translation>Site naam:</translation>
+        <translation>Назва сайту:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="16"/>
         <source>Site directory:</source>
-        <translation>Site directory:</translation>
+        <translation>Каталог сайту:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="20"/>
         <source>Debugging log file:</source>
-        <translation>Debug log bestand:</translation>
+        <translation>Файл журналу налагодження:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="21"/>
         <source>disabled</source>
         <comment>log file</comment>
-        <translation>uitgeschakeld</translation>
+        <translation>вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="24"/>
         <source>Debugging information:</source>
-        <translation>Debug informatie:</translation>
+        <translation>Інформація про налагодження:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="25"/>
         <source>enabled</source>
         <comment>debug info</comment>
-        <translation>ingeschakeld</translation>
+        <translation>ввімкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="25"/>
         <source>disabled</source>
         <comment>debug info</comment>
-        <translation>uitgeschakeld</translation>
+        <translation>вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="34"/>
         <source>Environment Information</source>
-        <translation>Omgevingsinformatie</translation>
+        <translation>Інформація про середовище</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="38"/>
         <source>PHP version:</source>
-        <translation>PHP versie:</translation>
+        <translation>Версія PHP:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="42"/>
         <source>Web server:</source>
-        <translation>Web server:</translation>
+        <translation>Сервер WWW:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="46"/>
         <source>Operating system:</source>
-        <translation>Besturingssysteem:</translation>
+        <translation>Операційна система:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="50"/>
         <source>Host name:</source>
-        <translation>Host naam:</translation>
+        <translation>Ім&apos;я хосту:</translation>
     </message>
 </context>
 <context>
@@ -586,32 +586,32 @@
     <message>
         <location filename="../../../admin/register/approve.php" line="50"/>
         <source>Approve Request</source>
-        <translation>Verzoek goedkeuren</translation>
+        <translation>Підтвердити запит</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="6"/>
         <source>Select All</source>
-        <translation>Alles selecteren</translation>
+        <translation>Вибрати всі</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>Selectie ongedaan maken</translation>
+        <translation>Скасувати вибір</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="14"/>
         <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt; and add the user to the selected projects.</source>
-        <translation>Keur het registratie verzoek van gebruiker &lt;strong&gt;%1&lt;/strong&gt; goed en voeg de gebruiker toe aan de geselecteerde projecten.</translation>
+        <translation>Підтвердити запит на реєстрацію від користувача &lt;strong&gt;%1&lt;/strong&gt; та додати його до обраних проектів.</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="16"/>
         <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Keur het registratie verzoek van gebruiker  &lt;strong&gt;%1&lt;/strong&gt;.goed.</translation>
+        <translation>Підтвердити запит на реєстрацію від користувача &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="24"/>
         <source>Projects</source>
-        <translation>Projecten</translation>
+        <translation>Проекти</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="40"/>
@@ -621,7 +621,7 @@
     <message>
         <location filename="../../../admin/register/approve.html.php" line="41"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -629,42 +629,42 @@
     <message>
         <location filename="../../../admin/register/index.php" line="33"/>
         <source>Registration Requests</source>
-        <translation>Registratie verzoeken</translation>
+        <translation>Запити на реєстрацію</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.php" line="61"/>
         <source>Approve Request</source>
-        <translation>Verzoek goedkeuren</translation>
+        <translation>Підтвердити запит</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.php" line="62"/>
         <source>Reject Request</source>
-        <translation>Verzoek afwijzen</translation>
+        <translation>Відхили запит</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="11"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="12"/>
         <source>Login</source>
-        <translation>Aanmelden</translation>
+        <translation>Логін</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="13"/>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>Електронна пошта</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="14"/>
         <source>Date</source>
-        <translation>Datum</translation>
+        <translation>Дата</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="38"/>
         <source>There are no pending registration requests.</source>
-        <translation>Er zijn verder geen registratie verzoeken.</translation>
+        <translation>Запити на реєстрацію, що очікують, відсутні.</translation>
     </message>
 </context>
 <context>
@@ -672,12 +672,12 @@
     <message>
         <location filename="../../../admin/register/reject.php" line="37"/>
         <source>Reject Request</source>
-        <translation>Verzoek afwijzen</translation>
+        <translation>Відхилити запит</translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="3"/>
         <source>Do you want to reject registration request for user &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Wil je het registratie verzoek van gebruiker &lt;strong&gt;%1&lt;/strong&gt; afwijzen?</translation>
+        <translation>Чи дійсно ви хочете відхилити запит на реєстрацію від користувача &lt;strong&gt;%1&lt;/strong&gt;? </translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="8"/>
@@ -687,7 +687,7 @@
     <message>
         <location filename="../../../admin/register/reject.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -695,55 +695,55 @@
     <message>
         <location filename="../../../admin/settings/inbox.php" line="32"/>
         <source>Inbox Settings</source>
-        <translation>Inbox instellingen</translation>
+        <translation>Налаштування для вхідної пошти</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="92"/>
         <source>Disabled</source>
-        <translation>Uitgeschakeld</translation>
+        <translation>Вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="93"/>
         <source>IMAP server</source>
-        <translation>IMAP server</translation>
+        <translation>IMAP сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="94"/>
         <source>POP3 server</source>
-        <translation>POP3 server</translation>
+        <translation>POP3 сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="97"/>
         <source>None</source>
         <comment>encryption</comment>
-        <translation>Geen</translation>
+        <translation>Жоден</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="104"/>
         <source>None</source>
         <comment>user</comment>
-        <translation>Geen</translation>
+        <translation>Жоден</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="113"/>
         <source>None</source>
         <comment>folder</comment>
-        <translation>Geen</translation>
+        <translation>Жоден</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="140"/>
         <source>Cannot leave messages on the server in POP3 mode.</source>
-        <translation>Kan geen berichten nalaten op de server in POP3 modus.</translation>
+        <translation>Немає можливості залишати листи на сервері в режимі POP3.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="152"/>
         <source>Please select the method of receiving emails to test connection.</source>
-        <translation>Selecteer de ontvangstmodus voor e-mails om de verbinding te testen.</translation>
+        <translation>Виберіть спосіб отримання електронної пошти, щоб перевірити з&apos;єднання.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="7"/>
         <source>Inbox settings are not avaiable because the &apos;IMAP&apos; extension is missing or disabled.</source>
-        <translation>Inbox instellingen zijn niet beschikbaar omdat de &apos;IMAP&apos; extentie ontbreekt of ongeschikt is.</translation>
+        <translation>Налаштування вхідної пошти не доступне, тому що розширення IMAP відсутнє або вимкнене.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="10"/>
@@ -754,147 +754,147 @@
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="16"/>
         <source>General</source>
-        <translation>Algemeen</translation>
+        <translation>Загальний</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="18"/>
         <source>Method of receiving emails:</source>
-        <translation>Ontvangstmethode van e-mails:</translation>
+        <translation>Спосіб отримання пошти:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="21"/>
         <source>Inbox email address:</source>
-        <translation>Inbox e-mailadres:</translation>
+        <translation>Адреса для вхідної пошти:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="23"/>
         <source>If receiving emails is enabled, make sure that the cron job is running.</source>
-        <translation>Als het ontvangen van e-mails is geactiveerd, zorg er dan voor dat de cron job draait.</translation>
+        <translation>Якщо отримання пошти увімкнуто, впевніться що завдання для cron запущено.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="28"/>
         <source>Inbox Server</source>
-        <translation>Inbox Server</translation>
+        <translation>Сервер для вхідної пошти</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="30"/>
         <source>Fill the information below to configure the IMAP or POP3 server.</source>
-        <translation>Vul onderstaande informatie in om de IMAP of POP3 server te configureren.</translation>
+        <translation>Введіть наступну інформацію, щоб налаштувати IMAP чи POP3 сервер.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="32"/>
         <source>Server name:</source>
-        <translation>Server naam:</translation>
+        <translation>Ім&apos;я сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="33"/>
         <source>Port number:</source>
-        <translation>Poort nummer:</translation>
+        <translation>Номер порту:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="34"/>
         <source>Encryption mode:</source>
-        <translation>Encryptie methode:</translation>
+        <translation>Метод шифрування:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="35"/>
         <source>User name:</source>
-        <translation>Gebruikersnaam:</translation>
+        <translation>Ім&apos;я користувача:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="36"/>
         <source>Password:</source>
-        <translation>Wachtwoord:</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="37"/>
         <source>Mailbox name:</source>
-        <translation>Mailbox naam:</translation>
+        <translation>Назва поштової скрині:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="39"/>
         <source>Do not validate server certificate</source>
-        <translation>Valideer het server certificaat niet</translation>
+        <translation>Не перевіряти сертифікат сервера</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="40"/>
         <source>Leave processed messages on the server</source>
-        <translation>Laat verwerkt bericht op de server na</translation>
+        <translation>Залишати опрацьовані листи на сервері</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="45"/>
         <source>Connection to the inbox server was successful.</source>
-        <translation>Verbinden met de inbox was succesvol.</translation>
+        <translation>З&apos;єднання з сервером вхідної пошти було успішним.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="49"/>
         <source>Test Connection</source>
-        <translation>Verbinding testen</translation>
+        <translation>Перевірити з&apos;єднання</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="55"/>
         <source>External Users</source>
-        <translation>Externe Gebruiker</translation>
+        <translation>Зовнішні користувачі</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="57"/>
         <source>This option enables receiving emails from addresses which are not assigned to any user in the system.</source>
-        <translation>Deze optie maakt het mogelijk om e-mails te ontvangen van e-mailadressen die niet toegekend zijn aan een gebruiker van het systeem.</translation>
+        <translation>Це налаштування вмикає отримання пошти з адрес, які не використовуються жодним зареєстрованим користувачем.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="59"/>
         <source>Accept messages from external users</source>
-        <translation>Accepteer berichten van externe gebruikers</translation>
+        <translation>Приймати листи від зовнішніх користувачів</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="60"/>
         <source>Robot user account:</source>
-        <translation>Robot gebruikersaccount:</translation>
+        <translation>Обліковий запис для робота:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="65"/>
         <source>Folder Mapping</source>
-        <translation>Mappenstructuur</translation>
+        <translation>Співставлення папок</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="67"/>
         <source>This option enables mapping the inbox email address extensions to project and folder name.</source>
-        <translation>Deze optie activeert het toewijzen van inbox e-mailadressen aan project en mappen.</translation>
+        <translation>Це налаштування вмикає співставлення розширень вхідних листів з проектами та іменами папок.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="69"/>
         <source>Map address extensions to project and folder</source>
-        <translation>Wijs adres toe aan project en map</translation>
+        <translation>Співставити розширення адреси з проектом і папкою</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="70"/>
         <source>Default folder:</source>
-        <translation>Standaard map:</translation>
+        <translation>Папка за замовчуванням:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="75"/>
         <source>Sending Emails</source>
-        <translation>E-mails verzenden</translation>
+        <translation>Надсилання листів</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="77"/>
         <source>These options enable responses and automatic subscriptions for issues created through the inbox. Sending emails needs to be enabled.</source>
-        <translation>Deze optie activeert het antwoorden en automatische inschrijven voor issues aangemaakt via de inbox. Verzenden van e-mail moet geactiveerd zijn.</translation>
+        <translation>Ці налаштування вмикають автоматичну підписку на завдання, створені через вхідну пошту. Функція надсилання пошти повинна бути ввімкнутою.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="79"/>
         <source>Send responses when issues are created</source>
-        <translation>Stuur antwoord wanneer issue is aangemaakt</translation>
+        <translation>Надсилати відповідь після створення завдання</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="80"/>
         <source>Subscribe senders to created issues</source>
-        <translation>Schrijf zenders in om issues te maken</translation>
+        <translation>Підписувати адресантів на створені завдання</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="86"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -902,13 +902,13 @@
     <message>
         <location filename="../../../admin/settings/index.php" line="33"/>
         <source>Server Settings</source>
-        <translation>Server instellingen</translation>
+        <translation>Налаштування сервера</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="77"/>
         <location filename="../../../admin/settings/index.php" line="84"/>
         <source>%1 kB</source>
-        <translation>%1 kB</translation>
+        <translation>%1 KB</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="79"/>
@@ -918,168 +918,168 @@
     <message>
         <location filename="../../../admin/settings/index.php" line="82"/>
         <source>Never</source>
-        <translation>Nooit</translation>
+        <translation>Ніколи</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="85"/>
         <source>Always</source>
-        <translation>Altijd</translation>
+        <translation>Завжди</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="89"/>
         <source>%1 minutes</source>
-        <translation>%1 minuten</translation>
+        <translation>%1 хвилин(и)</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="90"/>
         <source>1 hour</source>
-        <translation>1 uur</translation>
+        <translation>1 година</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="92"/>
         <location filename="../../../admin/settings/index.php" line="101"/>
         <source>%1 hours</source>
-        <translation>%1 uren</translation>
+        <translation>%1 годин(и)</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="95"/>
         <source>1 day</source>
-        <translation>1 dag</translation>
+        <translation>1 день</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="97"/>
         <source>%1 days</source>
-        <translation>%1 dagen</translation>
+        <translation>%1 днів</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="104"/>
         <source>Use cron job</source>
-        <translation>Gebruik cron job</translation>
+        <translation>Використати завдання cron</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="23"/>
         <source>User Registration</source>
-        <translation>Gebruiker registratie</translation>
+        <translation>Реєстрація користувачів</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="27"/>
         <source>Enable user registration</source>
-        <translation>Activeer gebruikersregistratie</translation>
+        <translation>Увімкнути реєстрацію користувачів</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="14"/>
         <source>Anonymous Access</source>
-        <translation>Anonieme Toegang</translation>
+        <translation>Анонімний доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="16"/>
         <source>This option enables read-only access to public projects without logging in.</source>
-        <translation>Deze optie activeert enkel-lezen toegang tot publieke projecten zonder in te loggen.</translation>
+        <translation>Це налаштування вмикає доступ тільки для читання до публічних проектів без необхідності входити.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="18"/>
         <source>Enable anonymous access</source>
-        <translation>Activeer anonieme toegang</translation>
+        <translation>Увімкнути анонімний доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="25"/>
         <source>This option allows users to self-register. Sending emails needs to be enabled.</source>
-        <translation>Deze optie laat gebruikers toe zichzelf te registreren. E-mails versturen moet geactiveerd zijn.</translation>
+        <translation>Це налаштування дозволяє користувачам реєструватися самостійно. Функція надсилання електронних листів повинна бути ввімкнутою.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="29"/>
         <source>This option allows users to register without administrator&apos;s approval. Registered users only have access to public projects by default.</source>
-        <translation>Deze optie laat gebruikers toe zich te registreren zonder goedkeuring van de systeembeheerder. Geregistreerde gebruikers hebben standaard enkel toegang tot publieke projecten.</translation>
+        <translation>Це налаштування дозволяє користувачам реєструватися без підтвердження адміністратора. Зареєстровані користувачі по замовчуванню будуть мати доступ тільки до публічних проектів.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="31"/>
         <source>Enable automatic approval</source>
-        <translation>Activeer automatische goedkeuring</translation>
+        <translation>Увімкнути автоматичне підтвердження</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="33"/>
         <source>Optionally send email notifications about pending registration requests to this address. Requires the cron job to be running.</source>
-        <translation>Optioneel verzenden van e-mailnotificaties over hangende registratieaanvragen naar dit adres. Vereist dat de cron job wordt gedraaid.</translation>
+        <translation>Додатково надсилати повідомлення на електронну пошту про запити на реєстрацію, що очікують на підтвердження. Вимагає запущеного завдання Cron.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="35"/>
         <source>Email address:</source>
-        <translation>Email adres:</translation>
+        <translation>Адреса електронної пошти:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="40"/>
         <source>Limits</source>
-        <translation>Limieten</translation>
+        <translation>Обмеження</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="42"/>
         <source>The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.</source>
-        <translation>De maximum lengte (in tekens) van opmerkingen en omschrijvingen en de maximum grootte (in bytes) van bijlagen dat is toegelaten.</translation>
+        <translation>Максимальна довжина (в символах) коментарів та описів та максимальний розмір (в байтах) вкладених файлів, що допускаються на цьому сервері.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="44"/>
         <source>Maximum text length:</source>
-        <translation>Maximum tekst lengte:</translation>
+        <translation>Максимальна довжина тексту:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="45"/>
         <source>Maximum attachment size:</source>
-        <translation>Maximale bijlage omvang:</translation>
+        <translation>Максимальний розмір вкладення:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="50"/>
         <source>Attachment Storage</source>
-        <translation>Bijlage opslag</translation>
+        <translation>Зберігання додатків</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="52"/>
         <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
-        <translation>De maximale omvang (in bytes) van bestanden die in de database worden opgeslagen. Grotere bestanden worden op het filesyteem opgeslagen.</translation>
+        <translation>Максимальний розмір (в байтах) файлів, що будуть збережені в базі даних. Більші файли будуть зберігатися у файловій системі.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="54"/>
         <source>Maximum database storage size:</source>
-        <translation>Maximale omvang voor opslag in de database:</translation>
+        <translation>Максимальний розмір файлів в базі даних:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="59"/>
         <source>Maximum Lifetime</source>
-        <translation>Maximale levensduur</translation>
+        <translation>Максимальна тривалість життя</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="61"/>
         <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
-        <translation>De maximale tijd waarna inactieve sessies en regels in het event log worden geschoond.</translation>
+        <translation>Максимальний час зберігання, по закінченню якого  неактивні сесії і події в журналі подій будуть видалені.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="63"/>
         <source>Session lifetime:</source>
-        <translation>Sessie levensduur:</translation>
+        <translation>Час життя сесії:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="64"/>
         <source>Event log lifetime:</source>
-        <translation>Event log levensduur:</translation>
+        <translation>Час зберігання журналу подій:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="65"/>
         <source>Inactive user registration request lifetime:</source>
-        <translation>Inactieve gebruikers registratie aanvraag levensduur:</translation>
+        <translation>Тривалість зберігання запитів на реєстрацію:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="70"/>
         <source>Garbage Collection</source>
-        <translation>Garbage Collection</translation>
+        <translation>Збір сміття</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="72"/>
         <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
-        <translation>De mogelijkheid van garbage collection na ieder verzoek. Als de cron job wordt gebruikt voor garbage collection, zorgt er dan voor dat die loopt.</translation>
+        <translation>Імовірність видалення сміття після кожного запиту. Якщо для видалення сміття використовується cron, переконайтеся, що він запущений.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="74"/>
         <source>GC probability:</source>
-        <translation>GC waarschijnlijkheid:</translation>
+        <translation>Ймовірність GC:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="79"/>
@@ -1089,7 +1089,7 @@
     <message>
         <location filename="../../../admin/settings/index.html.php" line="80"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -1097,117 +1097,117 @@
     <message>
         <location filename="../../../admin/settings/mail.php" line="33"/>
         <source>Email Settings</source>
-        <translation>Email instellingen</translation>
+        <translation>Налаштування електронної пошти</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="74"/>
         <source>Disabled</source>
-        <translation>Uitgeschakeld</translation>
+        <translation>Вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="75"/>
         <source>Standard PHP mailer</source>
-        <translation>Standaard PHP mailer</translation>
+        <translation>Стандартний PHP mailer</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="76"/>
         <source>Custom SMTP server</source>
-        <translation>Custom SMTP server</translation>
+        <translation>Власний сервер SMTP</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="79"/>
         <source>None</source>
-        <translation>Geen</translation>
+        <translation>Жоден</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="103"/>
         <source>Please select the SMTP method of sending emails to test connection.</source>
-        <translation>Selectuur AUB de SMTP methode voor het zenden van emails om de verbinding te testen.</translation>
+        <translation>Виберіть спосіб відправки електронної пошти через SMTP, щоб перевірити з&apos;єднання.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="6"/>
         <source>General</source>
-        <translation>Algemeen</translation>
+        <translation>Загальний</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="8"/>
         <source>Method of sending emails:</source>
-        <translation>Methode voor het zenden van emails:</translation>
+        <translation>Спосіб відправки електронної пошти:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="11"/>
         <source>Email address of the server:</source>
-        <translation>Email adres van de server:</translation>
+        <translation>Електронна адреса сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="13"/>
         <source>If sending emails is enabled, make sure that the cron job is running.</source>
-        <translation>Als het verzenden van emails geactiveerd is, zorg er dan voor dat de cron job draait.</translation>
+        <translation>Якщо надсилання електронних листів увімкнуто, впевніться, що cron запущено.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="18"/>
         <source>SMTP Server</source>
-        <translation>SMTP server</translation>
+        <translation>Сервер SMTP</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="20"/>
         <source>Fill the information below when using a custom SMTP server.</source>
-        <translation>Vul onderstaande informatie in bij het gebruik van een custom SMTP server.</translation>
+        <translation>Введіть наступну інформацію, якщо ви використовуєте свій власний SMTP-сервер.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="22"/>
         <source>Server name:</source>
-        <translation>Server naam:</translation>
+        <translation>Ім&apos;я сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="23"/>
         <source>Port number:</source>
-        <translation>Poort nummer:</translation>
+        <translation>Номер порта:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="24"/>
         <source>Encryption mode:</source>
-        <translation>Encryptie methode:</translation>
+        <translation>Режим шифрування:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="25"/>
         <source>User name:</source>
-        <translation>Gebruikersnaam:</translation>
+        <translation>Ім&apos;я користувача:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="26"/>
         <source>Password:</source>
-        <translation>Wachtwoord:</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="31"/>
         <source>Connection to the SMTP server was successful.</source>
-        <translation>Verbinding met de SMTP server is gelukt.</translation>
+        <translation>З&apos;єднання з сервером-SMTP було успішним.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="35"/>
         <source>Test Connection</source>
-        <translation>Verbinding testen</translation>
+        <translation>Перевірити підключення</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="41"/>
         <source>Hyperlinks</source>
-        <translation>Snelkoppelingen</translation>
+        <translation>Гіперпосилання</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="43"/>
         <source>Enter the base URL of the server, with the trailing slash, to enable hyperlinks in emails.</source>
-        <translation>Vul de basis url van de server in, met de achterliggende slash, om snelkoppelingen in email mogelijk te maken.</translation>
+        <translation>Введіть базову URL адресу сервера, з косою рискою &quot;/&quot;, щоб ввімкнути гіперпосилання в електронних листах.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="45"/>
         <source>Server URL:</source>
-        <translation>Server url:</translation>
+        <translation>URL адреса сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="48"/>
         <source>Detect</source>
-        <translation>Detecteren</translation>
+        <translation>Виявити</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="54"/>
@@ -1217,7 +1217,7 @@
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="55"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -1225,323 +1225,323 @@
     <message>
         <location filename="../../../admin/setup/install.php" line="237"/>
         <source>No supported database engines are available in this PHP installation.</source>
-        <translation>Er zijn geen ondersteunde database engines beschikbaar in deze PHP installatie.</translation>
+        <translation>Ця версія PHP не обслуговує жодну з підтримуваних баз даних.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="78"/>
         <location filename="../../../admin/setup/install.html.php" line="9"/>
         <source>Server Configuration</source>
-        <translation>Server instellen</translation>
+        <translation>Налаштування сервера</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="79"/>
         <source>Configure your WebIssues Server</source>
-        <translation>Instellen van je Webssues Server</translation>
+        <translation>Налаштуйте ваш сервер WebIssues</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="213"/>
         <source>My WebIssues Server</source>
-        <translation>Mijn WebIssues Server</translation>
+        <translation>Мій сервер WebIssues</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="259"/>
         <source>Install a new server</source>
-        <translation>Installeer een nieuwe server</translation>
+        <translation>Встановити новий сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="260"/>
         <source>Use an existing server</source>
-        <translation>Gebruik een bestaande server</translation>
+        <translation>Використовувати вже існуючий сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="269"/>
         <source>Do not install any issue types</source>
-        <translation>Installeer geen issue soorten</translation>
+        <translation>Не встановлювати ніяких типів завдань</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="270"/>
         <source>Install the default set of issue types</source>
-        <translation>Installeer de standaard set issue soorten</translation>
+        <translation>Встановити типовий набір типів завдань</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="344"/>
         <location filename="../../../admin/setup/install.php" line="351"/>
         <location filename="../../../admin/setup/install.php" line="358"/>
         <source>The &apos;%1&apos; extension is missing or disabled.</source>
-        <translation>The &apos;%1&apos; extentie ontbreekt of is gedesactiveerd.</translation>
+        <translation>Розширення &quot;%1&quot; вимкнене або не знайдене. </translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="294"/>
         <source>Could not connect to database. Please check connection details and try again.</source>
-        <translation>Kan geen verbinding maken met de database. Controleer de instellingen van de verbinding en probeer het nog een keer.</translation>
+        <translation>Неможливо підключитися до бази даних. Будь ласка, перевірте з&apos;єднання деталей і спробуйте ще раз.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="310"/>
         <source>The WebIssues tables were not found in the database. Make sure the table prefix is correct and try again.</source>
-        <translation>De WebIssues tables zijn niet gevonden in de databank. Verzeker u ervan dat de tabelprefix correct is en probeer opnieuw.</translation>
+        <translation>Таблиці WebIssues не були знайдені в базі даних. Переконайтеся, що префікс таблиць вірний, та спробуйте ще раз.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="319"/>
         <source>The existing version of the database cannot be used with this version of WebIssues Server.</source>
-        <translation>De bestaande versie van de database kan niet worden gebruikt met deze versie van WebIssues Server.</translation>
+        <translation>Існуюча версія бази даних не може бути використана з цією версією сервера WebIssues.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="327"/>
         <source>The WebIssues tables already exist in the database. Drop them first or use a different table prefix and try again.</source>
-        <translation>De WebIssues tabellen bestaan al in de databank. Verwijder deze eerst of gebruik een verschillende prefix en probeer opnieuw.</translation>
+        <translation>Таблиці WebIssues вже існують в базі даних. Видаліть їх або змініть префікс таблиць та спробуйте ще раз.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="335"/>
         <source>Could not retrieve information from the database.</source>
-        <translation>Kan geen informatie uit de database ophalen.</translation>
+        <translation>Не вдалося отримати інформацію з бази даних.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="377"/>
         <source>Database does not support InnoDB storage which is required by WebIssues Server.</source>
-        <translation>Database ondersteund geen InnoDB opslag, deze is vereist voor WebIssues Server.</translation>
+        <translation>База даних не підтримує InnoDB який необхідний для роботи сервера WebIssues.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="403"/>
         <source>Database version %1 is older than minimum required version %2.</source>
-        <translation>Database versie %1 is ouder dan de minimaal vereiste versie %2.</translation>
+        <translation>Версія бази даних %1 є старіша ніж необхідна мінімальна версія %2.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="430"/>
         <source>Completed the installation of the server</source>
-        <translation>De installatie van de server is afgerond</translation>
+        <translation>Установку сервера завершено</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="464"/>
         <source>Updated database to version %1</source>
-        <translation>Database bijgewerkt naar versie %1</translation>
+        <translation>Оновлення бази даних до версії %1</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="491"/>
         <source>The configuration file could not be written.</source>
-        <translation>Het configuratie bestand kon niet worden weggeschreven.</translation>
+        <translation>Немає доступу до файлу конфігурації.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="17"/>
         <source>Administration Panel</source>
-        <translation>Beheerders scherm</translation>
+        <translation>Панель адміністратора</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="37"/>
         <source>Select language used during the installation.</source>
-        <translation>Selecteer de taal die gebruikt wordt tijdens de installatie.</translation>
+        <translation>Виберіть мову, яка використовуватиметься під час установки.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="39"/>
         <source>Language:</source>
-        <translation>Taal:</translation>
+        <translation>Мова:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="6"/>
         <source>The configuration file of this WebIssues Server already exists.</source>
-        <translation>Het configuratie bestand van deze WebIssues Server bestaat al.</translation>
+        <translation>Файл конфігурації цього сервера WebIssues вже існує.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="8"/>
         <source>For security reasons, you must first delete the server configuration file and then run the %1 page again.</source>
-        <translation>Om veiligheids redenen moet je eerst het server configuratie bestand verwijderen en dan pagina %1 opnieuw uitvoeren.</translation>
+        <translation>З міркувань безпеки, ви повинні спочатку видалити файл конфігурації сервера, а потім зайти на сторінку %1 знову.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="14"/>
         <source>Installation of your WebIssues Server was successfully completed.</source>
-        <translation>De installatie van jouw WebIssues Server is succesvol afgerond.</translation>
+        <translation>Установка вашого сервера WebIssues була успішно завершена.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="16"/>
         <source>Go to the %1 to continue the configuration of this server.</source>
-        <translation>Ga naar de %1 pagina om verder te gaan met het instellen van deze server.</translation>
+        <translation>Зайдіть на сторінку %1 щоб продовжувати налаштування цього сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="54"/>
         <source>Database Engine</source>
-        <translation>Database engine</translation>
+        <translation>Двигун бази даних</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="95"/>
         <source>Please enter the parameters of the new server.</source>
-        <translation>Vul hier de parameters van de nieuwe server in.</translation>
+        <translation>Введіть параметри нового сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="100"/>
         <source>Enter the name of this server.</source>
-        <translation>Vul de naam van deze server in.</translation>
+        <translation>Введіть ім&apos;я цього сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="109"/>
         <source>The Administrator user account will be created allowing you to log in to the server and change its settings.</source>
-        <translation>De gebruiker Administrator zal worden aangemaakt om je toegang tot de server te geven en de instellingen aan te passen.</translation>
+        <translation>Акаунт адміна буде створено, що дозволить зайти на сервер і змінити його параметри.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="98"/>
         <location filename="../../../admin/setup/install.html.php" line="132"/>
         <source>Server Information</source>
-        <translation>Server informatie</translation>
+        <translation>Інформація про сервер</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="51"/>
         <source>Please enter information required to connect to the database.</source>
-        <translation>Vul hier de informatie in die nodig is om verbinding met de database te maken.</translation>
+        <translation>Введіть інформацію, необхідну для підключення до бази даних..</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="26"/>
         <source>Installation failed with the following fatal error:</source>
-        <translation>Installatie is mislukt door de volgende fatale fout:</translation>
+        <translation>Установка зазнала невдачі через наступну помилку:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="44"/>
         <source>This wizard will help you configure the WebIssues Server.</source>
-        <translation>Deze wizard zal je helpen met het instellen van de WebIssues Server.</translation>
+        <translation>Цей майстер допоможе вам налаштувати WebIssues сервер..</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="56"/>
         <source>Select the type of the database to use:</source>
-        <translation>Selecteer het type database:</translation>
+        <translation>Виберіть тип бази даних для використання:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="63"/>
         <source>Connection Details</source>
-        <translation>Details van de verbinding</translation>
+        <translation>Деталі з&apos;єднання</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="65"/>
         <source>Host name:</source>
-        <translation>Host naam:</translation>
+        <translation>Ім&apos;я хосту:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="66"/>
         <source>Database name:</source>
-        <translation>Database naam:</translation>
+        <translation>Назва бази даних:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="67"/>
         <source>User name:</source>
-        <translation>Gebruikersnaam:</translation>
+        <translation>Ім&apos;я користувача:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="68"/>
         <location filename="../../../admin/setup/install.html.php" line="112"/>
         <source>Password:</source>
-        <translation>Wachtwoord:</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="75"/>
         <source>Mode</source>
-        <translation>Modus</translation>
+        <translation>Режим</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="77"/>
         <source>Select if you want to install a new server or recreate the configuration file for an existing server:</source>
-        <translation>Selecteer als je een nieuwe server wil installeren of de configuratiebestanden van een bestaande server wil herstellen:</translation>
+        <translation>Оберіть, якщо ви хочете інсталювати новий сервер або перестворити файл конфігурації для існуючого сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="84"/>
         <source>Table Prefix</source>
-        <translation>Tabel voorvoegsel</translation>
+        <translation>Префікс таблиць</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="140"/>
         <source>Initial configuration:</source>
-        <translation>Initiële instellingen:</translation>
+        <translation>Початкові налаштування:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="141"/>
         <source>Default issue types</source>
-        <translation>Standaard issue types</translation>
+        <translation>Типи завдань по замовчуванню</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="141"/>
         <source>No issue types</source>
-        <translation>Geen issue types</translation>
+        <translation>Типи завдань відсутні</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="171"/>
         <source>&amp;lt; Back</source>
-        <translation>&amp;lt; Terug</translation>
+        <translation>&amp;lt; Назад</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="186"/>
         <source>Installation in progress...</source>
-        <translation>Installatie loopt...</translation>
+        <translation>Встановлення у процесі...</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="86"/>
         <source>You can enter an optional prefix for table names. This allows installing multiple servers using the same database.</source>
-        <translation>Je kan een optionele prefix opgeven voor de tabelnamen. Dit geeft de mogelijkheid meerdere servers gebruik te laten maken van dezelfde database.</translation>
+        <translation>Ви можете ввести додатковий префікс для назв таблиць. Це дозволяє встановити декілька серверів, що використовують одну базу даних.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="20"/>
         <source>Do not forget to copy attachments stored in the file system from the old version of the server.</source>
-        <translation>Vergeet niet om bijlagen te kopi&amp;euml;ren die zijn opgeslagen op het filesysteem van de oude versie van de server.</translation>
+        <translation>Не забувайте скопіювати вкладення що зберігаються у файловій системі зі старою версією сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="88"/>
         <source>Table prefix:</source>
-        <translation>Tabel voorvoegsel:</translation>
+        <translation>Префікс таблиць:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="102"/>
         <location filename="../../../admin/setup/install.html.php" line="136"/>
         <source>Server name:</source>
-        <translation>Server naam:</translation>
+        <translation>Ім&apos;я сервера:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="107"/>
         <source>Administrator Account</source>
-        <translation>Beheerder account</translation>
+        <translation>Обліковий запис адміністратора</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="111"/>
         <source>Login:</source>
-        <translation>Aanmelden:</translation>
+        <translation>Логін:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="113"/>
         <source>Confirm password:</source>
-        <translation>Bevestig wachtwoord:</translation>
+        <translation>Підтвердіть пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="118"/>
         <source>Initial Configuration</source>
-        <translation>Initiele instellingen</translation>
+        <translation>Початкова настройка</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="120"/>
         <source>Select the initial configuration of this server:</source>
-        <translation>selecteer de initiele insteling van deze server:</translation>
+        <translation>Виберіть початкові налаштування цього сервера::</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="129"/>
         <source>The new server will be installed in the selected database.</source>
-        <translation>De nieuwe server zal worden geinstalleerd in de geselecteerde database.</translation>
+        <translation>Новий сервер буде встановлений у вибраній базі даних.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="153"/>
         <source>The database of this WebIssues Server will be updated to version %1.</source>
-        <translation>De database van deze WebIssues Server zal worden bijgewerkt naar versie %1.</translation>
+        <translation>База даних цього сервера WebIssues буде оновлена до версії %1.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="155"/>
         <source>The server is already configured. It will not be modified during the installation.</source>
-        <translation>De server is al ingesteld. Hij zal niet veranderen tijdens de installatie.</translation>
+        <translation>Сервер вже налаштований. Він не буде змінений під час установки.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="168"/>
         <source>Refresh</source>
-        <translation>Ververs</translation>
+        <translation>Оновити</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="174"/>
         <source>Next &amp;gt;</source>
-        <translation>Volgende &amp;gt;</translation>
+        <translation>Далі &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="177"/>
         <source>Install</source>
-        <translation>Installeer</translation>
+        <translation>Встановити</translation>
     </message>
 </context>
 <context>
@@ -1549,29 +1549,29 @@
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="308"/>
         <source>Administrator</source>
-        <translation>Beheerder</translation>
+        <translation>Адміністратор</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="338"/>
         <source>Forum</source>
-        <translation>Forum</translation>
+        <translation>Форум</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="344"/>
         <source>Bugs</source>
-        <translation>Bugs</translation>
+        <translation>Помилки</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="347"/>
         <source>Assigned To</source>
         <comment>bug</comment>
-        <translation>Toegewezen aan</translation>
+        <translation>Призначено для</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="354"/>
         <source>Status</source>
         <comment>bug</comment>
-        <translation>Status</translation>
+        <translation>Статус</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="357"/>
@@ -1581,109 +1581,109 @@
         <location filename="../../../admin/setup/installer.inc.php" line="415"/>
         <source>Active</source>
         <comment>bug</comment>
-        <translation>Actief</translation>
+        <translation>Активний</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="357"/>
         <location filename="../../../admin/setup/installer.inc.php" line="422"/>
         <source>Resolved</source>
         <comment>bug</comment>
-        <translation>Opgelost</translation>
+        <translation>Вирішений</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="357"/>
         <source>Closed</source>
         <comment>bug</comment>
-        <translation>Gesloten</translation>
+        <translation>Закрите</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="363"/>
         <source>Reason</source>
-        <translation>Oorzaak</translation>
+        <translation>Причина</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Fixed</source>
-        <translation>Opgelost</translation>
+        <translation>Виправлено</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Obsolete</source>
-        <translation>Vervallen</translation>
+        <translation>Застарілий</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Duplicate</source>
-        <translation>Dubbel</translation>
+        <translation>Продубльований</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>As Designed</source>
-        <translation>Zoals ontworpen</translation>
+        <translation>Відповідність проекту</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Unable To Reproduce</source>
-        <translation>Niet reproduceerbaar</translation>
+        <translation>Не в змозі відтворити</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Test Failed</source>
-        <translation>Test mislukt</translation>
+        <translation>Випробування не вдалося</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>Severity</source>
         <comment>bug</comment>
-        <translation>Prioriteit</translation>
+        <translation>Критичність</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="381"/>
         <source>Version</source>
-        <translation>Versie</translation>
+        <translation>Версія</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="389"/>
         <source>Created By Me</source>
         <comment>bug</comment>
-        <translation>Aangemaakt door mij</translation>
+        <translation>Створені мною</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="396"/>
         <source>Active Bugs</source>
-        <translation>Actieve bugs</translation>
+        <translation>Активні помилки</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="403"/>
         <source>My Active Bugs</source>
-        <translation>Mijn actieve bugs</translation>
+        <translation>Мої активні помилки</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="411"/>
         <source>Unassigned Bugs</source>
-        <translation>Niet toegewezen bugs</translation>
+        <translation>Не призначені помилки</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="419"/>
         <source>Resolved Bugs</source>
-        <translation>Opgeloste bugs</translation>
+        <translation>Вирішені помилки</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="428"/>
         <source>Tasks</source>
-        <translation>Taken</translation>
+        <translation>Завдання</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="431"/>
         <source>Assigned To</source>
         <comment>task</comment>
-        <translation>Toegewezen aan</translation>
+        <translation>Призначено для</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="438"/>
         <source>Status</source>
         <comment>task</comment>
-        <translation>Status</translation>
+        <translation>Статус</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="441"/>
@@ -1693,62 +1693,62 @@
         <location filename="../../../admin/setup/installer.inc.php" line="499"/>
         <source>Active</source>
         <comment>task</comment>
-        <translation>Actief</translation>
+        <translation>Активне</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="441"/>
         <source>Closed</source>
         <comment>task</comment>
-        <translation>Gesloten</translation>
+        <translation>Закрите</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="447"/>
         <source>Priority</source>
         <comment>task</comment>
-        <translation>Prioriteit</translation>
+        <translation>Приоритет</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="457"/>
         <source>Progress</source>
-        <translation>Voortgang</translation>
+        <translation>Прогрес</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="465"/>
         <source>Due Date</source>
-        <translation>Einddatum</translation>
+        <translation>Термін</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="473"/>
         <source>Created By Me</source>
         <comment>task</comment>
-        <translation>Aangemaakt door mij</translation>
+        <translation>Створено мною</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="480"/>
         <source>Active Tasks</source>
-        <translation>Actieve taken</translation>
+        <translation>Активне завдання</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="487"/>
         <source>My Active Tasks</source>
-        <translation>Mijn actieve taken</translation>
+        <translation>Мої активні завдання</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="495"/>
         <source>Unassigned Tasks</source>
-        <translation>Niet toegewezen taken</translation>
+        <translation>Не призначені завдання</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="503"/>
         <source>Completed Tasks</source>
-        <translation>Afgeronde taken</translation>
+        <translation>Завершені завдання</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="441"/>
         <location filename="../../../admin/setup/installer.inc.php" line="506"/>
         <source>Completed</source>
         <comment>task</comment>
-        <translation>Afgerond</translation>
+        <translation>Завершено</translation>
     </message>
 </context>
 <context>
@@ -1756,82 +1756,82 @@
     <message>
         <location filename="../../../admin/setup/update.php" line="50"/>
         <source>Server Update</source>
-        <translation>Server update</translation>
+        <translation>Оновлення сервера</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.php" line="51"/>
         <source>Update your WebIssues Server</source>
-        <translation>Update je WebIssues Server</translation>
+        <translation>Оновіть ваш сервер WebIssues</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.php" line="126"/>
         <source>Updated database to version %1</source>
-        <translation>Database bijgewerkt naar versie %1</translation>
+        <translation>Оновлена база даних до версії %1</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="6"/>
         <source>The database of this WebIssues Server is already up to date.</source>
-        <translation>De database van deze WebIssues Server is al up-to-date.</translation>
+        <translation>База даних цього сервера WebIssues найновіша.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="11"/>
         <source>Update of your WebIssues Server was successfully completed.</source>
-        <translation>Bijwerken van je WebIssues Server is succesvol afgerond.</translation>
+        <translation>Оновлення вашого сервер WebIssues було успішно завершено.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="13"/>
         <source>Go to the %1 to continue the configuration of this server.</source>
-        <translation>Ga naar %1 om verder te gaan met het instellen van deze server.</translation>
+        <translation>Перейдіть до %1 щоб продовжити налаштування цього сервера.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="14"/>
         <source>Administration Panel</source>
-        <translation>Beheerders scherm</translation>
+        <translation>Панель адміністратора</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="19"/>
         <source>Update failed with the following fatal error:</source>
-        <translation>Bijwerken is mislukt door de volgende fatale fout:</translation>
+        <translation>Оновлення не вдалося через наступну помилку:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="30"/>
         <source>Log in as administrator in order to update the server.</source>
-        <translation>Meld je als beheerder aan om deze server bij te werken.</translation>
+        <translation>Увійдіть як адміністратор, щоб оновити сервер.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="32"/>
         <source>Login:</source>
-        <translation>Aanmelden:</translation>
+        <translation>Логін:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="33"/>
         <source>Password:</source>
-        <translation>Wachtwoord:</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="38"/>
         <source>The database of this WebIssues Server will be updated to version %1.</source>
-        <translation>De database van deze WebIssues Server zal worden bijgewerkt naar versie %1.</translation>
+        <translation>База даних цього сервера WebIssues буде оновлена до версії %1.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="50"/>
         <source>&amp;lt; Back</source>
-        <translation>&amp;lt; Terug</translation>
+        <translation>&amp;lt; Назад</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="53"/>
         <source>Next &amp;gt;</source>
-        <translation>Volgende &amp;gt;</translation>
+        <translation>Далі &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="56"/>
         <source>Update</source>
-        <translation>Bijwerken</translation>
+        <translation>Оновлення</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="65"/>
         <source>Update in progress...</source>
-        <translation>Bijwerken loopt...</translation>
+        <translation>Оновлення у процесі...</translation>
     </message>
 </context>
 <context>
@@ -1839,12 +1839,12 @@
     <message>
         <location filename="../../../admin/types/addtype.php" line="33"/>
         <source>Add Type</source>
-        <translation>Soort toevoegen</translation>
+        <translation>Дадати тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="5"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="8"/>
@@ -1854,7 +1854,7 @@
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -1862,172 +1862,172 @@
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="45"/>
         <source>Issue Types</source>
-        <translation>Soorten issues</translation>
+        <translation>Типи завдань</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="62"/>
         <source>Modify Attribute</source>
-        <translation>Attribuut aanpassen</translation>
+        <translation>Змінити атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="74"/>
         <source>Add Attribute</source>
-        <translation>Attribuut toevoegen</translation>
+        <translation>Додати атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="81"/>
         <source>Allow entering custom values</source>
-        <translation>Toestaan om aangepaste gegevens in te vullen</translation>
+        <translation>Дозволити введення користувальницьких значень</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="320"/>
         <source>Date only</source>
-        <translation>Aleen datum</translation>
+        <translation>Лише дата</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="321"/>
         <source>Date and time without time zone conversion</source>
-        <translation>Datum en tijd zonder tijdzone correctie</translation>
+        <translation>Дата i час без перетворення часових поясів</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="322"/>
         <source>Date and time using local time zone</source>
-        <translation>Datum en tijd volgens de locale tijd zone</translation>
+        <translation>Дата i час за місцевим часовим поясом</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="438"/>
         <source>Invalid value</source>
-        <translation>Ongeldige waarde</translation>
+        <translation>Невірне значення</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Een aantal waarden die je hebt ingevuld kloppen niet.</translation>
+        <translation>Деякі значення ви ввели неправильно.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="15"/>
         <source>Create a new attribute in type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Een nieuwe attribuut aanmaken in soort &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Створіть новий атрибут типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="17"/>
         <source>Modify attribute &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Attribuut aanpassen &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити атрибут &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="126"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="21"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="35"/>
         <location filename="../../../admin/types/attribute.html.php" line="68"/>
         <source>Attribute Details</source>
-        <translation>Attribuut details</translation>
+        <translation>Детальна інформація про атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="65"/>
         <source>Specify details of &lt;strong&gt;%1&lt;/strong&gt; attribute.</source>
-        <translation>Gegevens specificeren van attribuut &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Вкажіть деталі про атрибут &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="75"/>
         <location filename="../../../admin/types/attribute.html.php" line="91"/>
         <source>Minimum length:</source>
-        <translation>Minimale lengte:</translation>
+        <translation>Мінімальна довжина:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="76"/>
         <location filename="../../../admin/types/attribute.html.php" line="92"/>
         <source>Maximum length:</source>
-        <translation>Maximale lengte:</translation>
+        <translation>Максимальна довжина:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="85"/>
         <source>Enter one dropdown list item per line.</source>
-        <translation>Voer &amp;eacute;&amp;eacute;n keuzelijst item per regel in.</translation>
+        <translation>Введіть кожен елемент випадаючого списку в окремому рядку.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="87"/>
         <source>Dropdown list items:</source>
-        <translation>Keuzelijst items:</translation>
+        <translation>Список значень:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="97"/>
         <source>Decimal places:</source>
-        <translation>Decimalen:</translation>
+        <translation>Десяткових знаків:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="98"/>
         <source>Minimum value:</source>
-        <translation>Minimale waarde:</translation>
+        <translation>Мінімальне значення:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="99"/>
         <source>Maximum value:</source>
-        <translation>Maximale waarde:</translation>
+        <translation>Максимальне значення:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="100"/>
         <source>Strip trailing decimal zeros</source>
-        <translation>Verwijder achterliggende decimale nullen</translation>
+        <translation>Змінити задні десяткові нулі</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="48"/>
         <source>Common Settings</source>
-        <translation>Standaard instellingen</translation>
+        <translation>Загальні налаштування</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="25"/>
         <source>Attribute Type</source>
-        <translation>Soort attribuut</translation>
+        <translation>Тип атрибута</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="29"/>
         <source>Go</source>
-        <translation>Kiezen</translation>
+        <translation>Перейти</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="38"/>
         <source>Edit</source>
-        <translation>Bewerk</translation>
+        <translation>Редагувати</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="50"/>
         <source>Attribute is required</source>
-        <translation>Attribuut is verpicht</translation>
+        <translation>Потрібен атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="54"/>
         <location filename="../../../admin/types/attribute.html.php" line="56"/>
         <source>Default value:</source>
-        <translation>Standaard waarde:</translation>
+        <translation>Значення за замовчуванням:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="73"/>
         <source>Allow entering multiple lines of text</source>
-        <translation>Meerdere regels tekst toestaan</translation>
+        <translation>Дозволити введення декількох рядків тексту</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="83"/>
         <location filename="../../../admin/types/attribute.html.php" line="112"/>
         <source>Allow selecting multiple items</source>
-        <translation>Selecteren van meerdere items toestaan</translation>
+        <translation>Дозволити вибір кількох елементів</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="89"/>
         <source>The following settings can only be used when entering custom values is allowed and selecting multiple items is not allowed.</source>
-        <translation>De volgende instellingen kunnen alleen worden gebruikt als het invoeren van aangepaste waarden is toegestaan ​​en het selecteren van meerdere items niet is toegestaan.</translation>
+        <translation>Наступні налаштування можна використовувати лише тоді, коли дозволено вводити користувацькі значення і не дозволено вибирати декілька елементів одночасно.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="110"/>
         <source>Allow selecting only project members</source>
-        <translation>Alleen project medewerkers mogen geselecteerd worden</translation>
+        <translation>Дозволити вибір лише учасникам проекту</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="125"/>
@@ -2040,17 +2040,17 @@
     <message>
         <location filename="../../../admin/types/deleteattribute.php" line="33"/>
         <source>Delete Attribute</source>
-        <translation>Attribuut verwijderen</translation>
+        <translation>Видалити атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="3"/>
         <source>Are you sure you want to delete attribute &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Weet je zeker dat je dit attribuut wil verwijderen &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Ви дійсно хочете видалити атрибут &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All current and historical values of this attribute will be deleted.</source>
-        <translation>&lt;strong&gt;LET OP:&lt;/strong&gt; Alle huidige en historische waarden van dit attribuut  worden verwijderd.</translation>
+        <translation>&lt;strong&gt;Увага:&lt;/strong&gt; Всі поточні та історичні значення цього атрибуту будуть видалені.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="12"/>
@@ -2060,7 +2060,7 @@
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2068,17 +2068,17 @@
     <message>
         <location filename="../../../admin/types/deletetype.php" line="33"/>
         <source>Delete Type</source>
-        <translation>Soort verwijderen</translation>
+        <translation>Видалити тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="3"/>
         <source>Are you sure you want to delete type &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Weet je zeker dat je soort &lt;strong&gt;%1&lt;/strong&gt; wil verwijderen?</translation>
+        <translation>Ви дійсно хочете видалити тип &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues of this type will be permanently deleted.</source>
-        <translation>&lt;strong&gt;LET OP:&lt;/strong&gt; Alle folders en issues van dit soort zullen definitief verwijderd worden.</translation>
+        <translation>&lt;strong&gt;Увага:&lt;/strong&gt; Всі папки і завдання цього типу будуть видалені.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="12"/>
@@ -2088,7 +2088,7 @@
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2096,95 +2096,95 @@
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="131"/>
         <source>Text</source>
-        <translation>Tekst</translation>
+        <translation>Текст</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="132"/>
         <source>Dropdown list</source>
-        <translation>Keuzelijst</translation>
+        <translation>Випадаючий список</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="134"/>
         <source>Date &amp; time</source>
-        <translation>Datum % tijd</translation>
+        <translation>Дата i час</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="133"/>
         <source>Numeric</source>
-        <translation>Numeriek</translation>
+        <translation>Числовий</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="69"/>
         <source>Multiple lines</source>
-        <translation>Meerdere regels</translation>
+        <translation>Кілька рядків</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="72"/>
         <location filename="../../../admin/types/helper.inc.php" line="88"/>
         <source>Min. length: %1</source>
-        <translation>Min. lengte: %1</translation>
+        <translation>Мін. довжина: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="75"/>
         <location filename="../../../admin/types/helper.inc.php" line="91"/>
         <source>Max. length: %1</source>
-        <translation>Max. lengte: %1</translation>
+        <translation>Мак. довжина: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="80"/>
         <source>Editable</source>
-        <translation>Bewerkbaar</translation>
+        <translation>Редагований</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="82"/>
         <location filename="../../../admin/types/helper.inc.php" line="120"/>
         <source>Multiple selection</source>
-        <translation>Meervoudige selectie</translation>
+        <translation>Множинний вибір</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="85"/>
         <source>Items: %1</source>
-        <translation>Items: %1</translation>
+        <translation>Елементи: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="98"/>
         <source>Decimal places: %1</source>
-        <translation>Decimalen: %1</translation>
+        <translation>Десяткових знаків: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="101"/>
         <source>Min. value: %1</source>
-        <translation>Min. waarde: %1</translation>
+        <translation>Мін. значення: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="104"/>
         <source>Max. value: %1</source>
-        <translation>Max. waarde: %1</translation>
+        <translation>Мак. значення: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="106"/>
         <source>Strip zeros</source>
-        <translation>Nullen verwijderen</translation>
+        <translation>Обрізати нулі</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="111"/>
         <source>With time</source>
-        <translation>Inclusief tijd</translation>
+        <translation>З часом</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="113"/>
         <source>Local time zone</source>
-        <translation>Locale tijdzone</translation>
+        <translation>Місцевий час</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="118"/>
         <source>Members only</source>
-        <translation>Alleen voor leden</translation>
+        <translation>Тільки для учасників</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="135"/>
         <source>User</source>
-        <translation>Gebruiker</translation>
+        <translation>Користувач</translation>
     </message>
 </context>
 <context>
@@ -2192,87 +2192,87 @@
     <message>
         <location filename="../../../admin/types/index.php" line="33"/>
         <source>Issue Types</source>
-        <translation>Soorten issues</translation>
+        <translation>Типи завдань</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="60"/>
         <source>Yes</source>
-        <translation>Ja</translation>
+        <translation>Так</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="60"/>
         <source>No</source>
-        <translation>Nee</translation>
+        <translation>Ні</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="87"/>
         <source>Rename Type</source>
-        <translation>Soort hernoemen</translation>
+        <translation>Переіменувати тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="88"/>
         <source>Delete Type</source>
-        <translation>Soort verwijderen</translation>
+        <translation>Видалити тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="90"/>
         <source>Rename Attribute</source>
-        <translation>Attribuut hernoemen</translation>
+        <translation>Переіменувати атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="91"/>
         <source>Delete Attribute</source>
-        <translation>Attribuut verwijderen</translation>
+        <translation>Видалити атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="85"/>
         <source>Add Type</source>
-        <translation>Soort toevoegen</translation>
+        <translation>Додати тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="11"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="12"/>
         <source>Type</source>
-        <translation>Soort</translation>
+        <translation>Тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="13"/>
         <source>Default Value</source>
-        <translation>Standaard waarde</translation>
+        <translation>Значення по замовчуванню</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="14"/>
         <source>Required</source>
-        <translation>Verplicht</translation>
+        <translation>Потребує</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="15"/>
         <source>Details</source>
-        <translation>Details</translation>
+        <translation>Деталі</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="52"/>
         <source>There are no issue types.</source>
-        <translation>Er zijn geen issue soorten.</translation>
+        <translation>Немає типів завдань.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="86"/>
         <source>Add Attribute</source>
-        <translation>Attribuut toevoegen</translation>
+        <translation>Додати атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="92"/>
         <source>View Settings</source>
-        <translation>View instellingen</translation>
+        <translation>Налаштування переглядів</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="89"/>
         <source>Modify Attribute</source>
-        <translation>Attribuut aanpassen</translation>
+        <translation>Змінити атрибут</translation>
     </message>
 </context>
 <context>
@@ -2280,17 +2280,17 @@
     <message>
         <location filename="../../../admin/types/renameattribute.php" line="33"/>
         <source>Rename Attribute</source>
-        <translation>Attribuut hernoemen</translation>
+        <translation>Переіменувати атрибут</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="3"/>
         <source>Enter the new name of attribute &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Vul de nieuwe naam in voor attribuut &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Введіть нову назву атрибуту &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="10"/>
@@ -2300,7 +2300,7 @@
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2308,17 +2308,17 @@
     <message>
         <location filename="../../../admin/types/renametype.php" line="33"/>
         <source>Rename Type</source>
-        <translation>Soort hernoemen</translation>
+        <translation>Переіменувати тип</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="3"/>
         <source>Enter the new name of type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Vul de nieuwe naam in voor soort &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Введіть нову назву типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="10"/>
@@ -2328,7 +2328,7 @@
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2336,27 +2336,27 @@
     <message>
         <location filename="../../../admin/users/access.php" line="33"/>
         <source>Global Access</source>
-        <translation>Algemene Toegang</translation>
+        <translation>Глобальний доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="51"/>
         <source>Regular user</source>
-        <translation>Normale gebruiker</translation>
+        <translation>Звичайний користувач</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="52"/>
         <source>System administrator</source>
-        <translation>Systeembeheerder</translation>
+        <translation>Системний адміністратор</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="50"/>
         <source>Disabled</source>
-        <translation>Uitgeschakeld</translation>
+        <translation>Вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="3"/>
         <source>Change global access for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Wijzig algemene toegang voor gebruiker &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити глобальні права доступу для користувача &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="10"/>
@@ -2366,7 +2366,7 @@
     <message>
         <location filename="../../../admin/users/access.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2374,32 +2374,32 @@
     <message>
         <location filename="../../../admin/users/add.php" line="33"/>
         <source>Add User</source>
-        <translation>Gebruiker toevoegen</translation>
+        <translation>Додати користувача</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="5"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="6"/>
         <source>Login:</source>
-        <translation>Aanmelden:</translation>
+        <translation>Логін:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="7"/>
         <source>Password:</source>
-        <translation>Wachtwoord:</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="8"/>
         <source>Confirm password:</source>
-        <translation>Bevestig wachtwoord:</translation>
+        <translation>Підтвердіть пароль:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="9"/>
         <source>User must change password at next logon.</source>
-        <translation>Gebruiker moet bij volgende keer aanmelden het wachtwoord aanpassen.</translation>
+        <translation>Користувач повинен змінити пароль при наступному вході в систему.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="12"/>
@@ -2409,7 +2409,7 @@
     <message>
         <location filename="../../../admin/users/add.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2417,42 +2417,42 @@
     <message>
         <location filename="../../../admin/users/addprojects.php" line="59"/>
         <source>Add Projects</source>
-        <translation>Projecten toevoegen</translation>
+        <translation>Додати проект</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.php" line="62"/>
         <source>Regular member</source>
-        <translation>Normaal lid</translation>
+        <translation>Звичайний учасник</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.php" line="63"/>
         <source>Project administrator</source>
-        <translation>Project beheerder</translation>
+        <translation>Адміністратор проекту</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="6"/>
         <source>Select All</source>
-        <translation>Alles selecteren</translation>
+        <translation>Вибрати всі</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>Selectie ongedaan maken</translation>
+        <translation>Скасувати вибір</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="13"/>
         <source>Add user &lt;strong&gt;%1&lt;/strong&gt; to the selected projects.</source>
-        <translation>Voeg gebruiker &lt;strong&gt;%1&lt;/strong&gt;. toe aan de geselecteerde projecten.</translation>
+        <translation>Додати користувача &lt;strong&gt;%1&lt;/strong&gt; до виділених проектів.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="20"/>
         <source>Projects</source>
-        <translation>Projecten</translation>
+        <translation>Проекти</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="36"/>
         <source>Access</source>
-        <translation>Toegang</translation>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="41"/>
@@ -2462,17 +2462,17 @@
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="42"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="47"/>
         <source>There are no more available projects to add.</source>
-        <translation>Er zijn geen projecten  meer beschikbaar om toe voegen.</translation>
+        <translation>Немає більше доступних проектів, щоб додати.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="50"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Закрити</translation>
     </message>
 </context>
 <context>
@@ -2480,89 +2480,89 @@
     <message>
         <location filename="../../../admin/users/index.php" line="33"/>
         <source>User Accounts</source>
-        <translation>Gebruiker accounts</translation>
+        <translation>Облікові записи користувачів</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="40"/>
         <source>Active</source>
-        <translation>Actief</translation>
+        <translation>Активний</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="83"/>
         <source>Add User</source>
-        <translation>Gebruiker toevoegen</translation>
+        <translation>Додати обліковий запис користувача</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="86"/>
         <source>Manage Permissions</source>
-        <translation>Beheer Rechten</translation>
+        <translation>Керування дозволами</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="4"/>
         <source>All Users</source>
-        <translation>Alle gebruikers</translation>
+        <translation>Всі користувачі</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="16"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="17"/>
         <source>Login</source>
-        <translation>Aanmelden</translation>
+        <translation>Логін</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="19"/>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>Електронна пошта</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="21"/>
         <source>Access</source>
-        <translation>Toegang</translation>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="54"/>
         <source>There are no disabled users.</source>
-        <translation>Er zijn geen geblokkeerde gebruikers.</translation>
+        <translation>Немає неактивниих облікових записів.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="65"/>
         <source>Regular user</source>
-        <translation>Normale gebruiker</translation>
+        <translation>Звичайний користувач</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="66"/>
         <source>System administrator</source>
-        <translation>Systeembeheerder</translation>
+        <translation>Системний адміністратор</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="85"/>
         <source>Rename User</source>
-        <translation>Gebruiker hernoemen</translation>
+        <translation>Переіменувати користувача</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="84"/>
         <source>Change Password</source>
-        <translation>Wachtwoord aanpassen</translation>
+        <translation>Змінити пароль</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="41"/>
         <source>Disabled</source>
         <comment>filter</comment>
-        <translation>Uitgeschakeld</translation>
+        <translation>Вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="64"/>
         <source>Disabled</source>
         <comment>user</comment>
-        <translation>Uitgeschakeld</translation>
+        <translation>Вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="87"/>
         <source>User Preferences</source>
-        <translation>Gebruikersvoorkeuren</translation>
+        <translation>Налаштування користувача</translation>
     </message>
 </context>
 <context>
@@ -2570,22 +2570,22 @@
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="37"/>
         <source>Project Access</source>
-        <translation>Projecttoegang</translation>
+        <translation>Доступ до проекту</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="52"/>
         <source>Regular member</source>
-        <translation>Normale gebruiker</translation>
+        <translation>Звичайний учасник</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="53"/>
         <source>Project administrator</source>
-        <translation>Project beheerder</translation>
+        <translation>Адміністратор проекту</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="4"/>
         <source>Change access to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Wijzig toegang tot project &lt;strong&gt;%1&lt;/strong&gt; voor gebruiker &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <translation>Змінити права доступу користувача &lt;strong&gt;%2&lt;/strong&gt; до проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="11"/>
@@ -2595,7 +2595,7 @@
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="12"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2603,77 +2603,77 @@
     <message>
         <location filename="../../../admin/users/projects.php" line="37"/>
         <source>Manage Permissions</source>
-        <translation>Beheer Rechten</translation>
+        <translation>Керування дозволами</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="58"/>
         <source>Disabled</source>
-        <translation>Uitgeschakeld</translation>
+        <translation>Вимкнений</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="59"/>
         <source>Regular user</source>
-        <translation>Normale gebruiker</translation>
+        <translation>Звичайний користувач</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="60"/>
         <source>System administrator</source>
-        <translation>Systeembeheerder</translation>
+        <translation>Системний адміністратор</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="69"/>
         <source>Regular member</source>
-        <translation>Normale gebruiker</translation>
+        <translation>Звичайний учасник</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="70"/>
         <source>Project administrator</source>
-        <translation>Project beheerder</translation>
+        <translation>Адміністратор проекту</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="87"/>
         <source>Add Projects</source>
-        <translation>Projecten toevoegen</translation>
+        <translation>Додати проекти</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="88"/>
         <source>Change Access</source>
-        <translation>Bevoegdheden aanpassen</translation>
+        <translation>Змінити права доступу</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="89"/>
         <source>Remove Project</source>
-        <translation>Project verwijderen</translation>
+        <translation>Видалити проект</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="28"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="3"/>
         <source>Edit permissions of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Bewerk rechten van gebruiker &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Редагувати права користувача &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="8"/>
         <source>Global Access</source>
-        <translation>Algemeen Toegang</translation>
+        <translation>Глобальний доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="12"/>
         <source>Change</source>
-        <translation>Wijzigen</translation>
+        <translation>Змінити</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="29"/>
         <source>Access</source>
-        <translation>Toegang</translation>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="55"/>
         <source>This user is not a member of any project.</source>
-        <translation>Deze gebruiker is lid van geen enkel project.</translation>
+        <translation>Цей користувач не є учасником жодного проекту.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="60"/>
@@ -2686,12 +2686,12 @@
     <message>
         <location filename="../../../admin/users/removeproject.php" line="37"/>
         <source>Remove Project</source>
-        <translation>Project verwijderen</translation>
+        <translation>Видалити проект</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="4"/>
         <source>Do you want to remove user &lt;strong&gt;%1&lt;/strong&gt; from project &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>Wil je gebruiker &lt;strong&gt;%1&lt;/strong&gt; verwijderen uit het project &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+        <translation>Чи дійсно ви хочете видалити користувача &lt;strong&gt;%1&lt;/strong&gt; з проекту &lt;strong&gt;%2&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="9"/>
@@ -2701,7 +2701,7 @@
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="10"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2709,17 +2709,17 @@
     <message>
         <location filename="../../../admin/users/rename.php" line="33"/>
         <source>Rename User</source>
-        <translation>Gebruiker hernoemen</translation>
+        <translation>Переімнувати користувача</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="3"/>
         <source>Enter the new name of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Vul de nieuwe naam in voor gebruiker &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Введіть нову назву користувача &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="10"/>
@@ -2729,7 +2729,7 @@
     <message>
         <location filename="../../../admin/users/rename.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2737,69 +2737,69 @@
     <message>
         <location filename="../../../admin/views/index.php" line="33"/>
         <source>View Settings</source>
-        <translation>View instellingen</translation>
+        <translation>Налаштування переглядів</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="3"/>
         <source>Edit public view settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Openbare view instellingen bewerken voor soort &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Редагувати параметри публічних переглядів для типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="9"/>
         <source>Order of Attributes</source>
-        <translation>Volgorde van de attributen</translation>
+        <translation>Порядок атрибутів</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="12"/>
         <location filename="../../../admin/views/index.html.php" line="24"/>
         <location filename="../../../admin/views/index.html.php" line="44"/>
         <source>Modify</source>
-        <translation>Aanpassen</translation>
+        <translation>Змінити</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="21"/>
         <source>Default View</source>
-        <translation>Standaard view</translation>
+        <translation>Перегляд по замовчуанню</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="29"/>
         <source>Columns:</source>
-        <translation>Kolommen:</translation>
+        <translation>Колонки:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="33"/>
         <source>Sort By:</source>
-        <translation>Sorteren op:</translation>
+        <translation>Впорядкувати за:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="41"/>
         <source>Initial View</source>
-        <translation>Initiele view</translation>
+        <translation>Початковий перегляд</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="59"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="60"/>
         <source>Columns</source>
-        <translation>Kolommen</translation>
+        <translation>Колонки</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="61"/>
         <source>Sort By</source>
-        <translation>Sorteren op</translation>
+        <translation>Впорядкувати за</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="62"/>
         <source>Filter</source>
-        <translation>Filter</translation>
+        <translation>Фільтр</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="83"/>
         <source>This type has no public views.</source>
-        <translation>Dit soort heeft geen openbare views.</translation>
+        <translation>Цей тип не має публічних переглядів.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="88"/>
@@ -2812,22 +2812,22 @@
     <message>
         <location filename="../../../admin/views/initial.php" line="33"/>
         <source>Initial View</source>
-        <translation>Initiele view</translation>
+        <translation>Початковий перегляд</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.php" line="46"/>
         <source>All Issues</source>
-        <translation>Alle issues</translation>
+        <translation>Всі завдання</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="3"/>
         <source>Select the initial view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Selecteer de initiele view voor type &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Оберіть початковий перегляд для типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="7"/>
         <source>Initial view:</source>
-        <translation>Initiele view:</translation>
+        <translation>Початковий перегляд</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="10"/>
@@ -2837,7 +2837,7 @@
     <message>
         <location filename="../../../admin/views/initial.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2845,32 +2845,32 @@
     <message>
         <location filename="../../../admin/views/order.php" line="33"/>
         <source>Order of Attributes</source>
-        <translation>Volgorde van de attributen</translation>
+        <translation>Порядок атрибутів</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="3"/>
         <source>Modify the order of attributes for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Wijzig de volgorde van de attributen van soort &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити порядок атрибутів для типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="8"/>
         <source>Attributes</source>
-        <translation>Attributen</translation>
+        <translation>Атрибути</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="12"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="13"/>
         <source>Order</source>
-        <translation>Volgorde</translation>
+        <translation>Порядок</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="24"/>
         <source>Update</source>
-        <translation>Bijwerken</translation>
+        <translation>Оновлення</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="30"/>
@@ -2880,7 +2880,7 @@
     <message>
         <location filename="../../../admin/views/order.html.php" line="31"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2888,17 +2888,17 @@
     <message>
         <location filename="../../../admin/views/unpublish.php" line="33"/>
         <source>Unpublish View</source>
-        <translation>Publiceren view ongedaan maken</translation>
+        <translation>Зняти з публікації перегляд</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="4"/>
         <source>Are you sure you want to convert public view &lt;strong&gt;%1&lt;/strong&gt; to your personal view?</source>
-        <translation>Weet je zeker dat je de openbare view &lt;strong&gt;%1&lt;/strong&gt; wil omzetten naar een persoonlijke view?</translation>
+        <translation>Ви дійсно впевнені, що хочете конвертувати публічний перегляд &lt;strong&gt;%1&lt;/strong&gt; в приватний перегляд?</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="6"/>
         <source>View &lt;strong&gt;%1&lt;/strong&gt; cannot be unpublished.</source>
-        <translation>Publiceren van view &lt;strong&gt;%1&lt;/strong&gt; kan niet ongedaan worden gemaakt.</translation>
+        <translation>Перегляд &lt;strong&gt;%1&lt;/strong&gt; не можна зняти з публікації.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="12"/>
@@ -2908,7 +2908,7 @@
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="14"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2918,119 +2918,119 @@
         <location filename="../../../client/alerts/alert.inc.php" line="89"/>
         <location filename="../../../client/alerts/alert.inc.php" line="94"/>
         <source>All Issues</source>
-        <translation>Alle issues</translation>
+        <translation>Всі завдання</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="100"/>
         <source>Personal Views</source>
-        <translation>Persoonlijke views</translation>
+        <translation>Приватні перегляди</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="103"/>
         <source>Public Views</source>
-        <translation>Openbare views</translation>
+        <translation>Публічні перегляди</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="158"/>
         <source>Add Public Alert</source>
-        <translation>Publieke waarschuwing toevoegen</translation>
+        <translation>Додати публічне сповіщення</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="160"/>
         <source>Add Personal Alert</source>
-        <translation>Persoonlijke waarschuwing toevoegen</translation>
+        <translation>Додати приватне сповіщення</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="163"/>
         <source>Modify Alert</source>
-        <translation>Notificatie aanpassen</translation>
+        <translation>Змінити сповіщення</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="226"/>
         <source>No days selected</source>
-        <translation>Geen dagen geselecteerd</translation>
+        <translation>Дні не обрано</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="238"/>
         <source>No hours selected</source>
-        <translation>Geen uren geselecteerd</translation>
+        <translation>Години не обрано</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="7"/>
         <source>Modify public alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Wijzig openbare waarschuwing &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити публічне сповіщення &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="9"/>
         <source>Create a new public alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Maak een nieuwe openbare waarschuwing voor map &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Створити нове публічне сповіщення для папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="11"/>
         <source>Create a new public alert for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Maak een nieuwe publieke waarschuwing voor type &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Створити нове публічне сповіщення для типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="15"/>
         <source>Modify your personal alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Wijzig jouw persoonlijke waarschuwing &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити ваше приватне сповіщення &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="17"/>
         <source>Create a new personal alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Maak een nieuwe persoonlijke waarschuwing voor map &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Створити нове особисте сповіщення для папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="19"/>
         <source>Create a new personal alert for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Maak een nieuwe persoonlijke waarschuwing voor type &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Створити нове особисте сповіщення для типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="30"/>
         <source>View:</source>
-        <translation>View:</translation>
+        <translation>Перегляд:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="36"/>
         <source>Email Type</source>
-        <translation>Email soort</translation>
+        <translation>Тип електронної пошти</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="38"/>
         <source>Send the following type of emails for this alert:</source>
-        <translation>Stuur volgend type of e-mail voor deze waarschuwing:</translation>
+        <translation>Надсилати наступні типи листів на це сповіщення:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="42"/>
         <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
-        <translation>Waarschuwing: Je zal geen e-mails ontvangen tot je een e-mailadres opgeeft in jouw voorkeuren.</translation>
+        <translation>Увага: Ви не отримуватимете жодних листів, поки не введете адресу електронної пошти в своїх налаштуваннях.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="48"/>
         <source>Summary Schedule</source>
-        <translation>Overzichtrapport rooster</translation>
+        <translation>Короткий розклад</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="51"/>
         <location filename="../../../client/alerts/alert.html.php" line="76"/>
         <source>Select All</source>
-        <translation>Alles selecteren</translation>
+        <translation>Вибрати всі</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="53"/>
         <location filename="../../../client/alerts/alert.html.php" line="78"/>
         <source>Unselect All</source>
-        <translation>Selectie ongedaan maken</translation>
+        <translation>Скасувати вибір</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="55"/>
         <source>Send summary emails on the following days:</source>
-        <translation>Stuur overzicht e-mails op volgende dagen:</translation>
+        <translation>Надсилати листи зі зведеннями в наступні дні:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="81"/>
         <source>Send summary emails at the following hours:</source>
-        <translation>Stuur overzicht e-mails op volgende uren:</translation>
+        <translation>Надсилати листи зі зведеннями в наступні години:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="99"/>
@@ -3040,17 +3040,17 @@
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="100"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="105"/>
         <source>There are no more available views to use.</source>
-        <translation>Er zijn geen andere views beschikbaar.</translation>
+        <translation>Немає більше доступних переглядів.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="108"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Закрити</translation>
     </message>
 </context>
 <context>
@@ -3058,22 +3058,22 @@
     <message>
         <location filename="../../../client/alerts/delete.php" line="43"/>
         <source>Delete Alert</source>
-        <translation>Notificatie verwijderen</translation>
+        <translation>Видалити сповіщення</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.php" line="56"/>
         <source>All Issues</source>
-        <translation>Alle issues</translation>
+        <translation>Всі завдання</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="4"/>
         <source>Are you sure you want to delete public alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Ben je zeker dat je de publieke waarschuwing &lt;strong&gt;%1&lt;/strong&gt; wil verwijderen?</translation>
+        <translation>Ви дійсно хочете видалити публічне сповіщення &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="6"/>
         <source>Are you sure you want to delete your personal alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Ben je zeker dat je jouw persoonlijke waarschuwing &lt;strong&gt;%1&lt;/strong&gt; wil verwijderen?</translation>
+        <translation>Ви дійсно хочете видалити ваше приватне сповіщення &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="12"/>
@@ -3083,7 +3083,7 @@
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -3091,22 +3091,22 @@
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="39"/>
         <source>None</source>
-        <translation>Geen</translation>
+        <translation>Жоден</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="40"/>
         <source>Immediate notifications</source>
-        <translation>Onmiddelijke notificaties</translation>
+        <translation>Негайне повідомлення</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="41"/>
         <source>Summary of notifications</source>
-        <translation>Samenvating van de notificaties</translation>
+        <translation>Резюме повідомлень</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="42"/>
         <source>Summary reports</source>
-        <translation>Samenvattend rapport</translation>
+        <translation>Підсумковий список доповідей</translation>
     </message>
 </context>
 <context>
@@ -3114,92 +3114,92 @@
     <message>
         <location filename="../../../client/alerts/index.php" line="50"/>
         <source>Manage Alerts</source>
-        <translation>Notificaties beheren</translation>
+        <translation>Управління сповіщеннями</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="95"/>
         <source>All Issues</source>
-        <translation>Alle issues</translation>
+        <translation>Всі завдання</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="122"/>
         <source>Add Alert</source>
-        <translation>Notificatie toevoegen</translation>
+        <translation>Додати сповіщення</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="124"/>
         <source>Add Public Alert</source>
-        <translation>Publieke waarschuwing toevoegen</translation>
+        <translation>Додати публічне сповіщення</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="126"/>
         <source>Modify Alert</source>
-        <translation>Notificatie aanpassen</translation>
+        <translation>Змінити сповіщення</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="127"/>
         <source>Delete Alert</source>
-        <translation>Notificatie verwijderen</translation>
+        <translation>Видалити сповіщення</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="4"/>
         <source>Edit alert settings for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Notificatie instellingen bewerken voor folder &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити параметри сповіщень для папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="6"/>
         <source>Edit alert settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Bewerk waarschuwingsinstellingen voor type &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити параметри сповіщень для типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="19"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="20"/>
         <source>Total</source>
-        <translation>Totaal</translation>
+        <translation>Всього</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="21"/>
         <source>Unread</source>
-        <translation>Ongelezen</translation>
+        <translation>Непрочитаний</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="22"/>
         <source>Modified</source>
-        <translation>Aangepast</translation>
+        <translation>Змінений</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="24"/>
         <source>Email Type</source>
-        <translation>Email soort</translation>
+        <translation>Тип електронної пошти</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="26"/>
         <source>Is Public</source>
-        <translation>Openbaar</translation>
+        <translation>Публічний</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="56"/>
         <source>Yes</source>
-        <translation>Ja</translation>
+        <translation>Так</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="56"/>
         <source>No</source>
-        <translation>Nee</translation>
+        <translation>Ні</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="68"/>
         <source>This folder has no alerts.</source>
-        <translation>Deze folder heeft geen notificaties.</translation>
+        <translation>Ця папка немає сповіщень.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="70"/>
         <source>This type has no alerts.</source>
-        <translation>Dit type heeft geen waarschuwingen.</translation>
+        <translation>Цей тип не має сповіщень</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="76"/>
@@ -3212,7 +3212,7 @@
     <message>
         <location filename="../../../client/index.php" line="48"/>
         <source>Web Client</source>
-        <translation>Web client</translation>
+        <translation>Веб Клієнт</translation>
     </message>
 </context>
 <context>
@@ -3220,72 +3220,72 @@
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="96"/>
         <source>Only Comments</source>
-        <translation>Alleen opmerkingen</translation>
+        <translation>Лише коментарі</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="97"/>
         <source>Only Attachments</source>
-        <translation>Alleen bijlagen</translation>
+        <translation>Лише вкладення</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="98"/>
         <source>Comments &amp; Attachments</source>
-        <translation>Opmerkingen &amp; bijlagen</translation>
+        <translation>Коментарі і вкладення</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="168"/>
         <source>Edit Attributes</source>
-        <translation>Attributen bewerken</translation>
+        <translation>Редагувати атрибути</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="169"/>
         <source>Add Comment</source>
-        <translation>Opmerking toevoegen</translation>
+        <translation>Додати коментар</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="170"/>
         <source>Add Attachment</source>
-        <translation>Bijlage toevoegen</translation>
+        <translation>Додати вкладення</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="172"/>
         <source>Add Description</source>
-        <translation>Omschrijving toevoegen</translation>
+        <translation>Додати опис</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="173"/>
         <source>Clone Issue</source>
-        <translation>Issue kopi&amp;euml;ren</translation>
+        <translation>Скопіювати завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="175"/>
         <source>Move Issue</source>
-        <translation>Issue verplaatsen</translation>
+        <translation>Перемістити завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="176"/>
         <source>Delete Issue</source>
-        <translation>Issue verwijderen</translation>
+        <translation>Видалити завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="179"/>
         <source>Mark As Unread</source>
-        <translation>Markeren als ongelezen</translation>
+        <translation>Позначити як  непрочитане</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="181"/>
         <source>Mark As Read</source>
-        <translation>markeren als gelezen</translation>
+        <translation>Позначити як  прочитане</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="184"/>
         <source>Unsubscribe</source>
-        <translation>Uitschrijven</translation>
+        <translation>Відписатися</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="186"/>
         <source>Subscribe</source>
-        <translation>Inschrijven</translation>
+        <translation>Підписатися</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="17"/>
@@ -3295,112 +3295,112 @@
     <message>
         <location filename="../../../client/issuedetails.html.php" line="21"/>
         <source>Type:</source>
-        <translation>Soort:</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="95"/>
         <source>All History</source>
-        <translation>Alle historie</translation>
+        <translation>Вся історія</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="65"/>
         <location filename="../../../client/issuedetails.html.php" line="108"/>
         <location filename="../../../client/issuedetails.html.php" line="125"/>
         <source>Edit</source>
-        <translation>Bewerk</translation>
+        <translation>Редагувати</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="66"/>
         <location filename="../../../client/issuedetails.html.php" line="110"/>
         <location filename="../../../client/issuedetails.html.php" line="127"/>
         <source>Delete</source>
-        <translation>Verwijder</translation>
+        <translation>Видалити</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="196"/>
         <location filename="../../../client/issuedetails.html.php" line="197"/>
         <source>Unknown Folder</source>
-        <translation>Onbekende folder</translation>
+        <translation>Невідома папка</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="219"/>
         <source>There are no comments.</source>
-        <translation>Er zijn geen opmerkingen.</translation>
+        <translation>Коментарі відсутні.</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="221"/>
         <source>There are no attachments.</source>
-        <translation>Er zijn geen bijlagen.</translation>
+        <translation>Вкладення відсутні.</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="223"/>
         <source>There are no comments or attachments.</source>
-        <translation>Er zijn geen opmerkingen en bijlagen.</translation>
+        <translation>Коментарі та вкладення відсутні.</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="85"/>
         <source>Issue History</source>
-        <translation>Issue historie</translation>
+        <translation>Історія завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="151"/>
         <location filename="../../../client/issuedetails.html.php" line="154"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="157"/>
         <location filename="../../../client/issuedetails.html.php" line="158"/>
         <source>empty</source>
-        <translation>leeg</translation>
+        <translation>порожній</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="102"/>
         <source>Comment %1</source>
-        <translation>Opmerking %1</translation>
+        <translation>Коментар %1</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="25"/>
         <source>Location:</source>
-        <translation>Locatie:</translation>
+        <translation>Розташування:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="29"/>
         <source>Created:</source>
-        <translation>Aangemaakt:</translation>
+        <translation>Створений:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="33"/>
         <source>Last Modified:</source>
-        <translation>Laatste aanpassing:</translation>
+        <translation>Востаннє модифікований:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="60"/>
         <location filename="../../../client/issuedetails.html.php" line="100"/>
         <location filename="../../../client/issuedetails.html.php" line="120"/>
         <source>Last Edited:</source>
-        <translation>Laatste wijziging:</translation>
+        <translation>Востаннє редагований:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="62"/>
         <location filename="../../../client/issuedetails.html.php" line="104"/>
         <source>Reply</source>
-        <translation>Antwoorden</translation>
+        <translation>Відповісти</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="71"/>
         <source>Description</source>
-        <translation>Omschrijving</translation>
+        <translation>Опис</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="122"/>
         <source>Attachment %1</source>
-        <translation>Bijlage %1</translation>
+        <translation>Вкладення %1</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="198"/>
         <source>Issue moved from %1 to %2</source>
-        <translation>Issue van %1 naar %2 verplaatst</translation>
+        <translation>Завдання переміщено з %1 до %2</translation>
     </message>
 </context>
 <context>
@@ -3408,97 +3408,97 @@
     <message>
         <location filename="../../../client/issueslist.inc.php" line="86"/>
         <source>All Issues</source>
-        <translation>Alle issues</translation>
+        <translation>Всі завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="88"/>
         <source>Personal Views</source>
-        <translation>Persoonlijke views</translation>
+        <translation>Приватні перегляди</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="90"/>
         <source>Public Views</source>
-        <translation>Openbare views</translation>
+        <translation>Публічні перегляди</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="231"/>
         <source>Add Issue</source>
-        <translation>Issue toevoegen</translation>
+        <translation>Додати завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="232"/>
         <source>Mark All As Read</source>
-        <translation>Alles markeren als gelezen</translation>
+        <translation>Позначити всі як прочитані</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="233"/>
         <source>Mark All As Unread</source>
-        <translation>Alles markeren als ongelezen</translation>
+        <translation>Позначити всі як непрочитані</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="235"/>
         <source>Manage Alerts</source>
-        <translation>Notificaties beheren</translation>
+        <translation>Управління сповіщеннями</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="236"/>
         <source>Export To CSV</source>
-        <translation>Naar CSV exporteren</translation>
+        <translation>Експорт у CSV</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="243"/>
         <source>Add View</source>
-        <translation>View toevoegen</translation>
+        <translation>Додати перегляд</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="245"/>
         <source>Modify View</source>
-        <translation>View aanpassen</translation>
+        <translation>Редагувати перегляд</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="247"/>
         <source>Clone View</source>
-        <translation>View kopi&amp;euml;ren</translation>
+        <translation>Скопіювати перегляд</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="234"/>
         <source>Manage Views</source>
-        <translation>Views beheren</translation>
+        <translation>Управління переглядами</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="11"/>
         <source>View:</source>
-        <translation>View:</translation>
+        <translation>Перегляд:</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="12"/>
         <source>Go</source>
-        <translation>Kiezen</translation>
+        <translation>Перейти</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="21"/>
         <source>Search</source>
-        <translation>Zoeken</translation>
+        <translation>Пошук</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="81"/>
         <source>There are no issues matching the search criteria.</source>
-        <translation>Er komen geen issues overeen met de zoektermen.</translation>
+        <translation>Немає завдань, що відповідають критеріям пошуку.</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="85"/>
         <source>There are no issues matching the selected view.</source>
-        <translation>Er zijn geen issues binnen de geselecteerde view.</translation>
+        <translation>Немає завдань, що відповідають обраному перегляду.</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="89"/>
         <source>There are no issues of this type.</source>
-        <translation>Er zijn geen issues van dit type.</translation>
+        <translation>Завдання цього типу відсутні.</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="93"/>
         <source>There are no issues in this folder.</source>
-        <translation>Er zijn geen issues in deze folder.</translation>
+        <translation>Ця папка не містить завдань.</translation>
     </message>
 </context>
 <context>
@@ -3506,42 +3506,42 @@
     <message>
         <location filename="../../../client/issues/addattachment.php" line="40"/>
         <source>Add Attachment</source>
-        <translation>Bijlage toevoegen</translation>
+        <translation>Додати вкладення</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="74"/>
         <source>No file uploaded</source>
-        <translation>Geen bestand toegevoegd</translation>
+        <translation>Немає завантажених файлів</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="76"/>
         <source>An error occurred while uploading the file</source>
-        <translation>Bij het toevoegenvan het bestand is een fout opgetreden</translation>
+        <translation>Сталася помилка при завантаженні файлу</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="80"/>
         <source>File too large</source>
-        <translation>bestand is te groot</translation>
+        <translation>Файл занадто великий</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="88"/>
         <source>Invalid file name</source>
-        <translation>Ongeldige bestandsaam</translation>
+        <translation>Невірне ім&apos;я файлу</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="3"/>
         <source>Add an attachment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Voeg een bijlage toe aan issue &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Додати вкладення до завдання &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="7"/>
         <source>File:</source>
-        <translation>Bestand:</translation>
+        <translation>Файл:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="9"/>
         <source>Description:</source>
-        <translation>Omschrijving:</translation>
+        <translation>Опис:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="12"/>
@@ -3551,7 +3551,7 @@
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -3559,52 +3559,52 @@
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="49"/>
         <source>Description</source>
-        <translation>Omschrijving</translation>
+        <translation>Опис</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="55"/>
         <source>Comment %1</source>
-        <translation>Opmerking %1</translation>
+        <translation>Коментар %1</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="67"/>
         <source>Add Comment</source>
-        <translation>Opmerking toevoegen</translation>
+        <translation>Додати коментар</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="84"/>
         <source>Edit Comment</source>
-        <translation>Opmerking bewerken</translation>
+        <translation>Редагувати коментар</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="95"/>
         <source>Plain Text</source>
-        <translation>Platte tekst</translation>
+        <translation>Тільки текст</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="96"/>
         <source>Text with Markup</source>
-        <translation>Tekst met Opmaak</translation>
+        <translation>Текст з розміткою</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="4"/>
         <source>Add comment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Voeg een opmerking toe aan issue &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Додати коментар до завдання &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="6"/>
         <source>Edit comment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Opmerking bewerken &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Редагувати коментар &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="11"/>
         <source>Comment:</source>
-        <translation>Opmerking:</translation>
+        <translation>Коментар:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="15"/>
         <source>Text format:</source>
-        <translation>Tekstopmaak:</translation>
+        <translation>Формат тексту:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="18"/>
@@ -3614,7 +3614,7 @@
     <message>
         <location filename="../../../client/issues/comment.html.php" line="19"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -3622,12 +3622,12 @@
     <message>
         <location filename="../../../client/issues/deleteattachment.php" line="38"/>
         <source>Delete Attachment</source>
-        <translation>Bijlage verwijderen</translation>
+        <translation>Видалити вкладення</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteattachment.html.php" line="3"/>
         <source>Are you sure you want to delete attachment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Weet je zeker dat je deze bijlage wil verwijderen &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Ви дійсно хочете видалити вкладення &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteattachment.html.php" line="8"/>
@@ -3637,7 +3637,7 @@
     <message>
         <location filename="../../../client/issues/deleteattachment.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -3645,12 +3645,12 @@
     <message>
         <location filename="../../../client/issues/deletecomment.php" line="40"/>
         <source>Delete Comment</source>
-        <translation>Opmerking verwijderen</translation>
+        <translation>Видалити коментар</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletecomment.html.php" line="3"/>
         <source>Are you sure you want to delete comment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Weet je zeker dat je deze opmerking wil verwijderen &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Ви дійсно хочете видалити коментар &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletecomment.html.php" line="8"/>
@@ -3660,7 +3660,7 @@
     <message>
         <location filename="../../../client/issues/deletecomment.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -3668,12 +3668,12 @@
     <message>
         <location filename="../../../client/issues/deletedescription.php" line="41"/>
         <source>Delete Description</source>
-        <translation>Verwijder omschrijving</translation>
+        <translation>Видалити опис</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletedescription.html.php" line="3"/>
         <source>Are you sure you want to delete description for issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Ben je zeker dat je de omschrijving voor issue &lt;strong&gt;%1&lt;/strong&gt; wil verwijderen?</translation>
+        <translation>Ви дійсно хочете видалити опис завдання &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletedescription.html.php" line="8"/>
@@ -3683,7 +3683,7 @@
     <message>
         <location filename="../../../client/issues/deletedescription.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -3691,17 +3691,17 @@
     <message>
         <location filename="../../../client/issues/deleteissue.php" line="37"/>
         <source>Delete Issue</source>
-        <translation>Issue verwijderen</translation>
+        <translation>Видалити завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="3"/>
         <source>Are you sure you want to delete issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Weet je zeker dat je dit issue wil verwijderen: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Ви дійсно хочете видалити завдання &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="5"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; The entire issue history will be permanently deleted.</source>
-        <translation>&lt;strong&gt;LET OP:&lt;/strong&gt; De hele issue geschiedenis zal definitief verwijderd worden.</translation>
+        <translation>&lt;strong&gt;Увага:&lt;/strong&gt; Вся історія цього завдання буде остаточно видалена.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="10"/>
@@ -3711,7 +3711,7 @@
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -3719,42 +3719,42 @@
     <message>
         <location filename="../../../client/issues/description.inc.php" line="53"/>
         <source>Add Description</source>
-        <translation>Omschrijving toevoegen</translation>
+        <translation>Додати опис</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.inc.php" line="64"/>
         <source>Edit Description</source>
-        <translation>Bewerk omschrijving</translation>
+        <translation>Редагувати опис</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.inc.php" line="75"/>
         <source>Plain Text</source>
-        <translation>Platte tekst</translation>
+        <translation>Тільки текст</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.inc.php" line="76"/>
         <source>Text with Markup</source>
-        <translation>Tekst met opmaak</translation>
+        <translation>Текст з розміткою</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="4"/>
         <source>Add description to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Voeg omschrijving toe aan issue &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Додати опис до завдання &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="6"/>
         <source>Edit description of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Bewerk omschrijving van issue &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Редагувати опис завдання &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="11"/>
         <source>Description:</source>
-        <translation>Omschrijving:</translation>
+        <translation>Опис:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="15"/>
         <source>Text format:</source>
-        <translation>Tekstopmaak:</translation>
+        <translation>Формат тексту:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="18"/>
@@ -3764,7 +3764,7 @@
     <message>
         <location filename="../../../client/issues/description.html.php" line="19"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -3772,27 +3772,27 @@
     <message>
         <location filename="../../../client/issues/editattachment.php" line="40"/>
         <source>Edit Attachment</source>
-        <translation>Bijlage bewerken</translation>
+        <translation>Редагувати вкладення</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.php" line="59"/>
         <source>Invalid file name</source>
-        <translation>Ongeldige bestandsnaam</translation>
+        <translation>Невірне ім&apos;я файлу</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="3"/>
         <source>Edit attachment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Bijlage &lt;strong&gt;%1&lt;/strong&gt; bewerken.</translation>
+        <translation>Редагувати вкладення &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="9"/>
         <source>Description:</source>
-        <translation>Omschrijving:</translation>
+        <translation>Опис:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="12"/>
@@ -3802,7 +3802,7 @@
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -3810,27 +3810,27 @@
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="45"/>
         <source>Export To CSV</source>
-        <translation>Naar CSV exporteren</translation>
+        <translation>Експорт у CSV</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="57"/>
         <source>Table with visible columns only</source>
-        <translation>Alleen tabellen met zichtbare kolommen</translation>
+        <translation>Таблиця тільки з видимими колонками</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="58"/>
         <source>Table with all system and user columns</source>
-        <translation>Tabel met alle systeem- en gebruikerskolommen</translation>
+        <translation>Таблиця з усіма системними та користувацькими колонками</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="73"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Закрити</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.html.php" line="3"/>
         <source>Export list of issues to CSV file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Експортувати список завдань у CSV файл</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.html.php" line="10"/>
@@ -3840,7 +3840,7 @@
     <message>
         <location filename="../../../client/issues/exportcsv.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -3848,77 +3848,77 @@
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="54"/>
         <source>Edit Attributes</source>
-        <translation>Attributen bewerken</translation>
+        <translation>Редагувати атрибути</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="106"/>
         <source>Clone Issue</source>
-        <translation>Issue kopi&amp;euml;ren</translation>
+        <translation>Скопіювати завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="78"/>
         <source>Add Issue</source>
-        <translation>Issue toevoegen</translation>
+        <translation>Додати завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="146"/>
         <source>Please Select</source>
-        <translation>Selecteer</translation>
+        <translation>Будь ласка оберіть</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="167"/>
         <source>Plain Text</source>
-        <translation>Platte tekst</translation>
+        <translation>Тільки текст</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="168"/>
         <source>Text with Markup</source>
-        <translation>Tekst met opmaak</translation>
+        <translation>Текст з розміткою</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="331"/>
         <source>No folder selected.</source>
-        <translation>Geen map geselecteerd</translation>
+        <translation>Папку не обрано.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Een aantal waarden die je hebt ingevuld kloppen niet.</translation>
+        <translation>Деякі величини введені некоректно.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="10"/>
         <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in the selected folder.</source>
-        <translation>Kopieer issue &lt;strong&gt;%1&lt;/strong&gt; als nieuw issue in de geselecteerde map.</translation>
+        <translation>Скопіювати завдання &lt;strong&gt;%1&lt;/strong&gt; як нове завдання у виділеній папці.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="12"/>
         <source>Create a new issue in folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Een nieuw issue aanmaken in folder &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Створити нове завдання в папці &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="14"/>
         <source>Edit attributes of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Attributen bewerken van issue &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Редагувати атрибути завдання &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="16"/>
         <source>Create a new issue in the selected folder.</source>
-        <translation>Maak een nieuw issue in geselecteerde map.</translation>
+        <translation>Створити нове завдання у виділеній папці.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="23"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="27"/>
         <source>Folder:</source>
-        <translation>Folder:</translation>
+        <translation>Папка:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="33"/>
         <source>Attributes</source>
-        <translation>Attributen</translation>
+        <translation>Атрибути</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="37"/>
@@ -3928,12 +3928,12 @@
     <message>
         <location filename="../../../client/issues/issue.html.php" line="51"/>
         <source>Description:</source>
-        <translation>Omschrijving:</translation>
+        <translation>Опис:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="55"/>
         <source>Text format:</source>
-        <translation>Tekstopmaak:</translation>
+        <translation>Формат тексту:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="59"/>
@@ -3943,22 +3943,22 @@
     <message>
         <location filename="../../../client/issues/issue.html.php" line="60"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="66"/>
         <source>There are no available folders of this type.</source>
-        <translation>Er zijn geen mappen van dit type beschikbaar.</translation>
+        <translation>Немає доступних папок цього типу.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="68"/>
         <source>There are no available project members to assign to the issue.</source>
-        <translation>Er zijn geen projectleden beschikbaar om aan het issue toe te wijzen.</translation>
+        <translation>Немає доступних учасників проекту, щоб призначити їм завдання.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="72"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Закрити</translation>
     </message>
 </context>
 <context>
@@ -3966,32 +3966,32 @@
     <message>
         <location filename="../../../client/issues/markall.php" line="50"/>
         <source>Mark All As Read</source>
-        <translation>Alles markeren als gelezen</translation>
+        <translation>Відзначити все як прочитане</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.php" line="52"/>
         <source>Mark All As Unread</source>
-        <translation>Alles markeren als ongelezen</translation>
+        <translation>Відзначити все як не прочитане</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="5"/>
         <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>Weet je zeker dat je alle issues in de folder &lt;strong&gt;%1&lt;/strong&gt; wil markeren  als gelezen?</translation>
+        <translation>Ви дійсно хочете  позначити всі завдання в папці &lt;strong&gt;%1&lt;/strong&gt; як прочитані?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="7"/>
         <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>Weet je zeker dat je alle issues in de folder &lt;strong&gt;%1&lt;/strong&gt; wil markeren als ongelezen ?</translation>
+        <translation>Ви дійсно хочете  позначити всі завдання в папці &lt;strong&gt;%1&lt;/strong&gt; як не прочитані?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="11"/>
         <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>Ben je zeker dat je alle issues van het type &lt;strong&gt;%1&lt;/strong&gt; wil markeren als gelezen?</translation>
+        <translation>Ви дійсно хочете відмітити всі завдання типу &lt;strong&gt;%1&lt;/strong&gt; як прочитані?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="13"/>
         <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>Ben je zeker dat je alle issues van het type &lt;strong&gt;%1&lt;/strong&gt; wil markeren als ongelezen?</translation>
+        <translation>Ви дійсно хочете відмітити всі завдання типу &lt;strong&gt;%1&lt;/strong&gt; як непрочитані?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="20"/>
@@ -4001,7 +4001,7 @@
     <message>
         <location filename="../../../client/issues/markall.html.php" line="21"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4009,17 +4009,17 @@
     <message>
         <location filename="../../../client/issues/moveissue.php" line="69"/>
         <source>Move Issue</source>
-        <translation>Issue verplaatsen</translation>
+        <translation>Перемістити завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="3"/>
         <source>Move issue &lt;strong&gt;%1&lt;/strong&gt; to another folder of the same type.</source>
-        <translation>Verplaats issue &lt;strong&gt;%1&lt;/strong&gt; naar een andere folder van hetzelfde soort.</translation>
+        <translation>Перемістити завдання &lt;strong&gt;%1&lt;/strong&gt; до іншої папки того самого типу.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="9"/>
         <source>Folder:</source>
-        <translation>Folder:</translation>
+        <translation>Папка:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="12"/>
@@ -4030,12 +4030,12 @@
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="18"/>
         <source>There are no available destination folders.</source>
-        <translation>Er zijn geen bestemming folders beschikbaar.</translation>
+        <translation>Немає доступних папок призначення.</translation>
     </message>
 </context>
 <context>
@@ -4043,12 +4043,12 @@
     <message>
         <location filename="../../../client/issues/preview.php" line="53"/>
         <source>Error: %1.</source>
-        <translation>Fout: %1.</translation>
+        <translation>Помилка: %1.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/preview.php" line="55"/>
         <source>An unexpected error occured while processing the request.</source>
-        <translation>Er is een onverwachte fout opgeterden tijdens het uitvoeren vanhet verzoek.</translation>
+        <translation>Відбулася непередбачена помилка при обробці запиту.</translation>
     </message>
 </context>
 <context>
@@ -4056,22 +4056,22 @@
     <message>
         <location filename="../../../client/issues/subscribe.php" line="37"/>
         <source>Subscribe To Issue</source>
-        <translation>Inschrijven op issue</translation>
+        <translation>Підписатися на завдання</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="3"/>
         <source>You are about to subscribe to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Je gaat inschrijven voor het issue &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Ви збираєтеся підписатися на завдання &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="5"/>
         <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
-        <translation>Je zal een e-mailnotificatie ontvangen wanneer iemand anders dit issue wijzigt, een opmerking of bijlage toevoegt.</translation>
+        <translation>Ви будете отримувати повідомлення на електронну пошту, коли хтось інший буде редагувати це завдання, коментувати чи додавати вкладення.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="8"/>
         <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
-        <translation>Waarschuwing: Je zal geen e-mails ontvangen tot je een e-mailadres opgeeft in jouw voorkeuren.</translation>
+        <translation>Увага: Ви не отримуватимете жодних листів, поки не введете адресу електронної пошти в своїх налаштуваннях.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="14"/>
@@ -4081,7 +4081,7 @@
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4089,17 +4089,17 @@
     <message>
         <location filename="../../../client/issues/unsubscribe.php" line="37"/>
         <source>Unsubscribe From Issue</source>
-        <translation>Uitschrijven van issue</translation>
+        <translation>Відписатися від завдання.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="3"/>
         <source>You are about to unsubscribe from issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Je gaat uitschrijven van het issue &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Ви збираєтеся відписатися на завдання &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="5"/>
         <source>You will no longer receive email notifications for this issue.</source>
-        <translation>Je zal niet langer e-mail notificaties ontvangen van dit issue.</translation>
+        <translation>Ви більше не будете отримувати повідомлень на електронну пошту стосовно цього завдання.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="10"/>
@@ -4109,7 +4109,7 @@
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4117,27 +4117,27 @@
     <message>
         <location filename="../../../client/project.inc.php" line="59"/>
         <source>Add Description</source>
-        <translation>Omschrijving toevoegen</translation>
+        <translation>Додати опис</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="12"/>
         <source>Last Edited:</source>
-        <translation>Laatste wijziging:</translation>
+        <translation>Востаннє редагований:</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="14"/>
         <source>Edit</source>
-        <translation>Bewerk</translation>
+        <translation>Редагувати</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="15"/>
         <source>Delete</source>
-        <translation>Verwijder</translation>
+        <translation>Видалити</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="20"/>
         <source>Description</source>
-        <translation>Omschrijving</translation>
+        <translation>Опис</translation>
     </message>
 </context>
 <context>
@@ -4145,32 +4145,32 @@
     <message>
         <location filename="../../../client/projectstree.html.php" line="7"/>
         <source>Projects</source>
-        <translation>Projecten</translation>
+        <translation>Проекти</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="13"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="14"/>
         <source>Type</source>
-        <translation>Soort</translation>
+        <translation>Тип</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="23"/>
         <source>All Projects</source>
-        <translation>Alle projecten</translation>
+        <translation>Всі проекти</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="79"/>
         <source>There are no projects.</source>
-        <translation>Er zijn geen projecten.</translation>
+        <translation>Немає проектів.</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.inc.php" line="103"/>
         <source>Manage Projects</source>
-        <translation>Projecten beheren</translation>
+        <translation>Управління проектами</translation>
     </message>
 </context>
 <context>
@@ -4178,22 +4178,22 @@
     <message>
         <location filename="../../../client/projects/access.php" line="37"/>
         <source>User Access</source>
-        <translation>Gebruikerstoegang</translation>
+        <translation>Доступ користувача</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.php" line="56"/>
         <source>Regular member</source>
-        <translation>Normaal lid</translation>
+        <translation>Звичайний учасник</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.php" line="57"/>
         <source>Project administrator</source>
-        <translation>Project beheerder</translation>
+        <translation>Адміністратор проекту</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="4"/>
         <source>Change access to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Wijzig toegang tot project &lt;strong&gt;%1&lt;/strong&gt; voor gebruiker &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <translation>Змінити права доступу користувача &lt;strong&gt;%2&lt;/strong&gt; до проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="11"/>
@@ -4203,7 +4203,7 @@
     <message>
         <location filename="../../../client/projects/access.html.php" line="12"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4211,22 +4211,22 @@
     <message>
         <location filename="../../../client/projects/addfolder.php" line="57"/>
         <source>Add Folder</source>
-        <translation>Folder toevoegen</translation>
+        <translation>Додати папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="3"/>
         <source>Create a new folder in project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Een nieuwe folder aanmaken in project &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Створіть нову папку в проекті &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="9"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="11"/>
         <source>Type:</source>
-        <translation>Soort:</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="14"/>
@@ -4236,17 +4236,17 @@
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="20"/>
         <source>There are no available issue types to use.</source>
-        <translation>Er zijn geen issue soorten beschikbaar om te gebruiken.</translation>
+        <translation>Немає доступних типів завдань для використання.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="23"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Закрити</translation>
     </message>
 </context>
 <context>
@@ -4254,42 +4254,42 @@
     <message>
         <location filename="../../../client/projects/addmembers.php" line="59"/>
         <source>Add Members</source>
-        <translation>Leden toevoegen</translation>
+        <translation>Додати учасників</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.php" line="62"/>
         <source>Regular member</source>
-        <translation>Normaal lid</translation>
+        <translation>Звичайний учасник</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.php" line="63"/>
         <source>Project administrator</source>
-        <translation>Project beheerder</translation>
+        <translation>Адміністратор проекту</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="6"/>
         <source>Select All</source>
-        <translation>Alles selecteren</translation>
+        <translation>Вибрати всі</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>Selectie ongedaan maken</translation>
+        <translation>Скасувати вибір</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="13"/>
         <source>Add new members to project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Voeg een nieuwe gebruiker toe aan het project &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Додати нових учасників проекту &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="20"/>
         <source>Users</source>
-        <translation>Gebruikers</translation>
+        <translation>Користувачі</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="36"/>
         <source>Access</source>
-        <translation>Toegang</translation>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="41"/>
@@ -4299,17 +4299,17 @@
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="42"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="47"/>
         <source>There are no more available users to add.</source>
-        <translation>Er zijn geen gebruikers meer beschikbaar om toe voegen.</translation>
+        <translation>Нема більше доступних користувачів щоб додати.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="50"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Закрити</translation>
     </message>
 </context>
 <context>
@@ -4317,32 +4317,32 @@
     <message>
         <location filename="../../../client/projects/addproject.php" line="42"/>
         <source>Add Project</source>
-        <translation>Project toevoegen</translation>
+        <translation>Додати проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.php" line="48"/>
         <source>Plain Text</source>
-        <translation>Platte tekst</translation>
+        <translation>Тільки текст</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.php" line="49"/>
         <source>Text with Markup</source>
-        <translation>Tekst met Opmaak</translation>
+        <translation>Текст з розміткою</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="5"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="7"/>
         <source>Description:</source>
-        <translation>Omschrijving:</translation>
+        <translation>Опис:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="11"/>
         <source>Text format:</source>
-        <translation>Tekstopmaak:</translation>
+        <translation>Формат тексту:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="14"/>
@@ -4352,7 +4352,7 @@
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4360,12 +4360,12 @@
     <message>
         <location filename="../../../client/projects/deletedescription.php" line="41"/>
         <source>Delete Description</source>
-        <translation>Verwijder omschrijving</translation>
+        <translation>Видалити опис</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="3"/>
         <source>Are you sure you want to delete description for project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Ben je zeker dat je de omschrijving van project  &lt;strong&gt;%1&lt;/strong&gt; wil verwijderen?</translation>
+        <translation>Ви дійсно хочете видалити опис проекту &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="8"/>
@@ -4375,7 +4375,7 @@
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4383,17 +4383,17 @@
     <message>
         <location filename="../../../client/projects/deletefolder.php" line="37"/>
         <source>Delete Folder</source>
-        <translation>Folder verwijderen</translation>
+        <translation>Видалити папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="3"/>
         <source>Are you sure you want to delete folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Weet je zeker dat je deze folder wil verwijderen: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Ви дійсно хочете видалити папку &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All issues in this folder will be permanently deleted.</source>
-        <translation>&lt;strong&gt;LET OP:&lt;/strong&gt; Alle issues in deze folder zullen definitief verwijderd worden.</translation>
+        <translation>&lt;strong&gt;Увага:&lt;/strong&gt; Всі завдання в цій папці будуть остаточно видалені.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="12"/>
@@ -4403,7 +4403,7 @@
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4411,17 +4411,17 @@
     <message>
         <location filename="../../../client/projects/deleteproject.php" line="40"/>
         <source>Delete Project</source>
-        <translation>Project verwijderen</translation>
+        <translation>Видалити проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="3"/>
         <source>Are you sure you want to delete project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Weet je zeker dat je dit project wil verwijderen: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Ви дійсно хочете видалити проект &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues in this project will be permanently deleted.</source>
-        <translation>&lt;strong&gt;LET OP:&lt;/strong&gt; Alle folders en issues in dit project zullen definitief verwijderd worden.</translation>
+        <translation>&lt;strong&gt;Увага:&lt;/strong&gt; Всі папки i завдання в цьому проекті будуть остаточно видалені.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="12"/>
@@ -4431,7 +4431,7 @@
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4439,42 +4439,42 @@
     <message>
         <location filename="../../../client/projects/description.inc.php" line="53"/>
         <source>Add Description</source>
-        <translation>Omschrijving toevoegen</translation>
+        <translation>Додати опис</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="64"/>
         <source>Edit Description</source>
-        <translation>Bewerk omschrijving</translation>
+        <translation>Редагувати опис</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="75"/>
         <source>Plain Text</source>
-        <translation>Platte tekst</translation>
+        <translation>Тільки текст</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="76"/>
         <source>Text with Markup</source>
-        <translation>Tekst met opmaak</translation>
+        <translation>Текст з розміткою</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="4"/>
         <source>Add description to project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Voeg omschrijving toe aan project &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Додати опис до проекту &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="6"/>
         <source>Edit description of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Bewerk omschrijving van project &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Редагувати опис до проекту &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="11"/>
         <source>Description:</source>
-        <translation>Omschrijving:</translation>
+        <translation>Опис:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="15"/>
         <source>Text format:</source>
-        <translation>Tekstopmaak:</translation>
+        <translation>Формат тексту:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="18"/>
@@ -4484,7 +4484,7 @@
     <message>
         <location filename="../../../client/projects/description.html.php" line="19"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4492,82 +4492,82 @@
     <message>
         <location filename="../../../client/projects/index.php" line="33"/>
         <source>Manage Projects</source>
-        <translation>Projecten beheren</translation>
+        <translation>Управління проектами</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="56"/>
         <source>Regular project</source>
-        <translation>Normaal project</translation>
+        <translation>Приватний проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="57"/>
         <source>Public project</source>
-        <translation>Openbaar project</translation>
+        <translation>Публічний проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="92"/>
         <source>Add Project</source>
-        <translation>Project toevoegen</translation>
+        <translation>Додати проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="93"/>
         <source>Add Folder</source>
-        <translation>Folder toevoegen</translation>
+        <translation>Додати папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="95"/>
         <source>Rename Project</source>
-        <translation>Project hernoemen</translation>
+        <translation>Переіменувати проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="96"/>
         <source>Delete Project</source>
-        <translation>Project verwijderen</translation>
+        <translation>Видалити проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="98"/>
         <source>Rename Folder</source>
-        <translation>Folder hernoemen</translation>
+        <translation>Переіменувати папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="99"/>
         <source>Move Folder</source>
-        <translation>Folder verplaatsen</translation>
+        <translation>Перемістити папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="100"/>
         <source>Delete Folder</source>
-        <translation>Folder verwijderen</translation>
+        <translation>Видалити папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="101"/>
         <source>Manage Permissions</source>
-        <translation>Beheer rechten</translation>
+        <translation>Керування дозволами</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="13"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="14"/>
         <source>Type</source>
-        <translation>Soort</translation>
+        <translation>Тип</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="15"/>
         <source>Access</source>
-        <translation>Toegang</translation>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="55"/>
         <source>There are no projects.</source>
-        <translation>Er zijn geen projecten.</translation>
+        <translation>Немає проектів.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="59"/>
         <source>There are no projects that you can manage.</source>
-        <translation>Er zijn geen projecten die jij kan beheren.</translation>
+        <translation>Немає проектів, котрими ви можете керувати.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="64"/>
@@ -4580,37 +4580,37 @@
     <message>
         <location filename="../../../client/projects/members.php" line="94"/>
         <source>Add Members</source>
-        <translation>Leden toevoegen</translation>
+        <translation>Додати учасників</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="26"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="3"/>
         <source>Edit permissions of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Bewerk rechten van project &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Редагувати дозволи проекту &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="8"/>
         <source>Global Access</source>
-        <translation>Algemene toegang</translation>
+        <translation>Глобальний доступ</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="11"/>
         <source>Change</source>
-        <translation>Wijzigen</translation>
+        <translation>Змінити</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="27"/>
         <source>Access</source>
-        <translation>Toegang</translation>
+        <translation>Доступ</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="53"/>
         <source>This project has no members.</source>
-        <translation>Dit project heeft geen leden.</translation>
+        <translation>Цей проект немає учасників.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="58"/>
@@ -4620,37 +4620,37 @@
     <message>
         <location filename="../../../client/projects/members.php" line="37"/>
         <source>Manage Permissions</source>
-        <translation>Beheer rechten</translation>
+        <translation>Керування дозволами</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="60"/>
         <source>Regular project</source>
-        <translation>Normaal project</translation>
+        <translation>Приватний проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="61"/>
         <source>Public project</source>
-        <translation>Publiek project</translation>
+        <translation>Публічний проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="67"/>
         <source>Regular member</source>
-        <translation>Normale lid</translation>
+        <translation>Звичайний учасник</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="68"/>
         <source>Project administrator</source>
-        <translation>Project beheerder</translation>
+        <translation>Адміністратор проекту</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="95"/>
         <source>Change Access</source>
-        <translation>Bevoegdheden aanpassen</translation>
+        <translation>Змінити права доступу</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="96"/>
         <source>Remove Member</source>
-        <translation>Lid verwijderen</translation>
+        <translation>Видалити учасника</translation>
     </message>
 </context>
 <context>
@@ -4658,17 +4658,17 @@
     <message>
         <location filename="../../../client/projects/movefolder.php" line="59"/>
         <source>Move Folder</source>
-        <translation>Folder verplaatsen</translation>
+        <translation>Перемістити папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="3"/>
         <source>Move folder &lt;strong&gt;%1&lt;/strong&gt; to another project.</source>
-        <translation>Verplaats folder &lt;strong&gt;%1&lt;/strong&gt; naar een ander project.</translation>
+        <translation>Перемістити папку &lt;strong&gt;%1&lt;/strong&gt; до іншого проекту.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="9"/>
         <source>Project:</source>
-        <translation>Project:</translation>
+        <translation>Проект:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="12"/>
@@ -4679,12 +4679,12 @@
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="18"/>
         <source>There are no available destination projects.</source>
-        <translation>Er zijn geen bestemming projecten beschikbaar.</translation>
+        <translation>Нема доступних проектів призначення.</translation>
     </message>
 </context>
 <context>
@@ -4692,22 +4692,22 @@
     <message>
         <location filename="../../../client/projects/projectaccess.php" line="40"/>
         <source>Global Access</source>
-        <translation>Algemene Toegang</translation>
+        <translation>Глобальний доступ</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.php" line="49"/>
         <source>Regular project</source>
-        <translation>Normaal project</translation>
+        <translation>Приватний проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.php" line="50"/>
         <source>Public project</source>
-        <translation>Openbaar project</translation>
+        <translation>Публічний проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.html.php" line="3"/>
         <source>Change global access for project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Wijzig algemene toegang voor project &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити глобальний доступ для проекту &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.html.php" line="10"/>
@@ -4717,7 +4717,7 @@
     <message>
         <location filename="../../../client/projects/projectaccess.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4725,12 +4725,12 @@
     <message>
         <location filename="../../../client/projects/removemember.php" line="37"/>
         <source>Remove Member</source>
-        <translation>Lid verwijderen</translation>
+        <translation>Видалити учасника</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="4"/>
         <source>Do you want to remove user &lt;strong&gt;%1&lt;/strong&gt; from project &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>Wil je gebruiker &lt;strong&gt;%1&lt;/strong&gt; verwijderen uit het project &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+        <translation>Чи дійсно ви хочете видалити користувача &lt;strong&gt;%1&lt;/strong&gt; з проекту &lt;strong&gt;%2&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="9"/>
@@ -4740,7 +4740,7 @@
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="10"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4748,17 +4748,17 @@
     <message>
         <location filename="../../../client/projects/renamefolder.php" line="37"/>
         <source>Rename Folder</source>
-        <translation>Folder hernoemen</translation>
+        <translation>Переіменувати папку</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="3"/>
         <source>Enter the new name of folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Vul de nieuwe naam in voor folder &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Введіть нове ім&apos;я папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="10"/>
@@ -4768,7 +4768,7 @@
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4776,17 +4776,17 @@
     <message>
         <location filename="../../../client/projects/renameproject.php" line="40"/>
         <source>Rename Project</source>
-        <translation>Project hernoemen</translation>
+        <translation>Переіменувати проект</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="3"/>
         <source>Enter the new name of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Vul de nieuwe naam in voor project &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Введіть нову назву проекту &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="10"/>
@@ -4796,7 +4796,7 @@
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4804,7 +4804,7 @@
     <message>
         <location filename="../../../client/tools/about.php" line="33"/>
         <source>About WebIssues</source>
-        <translation>Over WebIssues</translation>
+        <translation>Про WebIssues</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="5"/>
@@ -4814,102 +4814,102 @@
     <message>
         <location filename="../../../client/tools/about.html.php" line="7"/>
         <source>Issue tracking and team collaboration system.</source>
-        <translation>Issue tracking en team collaboration systeem.</translation>
+        <translation>Система для відстеження завдань та спільної роботи.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="12"/>
         <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</source>
-        <translation>Dit programma is vrije software: je kunt het herdistribueren en / of wijzigen onder de voorwaarden van de GNU Affero General Public License zoals gepubliceerd door de Free Software Foundation, versie 3 van de Licentie, of (naar keuze) een latere versie.</translation>
+        <translation>Ця програма є вільним програмним забезпеченням; Ви можете поширювати та / або модифікувати його на умовах GNU Affero General Public License  версії 3, опублікованих Фондом вільного програмного забезпечення, або (на Ваш розсуд) будь-якої пізнішої версії ліцензії.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="14"/>
         <source>Copyright &amp;copy; 2006 Michał Męciński</source>
-        <translation>Copyright &amp;copy; 2006 Michał Męciński</translation>
+        <translation>Всі права збережено &amp;copy; 2006 Michał Męciński</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="15"/>
         <source>Copyright &amp;copy; 2007-2014 WebIssues Team</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright &amp;copy; 2007-2014 команда WebIssues</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="18"/>
         <source>Help</source>
-        <translation>Help</translation>
+        <translation>Допомога</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="20"/>
         <source>Open the WebIssues Manual for help.</source>
-        <translation>Open het WebIssues handboek voor hulp.</translation>
+        <translation>Відкрийте посібник WebIssues, щоб отримати допомогу.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="23"/>
         <source>Manual</source>
-        <translation>Handboek</translation>
+        <translation>Посібник</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="29"/>
         <source>Website</source>
-        <translation>Website</translation>
+        <translation>Веб-сайт</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="31"/>
         <source>Visit %1 for more information about WebIssues.</source>
-        <translation>Ga naar %1 voor meer informatie over WebIssues.</translation>
+        <translation>Відвідайте %1 для отримання додаткової інформації про WebIssues.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="36"/>
         <source>Donations</source>
-        <translation>Donaties</translation>
+        <translation>Пожертвування</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="38"/>
         <source>If you like this program, your donation will help us dedicate more time for it, support it and implement new features.</source>
-        <translation>Als dit programma je bevalt, dan zal je donatie ons helpen er meer tijd aan te besteden, het te ondersteunen en nieuwe functies te  implementeren.</translation>
+        <translation>Якщо вам подобається ця програма, ваш внесок допоможе нам присвятити більше часу, щоб просувати і впроваджувати нові функції.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="41"/>
         <source>Donate</source>
-        <translation>Doneer</translation>
+        <translation>Переказ</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="49"/>
         <source>Latest Version</source>
-        <translation>Meest recente versie</translation>
+        <translation>Найновіша версія</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="56"/>
         <source>Your version of WebIssues is up to date.</source>
-        <translation>Jouw versie van WebIssues is up-to-date.</translation>
+        <translation>Ваша версія програми WebIssues є актуальною.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="63"/>
         <source>The latest version of WebIssues is %1.</source>
-        <translation>De meest recente versie van WebIssues is %1.</translation>
+        <translation>Найновішою версією програми WebIssues є %1.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="66"/>
         <source>Release Notes</source>
-        <translation>Release notes</translation>
+        <translation>Інформація</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="67"/>
         <source>Download</source>
-        <translation>Download</translation>
+        <translation>Завантажити</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="75"/>
         <source>Checking for latest version failed.</source>
-        <translation>Controleren op recente versie mislukt.</translation>
+        <translation>Перевірка останньої версії не вдалася.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="82"/>
         <source>Check for latest version of WebIssues.</source>
-        <translation>Controleer of dit de meest recente versie van WebIssues is.</translation>
+        <translation>Перевірити останню версію програми WebIssues.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="85"/>
         <source>Check</source>
-        <translation>Controleer</translation>
+        <translation>Перевірка</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="98"/>
@@ -4922,12 +4922,12 @@
     <message>
         <location filename="../../../client/tools/gotoitem.php" line="33"/>
         <source>Go To Item</source>
-        <translation>Ga naar item</translation>
+        <translation>Перейти до пункту</translation>
     </message>
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="3"/>
         <source>Enter the identifier of an issue, comment or attachment.</source>
-        <translation>Vul het ID in van een issue, opmerking of bijlage.</translation>
+        <translation>Введіть ідентифікатор завдання, коментаря або вкладення.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="7"/>
@@ -4942,7 +4942,7 @@
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -4950,47 +4950,47 @@
     <message>
         <location filename="../../../client/tools/index.php" line="33"/>
         <source>Tools</source>
-        <translation>Tools</translation>
+        <translation>Інструменти</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="4"/>
         <source>Go To Item</source>
-        <translation>Ga naar item</translation>
+        <translation>Перейти до пункту</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="5"/>
         <source>Go to item with given identifier.</source>
-        <translation>Ga naar een item met een opgegeven ID.</translation>
+        <translation>Перейти до пункту із заданим ідентифікатором.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="7"/>
         <source>Change Password</source>
-        <translation>Wachtwoord aanpassen</translation>
+        <translation>Змінити пароль</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="8"/>
         <source>Change your password.</source>
-        <translation>Aanpassen van je wachtwoord.</translation>
+        <translation>Зміна вашого пароля.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="9"/>
         <source>User Preferences</source>
-        <translation>Gebruikersvoorkeuren</translation>
+        <translation>Налаштування користувача</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="10"/>
         <source>Configure your user preferences.</source>
-        <translation>Instellen van je gebruikersvoorkeuren.</translation>
+        <translation>Змініти налаштування користувача.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="12"/>
         <source>About WebIssues</source>
-        <translation>Over WebIssues</translation>
+        <translation>Про WebIssues</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="13"/>
         <source>Show information about WebIssues.</source>
-        <translation>Toon informatie over WebIssues.</translation>
+        <translation>Показати інформацію про програму WebIssues.</translation>
     </message>
 </context>
 <context>
@@ -4998,37 +4998,37 @@
     <message>
         <location filename="../../../client/views/index.php" line="33"/>
         <source>Manage Views</source>
-        <translation>Views beheren</translation>
+        <translation>Управління переглядами</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="3"/>
         <source>Edit personal view settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Persoonlijke view instellingen  bewerken voor soort &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Редагувати параметри приватних переглядів для типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="15"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="16"/>
         <source>Columns</source>
-        <translation>Kolommen</translation>
+        <translation>Колонки</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="17"/>
         <source>Sort By</source>
-        <translation>Sortering</translation>
+        <translation>Сортувати за</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="18"/>
         <source>Filter</source>
-        <translation>Filter</translation>
+        <translation>Фільтр</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="39"/>
         <source>This type has no personal views.</source>
-        <translation>Dit soort heeft geen persoonlijke views.</translation>
+        <translation>Цей тип немає приватних переглядів.</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="44"/>
@@ -5041,17 +5041,17 @@
     <message>
         <location filename="../../../client/views/publish.php" line="36"/>
         <source>Publish View</source>
-        <translation>View publiceren</translation>
+        <translation>Зробити перегляд публічним</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="4"/>
         <source>Are you sure you want to convert your personal view &lt;strong&gt;%1&lt;/strong&gt; to a public view?</source>
-        <translation>Weet je zeker dat je van je persoonlijke view &lt;strong&gt;%1&lt;/strong&gt; een openbare view wil maken?</translation>
+        <translation>Ви дійсно хочете перетворити ваш приватний перегляд &lt;strong&gt;%1&lt;/strong&gt; на публічний перегляд?</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="6"/>
         <source>View &lt;strong&gt;%1&lt;/strong&gt; cannot be published.</source>
-        <translation>View &lt;strong&gt;%1&lt;/strong&gt; kan niet gepubliceerd worden.</translation>
+        <translation>Перегляд  &lt;strong&gt;%1&lt;/strong&gt; не може бути публічним.</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="12"/>
@@ -5061,7 +5061,7 @@
     <message>
         <location filename="../../../client/views/publish.html.php" line="14"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -5069,58 +5069,58 @@
     <message>
         <location filename="../../breadcrumbs.inc.php" line="98"/>
         <source>General Information</source>
-        <translation>Algemene informatie</translation>
+        <translation>Загальна інформація</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="103"/>
         <source>Event Log</source>
-        <translation>Event log</translation>
+        <translation>Лоґ подій</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="108"/>
         <source>User Accounts</source>
-        <translation>Gebruiker accounts</translation>
+        <translation>Облікові записи користувачів</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="119"/>
         <source>Registration Requests</source>
-        <translation>Registratie verzoeken</translation>
+        <translation>Запити на реєстрацію</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="124"/>
         <source>Issue Types</source>
-        <translation>Soorten issues</translation>
+        <translation>Типи завдань</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="130"/>
         <source>View Settings</source>
-        <translation>View instellingen</translation>
+        <translation>Налаштування переглядів</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="114"/>
         <location filename="../../breadcrumbs.inc.php" line="141"/>
         <source>Manage Permissions</source>
-        <translation>Beheer rechten</translation>
+        <translation>Керування дозволами</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="158"/>
         <source>Manage Views</source>
-        <translation>Views beheren</translation>
+        <translation>Управління переглядами</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="164"/>
         <source>Manage Alerts</source>
-        <translation>Notificaties beheren</translation>
+        <translation>Управління сповіщеннями</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="175"/>
         <source>Tools</source>
-        <translation>Tools</translation>
+        <translation>Інструменти</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="180"/>
         <source>Manage Projects</source>
-        <translation>Projecten beheren</translation>
+        <translation>Управління проектами</translation>
     </message>
 </context>
 <context>
@@ -5128,12 +5128,12 @@
     <message>
         <location filename="../../errors/debug.html.php" line="3"/>
         <source>The following error(s) occured while processing the request:</source>
-        <translation>De volgende fout is/fouten zijn opgetreden tijdens het uitvoeren van de opdracht:</translation>
+        <translation>Наступні помилки, що виникли в ході роботи:</translation>
     </message>
     <message>
         <location filename="../../errors/debug.inc.php" line="33"/>
         <source>Unexpected Error</source>
-        <translation>Onverwachte fout</translation>
+        <translation>Несподівана помилка</translation>
     </message>
 </context>
 <context>
@@ -5141,17 +5141,17 @@
     <message>
         <location filename="../../errors/general.html.php" line="3"/>
         <source>An unexpected error occured while processing the request.</source>
-        <translation>Er is een onverwachte fout opgeterden tijdens het uitvoeren vanhet verzoek.</translation>
+        <translation>Відбулася непередбачена помилка при обробці запиту.</translation>
     </message>
     <message>
         <location filename="../../errors/general.html.php" line="6"/>
         <source>Reason: %1.</source>
-        <translation>Oorzaak: %1.</translation>
+        <translation>Причина: %1.</translation>
     </message>
     <message>
         <location filename="../../errors/general.inc.php" line="33"/>
         <source>Unexpected Error</source>
-        <translation>Onverwachte fout</translation>
+        <translation>Несподівана помилка</translation>
     </message>
 </context>
 <context>
@@ -5159,17 +5159,17 @@
     <message>
         <location filename="../../errors/handle401.php" line="35"/>
         <source>Unauthorized</source>
-        <translation>Niet voldoende rechten</translation>
+        <translation>Помилка авторизації</translation>
     </message>
     <message>
         <location filename="../../errors/handle401.php" line="45"/>
         <source>Unauthorized: %1</source>
-        <translation>Niet voldoende rechten: %1</translation>
+        <translation>Помилка авторизації: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle401.html.php" line="3"/>
         <source>You have no permission to access the requested page.</source>
-        <translation>Je hebt geen toestemming om de gevraagde  pagina te bezoeken.</translation>
+        <translation>У вас немає доступу до цієї сторінки.</translation>
     </message>
 </context>
 <context>
@@ -5177,17 +5177,17 @@
     <message>
         <location filename="../../errors/handle403.php" line="35"/>
         <source>Access Forbidden</source>
-        <translation>Verboden toegang</translation>
+        <translation>Доступ заборонений</translation>
     </message>
     <message>
         <location filename="../../errors/handle403.php" line="45"/>
         <source>Access forbidden: %1</source>
-        <translation>Verboden toegang: %1</translation>
+        <translation>Доступ заборонений: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle403.html.php" line="3"/>
         <source>You have no permission to access the requested page.</source>
-        <translation>Je hebt geen toestemming om de gevraagde  pagina te bezoeken.</translation>
+        <translation>У вас немає доступу до цієї сторінки.</translation>
     </message>
 </context>
 <context>
@@ -5195,17 +5195,17 @@
     <message>
         <location filename="../../errors/handle404.php" line="35"/>
         <source>Page Not Found</source>
-        <translation>Pagina niet gevonden</translation>
+        <translation>Сторінку не знайдено</translation>
     </message>
     <message>
         <location filename="../../errors/handle404.php" line="45"/>
         <source>Page not found: %1</source>
-        <translation>Pagina niet gevonden: %1</translation>
+        <translation>Сторінку не знайдено: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle404.html.php" line="3"/>
         <source>The requested page was not found.</source>
-        <translation>De gevraagde pagina is niet gevonden.</translation>
+        <translation>Запитувана Вами сторінка не була знайдена.</translation>
     </message>
 </context>
 <context>
@@ -5213,52 +5213,52 @@
     <message>
         <location filename="../../errors/setup.inc.php" line="39"/>
         <source>Server Not Configured</source>
-        <translation>Server niet ingesteld</translation>
+        <translation>Сервер не налаштований</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="40"/>
         <source>This WebIssues Server has not been configured yet.</source>
-        <translation>Deze WebIssues Server is nog niet ingesteld.</translation>
+        <translation>WebIssues сервер ще не налаштований.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="41"/>
         <source>Go to the %1 page to configure this server.</source>
-        <translation>Ga naar de %1 pagina om deze server in te stellen.</translation>
+        <translation>Перейдіть на сторінку %1 щоб налаштувати цей сервер.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="42"/>
         <source>Server Configuration</source>
-        <translation>Server instellen</translation>
+        <translation>Конфігурація сервера</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="46"/>
         <source>Wrong Database Version</source>
-        <translation>Verkeerde database versie</translation>
+        <translation>Неправильна версія бази даних</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="48"/>
         <source>Current version of the database is not compatible with this version of WebIssues Server.</source>
-        <translation>huidige versie van de database is niet compatibel met deze versie van WebIssues Server.</translation>
+        <translation>Поточна версія бази даних не сумісна з цією версією сервера WebIssues.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="52"/>
         <source>Database Not Updated</source>
-        <translation>Database niet bijgewerkt</translation>
+        <translation>База даних не оновлена</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="53"/>
         <source>The database of this WebIssues Server has not been updated yet.</source>
-        <translation>De database van deze WebIssues Server is nog niet bijgewerkt.</translation>
+        <translation>База даних цього сервера WebIssues не була оновлена.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="54"/>
         <source>Go to the %1 page to update the database.</source>
-        <translation>Ga naar de %1 pagina om de database bij te werken.</translation>
+        <translation>Перейдіть до сторінки %1 щоб оновити базу даних.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="55"/>
         <source>Server Update</source>
-        <translation>Server bijwerken</translation>
+        <translation>Оновлення сервера</translation>
     </message>
 </context>
 <context>
@@ -5266,7 +5266,7 @@
     <message>
         <location filename="../../fixedblock.inc.php" line="34"/>
         <source>Untitled block</source>
-        <translation>Blok zonder naam</translation>
+        <translation>Блок без назви</translation>
     </message>
 </context>
 <context>
@@ -5274,37 +5274,37 @@
     <message>
         <location filename="../../mail/approve.inc.php" line="37"/>
         <source>WebIssues Server registration approved</source>
-        <translation>WebIssues Server registratie goedgekeurd</translation>
+        <translation>Реєстрацію на сервері WebIssues підтверджено</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="3"/>
         <source>Your registration request on the WebIssues Server was approved by the administrator.</source>
-        <translation>Uw registratieaanvraag op de WebIssues Server werd goedgekeurd door de systeembeheerder.</translation>
+        <translation>Ваш запит на реєстрацію на сервері WebIssues був підтверджений адміністратором.</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="5"/>
         <source>You can now %1 using your login and password.</source>
-        <translation>Je kan nu %1 jouw login en paswoord gebruiken.</translation>
+        <translation>Тепер ви можете %1 використовуючи ваш логін та пароль.</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="5"/>
         <source>log in to the server</source>
-        <translation>Log in op server</translation>
+        <translation>ввійти на сервер</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="8"/>
         <source>User name: %1</source>
-        <translation>Gebruikersnaam: %1</translation>
+        <translation>Ім&apos;я користувача: %1</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="9"/>
         <source>Login: %1</source>
-        <translation>Aanmelden: %1</translation>
+        <translation>Логін: %1</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="10"/>
         <source>Email address: %1</source>
-        <translation>Email adres: %1</translation>
+        <translation>Адреса електронної пошти: %1</translation>
     </message>
 </context>
 <context>
@@ -5312,7 +5312,7 @@
     <message>
         <location filename="../../mail/issuecreated.html.php" line="3"/>
         <source>Your email was successfully registered on the WebIssues Server as the following issue:</source>
-        <translation>Uw e-mail werd succesvol geregistreerd op de WebIssues Server als volgend issue:</translation>
+        <translation>Ваш електронний лист був успішно зареєстрований на сервері WebIssues як наступне завдання:</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="6"/>
@@ -5322,27 +5322,27 @@
     <message>
         <location filename="../../mail/issuecreated.html.php" line="7"/>
         <source>Name: %1</source>
-        <translation>Naam: %1</translation>
+        <translation>Ім&apos;я: %1</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="11"/>
         <source>You can add comments and attachments to this issue by responding to this email. Include %1 in the subject when sending emails regarding this issue.</source>
-        <translation>Je kan opmerkingen en bijlagen toevoegen aan dit issue door deze e-mail te beantwoorden. Vermeldt %1 in het onderwerp wanneer je e-mails met betrekking tot dit issue verstuurd.</translation>
+        <translation>Ви можете коментувати та додавати вкладення до цього завдання відповідаючи на цей електронний лист. Додайте %1 до теми, коли будете надсилати листи стосовно цього завдання.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="14"/>
         <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
-        <translation>Je ontvangt een e-mailnotificatie wanneer iemand dit issue wijzigt, een opmerking of bijlage toevoegt.</translation>
+        <translation>Ви отримаєте повідомлення на електронну пошту, коли хтось інший відредагує це завдання, прокоментує його чи додасть вкладення.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="18"/>
         <source>You can also %1 in the WebIssues Server.</source>
-        <translation>Je kan ook %1 in de WebIssues Server.</translation>
+        <translation>Ви також можете %1 на сервері WebIssues.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="18"/>
         <source>view this issue</source>
-        <translation>Bekijk dit issue</translation>
+        <translation>переглянути це завдання</translation>
     </message>
 </context>
 <context>
@@ -5350,12 +5350,12 @@
     <message>
         <location filename="../../mail/notification.inc.php" line="73"/>
         <source>All Issues</source>
-        <translation>Alle issues</translation>
+        <translation>Всі завдання</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="52"/>
         <source>Properties</source>
-        <translation>Eigenschappen</translation>
+        <translation>Властивості</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="56"/>
@@ -5365,65 +5365,65 @@
     <message>
         <location filename="../../mail/notification.html.php" line="60"/>
         <source>Type:</source>
-        <translation>Soort:</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="64"/>
         <source>Location:</source>
-        <translation>Locatie:</translation>
+        <translation>Розташування:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="68"/>
         <source>Created:</source>
-        <translation>Aangemaakt:</translation>
+        <translation>Створений:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="72"/>
         <source>Last Modified:</source>
-        <translation>Laatste aanpassing:</translation>
+        <translation>Востаннє модифікований:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="100"/>
         <source>Description</source>
-        <translation>Omschrijving</translation>
+        <translation>Опис</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="185"/>
         <source>Issue moved from %1 to %2</source>
-        <translation>Issue van %1 naar %2 verplaatst</translation>
+        <translation>Завдання переміщено з %1 до %2</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="81"/>
         <source>Attributes</source>
-        <translation>Attributen</translation>
+        <translation>Атрибути</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="113"/>
         <source>Issue History</source>
-        <translation>Issue historie</translation>
+        <translation>Історія завдання</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="138"/>
         <location filename="../../mail/notification.html.php" line="141"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="144"/>
         <location filename="../../mail/notification.html.php" line="145"/>
         <source>empty</source>
-        <translation>leeg</translation>
+        <translation>порожній</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="183"/>
         <location filename="../../mail/notification.html.php" line="184"/>
         <source>Unknown Folder</source>
-        <translation>Onbekende folder</translation>
+        <translation>Невідома папка</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="212"/>
         <source>This is an alert email from the WebIssues Server.</source>
-        <translation>Dit is een notificatie email van de WebIssues Server.</translation>
+        <translation>Це лист-сповіщення з сервера WebIssues.</translation>
     </message>
 </context>
 <context>
@@ -5431,37 +5431,37 @@
     <message>
         <location filename="../../mail/register.inc.php" line="37"/>
         <source>WebIssues Server email verification</source>
-        <translation>WebIssues Server email verificatie</translation>
+        <translation>Перевірка електронної адреси сервера WebIssues</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="3"/>
         <source>Thank you for registering on the WebIssues Server.</source>
-        <translation>Bedankt om te registreren op de WebIssues Server.</translation>
+        <translation>Дякуємо вам за реєстрацію на сервері WebIssues</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="5"/>
         <source>To activate your registration request, please visit the following URL:</source>
-        <translation>Bezoek svp de volgende url om je registratieverzoek te activeren:</translation>
+        <translation>Щоб активувати ваш запит на реєстрацію, будь ласка перейдіть за наступним посиланням:</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="10"/>
         <source>User name: %1</source>
-        <translation>Gebruikersnaam: %1</translation>
+        <translation>Ім&apos;я користувача: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="11"/>
         <source>Login: %1</source>
-        <translation>Aanmelden: %1</translation>
+        <translation>Логін: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="12"/>
         <source>Email address: %1</source>
-        <translation>Email adres: %1</translation>
+        <translation>Адреса електронної пошти: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="15"/>
         <source>If you didn&apos;t register, please ignore this email.</source>
-        <translation>Als je je niet geregistreerd hebt, kan je dit bericht negeren.</translation>
+        <translation>Якщо ви не реєструвалися, будь ласка проігноруйте цей лист.</translation>
     </message>
 </context>
 <context>
@@ -5469,37 +5469,37 @@
     <message>
         <location filename="../../mail/registernotification.html.php" line="3"/>
         <source>You have the following new %1 on the WebIssues Server pending for approval:</source>
-        <translation>Je hebt volgend nieuw %1 op de WebIssues Server in afwachting van goedkeuring:</translation>
+        <translation>Ви маєте наступні нові %1 на сервері WebIssues, що очікують на підтвердження:</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="3"/>
         <source>registration requests</source>
-        <translation>Registratie verzoeken</translation>
+        <translation>потребує реєстрації</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="7"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="8"/>
         <source>Login</source>
-        <translation>Aanmelden</translation>
+        <translation>Логін</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="9"/>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>Електронна пошта</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="10"/>
         <source>Date</source>
-        <translation>Datum</translation>
+        <translation>Дата</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.inc.php" line="37"/>
         <source>WebIssues Server registration requests</source>
-        <translation>WebIssues Server registratieaanvraag</translation>
+        <translation>запити на реєстарцію на сервері WebIssues</translation>
     </message>
 </context>
 <context>
@@ -5507,27 +5507,27 @@
     <message>
         <location filename="../../mail/reject.inc.php" line="37"/>
         <source>WebIssues Server registration rejected</source>
-        <translation>WebIssues Server registratie afgewezen</translation>
+        <translation>відхилені запити на реєстрацію на сервері WebIssues</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="3"/>
         <source>Sorry, your registration request on the WebIssues Server was rejected by the administrator.</source>
-        <translation>Sorry, uw registratieaanvraag op de WebIssues Server is afgekeurd door de systeembeheerder.</translation>
+        <translation>Вибачте, але ваш запит на реєстрацію на сервері WebIssues був відхилений адміністратором.</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="6"/>
         <source>User name: %1</source>
-        <translation>Gebruikersnaam: %1</translation>
+        <translation>Ім&apos;я користувача: %1</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="7"/>
         <source>Login: %1</source>
-        <translation>Aanmelden: %1</translation>
+        <translation>Логін: %1</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="8"/>
         <source>Email address: %1</source>
-        <translation>Email adres: %1</translation>
+        <translation>Адреса електронної пошти: %1</translation>
     </message>
 </context>
 <context>
@@ -5535,17 +5535,17 @@
     <message>
         <location filename="../../mail/subscription.html.php" line="4"/>
         <source>Include your response above this line</source>
-        <translation>Voeg uw antwoord boven deze lijn in</translation>
+        <translation>Додайте свою відповідь вище цієї лінії</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="6"/>
         <source>You can add comments and attachments to this issue by responding to this email. Include %1 in the subject when sending emails regarding this issue.</source>
-        <translation>Je kan opmerkingen en bijlagen toevoegen aan dit issue door deze e-mail te beantwoorden. Vermeldt %1 in het onderwerp wanneer je e-mails met betrekking tot dit issue verstuurd.</translation>
+        <translation>Ви можете коментувати та додавати вкладення до цього завдання відповідаючи на цей електронний лист. Додайте %1 до теми, коли будете надсилати листи стосовно цього завдання.</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="19"/>
         <source>Properties</source>
-        <translation>Eigenschappen</translation>
+        <translation>Властивості</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="23"/>
@@ -5555,65 +5555,65 @@
     <message>
         <location filename="../../mail/subscription.html.php" line="27"/>
         <source>Type:</source>
-        <translation>Soort:</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="31"/>
         <source>Location:</source>
-        <translation>Locatie:</translation>
+        <translation>Розташування:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="35"/>
         <source>Created:</source>
-        <translation>Aangemaakt:</translation>
+        <translation>Створений:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="39"/>
         <source>Last Modified:</source>
-        <translation>Laatste aanpassing:</translation>
+        <translation>Востаннє модифікований:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="48"/>
         <source>Attributes</source>
-        <translation>Attributen</translation>
+        <translation>Атрибути</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="67"/>
         <source>Description</source>
-        <translation>Omschijrving</translation>
+        <translation>Опис</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="79"/>
         <source>Issue History</source>
-        <translation>Issue historie</translation>
+        <translation>Історія завдання</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="104"/>
         <location filename="../../mail/subscription.html.php" line="107"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="110"/>
         <location filename="../../mail/subscription.html.php" line="111"/>
         <source>empty</source>
-        <translation>leeg</translation>
+        <translation>порожній</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="149"/>
         <location filename="../../mail/subscription.html.php" line="150"/>
         <source>Unknown Folder</source>
-        <translation>Onbekende folder</translation>
+        <translation>Невідома папка</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="151"/>
         <source>Issue moved from %1 to %2</source>
-        <translation>Issue van %1 naar %2 verplaatst</translation>
+        <translation>Завдання переміщено з %1 до %2</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="175"/>
         <source>This is a subscription email from the WebIssues Server.</source>
-        <translation>Dit is een inschrijving e-mail van de WebIssues Server.</translation>
+        <translation>Це підписка на сповіщення електронною поштою з сервера WebIssues</translation>
     </message>
 </context>
 <context>
@@ -5621,22 +5621,22 @@
     <message>
         <location filename="../../mail/testconnection.inc.php" line="37"/>
         <source>Test message from WebIssues Server</source>
-        <translation>Test bericht van WebIssues Server</translation>
+        <translation>Тестове повідомлення з сервера WebIssues</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="3"/>
         <source>This email was sent by the WebIssues Server to test connection to the SMTP server.</source>
-        <translation>Deze email is door de WebIssues Server verzonden om de verbinding met de SMTP server te testen.</translation>
+        <translation>Це повідомлення було відправлене на сервер WebIssues для перевірки з&apos;єднання з сервером SMTP.</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="6"/>
         <source>Server name: %1</source>
-        <translation>Server naam: %1</translation>
+        <translation>Ім&apos;я сервера: %1</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="7"/>
         <source>Port: %1</source>
-        <translation>Poort: %1</translation>
+        <translation>Порт: %1</translation>
     </message>
 </context>
 <context>
@@ -5644,7 +5644,7 @@
     <message>
         <location filename="../../messageblock.inc.php" line="34"/>
         <source>Untitled message</source>
-        <translation>Bericht zonder titel</translation>
+        <translation>Повідомлення без назви</translation>
     </message>
 </context>
 <context>
@@ -5657,19 +5657,19 @@
     <message>
         <location filename="../../pagelayout.inc.php" line="66"/>
         <source>Untitled page</source>
-        <translation>Pagina zonder titel</translation>
+        <translation>Сторінка без назви</translation>
     </message>
     <message>
         <location filename="../../pagelayout.inc.php" line="70"/>
         <location filename="../../pagelayout.html.php" line="35"/>
         <source>Web Client</source>
-        <translation>Web Client</translation>
+        <translation>Веб-Клієнт</translation>
     </message>
     <message>
         <location filename="../../pagelayout.inc.php" line="73"/>
         <location filename="../../pagelayout.html.php" line="33"/>
         <source>Administration Panel</source>
-        <translation>Beheerders scherm</translation>
+        <translation>Панель адміністратора</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="37"/>
@@ -5679,32 +5679,32 @@
     <message>
         <location filename="../../pagelayout.html.php" line="38"/>
         <source>Manual</source>
-        <translation>Handboek</translation>
+        <translation>Посібник</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="52"/>
         <source>Logged in as: %1</source>
-        <translation>Aangemeld als: %1</translation>
+        <translation>Вхід виконано під іменем: %1</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="55"/>
         <source>Tools</source>
-        <translation>Tools</translation>
+        <translation>Інструменти</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="58"/>
         <source>Log Out</source>
-        <translation>Afmelden</translation>
+        <translation>Вийти</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="60"/>
         <source>Log In</source>
-        <translation>Aanmelden</translation>
+        <translation>Увійти</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="62"/>
         <source>Register</source>
-        <translation>Registreren</translation>
+        <translation>Реєстрація</translation>
     </message>
 </context>
 <context>
@@ -5712,7 +5712,7 @@
     <message>
         <location filename="../../singlepane.inc.php" line="34"/>
         <source>Untitled page</source>
-        <translation>Pagina zonder titel</translation>
+        <translation>Сторінка без назви</translation>
     </message>
 </context>
 <context>
@@ -5720,33 +5720,33 @@
     <message>
         <location filename="../../tools/editing.inc.php" line="42"/>
         <source>Plain Text</source>
-        <translation>Platte tekst</translation>
+        <translation>Тільки текст</translation>
     </message>
     <message>
         <location filename="../../tools/editing.inc.php" line="43"/>
         <source>Text with Markup</source>
-        <translation>Tekst met opmaak</translation>
+        <translation>Текст з розміткою</translation>
     </message>
     <message>
         <location filename="../../tools/editing.inc.php" line="48"/>
         <source>Default (%1)</source>
         <comment>format</comment>
-        <translation>Standaard (%1)</translation>
+        <translation>За замовчуванням (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="4"/>
         <source>Editing</source>
-        <translation>Bewerken</translation>
+        <translation>Редагування</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="6"/>
         <source>The default format used for new comments and descriptions.</source>
-        <translation>De standaard opmaak gebruikt voor nieuwe opmerkingen en omschrijvingen.</translation>
+        <translation>Формат по замовчуванню, що використовується для нових коментарів та описів.</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="8"/>
         <source>Default text format:</source>
-        <translation>Standaard tekstopmaak:</translation>
+        <translation>Формат тексту за замовчуванням:</translation>
     </message>
 </context>
 <context>
@@ -5755,7 +5755,7 @@
         <location filename="../../tools/locale.inc.php" line="55"/>
         <source>Default (%1)</source>
         <comment>language</comment>
-        <translation>Standaard (%1)</translation>
+        <translation>За замовчуванням (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="60"/>
@@ -5763,64 +5763,64 @@
         <location filename="../../tools/locale.inc.php" line="74"/>
         <source>Default</source>
         <comment>format</comment>
-        <translation>Standaard</translation>
+        <translation>За замовчуванням</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="82"/>
         <source>Default</source>
         <comment>day of week</comment>
-        <translation>Standaard</translation>
+        <translation>За замовчуванням</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="98"/>
         <source>Default (%1)</source>
         <comment>time zone</comment>
-        <translation>Standaard (%1)</translation>
+        <translation>За замовчуванням (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="4"/>
         <source>Regional Options</source>
-        <translation>Regionale instellingen</translation>
+        <translation>Регіональні налаштування</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="6"/>
         <source>Language:</source>
-        <translation>Taal:</translation>
+        <translation>Мова:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="12"/>
         <source>Formats</source>
-        <translation>Formaten</translation>
+        <translation>Формати</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="14"/>
         <source>Customize the format of numbers, date and time. Default formats depend on the selected language.</source>
-        <translation>Stel het formaat van getallen, datum en tijd in. Standaard formaten zijn afhankelijk van de gekozen taal.</translation>
+        <translation>Налаштування формату відображення числа, дати і часу. За замовчуванням формат залежить від обраної мови.</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="16"/>
         <source>Number format:</source>
-        <translation>Getalnotatie:</translation>
+        <translation>Числовий формат:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="17"/>
         <source>Date format:</source>
-        <translation>Datum formaat:</translation>
+        <translation>Формат дати:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="18"/>
         <source>Time format:</source>
-        <translation>Tijd formaat:</translation>
+        <translation>Формат часу:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="19"/>
         <source>First day of week:</source>
-        <translation>Eerste dag van de week:</translation>
+        <translation>Перший день тижня:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="7"/>
         <source>Time zone:</source>
-        <translation>Tijd zone:</translation>
+        <translation>Часовий пояс:</translation>
     </message>
 </context>
 <context>
@@ -5830,32 +5830,32 @@
         <location filename="../../tools/pagesize.inc.php" line="51"/>
         <location filename="../../tools/pagesize.inc.php" line="57"/>
         <source>Default (%1)</source>
-        <translation>Standaard (%1)</translation>
+        <translation>За замовчуванням (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="4"/>
         <source>Page Size</source>
-        <translation>Pagina lengte</translation>
+        <translation>Розмір сторінки</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="6"/>
         <source>The maximum number of projects, issues and items in history which are displayed on a single page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальна кількість проектів, завдань та елементів в історії завдання, що будуть показані на одній сторінці.</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="8"/>
         <source>Projects tree:</source>
-        <translation type="unfinished"></translation>
+        <translation>Дерево проектів:</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="9"/>
         <source>List of issues:</source>
-        <translation>Lijst met issues:</translation>
+        <translation>Список завдань:</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="10"/>
         <source>Issue history:</source>
-        <translation>Issue historie:</translation>
+        <translation>Історія завдання:</translation>
     </message>
 </context>
 <context>
@@ -5863,37 +5863,37 @@
     <message>
         <location filename="../../tools/password.inc.php" line="33"/>
         <source>Change Password</source>
-        <translation>Wachtwoord aanpassen</translation>
+        <translation>Змінити пароль</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="4"/>
         <source>Enter your new password.</source>
-        <translation>Vul je nieuwe wachtwoord in.</translation>
+        <translation>Введіть ваш новий пароль.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="6"/>
         <source>Enter the new password for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Vul het nieuwe wachtwoord in voor gebruiker &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Введіть новий пароль для користувача &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="12"/>
         <source>Current password:</source>
-        <translation>Huidig wachtwoord:</translation>
+        <translation>Поточний пароль:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="15"/>
         <source>New password:</source>
-        <translation>Nieuw wachtwoord:</translation>
+        <translation>Новий пароль:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="16"/>
         <source>Confirm password:</source>
-        <translation>Bevestig wachtwoord:</translation>
+        <translation>Підтвердіть пароль:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="19"/>
         <source>User must change password at next logon.</source>
-        <translation>Gebruiker moet bij volgende keer aanmelden het wachtwoord aanpassen.</translation>
+        <translation>Користувач повинен змінити пароль при наступному вході в систему.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="23"/>
@@ -5903,7 +5903,7 @@
     <message>
         <location filename="../../tools/password.html.php" line="24"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -5911,42 +5911,42 @@
     <message>
         <location filename="../../tools/preferences.inc.php" line="33"/>
         <source>User Preferences</source>
-        <translation>Gebruikersvoorkeuren</translation>
+        <translation>Налаштування користувача</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="4"/>
         <source>Configure your user preferences.</source>
-        <translation>Instellen van je gebruikersvoorkeuren.</translation>
+        <translation>Змінити ваші налаштування користувача.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="6"/>
         <source>Configure preferences for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Stel de voorkeuren in voor gebruiker &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Зміна налаштувань для користувача &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="21"/>
         <source>Notifications</source>
-        <translation>Notificaties</translation>
+        <translation>Повідомлення</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="23"/>
         <source>Email address:</source>
-        <translation>Email adres:</translation>
+        <translation>Адреса електронної пошти:</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="26"/>
         <source>This address will only be visible to the system administrator. You will not receive notifications if you leave this field empty.</source>
-        <translation>Dit adres is alleen zichtbaar voor de systeembeheerder. Je zal geen notificaties ontvangen als je dit veld leeg laat.</translation>
+        <translation>Ця адреса буде видима тільки адміністратору системи. Ви не будете отримувати повідомлення, якщо ви залишите це поле порожнім.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="28"/>
         <source>Include issue details in notifications and summary reports</source>
-        <translation>Neem issue details op in notificaties en overzichtsrapporten</translation>
+        <translation>Наведіть деталі завдання в повідомленнях та підсумкових звітах</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="29"/>
         <source>Do not notify about issues that I have already read</source>
-        <translation>Stuur geen notificaties over issues die ik al gelezen heb</translation>
+        <translation>Не повідомляти про завдання, які я вже прочитав</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="35"/>
@@ -5956,7 +5956,7 @@
     <message>
         <location filename="../../tools/preferences.html.php" line="36"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -5964,69 +5964,69 @@
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="43"/>
         <source>Oldest First</source>
-        <translation>Oudste eerst</translation>
+        <translation>Спершу старіші</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="44"/>
         <source>Newest First</source>
-        <translation>Nieuwste eerst</translation>
+        <translation>Спершу новіші</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="48"/>
         <source>All History</source>
-        <translation>Alle historie</translation>
+        <translation>Вся історія</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="49"/>
         <source>Comments &amp; Attachments</source>
-        <translation>Opmerkingen &amp; bijlagen</translation>
+        <translation>Коментарі і вкладення</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="54"/>
         <source>Default (%1)</source>
         <comment>order</comment>
-        <translation>Standaard (%1)</translation>
+        <translation>За замовчуванням (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="60"/>
         <source>Default (%1)</source>
         <comment>filter</comment>
-        <translation>Standaard (%1)</translation>
+        <translation>За замовчуванням (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="4"/>
         <source>View Settings</source>
-        <translation>View instellingen</translation>
+        <translation>Налаштування переглядів</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="7"/>
         <source>Global view settings that affect all users and issue types.</source>
-        <translation>Globale view instellingen die betrekking hebben op alle users en issue soorten.</translation>
+        <translation>Глобальні налаштування переглядів для всіх користувачів і типів справ.</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="9"/>
         <source>Hide the ID column</source>
-        <translation>Verberg de ID kolom</translation>
+        <translation>Приховати колонку ID</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="10"/>
         <source>Hide attributes with empty values</source>
-        <translation>Verberg attributen met lege waarden</translation>
+        <translation>Сховати атрибути з порожніми значеннями</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="12"/>
         <source>Global view settings that affect all issue types.</source>
-        <translation>Globale view instellingen die betrekking hebben op alle issue soorten.</translation>
+        <translation>Глобальні налаштування переглядів, які впливають на всі типи завдань.</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="15"/>
         <source>Order of issue history:</source>
-        <translation>Volgorde van de issue historie:</translation>
+        <translation>Впорядкування історії завдання:</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="16"/>
         <source>Default filter in issue history:</source>
-        <translation>Standaard filter van de issue historie:</translation>
+        <translation>Фільтр по змовчуванню в історії завдання:</translation>
     </message>
 </context>
 <context>
@@ -6034,17 +6034,17 @@
     <message>
         <location filename="../../views/delete.inc.php" line="33"/>
         <source>Delete View</source>
-        <translation>View verwijderen</translation>
+        <translation>Видалити перегляд</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="6"/>
         <source>Are you sure you want to delete public view &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Weet je zeker dat je deze openbare view wil verwijderen &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Ви дійсно хочете видалити публічний перегляд &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="8"/>
         <source>Are you sure you want to delete your personal view &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Weet je zeker dat je deze persoonlijke view wil verwijderen &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Ви дійсно хочете видалити свій приватний перегляд &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="16"/>
@@ -6054,7 +6054,7 @@
     <message>
         <location filename="../../views/delete.html.php" line="17"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -6062,101 +6062,101 @@
     <message>
         <location filename="../../views/helper.inc.php" line="110"/>
         <source>begins with</source>
-        <translation>begint met</translation>
+        <translation>починається з</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="111"/>
         <source>contains</source>
-        <translation>bevat</translation>
+        <translation>містить</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="112"/>
         <source>ends with</source>
-        <translation>eindigt op</translation>
+        <translation>закінчується</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="113"/>
         <source>in</source>
-        <translation>in</translation>
+        <translation>в</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="255"/>
         <source>All Issues</source>
-        <translation>Alle issues</translation>
+        <translation>Всі завдання</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="366"/>
         <source>Add Public View</source>
-        <translation>Openbare view toevoegen</translation>
+        <translation>Додати публічний перегляд</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="367"/>
         <location filename="../../views/helper.inc.php" line="375"/>
         <source>Modify View</source>
-        <translation>View aanpassen</translation>
+        <translation>Змінити перегляд</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="368"/>
         <location filename="../../views/helper.inc.php" line="376"/>
         <source>Clone View</source>
-        <translation>View kopi&amp;euml;ren</translation>
+        <translation>Скопіювати перегляд</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="369"/>
         <location filename="../../views/helper.inc.php" line="377"/>
         <source>Rename View</source>
-        <translation>View hernoemen</translation>
+        <translation>Переіменувати перегляд</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="370"/>
         <location filename="../../views/helper.inc.php" line="378"/>
         <source>Delete View</source>
-        <translation>View verwijderen</translation>
+        <translation>Видалити перегляд</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="371"/>
         <source>Unpublish View</source>
-        <translation>Publiceren view ongedaan maken</translation>
+        <translation>Зробити перегляд приватним</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="372"/>
         <source>Manage Personal Views</source>
-        <translation>Beheer persoonlijke views</translation>
+        <translation>Управління приватними переглядами</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="374"/>
         <source>Add Personal View</source>
-        <translation>Persoonlijke view toevoegen</translation>
+        <translation>Додати приватний перегляд</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="381"/>
         <source>Publish View</source>
-        <translation>View publiceren</translation>
+        <translation>Зробити перегляд публічним</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="382"/>
         <source>Public View Settings</source>
-        <translation>Instellingen van openbare views</translation>
+        <translation>Налаштування публічних переглядів</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="451"/>
         <source>ascending</source>
-        <translation>oplopend</translation>
+        <translation>висхідний</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="451"/>
         <source>descending</source>
-        <translation>aflopend</translation>
+        <translation>спадний</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="464"/>
         <source>empty</source>
-        <translation>leeg</translation>
+        <translation>порожній</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="470"/>
         <source>AND</source>
-        <translation>EN</translation>
+        <translation>І</translation>
     </message>
 </context>
 <context>
@@ -6164,17 +6164,17 @@
     <message>
         <location filename="../../views/rename.inc.php" line="33"/>
         <source>Rename View</source>
-        <translation>View hernoemen</translation>
+        <translation>Переіменувати перегляд</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="3"/>
         <source>Enter the new name for view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Vul de nieuwe naam in voor view &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Введіть нову назву перегляду &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="10"/>
@@ -6184,7 +6184,7 @@
     <message>
         <location filename="../../views/rename.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -6192,194 +6192,194 @@
     <message>
         <location filename="../../views/view.inc.php" line="56"/>
         <source>Modify Personal View</source>
-        <translation>Persoonlijke view aanpassen</translation>
+        <translation>Змінити приватний перегляд</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="59"/>
         <location filename="../../views/view.inc.php" line="76"/>
         <source>Clone View</source>
-        <translation>View kopi&amp;euml;ren</translation>
+        <translation>Скопіювати перегляд</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="62"/>
         <source>Add Personal View</source>
-        <translation>Persoonlijke view toevoegen</translation>
+        <translation>Додати приватний перегляд</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="70"/>
         <source>Default View</source>
-        <translation>Standaard view</translation>
+        <translation>Перегляд за замовчуванням </translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="73"/>
         <source>Modify Public View</source>
-        <translation>Openbare view aanpassen</translation>
+        <translation>Змінити публічний перегляд</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="79"/>
         <source>Add Public View</source>
-        <translation>Openbare view toevoegen</translation>
+        <translation>Додати публічний перегляд</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="291"/>
         <source>Ascending</source>
-        <translation>oplopend</translation>
+        <translation>Висхідний</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="291"/>
         <source>Descending</source>
-        <translation>aflopend</translation>
+        <translation>Спадний</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="329"/>
         <source>is equal to</source>
-        <translation>is gelijk aan</translation>
+        <translation>є рівний</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="330"/>
         <source>is not equal to</source>
-        <translation>Is niet gelijk aan</translation>
+        <translation>не рівний</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="337"/>
         <source>begins with</source>
-        <translation>begint met</translation>
+        <translation>почати з</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="338"/>
         <source>contains</source>
-        <translation>bevat</translation>
+        <translation>містить</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="339"/>
         <source>ends with</source>
-        <translation>eindigt op</translation>
+        <translation>закінчується на</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="340"/>
         <source>in list</source>
-        <translation>in lijst</translation>
+        <translation>в списку</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="345"/>
         <source>is less than</source>
-        <translation>is kleiner dan</translation>
+        <translation>менше ніж</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="346"/>
         <source>is less than or equal to</source>
-        <translation>is kleiner of gelijk aan</translation>
+        <translation>є менше або рівне</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="347"/>
         <source>is greater than</source>
-        <translation>is groter dan</translation>
+        <translation>є більше ніж</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="348"/>
         <source>is greater than or equal to</source>
-        <translation>is groter of gelijk aan</translation>
+        <translation>є більше або рівне</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Een aantal waarden die je hebt ingevuld kloppen niet.</translation>
+        <translation>Деякі з цих величин є некоректними.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="12"/>
         <source>Modify the default view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Wijzig de standaard view voor soort &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити перегляд за замовчуванням для типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="15"/>
         <source>Clone view &lt;strong&gt;%1&lt;/strong&gt; as a new public view.</source>
-        <translation>Kopieer view &lt;strong&gt;%1&lt;/strong&gt; als een nieuwe openbare view.</translation>
+        <translation>Скопіювати перегляд &lt;strong&gt;%1&lt;/strong&gt; як новий публічний перегляд.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="17"/>
         <source>Modify the public view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Wijzig de openbare view voor soort &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити публічний перегляд &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="19"/>
         <source>Create a new public view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Maak een nieuwe openbare view voor soort &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Створити новий публічний перегляд для типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="23"/>
         <source>Clone view &lt;strong&gt;%1&lt;/strong&gt; as a new personal view.</source>
-        <translation>Kopieer view &lt;strong&gt;%1&lt;/strong&gt; als een nieuwe persoonlijke view.</translation>
+        <translation>Скопіювати перегляд &lt;strong&gt;%1&lt;/strong&gt; як новий приватний перегляд.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="25"/>
         <source>Modify your personal view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Wijzig je persoonlijke view &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Змінити ваш приватний перегляд &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="27"/>
         <source>Create a new personal view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Maak een nieuwe persoonlijke view voor soort &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Створити приватний перегляд для типу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="36"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="40"/>
         <source>Columns</source>
-        <translation>Kolommen</translation>
+        <translation>Колонки</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="44"/>
         <source>Selected columns:</source>
-        <translation>Geselecteerde kolommen:</translation>
+        <translation>Вибрані колонки:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="45"/>
         <source>Order</source>
-        <translation>Volgorde</translation>
+        <translation>Порядок</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="61"/>
         <source>Available columns:</source>
-        <translation>Beschikbare kolommen:</translation>
+        <translation>Доступні колонки:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="74"/>
         <location filename="../../views/view.html.php" line="123"/>
         <source>Update</source>
-        <translation>Bijwerken</translation>
+        <translation>Оновлення</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="80"/>
         <source>Sort Order</source>
-        <translation>Sorteer volgorde</translation>
+        <translation>Сортувати за</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="82"/>
         <source>Column:</source>
-        <translation>Kolom:</translation>
+        <translation>Колонка:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="83"/>
         <source>Order:</source>
-        <translation>Volgorde:</translation>
+        <translation>Порядок:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="91"/>
         <source>Filter</source>
-        <translation>Filter</translation>
+        <translation>Фільтр</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="96"/>
         <source>Active conditions:</source>
-        <translation>Actieve voorwaarden:</translation>
+        <translation>Активні умови:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="109"/>
         <source>Available conditions:</source>
-        <translation>Beschikbare voorwaarden:</translation>
+        <translation>Доступні умови:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="131"/>
@@ -6389,7 +6389,7 @@
     <message>
         <location filename="../../views/view.html.php" line="132"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -6397,117 +6397,117 @@
     <message>
         <location filename="../../../cron/job.php" line="56"/>
         <source>Previous cron job timed out</source>
-        <translation>Vorige cron job is verlopen</translation>
+        <translation>Попереднє циклічне завдання завершилося</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="64"/>
         <source>Cron job started</source>
-        <translation>Cron job gestart</translation>
+        <translation>Завдання cron запущено</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="96"/>
         <source>Cron job finished with error</source>
-        <translation>Cron job met fout(en) beeindigd</translation>
+        <translation>Завдання cron завершене з помилкою</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="98"/>
         <source>Previous cron job is still running</source>
-        <translation>Vorige cron job loopt nog</translation>
+        <translation>Попереднє завдання cron все ще працює</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="321"/>
         <source>Sent %1 notification emails</source>
-        <translation>%1 notificatie e-mail verzonden</translation>
+        <translation>Надіслано %1 повідомлень</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="384"/>
         <source>Ignored inbox email from &quot;%1&quot;</source>
-        <translation>Genegeerde inbox e-mail van &quot;%1&quot;</translation>
+        <translation>Проігноровано вхідний лист від &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="396"/>
         <source>Ignored inbox email from unknown address &quot;%1&quot;</source>
-        <translation>Genegeerde inbox e-mail van onbekend adres &quot;%1&quot;</translation>
+        <translation>Проігноровано вхідний лист з невідомої адреси &quot;%&quot;</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="415"/>
         <source>Ignored inbox email from &quot;%1&quot; because issue %2 is inaccessible</source>
-        <translation>Genegeerde inbox e-mail van &quot;%1&quot; omdat issue %2 niet toegankelijk is.</translation>
+        <translation>Проігноровано вхідний лист від &quot;%1&quot; тому що завдання %2 більше не є доступним</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="434"/>
         <source>Ambiguous folder for inbox email address &quot;%1&quot;</source>
-        <translation>Dubbele map voor inbox e-mailadres &quot;%1&quot;</translation>
+        <translation>Неоднозначне ім&apos;я папки для вхідних листів адреси &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="436"/>
         <source>No matching folder for inbox email address &quot;%1&quot;</source>
-        <translation>Geen overeenkomstige map voor inbox e-mailadres &quot;%1&quot;</translation>
+        <translation>Не знайдена підходяща папка для вхідних листів адреси &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="445"/>
         <source>Ignored inbox email from &quot;%1&quot; to &quot;%2&quot; because folder is inaccessible</source>
-        <translation>Genegeerde inbox e-mail van &quot;%1&quot; aan &quot;%2&quot; omdat de map niet toegankelijk is.</translation>
+        <translation>Проігноровано вхідні листи від &quot;%1&quot;, тому що папка &quot;2&quot; недоступна</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="451"/>
         <source>Ignored inbox email from &quot;%1&quot; because default folder is inaccessible</source>
-        <translation>Genegeerde inbox e-mail van &quot;%1&quot; omdat de standaard map niet toegankelijk is</translation>
+        <translation>Проігноровано вхідний лист від &quot;%1&quot; тому що папка за замовчуванням є недоступною</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="454"/>
         <source>Ignored inbox email from &quot;%1&quot; because folder cannot be mapped</source>
-        <translation>Genegeerde inbox e-mail van &quot;%1&quot; omdat map niet kan worden toegewezen.</translation>
+        <translation>Проігноровано вхідні листи від &quot;%1&quot;, тому що папка не може бути співставлена.</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="492"/>
         <source>No subject</source>
-        <translation>Geen onderwerp</translation>
+        <translation>Тема відсутня</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="531"/>
         <source>Attachment for message %1 from &quot;%2&quot; exceeded maximum size</source>
-        <translation>Bijlage voor bericht %1 van &quot;%2&quot; overschreidt maximale grootte</translation>
+        <translation>Вкладення для повідомлення %1 від &quot;%2&quot; перевищує максимальний розмір</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="537"/>
         <source>HTML message for email %1</source>
-        <translation>HTML bericht voor e-mail %1</translation>
+        <translation>HTML текст листа %1</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="541"/>
         <source>Attachment for email %1</source>
-        <translation>Bijlage voor e-mail %1</translation>
+        <translation>Вкладення листа %1</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="584"/>
         <source>Processed %1 inbox emails</source>
-        <translation>%1 inbox e-mails verwerkt</translation>
+        <translation>Опрацьовано %1 вхідних листів</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="614"/>
         <source>From:</source>
-        <translation>Van:</translation>
+        <translation>Від кого:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="620"/>
         <source>To:</source>
-        <translation>Aan:</translation>
+        <translation>Кому:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="627"/>
         <source>CC:</source>
-        <translation>CC:</translation>
+        <translation>Копія:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="630"/>
         <source>Subject:</source>
-        <translation>Onderwerp:</translation>
+        <translation>Тема:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="100"/>
         <source>Cron job finished</source>
-        <translation>Cron job gereed</translation>
+        <translation>Завдання cron закінчено</translation>
     </message>
 </context>
 <context>
@@ -6515,53 +6515,53 @@
     <message>
         <location filename="../../../index.php" line="35"/>
         <source>Log in to WebIssues</source>
-        <translation>Aanmelden bij WebIssues</translation>
+        <translation>Вхід у WebIssues</translation>
     </message>
     <message>
         <location filename="../../../index.php" line="77"/>
         <source>Anonymous Access</source>
-        <translation>Anonieme toegang</translation>
+        <translation>Анонімний доступ</translation>
     </message>
     <message>
         <location filename="../../../index.php" line="80"/>
         <source>Register New Account</source>
-        <translation>Registreer nieuwe account</translation>
+        <translation>Зареєструвати новий обліковий запис</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="8"/>
         <source>Login:</source>
-        <translation>Aanmelden:</translation>
+        <translation>Логін:</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="9"/>
         <source>Password:</source>
-        <translation>Wachtwoord:</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="14"/>
         <location filename="../../../index.html.php" line="25"/>
         <source>Log in</source>
-        <translation>Aanmelden</translation>
+        <translation>Увійти</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="20"/>
         <source>You have to enter a new password in order to log in.</source>
-        <translation>Je moet een nieuw wachtwoord opgeven om aan te kunnen melden.</translation>
+        <translation>Ви повинні ввести новий пароль, щоб увійти.</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="21"/>
         <source>New password:</source>
-        <translation>Nieuw wachtwoord:</translation>
+        <translation>Новий пароль:</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="22"/>
         <source>Confirm password:</source>
-        <translation>Bevestig wachtwoord:</translation>
+        <translation>Підтвердіть пароль:</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="26"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
 </context>
 <context>
@@ -6569,82 +6569,82 @@
     <message>
         <location filename="../../../register.html.php" line="10"/>
         <source>Fill the information below to begin registration.</source>
-        <translation>Vul onderstaande informatie in om registratie te starten.</translation>
+        <translation>Введіть необхідну інформацію, щоб розпочати реєстрацію.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="12"/>
         <source>Note that administrator&apos;s approval is required before you can log in.</source>
-        <translation>Noteer dat goedkeuring van de systeembeheerder is vereist alvorens je kan inloggen.</translation>
+        <translation>Зауважте, що адміністратор повинен підтвердити ваш запит, і лише після цього ви зможете ввійти.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="18"/>
         <source>User Name</source>
-        <translation>Gebruikersnaam</translation>
+        <translation>Ім&apos;я користувача</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="20"/>
         <source>Enter the user name that will be visible to other users.</source>
-        <translation>Vul de naam van de gebruiker in zoals die zichtbaar is voor andere gebruikers.</translation>
+        <translation>Введіть ім&apos;я користувача, яке буде демонструватися іншим користувачам.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="22"/>
         <source>Name:</source>
-        <translation>Naam:</translation>
+        <translation>Ім&apos;я:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="27"/>
         <source>Credentials</source>
-        <translation>legitimatiegegevens</translation>
+        <translation>Облікові дані</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="29"/>
         <source>Enter login and password for your new account.</source>
-        <translation>Vul gebruikersnaam en wachtwoord in voor je nieuwe account.</translation>
+        <translation>Введіть логін та пароль для вашого нового облікового запису.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="31"/>
         <source>Login:</source>
-        <translation>Aanmelden:</translation>
+        <translation>Логін:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="32"/>
         <source>Password:</source>
-        <translation>Wachtwoord:</translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="33"/>
         <source>Confirm password:</source>
-        <translation>Bevestig wachtwoord:</translation>
+        <translation>Підтвердіть пароль:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="38"/>
         <source>Email Address</source>
-        <translation>Email adres</translation>
+        <translation>Адреса електронної пошти</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="40"/>
         <source>Email address:</source>
-        <translation>Email adres:</translation>
+        <translation>Адреса електронної пошти:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="42"/>
         <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
-        <translation>Dit adres is alleen zichtbaar voor de systeembeheerder. Er zal een activerings email naar dit adres worden gestuurd.</translation>
+        <translation>Ця адреса буде видима тільки адміністратору системи. Лист активації буде надіслано на цю адресу.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="47"/>
         <source>Register</source>
-        <translation>Registreren</translation>
+        <translation>Реєстрація</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="48"/>
         <source>Cancel</source>
-        <translation>Afbreken</translation>
+        <translation>Скасувати</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="54"/>
         <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
-        <translation>Bedankt voor het registreren. Je ontvangt binnenkort een activeringsemail met instructies om je registratie af te ronden.</translation>
+        <translation>Дякуємо за реєстрацію. Ви отримаєте лист активації з інструкціями щодо завершення реєстрації найближчим часом.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="57"/>
@@ -6656,17 +6656,17 @@
     <message>
         <location filename="../../../register.html.php" line="63"/>
         <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
-        <translation>Je registratie verzoek is geactiveerd. Je ontvangt een bericht als de beheerder je verzoek goedkeurd.</translation>
+        <translation>Ваш запит на реєстрацію активовано. Ви отримаєте повідомлення на електронну пошту, коли адміністратор підтвердить ваш запит.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="72"/>
         <source>Your registration request was activated. You can now log in to the server using your login and password.</source>
-        <translation>Uw registratieaanvraag werd geactiveerd. Je kan nu inloggen op de server door gebruik te maken van jouw login en paswoord.</translation>
+        <translation>Ваш запит на реєстрацію активовано. Тепер ви можете ввійти на сервер, використовуючи ваш логін та пароль.</translation>
     </message>
     <message>
         <location filename="../../../register.php" line="41"/>
         <source>Register New Account</source>
-        <translation>Registreer nieuwe account</translation>
+        <translation>Зареєструвати новий обліковий запис</translation>
     </message>
 </context>
 <context>
@@ -6674,7 +6674,7 @@
     <message>
         <location filename="../../../system/api/issuemanager.inc.php" line="758"/>
         <source>Deleted issue &quot;%1&quot; from folder &quot;%2&quot;</source>
-        <translation>Verwijder issue &quot;%1&quot; uit folder &quot;%2&quot;</translation>
+        <translation>Видалено завдання &quot;%1&quot; з папки &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -6682,57 +6682,57 @@
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="293"/>
         <source>Added project &quot;%1&quot;</source>
-        <translation>Project &quot;%1&quot; toegevoegd</translation>
+        <translation>Додано проект &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="331"/>
         <source>Renamed project &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Project hernoemd van &quot;%1&quot; naar &quot;%2&quot;</translation>
+        <translation>Змінено назву проекту &quot;%1&quot; на &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="356"/>
         <source>Enabled public access for project &quot;%1&quot;</source>
-        <translation>Openbare toegang voor project &quot;%1&quot; geactiveerd.</translation>
+        <translation>Публічний доступ до проекта &quot;%1&quot; ввімкнено</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="359"/>
         <source>Disabled public access for project &quot;%1&quot;</source>
-        <translation>Openbare toegang voor project &quot;%1&quot; gedesactiveerd</translation>
+        <translation>Публічний доступ до проекта &quot;%1&quot; вимкнуто</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="401"/>
         <source>Deleted project &quot;%1&quot; with folders</source>
-        <translation>Project &quot;%1&quot; inclusief folders verwijderd</translation>
+        <translation>Видалено проект &quot;%1&quot; разом з папками</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="404"/>
         <source>Deleted project &quot;%1&quot;</source>
-        <translation>Project &quot;%1&quot; verwijderd</translation>
+        <translation>Видалено проект &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="459"/>
         <source>Added folder &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Folder &quot;%1&quot; toegevoegd aan  project &quot;%2&quot;</translation>
+        <translation>Додано папку &quot;%1&quot; до проекту &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="498"/>
         <source>Renamed folder &quot;%1&quot; to &quot;%2&quot; in project &quot;%3&quot;</source>
-        <translation>Folder &quot;%1&quot; hernoemd naar &quot;%2&quot; in project &quot;%3&quot;</translation>
+        <translation>Змінено ім&apos;я папки &quot;%1&quot; на &quot;%2&quot; у проекті &quot;%3&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="538"/>
         <source>Deleted folder &quot;%1&quot; with issues from project &quot;%2&quot;</source>
-        <translation>Folder &quot;%1&quot; met issues verwijderd uit project &quot;%2&quot;</translation>
+        <translation>Видалено папку &quot;%1&quot; разом з завданнями з проекту &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="541"/>
         <source>Deleted folder &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation>Folder &quot;%1&quot; verwijderd uit project &quot;%2&quot;</translation>
+        <translation>Видалено папку &quot;%1&quot; з проекту &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="598"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
-        <translation>Folder &quot;%1&quot; uit project &quot;%2&quot; verplaatst naar &quot;%3&quot;</translation>
+        <translation>Перенесено папку &quot;%1&quot; з проекту &quot;%2&quot; до &quot;%3&quot;</translation>
     </message>
 </context>
 <context>
@@ -6740,22 +6740,22 @@
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="171"/>
         <source>User &quot;%1&quot; registered</source>
-        <translation>Gebruiker &quot;%1&quot; is geregistreerd</translation>
+        <translation>Користувача &quot;%1&quot; зареєстровано</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="194"/>
         <source>Registration request for user &quot;%1&quot; activated</source>
-        <translation>Registratie verzoek van gebruiker &quot;%1&quot; geactiveerd</translation>
+        <translation>Запит на реєстрацію від користувача &quot;%1&quot; активовано</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="238"/>
         <source>Registration request for user &quot;%1&quot; approved</source>
-        <translation>Registratie verzoek van gebruiker &quot;%1&quot; goedgekeurd</translation>
+        <translation>Запит на реєстрацію від користувача &quot;%1&quot; підтверджено</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="257"/>
         <source>Registration request for user &quot;%1&quot; rejected</source>
-        <translation>Registratie verzoek van gebruiker &quot;%1&quot; afgewezen</translation>
+        <translation>Запит на реєстрацію від користувача &quot;%1&quot; відхилено</translation>
     </message>
 </context>
 <context>
@@ -6763,12 +6763,12 @@
     <message>
         <location filename="../../../system/api/servermanager.inc.php" line="78"/>
         <source>Renamed the server from &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>De server is hernoemd van &quot;%1&quot; naar &quot;%2&quot;</translation>
+        <translation>Змінено ім&apos;я сервера з &quot;%1&quot; на &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/servermanager.inc.php" line="103"/>
         <source>Changed the unique identifier of the server</source>
-        <translation>Het unieke ID van de server is aangepast</translation>
+        <translation>Змінено унікальний ідентифікатор сервера</translation>
     </message>
 </context>
 <context>
@@ -6776,12 +6776,12 @@
     <message>
         <location filename="../../../system/api/sessionmanager.inc.php" line="187"/>
         <source>Incorrect login attempt for user &quot;%1&quot;</source>
-        <translation>Verkeerde aanmeld poging van gebruiker &quot;%1&quot;</translation>
+        <translation>Невдала спроба входу для користувача &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/sessionmanager.inc.php" line="203"/>
         <source>Session opened for user &quot;%1&quot;</source>
-        <translation>Sessie gestart voor gebruiker &quot;%1&quot;</translation>
+        <translation>Відкрито сесію для користувача &quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -6789,47 +6789,47 @@
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="311"/>
         <source>Added issue type &quot;%1&quot;</source>
-        <translation>Issue soort &quot;%1&quot; toegevoegd</translation>
+        <translation>Додано тип завдання &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="349"/>
         <source>Renamed issue type &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Issue soort &quot;%1&quot; hernoemd naar &quot;%2&quot;</translation>
+        <translation>Змінено назву типу завдань &quot;%1&quot; на &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="390"/>
         <source>Deleted issue type &quot;%1&quot; with folders</source>
-        <translation>Issue soort &quot;%1&quot;  verwijderd inclusief folders</translation>
+        <translation>Видалено тип завдань &quot;%1&quot; разом з папками</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="393"/>
         <source>Deleted issue type &quot;%1&quot;</source>
-        <translation>Issue soort &quot;%1&quot;  verwijderd</translation>
+        <translation>Видалено тип завдань &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="447"/>
         <source>Added attribute &quot;%1&quot; to issue type &quot;%2&quot;</source>
-        <translation>Attribuut &quot;%1&quot; toegevoegd aan  issue soort &quot;%2&quot;</translation>
+        <translation>Додано атрибут &quot;%1&quot; до типу завдань &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="486"/>
         <source>Renamed attribute &quot;%1&quot; to &quot;%2&quot; of issue type &quot;%3&quot;</source>
-        <translation>Attribuut &quot;%1&quot; hernoemd naar &quot;%2&quot; van issue soort &quot;%3&quot;</translation>
+        <translation>Змінено назву атрибуту &quot;%1&quot; на &quot;%2&quot; в типі завдань &quot;%3&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="510"/>
         <source>Modified attribute &quot;%1&quot; of issue type &quot;%2&quot;</source>
-        <translation>Attribuut &quot;%1&quot; van issue soort &quot;%2&quot; aangepast</translation>
+        <translation>Змінено атрибут &quot;%1&quot; типу завдань &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="544"/>
         <source>Deleted attribute &quot;%1&quot; with values from issue type &quot;%2&quot;</source>
-        <translation>Attribuut &quot;%1&quot; inclusief waarden verwijderd van issue soort &quot;%2&quot;</translation>
+        <translation>Видалено атрибут &quot;%1&quot; разом з значеннями з типу завдань &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="547"/>
         <source>Deleted attribute &quot;%1&quot; from issue type &quot;%2&quot;</source>
-        <translation>Attribuut &quot;%1&quot; verwijderd van issue soort &quot;%2&quot;</translation>
+        <translation>Видалено атрибут &quot;%1&quot; з типу завдань &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -6837,52 +6837,52 @@
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="362"/>
         <source>Added user &quot;%1&quot;</source>
-        <translation>Gebruiker &quot;%1&quot; toegevoegd</translation>
+        <translation>Додано користувача &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="392"/>
         <source>Changed password for user &quot;%1&quot;</source>
-        <translation>Wachtwoord aangepast voor gebruiker &quot;%1&quot;</translation>
+        <translation>Зміненно пароль для користувача &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="437"/>
         <source>User &quot;%1&quot; changed own password</source>
-        <translation>Gebruiker &quot;%1&quot; heeft zijn eigen wachtwoord aangepast</translation>
+        <translation>Користувач &quot;%1&quot; змінив свій пароль</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="475"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Gebruiker &quot;%1&quot; hernoemd naar &quot;%2&quot;</translation>
+        <translation>Змінено ім&apos;я користувача &quot;%1&quot; на &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="507"/>
         <source>Disabled access for user &quot;%1&quot;</source>
-        <translation>Toegang uitgeschakeld voor gebruiker &quot;%1&quot;</translation>
+        <translation>Неможливий доступ для користувача &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="511"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
-        <translation>Normale toegang gegeven aan gebruiker &quot;%1&quot;</translation>
+        <translation>Надано звичайний доступ для користувача &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="515"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
-        <translation>Systeembeheerder toegang gegeven aan gebruiker &quot;%1&quot;</translation>
+        <translation>Надано доступ адміністратора системи для користувача &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="570"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation>Gebruiker &quot;%1&quot; verwijderd uit project &quot;%2&quot;</translation>
+        <translation>Видалено користувача &quot;%1&quot; з проекту &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="574"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Normale toegang gegeven aan gebruiker &quot;%1&quot; in  project &quot;%2&quot;</translation>
+        <translation>Надано звичайний доступ учасникові &quot;%1&quot; до проекту &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="578"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Projectbeheerder toegang gegeven aan gebruiker &quot;%1&quot; in project &quot;%2&quot;</translation>
+        <translation>Надано доступ адміністратора проекту учасникові &quot;%1&quot; до проекту &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -6895,32 +6895,32 @@
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="43"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation>Ім&apos;я</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="44"/>
         <source>Created By</source>
-        <translation>Aangemaakt door</translation>
+        <translation>Створено</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="45"/>
         <source>Created Date</source>
-        <translation>Aanmaak datum</translation>
+        <translation>Дата створення</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="46"/>
         <source>Modified By</source>
-        <translation>Aangepast door</translation>
+        <translation>Зміненно</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="47"/>
         <source>Modified Date</source>
-        <translation>Datum aanpassing</translation>
+        <translation>Дата зміни</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="48"/>
         <source>Location</source>
-        <translation>Locatie</translation>
+        <translation>Розташування</translation>
     </message>
 </context>
 <context>
@@ -6928,342 +6928,342 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="71"/>
         <source>Invalid login or password</source>
-        <translation>Ongeldige gebruiker of wachtwoord</translation>
+        <translation>Невірний логін або пароль</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="89"/>
         <source>A project with this name already exists</source>
-        <translation>Een project met deze naam bestaat al</translation>
+        <translation>Проект з такою назвою вже існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="91"/>
         <source>A folder with this name already exists</source>
-        <translation>Een folder met deze naam bestaat al</translation>
+        <translation>Папка з таким ім&apos;ям вже існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="93"/>
         <source>A user with this login or name already exists</source>
-        <translation>Een gebruiker met deze id of naam bestaat al</translation>
+        <translation>Користувач з таким логіном або іменем вже існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="95"/>
         <source>A type with this name already exists</source>
-        <translation>Een soort met deze naam bestaat al</translation>
+        <translation>Тип з такою назвою вже існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="97"/>
         <source>An attribute with this name already exists</source>
-        <translation>Een attribuut met deze naam bestaat al</translation>
+        <translation>Атрибут з такою назвою вже існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="117"/>
         <source>Required value is missing</source>
-        <translation>Er mist een verplichte waarde</translation>
+        <translation>Необхідне значення відсутнє</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="119"/>
         <source>Text is too short</source>
-        <translation>Text is te kort</translation>
+        <translation>Текст занадто короткий</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="121"/>
         <source>Text is too long</source>
-        <translation>Text is te lang</translation>
+        <translation>Текст занадто довгий</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="123"/>
         <source>Number is too small</source>
-        <translation>Getal is te klein</translation>
+        <translation>Номер занадто малий</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="125"/>
         <source>Number is too big</source>
-        <translation>Getal is te groot</translation>
+        <translation>Номер занадто великий</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="131"/>
         <source>Value has incorrect format</source>
-        <translation>Waarde heeft verkeerde formaat</translation>
+        <translation>Значення має невірний формат</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="133"/>
         <source>Date is not correct</source>
-        <translation>Ongeldige datum</translation>
+        <translation>Дата некоректна</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="135"/>
         <source>Time is not correct</source>
-        <translation>Ongeldige tijd</translation>
+        <translation>Час не правильний</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="137"/>
         <source>Email address is invalid</source>
-        <translation>Ongeldig emailadres</translation>
+        <translation>Електронна адреса некоректна</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="139"/>
         <source>No matching item is selected</source>
-        <translation>Er is geen overeenkomstig item geselecteerd</translation>
+        <translation>Не вибрано відповідний пункт</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="141"/>
         <source>Duplicate items are entered</source>
-        <translation>Er zijn dubbele items ingevoerd</translation>
+        <translation>Вводяться повторювані елементи</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="127"/>
         <source>Number has too many decimal digits</source>
-        <translation>Getal heeft teveel decimalen</translation>
+        <translation>Номер має забагто десяткових цифр</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="54"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Een aantal waarden die je hebt ingevuld kloppen niet.</translation>
+        <translation>Деякі значення ви ввели некоректно.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="56"/>
         <source>Incorrect value: %1.</source>
-        <translation>Ongeldige waarde: %1.</translation>
+        <translation>Некоректна величина: %1.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="67"/>
         <source>Your session has expired; please reconnect</source>
-        <translation>Je sessie is verlopen; svp opnieuw aanmelden</translation>
+        <translation>Час сеансу минув, увійти знову</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="69"/>
         <source>You have no permission to perform this operation</source>
-        <translation>Je hebt geen toestemming om deze actie uit te voeren</translation>
+        <translation>У вас немає прав на виконання цієї операції</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="73"/>
         <source>Project does not exist</source>
-        <translation>Project bestaat niet</translation>
+        <translation>Проект не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="75"/>
         <source>Folder does not exist</source>
-        <translation>Folder bestaat niet</translation>
+        <translation>Папка не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="77"/>
         <source>Issue does not exist</source>
-        <translation>Issue bestaat niet</translation>
+        <translation>Завдання не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="79"/>
         <source>Attachment does not exist</source>
-        <translation>Bijlage bestaat niet</translation>
+        <translation>Вкладення не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="81"/>
         <source>User does not exist</source>
-        <translation>Gebruiker bestaat niet</translation>
+        <translation>Користувач не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="83"/>
         <source>Type does not exist</source>
-        <translation>Soort bestaat niet</translation>
+        <translation>Тип не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="85"/>
         <source>Attribute does not exist</source>
-        <translation>Attribuut bestaat niet</translation>
+        <translation>Атрибут не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="87"/>
         <source>Event does not exist</source>
-        <translation>Event bestaat niet</translation>
+        <translation>Подія не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="99"/>
         <source>Project cannot be deleted</source>
-        <translation>Project kan niet worden verwijderd</translation>
+        <translation>Проект не може бути видалений</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="101"/>
         <source>Folder cannot be deleted</source>
-        <translation>Folder kan niet worden verwijderd</translation>
+        <translation>Папка не може бути видалена</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="103"/>
         <source>Type cannot be deleted</source>
-        <translation>Soort kan niet worden verwijderd</translation>
+        <translation>Тип не може бути видалений</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="105"/>
         <source>Text contains invalid characters</source>
-        <translation>Tekst bevat ongeldige karakters</translation>
+        <translation>Текст містить недопустимі символи</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="107"/>
         <source>Access level is invalid</source>
-        <translation>Ongeldige bevoegdheid</translation>
+        <translation>Рівень доступу не дійсний</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="109"/>
         <source>Value is invalid</source>
-        <translation>Ongeldige waarde</translation>
+        <translation>Невірне значення</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="111"/>
         <source>Definition is invalid</source>
-        <translation>Ongeldige definitie</translation>
+        <translation>Визначення є некоректним</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="113"/>
         <source>Invalid preference value</source>
-        <translation>Ongeldige voorkeur waarde</translation>
+        <translation>Невірне вибіркове значення</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="115"/>
         <source>Invalid setting value</source>
-        <translation>Ongeldige instelling</translation>
+        <translation>Невірне значення налаштування</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="129"/>
         <source>Number has too many digits</source>
-        <translation>Getal heeft te veel cijfers</translation>
+        <translation>Номер має забагато цифр</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="143"/>
         <source>Minimum value is greater than maximum value</source>
-        <translation>Minimum waarde is groter dan de maximum waarde</translation>
+        <translation>Мінімальне значення більше за максимальне</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="145"/>
         <source>Incompatible attribute type</source>
-        <translation>Onverenigbaar soort attribuut</translation>
+        <translation>Несумісний типу атрибуту</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="147"/>
         <source>View does not exist</source>
-        <translation>View bestaat niet</translation>
+        <translation>Перегляд не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="149"/>
         <source>Column does not exist</source>
-        <translation>Kolom bestaat niet</translation>
+        <translation>Колонка не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="151"/>
         <source>A view with this name already exists</source>
-        <translation>Er bestaat al een view met deze naam</translation>
+        <translation>Перегляд з такою назвою вже існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="153"/>
         <source>A required column is missing</source>
-        <translation>Er mist een verplcihte kolom</translation>
+        <translation>Необхідна колонка відсутня</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="155"/>
         <source>An attribute is missing</source>
-        <translation>Er mist een attribuut</translation>
+        <translation>Атрибут відсутній</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="157"/>
         <source>No items are specified</source>
-        <translation>Er zijn geen items opgegeven</translation>
+        <translation>Жодних елементів не вибрано</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="159"/>
         <source>Passwords do not match; please retype them</source>
-        <translation>Wachtwoorden komen niet overeen; probeer het nog een keer</translation>
+        <translation>Паролі не збігаються, будь ласка, повторіть їх</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="161"/>
         <source>Alert does not exist</source>
-        <translation>Alert bestaat niet</translation>
+        <translation>Сповіщення не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="163"/>
         <source>Alert already exists</source>
-        <translation>Alert bestaat al</translation>
+        <translation>Сповіщення вже існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="165"/>
         <source>Invalid alert email setting</source>
-        <translation>Ongeldige alert email instelling</translation>
+        <translation>Некоректне налаштування сповіщення на електронну пошту</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="167"/>
         <source>Comment does not exist</source>
-        <translation>Opmerking bestaat niet</translation>
+        <translation>Коментар не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="169"/>
         <source>Attribute cannot be deleted</source>
-        <translation>Attribuut kan niet worden verwijderd</translation>
+        <translation>Атрибут не може бути видалений</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="171"/>
         <source>You must change your password</source>
-        <translation>Je moet je wachtwoord aanpassen</translation>
+        <translation>Ви повинні змінити свій пароль</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="173"/>
         <source>Cannot reuse password; choose different password</source>
-        <translation>Je mag je wachtwoord niet nogmaals gebruiken, kies een ander wachtwoord</translation>
+        <translation>Не можна повторно використовувати пароль, виберіть інший пароль</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="175"/>
         <source>The specified item was not found</source>
-        <translation>Het opgegeven item is niet gevonden</translation>
+        <translation>Зазначений пункт не був знайдений</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="177"/>
         <source>Value cannot contain a comma</source>
-        <translation>Waarde mag geen komma bevatten</translation>
+        <translation>Значення не може містити кому</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="179"/>
         <source>Concurrency error; please try again</source>
-        <translation>Concurrency fout, probeer het nog een keer</translation>
+        <translation>Паралельна помилка, спробуйте ще раз</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="181"/>
         <source>One of the dependent objects no longer exists</source>
-        <translation>&amp;Eacute;&amp;eacute;n van de gekoppelde objecten bestaat niet meer</translation>
+        <translation>Один з залежних об&apos;єктів більше не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="183"/>
         <source>Another user already uses this email address</source>
-        <translation>Een andere gebruiker gebruikt dit e-mailadres</translation>
+        <translation>Ця електронна пошта вже використовується іншим користувачем</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="189"/>
         <source>Description does not exist</source>
-        <translation>Omschrijving bestaat niet</translation>
+        <translation>Опис не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="191"/>
         <source>Description already exists</source>
-        <translation>Omschrijving bestaat al</translation>
+        <translation>Опис вже існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="193"/>
         <source>Text format is invalid</source>
-        <translation>Tekstopmaak is ongeldig</translation>
+        <translation>Формат тексту некоректний</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="195"/>
         <source>Subscription does not exist</source>
-        <translation>Inschrijving bestaat niet</translation>
+        <translation>Підписка не існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="197"/>
         <source>Subscription already exists</source>
-        <translation>Inschrijving bestaat al</translation>
+        <translation>Підписка вже існує</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="185"/>
         <source>The activation key is invalid</source>
-        <translation>De activeringssleutel is ongeldig</translation>
+        <translation>Код активації не дійсний</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="187"/>
         <source>Request does not exist</source>
-        <translation>Verzoek bestaat niet</translation>
+        <translation>Запит не існує</translation>
     </message>
 </context>
 <context>
@@ -7273,13 +7273,13 @@
         <location filename="../../../system/web/expressionhelper.inc.php" line="79"/>
         <location filename="../../../system/web/expressionhelper.inc.php" line="93"/>
         <source>Me</source>
-        <translation>Ik</translation>
+        <translation>Я</translation>
     </message>
     <message>
         <location filename="../../../system/web/expressionhelper.inc.php" line="46"/>
         <location filename="../../../system/web/expressionhelper.inc.php" line="81"/>
         <source>Today</source>
-        <translation>Vandaag</translation>
+        <translation>Сьогодні</translation>
     </message>
 </context>
 <context>
@@ -7287,47 +7287,47 @@
     <message>
         <location filename="../../../system/web/grid.inc.php" line="255"/>
         <source>Ascending</source>
-        <translation>oplopend</translation>
+        <translation>Висхідний</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="255"/>
         <source>Decending</source>
-        <translation>aflopend</translation>
+        <translation>Спадний</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="296"/>
         <source>&amp;laquo; first</source>
-        <translation>&amp;laquo; eerste</translation>
+        <translation>&amp;laquo; перша</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="297"/>
         <source>&amp;lt; previous</source>
-        <translation>&amp;lt; vorige</translation>
+        <translation>&amp;lt; попередня</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="314"/>
         <source>next &amp;gt;</source>
-        <translation>volgende &amp;gt;</translation>
+        <translation>наступна &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="315"/>
         <source>last &amp;raquo;</source>
-        <translation>laatste &amp;raquo;</translation>
+        <translation>остання &amp;raquo;</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="358"/>
         <source>Expand</source>
-        <translation>Uitklappen</translation>
+        <translation>Розширення</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="359"/>
         <source>Collapse</source>
-        <translation>Inklappen</translation>
+        <translation>Крах</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="361"/>
         <source>Blank</source>
-        <translation>Blanco</translation>
+        <translation>Порожній</translation>
     </message>
 </context>
 <context>
@@ -7336,88 +7336,88 @@
         <location filename="../../../system/web/javascript.inc.php" line="109"/>
         <location filename="../../../system/web/javascript.inc.php" line="139"/>
         <source>Choose</source>
-        <translation>Kies</translation>
+        <translation>Вибирати</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="115"/>
         <source>Next</source>
-        <translation>Volgende</translation>
+        <translation>Далі</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="116"/>
         <source>Previous</source>
-        <translation>Vorige</translation>
+        <translation>Попередній</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="303"/>
         <source>Bold</source>
-        <translation>Vet</translation>
+        <translation>Жирний</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="304"/>
         <source>Italic</source>
-        <translation>Schuin</translation>
+        <translation>Курсив</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="305"/>
         <source>Monospace</source>
-        <translation>Monospace</translation>
+        <translation>Моноширинний</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="307"/>
         <source>Hyperlink</source>
-        <translation>Snelkoppeling</translation>
+        <translation>Посилання</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="307"/>
         <source>Enter link URL:</source>
-        <translation>Voer link URL in:</translation>
+        <translation>Введіть посилання URL:</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="308"/>
         <source>Link text</source>
-        <translation>Link tekst:</translation>
+        <translation>Текст посилання</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="310"/>
         <source>Bullet List</source>
-        <translation>Opsommingslijst</translation>
+        <translation>Маркований список</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="311"/>
         <source>Quote Block</source>
-        <translation>Citaat</translation>
+        <translation>Цитата</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="312"/>
         <source>Code Block</source>
-        <translation>Code</translation>
+        <translation>Код</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="313"/>
         <source>Right-To-Left Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст справа-на-ліво</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="315"/>
         <source>Preview</source>
-        <translation>Voorbeeld</translation>
+        <translation>Попередній перегляд</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="101"/>
         <location filename="../../../system/web/javascript.inc.php" line="117"/>
         <source>Today</source>
-        <translation>Vandaag</translation>
+        <translation>Сьогодні</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="119"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Закрити</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="158"/>
         <source>Search Options</source>
-        <translation>zoek opties</translation>
+        <translation>Опції пошуку</translation>
     </message>
 </context>
 <context>
@@ -7425,107 +7425,107 @@
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="42"/>
         <source>Sunday</source>
-        <translation>zondag</translation>
+        <translation>Неділя</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="43"/>
         <source>Monday</source>
-        <translation>maandag</translation>
+        <translation>Понеділок</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="44"/>
         <source>Tuesday</source>
-        <translation>dinsdag</translation>
+        <translation>Вівторок</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="45"/>
         <source>Wednesday</source>
-        <translation>woensdag</translation>
+        <translation>Середа</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="46"/>
         <source>Thursday</source>
-        <translation>donderdag</translation>
+        <translation>Четвер</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="47"/>
         <source>Friday</source>
-        <translation>vrijdag</translation>
+        <translation>Пятниця</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="48"/>
         <source>Saturday</source>
-        <translation>zaterdag</translation>
+        <translation>Субота</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="68"/>
         <source>January</source>
-        <translation>januari</translation>
+        <translation>Січень</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="69"/>
         <source>February</source>
-        <translation>februari</translation>
+        <translation>Лютий</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="70"/>
         <source>March</source>
-        <translation>maart</translation>
+        <translation>Березень</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="71"/>
         <source>April</source>
-        <translation>april</translation>
+        <translation>Квітень</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="72"/>
         <source>May</source>
-        <translation>mei</translation>
+        <translation>Травень</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="73"/>
         <source>June</source>
-        <translation>juni</translation>
+        <translation>Червень</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="74"/>
         <source>July</source>
-        <translation>juli</translation>
+        <translation>Липень</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="75"/>
         <source>August</source>
-        <translation>augustus</translation>
+        <translation>Серпень</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="76"/>
         <source>September</source>
-        <translation>september</translation>
+        <translation>Вересень</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="77"/>
         <source>October</source>
-        <translation>oktober</translation>
+        <translation>Жовтень</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="78"/>
         <source>November</source>
-        <translation>november</translation>
+        <translation>Листопад</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="79"/>
         <source>December</source>
-        <translation>december</translation>
+        <translation>Грудень</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="103"/>
         <source>%1 bytes</source>
-        <translation>%1 bytes</translation>
+        <translation>%1 байтів</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="107"/>
         <source>%1 kB</source>
-        <translation>%1 kB</translation>
+        <translation>%1 KB</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="110"/>

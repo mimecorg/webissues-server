@@ -1552,200 +1552,200 @@
         <translation>Administrátor</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="337"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="338"/>
         <source>Forum</source>
         <translation>Fórum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="344"/>
         <source>Bugs</source>
         <translation>Problémy</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="346"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="347"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation>Přiřazeno komu</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="354"/>
         <source>Status</source>
         <comment>bug</comment>
         <translation>Status</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="398"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="406"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="414"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="359"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="399"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="407"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="415"/>
         <source>Active</source>
         <comment>bug</comment>
         <translation>Aktivní</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="421"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="422"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translation>Vyřešeno</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translation>Uzavřeno</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="362"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
         <source>Reason</source>
         <translation>Důvod</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Fixed</source>
         <translation>Opraveno</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Obsolete</source>
         <translation>Zastaralý</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Duplicate</source>
         <translation>Duplicitní</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>As Designed</source>
         <translation>Jak je</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Unable To Reproduce</source>
         <translation>Nelze nasimulovat</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Test Failed</source>
         <translation>Test selhal</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translation>Závažnost</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="380"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="381"/>
         <source>Version</source>
         <translation>Verze</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="388"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="389"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translation>Vytvořeno mnou</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="396"/>
         <source>Active Bugs</source>
         <translation>Aktivní problémy</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="402"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="403"/>
         <source>My Active Bugs</source>
         <translation>Moje aktivní problémy</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="410"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="411"/>
         <source>Unassigned Bugs</source>
         <translation>Nepřiřazené problémy</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="418"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
         <source>Resolved Bugs</source>
         <translation>Byřešené problémy</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="428"/>
         <source>Tasks</source>
         <translation>Požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="430"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="431"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translation>Přiřazen komu</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="437"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="438"/>
         <source>Status</source>
         <comment>task</comment>
         <translation>Status</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="482"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="490"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="498"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="443"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="483"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="491"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="499"/>
         <source>Active</source>
         <comment>task</comment>
         <translation>Aktivní</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
         <source>Closed</source>
         <comment>task</comment>
         <translation>Uzavřený</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="446"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
         <source>Priority</source>
         <comment>task</comment>
         <translation>Priorita</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="456"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="457"/>
         <source>Progress</source>
         <translation>Průběžný stav</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="464"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="465"/>
         <source>Due Date</source>
         <translation>Do data</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="472"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="473"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translation>Vytvořeno mnou</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="479"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="480"/>
         <source>Active Tasks</source>
         <translation>Aktivní požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="486"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="487"/>
         <source>My Active Tasks</source>
         <translation>Moje aktivní požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="494"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="495"/>
         <source>Unassigned Tasks</source>
         <translation>Nepřiřazené požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="502"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="503"/>
         <source>Completed Tasks</source>
         <translation>Dokončené požadavky</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="505"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="506"/>
         <source>Completed</source>
         <comment>task</comment>
         <translation>Dokončen</translation>
@@ -3441,17 +3441,22 @@
         <translation>Spravovat upozornění</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="242"/>
+        <location filename="../../../client/issueslist.inc.php" line="236"/>
+        <source>Export To CSV</source>
+        <translation>Export do CSV</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.inc.php" line="243"/>
         <source>Add View</source>
         <translation>Přidat pohled</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="244"/>
+        <location filename="../../../client/issueslist.inc.php" line="245"/>
         <source>Modify View</source>
         <translation>Upravit pohled</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="246"/>
+        <location filename="../../../client/issueslist.inc.php" line="247"/>
         <source>Clone View</source>
         <translation>Klonovat pohled</translation>
     </message>
@@ -3801,6 +3806,44 @@
     </message>
 </context>
 <context>
+    <name>Client_Issues_ExportCsv</name>
+    <message>
+        <location filename="../../../client/issues/exportcsv.php" line="45"/>
+        <source>Export To CSV</source>
+        <translation>Export do CSV</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.php" line="57"/>
+        <source>Table with visible columns only</source>
+        <translation>Tabulka s pouze zobrazenými sloupci</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.php" line="58"/>
+        <source>Table with all system and user columns</source>
+        <translation>Tabulka se všemi systémovými a uživatelskými sloupci</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.php" line="73"/>
+        <source>Close</source>
+        <translation>Zavřít</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.html.php" line="3"/>
+        <source>Export list of issues to CSV file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.html.php" line="10"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
+    </message>
+</context>
+<context>
     <name>Client_Issues_Issue</name>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="54"/>
@@ -4125,7 +4168,7 @@
         <translation>Nejsou žádné projekty.</translation>
     </message>
     <message>
-        <location filename="../../../client/projectstree.inc.php" line="100"/>
+        <location filename="../../../client/projectstree.inc.php" line="103"/>
         <source>Manage Projects</source>
         <translation>Správa projektů</translation>
     </message>
@@ -4452,52 +4495,52 @@
         <translation>Správa projektů</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="53"/>
+        <location filename="../../../client/projects/index.php" line="56"/>
         <source>Regular project</source>
         <translation>Běžný projekt</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="54"/>
+        <location filename="../../../client/projects/index.php" line="57"/>
         <source>Public project</source>
         <translation>Veřejný projekt</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="89"/>
+        <location filename="../../../client/projects/index.php" line="92"/>
         <source>Add Project</source>
         <translation>Přidat projekt</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="90"/>
+        <location filename="../../../client/projects/index.php" line="93"/>
         <source>Add Folder</source>
         <translation>Přidat složku</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="92"/>
+        <location filename="../../../client/projects/index.php" line="95"/>
         <source>Rename Project</source>
         <translation>Přejmenovat projekt</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="93"/>
+        <location filename="../../../client/projects/index.php" line="96"/>
         <source>Delete Project</source>
         <translation>Vymazat projekt</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="95"/>
+        <location filename="../../../client/projects/index.php" line="98"/>
         <source>Rename Folder</source>
         <translation>Přejmenovat složku</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="96"/>
+        <location filename="../../../client/projects/index.php" line="99"/>
         <source>Move Folder</source>
         <translation>Přesunout složku</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="97"/>
+        <location filename="../../../client/projects/index.php" line="100"/>
         <source>Delete Folder</source>
         <translation>Vymazat složku</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="98"/>
+        <location filename="../../../client/projects/index.php" line="101"/>
         <source>Manage Permissions</source>
         <translation>Nastavení práv</translation>
     </message>
@@ -4785,8 +4828,8 @@
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="15"/>
-        <source>Copyright &amp;copy; 2007-2013 WebIssues Team</source>
-        <translation>Copyright &amp;copy; 2007-2013 WebIssues Team</translation>
+        <source>Copyright &amp;copy; 2007-2014 WebIssues Team</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="18"/>
@@ -5783,8 +5826,9 @@
 <context>
     <name>Common_Tools_PageSize</name>
     <message>
-        <location filename="../../tools/pagesize.inc.php" line="44"/>
-        <location filename="../../tools/pagesize.inc.php" line="50"/>
+        <location filename="../../tools/pagesize.inc.php" line="45"/>
+        <location filename="../../tools/pagesize.inc.php" line="51"/>
+        <location filename="../../tools/pagesize.inc.php" line="57"/>
         <source>Default (%1)</source>
         <translation>Výchozí (%1)</translation>
     </message>
@@ -5795,16 +5839,21 @@
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="6"/>
-        <source>The maximum number of issues and items in history which are displayed on a single page.</source>
-        <translation>Maximální počet problémů a jejich položek zobrazený na jedné stránce.</translation>
+        <source>The maximum number of projects, issues and items in history which are displayed on a single page.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="8"/>
+        <source>Projects tree:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../tools/pagesize.html.php" line="9"/>
         <source>List of issues:</source>
         <translation>Seznam problémů:</translation>
     </message>
     <message>
-        <location filename="../../tools/pagesize.html.php" line="9"/>
+        <location filename="../../tools/pagesize.html.php" line="10"/>
         <source>Issue history:</source>
         <translation>Historie problému:</translation>
     </message>
@@ -7345,7 +7394,12 @@
         <translation>Blok kódu</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="314"/>
+        <location filename="../../../system/web/javascript.inc.php" line="313"/>
+        <source>Right-To-Left Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="315"/>
         <source>Preview</source>
         <translation>Náhled</translation>
     </message>

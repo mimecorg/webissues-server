@@ -1552,200 +1552,200 @@
         <translation>Administrador</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="337"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="338"/>
         <source>Forum</source>
         <translation>Foro</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="343"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="344"/>
         <source>Bugs</source>
         <translation>Errores</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="346"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="347"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation>Asignado a</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="353"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="354"/>
         <source>Status</source>
         <comment>bug</comment>
         <translation>Estado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="398"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="406"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="414"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="359"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="399"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="407"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="415"/>
         <source>Active</source>
         <comment>bug</comment>
         <translation>Activo</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="421"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="422"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translation>Resuelto</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="356"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translation>Cerrado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="362"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
         <source>Reason</source>
         <translation>Razón</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Fixed</source>
         <translation>Corregido</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Obsolete</source>
         <translation>Obsoleto</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="365"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
         <source>Duplicate</source>
         <translation>Duplicado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>As Designed</source>
         <translation>Como diseñado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Unable To Reproduce</source>
         <translation>No disponible para reproducir</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Test Failed</source>
         <translation>Prueba fallida</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translation>Prioridad</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="380"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="381"/>
         <source>Version</source>
         <translation>Versión</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="388"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="389"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translation>Creado por mi</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="395"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="396"/>
         <source>Active Bugs</source>
         <translation>Errores activos</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="402"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="403"/>
         <source>My Active Bugs</source>
         <translation>Mis errores activos</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="410"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="411"/>
         <source>Unassigned Bugs</source>
         <translation>Errores sin asignar</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="418"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
         <source>Resolved Bugs</source>
         <translation>Errores resueltos&gt;</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="427"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="428"/>
         <source>Tasks</source>
         <translation>Tareas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="430"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="431"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translation>Asignado a</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="437"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="438"/>
         <source>Status</source>
         <comment>task</comment>
         <translation>Estado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="482"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="490"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="498"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="443"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="483"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="491"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="499"/>
         <source>Active</source>
         <comment>task</comment>
         <translation>Activo</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
         <source>Closed</source>
         <comment>task</comment>
         <translation>Cerrado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="446"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
         <source>Priority</source>
         <comment>task</comment>
         <translation>Prioridad</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="456"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="457"/>
         <source>Progress</source>
         <translation>Avance</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="464"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="465"/>
         <source>Due Date</source>
         <translation>Fecha Limite</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="472"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="473"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translation>Creado por mi</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="479"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="480"/>
         <source>Active Tasks</source>
         <translation>Tareas Activas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="486"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="487"/>
         <source>My Active Tasks</source>
         <translation>Mis Tareas Activas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="494"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="495"/>
         <source>Unassigned Tasks</source>
         <translation>Tareas sin asginar</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="502"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="503"/>
         <source>Completed Tasks</source>
         <translation>Tareas concluidas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="440"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="505"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="506"/>
         <source>Completed</source>
         <comment>task</comment>
         <translation>Concluidas</translation>
@@ -3441,17 +3441,22 @@
         <translation>Administrar Alertas</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="242"/>
+        <location filename="../../../client/issueslist.inc.php" line="236"/>
+        <source>Export To CSV</source>
+        <translation>Exportar como CSV</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.inc.php" line="243"/>
         <source>Add View</source>
         <translation>Agregar Vista</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="244"/>
+        <location filename="../../../client/issueslist.inc.php" line="245"/>
         <source>Modify View</source>
         <translation>Modificar Vista</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="246"/>
+        <location filename="../../../client/issueslist.inc.php" line="247"/>
         <source>Clone View</source>
         <translation>Clonar Vista</translation>
     </message>
@@ -3801,6 +3806,44 @@
     </message>
 </context>
 <context>
+    <name>Client_Issues_ExportCsv</name>
+    <message>
+        <location filename="../../../client/issues/exportcsv.php" line="45"/>
+        <source>Export To CSV</source>
+        <translation>Exportar como CSV</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.php" line="57"/>
+        <source>Table with visible columns only</source>
+        <translation>Tabla con unicamente columnas visibles</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.php" line="58"/>
+        <source>Table with all system and user columns</source>
+        <translation>Tabla con todas las columnas del sistema y del usuario</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.php" line="73"/>
+        <source>Close</source>
+        <translation>Cerrar</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.html.php" line="3"/>
+        <source>Export list of issues to CSV file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.html.php" line="10"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issues/exportcsv.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
     <name>Client_Issues_Issue</name>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="54"/>
@@ -4125,7 +4168,7 @@
         <translation>No hay proyectos.</translation>
     </message>
     <message>
-        <location filename="../../../client/projectstree.inc.php" line="100"/>
+        <location filename="../../../client/projectstree.inc.php" line="103"/>
         <source>Manage Projects</source>
         <translation>Administrar Proyectos</translation>
     </message>
@@ -4452,52 +4495,52 @@
         <translation>Administrar Proyectos</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="53"/>
+        <location filename="../../../client/projects/index.php" line="56"/>
         <source>Regular project</source>
         <translation>Proyecto Normal</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="54"/>
+        <location filename="../../../client/projects/index.php" line="57"/>
         <source>Public project</source>
         <translation>Proyecto Publico</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="89"/>
+        <location filename="../../../client/projects/index.php" line="92"/>
         <source>Add Project</source>
         <translation>Agregar Proyecto</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="90"/>
+        <location filename="../../../client/projects/index.php" line="93"/>
         <source>Add Folder</source>
         <translation>Agregar Folder</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="92"/>
+        <location filename="../../../client/projects/index.php" line="95"/>
         <source>Rename Project</source>
         <translation>Renombrar Proyecto</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="93"/>
+        <location filename="../../../client/projects/index.php" line="96"/>
         <source>Delete Project</source>
         <translation>Eliminar Proyecto</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="95"/>
+        <location filename="../../../client/projects/index.php" line="98"/>
         <source>Rename Folder</source>
         <translation>Renombrar Folder</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="96"/>
+        <location filename="../../../client/projects/index.php" line="99"/>
         <source>Move Folder</source>
         <translation>Mover Folder</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="97"/>
+        <location filename="../../../client/projects/index.php" line="100"/>
         <source>Delete Folder</source>
         <translation>Eliminar Folder</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="98"/>
+        <location filename="../../../client/projects/index.php" line="101"/>
         <source>Manage Permissions</source>
         <translation>Administrar Permisos</translation>
     </message>
@@ -4785,8 +4828,8 @@
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="15"/>
-        <source>Copyright &amp;copy; 2007-2013 WebIssues Team</source>
-        <translation>Copyright &amp;copy; 2007-2013 WebIssues Team</translation>
+        <source>Copyright &amp;copy; 2007-2014 WebIssues Team</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="18"/>
@@ -5783,8 +5826,9 @@
 <context>
     <name>Common_Tools_PageSize</name>
     <message>
-        <location filename="../../tools/pagesize.inc.php" line="44"/>
-        <location filename="../../tools/pagesize.inc.php" line="50"/>
+        <location filename="../../tools/pagesize.inc.php" line="45"/>
+        <location filename="../../tools/pagesize.inc.php" line="51"/>
+        <location filename="../../tools/pagesize.inc.php" line="57"/>
         <source>Default (%1)</source>
         <translation>Predeterminado (%1)</translation>
     </message>
@@ -5795,16 +5839,21 @@
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="6"/>
-        <source>The maximum number of issues and items in history which are displayed on a single page.</source>
-        <translation>El numero máximo de asuntos y elementos del historial que serán desplegados en una sola pagina. </translation>
+        <source>The maximum number of projects, issues and items in history which are displayed on a single page.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="8"/>
+        <source>Projects tree:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../tools/pagesize.html.php" line="9"/>
         <source>List of issues:</source>
         <translation>Lista de asuntos:</translation>
     </message>
     <message>
-        <location filename="../../tools/pagesize.html.php" line="9"/>
+        <location filename="../../tools/pagesize.html.php" line="10"/>
         <source>Issue history:</source>
         <translation>Historial del Asunto:</translation>
     </message>
@@ -7345,7 +7394,12 @@
         <translation>Bloque de Código</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="314"/>
+        <location filename="../../../system/web/javascript.inc.php" line="313"/>
+        <source>Right-To-Left Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/javascript.inc.php" line="315"/>
         <source>Preview</source>
         <translation>Vista preliminar</translation>
     </message>
