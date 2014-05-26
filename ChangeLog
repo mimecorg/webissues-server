@@ -1,3 +1,10 @@
+1.1.2 (2014-05-26)
+    * added French, Italian and Ukrainian translations
+    * quick search by issue ID
+    * added [rtl] markup tag
+    * exporting list of issues to CSV
+    * configuring page size in projects tree
+
 1.1.1 (2013-12-05)
     * fixed adding alerts through Desktop Client
 
