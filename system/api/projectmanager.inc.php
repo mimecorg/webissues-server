@@ -67,7 +67,8 @@ class System_Api_ProjectManager extends System_Api_Base
         } else {
             $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.is_public, %2d AS project_access FROM {projects} AS p';
         }
-        $query .= ' ORDER BY p.project_name COLLATE LOCALE';
+        $query .= ' WHERE p.is_archived = 0'
+            . ' ORDER BY p.project_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::AdministratorAccess );
     }
@@ -93,7 +94,7 @@ class System_Api_ProjectManager extends System_Api_Base
         $query .= ' FROM {projects} AS p';
         if ( $principal->isAuthenticated() && !$principal->isAdministrator() )
             $query .= ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %2d';
-        $query .= ' WHERE p.project_id = %1d';
+        $query .= ' WHERE p.project_id = %1d AND p.is_archived = 0';
         if ( !$principal->isAuthenticated() )
             $query .= ' AND p.is_public = 1';
 
@@ -122,7 +123,9 @@ class System_Api_ProjectManager extends System_Api_Base
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
         }
-        $query .= ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
+        $query .= ' JOIN {projects} AS p ON p.project_id = f.project_id'
+            . ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
+            . ' WHERE p.is_archived = 0'
             . ' ORDER BY f.folder_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::AdministratorAccess );
@@ -157,7 +160,7 @@ class System_Api_ProjectManager extends System_Api_Base
                 . ' JOIN {issue_types} AS t ON t.type_id = f.type_id';
             if ( $principal->isAuthenticated() && !$principal->isAdministrator() )
                 $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
-            $query .= ' WHERE f.folder_id = %1d';
+            $query .= ' WHERE f.folder_id = %1d AND p.is_archived = 0';
             if ( !$principal->isAuthenticated() )
                 $query .= ' AND p.is_public = 1';
 
@@ -192,8 +195,10 @@ class System_Api_ProjectManager extends System_Api_Base
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
         }
-        $query .= ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
-            . ' WHERE t.type_id = %3d';
+        $query .= ' JOIN {projects} AS p ON p.project_id = f.project_id'
+            . ' JOIN {issue_types} AS t ON t.type_id = f.type_id'
+            . ' WHERE t.type_id = %3d AND p.is_archived = 0'
+            . ' ORDER BY f.folder_name COLLATE LOCALE';
 
         return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::AdministratorAccess, $typeId );
     }
@@ -257,7 +262,8 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $query = 'SELECT f.folder_id, f.folder_name, p.project_name'
             . ' FROM {folders} AS f'
-            . ' JOIN {projects} AS p ON p.project_id = f.project_id';
+            . ' JOIN {projects} AS p ON p.project_id = f.project_id'
+            . ' WHERE p.is_archived = 0';
 
         return $this->connection->queryTable( $query );
     }
@@ -358,6 +364,44 @@ class System_Api_ProjectManager extends System_Api_Base
             $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
                 $eventLog->tr( 'Disabled public access for project "%1"', null, $project[ 'project_name' ] ) );
         }
+
+        return true;
+    }
+
+    /**
+    * Archive a project.
+    * @param $project The project to archive.
+    * @return @c true if the project was archived.
+    */
+    public function archiveProject( $project )
+    {
+        $projectId = $project[ 'project_id' ];
+
+        $query = 'UPDATE {projects} SET is_archived = 1 WHERE project_id = %d';
+        $this->connection->execute( $query, $projectId );
+
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Archived project "%1"', null, $project[ 'project_name' ] ) );
+
+        return true;
+    }
+
+    /**
+    * Restore a project.
+    * @param $project The project to archive.
+    * @return @c true if the project was restored.
+    */
+    public function restoreProject( $project )
+    {
+        $projectId = $project[ 'project_id' ];
+
+        $query = 'UPDATE {projects} SET is_archived = 0 WHERE project_id = %d';
+        $this->connection->execute( $query, $projectId );
+
+        $eventLog = new System_Api_EventLog( $this );
+        $eventLog->addEvent( System_Api_EventLog::Audit, System_Api_EventLog::Information,
+            $eventLog->tr( 'Restored project "%1"', null, $project[ 'project_name' ] ) );
 
         return true;
     }
@@ -619,14 +663,15 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
         if ( !$principal->isAuthenticated() ) {
-            $query = 'SELECT COUNT(*) FROM {projects} AS p WHERE p.is_public = 1';
+            $query = 'SELECT COUNT(*) FROM {projects} AS p WHERE p.is_public = 1 AND p.is_archived = 0';
         } else if ( !$principal->isAdministrator() ) {
             $query = 'SELECT COUNT(*) FROM {projects} AS p'
                 . ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
+            $query .= ' WHERE p.is_archived = 0';
         } else {
-            $query = 'SELECT COUNT(*) FROM {projects} AS p';
+            $query = 'SELECT COUNT(*) FROM {projects} AS p WHERE p.is_archived = 0';
         }
 
         return $this->connection->queryScalar( $query, $principal->getUserId(), System_Const::AdministratorAccess );
@@ -645,17 +690,58 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
         if ( !$principal->isAuthenticated() ) {
-            $query = 'SELECT p.project_id, p.project_name, p.is_public, %3d AS project_access FROM {projects} AS p WHERE p.is_public = 1';
+            $query = 'SELECT p.project_id, p.project_name, p.is_public, %3d AS project_access FROM {projects} AS p WHERE p.is_public = 1 AND p.is_archived = 0';
         } else if ( !$principal->isAdministrator() ) {
             $query = 'SELECT p.project_id, p.project_name, p.is_public, r.project_access FROM {projects} AS p'
                 . ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
+            $query .= ' WHERE p.is_archived = 0';
         } else {
-            $query = 'SELECT p.project_id, p.project_name, p.is_public, %2d AS project_access FROM {projects} AS p';
+            $query = 'SELECT p.project_id, p.project_name, p.is_public, %2d AS project_access FROM {projects} AS p WHERE p.is_archived = 0';
         }
 
         return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $principal->getUserId(), System_Const::AdministratorAccess, System_Const::NormalAccess );
+    }
+
+    /**
+    * Return the total number of archived projects.
+    * @return The number of projects.
+    */
+    public function getArchivedProjectsCount()
+    {
+        $query = 'SELECT COUNT(*) FROM {projects} AS p WHERE p.is_archived = 1';
+
+        return $this->connection->queryScalar( $query );
+    }
+
+    /**
+    * Get paged list of archived projects.
+    * @param $orderBy The sorting order specifier.
+    * @param $limit Maximum number of rows to return.
+    * @param $offset Zero-based index of first row to return.
+    * @return An array of associative arrays representing projects.
+    */
+    public function getArchivedProjectsPage( $orderBy, $limit, $offset )
+    {
+        $query = 'SELECT p.project_id, p.project_name, p.descr_id FROM {projects} AS p WHERE p.is_archived = 1';
+
+        return $this->connection->queryPage( $query, $orderBy, $limit, $offset );
+    }
+
+    /**
+    * Get the archived project with given identifier.
+    * @param $projectId Identifier of the project.
+    * @return Array containing project details.
+    */
+    public function getArchivedProject( $projectId )
+    {
+        $query = 'SELECT p.project_id, p.project_name FROM {projects} AS p WHERE p.project_id = %d AND p.is_archived = 1';
+
+        if ( !( $project = $this->connection->queryRow( $query, $projectId ) ) )
+            throw new System_Api_Error( System_Api_Error::UnknownProject );
+
+        return $project;
     }
 
     /**

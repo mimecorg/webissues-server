@@ -123,6 +123,7 @@ class System_Api_IssueManager extends System_Api_Base
             $query .= ' WHERE i.issue_id = %1d';
             if ( !$principal->isAuthenticated() )
                 $query .= ' AND p.is_public = 1';
+            $query .= ' AND p.is_archived = 0';
 
             if ( !( $issue = $this->connection->queryRow( $query, $issueId, $principal->getUserId(), System_Const::AdministratorAccess, System_Const::NormalAccess ) ) )
                 throw new System_Api_Error( System_Api_Error::UnknownIssue );
@@ -294,12 +295,12 @@ class System_Api_IssueManager extends System_Api_Base
         $query .= ' FROM {comments} AS c'
             . ' JOIN {changes} AS ch ON ch.change_id = c.comment_id'
             . ' JOIN {issues} AS i ON i.issue_id = ch.issue_id'
-            . ' JOIN {stamps} AS sc ON sc.stamp_id = ch.change_id';
-        if ( !$principal->isAdministrator() ) {
-            $query .= ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
-        }
-        $query .= ' WHERE c.comment_id = %1d';
+            . ' JOIN {stamps} AS sc ON sc.stamp_id = ch.change_id'
+            . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
+            . ' JOIN {projects} AS p ON p.project_id = f.project_id';
+        if ( !$principal->isAdministrator() )
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
+        $query .= ' WHERE c.comment_id = %1d AND p.is_archived = 0';
 
         if ( !( $comment = $this->connection->queryRow( $query, $commentId, $principal->getUserId(), System_Const::AdministratorAccess ) ) )
             throw new System_Api_Error( System_Api_Error::UnknownComment );
@@ -332,15 +333,15 @@ class System_Api_IssueManager extends System_Api_Base
         $query .= ' FROM {files} AS fl'
             . ' JOIN {changes} AS ch ON ch.change_id = fl.file_id'
             . ' JOIN {issues} AS i ON i.issue_id = ch.issue_id'
-            . ' JOIN {stamps} AS sc ON sc.stamp_id = ch.change_id';
-        if ( !$principal->isAuthenticated() ) {
-            $query .= ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {projects} AS p ON p.project_id = f.project_id AND p.is_public = 1';
-        } else if ( !$principal->isAdministrator() ) {
-            $query .= ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
-        }
+            . ' JOIN {stamps} AS sc ON sc.stamp_id = ch.change_id'
+            . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
+            . ' JOIN {projects} AS p ON p.project_id = f.project_id';
+        if ( $principal->isAuthenticated() && !$principal->isAdministrator() )
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
         $query .= ' WHERE fl.file_id = %1d';
+        if ( !$principal->isAuthenticated() )
+            $query .= ' AND p.is_public = 1';
+        $query .= ' AND p.is_archived = 0';
 
         if ( !( $file = $this->connection->queryRow( $query, $fileId, $principal->getUserId(), System_Const::AdministratorAccess, System_Const::NormalAccess ) ) )
             throw new System_Api_Error( System_Api_Error::UnknownFile );
@@ -362,19 +363,18 @@ class System_Api_IssueManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT fl.file_name, fl.file_size, fl.file_data, fl.file_storage FROM {files} AS fl';
-        if ( !$principal->isAuthenticated() ) {
-            $query .= ' JOIN {changes} AS ch ON ch.change_id = fl.file_id'
-                . ' JOIN {issues} AS i ON i.issue_id = ch.issue_id'
-                . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {projects} AS p ON p.project_id = f.project_id AND p.is_public = 1';
-        } else if ( !$principal->isAdministrator() ) {
-            $query .= ' JOIN {changes} AS ch ON ch.change_id = fl.file_id'
-                . ' JOIN {issues} AS i ON i.issue_id = ch.issue_id'
-                . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
-        }
+        $query = 'SELECT fl.file_name, fl.file_size, fl.file_data, fl.file_storage'
+            . ' FROM {files} AS fl'
+            . ' JOIN {changes} AS ch ON ch.change_id = fl.file_id'
+            . ' JOIN {issues} AS i ON i.issue_id = ch.issue_id'
+            . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
+            . ' JOIN {projects} AS p ON p.project_id = f.project_id';
+        if ( $principal->isAuthenticated() && !$principal->isAdministrator() )
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
         $query .= ' WHERE fl.file_id = %1d';
+        if ( !$principal->isAuthenticated() )
+            $query .= ' AND p.is_public = 1';
+        $query .= ' AND p.is_archived = 0';
 
         if ( !( $file = $this->connection->queryRow( $query, $fileId, $principal->getUserId() ) ) )
             throw new System_Api_Error( System_Api_Error::UnknownFile );
@@ -684,28 +684,29 @@ class System_Api_IssueManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        $query = 'SELECT i.issue_id FROM {issues} AS i';
-        if ( !$principal->isAdministrator() )
-            $query .= ' JOIN {folders} AS f ON f.folder_id = i.folder_id';
-        if ( !$principal->isAuthenticated() )
-            $query .= ' JOIN {projects} AS p ON p.project_id = f.project_id AND p.is_public = 1';
-        else if ( !$principal->isAdministrator() )
+        $query = 'SELECT i.issue_id FROM {issues} AS i'
+            . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
+            . ' JOIN {projects} AS p ON p.project_id = f.project_id';
+        if ( $principal->isAuthenticated() && !$principal->isAdministrator() )
             $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
         $query .= ' WHERE i.issue_id = %1d';
+        if ( !$principal->isAuthenticated() )
+            $query .= ' AND p.is_public = 1';
+        $query .= ' AND p.is_archived = 0';
 
         if ( $issueId = $this->connection->queryScalar( $query, $itemId, $principal->getUserid() ) )
             return $issueId;
 
-        $query = 'SELECT ch.issue_id FROM {changes} AS ch';
-        if ( !$principal->isAdministrator() ) {
-            $query .= ' JOIN {issues} AS i ON i.issue_id = ch.issue_id'
-                . ' JOIN {folders} AS f ON f.folder_id = i.folder_id';
-        }
-        if ( !$principal->isAuthenticated() )
-            $query .= ' JOIN {projects} AS p ON p.project_id = f.project_id AND p.is_public = 1';
-        else if ( !$principal->isAdministrator() )
-            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %4d';
+        $query = 'SELECT ch.issue_id FROM {changes} AS ch'
+            . ' JOIN {issues} AS i ON i.issue_id = ch.issue_id'
+            . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
+            . ' JOIN {projects} AS p ON p.project_id = f.project_id';
+        if ( $principal->isAuthenticated() && !$principal->isAdministrator() )
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %2d';
         $query .= ' WHERE ch.change_id = %1d AND ch.change_type >= %2d AND ch.change_type <= %3d';
+        if ( !$principal->isAuthenticated() )
+            $query .= ' AND p.is_public = 1';
+        $query .= ' AND p.is_archived = 0';
 
         if ( $issueId = $this->connection->queryScalar( $query, $itemId, System_Const::CommentAdded, System_Const::FileAdded, $principal->getUserid() ) )
             return $issueId;

@@ -50,13 +50,13 @@ class System_Api_StateManager extends System_Api_Base
         $principal = System_Api_Principal::getCurrent();
 
         $query = 'SELECT s.state_id, s.issue_id, s.read_id, s.subscription_id'
-            . ' FROM {issue_states} AS s';
-        if ( !$principal->isAdministrator() ) {
-            $query .= ' JOIN {issues} AS i ON i.issue_id = s.issue_id'
-                . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
-                . ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
-        }
-        $query .= ' WHERE s.user_id = %1d AND s.state_id > %2d';
+            . ' FROM {issue_states} AS s'
+            . ' JOIN {issues} AS i ON i.issue_id = s.issue_id'
+            . ' JOIN {folders} AS f ON f.folder_id = i.folder_id'
+            . ' JOIN {projects} AS p ON p.project_id = f.project_id';
+        if ( !$principal->isAdministrator() )
+            $query .= ' JOIN {effective_rights} AS r ON r.project_id = f.project_id AND r.user_id = %1d';
+        $query .= ' WHERE s.user_id = %1d AND s.state_id > %2d AND p.is_archived = 0';
 
         return $this->connection->queryTable( $query, $principal->getUserId(), $sinceState );
     }

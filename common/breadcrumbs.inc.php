@@ -40,6 +40,7 @@ class Common_Breadcrumbs extends System_Web_Base
     const ManageProjects = 13;
     const UserProjects = 14;
     const RegistrationRequests = 15;
+    const ProjectsArchive = 16;
 
     private $page = null;
 
@@ -128,6 +129,11 @@ class Common_Breadcrumbs extends System_Web_Base
                 $this->append( self::IssueTypes );
                 $this->urls[] = $this->filterQueryString( '/admin/views/index.php', array( 'sort', 'order', 'page', 'type', 'vsort', 'vorder', 'vpage' ) );
                 $this->names[] = $this->tr( 'View Settings' );
+                break;
+
+            case self::ProjectsArchive:
+                $this->urls[] = $this->filterQueryString( '/admin/archive/index.php', array( 'sort', 'order', 'page' ) );
+                $this->names[] = $this->tr( 'Projects Archive' );
                 break;
 
             case self::Project:

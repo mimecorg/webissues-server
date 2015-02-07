@@ -80,6 +80,8 @@ class System_Api_UserManager extends System_Api_Base
         $query = 'SELECT r.project_id, r.user_id, r.project_access FROM {rights} AS r';
         if ( !$principal->isAdministrator() )
             $query .= ' JOIN {rights} AS r2 ON r2.project_id = r.project_id AND r2.user_id = %d';
+        $query .= ' JOIN {projects} AS p ON p.project_id = r.project_id'
+            . ' WHERE p.is_archived = 0';
 
         return $this->connection->queryTable( $query, $principal->getUserId() );
     }
@@ -99,7 +101,7 @@ class System_Api_UserManager extends System_Api_Base
     }
 
     /**
-    * Chech the access to a project for the given user.
+    * Check the access to a project for the given user.
     * @param $user The user whose access is modified.
     * @param $project The project to which the access is related.
     * @return An associative array representing member.
@@ -216,7 +218,9 @@ class System_Api_UserManager extends System_Api_Base
     {
         $userId = $user[ 'user_id' ];
 
-        $query = 'SELECT project_id, user_id, project_access FROM {rights} WHERE user_id = %d';
+        $query = 'SELECT r.project_id, r.user_id, r.project_access FROM {rights} AS r'
+            . ' JOIN {projects} AS p ON p.project_id = r.project_id'
+            . ' WHERE r.user_id = %d AND p.is_archived = 0';
 
         return $this->connection->queryTable( $query, $userId );
     }
@@ -230,7 +234,9 @@ class System_Api_UserManager extends System_Api_Base
     {
         $userId = $user[ 'user_id' ];
 
-        $query = 'SELECT COUNT(*) FROM {rights} WHERE user_id = %d';
+        $query = 'SELECT COUNT(*) FROM {rights} AS r'
+            . ' JOIN {projects} AS p ON p.project_id = r.project_id'
+            . ' WHERE user_id = %d AND p.is_archived = 0';
  
         return $this->connection->queryScalar( $query, $userId );
     }
@@ -248,7 +254,8 @@ class System_Api_UserManager extends System_Api_Base
         $userId = $user[ 'user_id' ];
 
         $query = 'SELECT r.project_id, r.user_id, r.project_access, p.project_name FROM {rights} AS r'
-            . ' JOIN {projects} AS p ON p.project_id = r.project_id AND r.user_id = %d';
+            . ' JOIN {projects} AS p ON p.project_id = r.project_id'
+            . ' WHERE r.user_id = %d AND p.is_archived = 0';
 
         return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $userId );
     }

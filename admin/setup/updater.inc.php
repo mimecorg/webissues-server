@@ -263,6 +263,18 @@ class Admin_Setup_Updater extends System_Web_Base
                 $this->connection->execute( $query, $key, $value );
         }
 
+        if ( version_compare( $version, '1.1.006' ) < 0 ) {
+            $newFields = array(
+                'is_archived'       => 'INTEGER size="tiny" default=0',
+            );
+
+            $generator = $this->connection->getSchemaGenerator();
+
+            $generator->addFields( 'projects', $newFields );
+
+            $generator->updateReferences();
+        }
+
         $query = 'DELETE FROM {sessions}';
         $this->connection->execute( $query );
 

@@ -93,6 +93,7 @@ class Client_Projects_Index extends System_Web_Component
         $this->toolBar->addItemCommand( '/client/projects/addfolder.php', '/common/images/folder-new-16.png', $this->tr( 'Add Folder' ) );
         if ( $this->isAdministrator ) {
             $this->toolBar->addParentCommand( '/client/projects/renameproject.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Project' ) );
+            $this->toolBar->addParentCommand( '/client/projects/archiveproject.php', '/common/images/archive-16.png', $this->tr( 'Archive Project' ) );
             $this->toolBar->addParentCommand( '/client/projects/deleteproject.php', '/common/images/edit-delete-16.png', $this->tr( 'Delete Project' ) );
         }
         $this->toolBar->addChildCommand( '/client/projects/renamefolder.php', '/common/images/edit-rename-16.png', $this->tr( 'Rename Folder' ) );

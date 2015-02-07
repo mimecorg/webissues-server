@@ -513,6 +513,8 @@ class System_Api_QueryGenerator extends System_Api_Base
 
             if ( !$principal->isAuthenticated()  )
                 $conditions[] = 'p.is_public = 1';
+
+            $conditions[] = 'p.is_archived = 0';
         }
 
         if ( $this->sinceStamp != null ) {

@@ -38,6 +38,8 @@
 <?php endif ?>
 <dt><?php echo $this->imageAndTextlink( '/admin/types/index.php', '/common/images/view-types-16.png', $this->tr( 'Issue Types' ) ) ?></dt>
 <dd><?php echo $this->tr( 'Create and edit issue types.' ) ?></dd>
+<dt><?php echo $this->imageAndTextlink( '/admin/archive/index.php', '/common/images/project-archived-16.png', $this->tr( 'Projects Archive' ) ) ?></dt>
+<dd><?php echo $this->tr( 'Restore and delete archived projects.' ) ?></dd>
 </dl>
 
 </fieldset>

@@ -192,6 +192,7 @@ class Admin_Setup_Installer extends System_Web_Base
                 'descr_id'          => 'INTEGER null=1',
                 'descr_stub_id'     => 'INTEGER null=1',
                 'is_public'         => 'INTEGER size="tiny" default=0',
+                'is_archived'       => 'INTEGER size="tiny" default=0',
                 'pk'                => 'PRIMARY columns={"project_id"}',
                 'name_idx'          => 'INDEX columns={"project_name"}'
             ),
