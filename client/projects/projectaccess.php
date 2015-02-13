@@ -29,12 +29,9 @@ class Client_Projects_ProjectAccess extends System_Web_Component
 
     protected function execute()
     {
-        if ( !System_Api_Principal::getCurrent()->isAdministrator() )
-            throw new System_Api_Error( System_Api_Error::AccessDenied );
-
         $projectManager = new System_Api_ProjectManager();
         $projectId = (int)$this->request->getQueryString( 'project' );
-        $this->project = $projectManager->getProject( $projectId );
+        $this->project = $projectManager->getProject( $projectId, System_Api_ProjectManager::RequireAdministrator );
 
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
         $this->view->setSlot( 'page_title', $this->tr( 'Global Access' ) );
