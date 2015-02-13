@@ -298,6 +298,16 @@ class Server_Actions
         $this->setOkIf( $projectManager->renameProject( $project, $newName ) );
     }
 
+    public function archiveProject( $projectId )
+    {
+        $this->principal->checkAdministrator();
+
+        $projectManager = new System_Api_ProjectManager();
+        $project = $projectManager->getProject( $projectId );
+
+        $this->setOkIf( $projectManager->archiveProject( $project ) );
+    }
+
     public function deleteProject( $projectId, $force )
     {
         $this->principal->checkAdministrator();
