@@ -113,7 +113,7 @@ class Client_IssuesList extends System_Web_Component
         $this->searchForm->addField( 'searchOption', $queryColumn );
 
         if ( $this->searchForm->loadForm() ) {
-            $url = $this->mergeQueryString( '/client/index.php', array( 'q' => $this->searchBox, 'qc' => $this->searchOption ) );
+            $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'view' ), array( $key => $id, 'q' => $this->searchBox, 'qc' => $this->searchOption ) );
             $this->response->redirect( $url );
         }
 
