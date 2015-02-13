@@ -79,7 +79,7 @@ class System_Api_UserManager extends System_Api_Base
 
         $query = 'SELECT r.project_id, r.user_id, r.project_access FROM {rights} AS r';
         if ( !$principal->isAdministrator() )
-            $query .= ' JOIN {rights} AS r2 ON r2.project_id = r.project_id AND r2.user_id = %d';
+            $query .= ' JOIN {effective_rights} AS r2 ON r2.project_id = r.project_id AND r2.user_id = %d';
         $query .= ' JOIN {projects} AS p ON p.project_id = r.project_id'
             . ' WHERE p.is_archived = 0';
 
