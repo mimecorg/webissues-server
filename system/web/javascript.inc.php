@@ -376,7 +376,7 @@ class System_Web_JavaScript extends System_Web_Base
 
     private function escape( $value )
     {
-        return "'" . addcslashes( $value, "\\\"'" ) . "'";
+        return "'" . addcslashes( $value, "\0..\37\\/\"'" ) . "'";
     }
 
     private function escapeArray( $values )
