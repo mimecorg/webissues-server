@@ -64,10 +64,18 @@ class System_Mail_InboxEngine
         if ( !empty( $setings[ 'inbox_mailbox' ] ) )
             $address .= imap_utf7_encode( $settings[ 'inbox_mailbox' ] );
 
-        if ( !empty( $settings[ 'inbox_user' ] ) )
-            $this->mailbox = @imap_open( $address, $settings[ 'inbox_user' ], $settings[ 'inbox_password' ], 0, 1 );
+        if ( !empty( $settings[ 'inbox_user' ] ) ) {
+            $user = $settings[ 'inbox_user' ];
+            $password = $settings[ 'inbox_password' ];
+        } else {
+            $user = '';
+            $password = '';
+        }
+
+        if ( version_compare( phpversion(), '5.3.2', '>=' ) )
+            $this->mailbox = @imap_open( $address, $user, $password, 0, 1, array( 'DISABLE_AUTHENTICATOR' => 'GSSAPI' ) );
         else
-            $this->mailbox = @imap_open( $address, '', '', 0, 1 );
+            $this->mailbox = @imap_open( $address, $user, $password, 0, 1 );
 
         if ( $this->mailbox === false )
             $this->handleError();
