@@ -524,7 +524,7 @@ class Cron_Job extends System_Core_Application
                         $received++;
 
                         foreach ( $parts as $part ) {
-                            if ( $part[ 'type' ] == 'html' || $part[ 'type' ] == 'attachment' ) {
+                            if ( $part[ 'type' ] == 'html' || $part[ 'type' ] == 'attachment' && $part[ 'name' ] != null ) {
                                 $size = strlen( $part[ 'body' ] );
 
                                 if ( $size > $serverManager->getSetting( 'file_max_size' ) ) {
