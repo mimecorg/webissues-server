@@ -2,6 +2,141 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="it">
 <context>
+    <name>Admin_Archive_Delete</name>
+    <message>
+        <location filename="../../../admin/archive/delete.php" line="37"/>
+        <source>Delete Project</source>
+        <translation>Elimina il progetto</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/delete.html.php" line="3"/>
+        <source>Are you sure you want to delete project &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Sei sicuro che vuoi eliminare il progetto &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/delete.html.php" line="6"/>
+        <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues in this project will be permanently deleted.</source>
+        <translation>&lt;strong&gt;Attenzione:&lt;/strong&gt; tutte le cartelle e le problematiche associate a questo progetto saranno eliminate definitivamente.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/delete.html.php" line="12"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/delete.html.php" line="13"/>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Archive_Description</name>
+    <message>
+        <location filename="../../../admin/archive/description.html.php" line="4"/>
+        <source>Last Edited:</source>
+        <translation>Ultimo modificato:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/description.html.php" line="7"/>
+        <source>Description</source>
+        <translation>Descrizione</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/description.html.php" line="14"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Archive_Index</name>
+    <message>
+        <location filename="../../../admin/archive/index.php" line="33"/>
+        <source>Projects Archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/index.php" line="64"/>
+        <source>Restore Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/index.php" line="65"/>
+        <source>Rename Project</source>
+        <translation>Rinomina il progetto</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/index.php" line="66"/>
+        <source>Delete Project</source>
+        <translation>Elimina il progetto</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/index.php" line="67"/>
+        <source>View Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/index.html.php" line="11"/>
+        <source>Name</source>
+        <translation>Nome</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/index.html.php" line="30"/>
+        <source>There are no archived projects.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Archive_Rename</name>
+    <message>
+        <location filename="../../../admin/archive/rename.php" line="37"/>
+        <source>Rename Project</source>
+        <translation>Rinomina il progetto</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/rename.html.php" line="3"/>
+        <source>Enter the new name of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Inserisci un nuovo nome al progetto &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/rename.html.php" line="7"/>
+        <source>Name:</source>
+        <translation>Nome:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/rename.html.php" line="10"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/rename.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Archive_Restore</name>
+    <message>
+        <location filename="../../../admin/archive/restore.php" line="37"/>
+        <source>Restore Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/restore.html.php" line="3"/>
+        <source>Are you sure you want to restore project &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/restore.html.php" line="8"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/archive/restore.html.php" line="9"/>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+</context>
+<context>
     <name>Admin_Events_Event</name>
     <message>
         <location filename="../../../admin/events/event.php" line="33"/>
@@ -186,6 +321,16 @@
         <location filename="../../../admin/index.html.php" line="34"/>
         <source>Create and edit user accounts.</source>
         <translation>Crea e gestisci profili utenti.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="41"/>
+        <source>Projects Archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="42"/>
+        <source>Restore and delete archived projects.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="33"/>
@@ -1547,205 +1692,205 @@
 <context>
     <name>Admin_Setup_Installer</name>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="308"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="309"/>
         <source>Administrator</source>
         <translation>Amministratore</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="338"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="339"/>
         <source>Forum</source>
         <translation>Forum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="344"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="345"/>
         <source>Bugs</source>
         <translation>Errori</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="347"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="348"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation>Assegnato a </translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="354"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="355"/>
         <source>Status</source>
         <comment>bug</comment>
         <translation>Stato</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="359"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="399"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="407"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="415"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="360"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="400"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="408"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="416"/>
         <source>Active</source>
         <comment>bug</comment>
         <translation>Attivo</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="422"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="423"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translation>Risolto</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="357"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translation>Chiuso</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="364"/>
         <source>Reason</source>
         <translation>Motivazione</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Fixed</source>
         <translation>Soluzione trovata</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Obsolete</source>
         <translation>Obsoleto</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="366"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Duplicate</source>
         <translation>Duplicato</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="368"/>
         <source>As Designed</source>
         <translation>Come definito</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="368"/>
         <source>Unable To Reproduce</source>
         <translation>Non è possibile riprodurre problema</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="368"/>
         <source>Test Failed</source>
         <translation>Testa fallito</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="372"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translation>Gravità</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="381"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
         <source>Version</source>
         <translation>Versione</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="389"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="390"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translation>Creato da me</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="396"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
         <source>Active Bugs</source>
         <translation>Errore attivo</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="403"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="404"/>
         <source>My Active Bugs</source>
         <translation>I miei errori attivi</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="411"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="412"/>
         <source>Unassigned Bugs</source>
         <translation>Errori non assegnati</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="420"/>
         <source>Resolved Bugs</source>
         <translation>Errori risolti</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="428"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="429"/>
         <source>Tasks</source>
         <translation>Lavori</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="431"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="432"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translation>Assegnato a </translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="438"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="439"/>
         <source>Status</source>
         <comment>task</comment>
         <translation>Stato</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="443"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="483"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="491"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="499"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="444"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="484"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="492"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="500"/>
         <source>Active</source>
         <comment>task</comment>
         <translation>Attivo</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
         <source>Closed</source>
         <comment>task</comment>
         <translation>Chiuso</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="448"/>
         <source>Priority</source>
         <comment>task</comment>
         <translation>Priorità</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="457"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="458"/>
         <source>Progress</source>
         <translation>Progressione</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="465"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="466"/>
         <source>Due Date</source>
         <translation>Data di scadenza</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="473"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="474"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translation>Creato da me</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="480"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="481"/>
         <source>Active Tasks</source>
         <translation>Lavoro non concluso</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="487"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="488"/>
         <source>My Active Tasks</source>
         <translation>I miei lavori non conclusi</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="495"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="496"/>
         <source>Unassigned Tasks</source>
         <translation>Lavoro non assegnato</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="503"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="504"/>
         <source>Completed Tasks</source>
         <translation>Lavoro completato</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="441"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="506"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="507"/>
         <source>Completed</source>
         <comment>task</comment>
         <translation>Completato</translation>
@@ -4356,6 +4501,34 @@
     </message>
 </context>
 <context>
+    <name>Client_Projects_ArchiveProject</name>
+    <message>
+        <location filename="../../../client/projects/archiveproject.php" line="40"/>
+        <source>Archive Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/archiveproject.html.php" line="3"/>
+        <source>Are you sure you want to move project &lt;strong&gt;%1&lt;/strong&gt; to the archive?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/archiveproject.html.php" line="5"/>
+        <source>You can unarchive the project later by going to the Projects Archive in the Administration Panel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/archiveproject.html.php" line="10"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/archiveproject.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+</context>
+<context>
     <name>Client_Projects_DeleteDescription</name>
     <message>
         <location filename="../../../client/projects/deletedescription.php" line="41"/>
@@ -4521,26 +4694,31 @@
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="96"/>
+        <source>Archive Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../client/projects/index.php" line="97"/>
         <source>Delete Project</source>
         <translation>Elimina il progetto</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="98"/>
+        <location filename="../../../client/projects/index.php" line="99"/>
         <source>Rename Folder</source>
         <translation>Rinomina la cartella</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="99"/>
+        <location filename="../../../client/projects/index.php" line="100"/>
         <source>Move Folder</source>
         <translation>Sposta la cartella</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="100"/>
+        <location filename="../../../client/projects/index.php" line="101"/>
         <source>Delete Folder</source>
         <translation>Elimina la cartella</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/index.php" line="101"/>
+        <location filename="../../../client/projects/index.php" line="102"/>
         <source>Manage Permissions</source>
         <translation>Gestione permessi</translation>
     </message>
@@ -4690,17 +4868,17 @@
 <context>
     <name>Client_Projects_ProjectAccess</name>
     <message>
-        <location filename="../../../client/projects/projectaccess.php" line="40"/>
+        <location filename="../../../client/projects/projectaccess.php" line="37"/>
         <source>Global Access</source>
         <translation>Permessi di accesso</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/projectaccess.php" line="49"/>
+        <location filename="../../../client/projects/projectaccess.php" line="46"/>
         <source>Regular project</source>
         <translation>Progetto normale</translation>
     </message>
     <message>
-        <location filename="../../../client/projects/projectaccess.php" line="50"/>
+        <location filename="../../../client/projects/projectaccess.php" line="47"/>
         <source>Public project</source>
         <translation>Progetto pubblico</translation>
     </message>
@@ -4828,8 +5006,8 @@
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="15"/>
-        <source>Copyright &amp;copy; 2007-2014 WebIssues Team</source>
-        <translation>Copyright &amp;copy; 2007-2014 WebIssues Team</translation>
+        <source>Copyright &amp;copy; 2007-2015 WebIssues Team</source>
+        <translation>Copyright &amp;copy; 2007-2015 WebIssues Team</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="18"/>
@@ -5067,58 +5245,63 @@
 <context>
     <name>Common_Breadcrumbs</name>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="98"/>
+        <location filename="../../breadcrumbs.inc.php" line="99"/>
         <source>General Information</source>
         <translation>Informazioni generali</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="103"/>
+        <location filename="../../breadcrumbs.inc.php" line="104"/>
         <source>Event Log</source>
         <translation>Registro eventi</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="108"/>
+        <location filename="../../breadcrumbs.inc.php" line="109"/>
         <source>User Accounts</source>
         <translation>Profili utenti</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="119"/>
+        <location filename="../../breadcrumbs.inc.php" line="120"/>
         <source>Registration Requests</source>
         <translation>Richieste di registrazione</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="124"/>
+        <location filename="../../breadcrumbs.inc.php" line="125"/>
         <source>Issue Types</source>
         <translation>Tipologie delle problematiche</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="130"/>
+        <location filename="../../breadcrumbs.inc.php" line="131"/>
         <source>View Settings</source>
         <translation>Visualizza i settaggi</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="114"/>
-        <location filename="../../breadcrumbs.inc.php" line="141"/>
+        <location filename="../../breadcrumbs.inc.php" line="115"/>
+        <location filename="../../breadcrumbs.inc.php" line="147"/>
         <source>Manage Permissions</source>
         <translation>Gestione permessi</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="158"/>
+        <location filename="../../breadcrumbs.inc.php" line="136"/>
+        <source>Projects Archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../breadcrumbs.inc.php" line="164"/>
         <source>Manage Views</source>
         <translation>Gestisci visualizzazione</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="164"/>
+        <location filename="../../breadcrumbs.inc.php" line="170"/>
         <source>Manage Alerts</source>
         <translation>Gestisci le notifiche</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="175"/>
+        <location filename="../../breadcrumbs.inc.php" line="181"/>
         <source>Tools</source>
         <translation>Strumenti</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="180"/>
+        <location filename="../../breadcrumbs.inc.php" line="186"/>
         <source>Manage Projects</source>
         <translation>Gestisci progetti</translation>
     </message>
@@ -6672,7 +6855,7 @@
 <context>
     <name>System_Api_IssueManager</name>
     <message>
-        <location filename="../../../system/api/issuemanager.inc.php" line="758"/>
+        <location filename="../../../system/api/issuemanager.inc.php" line="759"/>
         <source>Deleted issue &quot;%1&quot; from folder &quot;%2&quot;</source>
         <translation>È stata eliminata la problematica &quot;%1&quot; dalla cartella &quot;%2&quot;</translation>
     </message>
@@ -6680,57 +6863,67 @@
 <context>
     <name>System_Api_ProjectManager</name>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="293"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="299"/>
         <source>Added project &quot;%1&quot;</source>
         <translation>Aggiungi il progetto &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="331"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="337"/>
         <source>Renamed project &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>Rinomina il progetto &quot;%1&quot; in &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="356"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="362"/>
         <source>Enabled public access for project &quot;%1&quot;</source>
         <translation>Abilita l&apos;accesso pubblico per il progetto &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="359"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="365"/>
         <source>Disabled public access for project &quot;%1&quot;</source>
         <translation>Disabilita l&apos;accesso pubblico per il progetto &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="401"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="385"/>
+        <source>Archived project &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/projectmanager.inc.php" line="404"/>
+        <source>Restored project &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../system/api/projectmanager.inc.php" line="445"/>
         <source>Deleted project &quot;%1&quot; with folders</source>
         <translation>Elemina il progetto &quot;%1&quot; con le relative cartelle</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="404"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="448"/>
         <source>Deleted project &quot;%1&quot;</source>
         <translation>Eliminato il progetto &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="459"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="503"/>
         <source>Added folder &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Aggiungi la cartella &quot;%1&quot; al progetto &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="498"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="542"/>
         <source>Renamed folder &quot;%1&quot; to &quot;%2&quot; in project &quot;%3&quot;</source>
         <translation>Rinominata la cartella &quot;%1&quot; in &quot;%2&quot; del progetto &quot;%3&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="538"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="582"/>
         <source>Deleted folder &quot;%1&quot; with issues from project &quot;%2&quot;</source>
         <translation>Eliminata la cartella &quot;%1&quot; con le problematiche del progetto &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="541"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="585"/>
         <source>Deleted folder &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation>Eliminata la cartella &quot;%1&quot; del progetto &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="598"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="642"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
         <translation>Spostata la cartella &quot;%1&quot; dal progetto &quot;%2&quot; a &quot;%3&quot;</translation>
     </message>
@@ -6787,47 +6980,47 @@
 <context>
     <name>System_Api_TypeManager</name>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="311"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="317"/>
         <source>Added issue type &quot;%1&quot;</source>
         <translation>Aggiunta la tipologia per le problematiche &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="349"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="355"/>
         <source>Renamed issue type &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>Rinomina la tipologia delle problematica da &quot;%1&quot; a &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="390"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="396"/>
         <source>Deleted issue type &quot;%1&quot; with folders</source>
         <translation>Eliminata la tipologia delle problematiche &quot;%1&quot; con le relative cartelle</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="393"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="399"/>
         <source>Deleted issue type &quot;%1&quot;</source>
         <translation>Eliminata la tipologia delle problematiche &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="447"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="453"/>
         <source>Added attribute &quot;%1&quot; to issue type &quot;%2&quot;</source>
         <translation>Aggiunto l&apos;attributo &quot;%1&quot; alla tipologia delle problematiche &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="486"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="492"/>
         <source>Renamed attribute &quot;%1&quot; to &quot;%2&quot; of issue type &quot;%3&quot;</source>
         <translation>Rinominato l&apos;attributo da &quot;%1&quot; a &quot;%2&quot; della tipologia delle problematiche &quot;%3&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="510"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="516"/>
         <source>Modified attribute &quot;%1&quot; of issue type &quot;%2&quot;</source>
         <translation>Modificato l&apos;attributo &quot;%1&quot; della tipologia delle problematiche &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="544"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="550"/>
         <source>Deleted attribute &quot;%1&quot; with values from issue type &quot;%2&quot;</source>
         <translation>Eliminato attributo &quot;%1&quot; con i valori della tipologia delle problematiche &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/typemanager.inc.php" line="547"/>
+        <location filename="../../../system/api/typemanager.inc.php" line="553"/>
         <source>Deleted attribute &quot;%1&quot; from issue type &quot;%2&quot;</source>
         <translation>Eliminato l&apos;attributo &quot;%1&quot; dalla tipologia delle problematiche &quot;%2&quot;</translation>
     </message>
@@ -6835,52 +7028,52 @@
 <context>
     <name>System_Api_UserManager</name>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="362"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="369"/>
         <source>Added user &quot;%1&quot;</source>
         <translation>Aggiunto l&apos;utente &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="392"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="399"/>
         <source>Changed password for user &quot;%1&quot;</source>
         <translation>Cambiata la password per l&apos;utente &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="437"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="444"/>
         <source>User &quot;%1&quot; changed own password</source>
         <translation>L&apos;utente &quot;%1&quot; ha cambiato la propria password</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="475"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="482"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>Rinomina l&apos;utente da &quot;%1&quot; a &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="507"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="514"/>
         <source>Disabled access for user &quot;%1&quot;</source>
         <translation>Disabilitato l&apos;accesso per l&apos;utente &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="511"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="518"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
         <translation>È garantito l&apos;accesso regolare per l&apos;utente &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="515"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="522"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
         <translation>È garantito l&apos;accesso come amministratore per l&apos;utente &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="570"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="577"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation>Eliminato l&apos;utente &quot;%1&quot; dal progetto &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="574"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="581"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>È garantito l&apos;accesso regolare all&apos;utente &quot;%1&quot; al progetto &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="578"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="585"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>È garantito l&apos;accesso come amministratore all&apos;utente &quot;%1&quot; al progetto &quot;%2&quot;</translation>
     </message>

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru">
+<TS version="2.0" language="tr">
 <context>
     <name>Admin_Archive_Delete</name>
     <message>
         <location filename="../../../admin/archive/delete.php" line="37"/>
         <source>Delete Project</source>
-        <translation>Удалить проект</translation>
+        <translation>Projeyi Sil</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/delete.html.php" line="3"/>
         <source>Are you sure you want to delete project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить проект &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesini silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/delete.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues in this project will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Все папки и задачи этого проекта будут удалены.</translation>
+        <translation>&lt;strong&gt;Uyarı:&lt;/strong&gt; Bu projedeki tüm klasör ve konular kalıcı olarak silinecek.</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/delete.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/delete.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -34,17 +34,17 @@
     <message>
         <location filename="../../../admin/archive/description.html.php" line="4"/>
         <source>Last Edited:</source>
-        <translation>Последняя редакция:</translation>
+        <translation>Son Düzenleme:</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/description.html.php" line="7"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation>Açıklama</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/description.html.php" line="14"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -52,37 +52,37 @@
     <message>
         <location filename="../../../admin/archive/index.php" line="33"/>
         <source>Projects Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Proje Arşivi</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="64"/>
         <source>Restore Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Projeyi Geri Yükle</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="65"/>
         <source>Rename Project</source>
-        <translation>Переименовать проект</translation>
+        <translation>Projeyi Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="66"/>
         <source>Delete Project</source>
-        <translation>Удалить проект</translation>
+        <translation>Projeyi Sil</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="67"/>
         <source>View Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Açıklamaları Görüntüle</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.html.php" line="11"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.html.php" line="30"/>
         <source>There are no archived projects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arşivlenmiş proje yok.</translation>
     </message>
 </context>
 <context>
@@ -90,27 +90,27 @@
     <message>
         <location filename="../../../admin/archive/rename.php" line="37"/>
         <source>Rename Project</source>
-        <translation>Переименовать проект</translation>
+        <translation>Projeyi Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/rename.html.php" line="3"/>
         <source>Enter the new name of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Введите новое имя проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesinin yeni ismini girin.</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/rename.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/rename.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/rename.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -118,22 +118,22 @@
     <message>
         <location filename="../../../admin/archive/restore.php" line="37"/>
         <source>Restore Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Projeyi Geri Yükle</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/restore.html.php" line="3"/>
         <source>Are you sure you want to restore project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesini geri yüklemek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/restore.html.php" line="8"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/restore.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -141,42 +141,42 @@
     <message>
         <location filename="../../../admin/events/event.php" line="33"/>
         <source>Event Details</source>
-        <translation>Сведения о событии</translation>
+        <translation>Olay Detayları</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="7"/>
         <source>Type:</source>
-        <translation>Тип:</translation>
+        <translation>Tür:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="11"/>
         <source>Severity:</source>
-        <translation>Серьезность:</translation>
+        <translation>Öncelik:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="18"/>
         <source>Date:</source>
-        <translation>Дата:</translation>
+        <translation>Tarih:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="22"/>
         <source>Message:</source>
-        <translation>Сообщение:</translation>
+        <translation>Mesaj:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="26"/>
         <source>User name:</source>
-        <translation>Имя пользователя:</translation>
+        <translation>Kullanıcı Adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="30"/>
         <source>Host name:</source>
-        <translation>Имя хоста:</translation>
+        <translation>Host Adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="36"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -184,37 +184,37 @@
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Information</source>
-        <translation>Информация</translation>
+        <translation>Bilgi</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Warning</source>
-        <translation>Внимание</translation>
+        <translation>Uyarı</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Error</source>
-        <translation>Ошибка</translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="49"/>
         <source>Errors</source>
-        <translation>Ошибки</translation>
+        <translation>Hatalar</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="50"/>
         <source>Access</source>
-        <translation>Доступ</translation>
+        <translation>Erişim</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="51"/>
         <source>Audit</source>
-        <translation>Аудит</translation>
+        <translation>Hesap Denetimi</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="52"/>
         <source>Cron</source>
-        <translation>Периодическая операция</translation>
+        <translation>Cron</translation>
     </message>
 </context>
 <context>
@@ -222,32 +222,32 @@
     <message>
         <location filename="../../../admin/events/index.php" line="33"/>
         <source>Event Log</source>
-        <translation>Журнал событий</translation>
+        <translation>Olay Günlüğü</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="4"/>
         <source>All Events</source>
-        <translation>Все события</translation>
+        <translation>Tüm Olaylar</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="12"/>
         <source>Type</source>
-        <translation>Тип</translation>
+        <translation>Tür</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="13"/>
         <source>Date</source>
-        <translation>Дата</translation>
+        <translation>Tarih</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="14"/>
         <source>Message</source>
-        <translation>Сообщение</translation>
+        <translation>Mesaj</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="33"/>
         <source>There are no events of the selected type.</source>
-        <translation>Нет событий выбранного типа.</translation>
+        <translation>Seçilen türde olay mevcut değil.</translation>
     </message>
 </context>
 <context>
@@ -255,112 +255,112 @@
     <message>
         <location filename="../../../admin/index.php" line="33"/>
         <source>Administration Panel</source>
-        <translation>Панель администрирования</translation>
+        <translation>Yönetim Paneli</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="7"/>
         <source>General Information</source>
-        <translation>Главная информация</translation>
+        <translation>Genel</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="8"/>
         <source>Show information about this server.</source>
-        <translation>Показать информацию об этом сервере.</translation>
+        <translation>Sunucu bilgilerini göster.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="9"/>
         <source>Event Log</source>
-        <translation>Журнал событий</translation>
+        <translation>Olay Günlüğü</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="10"/>
         <source>Show recent entries from the event log.</source>
-        <translation>Показать недавние записи из журнала событий.</translation>
+        <translation>Olay günlüğünden son girdileri göster.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="16"/>
         <source>Configuration</source>
-        <translation>Настройки</translation>
+        <translation>Ayarlar</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="19"/>
         <source>Server Settings</source>
-        <translation>Настройки сервера</translation>
+        <translation>Sunucu Ayarları</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="20"/>
         <source>Configure default language and other settings for this server.</source>
-        <translation>Установить язык по умолчанию и другие настройки этого сервера.</translation>
+        <translation>Varsayılan dili ve diğer seçenekleri ayarlayın.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="21"/>
         <source>Email Settings</source>
-        <translation>Настройки e-mail</translation>
+        <translation>Mail Ayarları</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="22"/>
         <source>Configure notification email settings.</source>
-        <translation>Установить параметры e-mail оповещений.</translation>
+        <translation>Mail Bildirim seçeneklerini ayarlayın.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="23"/>
         <source>Inbox Settings</source>
-        <translation>Настройки ящика входящих сообщений</translation>
+        <translation>Gelen Kutusu Ayarları</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="24"/>
         <source>Configure email inbox settings.</source>
-        <translation>Установить параметры ящика входящих сообщений.</translation>
+        <translation>Gelen kutusu seçeneklerini ayarlayın.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="30"/>
         <source>Management</source>
-        <translation>Управление</translation>
+        <translation>Yönetim</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="34"/>
         <source>Create and edit user accounts.</source>
-        <translation>Создать и редактировать учетные записи.</translation>
+        <translation>Kullanıcı ekle ve düzenle</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="41"/>
         <source>Projects Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Arşivlenmiş Projeler</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="42"/>
         <source>Restore and delete archived projects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arşivlenmiş projeleri geri yükle ve sil.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="33"/>
         <source>User Accounts</source>
-        <translation>Учетные записи пользователей</translation>
+        <translation>Kullanıcı Hesapları</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="4"/>
         <source>Information</source>
-        <translation>Информация</translation>
+        <translation>Bilgi</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="36"/>
         <source>Registration Requests</source>
-        <translation>Запросы на регистрацию</translation>
+        <translation>Kayıt İstekleri</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="37"/>
         <source>Approve and reject pending user registration requests.</source>
-        <translation>Подтверждение и отклонение запросов на регистрацию пользователей.</translation>
+        <translation>Yeni kullanıcı onayı.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="39"/>
         <source>Issue Types</source>
-        <translation>Типы задач</translation>
+        <translation>Konu Türleri</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="40"/>
         <source>Create and edit issue types.</source>
-        <translation>Создать и редактировать типы задач.</translation>
+        <translation>Olay türlerini oluştur ve düzenle.</translation>
     </message>
 </context>
 <context>
@@ -368,27 +368,27 @@
     <message>
         <location filename="../../../admin/info/database.html.php" line="4"/>
         <source>Database Configuration</source>
-        <translation>Настройки базы данных</translation>
+        <translation>Veritabanı Ayarları</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="8"/>
         <source>Database server:</source>
-        <translation>Сервер базы данных:</translation>
+        <translation>Veritabanı sunucusu:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="12"/>
         <source>Host name:</source>
-        <translation>Имя хоста:</translation>
+        <translation>Sunucu adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="16"/>
         <source>Database name:</source>
-        <translation>Имя базы данных:</translation>
+        <translation>Veritabanı adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="20"/>
         <source>Table prefix:</source>
-        <translation>Префикс таблиц:</translation>
+        <translation>Tablo öneki:</translation>
     </message>
 </context>
 <context>
@@ -396,32 +396,32 @@
     <message>
         <location filename="../../../admin/info/generateuuid.php" line="33"/>
         <source>Generate New Unique ID</source>
-        <translation>Сгенерировать новый уникальный идентификатор</translation>
+        <translation>Benzersiz ID Oluştur</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="3"/>
         <source>A new, random unique identifier will be assigned to this server.</source>
-        <translation>Новый, случайный уникальный идентификатор будет назначен этому серверу.</translation>
+        <translation>Bu sunucuya rasgele ve benzersiz bir ID atanacak.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="9"/>
         <source>Current ID:</source>
-        <translation>Текущий идентификатор:</translation>
+        <translation>Şimdiki ID:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="13"/>
         <source>New ID:</source>
-        <translation>Новый идентификатор:</translation>
+        <translation>Yeni ID:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="19"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="20"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -429,153 +429,153 @@
     <message>
         <location filename="../../../admin/info/index.php" line="33"/>
         <source>General Information</source>
-        <translation>Главная информация</translation>
+        <translation>Genel Bilgi</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="41"/>
         <source>enabled</source>
         <comment>anonymous access</comment>
-        <translation>включено</translation>
+        <translation>aktif</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="43"/>
         <source>disabled</source>
         <comment>anonymous access</comment>
-        <translation>отключено</translation>
+        <translation>pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="47"/>
         <source>enabled</source>
         <comment>user registration</comment>
-        <translation>включено</translation>
+        <translation>aktif</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="49"/>
         <source>disabled</source>
         <comment>user registration</comment>
-        <translation>отключено</translation>
+        <translation>pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="53"/>
         <source>standard PHP mailer</source>
-        <translation>Стандартный отправитель PHP</translation>
+        <translation>varsayılan &quot;PHP mailer&quot;</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="55"/>
         <source>SMTP server</source>
-        <translation>SMTP сервер</translation>
+        <translation>SMTP sunucu</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="57"/>
         <source>disabled</source>
         <comment>sending emails</comment>
-        <translation>отключено</translation>
+        <translation>pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="66"/>
         <source>POP3 server</source>
-        <translation>Сервер POP3</translation>
+        <translation>POP3 sunucu</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="68"/>
         <source>IMAP server</source>
-        <translation>Сервер IMAP</translation>
+        <translation>IMAP sunucu</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="70"/>
         <source>disabled</source>
         <comment>email inbox</comment>
-        <translation>отключено</translation>
+        <translation>pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="90"/>
         <source>User self-registration requires sending emails to be configured.</source>
-        <translation>Саморегистрация пользователей требует настройки отправки электронных сообщений.</translation>
+        <translation>Otomatik kullanıcı kaydı mail gönderimi için ayarlama geretktirir.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="93"/>
         <source>Sending or receiving emails requires the cron job to be running.</source>
-        <translation>Отправка и получение сообщений требует настройки периодической операции.</translation>
+        <translation>Mail göndermek veya almak için Cron&apos;un çalışması gerekmektedir.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="99"/>
         <source>%1 seconds ago</source>
-        <translation>%1 секунд назад</translation>
+        <translation>%1 saniye önce</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="103"/>
         <source>%1 minutes ago</source>
-        <translation>%1 минут назад</translation>
+        <translation>%1 dakika önce</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="107"/>
         <source>%1 hours ago</source>
-        <translation>%1 часов назад</translation>
+        <translation>%1 saat önce</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="109"/>
         <source>more than %1 hours ago</source>
-        <translation>более чем %1 часов назад</translation>
+        <translation>%1 saatten daha önce</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="87"/>
         <source>never</source>
-        <translation>никогда</translation>
+        <translation>hiçbir zaman</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="4"/>
         <source>About WebIssues</source>
-        <translation>О WebIssues</translation>
+        <translation>WebIssues Hakkında</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="10"/>
         <source>Server Configuration</source>
-        <translation>Настройки сервера</translation>
+        <translation>Sunucu Ayarları</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="14"/>
         <source>Anonymous access:</source>
-        <translation>Анонимный доступ:</translation>
+        <translation>Anonim erişim:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="18"/>
         <source>User registration:</source>
-        <translation>Регистрация пользователей:</translation>
+        <translation>Kullanıcı kaydı:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="23"/>
         <source>Sending emails:</source>
-        <translation>Настройки электронной почты:</translation>
+        <translation>Gönderilen Mailler:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="28"/>
         <source>Outgoing address:</source>
-        <translation>Исходящий адрес:</translation>
+        <translation>Giden adres:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="34"/>
         <source>Outgoing server:</source>
-        <translation>Исходящий сервер:</translation>
+        <translation>Giden sunucu:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="40"/>
         <source>Email inbox:</source>
-        <translation>Входящие электронные сообщения:</translation>
+        <translation>Gelen e-posta kutusu:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="45"/>
         <source>Inbox address:</source>
-        <translation>Адрес входящих сообщений:</translation>
+        <translation>Gelen e-posta adresi:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="51"/>
         <source>Inbox server:</source>
-        <translation>Сервер входящих сообщений:</translation>
+        <translation>Gelen sunucu:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="57"/>
         <source>Cron last started:</source>
-        <translation>Последний запуск периодической операции:</translation>
+        <translation>Cron&apos;un en son çalıştığı zaman:</translation>
     </message>
 </context>
 <context>
@@ -583,27 +583,27 @@
     <message>
         <location filename="../../../admin/info/renameserver.php" line="33"/>
         <source>Rename Server</source>
-        <translation>Переименовать сервер</translation>
+        <translation>Sunucuyu Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="3"/>
         <source>Enter the new server name.</source>
-        <translation>Введите новое имя сервера.</translation>
+        <translation>Yeni sunucu adı girin.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -611,32 +611,32 @@
     <message>
         <location filename="../../../admin/info/server.inc.php" line="37"/>
         <source>Rename Server</source>
-        <translation>Переименовать сервер</translation>
+        <translation>Sunucuyu Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.inc.php" line="38"/>
         <source>Generate New Unique ID</source>
-        <translation>Сгенерировать новый уникальный идентификатор</translation>
+        <translation>Benzersiz ID Oluştur</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="4"/>
         <source>Server Information</source>
-        <translation>Информация о сервере</translation>
+        <translation>Sunucu Bilgisi</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="14"/>
         <source>Database version:</source>
-        <translation>Версия базы данных:</translation>
+        <translation>Veritabanı versiyonu:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="18"/>
         <source>Server name:</source>
-        <translation>Имя сервера:</translation>
+        <translation>Sunucu adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="22"/>
         <source>Unique ID:</source>
-        <translation>Уникальный идентификатор:</translation>
+        <translation>Benzersiz ID:</translation>
     </message>
 </context>
 <context>
@@ -645,85 +645,85 @@
         <location filename="../../../admin/info/site.inc.php" line="53"/>
         <location filename="../../../admin/info/site.inc.php" line="55"/>
         <source>Cannot access directory &apos;%1&apos;.</source>
-        <translation>Нет доступа к директории &apos;%1&apos;.</translation>
+        <translation>&apos;%1&apos; klasörüne erişilemedi.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.inc.php" line="57"/>
         <source>Cannot access file &apos;%1&apos;.</source>
-        <translation>Нет доступа к файлу &apos;%1&apos;.</translation>
+        <translation>&apos;%1&apos; dosyasına erişilemedi.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="12"/>
         <source>Base URL address:</source>
-        <translation>Базовый адрес URL:</translation>
+        <translation>Taban URL adresi:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="4"/>
         <source>Site Configuration</source>
-        <translation>Настройки сайта</translation>
+        <translation>Site Ayarları</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="8"/>
         <source>Site name:</source>
-        <translation>Имя сайта:</translation>
+        <translation>Site adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="16"/>
         <source>Site directory:</source>
-        <translation>Директория сайта:</translation>
+        <translation>Site dizini:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="20"/>
         <source>Debugging log file:</source>
-        <translation>Файл журнала отладки:</translation>
+        <translation>Hata ayıklamak için log dosyası:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="21"/>
         <source>disabled</source>
         <comment>log file</comment>
-        <translation>отключено</translation>
+        <translation>pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="24"/>
         <source>Debugging information:</source>
-        <translation>Отладочная информация:</translation>
+        <translation>Hata ayıklama bilgisi:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="25"/>
         <source>enabled</source>
         <comment>debug info</comment>
-        <translation>включено</translation>
+        <translation>aktif</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="25"/>
         <source>disabled</source>
         <comment>debug info</comment>
-        <translation>отключено</translation>
+        <translation>pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="34"/>
         <source>Environment Information</source>
-        <translation>Информация окружения</translation>
+        <translation>Çevresel Bilgiler</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="38"/>
         <source>PHP version:</source>
-        <translation>Версия PHP:</translation>
+        <translation>PHP versiyonu:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="42"/>
         <source>Web server:</source>
-        <translation>Веб сервер:</translation>
+        <translation>Web sunucu:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="46"/>
         <source>Operating system:</source>
-        <translation>Операционная система:</translation>
+        <translation>İşletim sistemi:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="50"/>
         <source>Host name:</source>
-        <translation>Имя хоста:</translation>
+        <translation>Host Adı:</translation>
     </message>
 </context>
 <context>
@@ -731,42 +731,42 @@
     <message>
         <location filename="../../../admin/register/approve.php" line="50"/>
         <source>Approve Request</source>
-        <translation>Подтвердить запрос</translation>
+        <translation>İsteği Onayla</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="6"/>
         <source>Select All</source>
-        <translation>Выбрать все</translation>
+        <translation>Tümünü Seç</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>Отменить выбор</translation>
+        <translation>Hiçbirini Seçme</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="14"/>
         <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt; and add the user to the selected projects.</source>
-        <translation>Подтвердить регистрацию пользователя  &lt;strong&gt;%1&lt;/strong&gt; и добавить пользователя к выбранным проектам.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısını onayla ve seçili projelere ekle.</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="16"/>
         <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Подтвердить регистрацию пользователя  &lt;strong&gt;%1&lt;/strong&gt; .</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısını onayla.</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="24"/>
         <source>Projects</source>
-        <translation>Проекты</translation>
+        <translation>Projeler</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="40"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="41"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -774,42 +774,42 @@
     <message>
         <location filename="../../../admin/register/index.php" line="33"/>
         <source>Registration Requests</source>
-        <translation>Запросы на регистрацию</translation>
+        <translation>Kayıt İstekleri</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.php" line="61"/>
         <source>Approve Request</source>
-        <translation>Подтвердить запрос</translation>
+        <translation>İsteği Onayla</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.php" line="62"/>
         <source>Reject Request</source>
-        <translation>Отклонить запрос</translation>
+        <translation>İsteği Reddet</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="11"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="12"/>
         <source>Login</source>
-        <translation>Логин</translation>
+        <translation>Giriş</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="13"/>
         <source>Email</source>
-        <translation>E-mail</translation>
+        <translation>E-posta</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="14"/>
         <source>Date</source>
-        <translation>Дата</translation>
+        <translation>Tarih</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="38"/>
         <source>There are no pending registration requests.</source>
-        <translation>Нет запросов на регистрацию.</translation>
+        <translation>Bekleyen istek yok.</translation>
     </message>
 </context>
 <context>
@@ -817,22 +817,22 @@
     <message>
         <location filename="../../../admin/register/reject.php" line="37"/>
         <source>Reject Request</source>
-        <translation>Отклонить запрос</translation>
+        <translation>İsteği Reddet</translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="3"/>
         <source>Do you want to reject registration request for user &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы хотите отменить запрос на регистрацию пользователя &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısı için kayıt isteğini reddetmek istiyor musunuz?</translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="8"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -840,206 +840,206 @@
     <message>
         <location filename="../../../admin/settings/inbox.php" line="32"/>
         <source>Inbox Settings</source>
-        <translation>Настройки ящика входящих сообщений</translation>
+        <translation>Gelen Kutusu Ayarları</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="92"/>
         <source>Disabled</source>
-        <translation>Отключено</translation>
+        <translation>Pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="93"/>
         <source>IMAP server</source>
-        <translation>Сервер IMAP</translation>
+        <translation>IMAP sunucu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="94"/>
         <source>POP3 server</source>
-        <translation>Сервер POP3</translation>
+        <translation>POP3 sunucu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="97"/>
         <source>None</source>
         <comment>encryption</comment>
-        <translation>Не используется</translation>
+        <translation>Hiçbiri</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="104"/>
         <source>None</source>
         <comment>user</comment>
-        <translation>Не используется</translation>
+        <translation>Hiçbiri</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="113"/>
         <source>None</source>
         <comment>folder</comment>
-        <translation>Не используется</translation>
+        <translation>Hiçbiri</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="140"/>
         <source>Cannot leave messages on the server in POP3 mode.</source>
-        <translation>Нельзя оставлять сообщения на сервере в режиме POP3.</translation>
+        <translation>POP3 modundayken mesajları sunucuda bırakamazsınız.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="152"/>
         <source>Please select the method of receiving emails to test connection.</source>
-        <translation>Пожалуйста, укажите метод получения сообщений для тестового соединения.</translation>
+        <translation>Test bağlantısından mailleri almak istediğiniz metodu seçin.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="7"/>
         <source>Inbox settings are not avaiable because the &apos;IMAP&apos; extension is missing or disabled.</source>
-        <translation>Настройки входящих сообщений недоступны, потому что расширение IMAP отсутствует или отключено.</translation>
+        <translation>&apos;IMAP&apos; uzantısı yüklü olmadığı için veya pasif olduğu için gelen kutusu ayarları gösterilemiyor.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="10"/>
         <location filename="../../../admin/settings/inbox.html.php" line="85"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="16"/>
         <source>General</source>
-        <translation>Основные</translation>
+        <translation>Genel</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="18"/>
         <source>Method of receiving emails:</source>
-        <translation>Метод получения сообщений:</translation>
+        <translation>Mail alma metodu:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="21"/>
         <source>Inbox email address:</source>
-        <translation>E-mail адрес входящих сообщений:</translation>
+        <translation>Gelen e-posta adresi:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="23"/>
         <source>If receiving emails is enabled, make sure that the cron job is running.</source>
-        <translation>Если включено получение электронных сообщений, убедитесь что периодическая операция также активирована.</translation>
+        <translation>Mail almayı aktifleştirdiyseniz, cron jobs&apos;un çalıştığından emin olun.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="28"/>
         <source>Inbox Server</source>
-        <translation>Сервер входящих сообщений</translation>
+        <translation>Gelen Sunucu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="30"/>
         <source>Fill the information below to configure the IMAP or POP3 server.</source>
-        <translation>Заполните поля внизу для настройки сервера IMAP или POP3.</translation>
+        <translation>IMAP veya POP3 sunucuyu ayarlamak için aşağıdaki bilgileri doldurun.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="32"/>
         <source>Server name:</source>
-        <translation>Имя сервера:</translation>
+        <translation>Sunucu adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="33"/>
         <source>Port number:</source>
-        <translation>Номер порта:</translation>
+        <translation>Port numarası:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="34"/>
         <source>Encryption mode:</source>
-        <translation>Режим шифрования:</translation>
+        <translation>Şifreleme modu:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="35"/>
         <source>User name:</source>
-        <translation>Имя пользователя:</translation>
+        <translation>Kullanıcı Adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="36"/>
         <source>Password:</source>
-        <translation>Пароль:</translation>
+        <translation>Şifre:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="37"/>
         <source>Mailbox name:</source>
-        <translation>Имя ящика:</translation>
+        <translation>Mail kutusu adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="39"/>
         <source>Do not validate server certificate</source>
-        <translation>Не проверять сертификат сервера</translation>
+        <translation>Sunucu sertifikasını doğrulama</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="40"/>
         <source>Leave processed messages on the server</source>
-        <translation>Оставлять обработанные сообщения на сервере</translation>
+        <translation>İşlenmiş mesajları sunucuda bırak</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="45"/>
         <source>Connection to the inbox server was successful.</source>
-        <translation>Соединение с сервером входящих сообщений прошло успешно.</translation>
+        <translation>Gelen sunucu bağlantısı başarılı.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="49"/>
         <source>Test Connection</source>
-        <translation>Проверить</translation>
+        <translation>Test Bağlantısı</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="55"/>
         <source>External Users</source>
-        <translation>Внешние пользователи</translation>
+        <translation>Harici Kullanıcılar</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="57"/>
         <source>This option enables receiving emails from addresses which are not assigned to any user in the system.</source>
-        <translation>Эта опция включает получение электронных сообщений с адресов, не принадлежащих пользователям системы.</translation>
+        <translation>Bu seçenek sistemde herhangi bir kullanıcıya atanmamış adreslerden mail alınmasını aktifleştirir.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="59"/>
         <source>Accept messages from external users</source>
-        <translation>Принимать сообщения от внешних пользователей</translation>
+        <translation>Dış kullanıcılardan gelen mesajları kabul et</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="60"/>
         <source>Robot user account:</source>
-        <translation>Учетная запись для автомата:</translation>
+        <translation>Robot kullanıcı hesabı:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="65"/>
         <source>Folder Mapping</source>
-        <translation>Сопоставление папок</translation>
+        <translation>Klasör Atama</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="67"/>
         <source>This option enables mapping the inbox email address extensions to project and folder name.</source>
-        <translation>Эта опция включает сопоставление расширений электронных адресов с проектами и именами папок.</translation>
+        <translation>Bu seçenek gelen kutusu mail uzantısının bir projeye ya da klasöre atanmasını aktifleştirir.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="69"/>
         <source>Map address extensions to project and folder</source>
-        <translation>Сопоставить расширение адреса с проектом и папкой</translation>
+        <translation>Proje ve klasöre adres atama uzantısı</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="70"/>
         <source>Default folder:</source>
-        <translation>Папка по умолчанию:</translation>
+        <translation>Varsayılan klasör:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="75"/>
         <source>Sending Emails</source>
-        <translation>Настройки электронной почты</translation>
+        <translation>Mail Gönderme</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="77"/>
         <source>These options enable responses and automatic subscriptions for issues created through the inbox. Sending emails needs to be enabled.</source>
-        <translation>Эта опция включает ответы и автоматические подписки на задачи, созданные через электронные сообщения. Отправка сообщений должна быть активирована.</translation>
+        <translation>Bu seçenek gelen kutusu üzerinden oluşturulan konular için otomatik abonelik ve cevap özellliğini aktifleştirir. Mail gönderme özelliğinin aktifleştirilmesi gerekir.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="79"/>
         <source>Send responses when issues are created</source>
-        <translation>Отправлять сообщения когда созданы задачи</translation>
+        <translation>Konu oluşturulduğuda yanıt gönder</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="80"/>
         <source>Subscribe senders to created issues</source>
-        <translation>Подписывать отправителя на созданные задачи</translation>
+        <translation>Göndericileri oluşturulan konulara abone yap</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="86"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -1047,194 +1047,194 @@
     <message>
         <location filename="../../../admin/settings/index.php" line="33"/>
         <source>Server Settings</source>
-        <translation>Настройки сервера</translation>
+        <translation>Sunucu Ayarları</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="77"/>
         <location filename="../../../admin/settings/index.php" line="84"/>
         <source>%1 kB</source>
-        <translation>%1 КБ</translation>
+        <translation>%1 kB</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="79"/>
         <source>%1 MB</source>
-        <translation>%1 МБ</translation>
+        <translation>%1 MB</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="82"/>
         <source>Never</source>
-        <translation>Никогда</translation>
+        <translation>Asla</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="85"/>
         <source>Always</source>
-        <translation>Всегда</translation>
+        <translation>Her zaman</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="89"/>
         <source>%1 minutes</source>
-        <translation>%1 минут</translation>
+        <translation>%1 dakika</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="90"/>
         <source>1 hour</source>
-        <translation>1 час</translation>
+        <translation>1 saat</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="92"/>
         <location filename="../../../admin/settings/index.php" line="101"/>
         <source>%1 hours</source>
-        <translation>%1 часов</translation>
+        <translation>%1 saat</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="95"/>
         <source>1 day</source>
-        <translation>1 день</translation>
+        <translation>1 gün</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="97"/>
         <source>%1 days</source>
-        <translation>%1 дней</translation>
+        <translation>%1 gün</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.php" line="104"/>
         <source>Use cron job</source>
-        <translation>Использовать периодические операции</translation>
+        <translation>Cron job kullan</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="23"/>
         <source>User Registration</source>
-        <translation>Регистрация пользователя</translation>
+        <translation>Kullanıcı Kaydı</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="27"/>
         <source>Enable user registration</source>
-        <translation>Включить регистрацию пользователей</translation>
+        <translation>Kullanıcı kaydını aktifleştir</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="14"/>
         <source>Anonymous Access</source>
-        <translation>Анонимный доступ</translation>
+        <translation>Anonim Erişim</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="16"/>
         <source>This option enables read-only access to public projects without logging in.</source>
-        <translation>Эта опция разрешает доступ для чтения публичных проектов без авторизации.</translation>
+        <translation>Bu seçenek herkese açık projelere kullanıcı girişi yapmadan salt okunur erişilebilmeyi sağlar.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="18"/>
         <source>Enable anonymous access</source>
-        <translation>Разрешить анонимный доступ</translation>
+        <translation>Anonim erişimi aktifleştir</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="25"/>
         <source>This option allows users to self-register. Sending emails needs to be enabled.</source>
-        <translation>Эта опция разрешает саморегистрацию пользователей. Требуется настройка отправки сообщений.</translation>
+        <translation>Bu seçenek otomatik kullanıcı kaydını aktifleştirir. Mail gönderme özelliğinine ihtiyaç duyar.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="29"/>
         <source>This option allows users to register without administrator&apos;s approval. Registered users only have access to public projects by default.</source>
-        <translation>Эта опция разрешает регистрацию пользователей без подтверждения администратора. Зарегистрированные пользователи по умолчанию получат доступ только к публичным проектам.</translation>
+        <translation>Bu seçenek admin onayına gerek kalmadan kullanıcıların kayıt olabilmesine izin verir. Kayıtlı kullanıcılar varsayılan olarak herkese açık projelere erişebilir.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="31"/>
         <source>Enable automatic approval</source>
-        <translation>Разрешить автоматическое подтверждение</translation>
+        <translation>Otomatik onayı aktifleştir</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="33"/>
         <source>Optionally send email notifications about pending registration requests to this address. Requires the cron job to be running.</source>
-        <translation>Опционально отправлять на этот адрес электронные оповещения об ожидающих подтверждения запросов на регистрацию. Требуется настройка периодической операции.</translation>
+        <translation>Tercihe bağlı olarak bekleyen kullanıcı kayıt istekleriyle ilgili bildirimler bu adrese gönderilir. Cron job çalışmasını gerektirir.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="35"/>
         <source>Email address:</source>
-        <translation>Адрес e-mail:</translation>
+        <translation>E-posta adresi:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="40"/>
         <source>Limits</source>
-        <translation>Ограничения</translation>
+        <translation>Limit</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="42"/>
         <source>The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.</source>
-        <translation>Максимальная длина (в символах) комментариев и описаний, и максимальный размер (в байтах) разрешенных вложений.</translation>
+        <translation>Yorumlar ve açıklamalar için izin verilen en fazla karakter sayısı ve eklentiler için izin verilen en fazla boyut (byte cinsinden).</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="44"/>
         <source>Maximum text length:</source>
-        <translation>Максимальная длина текста:</translation>
+        <translation>En fazla metin uzunluğu:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="45"/>
         <source>Maximum attachment size:</source>
-        <translation>Максимальный размер вложений:</translation>
+        <translation>En fazla eklenti boyutu:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="50"/>
         <source>Attachment Storage</source>
-        <translation>Хранилище вложений</translation>
+        <translation>Eklenti Deposu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="52"/>
         <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
-        <translation>Максимальный размер (в байтах) файлов, хранимых в базе данных. Файлы большего размера будут храниться в файловой системе.</translation>
+        <translation>Veritabanına kaydedilecek dosyaların boyutu (en fazla). Daha büyük olanlar dosya sistemine kaydedilecek.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="54"/>
         <source>Maximum database storage size:</source>
-        <translation>Максимальный размер хранимых данных:</translation>
+        <translation>İzin verilen en fazla veritabanı boyutu:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="59"/>
         <source>Maximum Lifetime</source>
-        <translation>Максимальное время существования</translation>
+        <translation>Yaşam Süresi</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="61"/>
         <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
-        <translation>Максимальное время, после которого неактивные сессии и события в журнале сообщений будут удаляться.</translation>
+        <translation>Olay günlüğündeki olay ve pasif oturumların silinme süresi</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="63"/>
         <source>Session lifetime:</source>
-        <translation>Время существования сессии:</translation>
+        <translation>Oturum zaman aşımı süresi:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="64"/>
         <source>Event log lifetime:</source>
-        <translation>Время существования журнала сообщений:</translation>
+        <translation>Olay günlüğü yaşam ömrü:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="65"/>
         <source>Inactive user registration request lifetime:</source>
-        <translation>Время существования запросов на регистрацию:</translation>
+        <translation>Pasif kullanıcı kayıt isteği yaşam ömrü:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="70"/>
         <source>Garbage Collection</source>
-        <translation>Сборка мусора</translation>
+        <translation>Yıkıcı</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="72"/>
         <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
-        <translation>Вероятность сборки мусора после каждого запроса. Если периодическая операция используется для сборки мусора, убедитесь что она активирована.</translation>
+        <translation>Her istekten sonra isteklerin kuyrukta bekleme/gitmeme ihtimali var. Eğer Cron kullanıyorsanız Cron&apos;un çalıştığından emin olun.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="74"/>
         <source>GC probability:</source>
-        <translation>Вероятность сборки мусора:</translation>
+        <translation>GC Olasılığı</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="79"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="80"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -1242,127 +1242,127 @@
     <message>
         <location filename="../../../admin/settings/mail.php" line="33"/>
         <source>Email Settings</source>
-        <translation>Настройки e-mail</translation>
+        <translation>Mail Ayarları</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="74"/>
         <source>Disabled</source>
-        <translation>Отключено</translation>
+        <translation>Pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="75"/>
         <source>Standard PHP mailer</source>
-        <translation>Стандартный отправитель PHP</translation>
+        <translation>Varsayılan &quot;PHP mailer&quot;</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="76"/>
         <source>Custom SMTP server</source>
-        <translation>Произвольный SMTP сервер</translation>
+        <translation>Farklı SMTP sunucu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="79"/>
         <source>None</source>
-        <translation>Не используется</translation>
+        <translation>Hiçbiri</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="103"/>
         <source>Please select the SMTP method of sending emails to test connection.</source>
-        <translation>Пожалуйста, выберите SMTP метод отправки сообщений тестовому соединению.</translation>
+        <translation>Test bağlantısı üzerinden gönderilecek mailler için SMTP yönetimini seçin.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="6"/>
         <source>General</source>
-        <translation>Основные</translation>
+        <translation>Genel</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="8"/>
         <source>Method of sending emails:</source>
-        <translation>Метод отправки сообщений:</translation>
+        <translation>E-posta gönderme yöntemi:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="11"/>
         <source>Email address of the server:</source>
-        <translation>E-mail адрес сервера:</translation>
+        <translation>Sunucunun e-posta adresi:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="13"/>
         <source>If sending emails is enabled, make sure that the cron job is running.</source>
-        <translation>Если отправка сообщений включена, убедитесь, что периодическая операция активирована.</translation>
+        <translation>Mail göndermeyi aktifleştirdiyseniz, cron jobs&apos;un çalıştığından emin olun.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="18"/>
         <source>SMTP Server</source>
-        <translation>SMTP сервер</translation>
+        <translation>SMTP sunucu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="20"/>
         <source>Fill the information below when using a custom SMTP server.</source>
-        <translation>Введите необходимую информацию, если используется произвольный сервер SMTP.</translation>
+        <translation>Farklı bir SMTP sunucu kullanmak için aşağıda bilgileri doldurun.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="22"/>
         <source>Server name:</source>
-        <translation>Имя сервера:</translation>
+        <translation>Sunucu adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="23"/>
         <source>Port number:</source>
-        <translation>Номер порта:</translation>
+        <translation>Port numarası:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="24"/>
         <source>Encryption mode:</source>
-        <translation>Режим шифрования:</translation>
+        <translation>Şifreleme modu:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="25"/>
         <source>User name:</source>
-        <translation>Имя пользователя:</translation>
+        <translation>Kullanıcı Adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="26"/>
         <source>Password:</source>
-        <translation>Пароль:</translation>
+        <translation>Şifre:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="31"/>
         <source>Connection to the SMTP server was successful.</source>
-        <translation>Соединение с SMTP сервером прошло успешно.</translation>
+        <translation>SMTP sunucu bağlantısı başarılı.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="35"/>
         <source>Test Connection</source>
-        <translation>Проверить</translation>
+        <translation>Test Bağlantısı</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="41"/>
         <source>Hyperlinks</source>
-        <translation>Гиперссылки</translation>
+        <translation>Linkler</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="43"/>
         <source>Enter the base URL of the server, with the trailing slash, to enable hyperlinks in emails.</source>
-        <translation>Введите базовый URL адрес сервера, с начальными косыми чертами, чтобы использовать гиперссылки в e-mail сообщениях.</translation>
+        <translation>E-postalardaki linkleri aktifleştirmek için sonunda slash olarak şekilde sunucu taban URL adresini girin.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="45"/>
         <source>Server URL:</source>
-        <translation>URL сервера:</translation>
+        <translation>Sunucu URL:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="48"/>
         <source>Detect</source>
-        <translation>Определить</translation>
+        <translation>Tanıla</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="54"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="55"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -1370,323 +1370,323 @@
     <message>
         <location filename="../../../admin/setup/install.php" line="237"/>
         <source>No supported database engines are available in this PHP installation.</source>
-        <translation>Поддерживаемые базы данных в текущей установке PHP не обнаружены.</translation>
+        <translation>PHP kurulumunda desteklenen veritabanı bulunamadı.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="78"/>
         <location filename="../../../admin/setup/install.html.php" line="9"/>
         <source>Server Configuration</source>
-        <translation>Настройки сервера</translation>
+        <translation>Sunucu Ayarları</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="79"/>
         <source>Configure your WebIssues Server</source>
-        <translation>Настройте свой сервер WebIssues</translation>
+        <translation>WebIssues Sunucunuzu Yapılandırın</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="213"/>
         <source>My WebIssues Server</source>
-        <translation>Мой сервер WebIssues</translation>
+        <translation>WebIssue Sunucum</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="259"/>
         <source>Install a new server</source>
-        <translation>Установить новый сервер</translation>
+        <translation>Yeni sunucu kurulumu yap</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="260"/>
         <source>Use an existing server</source>
-        <translation>Использовать существующий сервер</translation>
+        <translation>Varolan sunucuyu kullan</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="269"/>
         <source>Do not install any issue types</source>
-        <translation>Не устанавливать типы задач</translation>
+        <translation>Herhangi bir konu türü yükleme</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="270"/>
         <source>Install the default set of issue types</source>
-        <translation>Установить набор типов задач по умолчанию</translation>
+        <translation>Varsayılan konu türlerini yükle</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="344"/>
         <location filename="../../../admin/setup/install.php" line="351"/>
         <location filename="../../../admin/setup/install.php" line="358"/>
         <source>The &apos;%1&apos; extension is missing or disabled.</source>
-        <translation>Расширение %1 отсутствует или отключено.</translation>
+        <translation>&apos;%1&apos; uzantısı yüklü değil ya da pasif.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="294"/>
         <source>Could not connect to database. Please check connection details and try again.</source>
-        <translation>Не удалось подключиться к базе данных. Проверьте соединение и повторите попытку.</translation>
+        <translation>Veritabanına bağlanılamadı. Lütfen bağlantı bilgilerini kontrol ettikten sonra tekrar deneyin.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="310"/>
         <source>The WebIssues tables were not found in the database. Make sure the table prefix is correct and try again.</source>
-        <translation>Таблицы WebIssues не найдены в базе данных. Убедитесь, что префикс таблиц верный, и повторите попытку.</translation>
+        <translation>WebIssues tabloları veritabanında bulunamadı. Tablo önekinin doğru olduğundan emin olduktan sonra tekrar deneyin.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="319"/>
         <source>The existing version of the database cannot be used with this version of WebIssues Server.</source>
-        <translation>Существующая версия базы данных не может быть использована с этим сервером WebIssues.</translation>
+        <translation>Varolan veritabanı tabloları bu versiyonda kullanılamaz.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="327"/>
         <source>The WebIssues tables already exist in the database. Drop them first or use a different table prefix and try again.</source>
-        <translation>Таблицы WebIssues уже находятся в базе данных. Сначала удалите их, либо используйте другой префикс и повторите попытку.</translation>
+        <translation>WebIssues tabloları zaten veritabanında mevcut. İlk önce onları silin ya da farklı bir tablo öneki belirledikten sonra tekrar deneyin.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="335"/>
         <source>Could not retrieve information from the database.</source>
-        <translation>Не удалось получить информацию из базы данных.</translation>
+        <translation>Veritabanından bilgiler alınamadı.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="377"/>
         <source>Database does not support InnoDB storage which is required by WebIssues Server.</source>
-        <translation>База данных не поддерживает хранилище InnoDB, необходимое серверу WebIssues.</translation>
+        <translation>Veritabanı sunucusu WebIssues için özellikle gerekli olan InnoDB türünü desteklemiyor.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="403"/>
         <source>Database version %1 is older than minimum required version %2.</source>
-        <translation>База данных версии %1 старше минимально требуемой версии %2.</translation>
+        <translation>%1 veritabanı versiyonu minimum gerekli %2 versiyonundan daha düşük.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="430"/>
         <source>Completed the installation of the server</source>
-        <translation>Установка сервера завершена</translation>
+        <translation>Sunucu kurulumu tamamlandı</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="464"/>
         <source>Updated database to version %1</source>
-        <translation>База данных обновлена до версии %1</translation>
+        <translation>Veritabanı %1 versiyonuna güncellendi</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="491"/>
         <source>The configuration file could not be written.</source>
-        <translation>Не удалась запись в файл настроек.</translation>
+        <translation>Yapılandırma dosyasına yazılamadı.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="17"/>
         <source>Administration Panel</source>
-        <translation>Панель администрирования</translation>
+        <translation>Yönetim Paneli</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="37"/>
         <source>Select language used during the installation.</source>
-        <translation>Выберите язык для процесса установки.</translation>
+        <translation>Kurulum süresince kullanmak istediğiniz dili seçin.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="39"/>
         <source>Language:</source>
-        <translation>Язык:</translation>
+        <translation>Dil:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="6"/>
         <source>The configuration file of this WebIssues Server already exists.</source>
-        <translation>Файл настроек сервера WebIssues уже существует.</translation>
+        <translation>Bu WebIssues sunucusunun yapılandırma dosyası zaten kayıtlı.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="8"/>
         <source>For security reasons, you must first delete the server configuration file and then run the %1 page again.</source>
-        <translation>В целях безопасности удалите файл настроек и затем запустите страницу %1 снова.</translation>
+        <translation>Güvenlik sebebiyle, ilk önce sunucu yapılandırma dosyasını silin, sonrasın %1 sayfasını çalıştırın.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="14"/>
         <source>Installation of your WebIssues Server was successfully completed.</source>
-        <translation>Установка сервера WebIssues окончена успешно.</translation>
+        <translation>WebIssues Sunucu kurulumu başarılı bir şekilde tamamlandı.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="16"/>
         <source>Go to the %1 to continue the configuration of this server.</source>
-        <translation>Перейти к %1 для продолжения настроек сервера.</translation>
+        <translation>Sunucuyu yapılandırmak için %1 sayfasına gidin.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="54"/>
         <source>Database Engine</source>
-        <translation>Ядро базы данных</translation>
+        <translation>Veritabanı</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="95"/>
         <source>Please enter the parameters of the new server.</source>
-        <translation>Введите параметры нового сервера.</translation>
+        <translation>Yeni sunucu değişkenlerini girin.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="100"/>
         <source>Enter the name of this server.</source>
-        <translation>Введите имя сервера.</translation>
+        <translation>Sunucu ismini girin.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="109"/>
         <source>The Administrator user account will be created allowing you to log in to the server and change its settings.</source>
-        <translation>Созданная учетная запись Администратора позволит подключиться к серверу и изменить настройки.</translation>
+        <translation>Sunucuya giriş yapıp yapılandırma ayarlarını değiştirebilmeniz için yönetici hesabı oluşturulacak.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="98"/>
         <location filename="../../../admin/setup/install.html.php" line="132"/>
         <source>Server Information</source>
-        <translation>Информация о сервере</translation>
+        <translation>Sunucu Bilgisi</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="51"/>
         <source>Please enter information required to connect to the database.</source>
-        <translation>Введите информацию для соединения с базой данных.</translation>
+        <translation>Veritabanına bağlanmak için gerekli bilgileri girin.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="26"/>
         <source>Installation failed with the following fatal error:</source>
-        <translation>Установка не выполнения из-за следующей фатальной ошибки:</translation>
+        <translation>Kurulum aşağıdaki hatadan dolayı yapılamadı:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="44"/>
         <source>This wizard will help you configure the WebIssues Server.</source>
-        <translation>Этот мастер поможет Вам настроить сервер WebIssues.</translation>
+        <translation>Bu sihirbaz WebIssues sunucusunu yapılandırmanıza yardımcı olacak.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="56"/>
         <source>Select the type of the database to use:</source>
-        <translation>Выберите тип используемой базы данных:</translation>
+        <translation>Kullanmak istediğiniz veritabanı türünü seçin:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="63"/>
         <source>Connection Details</source>
-        <translation>Информация о соединении</translation>
+        <translation>Bağlantı Detayları</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="65"/>
         <source>Host name:</source>
-        <translation>Имя хоста:</translation>
+        <translation>Host Adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="66"/>
         <source>Database name:</source>
-        <translation>Имя базы данных:</translation>
+        <translation>Veritabanı adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="67"/>
         <source>User name:</source>
-        <translation>Имя пользователя:</translation>
+        <translation>Kullanıcı Adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="68"/>
         <location filename="../../../admin/setup/install.html.php" line="112"/>
         <source>Password:</source>
-        <translation>Пароль:</translation>
+        <translation>Şifre:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="75"/>
         <source>Mode</source>
-        <translation>Режим</translation>
+        <translation>Mod</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="77"/>
         <source>Select if you want to install a new server or recreate the configuration file for an existing server:</source>
-        <translation>Укажите, хотите Вы установить новый сервер или воссоздать файл настроек для текущего сервера:</translation>
+        <translation>Yeni bir sunucu kurulumu mu yapmak istiyorsunuz yoksa varolan bir sunucu için yapılandırma dosyasını yeniden mi oluşturmak istiyorsunuz seçin.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="84"/>
         <source>Table Prefix</source>
-        <translation>Префикс таблиц</translation>
+        <translation>Tablo Öneki</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="140"/>
         <source>Initial configuration:</source>
-        <translation>Начальные настройки:</translation>
+        <translation>Varolan yapılandırma:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="141"/>
         <source>Default issue types</source>
-        <translation>Типы задач по умолчанию</translation>
+        <translation>Varsayılan konu tipleri</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="141"/>
         <source>No issue types</source>
-        <translation>Нет типов задач</translation>
+        <translation>Konu tipi yok</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="171"/>
         <source>&amp;lt; Back</source>
-        <translation>&amp;lt; Назад</translation>
+        <translation>&amp;lt; Geri</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="186"/>
         <source>Installation in progress...</source>
-        <translation>Установка...</translation>
+        <translation>Kurulum devam ediyor...</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="86"/>
         <source>You can enter an optional prefix for table names. This allows installing multiple servers using the same database.</source>
-        <translation>Вы можете ввести опциональный префикс для имен таблиц. Это позволит настроить несколько серверов для работы с одной базой данных.</translation>
+        <translation>Tercihe bağlı olarak tablolara için bir önek girebilirsiniz. Bu, aynı veritabanında birden fazla sunucu çalıştırmanıza olanak sağlar.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="20"/>
         <source>Do not forget to copy attachments stored in the file system from the old version of the server.</source>
-        <translation>Не забудьте скопировать вложения, хранящиеся в файловой системе, из старой версии сервера.</translation>
+        <translation>Dosya sisteminde kayıtlı bulunan eklentileri eski sunucudan kopyalamayı unutmayın.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="88"/>
         <source>Table prefix:</source>
-        <translation>Префикс таблиц:</translation>
+        <translation>Tablo öneki:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="102"/>
         <location filename="../../../admin/setup/install.html.php" line="136"/>
         <source>Server name:</source>
-        <translation>Имя сервера:</translation>
+        <translation>Sunucu adı:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="107"/>
         <source>Administrator Account</source>
-        <translation>Учетная запись Администратора</translation>
+        <translation>Yönetici Hesabı</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="111"/>
         <source>Login:</source>
-        <translation>Логин:</translation>
+        <translation>Giriş:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="113"/>
         <source>Confirm password:</source>
-        <translation>Подтвердите пароль:</translation>
+        <translation>Şifre (Tekrar):</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="118"/>
         <source>Initial Configuration</source>
-        <translation>Начальные настройки</translation>
+        <translation>Varolan Yapılandırma</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="120"/>
         <source>Select the initial configuration of this server:</source>
-        <translation>Выберите начальные настройки сервера:</translation>
+        <translation>Sunucu için var olan yapılandırmayı seçin:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="129"/>
         <source>The new server will be installed in the selected database.</source>
-        <translation>Новый сервер будет установлен в выбранную базу данных.</translation>
+        <translation>Sunucu seçili veritabanına kurulacak.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="153"/>
         <source>The database of this WebIssues Server will be updated to version %1.</source>
-        <translation>База данных этого сервера WebIssues будет обновлена до версии %1.</translation>
+        <translation>WebIssues Sunucusu veritabanı %1 versiyonuna güncellenecek.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="155"/>
         <source>The server is already configured. It will not be modified during the installation.</source>
-        <translation>Этот сервер уже настроен. Его настройки не будет изменены во время установки.</translation>
+        <translation>Sunucu zaten yapılandırılmış. Kurulum sırasında yapılandırılmayacak.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="168"/>
         <source>Refresh</source>
-        <translation>Обновить</translation>
+        <translation>Yenile</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="174"/>
         <source>Next &amp;gt;</source>
-        <translation>Вперед &amp;gt;</translation>
+        <translation>İleri &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="177"/>
         <source>Install</source>
-        <translation>Установить</translation>
+        <translation>Kur</translation>
     </message>
 </context>
 <context>
@@ -1694,29 +1694,29 @@
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="309"/>
         <source>Administrator</source>
-        <translation>Администратор</translation>
+        <translation>Yönetici</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="339"/>
         <source>Forum</source>
-        <translation>Форум</translation>
+        <translation>Forum</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="345"/>
         <source>Bugs</source>
-        <translation>Ошибки</translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="348"/>
         <source>Assigned To</source>
         <comment>bug</comment>
-        <translation>Назначено</translation>
+        <translation>Atandı</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="355"/>
         <source>Status</source>
         <comment>bug</comment>
-        <translation>Статус</translation>
+        <translation>Durum</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="358"/>
@@ -1726,109 +1726,109 @@
         <location filename="../../../admin/setup/installer.inc.php" line="416"/>
         <source>Active</source>
         <comment>bug</comment>
-        <translation>Активно</translation>
+        <translation>Aktif</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="358"/>
         <location filename="../../../admin/setup/installer.inc.php" line="423"/>
         <source>Resolved</source>
         <comment>bug</comment>
-        <translation>Решено</translation>
+        <translation>Çözüldü</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="358"/>
         <source>Closed</source>
         <comment>bug</comment>
-        <translation>Закрыто</translation>
+        <translation>Kapandı</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="364"/>
         <source>Reason</source>
-        <translation>Причина</translation>
+        <translation>Sebep</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Fixed</source>
-        <translation>Исправлено</translation>
+        <translation>Onarıldı</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Obsolete</source>
-        <translation>Устарело</translation>
+        <translation>Geçersiz</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Duplicate</source>
-        <translation>Дубликат</translation>
+        <translation>Çift</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="368"/>
         <source>As Designed</source>
-        <translation>Не ошибка</translation>
+        <translation>Tasarlandığı Gibi</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="368"/>
         <source>Unable To Reproduce</source>
-        <translation>Не репродуцируется</translation>
+        <translation>Tekrarlanabilir Değil</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="368"/>
         <source>Test Failed</source>
-        <translation>Тест не окончен</translation>
+        <translation>Test Başarısız Oldu</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="372"/>
         <source>Severity</source>
         <comment>bug</comment>
-        <translation>Серьезность</translation>
+        <translation>Önem</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="382"/>
         <source>Version</source>
-        <translation>Версия</translation>
+        <translation>Versiyon</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="390"/>
         <source>Created By Me</source>
         <comment>bug</comment>
-        <translation>Создано мной</translation>
+        <translation>Ben Oluşturdum</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="397"/>
         <source>Active Bugs</source>
-        <translation>Активные ошибки</translation>
+        <translation>Aktif Hatalar</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="404"/>
         <source>My Active Bugs</source>
-        <translation>Мои активные ошибки</translation>
+        <translation>Aktif Hatalarım</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="412"/>
         <source>Unassigned Bugs</source>
-        <translation>Не назначенные ошибки</translation>
+        <translation>Atanmamış Hatalar</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="420"/>
         <source>Resolved Bugs</source>
-        <translation>Исправленные ошибки</translation>
+        <translation>Çözülmüş Hatalar</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="429"/>
         <source>Tasks</source>
-        <translation>Задачи</translation>
+        <translation>Görevler</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="432"/>
         <source>Assigned To</source>
         <comment>task</comment>
-        <translation>Назначено</translation>
+        <translation>Atandı</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="439"/>
         <source>Status</source>
         <comment>task</comment>
-        <translation>Статус</translation>
+        <translation>Durumu</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="442"/>
@@ -1838,62 +1838,62 @@
         <location filename="../../../admin/setup/installer.inc.php" line="500"/>
         <source>Active</source>
         <comment>task</comment>
-        <translation>Активно</translation>
+        <translation>Aktif</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="442"/>
         <source>Closed</source>
         <comment>task</comment>
-        <translation>Закрыто</translation>
+        <translation>Kapandı</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="448"/>
         <source>Priority</source>
         <comment>task</comment>
-        <translation>Приоритет</translation>
+        <translation>Öncelik</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="458"/>
         <source>Progress</source>
-        <translation>Прогресс</translation>
+        <translation>Aşama</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="466"/>
         <source>Due Date</source>
-        <translation>К сроку</translation>
+        <translation>Bitiş Tarihi</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="474"/>
         <source>Created By Me</source>
         <comment>task</comment>
-        <translation>Создано мной</translation>
+        <translation>Ben Oluşturdum</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="481"/>
         <source>Active Tasks</source>
-        <translation>Активные задачи</translation>
+        <translation>Aktif Görevler</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="488"/>
         <source>My Active Tasks</source>
-        <translation>Мои активные задачи</translation>
+        <translation>Aktif Görevlerim</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="496"/>
         <source>Unassigned Tasks</source>
-        <translation>Неназначенные задачи</translation>
+        <translation>Atanmamış Görevler</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="504"/>
         <source>Completed Tasks</source>
-        <translation>Завершенные задачи</translation>
+        <translation>Tamamlanmış Görevler</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="442"/>
         <location filename="../../../admin/setup/installer.inc.php" line="507"/>
         <source>Completed</source>
         <comment>task</comment>
-        <translation>Завершено</translation>
+        <translation>Tamamlandı</translation>
     </message>
 </context>
 <context>
@@ -1901,82 +1901,82 @@
     <message>
         <location filename="../../../admin/setup/update.php" line="50"/>
         <source>Server Update</source>
-        <translation>Обновление сервера</translation>
+        <translation>Sunucu Güncellemesi</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.php" line="51"/>
         <source>Update your WebIssues Server</source>
-        <translation>Обновить Ваш сервер WebIssues</translation>
+        <translation>WebIssues Sunucunuzu güncelleyin</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.php" line="126"/>
         <source>Updated database to version %1</source>
-        <translation>База данных обновлена до версии %1</translation>
+        <translation>Veritabanı %1 versiyonuna güncellendi</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="6"/>
         <source>The database of this WebIssues Server is already up to date.</source>
-        <translation>Этот сервер WebIssues уже использует актуальную версию базы данных.</translation>
+        <translation>WebIssues Sunucusu veritabanı zaten güncel.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="11"/>
         <source>Update of your WebIssues Server was successfully completed.</source>
-        <translation>Обновление сервера WebIssues завершено успешно.</translation>
+        <translation>WebIssues Sunucu güncellemesi başarılı bir şekilde tamamlandı.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="13"/>
         <source>Go to the %1 to continue the configuration of this server.</source>
-        <translation>Перейти к %1 для продолжения настроек сервера.</translation>
+        <translation>Sunucuyu yapılandırmak için %1 sayfasına gidin.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="14"/>
         <source>Administration Panel</source>
-        <translation>Панель администрирования</translation>
+        <translation>Yönetim Paneli</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="19"/>
         <source>Update failed with the following fatal error:</source>
-        <translation>Обновление не выполнено из-за следующей фатальной ошибки:</translation>
+        <translation>Aşağıdaki hatadan dolayı güncelleme başarısız oldu:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="30"/>
         <source>Log in as administrator in order to update the server.</source>
-        <translation>Войти с учетной записью Администратора для обновления сервера.</translation>
+        <translation>Sunucuyu güncellemek için giriş yapın.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="32"/>
         <source>Login:</source>
-        <translation>Логин:</translation>
+        <translation>Giriş:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="33"/>
         <source>Password:</source>
-        <translation>Пароль:</translation>
+        <translation>Şifre:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="38"/>
         <source>The database of this WebIssues Server will be updated to version %1.</source>
-        <translation>База данных этого сервера WebIssues будет обновлена до версии %1.</translation>
+        <translation>WebIssues Sunucusu veritabanı %1 versiyonuna güncellenecek.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="50"/>
         <source>&amp;lt; Back</source>
-        <translation>&amp;lt; Назад</translation>
+        <translation>&amp;lt; Geri</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="53"/>
         <source>Next &amp;gt;</source>
-        <translation>Вперед &amp;gt;</translation>
+        <translation>İleri &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="56"/>
         <source>Update</source>
-        <translation>Обновить</translation>
+        <translation>Güncelle</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="65"/>
         <source>Update in progress...</source>
-        <translation>Обновление...</translation>
+        <translation>Güncelleme devam ediyor...</translation>
     </message>
 </context>
 <context>
@@ -1984,22 +1984,22 @@
     <message>
         <location filename="../../../admin/types/addtype.php" line="33"/>
         <source>Add Type</source>
-        <translation>Добавить тип</translation>
+        <translation>Tür Ekle</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="5"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="8"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2007,177 +2007,177 @@
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="45"/>
         <source>Issue Types</source>
-        <translation>Типы задач</translation>
+        <translation>Konu Türleri</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="62"/>
         <source>Modify Attribute</source>
-        <translation>Изменить атрибут</translation>
+        <translation>Nitelik Değiştir</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="74"/>
         <source>Add Attribute</source>
-        <translation>Добавить атрибут</translation>
+        <translation>Nitelik Ekle</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="81"/>
         <source>Allow entering custom values</source>
-        <translation>Разрешить ввод произвольных значений</translation>
+        <translation>Farklı değerlere izin ver</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="320"/>
         <source>Date only</source>
-        <translation>Только дата</translation>
+        <translation>Sadece tarih</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="321"/>
         <source>Date and time without time zone conversion</source>
-        <translation>Дата и время без конвертации часового пояса</translation>
+        <translation>Tarih ve saat için saat dilimi dönüşümü yapma</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="322"/>
         <source>Date and time using local time zone</source>
-        <translation>Дата и время используя локальный часовой пояс</translation>
+        <translation>Tarih ve saat için yerel saat dilimini kullan</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="438"/>
         <source>Invalid value</source>
-        <translation>Неверное значение</translation>
+        <translation>Geçersiz değer</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Некоторые из введенных значений некорректны.</translation>
+        <translation>Girdiğiniz bazı değerlerde hata var.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="15"/>
         <source>Create a new attribute in type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Создать новый атрибут типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türünde yeni bir nitelik oluştur.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="17"/>
         <source>Modify attribute &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Изменить атрибут &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; niteliğini düzenle.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="126"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="21"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="35"/>
         <location filename="../../../admin/types/attribute.html.php" line="68"/>
         <source>Attribute Details</source>
-        <translation>Информация об атрибуте</translation>
+        <translation>Nitelik Detayları</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="65"/>
         <source>Specify details of &lt;strong&gt;%1&lt;/strong&gt; attribute.</source>
-        <translation>Укажите информацию об атрибуте &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; niteliğinin detaylarını belirle.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="75"/>
         <location filename="../../../admin/types/attribute.html.php" line="91"/>
         <source>Minimum length:</source>
-        <translation>Минимальная длина:</translation>
+        <translation>En kısa uzunluk:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="76"/>
         <location filename="../../../admin/types/attribute.html.php" line="92"/>
         <source>Maximum length:</source>
-        <translation>Максимальная длина:</translation>
+        <translation>En fazla uzunluk:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="85"/>
         <source>Enter one dropdown list item per line.</source>
-        <translation>Введите один выпадающий список на строку.</translation>
+        <translation>Her satıra açılır menü öğelerinden birini girin</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="87"/>
         <source>Dropdown list items:</source>
-        <translation>Элементы выпадающего списка:</translation>
+        <translation>Açılır menü öğeleri:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="97"/>
         <source>Decimal places:</source>
-        <translation>Десятичный разряд:</translation>
+        <translation>Ondalık basamakları:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="98"/>
         <source>Minimum value:</source>
-        <translation>Минимальное значение:</translation>
+        <translation>En az:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="99"/>
         <source>Maximum value:</source>
-        <translation>Максимальное значение:</translation>
+        <translation>En fazla:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="100"/>
         <source>Strip trailing decimal zeros</source>
-        <translation>Убрать начальные нули</translation>
+        <translation>Anlamsız 0 basamaklarını sil</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="48"/>
         <source>Common Settings</source>
-        <translation>Общие настройки</translation>
+        <translation>Genel Ayarlar</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="25"/>
         <source>Attribute Type</source>
-        <translation>Тип атрибута</translation>
+        <translation>Nitelik Tipi</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="29"/>
         <source>Go</source>
-        <translation>Перейти</translation>
+        <translation>Git</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="38"/>
         <source>Edit</source>
-        <translation>Редактировать</translation>
+        <translation>Düzenle</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="50"/>
         <source>Attribute is required</source>
-        <translation>Требуется атрибут</translation>
+        <translation>Nitelik gerekli</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="54"/>
         <location filename="../../../admin/types/attribute.html.php" line="56"/>
         <source>Default value:</source>
-        <translation>Значение по умолчанию:</translation>
+        <translation>Varsayılan değer:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="73"/>
         <source>Allow entering multiple lines of text</source>
-        <translation>Разрешить многострочный ввод текста</translation>
+        <translation>Birden fazla satıra izin ver</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="83"/>
         <location filename="../../../admin/types/attribute.html.php" line="112"/>
         <source>Allow selecting multiple items</source>
-        <translation>Разрешить выбор нескольких значений</translation>
+        <translation>Birden fazla değer seçilmesine izin ver</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="89"/>
         <source>The following settings can only be used when entering custom values is allowed and selecting multiple items is not allowed.</source>
-        <translation>Следующие настройки могут быть использованы, если разрешен ввод произвольных значений и запрещен выбор нескольких значений.</translation>
+        <translation>Aşağıdaki ayarlar sadece özel değerler girerken geçerlidir ve çoklu öğe seçmeye izin verilmemektedir.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="110"/>
         <source>Allow selecting only project members</source>
-        <translation>Разрешить выбор только участников проекта</translation>
+        <translation>Sadece proje üyelerini seçmeye izin ver</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="125"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -2185,27 +2185,27 @@
     <message>
         <location filename="../../../admin/types/deleteattribute.php" line="33"/>
         <source>Delete Attribute</source>
-        <translation>Удалить атрибут</translation>
+        <translation>Nitelik Sil</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="3"/>
         <source>Are you sure you want to delete attribute &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить атрибут &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; niteliğini silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All current and historical values of this attribute will be deleted.</source>
-        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Все текущие и прошлые значения этого атрибута будут удалены.</translation>
+        <translation>&lt;strong&gt;Uyarı:&lt;/strong&gt; bu niteliğe ait şimdiki ve eski tüm değerler silinecektir.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2213,27 +2213,27 @@
     <message>
         <location filename="../../../admin/types/deletetype.php" line="33"/>
         <source>Delete Type</source>
-        <translation>Удалить тип</translation>
+        <translation>Tür Sil</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="3"/>
         <source>Are you sure you want to delete type &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить тип &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türünü silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues of this type will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Все папки и задачи этого типа будут удалены.</translation>
+        <translation>&lt;strong&gt;Uyarı:&lt;/strong&gt; bu türdeki tüm istek ve klasörler kalıcı olarak silinecektir.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2241,95 +2241,95 @@
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="131"/>
         <source>Text</source>
-        <translation>Текст</translation>
+        <translation>Metin</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="132"/>
         <source>Dropdown list</source>
-        <translation>Выпадающий список</translation>
+        <translation>Aşağı açılır liste</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="134"/>
         <source>Date &amp; time</source>
-        <translation>Дата и время</translation>
+        <translation>Tarih &amp; saat</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="133"/>
         <source>Numeric</source>
-        <translation>Число</translation>
+        <translation>Sayısal</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="69"/>
         <source>Multiple lines</source>
-        <translation>Многострочные значения</translation>
+        <translation>Birden fazla satır</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="72"/>
         <location filename="../../../admin/types/helper.inc.php" line="88"/>
         <source>Min. length: %1</source>
-        <translation>Мин. длина: %1</translation>
+        <translation>En az uzunluk: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="75"/>
         <location filename="../../../admin/types/helper.inc.php" line="91"/>
         <source>Max. length: %1</source>
-        <translation>Макс. длина: %1</translation>
+        <translation>En fazla uzunluk: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="80"/>
         <source>Editable</source>
-        <translation>Редактируемое</translation>
+        <translation>Düzenlenebilir</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="82"/>
         <location filename="../../../admin/types/helper.inc.php" line="120"/>
         <source>Multiple selection</source>
-        <translation>Несколько значений</translation>
+        <translation>Çoklu seçim</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="85"/>
         <source>Items: %1</source>
-        <translation>Элементы: %1</translation>
+        <translation>Öğeler: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="98"/>
         <source>Decimal places: %1</source>
-        <translation>Разряд: %1</translation>
+        <translation>Ondalıklı basamak: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="101"/>
         <source>Min. value: %1</source>
-        <translation>Мин. значение: %1</translation>
+        <translation>En az: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="104"/>
         <source>Max. value: %1</source>
-        <translation>Макс. значение: %1</translation>
+        <translation>En fazla: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="106"/>
         <source>Strip zeros</source>
-        <translation>Убрать нули</translation>
+        <translation>Sıfırları sil</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="111"/>
         <source>With time</source>
-        <translation>Со временем</translation>
+        <translation>Zamanı</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="113"/>
         <source>Local time zone</source>
-        <translation>Локальный часовой пояс</translation>
+        <translation>Yerel saat dilimi</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="118"/>
         <source>Members only</source>
-        <translation>Только участники</translation>
+        <translation>Yalnızca üyeler için</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="135"/>
         <source>User</source>
-        <translation>Пользователь</translation>
+        <translation>Kullanıcı</translation>
     </message>
 </context>
 <context>
@@ -2337,87 +2337,87 @@
     <message>
         <location filename="../../../admin/types/index.php" line="33"/>
         <source>Issue Types</source>
-        <translation>Типы задач</translation>
+        <translation>Konu Türleri</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="60"/>
         <source>Yes</source>
-        <translation>Да</translation>
+        <translation>Evet</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="60"/>
         <source>No</source>
-        <translation>Нет</translation>
+        <translation>Hayır</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="87"/>
         <source>Rename Type</source>
-        <translation>Переименовать тип</translation>
+        <translation>Türü Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="88"/>
         <source>Delete Type</source>
-        <translation>Удалить тип</translation>
+        <translation>Türü Sil</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="90"/>
         <source>Rename Attribute</source>
-        <translation>Переименовать атрибут</translation>
+        <translation>Niteliği Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="91"/>
         <source>Delete Attribute</source>
-        <translation>Удалить атрибут</translation>
+        <translation>Nitelik Sil</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="85"/>
         <source>Add Type</source>
-        <translation>Добавить тип</translation>
+        <translation>Tür Ekle</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="11"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="12"/>
         <source>Type</source>
-        <translation>Тип</translation>
+        <translation>Tür</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="13"/>
         <source>Default Value</source>
-        <translation>Значение по умолчанию</translation>
+        <translation>Varsayılan Değer</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="14"/>
         <source>Required</source>
-        <translation>Требуется</translation>
+        <translation>Gerekli</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="15"/>
         <source>Details</source>
-        <translation>Подробности</translation>
+        <translation>Detaylar</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="52"/>
         <source>There are no issue types.</source>
-        <translation>Нет типов задач.</translation>
+        <translation>Konu türü yok.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="86"/>
         <source>Add Attribute</source>
-        <translation>Добавить атрибут</translation>
+        <translation>Nitelik Ekle</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="92"/>
         <source>View Settings</source>
-        <translation>Настройки представлений</translation>
+        <translation>Ayarları Göster</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="89"/>
         <source>Modify Attribute</source>
-        <translation>Изменить атрибут</translation>
+        <translation>Nitelik Değiştir</translation>
     </message>
 </context>
 <context>
@@ -2425,27 +2425,27 @@
     <message>
         <location filename="../../../admin/types/renameattribute.php" line="33"/>
         <source>Rename Attribute</source>
-        <translation>Переименовать атрибут</translation>
+        <translation>Nİtelik Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="3"/>
         <source>Enter the new name of attribute &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Введите новое имя атрибута &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; niteliğine yeni bir isim girin.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2453,27 +2453,27 @@
     <message>
         <location filename="../../../admin/types/renametype.php" line="33"/>
         <source>Rename Type</source>
-        <translation>Переименовать тип</translation>
+        <translation>Türü Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="3"/>
         <source>Enter the new name of type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Введите новое имя типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; niteliğine yeni bir isim gir.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2481,37 +2481,37 @@
     <message>
         <location filename="../../../admin/users/access.php" line="33"/>
         <source>Global Access</source>
-        <translation>Глобальный доступ</translation>
+        <translation>Genel Erişim</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="51"/>
         <source>Regular user</source>
-        <translation>Обычный пользователь</translation>
+        <translation>Normal kullanıcı</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="52"/>
         <source>System administrator</source>
-        <translation>Системный администратор</translation>
+        <translation>Sistem yöneticisi</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="50"/>
         <source>Disabled</source>
-        <translation>Отключено</translation>
+        <translation>Pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="3"/>
         <source>Change global access for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Установить глобальный доступ для пользователя &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısının genel erişimini değiştir.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2519,42 +2519,42 @@
     <message>
         <location filename="../../../admin/users/add.php" line="33"/>
         <source>Add User</source>
-        <translation>Добавить пользователя</translation>
+        <translation>Kullanıcı Ekle</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="5"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="6"/>
         <source>Login:</source>
-        <translation>Логин:</translation>
+        <translation>Giriş:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="7"/>
         <source>Password:</source>
-        <translation>Пароль:</translation>
+        <translation>Şifre:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="8"/>
         <source>Confirm password:</source>
-        <translation>Подтвердите пароль:</translation>
+        <translation>Şifre (Tekrar):</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="9"/>
         <source>User must change password at next logon.</source>
-        <translation>Пользователь должен изменить пароль при следующем входе.</translation>
+        <translation>İlk girişinde kullanıcı şifresini değiştirsin.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2562,62 +2562,62 @@
     <message>
         <location filename="../../../admin/users/addprojects.php" line="59"/>
         <source>Add Projects</source>
-        <translation>Добавить проекты</translation>
+        <translation>Proje Ekle</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.php" line="62"/>
         <source>Regular member</source>
-        <translation>Обычный пользователь</translation>
+        <translation>Normal kullanıcı</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.php" line="63"/>
         <source>Project administrator</source>
-        <translation>Администратор проекта</translation>
+        <translation>Proje yöneticisi</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="6"/>
         <source>Select All</source>
-        <translation>Выбрать все</translation>
+        <translation>Tümünü Seç</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>Отменить выбор</translation>
+        <translation>Hiçbirini Seçme</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="13"/>
         <source>Add user &lt;strong&gt;%1&lt;/strong&gt; to the selected projects.</source>
-        <translation>Добавить пользователя &lt;strong&gt;%1&lt;/strong&gt; к выбранным проектам.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısını seçili projeye ekle.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="20"/>
         <source>Projects</source>
-        <translation>Проекты</translation>
+        <translation>Projeler</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="36"/>
         <source>Access</source>
-        <translation>Доступ</translation>
+        <translation>Erişim</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="41"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="42"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="47"/>
         <source>There are no more available projects to add.</source>
-        <translation>Нет проектов для добавления.</translation>
+        <translation>Eklenecek başka proje yok.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="50"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Kapat</translation>
     </message>
 </context>
 <context>
@@ -2625,89 +2625,89 @@
     <message>
         <location filename="../../../admin/users/index.php" line="33"/>
         <source>User Accounts</source>
-        <translation>Учетные записи пользователей</translation>
+        <translation>Kullanıcı Hesapları</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="40"/>
         <source>Active</source>
-        <translation>Активно</translation>
+        <translation>Aktif</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="83"/>
         <source>Add User</source>
-        <translation>Добавить пользователя</translation>
+        <translation>Kullanıcı Ekle</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="86"/>
         <source>Manage Permissions</source>
-        <translation>Управление разрешениями</translation>
+        <translation>Yetkileri Yönet</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="4"/>
         <source>All Users</source>
-        <translation>Все пользователи</translation>
+        <translation>Tüm Kullanıcılar</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="16"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="17"/>
         <source>Login</source>
-        <translation>Логин</translation>
+        <translation>Giriş</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="19"/>
         <source>Email</source>
-        <translation>E-mail</translation>
+        <translation>E-posta</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="21"/>
         <source>Access</source>
-        <translation>Доступ</translation>
+        <translation>Erişim</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="54"/>
         <source>There are no disabled users.</source>
-        <translation>Нет отключенных пользователей.</translation>
+        <translation>Pasif kullanıcı yok.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="65"/>
         <source>Regular user</source>
-        <translation>Обычный пользователь</translation>
+        <translation>Normal kullanıcı</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="66"/>
         <source>System administrator</source>
-        <translation>Системный администратор</translation>
+        <translation>Sistem yöneticisi</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="85"/>
         <source>Rename User</source>
-        <translation>Переименовать пользователя</translation>
+        <translation>Kullanıcıyı Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="84"/>
         <source>Change Password</source>
-        <translation>Изменить пароль</translation>
+        <translation>Şifreyi Değiştir</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="41"/>
         <source>Disabled</source>
         <comment>filter</comment>
-        <translation>Отключено</translation>
+        <translation>Pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="64"/>
         <source>Disabled</source>
         <comment>user</comment>
-        <translation>Отключено</translation>
+        <translation>Pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="87"/>
         <source>User Preferences</source>
-        <translation>Пользовательские предпочтения</translation>
+        <translation>Kullanıcı Tercihleri</translation>
     </message>
 </context>
 <context>
@@ -2715,32 +2715,32 @@
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="37"/>
         <source>Project Access</source>
-        <translation>Доступ к проекту</translation>
+        <translation>Proje Erişimi</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="52"/>
         <source>Regular member</source>
-        <translation>Обычный пользователь</translation>
+        <translation>Normal kullanıcı</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="53"/>
         <source>Project administrator</source>
-        <translation>Администратор проекта</translation>
+        <translation>Proje yöneticisi</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="4"/>
         <source>Change access to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Изменить доступ к проекту &lt;strong&gt;%1&lt;/strong&gt; для пользователя &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısının &lt;strong&gt;%2&lt;/strong&gt; projesine erişimini düzenle.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="11"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="12"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2748,82 +2748,82 @@
     <message>
         <location filename="../../../admin/users/projects.php" line="37"/>
         <source>Manage Permissions</source>
-        <translation>Управление разрешениями</translation>
+        <translation>İzinleri Düzenle</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="58"/>
         <source>Disabled</source>
-        <translation>Отключено</translation>
+        <translation>Pasif</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="59"/>
         <source>Regular user</source>
-        <translation>Обычный пользователь</translation>
+        <translation>Normal kullanıcı</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="60"/>
         <source>System administrator</source>
-        <translation>Системный администратор</translation>
+        <translation>Sistem yöneticisi</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="69"/>
         <source>Regular member</source>
-        <translation>Обычный пользователь</translation>
+        <translation>Normal kullanıcı</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="70"/>
         <source>Project administrator</source>
-        <translation>Администратор проекта</translation>
+        <translation>Proje yöneticisi</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="87"/>
         <source>Add Projects</source>
-        <translation>Добавить проекты</translation>
+        <translation>Proje Ekle</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="88"/>
         <source>Change Access</source>
-        <translation>Изменить доступ</translation>
+        <translation>Erişim Değiştir</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="89"/>
         <source>Remove Project</source>
-        <translation>Удалить проект</translation>
+        <translation>Projeyi Kaldır</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="28"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="3"/>
         <source>Edit permissions of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать разрешения пользователя &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısının izinlerini düzenle.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="8"/>
         <source>Global Access</source>
-        <translation>Глобальный адрес</translation>
+        <translation>Genel Erişim</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="12"/>
         <source>Change</source>
-        <translation>Изменить</translation>
+        <translation>Değiştir</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="29"/>
         <source>Access</source>
-        <translation>Доступ</translation>
+        <translation>Erişim</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="55"/>
         <source>This user is not a member of any project.</source>
-        <translation>Этот пользователь не является участником ни одного проекта.</translation>
+        <translation>Bu kullanıcı herhangi bir projenin mensubu değil.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="60"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -2831,22 +2831,22 @@
     <message>
         <location filename="../../../admin/users/removeproject.php" line="37"/>
         <source>Remove Project</source>
-        <translation>Удалить проект</translation>
+        <translation>Projeyi Kaldır</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="4"/>
         <source>Do you want to remove user &lt;strong&gt;%1&lt;/strong&gt; from project &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>Удалить пользователя &lt;strong&gt;%1&lt;/strong&gt; из проекта &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; üyesini &lt;strong&gt;%2&lt;/strong&gt; projesinden kaldırmak istiyor musunuz?</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="9"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="10"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2854,27 +2854,27 @@
     <message>
         <location filename="../../../admin/users/rename.php" line="33"/>
         <source>Rename User</source>
-        <translation>Переименовать пользователя</translation>
+        <translation>Kullanıcıyı Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="3"/>
         <source>Enter the new name of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Введите новое имя пользователя &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısının yeni ismini girin.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2882,74 +2882,74 @@
     <message>
         <location filename="../../../admin/views/index.php" line="33"/>
         <source>View Settings</source>
-        <translation>Настройки представлений</translation>
+        <translation>Ayarları Göster</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="3"/>
         <source>Edit public view settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать настройки публичного представления для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türü için herkese açık görünüm ayarlarını düzenle.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="9"/>
         <source>Order of Attributes</source>
-        <translation>Порядок атрибутов</translation>
+        <translation>Nitelik Sıralaması</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="12"/>
         <location filename="../../../admin/views/index.html.php" line="24"/>
         <location filename="../../../admin/views/index.html.php" line="44"/>
         <source>Modify</source>
-        <translation>Изменить</translation>
+        <translation>Değiştir</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="21"/>
         <source>Default View</source>
-        <translation>Представление по умолчанию</translation>
+        <translation>Varsayılan Görünüm</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="29"/>
         <source>Columns:</source>
-        <translation>Колонки:</translation>
+        <translation>Sütunlar:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="33"/>
         <source>Sort By:</source>
-        <translation>Сортировать:</translation>
+        <translation>Sırala:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="41"/>
         <source>Initial View</source>
-        <translation>Исходное представление</translation>
+        <translation>Geçerli Görünüm</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="59"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="60"/>
         <source>Columns</source>
-        <translation>Колонки</translation>
+        <translation>Sütunlar</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="61"/>
         <source>Sort By</source>
-        <translation>Сортировать</translation>
+        <translation>Sırala</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="62"/>
         <source>Filter</source>
-        <translation>Фильтр</translation>
+        <translation>Filtrele</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="83"/>
         <source>This type has no public views.</source>
-        <translation>Этот тип не имеет публичных представлений.</translation>
+        <translation>Bu türe ait herkese açık görünüm yok.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="88"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -2957,32 +2957,32 @@
     <message>
         <location filename="../../../admin/views/initial.php" line="33"/>
         <source>Initial View</source>
-        <translation>Исходное представление</translation>
+        <translation>Geçerli Görünüm</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.php" line="46"/>
         <source>All Issues</source>
-        <translation>Все задачи</translation>
+        <translation>Tüm Konular</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="3"/>
         <source>Select the initial view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Выберите исходное представление для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türü için geçerli görünümü seçin.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="7"/>
         <source>Initial view:</source>
-        <translation>Исходное представление:</translation>
+        <translation>Geçerli görünüm:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -2990,42 +2990,42 @@
     <message>
         <location filename="../../../admin/views/order.php" line="33"/>
         <source>Order of Attributes</source>
-        <translation>Порядок атрибутов</translation>
+        <translation>Nitelik Sıralaması</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="3"/>
         <source>Modify the order of attributes for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Изменить порядок атрибутов типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türüne ait nitelik sıralamasını değiştir.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="8"/>
         <source>Attributes</source>
-        <translation>Атрибуты</translation>
+        <translation>Nitelikler</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="12"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="13"/>
         <source>Order</source>
-        <translation>Порядок</translation>
+        <translation>Sıra</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="24"/>
         <source>Update</source>
-        <translation>Обновить</translation>
+        <translation>Güncelle</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="30"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="31"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3033,27 +3033,27 @@
     <message>
         <location filename="../../../admin/views/unpublish.php" line="33"/>
         <source>Unpublish View</source>
-        <translation>Сделать представление приватным</translation>
+        <translation>Görünümü Yayından Kaldır</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="4"/>
         <source>Are you sure you want to convert public view &lt;strong&gt;%1&lt;/strong&gt; to your personal view?</source>
-        <translation>Вы действительно хотите конвертировать публичное представление &lt;strong&gt;%1&lt;/strong&gt; в приватное?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; herkese açık görünümü kişisel görünümü dönüştürmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="6"/>
         <source>View &lt;strong&gt;%1&lt;/strong&gt; cannot be unpublished.</source>
-        <translation>Представление &lt;strong&gt;%1&lt;/strong&gt; нельзя сделать приватным.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; görünümü yayından kaldırılamaz.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="14"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3063,139 +3063,139 @@
         <location filename="../../../client/alerts/alert.inc.php" line="89"/>
         <location filename="../../../client/alerts/alert.inc.php" line="94"/>
         <source>All Issues</source>
-        <translation>Все задачи</translation>
+        <translation>Tüm Konular</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="100"/>
         <source>Personal Views</source>
-        <translation>Приватные представления</translation>
+        <translation>Kişisel Görünümler</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="103"/>
         <source>Public Views</source>
-        <translation>Публичные представления</translation>
+        <translation>Herkese Açık Görünümler</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="158"/>
         <source>Add Public Alert</source>
-        <translation>Добавить публичное оповещение</translation>
+        <translation>Herkese Açık Uyarı Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="160"/>
         <source>Add Personal Alert</source>
-        <translation>Добавить приватное оповещение</translation>
+        <translation>Kişisel Uyarı Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="163"/>
         <source>Modify Alert</source>
-        <translation>Изменить оповещение</translation>
+        <translation>Uyarıyı Değiştir</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="226"/>
         <source>No days selected</source>
-        <translation>Дни не выбраны</translation>
+        <translation>Gün seçilmedi</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="238"/>
         <source>No hours selected</source>
-        <translation>Часы не выбраны</translation>
+        <translation>Saat seçilmedi</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="7"/>
         <source>Modify public alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Изменить публичное оповещение &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; herkese açık uyarısını değiştir.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="9"/>
         <source>Create a new public alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Создать новое публичное оповещение для папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasörü için herkese açık bir uyarı oluştur.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="11"/>
         <source>Create a new public alert for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Создать новое публичное оповещение для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türü için herkese açık bir uyarı oluştur.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="15"/>
         <source>Modify your personal alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Изменить ваше приватное оповещение &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kişisel uyarısını değiştir.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="17"/>
         <source>Create a new personal alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Создать новое приватное оповещение для папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasörü için kişisel uyarı oluştur.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="19"/>
         <source>Create a new personal alert for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Создать новое приватное оповещение для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türü için kişisel uyarı oluştur.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="30"/>
         <source>View:</source>
-        <translation>Представление:</translation>
+        <translation>Görünüm:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="36"/>
         <source>Email Type</source>
-        <translation>Тип e-mail</translation>
+        <translation>E-posta Türü</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="38"/>
         <source>Send the following type of emails for this alert:</source>
-        <translation>Отправить следующие типы e-mail сообщений для этого оповещения:</translation>
+        <translation>Bu uyarı için şu tip epostaları gönder:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="42"/>
         <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
-        <translation>Внимание: Вы не будете получать никаких сообщений если не введете свой электронный адрес в персональных настройках.</translation>
+        <translation>Uyarı: Tercihlerinize e-posta adresinizi girene kadar mail almayacaksınız.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="48"/>
         <source>Summary Schedule</source>
-        <translation>Расписание сводок</translation>
+        <translation>Özet Çizelgesi</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="51"/>
         <location filename="../../../client/alerts/alert.html.php" line="76"/>
         <source>Select All</source>
-        <translation>Выбрать все</translation>
+        <translation>Tümünü Seç</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="53"/>
         <location filename="../../../client/alerts/alert.html.php" line="78"/>
         <source>Unselect All</source>
-        <translation>Отменить выбор</translation>
+        <translation>Hiçbirini Seçme</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="55"/>
         <source>Send summary emails on the following days:</source>
-        <translation>Отправлять сообщения со сводками по следующим дням:</translation>
+        <translation>Aşağıdaki günlerde özet maili gönder:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="81"/>
         <source>Send summary emails at the following hours:</source>
-        <translation>Отправлять сообщения со сводками по следующим часам:</translation>
+        <translation>Aşağıdaki saatlerde özet maili gönder:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="99"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="100"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="105"/>
         <source>There are no more available views to use.</source>
-        <translation>Не доступных представлений.</translation>
+        <translation>Daha fazla görünüm yok.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="108"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Kapat</translation>
     </message>
 </context>
 <context>
@@ -3203,32 +3203,32 @@
     <message>
         <location filename="../../../client/alerts/delete.php" line="43"/>
         <source>Delete Alert</source>
-        <translation>Удалить оповещение</translation>
+        <translation>Uyarıyı Sil</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.php" line="56"/>
         <source>All Issues</source>
-        <translation>Все задачи</translation>
+        <translation>Tüm Konular</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="4"/>
         <source>Are you sure you want to delete public alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить публичное оповещение &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Herkese açık &lt;strong&gt;%1&lt;/strong&gt; uyarısını silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="6"/>
         <source>Are you sure you want to delete your personal alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить свое приватное оповещение &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kişisel uyarısını silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3236,22 +3236,22 @@
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="39"/>
         <source>None</source>
-        <translation>Не используется</translation>
+        <translation>Hiçbiri</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="40"/>
         <source>Immediate notifications</source>
-        <translation>Немедленные оповещения</translation>
+        <translation>Anında bildirim</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="41"/>
         <source>Summary of notifications</source>
-        <translation>Сводка оповещений</translation>
+        <translation>Bildirim özeti</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="42"/>
         <source>Summary reports</source>
-        <translation>Сводка отчетов</translation>
+        <translation>Rapor özeti</translation>
     </message>
 </context>
 <context>
@@ -3259,97 +3259,97 @@
     <message>
         <location filename="../../../client/alerts/index.php" line="50"/>
         <source>Manage Alerts</source>
-        <translation>Оповещения</translation>
+        <translation>Uyarıları Yönet</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="95"/>
         <source>All Issues</source>
-        <translation>Все задачи</translation>
+        <translation>Tüm Konular</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="122"/>
         <source>Add Alert</source>
-        <translation>Добавить оповещение</translation>
+        <translation>Uyarı Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="124"/>
         <source>Add Public Alert</source>
-        <translation>Добавить публичное оповещение</translation>
+        <translation>Herkese Açık Uyarı Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="126"/>
         <source>Modify Alert</source>
-        <translation>Изменить оповещение</translation>
+        <translation>Uyarıyı Değiştir</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="127"/>
         <source>Delete Alert</source>
-        <translation>Удалить оповещение</translation>
+        <translation>Uyarı Sil</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="4"/>
         <source>Edit alert settings for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать настройки оповещений для папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasörü için uyarı ayarlarını düzenle.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="6"/>
         <source>Edit alert settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать настройки оповещений для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türü için uyarı ayarlarını düzenle.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="19"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="20"/>
         <source>Total</source>
-        <translation>Всего</translation>
+        <translation>Toplam</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="21"/>
         <source>Unread</source>
-        <translation>Не прочитано</translation>
+        <translation>Okunmamış</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="22"/>
         <source>Modified</source>
-        <translation>Изменено</translation>
+        <translation>Değiştirilmiş</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="24"/>
         <source>Email Type</source>
-        <translation>Тип e-mail</translation>
+        <translation>E-posta Türü</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="26"/>
         <source>Is Public</source>
-        <translation>Публичный</translation>
+        <translation>Herkese Açık</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="56"/>
         <source>Yes</source>
-        <translation>Да</translation>
+        <translation>Evet</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="56"/>
         <source>No</source>
-        <translation>Нет</translation>
+        <translation>Hayır</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="68"/>
         <source>This folder has no alerts.</source>
-        <translation>Эта папка не имеет оповещений.</translation>
+        <translation>Bu klasöre ait uyarı yok.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="70"/>
         <source>This type has no alerts.</source>
-        <translation>Этот тип не имеет оповещений.</translation>
+        <translation>Bu türe ait uyarı yok.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="76"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -3357,7 +3357,7 @@
     <message>
         <location filename="../../../client/index.php" line="48"/>
         <source>Web Client</source>
-        <translation>Веб клиент</translation>
+        <translation>Web İstemcisi</translation>
     </message>
 </context>
 <context>
@@ -3365,187 +3365,187 @@
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="96"/>
         <source>Only Comments</source>
-        <translation>Только комментарии</translation>
+        <translation>Sadece Yorumlar</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="97"/>
         <source>Only Attachments</source>
-        <translation>Только вложения</translation>
+        <translation>Sadece Eklentiler</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="98"/>
         <source>Comments &amp; Attachments</source>
-        <translation>Комментарии и вложения</translation>
+        <translation>Yorumlar &amp; Eklentiler</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="168"/>
         <source>Edit Attributes</source>
-        <translation>Редактировать атрибуты</translation>
+        <translation>Nitelikleri Düzenle</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="169"/>
         <source>Add Comment</source>
-        <translation>Добавить комментарий</translation>
+        <translation>Yorum Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="170"/>
         <source>Add Attachment</source>
-        <translation>Добавить вложение</translation>
+        <translation>Eklenti Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="172"/>
         <source>Add Description</source>
-        <translation>Добавить описание</translation>
+        <translation>Açıklama Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="173"/>
         <source>Clone Issue</source>
-        <translation>Клонировать</translation>
+        <translation>Konuyu Kopyala</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="175"/>
         <source>Move Issue</source>
-        <translation>Переместить</translation>
+        <translation>Konuyu Taşı</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="176"/>
         <source>Delete Issue</source>
-        <translation>Удалить</translation>
+        <translation>Konuyu Sil</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="179"/>
         <source>Mark As Unread</source>
-        <translation>Пометить как непрочитанное</translation>
+        <translation>Okunmadı Olarak İşaretle</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="181"/>
         <source>Mark As Read</source>
-        <translation>Пометить как прочитанное</translation>
+        <translation>Okundu Olarak İşaretle</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="184"/>
         <source>Unsubscribe</source>
-        <translation>Отписаться</translation>
+        <translation>Aboneliği Bırak</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="186"/>
         <source>Subscribe</source>
-        <translation>Подписаться</translation>
+        <translation>Abone Ol</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="17"/>
         <source>ID:</source>
-        <translation>Идентификатор:</translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="21"/>
         <source>Type:</source>
-        <translation>Тип:</translation>
+        <translation>Tür:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="95"/>
         <source>All History</source>
-        <translation>Вся история</translation>
+        <translation>Tüm Geçmiş</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="65"/>
         <location filename="../../../client/issuedetails.html.php" line="108"/>
         <location filename="../../../client/issuedetails.html.php" line="125"/>
         <source>Edit</source>
-        <translation>Редактировать</translation>
+        <translation>Düzenle</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="66"/>
         <location filename="../../../client/issuedetails.html.php" line="110"/>
         <location filename="../../../client/issuedetails.html.php" line="127"/>
         <source>Delete</source>
-        <translation>Удалить</translation>
+        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="196"/>
         <location filename="../../../client/issuedetails.html.php" line="197"/>
         <source>Unknown Folder</source>
-        <translation>Неизвестная папка</translation>
+        <translation>Bilinmeyen Klasör</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="219"/>
         <source>There are no comments.</source>
-        <translation>Нет комментариев.</translation>
+        <translation>Yorum yok.</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="221"/>
         <source>There are no attachments.</source>
-        <translation>Нет вложений.</translation>
+        <translation>Eklenti yok.</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="223"/>
         <source>There are no comments or attachments.</source>
-        <translation>Нет комментариев или вложений.</translation>
+        <translation>Eklenti ya da yorum yok.</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="85"/>
         <source>Issue History</source>
-        <translation>История задачи</translation>
+        <translation>Konu geçmişi</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="151"/>
         <location filename="../../../client/issuedetails.html.php" line="154"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="157"/>
         <location filename="../../../client/issuedetails.html.php" line="158"/>
         <source>empty</source>
-        <translation>пусто</translation>
+        <translation>boş</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="102"/>
         <source>Comment %1</source>
-        <translation>Комментарий %1</translation>
+        <translation>Yorum %1</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="25"/>
         <source>Location:</source>
-        <translation>Расположение:</translation>
+        <translation>Yer:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="29"/>
         <source>Created:</source>
-        <translation>Создано:</translation>
+        <translation>Oluşturuldu:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="33"/>
         <source>Last Modified:</source>
-        <translation>Изменено:</translation>
+        <translation>Son Değiştirme:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="60"/>
         <location filename="../../../client/issuedetails.html.php" line="100"/>
         <location filename="../../../client/issuedetails.html.php" line="120"/>
         <source>Last Edited:</source>
-        <translation>Последняя редакция:</translation>
+        <translation>Son Düzenleme:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="62"/>
         <location filename="../../../client/issuedetails.html.php" line="104"/>
         <source>Reply</source>
-        <translation>Ответить</translation>
+        <translation>Cevap Ver</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="71"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation>Açıklama</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="122"/>
         <source>Attachment %1</source>
-        <translation>Вложение %1</translation>
+        <translation>Eklenti %1</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="198"/>
         <source>Issue moved from %1 to %2</source>
-        <translation>Задача перемещена из %1 в %2</translation>
+        <translation>Konu %1&apos;den %2&apos;ye taşındı</translation>
     </message>
 </context>
 <context>
@@ -3553,97 +3553,97 @@
     <message>
         <location filename="../../../client/issueslist.inc.php" line="86"/>
         <source>All Issues</source>
-        <translation>Все задачи</translation>
+        <translation>Tüm Konular</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="88"/>
         <source>Personal Views</source>
-        <translation>Приватные представления</translation>
+        <translation>Kişisel Görünümler</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="90"/>
         <source>Public Views</source>
-        <translation>Публичные представления</translation>
+        <translation>Herkese Açık Görünümler</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="231"/>
         <source>Add Issue</source>
-        <translation>Добавить задачу</translation>
+        <translation>Konu Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="232"/>
         <source>Mark All As Read</source>
-        <translation>Пометить все как прочитанные</translation>
+        <translation>Hepsi Okundu Olarak İşaretle</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="233"/>
         <source>Mark All As Unread</source>
-        <translation>Пометить все как непрочитанные</translation>
+        <translation>Hepsini Okunmadı Olarak İşaretle</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="235"/>
         <source>Manage Alerts</source>
-        <translation>Оповещения</translation>
+        <translation>Uyarıları Yönet</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="236"/>
         <source>Export To CSV</source>
-        <translation>Экспорт в CSV</translation>
+        <translation>CSV&apos;ye Aktar</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="243"/>
         <source>Add View</source>
-        <translation>Добавить представление</translation>
+        <translation>Görünüm Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="245"/>
         <source>Modify View</source>
-        <translation>Изменить представление</translation>
+        <translation>Görünümü Değiştir</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="247"/>
         <source>Clone View</source>
-        <translation>Клонировать представление</translation>
+        <translation>Görünümü Kopyala</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="234"/>
         <source>Manage Views</source>
-        <translation>Представления</translation>
+        <translation>Görünümleri Yönet</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="11"/>
         <source>View:</source>
-        <translation>Представление:</translation>
+        <translation>Görünüm:</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="12"/>
         <source>Go</source>
-        <translation>Перейти</translation>
+        <translation>Git</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="21"/>
         <source>Search</source>
-        <translation>Искать</translation>
+        <translation>Ara</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="81"/>
         <source>There are no issues matching the search criteria.</source>
-        <translation>Не найдены задачи, соответствующие критериям поиска.</translation>
+        <translation>Arama kriterine uygun konu bulunamadı.</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="85"/>
         <source>There are no issues matching the selected view.</source>
-        <translation>Нет задач, соответствующих критериям выбранного представления.</translation>
+        <translation>Seçili görünümle eşleşen konu bulunamadı.</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="89"/>
         <source>There are no issues of this type.</source>
-        <translation>Для этого типа нет задач.</translation>
+        <translation>Bu türde konu mevcut değil.</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="93"/>
         <source>There are no issues in this folder.</source>
-        <translation>В этой папке нет задач.</translation>
+        <translation>Bu klasörde konu yok.</translation>
     </message>
 </context>
 <context>
@@ -3651,52 +3651,52 @@
     <message>
         <location filename="../../../client/issues/addattachment.php" line="40"/>
         <source>Add Attachment</source>
-        <translation>Добавить вложение</translation>
+        <translation>Eklenti Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="74"/>
         <source>No file uploaded</source>
-        <translation>Файл не отправлен</translation>
+        <translation>Dosya yüklenmedi</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="76"/>
         <source>An error occurred while uploading the file</source>
-        <translation>При отправке файла произошла ошибка</translation>
+        <translation>Dosya yüklerken hata oluştu</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="80"/>
         <source>File too large</source>
-        <translation>Файл слишком большой</translation>
+        <translation>Dosya çok büyük</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.php" line="88"/>
         <source>Invalid file name</source>
-        <translation>Неверное имя файла</translation>
+        <translation>Dosya adı hatalı</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="3"/>
         <source>Add an attachment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Добавить вложение к задаче &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna eklenti ekle.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="7"/>
         <source>File:</source>
-        <translation>Файл:</translation>
+        <translation>Dosya:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="9"/>
         <source>Description:</source>
-        <translation>Описание:</translation>
+        <translation>Açıklama:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/addattachment.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3704,62 +3704,62 @@
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="49"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation>Açıklama</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="55"/>
         <source>Comment %1</source>
-        <translation>Комментарий %1</translation>
+        <translation>Yorum %1</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="67"/>
         <source>Add Comment</source>
-        <translation>Добавить комментарий</translation>
+        <translation>Yorum Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="84"/>
         <source>Edit Comment</source>
-        <translation>Редактировать комментарий</translation>
+        <translation>Yorum Düzenle</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="95"/>
         <source>Plain Text</source>
-        <translation>Простой текст</translation>
+        <translation>Salt Metin</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.inc.php" line="96"/>
         <source>Text with Markup</source>
-        <translation>Текст с разметкой</translation>
+        <translation>Biçimlendirilmiş Metin</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="4"/>
         <source>Add comment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Добавить комментарий к задаче &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna yorum ekle.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="6"/>
         <source>Edit comment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать комментарий &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; yorumunu düzenle.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="11"/>
         <source>Comment:</source>
-        <translation>Комментарий:</translation>
+        <translation>Yorum:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="15"/>
         <source>Text format:</source>
-        <translation>Формат текста:</translation>
+        <translation>Metin formatı:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="18"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/comment.html.php" line="19"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3767,22 +3767,22 @@
     <message>
         <location filename="../../../client/issues/deleteattachment.php" line="38"/>
         <source>Delete Attachment</source>
-        <translation>Удалить вложение</translation>
+        <translation>Eklentiyi Sil</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteattachment.html.php" line="3"/>
         <source>Are you sure you want to delete attachment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить вложение &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; eklentisini silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteattachment.html.php" line="8"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteattachment.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3790,22 +3790,22 @@
     <message>
         <location filename="../../../client/issues/deletecomment.php" line="40"/>
         <source>Delete Comment</source>
-        <translation>Удалить комментарий</translation>
+        <translation>Yorum Sil</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletecomment.html.php" line="3"/>
         <source>Are you sure you want to delete comment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить комментарий &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; yorumunu silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletecomment.html.php" line="8"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletecomment.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3813,22 +3813,22 @@
     <message>
         <location filename="../../../client/issues/deletedescription.php" line="41"/>
         <source>Delete Description</source>
-        <translation>Удалить описание</translation>
+        <translation>Açıklama Sil</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletedescription.html.php" line="3"/>
         <source>Are you sure you want to delete description for issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить описание задачи &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konu açıklamasını silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletedescription.html.php" line="8"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deletedescription.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3836,27 +3836,27 @@
     <message>
         <location filename="../../../client/issues/deleteissue.php" line="37"/>
         <source>Delete Issue</source>
-        <translation>Удалить</translation>
+        <translation>Konuyu Sil</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="3"/>
         <source>Are you sure you want to delete issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить задачу &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunu silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="5"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; The entire issue history will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Вся история задачи будет удалена.</translation>
+        <translation>&lt;strong&gt;Uyarı:&lt;/strong&gt; Tüm konu geçmişi kalıcı olarak silinecek.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/deleteissue.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3864,52 +3864,52 @@
     <message>
         <location filename="../../../client/issues/description.inc.php" line="53"/>
         <source>Add Description</source>
-        <translation>Добавить описание</translation>
+        <translation>Açıklama Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.inc.php" line="64"/>
         <source>Edit Description</source>
-        <translation>Редактировать описание</translation>
+        <translation>Açıklamayı Düzenle</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.inc.php" line="75"/>
         <source>Plain Text</source>
-        <translation>Простой текст</translation>
+        <translation>Salt Metin</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.inc.php" line="76"/>
         <source>Text with Markup</source>
-        <translation>Текст с разметкой</translation>
+        <translation>Biçimlendirilmiş Metin</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="4"/>
         <source>Add description to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Добавить описание к задаче &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna açıklama ekle.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="6"/>
         <source>Edit description of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать описание задачи &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunun açıklamasını düzenle.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="11"/>
         <source>Description:</source>
-        <translation>Описание:</translation>
+        <translation>Açıklama:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="15"/>
         <source>Text format:</source>
-        <translation>Формат текста:</translation>
+        <translation>Metin formatı:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="18"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/description.html.php" line="19"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3917,37 +3917,37 @@
     <message>
         <location filename="../../../client/issues/editattachment.php" line="40"/>
         <source>Edit Attachment</source>
-        <translation>Редактировать вложение</translation>
+        <translation>Eklentiyi Düzenle</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.php" line="59"/>
         <source>Invalid file name</source>
-        <translation>Неверное имя файла</translation>
+        <translation>Dosya adı hatalı</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="3"/>
         <source>Edit attachment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать вложение &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; eklentisini düzenle.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="9"/>
         <source>Description:</source>
-        <translation>Описание:</translation>
+        <translation>Açıklama:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/editattachment.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3955,37 +3955,37 @@
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="45"/>
         <source>Export To CSV</source>
-        <translation>Экспорт в CSV</translation>
+        <translation>CSV&apos;ye Aktar</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="57"/>
         <source>Table with visible columns only</source>
-        <translation>Таблица только с видимыми колонками</translation>
+        <translation>Sadece görülebilir sütunlarla</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="58"/>
         <source>Table with all system and user columns</source>
-        <translation>Таблица со всеми системными и пользовательскими колонками</translation>
+        <translation>Tüm sistem ve kullanıcı sütunlarıyla</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="73"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Kapat</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.html.php" line="3"/>
         <source>Export list of issues to CSV file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Konu listesini CSV dosyasına aktar.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -3993,77 +3993,77 @@
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="54"/>
         <source>Edit Attributes</source>
-        <translation>Редактировать атрибуты</translation>
+        <translation>Nitelikleri Düzenle</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="106"/>
         <source>Clone Issue</source>
-        <translation>Клонировать</translation>
+        <translation>Konuyu Kopyala</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="78"/>
         <source>Add Issue</source>
-        <translation>Добавить задачу</translation>
+        <translation>Konu Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="146"/>
         <source>Please Select</source>
-        <translation>Пожалуйста выберите</translation>
+        <translation>Seçin</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="167"/>
         <source>Plain Text</source>
-        <translation>Простой текст</translation>
+        <translation>Salt Metin</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="168"/>
         <source>Text with Markup</source>
-        <translation>Текст с разметкой</translation>
+        <translation>Biçimlendirilmiş Metin</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.inc.php" line="331"/>
         <source>No folder selected.</source>
-        <translation>Не выбрана папка.</translation>
+        <translation>Klasör seçilmedi.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Некоторые из введенных значений некорректны.</translation>
+        <translation>Girdiğiniz bazı değerlerde hata var.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="10"/>
         <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in the selected folder.</source>
-        <translation>Клонировать задачу &lt;strong&gt;%1&lt;/strong&gt; как новую в указанной папке.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunu seçili klasöre yeni konu olarak kopyala.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="12"/>
         <source>Create a new issue in folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Создать новую задачу в папке &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasöründe yeni bir konu oluştur.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="14"/>
         <source>Edit attributes of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать атрибуты задачи &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusu için nitelikleri düzenle.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="16"/>
         <source>Create a new issue in the selected folder.</source>
-        <translation>Создать новую задачу в выбранной папке.</translation>
+        <translation>Seçili klasörde yeni bir konu oluştur.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="23"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="27"/>
         <source>Folder:</source>
-        <translation>Папка:</translation>
+        <translation>Klasör:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="33"/>
         <source>Attributes</source>
-        <translation>Атрибуты</translation>
+        <translation>Nitelikler</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="37"/>
@@ -4073,37 +4073,37 @@
     <message>
         <location filename="../../../client/issues/issue.html.php" line="51"/>
         <source>Description:</source>
-        <translation>Описание:</translation>
+        <translation>Açıklama:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="55"/>
         <source>Text format:</source>
-        <translation>Формат текста:</translation>
+        <translation>Metin formatı:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="59"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="60"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="66"/>
         <source>There are no available folders of this type.</source>
-        <translation>Нет доступных папок этого типа.</translation>
+        <translation>Bu türde kullanılabilir klasör yok.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="68"/>
         <source>There are no available project members to assign to the issue.</source>
-        <translation>Нет участников проекта, которым можно было назначить эту задачу.</translation>
+        <translation>Konuya atanabilecek proje üyesi yok.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/issue.html.php" line="72"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Kapat</translation>
     </message>
 </context>
 <context>
@@ -4111,42 +4111,42 @@
     <message>
         <location filename="../../../client/issues/markall.php" line="50"/>
         <source>Mark All As Read</source>
-        <translation>Пометить все как прочитанные</translation>
+        <translation>Hepsi Okundu Olarak İşaretle</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.php" line="52"/>
         <source>Mark All As Unread</source>
-        <translation>Пометить все как непрочитанные</translation>
+        <translation>Hepsini Okunmadı Olarak İşaretle</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="5"/>
         <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>Вы действительно хотите пометить все задачи в папке &lt;strong&gt;%1&lt;/strong&gt; как прочитанные?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasöründeki tüm konuları okundu olarak işaretlemek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="7"/>
         <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>Вы действительно хотите пометить все задачи в папке &lt;strong&gt;%1&lt;/strong&gt; как непрочитанные?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasöründeki tüm konuları okunmadı olarak işaretlemek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="11"/>
         <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>Вы действительно хотите пометить все задачи типа &lt;strong&gt;%1&lt;/strong&gt; как прочитанные?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türündeki tüm konuları okundu olarak işaretlemek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="13"/>
         <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>Вы действительно хотите пометить все задачи типа &lt;strong&gt;%1&lt;/strong&gt; как непрочитанные?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türündeki tüm konuları okunmadı olarak işaretlemek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="20"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/markall.html.php" line="21"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4154,33 +4154,33 @@
     <message>
         <location filename="../../../client/issues/moveissue.php" line="69"/>
         <source>Move Issue</source>
-        <translation>Переместить</translation>
+        <translation>Konuyu Taşı</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="3"/>
         <source>Move issue &lt;strong&gt;%1&lt;/strong&gt; to another folder of the same type.</source>
-        <translation>Клонировать задачу &lt;strong&gt;%1&lt;/strong&gt; в другую папку с тем же типом.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunu aynı türdeki diğer klasöre taşı.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="9"/>
         <source>Folder:</source>
-        <translation>Папка:</translation>
+        <translation>Klasör:</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="12"/>
         <location filename="../../../client/issues/moveissue.html.php" line="21"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
     <message>
         <location filename="../../../client/issues/moveissue.html.php" line="18"/>
         <source>There are no available destination folders.</source>
-        <translation>Нет доступных папок назначения.</translation>
+        <translation>Kullanılabilir hedef klasör yok.</translation>
     </message>
 </context>
 <context>
@@ -4188,12 +4188,12 @@
     <message>
         <location filename="../../../client/issues/preview.php" line="53"/>
         <source>Error: %1.</source>
-        <translation>Ошибка: %1.</translation>
+        <translation>Hata: %1.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/preview.php" line="55"/>
         <source>An unexpected error occured while processing the request.</source>
-        <translation>При обработке запроса возникла непредвиденная ошибка.</translation>
+        <translation>İsteği gerçekleştirirken beklenmedik bir hata oluştu.</translation>
     </message>
 </context>
 <context>
@@ -4201,32 +4201,32 @@
     <message>
         <location filename="../../../client/issues/subscribe.php" line="37"/>
         <source>Subscribe To Issue</source>
-        <translation>Подписаться на задачу</translation>
+        <translation>Konuya Abone Ol</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="3"/>
         <source>You are about to subscribe to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Вы будете подписаны на задачу &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna abone olmak üzeresiniz.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="5"/>
         <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
-        <translation>Вы будете получать электронные оповещения когда кто-то редактирует эту задачу, добавляет комментарий или вложение.</translation>
+        <translation>Başka birisi bu konuyu değiştirdiğinde, yorum veya dosya eklediğinde mail bildirimi alacaksınız.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="8"/>
         <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
-        <translation>Внимание: Вы не будете получать никаких сообщений если не введете свой электронный адрес в персональных настройках.</translation>
+        <translation>Uyarı: Tercihlerinize e-posta adresinizi girene kadar mail almayacaksınız.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="14"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/subscribe.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4234,27 +4234,27 @@
     <message>
         <location filename="../../../client/issues/unsubscribe.php" line="37"/>
         <source>Unsubscribe From Issue</source>
-        <translation>Отписаться от задачи</translation>
+        <translation>Konu Aboneliğinden .Çık</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="3"/>
         <source>You are about to unsubscribe from issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Вы будете отписаны от задачи &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunun aboneliğinden çıkmak üzeresiniz.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="5"/>
         <source>You will no longer receive email notifications for this issue.</source>
-        <translation>Вы больше не будете получать электронных оповещений об этой задаче.</translation>
+        <translation>Bundan sonra bu konu için mail bildirimi almayacaksınız.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/issues/unsubscribe.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4262,27 +4262,27 @@
     <message>
         <location filename="../../../client/project.inc.php" line="59"/>
         <source>Add Description</source>
-        <translation>Добавить описание</translation>
+        <translation>Açıklama Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="12"/>
         <source>Last Edited:</source>
-        <translation>Последняя редакция:</translation>
+        <translation>Son Düzenleme:</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="14"/>
         <source>Edit</source>
-        <translation>Редактировать</translation>
+        <translation>Düzenle</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="15"/>
         <source>Delete</source>
-        <translation>Удалить</translation>
+        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="20"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation>Açıklama</translation>
     </message>
 </context>
 <context>
@@ -4290,32 +4290,32 @@
     <message>
         <location filename="../../../client/projectstree.html.php" line="7"/>
         <source>Projects</source>
-        <translation>Проекты</translation>
+        <translation>Projeler</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="13"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="14"/>
         <source>Type</source>
-        <translation>Тип</translation>
+        <translation>Tür</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="23"/>
         <source>All Projects</source>
-        <translation>Все проекты</translation>
+        <translation>Tüm Projeler</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="79"/>
         <source>There are no projects.</source>
-        <translation>Нет проектов.</translation>
+        <translation>Proje yok.</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.inc.php" line="103"/>
         <source>Manage Projects</source>
-        <translation>Управление проектами</translation>
+        <translation>Projeleri Yönet</translation>
     </message>
 </context>
 <context>
@@ -4323,32 +4323,32 @@
     <message>
         <location filename="../../../client/projects/access.php" line="37"/>
         <source>User Access</source>
-        <translation>Доступ пользователя</translation>
+        <translation>Kullanıcı Erişimi</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.php" line="56"/>
         <source>Regular member</source>
-        <translation>Обычный пользователь</translation>
+        <translation>Normal kullanıcı</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.php" line="57"/>
         <source>Project administrator</source>
-        <translation>Администратор проекта</translation>
+        <translation>Proje yöneticisi</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="4"/>
         <source>Change access to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Изменить доступ к проекту &lt;strong&gt;%1&lt;/strong&gt; для пользователя &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısının &lt;strong&gt;%2&lt;/strong&gt; projesine erişimini düzenle.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="11"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="12"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4356,42 +4356,42 @@
     <message>
         <location filename="../../../client/projects/addfolder.php" line="57"/>
         <source>Add Folder</source>
-        <translation>Добавить папку</translation>
+        <translation>Klasör Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="3"/>
         <source>Create a new folder in project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Создать новую папку в проекте &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesinde yeni bir klasör oluştur.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="9"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="11"/>
         <source>Type:</source>
-        <translation>Тип:</translation>
+        <translation>Tür:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="14"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="20"/>
         <source>There are no available issue types to use.</source>
-        <translation>Не доступных типов задач.</translation>
+        <translation>Kullanılabilir konu türü yok.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="23"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Kapat</translation>
     </message>
 </context>
 <context>
@@ -4399,62 +4399,62 @@
     <message>
         <location filename="../../../client/projects/addmembers.php" line="59"/>
         <source>Add Members</source>
-        <translation>Добавить участников</translation>
+        <translation>Üye Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.php" line="62"/>
         <source>Regular member</source>
-        <translation>Обычный пользователь</translation>
+        <translation>Normal kullanıcı</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.php" line="63"/>
         <source>Project administrator</source>
-        <translation>Администратор проекта</translation>
+        <translation>Proje yöneticisi</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="6"/>
         <source>Select All</source>
-        <translation>Выбрать все</translation>
+        <translation>Tümünü Seç</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>Отменить выбор</translation>
+        <translation>Hiçbirini Seçme</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="13"/>
         <source>Add new members to project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Добавить участника проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesine üye ekle.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="20"/>
         <source>Users</source>
-        <translation>Пользователи</translation>
+        <translation>Kullanıcılar</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="36"/>
         <source>Access</source>
-        <translation>Доступ</translation>
+        <translation>Erişim</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="41"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="42"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="47"/>
         <source>There are no more available users to add.</source>
-        <translation>Не доступных для добавления пользователей.</translation>
+        <translation>Müsait başka kullanıcı yok.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="50"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Kapat</translation>
     </message>
 </context>
 <context>
@@ -4462,42 +4462,42 @@
     <message>
         <location filename="../../../client/projects/addproject.php" line="42"/>
         <source>Add Project</source>
-        <translation>Добавить проект</translation>
+        <translation>Proje Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.php" line="48"/>
         <source>Plain Text</source>
-        <translation>Простой текст</translation>
+        <translation>Salt Metin</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.php" line="49"/>
         <source>Text with Markup</source>
-        <translation>Текст с разметкой</translation>
+        <translation>Biçimlendirilmiş Metin</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="5"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="7"/>
         <source>Description:</source>
-        <translation>Описание:</translation>
+        <translation>Açıklama:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="11"/>
         <source>Text format:</source>
-        <translation>Формат текста:</translation>
+        <translation>Metin formatı:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="14"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4505,27 +4505,27 @@
     <message>
         <location filename="../../../client/projects/archiveproject.php" line="40"/>
         <source>Archive Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Projeyi Arşivle</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="3"/>
         <source>Are you sure you want to move project &lt;strong&gt;%1&lt;/strong&gt; to the archive?</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesini arşive taşımak istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="5"/>
         <source>You can unarchive the project later by going to the Projects Archive in the Administration Panel.</source>
-        <translation type="unfinished"></translation>
+        <translation>Projeyi daha sonra Yönetici Paneli&apos;nden Arşivlenmiş Projeler&apos;e giderek arşivden çıkarabilirsiniz.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4533,22 +4533,22 @@
     <message>
         <location filename="../../../client/projects/deletedescription.php" line="41"/>
         <source>Delete Description</source>
-        <translation>Удалить описание</translation>
+        <translation>Açıklama Sil</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="3"/>
         <source>Are you sure you want to delete description for project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить описание проекта &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesine ait açıklamayı silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="8"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4556,27 +4556,27 @@
     <message>
         <location filename="../../../client/projects/deletefolder.php" line="37"/>
         <source>Delete Folder</source>
-        <translation>Удалить папку</translation>
+        <translation>Klasörü Sil</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="3"/>
         <source>Are you sure you want to delete folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить папку &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasörünü silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All issues in this folder will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Все задачи будут удалены.</translation>
+        <translation>&lt;strong&gt;Uyarı:&lt;/strong&gt; Bu klasördeki tüm konular kalıcı olarak silinecek.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4584,27 +4584,27 @@
     <message>
         <location filename="../../../client/projects/deleteproject.php" line="40"/>
         <source>Delete Project</source>
-        <translation>Удалить проект</translation>
+        <translation>Projeyi Sil</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="3"/>
         <source>Are you sure you want to delete project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить проект &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesini silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues in this project will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Внимание:&lt;/strong&gt; Все папки и задачи этого проекта будут удалены.</translation>
+        <translation>&lt;strong&gt;Uyarı:&lt;/strong&gt; Bu projedeki tüm klasör ve konular kalıcı olarak silinecek.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4612,52 +4612,52 @@
     <message>
         <location filename="../../../client/projects/description.inc.php" line="53"/>
         <source>Add Description</source>
-        <translation>Добавить описание</translation>
+        <translation>Açıklama Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="64"/>
         <source>Edit Description</source>
-        <translation>Редактировать описание</translation>
+        <translation>Açıklamayı Düzenle</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="75"/>
         <source>Plain Text</source>
-        <translation>Простой текст</translation>
+        <translation>Salt Metin</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="76"/>
         <source>Text with Markup</source>
-        <translation>Текст с разметкой</translation>
+        <translation>Biçimlendirilmiş Metin</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="4"/>
         <source>Add description to project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Добавить описание к проекту &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesine açıklama ekle.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="6"/>
         <source>Edit description of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать описание проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesinin açıklamasını düzenle.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="11"/>
         <source>Description:</source>
-        <translation>Описание:</translation>
+        <translation>Açıklama:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="15"/>
         <source>Text format:</source>
-        <translation>Формат текста:</translation>
+        <translation>Metin formatı:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="18"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="19"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4665,92 +4665,92 @@
     <message>
         <location filename="../../../client/projects/index.php" line="33"/>
         <source>Manage Projects</source>
-        <translation>Управление проектами</translation>
+        <translation>Projeleri Yönet</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="56"/>
         <source>Regular project</source>
-        <translation>Обычный проект</translation>
+        <translation>Normal proje</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="57"/>
         <source>Public project</source>
-        <translation>Публичный проект</translation>
+        <translation>Herkese açık proje</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="92"/>
         <source>Add Project</source>
-        <translation>Добавить проект</translation>
+        <translation>Proje Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="93"/>
         <source>Add Folder</source>
-        <translation>Добавить папку</translation>
+        <translation>Klasör Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="95"/>
         <source>Rename Project</source>
-        <translation>Переименовать проект</translation>
+        <translation>Projeyi Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="96"/>
         <source>Archive Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Projeyi Arşivle</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="97"/>
         <source>Delete Project</source>
-        <translation>Удалить проект</translation>
+        <translation>Projeyi Sil</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="99"/>
         <source>Rename Folder</source>
-        <translation>Переименовать папку</translation>
+        <translation>Klasörü Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="100"/>
         <source>Move Folder</source>
-        <translation>Переместить папку</translation>
+        <translation>Klasörü Taşı</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="101"/>
         <source>Delete Folder</source>
-        <translation>Удалить папку</translation>
+        <translation>Klasörü Sil</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="102"/>
         <source>Manage Permissions</source>
-        <translation>Управление разрешениями</translation>
+        <translation>Yetkileri Yönet</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="13"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="14"/>
         <source>Type</source>
-        <translation>Тип</translation>
+        <translation>Tür</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="15"/>
         <source>Access</source>
-        <translation>Доступ</translation>
+        <translation>Erişim</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="55"/>
         <source>There are no projects.</source>
-        <translation>Нет проектов.</translation>
+        <translation>Proje yok.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="59"/>
         <source>There are no projects that you can manage.</source>
-        <translation>Нет проектов для редактирования.</translation>
+        <translation>Yönetebileceğiniz proje yok.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="64"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -4758,77 +4758,77 @@
     <message>
         <location filename="../../../client/projects/members.php" line="94"/>
         <source>Add Members</source>
-        <translation>Добавить участников</translation>
+        <translation>Üye Ekle</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="26"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="3"/>
         <source>Edit permissions of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать разрешения проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesinin izinlerini düzenle.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="8"/>
         <source>Global Access</source>
-        <translation>Глобальный доступ</translation>
+        <translation>Genel Erişim</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="11"/>
         <source>Change</source>
-        <translation>Изменить</translation>
+        <translation>Değiştir</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="27"/>
         <source>Access</source>
-        <translation>Доступ</translation>
+        <translation>Erişim</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="53"/>
         <source>This project has no members.</source>
-        <translation>Этот проект не имеет участников.</translation>
+        <translation>Projeye ait üye yok.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="58"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="37"/>
         <source>Manage Permissions</source>
-        <translation>Управление разрешениями</translation>
+        <translation>Yetkileri Yönet</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="60"/>
         <source>Regular project</source>
-        <translation>Обычный проект</translation>
+        <translation>Normal proje</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="61"/>
         <source>Public project</source>
-        <translation>Публичный проект</translation>
+        <translation>Herkese açık proje</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="67"/>
         <source>Regular member</source>
-        <translation>Обычный пользователь</translation>
+        <translation>Normal kullanıcı</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="68"/>
         <source>Project administrator</source>
-        <translation>Администратор проекта</translation>
+        <translation>Proje yöneticisi</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="95"/>
         <source>Change Access</source>
-        <translation>Изменить доступ</translation>
+        <translation>Erişim Değiştir</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="96"/>
         <source>Remove Member</source>
-        <translation>Удалить участника</translation>
+        <translation>Üyeyi Kaldır</translation>
     </message>
 </context>
 <context>
@@ -4836,33 +4836,33 @@
     <message>
         <location filename="../../../client/projects/movefolder.php" line="59"/>
         <source>Move Folder</source>
-        <translation>Переместить папку</translation>
+        <translation>Klasörü Taşı</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="3"/>
         <source>Move folder &lt;strong&gt;%1&lt;/strong&gt; to another project.</source>
-        <translation>Переместить папку &lt;strong&gt;%1&lt;/strong&gt; в другой проект.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasörünü başka projeye taşı.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="9"/>
         <source>Project:</source>
-        <translation>Проект:</translation>
+        <translation>Proje:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="12"/>
         <location filename="../../../client/projects/movefolder.html.php" line="21"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="18"/>
         <source>There are no available destination projects.</source>
-        <translation>Нет доступных проектов.</translation>
+        <translation>Hedef proje yok.</translation>
     </message>
 </context>
 <context>
@@ -4870,32 +4870,32 @@
     <message>
         <location filename="../../../client/projects/projectaccess.php" line="37"/>
         <source>Global Access</source>
-        <translation>Глобальный доступ</translation>
+        <translation>Genel Erişim</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.php" line="46"/>
         <source>Regular project</source>
-        <translation>Обычный проект</translation>
+        <translation>Normal proje</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.php" line="47"/>
         <source>Public project</source>
-        <translation>Публичный проект</translation>
+        <translation>Herkese açık proje</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.html.php" line="3"/>
         <source>Change global access for project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Установить глобальный доступ для проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesinin küresel erişimini değiştir.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4903,22 +4903,22 @@
     <message>
         <location filename="../../../client/projects/removemember.php" line="37"/>
         <source>Remove Member</source>
-        <translation>Удалить участника</translation>
+        <translation>Üyeyi Kaldır</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="4"/>
         <source>Do you want to remove user &lt;strong&gt;%1&lt;/strong&gt; from project &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>Удалить пользователя &lt;strong&gt;%1&lt;/strong&gt; из проекта &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; üyesini &lt;strong&gt;%2&lt;/strong&gt; projesinden kaldırmak istiyor musunuz?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="9"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="10"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4926,27 +4926,27 @@
     <message>
         <location filename="../../../client/projects/renamefolder.php" line="37"/>
         <source>Rename Folder</source>
-        <translation>Переименовать папку</translation>
+        <translation>Klasörü Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="3"/>
         <source>Enter the new name of folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Введите новое имя папки &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasörünün yeni ismini girin.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4954,27 +4954,27 @@
     <message>
         <location filename="../../../client/projects/renameproject.php" line="40"/>
         <source>Rename Project</source>
-        <translation>Переименовать проект</translation>
+        <translation>Projeyi Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="3"/>
         <source>Enter the new name of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Введите новое имя проекта &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; projesinin yeni ismini girin.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -4982,7 +4982,7 @@
     <message>
         <location filename="../../../client/tools/about.php" line="33"/>
         <source>About WebIssues</source>
-        <translation>О WebIssues</translation>
+        <translation>WebIssues Hakkında</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="5"/>
@@ -4992,12 +4992,12 @@
     <message>
         <location filename="../../../client/tools/about.html.php" line="7"/>
         <source>Issue tracking and team collaboration system.</source>
-        <translation>Система отслеживания задач и совместной работы.</translation>
+        <translation>Olay takip ve takım işbirliği sistemi.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="12"/>
         <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</source>
-        <translation>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</translation>
+        <translation>Bu program ücretsiz bir yazılımdır: Özgür Yazılım Vakfı tarafından yayınlanan GNU Affero Genel Kamu Lisansı (3 veya daha sonraki bir sürüm) kapsamında düzenleyebilir veya dağıtabilirsiniz.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="14"/>
@@ -5007,92 +5007,92 @@
     <message>
         <location filename="../../../client/tools/about.html.php" line="15"/>
         <source>Copyright &amp;copy; 2007-2015 WebIssues Team</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright &amp;copy; 2007-2015 WebIssues Team</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="18"/>
         <source>Help</source>
-        <translation>Помощь</translation>
+        <translation>Yardım</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="20"/>
         <source>Open the WebIssues Manual for help.</source>
-        <translation>Открыть руководство пользователя WebIssues.</translation>
+        <translation>Yardım için WebIssues Kılavuzunu Aç.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="23"/>
         <source>Manual</source>
-        <translation>Руководство</translation>
+        <translation>Kılavuz</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="29"/>
         <source>Website</source>
-        <translation>Веб сайт</translation>
+        <translation>Website</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="31"/>
         <source>Visit %1 for more information about WebIssues.</source>
-        <translation>Посетить %1 для получения дополнительной информации об WebIssues.</translation>
+        <translation>WebIssues hakkında daha fazla bilgi için %1 adresini ziyaret edin.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="36"/>
         <source>Donations</source>
-        <translation>Пожертвования</translation>
+        <translation>Bağış</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="38"/>
         <source>If you like this program, your donation will help us dedicate more time for it, support it and implement new features.</source>
-        <translation>Если Вам нравится программа, Ваши пожертвования помогут нам посвятить ей больше времени для поддержки и добавления новых функций.</translation>
+        <translation>Programı beğendiyseniz, bağışınız bizim daha fazla zaman ayırmamızı sağlayacak ve yeni özellikler eklememiz için bizi destekleyecektir.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="41"/>
         <source>Donate</source>
-        <translation>Помочь</translation>
+        <translation>Bağış Yap</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="49"/>
         <source>Latest Version</source>
-        <translation>Последняя версия</translation>
+        <translation>Son Sürüm</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="56"/>
         <source>Your version of WebIssues is up to date.</source>
-        <translation>Вы используете актуальную версию WebIssues.</translation>
+        <translation>WebIssues sürümü güncel</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="63"/>
         <source>The latest version of WebIssues is %1.</source>
-        <translation>Актуальная версия WebIssues %1.</translation>
+        <translation>WebIssues&apos;in son sürümü %1.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="66"/>
         <source>Release Notes</source>
-        <translation>Заметки о версии</translation>
+        <translation>Yayın Notları</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="67"/>
         <source>Download</source>
-        <translation>Загрузить</translation>
+        <translation>İndir</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="75"/>
         <source>Checking for latest version failed.</source>
-        <translation>Сбой проверки актуальной версии.</translation>
+        <translation>Son sürüm kontrolü başarısız oldu.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="82"/>
         <source>Check for latest version of WebIssues.</source>
-        <translation>Проверить актуальную версию WebIssues.</translation>
+        <translation>WebIssues&apos;i son sürüm için kontrol et.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="85"/>
         <source>Check</source>
-        <translation>Проверить</translation>
+        <translation>Kontrol Et.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="98"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -5100,27 +5100,27 @@
     <message>
         <location filename="../../../client/tools/gotoitem.php" line="33"/>
         <source>Go To Item</source>
-        <translation>Перейти к элементу</translation>
+        <translation>Öğeye Git</translation>
     </message>
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="3"/>
         <source>Enter the identifier of an issue, comment or attachment.</source>
-        <translation>Введите идентификатор задачи, комментария или вложения.</translation>
+        <translation>Konu, yorum veya ekli dosya için bir tanımlayıcı girin.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="7"/>
         <source>ID:</source>
-        <translation>Идентификатор:</translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/tools/gotoitem.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -5128,47 +5128,47 @@
     <message>
         <location filename="../../../client/tools/index.php" line="33"/>
         <source>Tools</source>
-        <translation>Инструменты</translation>
+        <translation>Araçlar</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="4"/>
         <source>Go To Item</source>
-        <translation>Перейти к элементу</translation>
+        <translation>Öğeye Git</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="5"/>
         <source>Go to item with given identifier.</source>
-        <translation>Перейти к элементу с указанным идентификатором.</translation>
+        <translation>Verilen tanımlayıcı ile öğeye gidin.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="7"/>
         <source>Change Password</source>
-        <translation>Изменить пароль</translation>
+        <translation>Şifreyi Değiştir</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="8"/>
         <source>Change your password.</source>
-        <translation>Измените свой  пароль.</translation>
+        <translation>Şifrenizi değiştirin.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="9"/>
         <source>User Preferences</source>
-        <translation>Пользовательские предпочтения</translation>
+        <translation>Kullanıcı Tercihleri</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="10"/>
         <source>Configure your user preferences.</source>
-        <translation>Настройте свои предпочтения.</translation>
+        <translation>Kullanıcı tercihlerinizi ayarlayın.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="12"/>
         <source>About WebIssues</source>
-        <translation>О WebIssues</translation>
+        <translation>WebIssues Hakkında</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="13"/>
         <source>Show information about WebIssues.</source>
-        <translation>Показать информацию о WebIssues.</translation>
+        <translation>WebIssues hakkında bilgi göster.</translation>
     </message>
 </context>
 <context>
@@ -5176,42 +5176,42 @@
     <message>
         <location filename="../../../client/views/index.php" line="33"/>
         <source>Manage Views</source>
-        <translation>Представления</translation>
+        <translation>Görünümleri Yönet</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="3"/>
         <source>Edit personal view settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Редактировать приватные представления у типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türü için kişisel görünüm ayarlarını düzenle.</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="15"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="16"/>
         <source>Columns</source>
-        <translation>Колонки</translation>
+        <translation>Sütunlar</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="17"/>
         <source>Sort By</source>
-        <translation>Сортировать</translation>
+        <translation>Sırala</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="18"/>
         <source>Filter</source>
-        <translation>Фильтр</translation>
+        <translation>Filtrele</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="39"/>
         <source>This type has no personal views.</source>
-        <translation>Этот тип не имеет приватных представлений.</translation>
+        <translation>Bu tür kişisel görünüme sahip değil.</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="44"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -5219,27 +5219,27 @@
     <message>
         <location filename="../../../client/views/publish.php" line="36"/>
         <source>Publish View</source>
-        <translation>Сделать представление публичным</translation>
+        <translation>Görünümü Yayınla</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="4"/>
         <source>Are you sure you want to convert your personal view &lt;strong&gt;%1&lt;/strong&gt; to a public view?</source>
-        <translation>Вы действительно хотите конвертировать Ваше приватное представление &lt;strong&gt;%1&lt;/strong&gt; в публичное?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kişiler görünümünüzü &apos;genel görünüm&apos;e çevirmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="6"/>
         <source>View &lt;strong&gt;%1&lt;/strong&gt; cannot be published.</source>
-        <translation>Представление &lt;strong&gt;%1&lt;/strong&gt; нельзя сделать публичным.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; görünümü yayınlanamaz.</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="12"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="14"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -5247,63 +5247,63 @@
     <message>
         <location filename="../../breadcrumbs.inc.php" line="99"/>
         <source>General Information</source>
-        <translation>Главная информация</translation>
+        <translation>Genel</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="104"/>
         <source>Event Log</source>
-        <translation>Журнал событий</translation>
+        <translation>Olay Günlüğü</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="109"/>
         <source>User Accounts</source>
-        <translation>Учетные записи пользователей</translation>
+        <translation>Kullanıcı Hesapları</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="120"/>
         <source>Registration Requests</source>
-        <translation>Запросы на регистрацию</translation>
+        <translation>Kayıt İstekleri</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="125"/>
         <source>Issue Types</source>
-        <translation>Типы задач</translation>
+        <translation>Konu Türleri</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="131"/>
         <source>View Settings</source>
-        <translation>Настройки представлений</translation>
+        <translation>Ayarları Göster</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="115"/>
         <location filename="../../breadcrumbs.inc.php" line="147"/>
         <source>Manage Permissions</source>
-        <translation>Управление разрешениями</translation>
+        <translation>Yetkileri Yönet</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="136"/>
         <source>Projects Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Arşivlenmiş Projeler</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="164"/>
         <source>Manage Views</source>
-        <translation>Представления</translation>
+        <translation>Görünümleri Yönet</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="170"/>
         <source>Manage Alerts</source>
-        <translation>Оповещения</translation>
+        <translation>Uyarıları Yönet</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="181"/>
         <source>Tools</source>
-        <translation>Инструменты</translation>
+        <translation>Araçlar</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="186"/>
         <source>Manage Projects</source>
-        <translation>Управление проектами</translation>
+        <translation>Projeleri Yönet</translation>
     </message>
 </context>
 <context>
@@ -5311,12 +5311,12 @@
     <message>
         <location filename="../../errors/debug.html.php" line="3"/>
         <source>The following error(s) occured while processing the request:</source>
-        <translation>При обработке запроса возникли следующие ошибки:</translation>
+        <translation>İsteğiniz işlenirken aşağıdaki hata(lar) oluştu:</translation>
     </message>
     <message>
         <location filename="../../errors/debug.inc.php" line="33"/>
         <source>Unexpected Error</source>
-        <translation>Непредвиденная ошибка</translation>
+        <translation>Beklenmedik Hata</translation>
     </message>
 </context>
 <context>
@@ -5324,17 +5324,17 @@
     <message>
         <location filename="../../errors/general.html.php" line="3"/>
         <source>An unexpected error occured while processing the request.</source>
-        <translation>При обработке запроса возникла непредвиденная ошибка.</translation>
+        <translation>İsteği gerçekleştirirken beklenmedik bir hata oluştu.</translation>
     </message>
     <message>
         <location filename="../../errors/general.html.php" line="6"/>
         <source>Reason: %1.</source>
-        <translation>Причина: %1.</translation>
+        <translation>Sebep: %1</translation>
     </message>
     <message>
         <location filename="../../errors/general.inc.php" line="33"/>
         <source>Unexpected Error</source>
-        <translation>Непредвиденная ошибка</translation>
+        <translation>Beklenmedik Hata</translation>
     </message>
 </context>
 <context>
@@ -5342,17 +5342,17 @@
     <message>
         <location filename="../../errors/handle401.php" line="35"/>
         <source>Unauthorized</source>
-        <translation>Не авторизовано</translation>
+        <translation>Yetki verilmedi</translation>
     </message>
     <message>
         <location filename="../../errors/handle401.php" line="45"/>
         <source>Unauthorized: %1</source>
-        <translation>Не авторизовано: %1</translation>
+        <translation>Yetki Verilmedi : %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle401.html.php" line="3"/>
         <source>You have no permission to access the requested page.</source>
-        <translation>У Вас нет прав доступа к запрошенной странице.</translation>
+        <translation>İstekte bulunduğunuz sayfaya erişme yetkiniz yok.</translation>
     </message>
 </context>
 <context>
@@ -5360,17 +5360,17 @@
     <message>
         <location filename="../../errors/handle403.php" line="35"/>
         <source>Access Forbidden</source>
-        <translation>Доступ запрещен</translation>
+        <translation>Erişim Yasak</translation>
     </message>
     <message>
         <location filename="../../errors/handle403.php" line="45"/>
         <source>Access forbidden: %1</source>
-        <translation>Доступ запрещен: %1</translation>
+        <translation>Erişim yasaklandı: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle403.html.php" line="3"/>
         <source>You have no permission to access the requested page.</source>
-        <translation>У Вас нет прав доступа к запрошенной странице.</translation>
+        <translation>İstekte bulunduğunuz syafaya erişim izniniz yok.</translation>
     </message>
 </context>
 <context>
@@ -5378,17 +5378,17 @@
     <message>
         <location filename="../../errors/handle404.php" line="35"/>
         <source>Page Not Found</source>
-        <translation>Страница не найдена</translation>
+        <translation>Sayfa Bulunamadı</translation>
     </message>
     <message>
         <location filename="../../errors/handle404.php" line="45"/>
         <source>Page not found: %1</source>
-        <translation>Страница не найдена: %1</translation>
+        <translation>Sayfa bulunamadı: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle404.html.php" line="3"/>
         <source>The requested page was not found.</source>
-        <translation>Запрошенная страница не найдена.</translation>
+        <translation>İstenen sayfa bulunamadı.</translation>
     </message>
 </context>
 <context>
@@ -5396,52 +5396,52 @@
     <message>
         <location filename="../../errors/setup.inc.php" line="39"/>
         <source>Server Not Configured</source>
-        <translation>Сервер не настроен</translation>
+        <translation>Sunucu Ayarlanmamış</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="40"/>
         <source>This WebIssues Server has not been configured yet.</source>
-        <translation>Сервер WebIssues еще не настроен.</translation>
+        <translation>WebIssues Sunucusu henüz yapılandırılmamış.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="41"/>
         <source>Go to the %1 page to configure this server.</source>
-        <translation>Перейти к странице %1 для настройки сервера.</translation>
+        <translation>Bu sunucuyu yapılandırmak için %1 sayfasına gidiniz.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="42"/>
         <source>Server Configuration</source>
-        <translation>Настройки сервера</translation>
+        <translation>Sunucu Ayarları</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="46"/>
         <source>Wrong Database Version</source>
-        <translation>Неверная версия базы данных</translation>
+        <translation>Hatalı Veritabanı Sürümü</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="48"/>
         <source>Current version of the database is not compatible with this version of WebIssues Server.</source>
-        <translation>Текущая версия базы данных не совместима с этим сервером WebIssues.</translation>
+        <translation>Veritabanının güncel sürümü WebIssues Sunucusu&apos;nun bu sürümü ile uyumlu değildir.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="52"/>
         <source>Database Not Updated</source>
-        <translation>База данных не обновлена</translation>
+        <translation>Veritabanı Güncellenmedi</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="53"/>
         <source>The database of this WebIssues Server has not been updated yet.</source>
-        <translation>База данных этого сервера WebIssues еще не обновлена.</translation>
+        <translation>WebIssues Hizmeti&apos;nin veritabanı henüz güncellenmedi.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="54"/>
         <source>Go to the %1 page to update the database.</source>
-        <translation>Перейти к странице %1 для обновления базы данных.</translation>
+        <translation>Veritabanı güncellemesi için %1 sayfasına gidiniz.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="55"/>
         <source>Server Update</source>
-        <translation>Обновление сервера</translation>
+        <translation>Sunucu Güncellemesi</translation>
     </message>
 </context>
 <context>
@@ -5449,7 +5449,7 @@
     <message>
         <location filename="../../fixedblock.inc.php" line="34"/>
         <source>Untitled block</source>
-        <translation>Безымянный блок</translation>
+        <translation>Başlıksız blok</translation>
     </message>
 </context>
 <context>
@@ -5457,37 +5457,37 @@
     <message>
         <location filename="../../mail/approve.inc.php" line="37"/>
         <source>WebIssues Server registration approved</source>
-        <translation>Регистрация сервера WebIssues подтверждена</translation>
+        <translation>WebIssues Sunucu kaydı onaylandı</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="3"/>
         <source>Your registration request on the WebIssues Server was approved by the administrator.</source>
-        <translation>Ваш запрос на регистрацию на сервере WebIssues был подтвержден администратором.</translation>
+        <translation>WebIssues Server kayıt isteğiniz yönetici tarafından onaylandı.</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="5"/>
         <source>You can now %1 using your login and password.</source>
-        <translation>Теперь вы можете %1 используя имя своей учетной записи и пароль.</translation>
+        <translation>Kullanıcı adınız ve şifreniz ile şimdi %1 yapabilirsiniz.</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="5"/>
         <source>log in to the server</source>
-        <translation>подключиться к серверу</translation>
+        <translation>sunucuda oturum aç</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="8"/>
         <source>User name: %1</source>
-        <translation>Имя пользователя: %1</translation>
+        <translation>Kullanıcı Adı: %1</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="9"/>
         <source>Login: %1</source>
-        <translation>Логин: %1</translation>
+        <translation>Giriş: %1</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="10"/>
         <source>Email address: %1</source>
-        <translation>Адрес e-mail: %1</translation>
+        <translation>Eposta Adresi: %1</translation>
     </message>
 </context>
 <context>
@@ -5495,7 +5495,7 @@
     <message>
         <location filename="../../mail/issuecreated.html.php" line="3"/>
         <source>Your email was successfully registered on the WebIssues Server as the following issue:</source>
-        <translation>Ваш адрес электронной почты был успешно зарегистрирован на сервере WebIssues для следующей задачи:</translation>
+        <translation>E-posta adresiniz şu olay için WebIssues Hizmeti&apos;ne başarıyla kayıt edilmiştir:</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="6"/>
@@ -5505,27 +5505,27 @@
     <message>
         <location filename="../../mail/issuecreated.html.php" line="7"/>
         <source>Name: %1</source>
-        <translation>Имя: %1</translation>
+        <translation>İsim: %1</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="11"/>
         <source>You can add comments and attachments to this issue by responding to this email. Include %1 in the subject when sending emails regarding this issue.</source>
-        <translation>Вы можете добавлять комментарии и вложения к этой задаче отвечая на это сообщение. Включите %1 в тему сообщения во время отправки для этой задачи.</translation>
+        <translation>Bu e-postayı cevaplayarak bu konuya yorum ve ekli dosya ekleyebilirsiniz. Bu konuya ilişkin olarak e-posta konusuna %1 yazmanız gerekmektedir.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="14"/>
         <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
-        <translation>Вы будете получать электронные оповещения когда кто-то редактирует эту задачу, добавляет комментарий или вложение.</translation>
+        <translation>Başka birisi bu konuyu değiştirdiğinde, yorum veya dosya eklediğinde mail bildirimi alacaksınız.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="18"/>
         <source>You can also %1 in the WebIssues Server.</source>
-        <translation>Вы также можете %1 на сервере WebIssues.</translation>
+        <translation>Siz ayrıca WebIssues Sunucusunda %1</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="18"/>
         <source>view this issue</source>
-        <translation>просмотреть эту задачу</translation>
+        <translation>bu olayı görüntüle</translation>
     </message>
 </context>
 <context>
@@ -5533,80 +5533,80 @@
     <message>
         <location filename="../../mail/notification.inc.php" line="73"/>
         <source>All Issues</source>
-        <translation>Все задачи</translation>
+        <translation>Tüm Konular</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="52"/>
         <source>Properties</source>
-        <translation>Свойства</translation>
+        <translation>Özellikler</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="56"/>
         <source>ID:</source>
-        <translation>Идентификатор:</translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="60"/>
         <source>Type:</source>
-        <translation>Тип:</translation>
+        <translation>Tür:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="64"/>
         <source>Location:</source>
-        <translation>Расположение:</translation>
+        <translation>Yer:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="68"/>
         <source>Created:</source>
-        <translation>Создано:</translation>
+        <translation>Oluşturuldu:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="72"/>
         <source>Last Modified:</source>
-        <translation>Изменено:</translation>
+        <translation>Son Değiştirme:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="100"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation>Açıklama</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="185"/>
         <source>Issue moved from %1 to %2</source>
-        <translation>Задача перемещена из %1 в %2</translation>
+        <translation>Konu %1&apos;den %2&apos;ye taşındı</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="81"/>
         <source>Attributes</source>
-        <translation>Атрибуты</translation>
+        <translation>Nitelikler</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="113"/>
         <source>Issue History</source>
-        <translation>История задачи</translation>
+        <translation>Konu geçmişi</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="138"/>
         <location filename="../../mail/notification.html.php" line="141"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="144"/>
         <location filename="../../mail/notification.html.php" line="145"/>
         <source>empty</source>
-        <translation>пусто</translation>
+        <translation>boş</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="183"/>
         <location filename="../../mail/notification.html.php" line="184"/>
         <source>Unknown Folder</source>
-        <translation>Неизвестная папка</translation>
+        <translation>Bilinmeyen Klasör</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="212"/>
         <source>This is an alert email from the WebIssues Server.</source>
-        <translation>Это оповещение сервера WebIssues.</translation>
+        <translation>Bu e-posta, WebIssues Hizmeti&apos;nden gelen bir uyarı e-postasıdır.</translation>
     </message>
 </context>
 <context>
@@ -5614,37 +5614,37 @@
     <message>
         <location filename="../../mail/register.inc.php" line="37"/>
         <source>WebIssues Server email verification</source>
-        <translation>Проверка e-mail адреса сервера WebIssues</translation>
+        <translation>WebIssues Hizmeti e-posta doğrulaması</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="3"/>
         <source>Thank you for registering on the WebIssues Server.</source>
-        <translation>Благодарим за регистрацию на сервере WebIssues.</translation>
+        <translation>WebIssues Hizmeti&apos;ne kayıt olduğunuz için teşekkürler.</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="5"/>
         <source>To activate your registration request, please visit the following URL:</source>
-        <translation>Для активации Вашего регистрационного запроса перейдите на следующую страницу:</translation>
+        <translation>Üyelik kaydınızı tamamlamak için lütfen linke tıklayın:</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="10"/>
         <source>User name: %1</source>
-        <translation>Имя пользователя: %1</translation>
+        <translation>Kullanıcı Adı: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="11"/>
         <source>Login: %1</source>
-        <translation>Логин: %1</translation>
+        <translation>Giriş: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="12"/>
         <source>Email address: %1</source>
-        <translation>Адрес e-mail: %1</translation>
+        <translation>Eposta Adresi: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="15"/>
         <source>If you didn&apos;t register, please ignore this email.</source>
-        <translation>Если Вы не регистрировались, то проигнорируйте это сообщение.</translation>
+        <translation>Eğer kayıtlı değilseniz bu epostayı görmezden geliniz.</translation>
     </message>
 </context>
 <context>
@@ -5652,37 +5652,37 @@
     <message>
         <location filename="../../mail/registernotification.html.php" line="3"/>
         <source>You have the following new %1 on the WebIssues Server pending for approval:</source>
-        <translation>У вас есть следующие новые %1, ожидающие подтверждения на сервере WebIssues:</translation>
+        <translation>WebIssues Hizmeti&apos;nde aşağıdaki yeni %1, onay için beklemektedir:</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="3"/>
         <source>registration requests</source>
-        <translation>запросы на регистрацию</translation>
+        <translation>kayıt istekleri</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="7"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="8"/>
         <source>Login</source>
-        <translation>Логин</translation>
+        <translation>Giriş</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="9"/>
         <source>Email</source>
-        <translation>E-mail</translation>
+        <translation>E-posta</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="10"/>
         <source>Date</source>
-        <translation>Дата</translation>
+        <translation>Tarih</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.inc.php" line="37"/>
         <source>WebIssues Server registration requests</source>
-        <translation>Запросы на регистрацию сервера Webissues</translation>
+        <translation>WebIssues Hizmeti için kayıt istekleri</translation>
     </message>
 </context>
 <context>
@@ -5690,27 +5690,27 @@
     <message>
         <location filename="../../mail/reject.inc.php" line="37"/>
         <source>WebIssues Server registration rejected</source>
-        <translation>Регистрация на сервере WebIssues отклонена</translation>
+        <translation>WebIssues Hizmeti için kayıt isteğiniz reddedildi</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="3"/>
         <source>Sorry, your registration request on the WebIssues Server was rejected by the administrator.</source>
-        <translation>К сожалению, ваш запрос на регистрацию на сервере Webissues был отклонен администратором.</translation>
+        <translation>Üzgünüz, WebIssues Hizmeti kayıt isteğiniz yönetici tarafından reddedildi.</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="6"/>
         <source>User name: %1</source>
-        <translation>Имя пользователя: %1</translation>
+        <translation>Kullanıcı Adı: %1</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="7"/>
         <source>Login: %1</source>
-        <translation>Логин: %1</translation>
+        <translation>Giriş: %1</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="8"/>
         <source>Email address: %1</source>
-        <translation>Адрес e-mail: %1</translation>
+        <translation>Eposta Adresi: %1</translation>
     </message>
 </context>
 <context>
@@ -5718,85 +5718,85 @@
     <message>
         <location filename="../../mail/subscription.html.php" line="4"/>
         <source>Include your response above this line</source>
-        <translation>Включите свой ответ выше этой линии</translation>
+        <translation>Cevabınızı bu satırın üzerine ekleyiniz</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="6"/>
         <source>You can add comments and attachments to this issue by responding to this email. Include %1 in the subject when sending emails regarding this issue.</source>
-        <translation>Вы можете добавлять комментарии и вложения к этой задаче отвечая на это сообщение. Включите %1 в тему сообщения во время отправки для этой задачи.</translation>
+        <translation>Bu e-postayı cevaplayarak bu konuya yorum ve ekli dosya ekleyebilirsiniz. Bu konuya ilişkin olarak e-posta konusuna %1 yazmanız gerekmektedir.</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="19"/>
         <source>Properties</source>
-        <translation>Свойства</translation>
+        <translation>Özellikler</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="23"/>
         <source>ID:</source>
-        <translation>Идентификатор:</translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="27"/>
         <source>Type:</source>
-        <translation>Тип:</translation>
+        <translation>Tür:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="31"/>
         <source>Location:</source>
-        <translation>Расположение:</translation>
+        <translation>Yer:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="35"/>
         <source>Created:</source>
-        <translation>Создано:</translation>
+        <translation>Oluşturuldu:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="39"/>
         <source>Last Modified:</source>
-        <translation>Изменено:</translation>
+        <translation>Son Değiştirme:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="48"/>
         <source>Attributes</source>
-        <translation>Атрибуты</translation>
+        <translation>Nitelikler</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="67"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation>Açıklama</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="79"/>
         <source>Issue History</source>
-        <translation>История задачи</translation>
+        <translation>Konu geçmişi</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="104"/>
         <location filename="../../mail/subscription.html.php" line="107"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="110"/>
         <location filename="../../mail/subscription.html.php" line="111"/>
         <source>empty</source>
-        <translation>пусто</translation>
+        <translation>boş</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="149"/>
         <location filename="../../mail/subscription.html.php" line="150"/>
         <source>Unknown Folder</source>
-        <translation>Неизвестная папка</translation>
+        <translation>Bilinmeyen Klasör</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="151"/>
         <source>Issue moved from %1 to %2</source>
-        <translation>Задача перемещена из %1 в %2</translation>
+        <translation>Konu %1&apos;den %2&apos;ye taşındı</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="175"/>
         <source>This is a subscription email from the WebIssues Server.</source>
-        <translation>Это сообщение подписки с сервера Webissues.</translation>
+        <translation>Bu e-posta, WebIssues hizmetinden gelen bir abonelik e-postasıdır.</translation>
     </message>
 </context>
 <context>
@@ -5804,22 +5804,22 @@
     <message>
         <location filename="../../mail/testconnection.inc.php" line="37"/>
         <source>Test message from WebIssues Server</source>
-        <translation>Тестовое сообщение сервера WebIssues</translation>
+        <translation>WebIssues Hizmeti test iletisi</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="3"/>
         <source>This email was sent by the WebIssues Server to test connection to the SMTP server.</source>
-        <translation>Это сообщение было отправлено сервером WebIssues для тестирования SMTP сервера.</translation>
+        <translation>Bu e-posta, WebIssues Hizmeti tarafından SMTP sunucusuna test amaçlı gönderilmiştir.</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="6"/>
         <source>Server name: %1</source>
-        <translation>Имя сервера: %1</translation>
+        <translation>Sunucu Adı: %1</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="7"/>
         <source>Port: %1</source>
-        <translation>Порт: %1</translation>
+        <translation>Port: %1</translation>
     </message>
 </context>
 <context>
@@ -5827,7 +5827,7 @@
     <message>
         <location filename="../../messageblock.inc.php" line="34"/>
         <source>Untitled message</source>
-        <translation>Безымянное сообщение</translation>
+        <translation>Başlıksız ileti</translation>
     </message>
 </context>
 <context>
@@ -5840,19 +5840,19 @@
     <message>
         <location filename="../../pagelayout.inc.php" line="66"/>
         <source>Untitled page</source>
-        <translation>Безымянная страница</translation>
+        <translation>Başlıksız sayfa</translation>
     </message>
     <message>
         <location filename="../../pagelayout.inc.php" line="70"/>
         <location filename="../../pagelayout.html.php" line="35"/>
         <source>Web Client</source>
-        <translation>Веб клиент</translation>
+        <translation>Web İstemcisi</translation>
     </message>
     <message>
         <location filename="../../pagelayout.inc.php" line="73"/>
         <location filename="../../pagelayout.html.php" line="33"/>
         <source>Administration Panel</source>
-        <translation>Панель администрирования</translation>
+        <translation>Yönetim Paneli</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="37"/>
@@ -5862,32 +5862,32 @@
     <message>
         <location filename="../../pagelayout.html.php" line="38"/>
         <source>Manual</source>
-        <translation>Руководство</translation>
+        <translation>Kılavuz</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="52"/>
         <source>Logged in as: %1</source>
-        <translation>Вход выполнен под именем: %1</translation>
+        <translation>Şu kullanıcı ile giriş yapıldı: %1</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="55"/>
         <source>Tools</source>
-        <translation>Инструменты</translation>
+        <translation>Araçlar</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="58"/>
         <source>Log Out</source>
-        <translation>Выйти</translation>
+        <translation>Oturumu Kapat</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="60"/>
         <source>Log In</source>
-        <translation>Войти</translation>
+        <translation>Oturum Aç</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="62"/>
         <source>Register</source>
-        <translation>Регистрация</translation>
+        <translation>Kaydol</translation>
     </message>
 </context>
 <context>
@@ -5895,7 +5895,7 @@
     <message>
         <location filename="../../singlepane.inc.php" line="34"/>
         <source>Untitled page</source>
-        <translation>Безымянная страница</translation>
+        <translation>Başlıksız sayfa</translation>
     </message>
 </context>
 <context>
@@ -5903,33 +5903,33 @@
     <message>
         <location filename="../../tools/editing.inc.php" line="42"/>
         <source>Plain Text</source>
-        <translation>Простой текст</translation>
+        <translation>Salt Metin</translation>
     </message>
     <message>
         <location filename="../../tools/editing.inc.php" line="43"/>
         <source>Text with Markup</source>
-        <translation>Текст с разметкой</translation>
+        <translation>Biçimlendirilmiş Metin</translation>
     </message>
     <message>
         <location filename="../../tools/editing.inc.php" line="48"/>
         <source>Default (%1)</source>
         <comment>format</comment>
-        <translation>Умолчания (%1)</translation>
+        <translation>Varsayılan (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="4"/>
         <source>Editing</source>
-        <translation>Редактирование</translation>
+        <translation>Düzenleme</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="6"/>
         <source>The default format used for new comments and descriptions.</source>
-        <translation>Формат по умолчанию для комментариев и описаний.</translation>
+        <translation>Varsayılan format yeni yorumlar ve açıklamalar için kullanıldı.</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="8"/>
         <source>Default text format:</source>
-        <translation>Текстовый формат по умолчанию:</translation>
+        <translation>Varsayılan metin biçimi:</translation>
     </message>
 </context>
 <context>
@@ -5938,7 +5938,7 @@
         <location filename="../../tools/locale.inc.php" line="55"/>
         <source>Default (%1)</source>
         <comment>language</comment>
-        <translation>Умолчания (%1)</translation>
+        <translation>Varsayılan (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="60"/>
@@ -5946,64 +5946,64 @@
         <location filename="../../tools/locale.inc.php" line="74"/>
         <source>Default</source>
         <comment>format</comment>
-        <translation>По умолчанию</translation>
+        <translation>Varsayılan</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="82"/>
         <source>Default</source>
         <comment>day of week</comment>
-        <translation>По умолчанию</translation>
+        <translation>Varsayılan</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="98"/>
         <source>Default (%1)</source>
         <comment>time zone</comment>
-        <translation>Умолчания (%1)</translation>
+        <translation>Varsayılan (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="4"/>
         <source>Regional Options</source>
-        <translation>Региональные установки</translation>
+        <translation>Bölgesel Seçenekler</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="6"/>
         <source>Language:</source>
-        <translation>Язык:</translation>
+        <translation>Dil:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="12"/>
         <source>Formats</source>
-        <translation>Форматы</translation>
+        <translation>Biçimler</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="14"/>
         <source>Customize the format of numbers, date and time. Default formats depend on the selected language.</source>
-        <translation>Настроить форматы чисел, даты и времени. Форматы по умолчанию зависят от выбранного языка.</translation>
+        <translation>Sayı, tarih ve saat formatlarını özelleştirin. Varsayılan formatlar seçili dile bağlıdır.</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="16"/>
         <source>Number format:</source>
-        <translation>Числовой формат:</translation>
+        <translation>Sayı biçimi:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="17"/>
         <source>Date format:</source>
-        <translation>Формат даты:</translation>
+        <translation>Tarih biçimi:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="18"/>
         <source>Time format:</source>
-        <translation>Формат времени:</translation>
+        <translation>Zaman biçimi:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="19"/>
         <source>First day of week:</source>
-        <translation>Первый день недели:</translation>
+        <translation>Haftanın ilk günü:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="7"/>
         <source>Time zone:</source>
-        <translation>Часовой пояс:</translation>
+        <translation>Saat dilimi:</translation>
     </message>
 </context>
 <context>
@@ -6013,32 +6013,32 @@
         <location filename="../../tools/pagesize.inc.php" line="51"/>
         <location filename="../../tools/pagesize.inc.php" line="57"/>
         <source>Default (%1)</source>
-        <translation>Умолчания (%1)</translation>
+        <translation>Varsayılan (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="4"/>
         <source>Page Size</source>
-        <translation>Размер страницы</translation>
+        <translation>Sayfa Boyutu</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="6"/>
         <source>The maximum number of projects, issues and items in history which are displayed on a single page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geçmişteki projelerin, konuların ve öğelerin bir sayfada en fazla kaç tane gösterileceği.</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="8"/>
         <source>Projects tree:</source>
-        <translation type="unfinished"></translation>
+        <translation>Proje ağacı:</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="9"/>
         <source>List of issues:</source>
-        <translation>Список задач:</translation>
+        <translation>Olay listesi:</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="10"/>
         <source>Issue history:</source>
-        <translation>История задачи:</translation>
+        <translation>Olay tarihçesi:</translation>
     </message>
 </context>
 <context>
@@ -6046,47 +6046,47 @@
     <message>
         <location filename="../../tools/password.inc.php" line="33"/>
         <source>Change Password</source>
-        <translation>Изменить пароль</translation>
+        <translation>Şifreyi Değiştir</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="4"/>
         <source>Enter your new password.</source>
-        <translation>Введите новый  пароль.</translation>
+        <translation>Yeni şifrenizi giriniz.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="6"/>
         <source>Enter the new password for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Введите новый пароль для пользователя &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcı için yeni bir şifre parola girin.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="12"/>
         <source>Current password:</source>
-        <translation>Текущий пароль:</translation>
+        <translation>Mevcut şifreniz:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="15"/>
         <source>New password:</source>
-        <translation>Новый пароль:</translation>
+        <translation>Yeni şifre:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="16"/>
         <source>Confirm password:</source>
-        <translation>Подтвердите пароль:</translation>
+        <translation>Şifre (Tekrar):</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="19"/>
         <source>User must change password at next logon.</source>
-        <translation>Пользователь должен изменить пароль при следующем входе.</translation>
+        <translation>İlk girişinde kullanıcı şifresini değiştirsin.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="23"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="24"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -6094,52 +6094,52 @@
     <message>
         <location filename="../../tools/preferences.inc.php" line="33"/>
         <source>User Preferences</source>
-        <translation>Пользовательские предпочтения</translation>
+        <translation>Kullanıcı Tercihleri</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="4"/>
         <source>Configure your user preferences.</source>
-        <translation>Настройте свои предпочтения.</translation>
+        <translation>Kullanıcı tercihlerinizi ayarlayın.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="6"/>
         <source>Configure preferences for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Настройте предпочтения для пользователя &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısı için özellikleri yapılandır.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="21"/>
         <source>Notifications</source>
-        <translation>Уведомления</translation>
+        <translation>Bildirimler</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="23"/>
         <source>Email address:</source>
-        <translation>Адрес e-mail:</translation>
+        <translation>E-posta adresi:</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="26"/>
         <source>This address will only be visible to the system administrator. You will not receive notifications if you leave this field empty.</source>
-        <translation>Этот адрес будет доступен только администратору. Вы не сможете получать оповещения если оставите это поле пустым.</translation>
+        <translation>Bu adres sadece sistem yöneticisi tarafından görülebilir. Bu alanı boş bırakırsanız bildirim e-postası alamayacaksınız.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="28"/>
         <source>Include issue details in notifications and summary reports</source>
-        <translation>Включить в оповещения и сводки отчетов информацию о задачах</translation>
+        <translation>Konu detaylarını uyarılarda ve özet raporlarda dahil et</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="29"/>
         <source>Do not notify about issues that I have already read</source>
-        <translation>Не оповещать о задачах, которые я уже прочитал</translation>
+        <translation>Zaten okumuş olduğum konular için beni bilgilendirme</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="35"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="36"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -6147,69 +6147,69 @@
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="43"/>
         <source>Oldest First</source>
-        <translation>Сначала старейший</translation>
+        <translation>Önce En Eski</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="44"/>
         <source>Newest First</source>
-        <translation>Сначала новейший</translation>
+        <translation>Önce En Yeni</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="48"/>
         <source>All History</source>
-        <translation>Вся история</translation>
+        <translation>Tüm Geçmiş</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="49"/>
         <source>Comments &amp; Attachments</source>
-        <translation>Комментарии и вложения</translation>
+        <translation>Yorumlar &amp; Eklentiler</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="54"/>
         <source>Default (%1)</source>
         <comment>order</comment>
-        <translation>Умолчания (%1)</translation>
+        <translation>Varsayılan (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="60"/>
         <source>Default (%1)</source>
         <comment>filter</comment>
-        <translation>Умолчания (%1)</translation>
+        <translation>Varsayılan (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="4"/>
         <source>View Settings</source>
-        <translation>Настройки представлений</translation>
+        <translation>Ayarları Göster</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="7"/>
         <source>Global view settings that affect all users and issue types.</source>
-        <translation>Глобальные настройки представлений для всех пользователей и всех типов задач.</translation>
+        <translation>Genel görünüm ayarlarını tüm kullanıcılar ve konu türleri için uygula.</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="9"/>
         <source>Hide the ID column</source>
-        <translation>Скрыть колонку идентификаторов</translation>
+        <translation>No sütununu gizle</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="10"/>
         <source>Hide attributes with empty values</source>
-        <translation>Скрыть атрибуты без значений</translation>
+        <translation>Boş değerli özellikleri gizle</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="12"/>
         <source>Global view settings that affect all issue types.</source>
-        <translation>Глобальные настройки представлений для всех типов задач.</translation>
+        <translation>Genel görünüm ayarlarını tüm konu türleri için uygula.</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="15"/>
         <source>Order of issue history:</source>
-        <translation>Порядок записей в истории задач:</translation>
+        <translation>Olay tarihçe sırası:</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="16"/>
         <source>Default filter in issue history:</source>
-        <translation>Фильтр по умолчанию для истории задач:</translation>
+        <translation>Olay tarihçesinde varsayılan filtre:</translation>
     </message>
 </context>
 <context>
@@ -6217,27 +6217,27 @@
     <message>
         <location filename="../../views/delete.inc.php" line="33"/>
         <source>Delete View</source>
-        <translation>Удалить представление</translation>
+        <translation>Görünümü Sil</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="6"/>
         <source>Are you sure you want to delete public view &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить публичное представление &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; genel görünümünü silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="8"/>
         <source>Are you sure you want to delete your personal view &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Вы действительно хотите удалить приватное представление &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kişisel görünümünü silmek istediğinize emin misiniz?</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="16"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="17"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -6245,101 +6245,101 @@
     <message>
         <location filename="../../views/helper.inc.php" line="110"/>
         <source>begins with</source>
-        <translation>начинается с</translation>
+        <translation>ile başlayan</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="111"/>
         <source>contains</source>
-        <translation>содержит</translation>
+        <translation>içerir</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="112"/>
         <source>ends with</source>
-        <translation>заканчивается на</translation>
+        <translation>ile biter</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="113"/>
         <source>in</source>
-        <translation>в</translation>
+        <translation>içinde</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="255"/>
         <source>All Issues</source>
-        <translation>Все задачи</translation>
+        <translation>Tüm Konular</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="366"/>
         <source>Add Public View</source>
-        <translation>Добавить публичное представление</translation>
+        <translation>Kişisel Görünüm Ekle</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="367"/>
         <location filename="../../views/helper.inc.php" line="375"/>
         <source>Modify View</source>
-        <translation>Изменить представление</translation>
+        <translation>Görünümü Değiştir</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="368"/>
         <location filename="../../views/helper.inc.php" line="376"/>
         <source>Clone View</source>
-        <translation>Клонировать представление</translation>
+        <translation>Görünümü Kopyala</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="369"/>
         <location filename="../../views/helper.inc.php" line="377"/>
         <source>Rename View</source>
-        <translation>Переименовать представление</translation>
+        <translation>Görünümü Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="370"/>
         <location filename="../../views/helper.inc.php" line="378"/>
         <source>Delete View</source>
-        <translation>Удалить представление</translation>
+        <translation>Görünümü Sil</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="371"/>
         <source>Unpublish View</source>
-        <translation>Сделать представление приватным</translation>
+        <translation>Görünümü Yayından Kaldır</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="372"/>
         <source>Manage Personal Views</source>
-        <translation>Управление приватными представлениями</translation>
+        <translation>Kişisel Görünümleri Yönet</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="374"/>
         <source>Add Personal View</source>
-        <translation>Добавить приватное представление</translation>
+        <translation>Kişisel Görünüm Ekle</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="381"/>
         <source>Publish View</source>
-        <translation>Сделать представление публичным</translation>
+        <translation>Görünümü Yayınla</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="382"/>
         <source>Public View Settings</source>
-        <translation>Настройки публичных представлений</translation>
+        <translation>Herkese Açık Görünüm Ayarları</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="451"/>
         <source>ascending</source>
-        <translation>возрастающий</translation>
+        <translation>artan</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="451"/>
         <source>descending</source>
-        <translation>убывающий</translation>
+        <translation>azalan</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="464"/>
         <source>empty</source>
-        <translation>пусто</translation>
+        <translation>boş</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="470"/>
         <source>AND</source>
-        <translation>И</translation>
+        <translation>VE</translation>
     </message>
 </context>
 <context>
@@ -6347,27 +6347,27 @@
     <message>
         <location filename="../../views/rename.inc.php" line="33"/>
         <source>Rename View</source>
-        <translation>Переименовать представление</translation>
+        <translation>Görünümü Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="3"/>
         <source>Enter the new name for view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Введите новое имя для представления &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; görünümü için yeni bir isim girin.</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="10"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -6375,204 +6375,204 @@
     <message>
         <location filename="../../views/view.inc.php" line="56"/>
         <source>Modify Personal View</source>
-        <translation>Изменить приватное представление</translation>
+        <translation>Kişisel Görünümü Değiştir</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="59"/>
         <location filename="../../views/view.inc.php" line="76"/>
         <source>Clone View</source>
-        <translation>Клонировать представление</translation>
+        <translation>Görünümü Kopyala</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="62"/>
         <source>Add Personal View</source>
-        <translation>Добавить приватное представление</translation>
+        <translation>Kişisel Görünüm Ekle</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="70"/>
         <source>Default View</source>
-        <translation>Представление по умолчанию</translation>
+        <translation>Varsayılan Görünüm</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="73"/>
         <source>Modify Public View</source>
-        <translation>Изменить публичное представление</translation>
+        <translation>Herkese Açık Görünümü Değiştir</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="79"/>
         <source>Add Public View</source>
-        <translation>Добавить публичное представление</translation>
+        <translation>Kişisel Görünüm Ekle</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="291"/>
         <source>Ascending</source>
-        <translation>Возрастающий</translation>
+        <translation>Artan</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="291"/>
         <source>Descending</source>
-        <translation>Убывающий</translation>
+        <translation>Azalan</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="329"/>
         <source>is equal to</source>
-        <translation>совпадает с</translation>
+        <translation>eşit</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="330"/>
         <source>is not equal to</source>
-        <translation>не совпадает с</translation>
+        <translation>eşit değil</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="337"/>
         <source>begins with</source>
-        <translation>начинается с</translation>
+        <translation>ile başlayan</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="338"/>
         <source>contains</source>
-        <translation>содержит</translation>
+        <translation>içerir</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="339"/>
         <source>ends with</source>
-        <translation>заканчивается на</translation>
+        <translation>ile biter</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="340"/>
         <source>in list</source>
-        <translation>в списке</translation>
+        <translation>listede</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="345"/>
         <source>is less than</source>
-        <translation>меньше</translation>
+        <translation>den daha az</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="346"/>
         <source>is less than or equal to</source>
-        <translation>меньше или равно</translation>
+        <translation>den daha az ya da eşit</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="347"/>
         <source>is greater than</source>
-        <translation>больше</translation>
+        <translation>den daha büyük</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="348"/>
         <source>is greater than or equal to</source>
-        <translation>больше или равно</translation>
+        <translation>den daha büyük ya da eşit</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Некоторые из введенных значений некорректны.</translation>
+        <translation>Girdiğiniz bazı değerlerde hata var.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="12"/>
         <source>Modify the default view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Изменить исходное представление для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türünün varsayılan görünümünü değiştir.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="15"/>
         <source>Clone view &lt;strong&gt;%1&lt;/strong&gt; as a new public view.</source>
-        <translation>Клонировать представление &lt;strong&gt;%1&lt;/strong&gt; как новое публичное.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; görünümünü herkese açık görünüm olarak kopyala.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="17"/>
         <source>Modify the public view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Изменить публичное представление &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; herkese açık görünümünü değiştir.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="19"/>
         <source>Create a new public view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Создать новое представление для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türü için herkese açık bir görünüm oluştur.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="23"/>
         <source>Clone view &lt;strong&gt;%1&lt;/strong&gt; as a new personal view.</source>
-        <translation>Клонировать представление &lt;strong&gt;%1&lt;/strong&gt; как новое приватное.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; görünümünü kişisel görünüm olarak kopyala.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="25"/>
         <source>Modify your personal view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Изменить приватное представление &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; kişisel görünümünü değiştir.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="27"/>
         <source>Create a new personal view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Создать новое приватное представление для типа &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türü için kişisel görünüm oluştur.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="36"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="40"/>
         <source>Columns</source>
-        <translation>Колонки</translation>
+        <translation>Sütunlar</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="44"/>
         <source>Selected columns:</source>
-        <translation>Выбрать колонки:</translation>
+        <translation>Seçili sütunlar:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="45"/>
         <source>Order</source>
-        <translation>Порядок</translation>
+        <translation>Sıra</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="61"/>
         <source>Available columns:</source>
-        <translation>Доступные колонки:</translation>
+        <translation>Kullanılabilir sütunlar:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="74"/>
         <location filename="../../views/view.html.php" line="123"/>
         <source>Update</source>
-        <translation>Обновить</translation>
+        <translation>Güncelle</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="80"/>
         <source>Sort Order</source>
-        <translation>Порядок сортировки</translation>
+        <translation>Listeleme Sırası</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="82"/>
         <source>Column:</source>
-        <translation>Колонка:</translation>
+        <translation>Sütun:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="83"/>
         <source>Order:</source>
-        <translation>Порядок:</translation>
+        <translation>Sıra:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="91"/>
         <source>Filter</source>
-        <translation>Фильтр</translation>
+        <translation>Filtrele</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="96"/>
         <source>Active conditions:</source>
-        <translation>Активные колонки:</translation>
+        <translation>Aktif şartlar:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="109"/>
         <source>Available conditions:</source>
-        <translation>Доступные условия:</translation>
+        <translation>Kullanılabilir şartlar:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="131"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="132"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -6580,117 +6580,117 @@
     <message>
         <location filename="../../../cron/job.php" line="56"/>
         <source>Previous cron job timed out</source>
-        <translation>Предыдущая периодическая операция не завершилась</translation>
+        <translation>Bir önceki cron zaman aşımına uğradı</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="64"/>
         <source>Cron job started</source>
-        <translation>Периодическая операция запущена</translation>
+        <translation>Cron başladı</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="96"/>
         <source>Cron job finished with error</source>
-        <translation>Периодическая операция завершилась с ошибкой</translation>
+        <translation>Cron hata ile bitti</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="98"/>
         <source>Previous cron job is still running</source>
-        <translation>Предыдущая периодическая операция все еще выполняется</translation>
+        <translation>Bir önceki cron halen çalışıyor</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="321"/>
         <source>Sent %1 notification emails</source>
-        <translation>Отправлено %1 оповещений</translation>
+        <translation>%1 bilgilendirme e-postası gönderildi</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="384"/>
         <source>Ignored inbox email from &quot;%1&quot;</source>
-        <translation>Проигнорировано входящее сообщение &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; e-posta adresi yoksayıldı.</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="396"/>
         <source>Ignored inbox email from unknown address &quot;%1&quot;</source>
-        <translation>Проигнорировано входящее сообщение с неизвестного адреса &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; bilinmeyen adresinden gelen e-posta&apos;lar yoksayıldı.</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="415"/>
         <source>Ignored inbox email from &quot;%1&quot; because issue %2 is inaccessible</source>
-        <translation>Проигнорировано входящее сообщение &quot;%1&quot; потому что задача &quot;%2&quot; недоступна</translation>
+        <translation>&quot;%1&quot; dan gelen e-posta yoksayıldı, çünkü %2 konusu erişilebilir değil</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="434"/>
         <source>Ambiguous folder for inbox email address &quot;%1&quot;</source>
-        <translation>Неоднозначное имя папки для входящих сообщений адреса &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; e-posta adresi gelen kutusu için belirsiz klasör</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="436"/>
         <source>No matching folder for inbox email address &quot;%1&quot;</source>
-        <translation>Не найдена подходящая папка для входящих сообщений адреса &quot;%1&quot;</translation>
+        <translation>Klasör, &quot;%1&quot; e-posta adresinin gelen kutusunda eşleşmiyor</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="445"/>
         <source>Ignored inbox email from &quot;%1&quot; to &quot;%2&quot; because folder is inaccessible</source>
-        <translation>Проигнорировано входящее сообщение от &quot;%1&quot; потому что папка &quot;%2&quot; недоступна</translation>
+        <translation>&quot;%1&quot; dan &quot;%2&quot; ya gelen e-posta yoksayıldı, çünkü klasör erişilebilir değil</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="451"/>
         <source>Ignored inbox email from &quot;%1&quot; because default folder is inaccessible</source>
-        <translation>Проигнорировано входящее сообщение от &quot;%1&quot; потому что папка по умолчанию недоступна</translation>
+        <translation>&quot;%1&quot; dan gelen e-posta yoksayıldı, çünkü varsayılan klasör erişilebilir değil</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="454"/>
         <source>Ignored inbox email from &quot;%1&quot; because folder cannot be mapped</source>
-        <translation>Проигнорировано входящее сообщение от &quot;%1&quot; потому что папка не может быть сопоставлена</translation>
+        <translation>&quot;%1&quot; dan gelen e-posta yoksayıldı, çünkü klasör eşleştirilemedi</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="492"/>
         <source>No subject</source>
-        <translation>Без темы</translation>
+        <translation>Konusuz</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="531"/>
         <source>Attachment for message %1 from &quot;%2&quot; exceeded maximum size</source>
-        <translation>Вложение для сообщения %1 от &quot;%2&quot; превышает допустимый размер</translation>
+        <translation>&quot;%2&quot; dan gelen %1 mesajındaki ekli dosya için maksimum dosya boyutunu aşıldı</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="537"/>
         <source>HTML message for email %1</source>
-        <translation>HTML сообщение для адреса %1</translation>
+        <translation>Eposta %1 için HTML ileti</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="541"/>
         <source>Attachment for email %1</source>
-        <translation>Вложение для адреса %1</translation>
+        <translation>%1 e-postası için ekli dosya</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="584"/>
         <source>Processed %1 inbox emails</source>
-        <translation>Обработано %1 входящих сообщений</translation>
+        <translation>Gelen kutusundaki %1 posta işlendi</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="614"/>
         <source>From:</source>
-        <translation>От:</translation>
+        <translation>Kimden:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="620"/>
         <source>To:</source>
-        <translation>Кому:</translation>
+        <translation>Kime:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="627"/>
         <source>CC:</source>
-        <translation>Копия:</translation>
+        <translation>CC:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="630"/>
         <source>Subject:</source>
-        <translation>Тема:</translation>
+        <translation>Konu:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="100"/>
         <source>Cron job finished</source>
-        <translation>Периодическая операция завершена</translation>
+        <translation>Cron tamamlandı</translation>
     </message>
 </context>
 <context>
@@ -6698,53 +6698,53 @@
     <message>
         <location filename="../../../index.php" line="35"/>
         <source>Log in to WebIssues</source>
-        <translation>Войти в WebIssues</translation>
+        <translation>WebIssues&apos;e Giriş Yap</translation>
     </message>
     <message>
         <location filename="../../../index.php" line="77"/>
         <source>Anonymous Access</source>
-        <translation>Анонимный доступ</translation>
+        <translation>Anonim Erişim</translation>
     </message>
     <message>
         <location filename="../../../index.php" line="80"/>
         <source>Register New Account</source>
-        <translation>Зарегистрировать новую учетную запись</translation>
+        <translation>Yeni Hesabı Kaydet</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="8"/>
         <source>Login:</source>
-        <translation>Логин:</translation>
+        <translation>Giriş:</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="9"/>
         <source>Password:</source>
-        <translation>Пароль:</translation>
+        <translation>Şifre:</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="14"/>
         <location filename="../../../index.html.php" line="25"/>
         <source>Log in</source>
-        <translation>Войти</translation>
+        <translation>Giriş</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="20"/>
         <source>You have to enter a new password in order to log in.</source>
-        <translation>Необходимо ввести пароль для входа.</translation>
+        <translation>Giriş yapmak için yeni bir şifre girmeniz gerekli.</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="21"/>
         <source>New password:</source>
-        <translation>Новый пароль:</translation>
+        <translation>Yeni şifre:</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="22"/>
         <source>Confirm password:</source>
-        <translation>Подтвердите пароль:</translation>
+        <translation>Şifre (Tekrar):</translation>
     </message>
     <message>
         <location filename="../../../index.html.php" line="26"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -6752,104 +6752,104 @@
     <message>
         <location filename="../../../register.html.php" line="10"/>
         <source>Fill the information below to begin registration.</source>
-        <translation>Введите необходимую информацию для начала регистрации.</translation>
+        <translation>Kayıt işlemine başlamak için aşağıdaki bilgileri doldurun.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="12"/>
         <source>Note that administrator&apos;s approval is required before you can log in.</source>
-        <translation>Обратите внимание, что для входа потребуется подтверждение администратора.</translation>
+        <translation>Giriş yapabilmeniz için yönetici onayı gerektiğini not edin.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="18"/>
         <source>User Name</source>
-        <translation>Имя пользователя</translation>
+        <translation>Kullanıcı Adı</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="20"/>
         <source>Enter the user name that will be visible to other users.</source>
-        <translation>Введите имя пользователя, которое будет видимо другим участникам.</translation>
+        <translation>Diğer kullanıcılara görünecek kullanıcı adını girin.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="22"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="27"/>
         <source>Credentials</source>
-        <translation>Учетные данные</translation>
+        <translation>Hesap bilgileri</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="29"/>
         <source>Enter login and password for your new account.</source>
-        <translation>Введите логин и пароль для своей учетной записи.</translation>
+        <translation>Yeni hesabınız için kullanıcı adı ve şifre bilgilerini girin.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="31"/>
         <source>Login:</source>
-        <translation>Логин:</translation>
+        <translation>Giriş:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="32"/>
         <source>Password:</source>
-        <translation>Пароль:</translation>
+        <translation>Şifre:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="33"/>
         <source>Confirm password:</source>
-        <translation>Подтвердите пароль:</translation>
+        <translation>Şifre (Tekrar):</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="38"/>
         <source>Email Address</source>
-        <translation>Адрес e-mail</translation>
+        <translation>E-posta Adresi</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="40"/>
         <source>Email address:</source>
-        <translation>Адрес e-mail:</translation>
+        <translation>E-posta adresi:</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="42"/>
         <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
-        <translation>Этот адрес будет доступен только администратору. Активационное сообщение будет отправлено на этот адрес.</translation>
+        <translation>Bu adres, sadece sistem yöneticisi tarafından görülebilir. Bu adrese bir aktivasyon e-postası gönderilecek.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="47"/>
         <source>Register</source>
-        <translation>Регистрация</translation>
+        <translation>Kaydol</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="48"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Vazgeç</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="54"/>
         <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
-        <translation>Спасибо за регистрацию. Вскоре Вы получите активационное сообщение с инструкциями по завершению регистрации.</translation>
+        <translation>Kayıt olduğunuz için teşekkürler. Kısa süre sonra üyeliğinizi nasıl tamamlayacağınıza dair aktivasyon e-postası alacaksınız.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="57"/>
         <location filename="../../../register.html.php" line="66"/>
         <location filename="../../../register.html.php" line="75"/>
         <source>OK</source>
-        <translation>Готово</translation>
+        <translation>TAMAM</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="63"/>
         <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
-        <translation>Ваш запрос на регистрацию был активирован. Вы получите извещение по электронной почте после подтверждения администратором.</translation>
+        <translation>Üyelik kaydınız alındı. Üyeliğiniz yönetici tarafından onaylandığında bilgilendirme e-postası alacaksınız.</translation>
     </message>
     <message>
         <location filename="../../../register.html.php" line="72"/>
         <source>Your registration request was activated. You can now log in to the server using your login and password.</source>
-        <translation>Ваш запрос на регистрацию активирован. Теперь вы можете войти в систему используя свой логин и пароль.</translation>
+        <translation>Üyelik kaydınız alındı. Kullanıcı adı ve parolanızla birlikte sisteme giriş yapabilirsiniz.</translation>
     </message>
     <message>
         <location filename="../../../register.php" line="41"/>
         <source>Register New Account</source>
-        <translation>Зарегистрировать новую учетную запись</translation>
+        <translation>Yeni Hesabı Kaydet</translation>
     </message>
 </context>
 <context>
@@ -6857,7 +6857,7 @@
     <message>
         <location filename="../../../system/api/issuemanager.inc.php" line="759"/>
         <source>Deleted issue &quot;%1&quot; from folder &quot;%2&quot;</source>
-        <translation>Удалена задача &quot;%1&quot; из папки &quot;%2&quot;</translation>
+        <translation>&quot;%1&quot; konusu, &quot;%2&quot; klasöründen silindi</translation>
     </message>
 </context>
 <context>
@@ -6865,67 +6865,67 @@
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="299"/>
         <source>Added project &quot;%1&quot;</source>
-        <translation>Добавлен проект &quot;%1&quot;</translation>
+        <translation>Eklenen proje &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="337"/>
         <source>Renamed project &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Проект &quot;%1&quot; переименован в &quot;%2&quot;</translation>
+        <translation>Proje adı  &quot;%1&quot; den &quot;%2&quot; ye değişti</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="362"/>
         <source>Enabled public access for project &quot;%1&quot;</source>
-        <translation>Разрешен публичный доступ к проекту &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; projesi için genel erişim etkinleştirildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="365"/>
         <source>Disabled public access for project &quot;%1&quot;</source>
-        <translation>Запрещен публичный доступ к проекту &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; projesi için genel erişim pasifleştirildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="385"/>
         <source>Archived project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Arşivlenmiş proje &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="404"/>
         <source>Restored project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Geri yüklenmiş proje &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="445"/>
         <source>Deleted project &quot;%1&quot; with folders</source>
-        <translation>Удален проект &quot;%1&quot; вместе с папками</translation>
+        <translation>&quot;%1&quot; projesi klasörleriyle birlikte silindi</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="448"/>
         <source>Deleted project &quot;%1&quot;</source>
-        <translation>Удален проект &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; projesi silindi</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="503"/>
         <source>Added folder &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Добавлена папка &quot;%1&quot; в проект &quot;%2&quot;</translation>
+        <translation>&quot;%1&quot; klasörü &quot;%2&quot; projesine eklendi</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="542"/>
         <source>Renamed folder &quot;%1&quot; to &quot;%2&quot; in project &quot;%3&quot;</source>
-        <translation>Папка &quot;%1&quot; переименована в &quot;%2&quot; в проекте &quot;%3&quot;</translation>
+        <translation>&quot;%3&quot; projesindeki &quot;%1&quot; klasörü &quot;%2&quot; olarak değiştirildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="582"/>
         <source>Deleted folder &quot;%1&quot; with issues from project &quot;%2&quot;</source>
-        <translation>Удалена папка &quot;%1&quot; вместе с задачами в проекте &quot;%2&quot;</translation>
+        <translation>&quot;%1&quot; klasörü, içerisindeki konularla birlikte &quot;%2&quot; projesinden silindi</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="585"/>
         <source>Deleted folder &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation>Удалена папка &quot;%1&quot; в проекте &quot;%2&quot;</translation>
+        <translation> &quot;%1&quot; klasörü  &quot;%2&quot; projesinden silindi</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="642"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
-        <translation>Папка &quot;%1&quot; перемещена из проекта &quot;%2&quot; в &quot;%3&quot;</translation>
+        <translation>&quot;%1&quot; klasörü &quot;%2&quot; projesinden &quot;%3&quot; projesine taşındı</translation>
     </message>
 </context>
 <context>
@@ -6933,22 +6933,22 @@
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="171"/>
         <source>User &quot;%1&quot; registered</source>
-        <translation>Пользователь &quot;%1&quot; зарегистрирован</translation>
+        <translation>&quot;%1&quot; kullanıcı kaydedildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="194"/>
         <source>Registration request for user &quot;%1&quot; activated</source>
-        <translation>Запрос на регистрацию пользователя &quot;%1&quot; активирован</translation>
+        <translation>&quot;%1&quot; kullanıcısı için kayıt isteği aktifleştirildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="238"/>
         <source>Registration request for user &quot;%1&quot; approved</source>
-        <translation>Запрос на регистрацию пользователя &quot;%1&quot; подтвержден</translation>
+        <translation>&quot;%1&quot; kullanıcısı için kayıt isteği onaylandı</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="257"/>
         <source>Registration request for user &quot;%1&quot; rejected</source>
-        <translation>Запрос на регистрацию пользователя &quot;%1&quot; отклонен</translation>
+        <translation>&quot;%1&quot; kullanıcısı için kayıt isteği reddedildi</translation>
     </message>
 </context>
 <context>
@@ -6956,12 +6956,12 @@
     <message>
         <location filename="../../../system/api/servermanager.inc.php" line="78"/>
         <source>Renamed the server from &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Сервер &quot;%1&quot; переименован в &quot;%2&quot;</translation>
+        <translation>&quot;%1&quot; olan sunucu adı &quot;%2&quot; olarak değiştirildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/servermanager.inc.php" line="103"/>
         <source>Changed the unique identifier of the server</source>
-        <translation>Изменен уникальный идентификатор сервера</translation>
+        <translation>Sunucunun benzersiz tanımlayıcısı değiştirildi</translation>
     </message>
 </context>
 <context>
@@ -6969,12 +6969,12 @@
     <message>
         <location filename="../../../system/api/sessionmanager.inc.php" line="187"/>
         <source>Incorrect login attempt for user &quot;%1&quot;</source>
-        <translation>Неудачная попытка входа пользователя &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; kullanıcısı için geçersiz giriş isteği</translation>
     </message>
     <message>
         <location filename="../../../system/api/sessionmanager.inc.php" line="203"/>
         <source>Session opened for user &quot;%1&quot;</source>
-        <translation>Для пользователя &quot;%1&quot; открыта сессия</translation>
+        <translation>&quot;%1&quot; kullanıcı ile oturum açıldı</translation>
     </message>
 </context>
 <context>
@@ -6982,47 +6982,47 @@
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="317"/>
         <source>Added issue type &quot;%1&quot;</source>
-        <translation>Добавлен тип задач &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; konu türü eklendi</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="355"/>
         <source>Renamed issue type &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Тип задач &quot;%1&quot; переименован в &quot;%2&quot;</translation>
+        <translation>&quot;%1&quot; olan konu türü &quot;%2&quot; olarak değiştirildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="396"/>
         <source>Deleted issue type &quot;%1&quot; with folders</source>
-        <translation>Удален тип задач &quot;%1&quot; вместе с папками</translation>
+        <translation>&quot;%1&quot; konu türü klasörlerle birlikte silindi</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="399"/>
         <source>Deleted issue type &quot;%1&quot;</source>
-        <translation>Удален тип задач &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; konu türü silindi</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="453"/>
         <source>Added attribute &quot;%1&quot; to issue type &quot;%2&quot;</source>
-        <translation>Добавлен атрибут &quot;%1&quot; к  задачам типа &quot;%2&quot;</translation>
+        <translation>&quot;%2&quot; konu türüne &quot;%1&quot; özelliği eklendi</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="492"/>
         <source>Renamed attribute &quot;%1&quot; to &quot;%2&quot; of issue type &quot;%3&quot;</source>
-        <translation>Атрибут &quot;%1&quot; переименован в &quot;%2&quot; для задач типа &quot;%3&quot;</translation>
+        <translation>&quot;%3&quot; konu türünün &quot;%1&quot; özelliği &quot;%2&quot; olarak değiştirildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="516"/>
         <source>Modified attribute &quot;%1&quot; of issue type &quot;%2&quot;</source>
-        <translation>Изменен атрибут &quot;%1&quot; задач типа &quot;%2&quot;</translation>
+        <translation>&quot;%2&quot; konu türünün &quot;%1&quot; özelliği değiştirildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="550"/>
         <source>Deleted attribute &quot;%1&quot; with values from issue type &quot;%2&quot;</source>
-        <translation>Удален атрибут &quot;%1&quot; вместе со значениями у задач типа &quot;%2&quot;</translation>
+        <translation>&quot;%2&quot; konu türündeki &quot;%1&quot; özelliği, değerleriyle birlikte silindi</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="553"/>
         <source>Deleted attribute &quot;%1&quot; from issue type &quot;%2&quot;</source>
-        <translation>Удален атрибут &quot;%1&quot; задач типа &quot;%2&quot;</translation>
+        <translation>&quot;%2&quot; konu türündeki &quot;%1&quot; özelliği silindi</translation>
     </message>
 </context>
 <context>
@@ -7030,52 +7030,52 @@
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="369"/>
         <source>Added user &quot;%1&quot;</source>
-        <translation>Добавлен пользователь &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; kullanıcısı eklendi</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="399"/>
         <source>Changed password for user &quot;%1&quot;</source>
-        <translation>Изменен пароль пользователя &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; kullanıcısının şifresi değiştirildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="444"/>
         <source>User &quot;%1&quot; changed own password</source>
-        <translation>Пользователь &quot;%1&quot; сменил свой пароль</translation>
+        <translation>&quot;%1&quot; kullanıcı kendi şifresini değiştirdi</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="482"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Пользователь &quot;%1&quot; переименован в &quot;%2&quot;</translation>
+        <translation>&quot;%1&quot; kullanıcı &quot;%2&quot; olarak değiştirildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="514"/>
         <source>Disabled access for user &quot;%1&quot;</source>
-        <translation>Отключен доступ пользователю &quot;%1&quot;</translation>
+        <translation>&quot;%1&quot; kullanıcısı için erişim devredışı bırakıldı</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="518"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
-        <translation>Пользователю &quot;%1&quot; предоставлен обычный уровень доступа</translation>
+        <translation>&quot;%1&quot; kullanıcısına normal erişim izni verildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="522"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
-        <translation>Пользователю &quot;%1&quot; добавлен административный уровень доступа</translation>
+        <translation>&quot;%1&quot; kullanıcısına sşsten yöneticisi erişim izni verildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="577"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation>Пользователь &quot;%1&quot; удален из проекта &quot;%2&quot;</translation>
+        <translation>&quot;%1&quot; kullanıcısı &quot;%2&quot; projesinden silindi</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="581"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Пользователю &quot;%1&quot; предоставлен обычный уровень доступа в проекте &quot;%2&quot;</translation>
+        <translation>&quot;%1&quot; kullanıcısına &quot;%2&quot; projesi için normal erişim verildi</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="585"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Пользователю &quot;%1&quot; предоставлен административный уровень доступа в проекте &quot;%2&quot;</translation>
+        <translation>&quot;%1&quot; kullanıcısına &quot;%2&quot; projesi için proje yöneticisi erişimi verildi</translation>
     </message>
 </context>
 <context>
@@ -7083,37 +7083,37 @@
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="42"/>
         <source>ID</source>
-        <translation>Идентификатор</translation>
+        <translation>No</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="43"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="44"/>
         <source>Created By</source>
-        <translation>Кем создано</translation>
+        <translation>Oluşturuldu</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="45"/>
         <source>Created Date</source>
-        <translation>Создано</translation>
+        <translation>Oluşturma Tarihi</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="46"/>
         <source>Modified By</source>
-        <translation>Кем изменено</translation>
+        <translation>Son Değiştirme</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="47"/>
         <source>Modified Date</source>
-        <translation>Изменено</translation>
+        <translation>Değiştirilme Tarihi</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="48"/>
         <source>Location</source>
-        <translation>Расположение</translation>
+        <translation>Lokasyon</translation>
     </message>
 </context>
 <context>
@@ -7121,342 +7121,342 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="71"/>
         <source>Invalid login or password</source>
-        <translation>Неверный логин или пароль</translation>
+        <translation>Yanlış kullanıcı adı veya parola</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="89"/>
         <source>A project with this name already exists</source>
-        <translation>Проект с таким именем уже существует</translation>
+        <translation>Aynı isimde başka bir proje zaten mevcut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="91"/>
         <source>A folder with this name already exists</source>
-        <translation>Папка с таким именем уже существует</translation>
+        <translation>Aynı isimde başka klasör zaten mevcut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="93"/>
         <source>A user with this login or name already exists</source>
-        <translation>Пользователь с таким именем или логином уже существует</translation>
+        <translation>Aynı isimde başka bir kullanıcı adı veya isim zaten mevcut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="95"/>
         <source>A type with this name already exists</source>
-        <translation>Тип с таким именем уже существует</translation>
+        <translation>Aynı isimde başka bir tür zaten mevcut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="97"/>
         <source>An attribute with this name already exists</source>
-        <translation>Атрибут с таким именем уже существует</translation>
+        <translation>Aynı isimde başka bir özellik zaten mevcut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="117"/>
         <source>Required value is missing</source>
-        <translation>Отсутствует требующееся значение</translation>
+        <translation>Zorunlu alan eksik</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="119"/>
         <source>Text is too short</source>
-        <translation>Текст слишком короткий</translation>
+        <translation>Metin çok kısa</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="121"/>
         <source>Text is too long</source>
-        <translation>Текст слишком длинный</translation>
+        <translation>Metin çok uzun</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="123"/>
         <source>Number is too small</source>
-        <translation>Число слишком маленькое</translation>
+        <translation>Sayı çok küçük</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="125"/>
         <source>Number is too big</source>
-        <translation>Число слишком большое</translation>
+        <translation>Sayı çok büyük</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="131"/>
         <source>Value has incorrect format</source>
-        <translation>Значение имеет неверный формат</translation>
+        <translation>Değer yanlış formatta</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="133"/>
         <source>Date is not correct</source>
-        <translation>Дата не верна</translation>
+        <translation>Tarih doğru değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="135"/>
         <source>Time is not correct</source>
-        <translation>Время не верно</translation>
+        <translation>Zaman doğru değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="137"/>
         <source>Email address is invalid</source>
-        <translation>Адрес электронной почты не верный</translation>
+        <translation>Geçersiz e-posta adresi</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="139"/>
         <source>No matching item is selected</source>
-        <translation>Подходящее значение не выбрано</translation>
+        <translation>Hiç eşleşmiş öğe seçili değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="141"/>
         <source>Duplicate items are entered</source>
-        <translation>Введены дублирующиеся значения</translation>
+        <translation>Çift öğe girildi</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="127"/>
         <source>Number has too many decimal digits</source>
-        <translation>Число имеет слишком много цифр</translation>
+        <translation>Sayı çok fazla ondalık basamak içeriyor</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="54"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Некоторые из введенных значений некорректны.</translation>
+        <translation>Girdiğiniz bazı değerlerde hata var.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="56"/>
         <source>Incorrect value: %1.</source>
-        <translation>Некорректное значение: %1.</translation>
+        <translation>Yanlış değer: %1</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="67"/>
         <source>Your session has expired; please reconnect</source>
-        <translation>Ваша сессия истекла, подключитесь снова</translation>
+        <translation>Oturumunuz sona ermiştir; lütfen tekrar giriş yapınız</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="69"/>
         <source>You have no permission to perform this operation</source>
-        <translation>У Вас нет прав на данную операцию</translation>
+        <translation>Bu işlemi yapmaya yetkiniz bulunmamaktadır</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="73"/>
         <source>Project does not exist</source>
-        <translation>Проект не существует</translation>
+        <translation>Proje mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="75"/>
         <source>Folder does not exist</source>
-        <translation>Папка не существует</translation>
+        <translation>Klasör mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="77"/>
         <source>Issue does not exist</source>
-        <translation>Задача не существует</translation>
+        <translation>Konu mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="79"/>
         <source>Attachment does not exist</source>
-        <translation>Вложение не существует</translation>
+        <translation>Ekli dosya mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="81"/>
         <source>User does not exist</source>
-        <translation>Пользователь не существует</translation>
+        <translation>Kullanıcı mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="83"/>
         <source>Type does not exist</source>
-        <translation>Тип не существует</translation>
+        <translation>Tür mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="85"/>
         <source>Attribute does not exist</source>
-        <translation>Атрибут не существует</translation>
+        <translation>Özellik mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="87"/>
         <source>Event does not exist</source>
-        <translation>Событие не существует</translation>
+        <translation>Olay mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="99"/>
         <source>Project cannot be deleted</source>
-        <translation>Проект нельзя удалить</translation>
+        <translation>Proje silinemez</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="101"/>
         <source>Folder cannot be deleted</source>
-        <translation>Папку нельзя удалить</translation>
+        <translation>Klasör silinemez</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="103"/>
         <source>Type cannot be deleted</source>
-        <translation>Тип нельзя удалить</translation>
+        <translation>Tür silinemez</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="105"/>
         <source>Text contains invalid characters</source>
-        <translation>Текст содержит недопустимые символы</translation>
+        <translation>Metin, geçersiz karakter içeriyor</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="107"/>
         <source>Access level is invalid</source>
-        <translation>Уровень доступа неверный</translation>
+        <translation>Erişim düzeyi geçersiz</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="109"/>
         <source>Value is invalid</source>
-        <translation>Значение не верно</translation>
+        <translation>Değer geçersiz</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="111"/>
         <source>Definition is invalid</source>
-        <translation>Определение не верно</translation>
+        <translation>Tanım geçersiz</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="113"/>
         <source>Invalid preference value</source>
-        <translation>Неверное значение свойства</translation>
+        <translation>Geçersiz tercih değeri</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="115"/>
         <source>Invalid setting value</source>
-        <translation>Неверное значение свойства</translation>
+        <translation>Geçersiz ayar değeri</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="129"/>
         <source>Number has too many digits</source>
-        <translation>Число имеет слишком много цифр</translation>
+        <translation>Sayı çok fazla rakam içeriyor</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="143"/>
         <source>Minimum value is greater than maximum value</source>
-        <translation>Минимальное значение превышает максимальное</translation>
+        <translation>En küçük değer en büyük değerden fazla</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="145"/>
         <source>Incompatible attribute type</source>
-        <translation>Несовместимый тип атрибутов</translation>
+        <translation>Uyumsuz özellik türü</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="147"/>
         <source>View does not exist</source>
-        <translation>Представление не существует</translation>
+        <translation>Görünüm mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="149"/>
         <source>Column does not exist</source>
-        <translation>Колонка не существует</translation>
+        <translation>Sütun mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="151"/>
         <source>A view with this name already exists</source>
-        <translation>Представление с таким именем уже существует</translation>
+        <translation>Bu isimde bir görünüm zaten mevcut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="153"/>
         <source>A required column is missing</source>
-        <translation>Необходимая колонка отсутствует</translation>
+        <translation>Zorunlu sütun eksik</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="155"/>
         <source>An attribute is missing</source>
-        <translation>Атрибут отсутствует</translation>
+        <translation>Bir özellik eksik</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="157"/>
         <source>No items are specified</source>
-        <translation>Элементы не определены</translation>
+        <translation>Hiç öğe belirtilmedi</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="159"/>
         <source>Passwords do not match; please retype them</source>
-        <translation>Пароли не соответствуют, введите их заново</translation>
+        <translation>Şifreler eşleşmiyor, lütfen tekrar girin</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="161"/>
         <source>Alert does not exist</source>
-        <translation>Оповещение не существует</translation>
+        <translation>Uyarı mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="163"/>
         <source>Alert already exists</source>
-        <translation>Оповещение уже существует</translation>
+        <translation>Uyarı zaten mevcut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="165"/>
         <source>Invalid alert email setting</source>
-        <translation>Неверный адрес электронной почты для оповещения</translation>
+        <translation>Geçersiz uyarı maili ayarı</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="167"/>
         <source>Comment does not exist</source>
-        <translation>Комментарий не существует</translation>
+        <translation>Yorum mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="169"/>
         <source>Attribute cannot be deleted</source>
-        <translation>Атрибут нельзя удалить</translation>
+        <translation>Özellik silinemez</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="171"/>
         <source>You must change your password</source>
-        <translation>Вам необходимо изменить пароль</translation>
+        <translation>Şifrenizi değiştirin.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="173"/>
         <source>Cannot reuse password; choose different password</source>
-        <translation>Нельзя использовать пароль повторно, введите новый пароль</translation>
+        <translation>Şifre tekrar kullanılamaz; farklı şifre seçiniz</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="175"/>
         <source>The specified item was not found</source>
-        <translation>Указанный элемент не найден</translation>
+        <translation>Belirtilen öğe bulunamadı</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="177"/>
         <source>Value cannot contain a comma</source>
-        <translation>Значение не может содержать запятую</translation>
+        <translation>Değer virgül içeremez</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="179"/>
         <source>Concurrency error; please try again</source>
-        <translation>Ошибка одновременного доступа, повторите попытку</translation>
+        <translation>Eşzamanlılık hatası; lütfen tekrar deneyin</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="181"/>
         <source>One of the dependent objects no longer exists</source>
-        <translation>Один из необходимых объектов уже не существует</translation>
+        <translation>Bağımlı objelerden biri artık yok</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="183"/>
         <source>Another user already uses this email address</source>
-        <translation>Другой пользователь уже использует этот электронный адрес</translation>
+        <translation>Bir başka kullanıcı bu mail adresini zaten kullanıyor</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="189"/>
         <source>Description does not exist</source>
-        <translation>Описание не существует</translation>
+        <translation>Açıklama mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="191"/>
         <source>Description already exists</source>
-        <translation>Описание уже существует</translation>
+        <translation>Tanımlama zaten mevcut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="193"/>
         <source>Text format is invalid</source>
-        <translation>Формат текста неверен</translation>
+        <translation>Metin biçimi geçersiz</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="195"/>
         <source>Subscription does not exist</source>
-        <translation>Подписка не существует</translation>
+        <translation>Abonelik mevcut değil</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="197"/>
         <source>Subscription already exists</source>
-        <translation>Подписка уже существует</translation>
+        <translation>Abonelik zaten mevcut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="185"/>
         <source>The activation key is invalid</source>
-        <translation>Код активации неверный</translation>
+        <translation>Etkinleştirme anahtarı geçersizdir</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="187"/>
         <source>Request does not exist</source>
-        <translation>Запрос не существует</translation>
+        <translation>İstek mevcut değil</translation>
     </message>
 </context>
 <context>
@@ -7466,13 +7466,13 @@
         <location filename="../../../system/web/expressionhelper.inc.php" line="79"/>
         <location filename="../../../system/web/expressionhelper.inc.php" line="93"/>
         <source>Me</source>
-        <translation>Я</translation>
+        <translation>Ben</translation>
     </message>
     <message>
         <location filename="../../../system/web/expressionhelper.inc.php" line="46"/>
         <location filename="../../../system/web/expressionhelper.inc.php" line="81"/>
         <source>Today</source>
-        <translation>Сегодня</translation>
+        <translation>Bugün</translation>
     </message>
 </context>
 <context>
@@ -7480,47 +7480,47 @@
     <message>
         <location filename="../../../system/web/grid.inc.php" line="255"/>
         <source>Ascending</source>
-        <translation>Возрастающий</translation>
+        <translation>Artan</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="255"/>
         <source>Decending</source>
-        <translation>Убывающий</translation>
+        <translation>Azalan</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="296"/>
         <source>&amp;laquo; first</source>
-        <translation>&amp;laquo; первый</translation>
+        <translation>&amp;laquo; ilk</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="297"/>
         <source>&amp;lt; previous</source>
-        <translation>&amp;lt; предыдущий</translation>
+        <translation>&amp;lt; önceki</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="314"/>
         <source>next &amp;gt;</source>
-        <translation>следующий &amp;gt;</translation>
+        <translation>sonraki &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="315"/>
         <source>last &amp;raquo;</source>
-        <translation>последний &amp;raquo;</translation>
+        <translation>son &amp;raquo;</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="358"/>
         <source>Expand</source>
-        <translation>Развернуть</translation>
+        <translation>Genişlet</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="359"/>
         <source>Collapse</source>
-        <translation>Свернуть</translation>
+        <translation>Daralt</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="361"/>
         <source>Blank</source>
-        <translation>Чистый</translation>
+        <translation>Boşluk</translation>
     </message>
 </context>
 <context>
@@ -7529,88 +7529,88 @@
         <location filename="../../../system/web/javascript.inc.php" line="109"/>
         <location filename="../../../system/web/javascript.inc.php" line="139"/>
         <source>Choose</source>
-        <translation>Выбрать</translation>
+        <translation>Seç</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="115"/>
         <source>Next</source>
-        <translation>Следующий</translation>
+        <translation>Sonraki</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="116"/>
         <source>Previous</source>
-        <translation>Предыдущий</translation>
+        <translation>Önceki</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="303"/>
         <source>Bold</source>
-        <translation>Жирный</translation>
+        <translation>Kalın</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="304"/>
         <source>Italic</source>
-        <translation>Курсив</translation>
+        <translation>Yatık</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="305"/>
         <source>Monospace</source>
-        <translation>Моноширинный</translation>
+        <translation>Tek aralıklı</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="307"/>
         <source>Hyperlink</source>
-        <translation>Гиперссылка</translation>
+        <translation>Bağlantı</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="307"/>
         <source>Enter link URL:</source>
-        <translation>Введите URL ссылки:</translation>
+        <translation>Bağlantı URL&apos;ini giriniz:</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="308"/>
         <source>Link text</source>
-        <translation>Текст ссылки</translation>
+        <translation>Bağlantı metni</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="310"/>
         <source>Bullet List</source>
-        <translation>Список</translation>
+        <translation>Madde İmli Liste</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="311"/>
         <source>Quote Block</source>
-        <translation>Блок с цитатой</translation>
+        <translation>Alıntı Bloğu</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="312"/>
         <source>Code Block</source>
-        <translation>Блок кода</translation>
+        <translation>Kod Bloğu</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="313"/>
         <source>Right-To-Left Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Sağdan-Sola Metin</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="315"/>
         <source>Preview</source>
-        <translation>Просмотр</translation>
+        <translation>Öngörünüm</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="101"/>
         <location filename="../../../system/web/javascript.inc.php" line="117"/>
         <source>Today</source>
-        <translation>Сегодня</translation>
+        <translation>Bugün</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="119"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Kapat</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="158"/>
         <source>Search Options</source>
-        <translation>Свойства поиска</translation>
+        <translation>Arama Ayarları</translation>
     </message>
 </context>
 <context>
@@ -7618,112 +7618,112 @@
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="42"/>
         <source>Sunday</source>
-        <translation>Воскресенье</translation>
+        <translation>Pazar</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="43"/>
         <source>Monday</source>
-        <translation>Понедельник</translation>
+        <translation>Pazartesi</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="44"/>
         <source>Tuesday</source>
-        <translation>Вторник</translation>
+        <translation>Salı</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="45"/>
         <source>Wednesday</source>
-        <translation>Среда</translation>
+        <translation>Çarşamba</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="46"/>
         <source>Thursday</source>
-        <translation>Четверг</translation>
+        <translation>Perşembe</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="47"/>
         <source>Friday</source>
-        <translation>Пятница</translation>
+        <translation>Cuma</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="48"/>
         <source>Saturday</source>
-        <translation>Суббота</translation>
+        <translation>Cumartesi</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="68"/>
         <source>January</source>
-        <translation>Январь</translation>
+        <translation>Ocak</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="69"/>
         <source>February</source>
-        <translation>Февраль</translation>
+        <translation>Şubat</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="70"/>
         <source>March</source>
-        <translation>Март</translation>
+        <translation>Mart</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="71"/>
         <source>April</source>
-        <translation>Апрель</translation>
+        <translation>Nisan</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="72"/>
         <source>May</source>
-        <translation>Май</translation>
+        <translation>Mayıs</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="73"/>
         <source>June</source>
-        <translation>Июнь</translation>
+        <translation>Haziran</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="74"/>
         <source>July</source>
-        <translation>Июль</translation>
+        <translation>Temmuz</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="75"/>
         <source>August</source>
-        <translation>Август</translation>
+        <translation>Ağustos</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="76"/>
         <source>September</source>
-        <translation>Сентябрь</translation>
+        <translation>Eylül</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="77"/>
         <source>October</source>
-        <translation>Октябрь</translation>
+        <translation>Ekim</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="78"/>
         <source>November</source>
-        <translation>Ноябрь</translation>
+        <translation>Kasım</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="79"/>
         <source>December</source>
-        <translation>Декабрь</translation>
+        <translation>Aralık</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="103"/>
         <source>%1 bytes</source>
-        <translation>%1 байт</translation>
+        <translation>%1 bayt</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="107"/>
         <source>%1 kB</source>
-        <translation>%1 КБ</translation>
+        <translation>%1 kB</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="110"/>
         <source>%1 MB</source>
-        <translation>%1 МБ</translation>
+        <translation>%1 MB</translation>
     </message>
 </context>
 </TS>
