@@ -44,7 +44,7 @@ class System_Web_LinkLocator extends System_Web_Base
         //  - http://www.regular-expressions.info/email.html 
         //  - http://www.regexguru.com/2008/11/detecting-urls-in-a-block-of-text/
 
-        $mail = '\b(?:mailto:)?[\w.%+-]+@[\w.-]+\.[a-z]{2,4}\b';
+        $mail = '\b(?:mailto:)?[\w.%+-]+@[\w.-]+\.[a-z]{2,}\b';
         $url = '(?:\b(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)|\\\\\\\\)(?:\([\w+&@#\/\\\\%=~|$?!:,.-]*\)|[\w+&@#\/\\\\%=~|$?!:,.-])*(?:\([\w+&@#\/\\\\%=~|$?!:,.-]*\)|[\w+&@#\/\\\\%=~|$])';
         $id = '#\d+\b';
         $pattern = "/($mail|$url|$id)/ui";

@@ -248,7 +248,7 @@ class System_Api_Validator
     */
     public function checkEmailAddress( $value )
     {
-        if ( !preg_match( '/^[\w.%+-]+@[\w.-]+\.[a-z]{2,4}$/ui', $value ) )
+        if ( !preg_match( '/^[\w.%+-]+@[\w.-]+\.[a-z]{2,}$/ui', $value ) )
             throw new System_Api_Error( System_Api_Error::InvalidEmail );
     }
 

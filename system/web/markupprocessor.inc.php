@@ -82,7 +82,7 @@ class System_Web_MarkupProcessor
     private function __construct( $text )
     {
         // similar to System_Web_LinkLocator's automatic links, but simpler because we know the exact beginning and end of the link
-        $mail = '(?:mailto:)?[\w.%+-]+@[\w.-]+\.[a-z]{2,4}';
+        $mail = '(?:mailto:)?[\w.%+-]+@[\w.-]+\.[a-z]{2,}';
         $url = '(?:(?:https?|ftp|file):\/\/|www\.|ftp\.|\\\\\\\\)[\w+&@#\/\\\\%=~|$?!:,.()-]+';
         $id = '#\d+';
         $link = "(?:$mail|$url|$id)";
