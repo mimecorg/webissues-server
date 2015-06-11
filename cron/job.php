@@ -470,7 +470,7 @@ class Cron_Job extends System_Core_Application
                             }
                         }
 
-                        $text = $parser->normalizeString( $text, null, System_Api_Parser::MultiLine );
+                        $text = $parser->normalizeString( $text, null, System_Api_Parser::MultiLine | System_Api_Parser::AllowCarriageReturn );
                         $text = preg_replace( '/\n(?:[ \t]*\n)+/', "\n\n", $text );
 
                         // two separators in the same line or in two consecutive lines indicate where the text should be cut off

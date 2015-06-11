@@ -45,6 +45,10 @@ class System_Api_Validator
     * spaces.
     */
     const MultiLine = 2;
+    /**
+    * If this flag is set, the string may contain CR (0x0d) characters.
+    */
+    const AllowCarriageReturn = 4;
     /*@}*/
 
     protected $locale = null;
@@ -96,9 +100,14 @@ class System_Api_Validator
             if ( $char == ' ' || $char == '\n' || $char == '\t' )
                 throw new System_Api_Error( System_Api_Error::InvalidString );
 
-            // no control characters allowed except TAB and LF
-            if ( preg_match( '/[\x00-\x08\x0b-\x1f\x7f]/', $string ) )
-                throw new System_Api_Error( System_Api_Error::InvalidString );
+            // no control characters allowed except TAB and LF (and CR if flagged)
+            if ( $flags & self::AllowCarriageReturn )
+                $disallowed = '/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/';
+            else
+                $disallowed = '/[\x00-\x08\x0b-\x1f\x7f]/';
+
+            if ( preg_match( $disallowed, $string ) ) 
+                throw new System_Api_Error( System_Api_Error::InvalidString ); 
         } else {
             if ( mb_substr( $string, -1, 1 ) == ' ' )
                 throw new System_Api_Error( System_Api_Error::InvalidString );
