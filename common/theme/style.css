@@ -90,7 +90,7 @@ body {
   padding: 0.75em;
   background: #ffffff url(images/bg-block.png) repeat-x;
   border: 1px solid #cccccc;
-  box-shadow: 1px 1px 3px #cccccc;
+  box-shadow: 1px 1px 3px #bbbbbb;
   width: 800px;
 }
 
@@ -100,7 +100,7 @@ body {
   padding: 0.75em;
   background: #ffffff url(images/bg-block.png) repeat-x;
   border: 1px solid #cccccc;
-  box-shadow: 1px 1px 3px #cccccc;
+  box-shadow: 1px 1px 3px #bbbbbb;
   width: 400px;
 }
 
@@ -435,18 +435,18 @@ a img {
 
 table.pane-layout {
   width: 100%;
-  margin: 0;
+  margin: -0.3em 0 0 0;
   padding: 0;
   border: none;
   border-collapse: separate;
-  border-spacing: 1em;
+  border-spacing: 1em 1.3em;
 }
 
 table.pane-layout td.left-pane, table.pane-layout td.top-pane, table.pane-layout td.bottom-pane {
   margin: 0;
   background: #ffffff url(images/bg-block.png) repeat-x;
   border: 1px solid #cccccc;
-  box-shadow: 1px 1px 3px #cccccc;
+  box-shadow: 1px 1px 3px #bbbbbb;
   padding: 0.75em;
   vertical-align: top;
 }
