@@ -258,7 +258,7 @@ class Common_Mail_Notification extends System_Web_Component
     private function convertToParagraphs( $text )
     {
         $text = System_Web_Escaper::wrap( $text );
-        $text = str_replace( "\n", "<br />", $text );
+        $text = str_replace( "\n", "<br>", $text );
         $text = str_replace( "  ", "&nbsp; ", $text );
         $text = str_replace( "\t", "&nbsp; &nbsp; &nbsp; &nbsp; ", $text );
         return new System_Web_RawValue( $text );

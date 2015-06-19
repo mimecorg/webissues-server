@@ -251,7 +251,7 @@ class System_Web_Base
             $tag .= " $key=\"$value\"";
         }
         if ( $text === null )
-            return "<$tag />";
+            return "<$tag>";
         else if ( $text === true )
             return "<$tag>\n";
         else

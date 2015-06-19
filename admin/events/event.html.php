@@ -9,10 +9,7 @@
 </tr>
 <tr>
 <td><?php echo $this->tr( 'Severity:' ) ?></td>
-<td>
-<img src="<?php echo $event[ 'icon' ] ?>" alt="<?php echo $event[ 'severity' ] ?>" title="<?php echo $event[ 'severity' ] ?>" class="icon" />
-<?php echo $event[ 'severity' ] ?>
-</td>
+<td><?php echo $this->image( $event[ 'icon' ], $event[ 'severity' ] ) . ' ' . $event[ 'severity' ] ?></td>
 </tr>
 <tr>
 <td><?php echo $this->tr( 'Date:' ) ?></td>

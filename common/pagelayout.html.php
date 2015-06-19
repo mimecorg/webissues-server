@@ -2,15 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=930, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php echo $pageTitle ?> | <?php echo $siteName ?></title>
-  <link rel="shortcut icon" href="<?php echo $this->url( $icon ) ?>" type="image/vnd.microsoft.icon" /> 
+  <link rel="shortcut icon" href="<?php echo $this->url( $icon ) ?>" type="image/vnd.microsoft.icon"> 
 <?php foreach ( $cssFiles as $file ): ?>
-  <link rel="stylesheet" href="<?php echo $this->url( $file ) ?>" type="text/css" />
+  <link rel="stylesheet" href="<?php echo $this->url( $file ) ?>" type="text/css">
 <?php endforeach ?>
 <?php foreach ( $cssConditional as $condition => $file ): ?>
-  <!--[if <?php echo $condition ?>]><link rel="stylesheet" href="<?php echo $this->url( $file ) ?>" type="text/css" /><![endif]-->
+  <!--[if <?php echo $condition ?>]><link rel="stylesheet" href="<?php echo $this->url( $file ) ?>" type="text/css"><![endif]-->
 <?php endforeach ?>
 <?php foreach ( $scriptFiles as $file ): ?>
   <script type="text/javascript" src="<?php echo $this->url( $file ) ?>"></script>
@@ -24,7 +24,7 @@
 <body>
 
 <div id="header">
-  <img id="site-logo" src="<?php echo $this->url( '/common/images/webissues-logo.png' )?>" alt="WebIssues" />
+  <img id="site-logo" src="<?php echo $this->url( '/common/images/webissues-logo.png' )?>" alt="WebIssues">
   <div id="site-name"><?php echo $siteName ?></div>
   <div id="header-right">
 <?php

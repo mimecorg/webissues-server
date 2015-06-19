@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8">
   <title><?php $this->insertSlot( 'subject' ) ?></title>
   <style type="text/css">
 <?php readfile( WI_ROOT_DIR . '/common/theme/mail.css' ) ?>

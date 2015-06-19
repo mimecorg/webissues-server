@@ -11,7 +11,7 @@
     . " the Free Software Foundation, either version 3 of the License, or"
     . " (at your option) any later version." ) ?></p>
 
-<p><?php echo $this->tr( 'Copyright &copy; 2006 Michał Męciński' ) ?><br />
+<p><?php echo $this->tr( 'Copyright &copy; 2006 Michał Męciński' ) ?><br>
 <?php echo $this->tr( 'Copyright &copy; 2007-2015 WebIssues Team' ) ?></p>
 
 <fieldset class="form-fieldset">
