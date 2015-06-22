@@ -486,6 +486,17 @@ ul.changes {
   margin-bottom: 0.75em;
 }
 
+.edited {
+  font-size: 8pt;
+  font-weight: normal;
+  color: #888888;
+}
+
+.history-links {
+  float: right;
+  margin-top: -2px
+}
+
 .comment-text {
   padding: 0.5em;
   white-space: pre-wrap;

@@ -57,9 +57,8 @@
 
 <div style="float: right">
 <?php
-        echo $this->tr( 'Last Edited:' ) . ' ' . $descr[ 'modified_date' ] . ' &mdash; ' . $descr[ 'modified_by' ];
         if ( $canReply ):
-            echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/addcomment.php', array( 'reply' => 'descr' ) ), '/common/images/reply-16.png', $this->tr( 'Reply' ) );
+            echo $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/addcomment.php', array( 'reply' => 'descr' ) ), '/common/images/reply-16.png', $this->tr( 'Reply' ) );
         endif;
         if ( $canEditDescr ):
             echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/editdescription.php' ), '/common/images/edit-modify-16.png', $this->tr( 'Edit' ) );
@@ -68,7 +67,14 @@
 ?>
 </div>
 
-<h3><?php echo $this->tr( 'Description' ) ?></h3>
+<h3>
+<?php
+    echo $this->tr( 'Description' );
+    if ( $descr[ 'is_modified' ] ):
+        echo '&nbsp; <span class="edited">(' . $this->tr( 'Last Edited:' ) . ' ' . $descr[ 'modified_date' ] . ' &mdash; ' . $descr[ 'modified_by' ] . ')</span>';
+    endif;
+?>
+</h3>
 
 <div class="comment-text"><?php echo $descr[ 'descr_text' ] ?></div>
 
@@ -94,11 +100,8 @@
 
 <?php if ( $item[ 'change_type' ] == System_Const::CommentAdded ): ?>
 
-<div style="float: right">
+<div class="history-links">
 <?php
-    if ( $item[ 'stamp_id' ] != $id ):
-        echo $this->tr( 'Last Edited:' ) . ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ' | ';
-    endif;
     echo '<a class="anchor" name="item' . $id . '">' . $this->imageAndText( '/common/images/comment-16.png', $this->tr( 'Comment %1', null, $item[ 'change_id' ] ) ) . '</a>';
     if ( $canReply ):
         echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/addcomment.php', array( 'reply' => $id ) ), '/common/images/reply-16.png', $this->tr( 'Reply' ) );
@@ -114,11 +117,8 @@
 
 <?php elseif ( $item[ 'change_type' ] == System_Const::FileAdded ): ?>
 
-<div style="float: right">
+<div class="history-links">
 <?php
-    if ( $item[ 'stamp_id' ] != $id ):
-        echo $this->tr( 'Last Edited:' ) . ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ' | ';
-    endif;
     echo '<a class="anchor" name="item' . $id . '">' . $this->imageAndText( '/common/images/file-attach-16.png', $this->tr( 'Attachment %1', null, $item[ 'change_id' ] ) ) . '</a>';
     if ( $item[ 'can_edit' ] ):
         echo ' | ' . $this->imageAndTextLink( $this->mergeQueryString( '/client/issues/editattachment.php', array( 'id' => $id, 'issue' => null ) ),
@@ -132,7 +132,12 @@
 <?php endif ?>
 
 <h4>
-<?php echo  $item[ 'created_date' ] . ' &mdash; ' . $item[ 'created_by' ] ?>
+<?php
+    echo  $item[ 'created_date' ] . ' &mdash; ' . $item[ 'created_by' ];
+    if ( $item[ 'is_modified' ] ):
+        echo '&nbsp; <span class="edited">(' . $this->tr( 'Last Edited:' ) . ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ')</span>';
+    endif;
+?>
 </h4>
 
 <?php

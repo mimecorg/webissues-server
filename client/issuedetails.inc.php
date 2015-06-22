@@ -77,6 +77,7 @@ class Client_IssueDetails extends System_Web_Component
 
         if ( $issue[ 'descr_id' ] != null ) {
             $this->descr = $issueManager->getDescription( $issue );
+            $this->descr[ 'is_modified' ] = ( $this->descr[ 'modified_date' ] - $issue[ 'created_date' ] ) > 180 || $this->descr[ 'modified_user' ] != $issue[ 'created_user' ];
             $this->descr[ 'modified_date' ] = $formatter->formatDateTime( $this->descr[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
             if ( $this->descr[ 'descr_format' ] == System_Const::TextWithMarkup )
                 $this->descr[ 'descr_text' ] = System_Web_MarkupProcessor::convertToRawHtml( $this->descr[ 'descr_text' ], $prettyPrint );
@@ -132,6 +133,7 @@ class Client_IssueDetails extends System_Web_Component
 
             foreach ( $this->history as $id => &$item ) {
                 $item[ 'change_id' ] = '#' . $item[ 'change_id' ];
+                $item[ 'is_modified' ] = ( $item[ 'modified_date' ] - $item[ 'created_date' ] ) > 180 || $item[ 'modified_user' ] != $item[ 'created_user' ];
                 $item[ 'created_date' ] = $formatter->formatDateTime( $item[ 'created_date' ], System_Api_Formatter::ToLocalTimeZone );
                 $item[ 'modified_date' ] = $formatter->formatDateTime( $item[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
                 if ( isset( $item[ 'comment_text' ] ) ) {
