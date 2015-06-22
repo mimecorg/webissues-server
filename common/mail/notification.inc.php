@@ -203,6 +203,7 @@ class Common_Mail_Notification extends System_Web_Component
 
                 if ( $issue[ 'descr_id' ] > $sinceStamp ) {
                     $descr = $issueManager->getDescription( $issue );
+                    $descr[ 'is_modified' ] = ( $descr[ 'modified_date' ] - $issue[ 'created_date' ] ) > 180 || $descr[ 'modified_user' ] != $issue[ 'created_user' ];
                     $descr[ 'modified_date' ] = $formatter->formatDateTime( $descr[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
                     if ( $descr[ 'descr_format' ] == System_Const::TextWithMarkup )
                         $text = System_Web_MarkupProcessor::convertToRawHtml( $descr[ 'descr_text' ], $prettyPrint );
@@ -226,6 +227,7 @@ class Common_Mail_Notification extends System_Web_Component
 
                     foreach ( $history as $id => &$item ) {
                         $item[ 'change_id' ] = '#' . $item[ 'change_id' ];
+                        $item[ 'is_modified' ] = ( $item[ 'modified_date' ] - $item[ 'created_date' ] ) > 180 || $item[ 'modified_user' ] != $item[ 'created_user' ];
                         $item[ 'created_date' ] = $formatter->formatDateTime( $item[ 'created_date' ], System_Api_Formatter::ToLocalTimeZone );
                         $item[ 'modified_date' ] = $formatter->formatDateTime( $item[ 'modified_date' ], System_Api_Formatter::ToLocalTimeZone );
                         if ( isset( $item[ 'comment_text' ] ) ) {

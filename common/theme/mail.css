@@ -137,6 +137,12 @@ ul.changes {
   margin-bottom: 0.75em;
 }
 
+.edited {
+  font-size: 8pt;
+  font-weight: normal;
+  color: #888888;
+}
+
 .comment-text {
   padding: 0.5em;
   border: 1px solid #dddddd;

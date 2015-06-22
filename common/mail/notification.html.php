@@ -97,7 +97,14 @@
 <tr>
 <td colspan="2" class="bottom-sub-pane">
 
-<h3><?php echo $this->tr( 'Description' ) ?></h3>
+<h3>
+<?php
+    echo $this->tr( 'Description' );
+    if ( $issue[ 'description' ][ 'is_modified' ] ):
+        echo '&nbsp; <span class="edited">(' . $this->tr( 'Last Edited:' ) . ' ' . $issue[ 'description' ][ 'modified_date' ] . ' &mdash; ' . $issue[ 'description' ][ 'modified_by' ] . ')</span>';
+    endif;
+?>
+</h3>
 
 <div class="comment-text"><?php echo $issue[ 'description' ][ 'descr_text' ] ?></div>
 
@@ -119,7 +126,12 @@
 <div class="history-item">
 
 <h4>
-<?php echo  $item[ 'created_date' ] . ' &mdash; ' . $item[ 'created_by' ] ?>
+<?php
+    echo  $item[ 'created_date' ] . ' &mdash; ' . $item[ 'created_by' ];
+    if ( $item[ 'is_modified' ] ):
+        echo '&nbsp; <span class="edited">(' . $this->tr( 'Last Edited:' ) . ' ' . $item[ 'modified_date' ] . ' &mdash; ' . $item[ 'modified_by' ] . ')</span>';
+    endif;
+?>
 </h4>
 
 <?php
