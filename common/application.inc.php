@@ -35,6 +35,7 @@ class Common_Application extends System_Web_Application
 
         if ( !$this->request->isRelativePath( '/index.php' )
                 && !$this->request->isRelativePath( '/register.php' )
+                && !$this->request->isRelativePath( '/mobile/index.php' )
                 && !$this->request->isRelativePathUnder( '/admin/setup' )
                 && !$this->request->isRelativePathUnder( '/common/errors' ) ) {
             $principal = System_Api_Principal::getCurrent();
