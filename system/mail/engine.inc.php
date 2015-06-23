@@ -64,6 +64,7 @@ class System_Mail_Engine
         $this->mailer = new System_Mail_PHPMailer();
 
         $this->mailer->CharSet = 'UTF-8';
+        $this->mailer->Encoding = 'quoted-printable';
         $this->mailer->LE = "\n";
 
         $translator = System_Core_Application::getInstance()->getTranslator();
