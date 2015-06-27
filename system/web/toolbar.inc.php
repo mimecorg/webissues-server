@@ -192,6 +192,14 @@ class System_Web_ToolBar extends System_Web_Base
     }
 
     /**
+    * Return @c true if the toolbar contains no commands.
+    */
+    public function isEmpty()
+    {
+        return empty( $this->commands );
+    }
+
+    /**
     * Render the toolbar as HTML.
     */
     public function render()
@@ -238,6 +246,33 @@ class System_Web_ToolBar extends System_Web_Base
 
             if ( !empty( $conditions ) )
                 echo "</span>\n";
+        }
+    }
+
+    /**
+    * Render the toolbar as HTML list items.
+    */
+    public function renderListItems()
+    {
+        foreach ( $this->commands as $command ) {
+            $params = array();
+            if ( $command[ 'row' ] && $this->rowId != 0 )
+                $params[ $this->rowParam ] = $this->rowId;
+            else
+                $params[ $this->rowParam ] = null;
+            if ( $this->parentParam != null ) {
+                if ( $command[ 'parent' ] && $this->parentId != 0 )
+                    $params[ $this->parentParam ] = $this->parentId;
+                else 
+                    $params[ $this->parentParam ] = null;
+            }
+
+            if ( $this->filterParams !== null )
+                $url = $this->filterQueryString( $command[ 'url' ], $this->filterParams, array_merge( $params, $command[ 'params' ] ) );
+            else
+                $url = $this->mergeQueryString( $command[ 'url' ], array_merge( $params, $command[ 'params' ] ) );
+
+            echo $this->imageAndTextLinkItem( $url, $command[ 'image' ], $command[ 'text' ] );
         }
     }
 }

@@ -690,15 +690,15 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
         if ( !$principal->isAuthenticated() ) {
-            $query = 'SELECT p.project_id, p.project_name, p.is_public, %3d AS project_access FROM {projects} AS p WHERE p.is_public = 1 AND p.is_archived = 0';
+            $query = 'SELECT p.project_id, p.project_name, p.is_public, p.descr_id, %3d AS project_access FROM {projects} AS p WHERE p.is_public = 1 AND p.is_archived = 0';
         } else if ( !$principal->isAdministrator() ) {
-            $query = 'SELECT p.project_id, p.project_name, p.is_public, r.project_access FROM {projects} AS p'
+            $query = 'SELECT p.project_id, p.project_name, p.is_public, p.descr_id, r.project_access FROM {projects} AS p'
                 . ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
             $query .= ' WHERE p.is_archived = 0';
         } else {
-            $query = 'SELECT p.project_id, p.project_name, p.is_public, %2d AS project_access FROM {projects} AS p WHERE p.is_archived = 0';
+            $query = 'SELECT p.project_id, p.project_name, p.is_public, p.descr_id, %2d AS project_access FROM {projects} AS p WHERE p.is_archived = 0';
         }
 
         return $this->connection->queryPage( $query, $orderBy, $limit, $offset, $principal->getUserId(), System_Const::AdministratorAccess, System_Const::NormalAccess );

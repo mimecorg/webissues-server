@@ -44,6 +44,7 @@ class Common_Application extends System_Web_Application
                 $redirect = true;
 
                 if ( $this->request->isRelativePath( '/client/index.php' )
+                        || $this->request->isRelativePath( '/mobile/client/index.php' )
                         || $this->request->isRelativePath( '/client/tools/index.php' )
                         || $this->request->isRelativePath( '/client/tools/gotoitem.php' )
                         || $this->request->isRelativePath( '/client/tools/about.php' ) ) {
@@ -82,7 +83,11 @@ class Common_Application extends System_Web_Application
         }
         if ( !empty( $args ) )
             $url .= '?' . join( '&', $args );
-        return '/index.php?url=' . urlencode( $url );
+
+        if ( $this->request->isRelativePathUnder( '/mobile' ) )
+            return '/mobile/index.php?url=' . urlencode( $url );
+        else
+            return '/index.php?url=' . urlencode( $url );
     }
 
     protected function handleSetupException( $exception )

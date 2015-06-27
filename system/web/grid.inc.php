@@ -53,7 +53,7 @@ class System_Web_Grid extends System_Web_Base
     const Descending = 'desc';
 
     private $pageParam = 'page';
-    private $orgerParam = 'order';
+    private $orderParam = 'order';
     private $sortParam = 'sort';
 
     private $pageSize = 10;
@@ -61,6 +61,7 @@ class System_Web_Grid extends System_Web_Base
     private $columns = array();
     private $defaultOrder = null;
     private $defaultSort = null;
+    private $filterParams = null;
     private $mergeParams = array();
     private $rowId = null;
     private $parentId = null;
@@ -85,8 +86,16 @@ class System_Web_Grid extends System_Web_Base
     public function setParameters( $page, $order = null, $sort = null )
     {
         $this->pageParam = $page;
-        $this->orgerParam = $order;
+        $this->orderParam = $order;
         $this->sortParam = $sort;
+    }
+
+    /**
+    * Set query parameters to be filtered in URLs of paging and sorting links.
+    */
+    public function setFilterParameters( $params )
+    {
+        $this->filterParams = $params;
     }
 
     /**
@@ -196,7 +205,7 @@ class System_Web_Grid extends System_Web_Base
     */
     public function getOrderBy()
     {
-        $order = $this->request->getQueryString( $this->orgerParam, $this->defaultOrder );
+        $order = $this->request->getQueryString( $this->orderParam, $this->defaultOrder );
         $sort = $this->request->getQueryString( $this->sortParam, $this->defaultSort );
 
         if ( isset( $order ) && isset( $this->columns[ $order ] ) ) {
@@ -244,12 +253,12 @@ class System_Web_Grid extends System_Web_Base
             if ( !isset( $this->columns[ $order ] ) )
                 throw new System_Core_Exception( 'Invalid sort order' );
             $sort = self::Ascending;
-            $currentOrder = $this->request->getQueryString( $this->orgerParam, $this->defaultOrder );
+            $currentOrder = $this->request->getQueryString( $this->orderParam, $this->defaultOrder );
             if ( $order == $currentOrder ) {
                 $currentSort = $this->request->getQueryString( $this->sortParam, $this->defaultSort );
                 $sort = ( $currentSort == self::Ascending ) ? self::Descending : self::Ascending;
             }
-            $url = $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->orgerParam => $order, $this->sortParam => $sort, $this->pageParam => null ), $this->mergeParams ) );
+            $url = $this->makeUrl( array( $this->orderParam => $order, $this->sortParam => $sort, $this->pageParam => null ) );
             $header = $this->link( $url, $title );
             if ( $order == $currentOrder ) {
                 $text = ( $currentSort == self::Ascending ) ? $this->tr( 'Ascending' ) : $this->tr( 'Decending' );
@@ -293,8 +302,8 @@ class System_Web_Grid extends System_Web_Base
         $pages = array();
 
         if ( $currentPage > 1 ) {
-            $pages[] = $this->link( $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->pageParam => 1 ), $this->mergeParams ) ), $this->tr( '&laquo; first' ) );
-            $pages[] = $this->link( $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->pageParam => $currentPage - 1 ), $this->mergeParams ) ), $this->tr( '&lt; previous' ) );
+            $pages[] = $this->link( $this->makeUrl( array( $this->pageParam => 1 ) ), $this->tr( '&laquo; first' ) );
+            $pages[] = $this->link( $this->makeUrl( array( $this->pageParam => $currentPage - 1 ) ), $this->tr( '&lt; previous' ) );
         }
 
         if ( $fromPage > 1 )
@@ -304,18 +313,50 @@ class System_Web_Grid extends System_Web_Base
             if ( $i == $currentPage )
                 $pages[] = $this->buildTag( 'strong', array( 'class' => 'pager-current' ), $i );
             else
-                $pages[] = $this->link( $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->pageParam => $i ), $this->mergeParams ) ), $i );
+                $pages[] = $this->link( $this->makeUrl( array( $this->pageParam => $i ) ), $i );
         }
 
         if ( $toPage < $pagesCount )
             $pages[] = "...\n";
 
         if ( $currentPage < $pagesCount ) {
-            $pages[] = $this->link( $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->pageParam => $currentPage + 1 ), $this->mergeParams ) ), $this->tr( 'next &gt;' ) );
-            $pages[] = $this->link( $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->pageParam => $pagesCount ), $this->mergeParams ) ), $this->tr( 'last &raquo;' ) );
+            $pages[] = $this->link( $this->makeUrl( array( $this->pageParam => $currentPage + 1 ) ), $this->tr( 'next &gt;' ) );
+            $pages[] = $this->link( $this->makeUrl( array( $this->pageParam => $pagesCount ) ), $this->tr( 'last &raquo;' ) );
         }
 
         echo '<div class="pager">' . join( '', $pages ) . '</div>';
+    }
+
+    /**
+    * Print a mobile pager control for switching pages.
+    */
+    public function renderMobilePager()
+    {
+        $pagesCount = $this->getPagesCount();
+        if ( $pagesCount <= 1 )
+            return '';
+
+        $currentPage = $this->getCurrentPage();
+
+        $pages = array();
+
+        if ( $currentPage > 1 )
+            $pages[] = $this->link( $this->makeUrl( array( $this->pageParam => $currentPage - 1 ) ), $this->tr( '&lt; previous' ), array( 'class' => 'pager-previous' ) );
+
+        if ( $currentPage < $pagesCount )
+            $pages[] = $this->link( $this->makeUrl( array( $this->pageParam => $currentPage + 1 ) ), $this->tr( 'next &gt;' ), array( 'class' => 'pager-next' ) );
+
+        $pages[] = $this->buildTag( 'div', array( 'class' => 'pager-current' ), $this->tr( '%1 of %2', null, $currentPage, $pagesCount ) );
+
+        echo '<div class="pager">' . join( '', $pages ) . '</div>';
+    }
+
+    private function makeUrl( $params )
+    {
+        if ( is_array( $this->filterParams ) )
+            return $this->filterQueryString( WI_SCRIPT_URL, $this->filterParams, array_merge( $params, $this->mergeParams ) );
+        else
+            return $this->mergeQueryString( WI_SCRIPT_URL, array_merge( $params, $this->mergeParams ) );
     }
 
     /**
@@ -366,8 +407,9 @@ class System_Web_Grid extends System_Web_Base
     * Render the opening tag of a row for use with dynamic selection.
     * @param $rowId Identifier of the row.
     * @param $classes Optional array of custom classes to be added to the row.
+    * @param $tag Tag to use (default is 'tr').
     */
-    public function renderRowOpen( $rowId, $classes = array() )
+    public function renderRowOpen( $rowId, $classes = array(), $tag = 'tr' )
     {
         if ( is_object( $classes ) && is_a( $classes, 'System_Web_ArrayEscaper' ) )
             $classes = $classes->getRawValue();
@@ -377,15 +419,16 @@ class System_Web_Grid extends System_Web_Base
         if ( $this->rowId == $rowId )
             $classes[] = 'selected';
 
-        echo $this->buildTag( 'tr', array( 'class' => join( ' ', $classes ) ), true );
+        echo $this->buildTag( $tag, array( 'class' => join( ' ', $classes ) ), true );
     }
 
     /**
     * Render the opening tag of a parent row in a tree.
     * @param $parentId Identifier of the parent row.
     * @param $classes Optional array of custom classes to be added to the row.
+    * @param $tag Tag to use (default is 'tr').
     */
-    public function renderParentRowOpen( $parentId, $classes = array() )
+    public function renderParentRowOpen( $parentId, $classes = array(), $tag = 'tr' )
     {
         if ( is_object( $classes ) && is_a( $classes, 'System_Web_ArrayEscaper' ) )
             $classes = $classes->getRawValue();
@@ -396,7 +439,7 @@ class System_Web_Grid extends System_Web_Base
         if ( $this->rowId == null && $this->parentId === $parentId )
             $classes[] = 'selected';
 
-        echo $this->buildTag( 'tr', array( 'class' => join( ' ', $classes ) ), true );
+        echo $this->buildTag( $tag, array( 'class' => join( ' ', $classes ) ), true );
     }
 
     /**
@@ -404,8 +447,9 @@ class System_Web_Grid extends System_Web_Base
     * @param $rowId Identifier of the row.
     * @param $parentId Identifier of the parent row.
     * @param $classes Optional array of custom classes to be added to the row.
+    * @param $tag Tag to use (default is 'tr').
     */
-    public function renderChildRowOpen( $rowId, $parentId, $classes = array() )
+    public function renderChildRowOpen( $rowId, $parentId, $classes = array(), $tag = 'tr' )
     {
         if ( is_object( $classes ) && is_a( $classes, 'System_Web_ArrayEscaper' ) )
             $classes = $classes->getRawValue();
@@ -417,14 +461,15 @@ class System_Web_Grid extends System_Web_Base
         if ( $this->rowId === $rowId && $this->parentId === $parentId )
             $classes[] = 'selected';
 
-        echo $this->buildTag( 'tr', array( 'class' => join( ' ', $classes ) ), true );
+        echo $this->buildTag( $tag, array( 'class' => join( ' ', $classes ) ), true );
     }
 
     /**
     * Render the closing tag of a row.
+    * @param $tag Tag to use (default is 'tr').
     */
-    public function renderRowClose()
+    public function renderRowClose( $tag = 'tr' )
     {
-        echo "</tr>\n";
+        echo '</' . $tag . ">\n";
     }
 }

@@ -33,6 +33,7 @@ class System_Web_JavaScript extends System_Web_Base
         'cookie' => 'jquery.cookie.js',
         'datetimepicker' => 'datetimepicker.js',
         'expandcookie' => 'expandcookie.js',
+        'expandmobile' => 'expandmobile.js',
         'markitup' => 'jquery.markitup.js',
         'prettify' => 'prettify.js',
         'searchoptions' => 'searchoptions.js',
@@ -176,6 +177,23 @@ class System_Web_JavaScript extends System_Web_Base
 
         $this->registerCode( "
             WebIssues.expandCookie( '$cookieName', { path: '$path', expires: 90, secure: $secure, raw: true } );" );
+    }
+
+    /**
+    * Registers an expand/collapse effect for mobile client.
+    * @param $cookieName Name of the cookie that stores item ids that
+    * are expanded.
+    */
+    public function registerExpandMobile( $cookieName )
+    {
+        $this->registerScripts( array( 'cookie', 'expandmobile' ) );
+
+        $session = System_Core_Application::getInstance()->getSession();
+        $path = $session->getCookiePath();
+        $secure = $session->isCookieSecure() ? 'true' : 'false';
+
+        $this->registerCode( "
+            WebIssues.expandMobile( '$cookieName', { path: '$path', expires: 90, secure: $secure, raw: true } );" );
     }
 
     /**

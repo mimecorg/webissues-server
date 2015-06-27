@@ -3,7 +3,6 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php echo $pageTitle ?> | <?php echo $siteName ?></title>
   <link rel="shortcut icon" href="<?php echo $this->url( $icon ) ?>" type="image/vnd.microsoft.icon"> 
 <?php foreach ( $cssFiles as $file ): ?>
@@ -34,6 +33,7 @@
         endif;
         echo $this->link( '/client/index.php', $this->tr( 'Web Client' ) ) . ' | ';
     endif;
+    echo $this->link( $mobileVersionUrl, $this->tr( 'Mobile Version' ) ) . ' | ';
     echo $this->tr( 'WebIssues %1', null, WI_VERSION ) . ' | ';
     echo $this->link( $manualUrl, $this->tr( 'Manual' ), array( 'target' => '_blank' ) );
 ?>

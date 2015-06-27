@@ -162,6 +162,20 @@ class System_Web_Base
     }
 
     /**
+    * Create an HTML link containing a list item.
+    * @param $url The URL the link points to (absolute or relative to
+    * WI_BASE_URL).
+    * @param $text The text of the link.
+    * @param $attributes Optional array of attributes to be added
+    * to the @c a tag.
+    * @return The link tag.
+    */
+    protected function linkItem( $url, $text, $attributes = array() )
+    {
+        return $this->buildTag( 'a', array_merge( array( 'href' => $this->url( $url ) ), $attributes ), '<li>' . $text . '</li>' );
+    }
+
+    /**
     * Create an HTML image tag.
     * @param $source The source of the image (absolute or relative to
     * WI_BASE_URL).
@@ -226,6 +240,25 @@ class System_Web_Base
     {
         return $this->link( $url, "\n" . $this->image( $source, $tipText != null ? $tipText : $text, $imageAttributes ), $linkAttributes )
             . $this->link( $url, $text, $linkAttributes );
+    }
+
+    /**
+    * Create an HTML link containing a list item with image and text label.
+    * @param $url The URL the link points to (absolute or relative to
+    * WI_BASE_URL).
+    * @param $source The source of the image (absolute or relative to
+    * WI_BASE_URL).
+    * @param $text Text of the label.
+    * @param $imageAttributes Optional array of attributes to be added
+    * to the @c img tag.
+    * @param $linkAttributes Optional array of attributes to be added
+    * to the @c a tag.
+    * @param $tipText Optional text of the image alt attribute.
+    * @return The link tag.
+    */
+    protected function imageAndTextLinkItem( $url, $source, $text, $imageAttributes = array(), $linkAttributes = array(), $tipText = null )
+    {
+        return $this->link( $url, '<li>' . $this->image( $source, $tipText != null ? $tipText : $text, $imageAttributes ) . ' ' . $text . '</li>', $linkAttributes );
     }
 
     /**

@@ -103,4 +103,21 @@ class System_Web_FilterBar extends System_Web_Base
             $first = false;
         }
     }
+
+    /**
+    * Render filter options with a default filter as list items.
+    * @param $filters An array of filter options.
+    * @param $defaultFilter The default filter.
+    */
+    public function renderListItems( $filters, $defaultFilter )
+    {
+        foreach ( $filters as $value => $text ) {
+            if ( $value == $this->value || $value == $defaultFilter && $this->value == null )
+                echo '<li>' . $text . '</li>';
+            else if ( $value == $defaultFilter )
+                echo '<a href="' . $this->url( $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->param => null ), $this->mergeParams ) ) ) . '"><li>' . $text . '</li></a>';
+            else
+                echo '<a href="' . $this->url( $this->mergeQueryString( WI_SCRIPT_URL, array_merge( array( $this->param => $value ), $this->mergeParams ) ) ) . '"><li>' . $text . '</li></a>';
+        }
+    }
 }

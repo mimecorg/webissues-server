@@ -20,7 +20,7 @@
 
 if ( !defined( 'WI_VERSION' ) ) die( -1 );
 
-class Common_MessageBlock extends System_Web_Component
+class Mobile_ThreePanes extends System_Web_Component
 {
     protected function __construct()
     {
@@ -29,11 +29,6 @@ class Common_MessageBlock extends System_Web_Component
 
     protected function execute()
     {
-        if ( $this->request->isRelativePathUnder( '/mobile' ) )
-            $this->view->setDecoratorClass( 'Mobile_PageLayout' );
-        else
-            $this->view->setDecoratorClass( 'Common_PageLayout' );
-
-        $this->header = $this->view->getSlot( 'header', $this->view->getSlot( 'page_title', $this->tr( 'Untitled message' ) ) );
+        $this->view->setDecoratorClass( 'Mobile_PageLayout' );
     }
 }

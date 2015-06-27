@@ -20,7 +20,7 @@
 
 if ( !defined( 'WI_VERSION' ) ) die( -1 );
 
-class Common_PageLayout extends System_Web_Component
+class Mobile_PageLayout extends System_Web_Component
 {
     protected function __construct()
     {
@@ -51,12 +51,12 @@ class Common_PageLayout extends System_Web_Component
                 if ( !$principal->isAuthenticated() ) {
                     $this->isAnonymous = $serverManager->getSetting( 'anonymous_access' ) == 1;
                     if ( $this->isAnonymous ) {
-                        $this->canLogIn = $this->request->isRelativePathUnder( '/client' );
-                        if ( $this->canLogIn ) {
+                        $this->canLogIn = $this->request->isRelativePathUnder( '/mobile/client' );
+                        if ( $this->canLogIn )
                             $this->loginPageUrl = $application->getLoginPageUrl();
-                            $this->canRegister = $serverManager->getSetting( 'self_register' ) == 1 && $serverManager->getSetting( 'email_engine' ) != null;
-                        }
                     }
+                    if ( !$this->request->isRelativePath( '/mobile/register.php' ) )
+                        $this->canRegister = $serverManager->getSetting( 'self_register' ) == 1 && $serverManager->getSetting( 'email_engine' ) != null;
                 }
             }
         } catch ( Exception $ex ) {
@@ -64,41 +64,17 @@ class Common_PageLayout extends System_Web_Component
         }
 
         if ( $this->isAuthenticated || $this->canLogIn )
-            $this->mobileVersionUrl = '/mobile/client/index.php';
+            $this->fullVersionUrl = '/client/index.php';
         else
-            $this->mobileVersionUrl = '/mobile/index.php';
+            $this->fullVersionUrl = '/index.php';
 
         $this->pageTitle = $this->view->getSlot( 'page_title', $this->tr( 'Untitled page' ) );
-
-        if ( $this->request->isRelativePathUnder( '/client' ) ) {
-            $homeUrl = '/client/index.php';
-            $homeName = $this->tr( 'Web Client' );
-        } else if ( $this->request->isRelativePathUnder( '/admin' ) && $principal->isAdministrator() ) {
-            $homeUrl = '/admin/index.php';
-            $homeName = $this->tr( 'Administration Panel' );
-        }
-
-        $parents = $this->view->getSlot( 'breadcrumbs' );
-        $this->breadcrumbs = array();
-
-        if ( isset( $homeUrl ) && $this->pageTitle != $homeName ) {
-            $home[ 'url' ] = new System_Web_RawValue( $this->url( $homeUrl ) );
-            $home[ 'name' ] = $homeName;
-            $this->breadcrumbs[] = $home;
-        }
-
-        if ( !empty( $parents ) ) {
-            foreach ( $parents as $url => $name ) {
-                $parent[ 'url' ] = new System_Web_RawValue( $this->url( $url ) );
-                $parent[ 'name' ] = $name;
-                $this->breadcrumbs[] = $parent;
-            }
-        }
 
         $scriptFiles = $this->view->getSlot( 'script_files' );
 
         $this->scriptFiles[] = '/common/js/jquery.js';
         $this->scriptFiles[] = '/common/js/main.js';
+        $this->scriptFiles[] = '/common/js/mobile.js';
 
         if ( !empty( $scriptFiles ) ) {
             foreach ( $scriptFiles as $file )
@@ -115,10 +91,7 @@ class Common_PageLayout extends System_Web_Component
                 $this->cssFiles[] = $file;
         }
 
-        $this->cssFiles[] = '/common/theme/style.css';
-
-        $this->cssConditional[ 'lt IE 8' ] = '/common/theme/ie7.css';
-        $this->cssConditional[ 'lt IE 9' ] = '/common/theme/ie8.css';
+        $this->cssFiles[] = '/common/theme/mobile.css';
 
         $inlineCode = $this->view->getSlot( 'inline_code' );
         if ( !empty( $inlineCode ) )

@@ -1,13 +1,12 @@
 /* layout */
 
 html {
-  background: #f3f3f3 url(images/bg-body.png) repeat-x;
+  background: #f3f3f3 url(images/bg-mobile.png) repeat-x;
 }
 
 body {
   margin: 0;
   padding: 0;
-  min-width: 990px;
   font: 8pt/150% Verdana, 'DejaVu Sans', Sans-Serif;
   color: #494949;
 }
@@ -15,99 +14,49 @@ body {
 #header {
   position: relative;
   width: 100%;
-  height: 95px;
+  height: 45px;
 }
 
 #site-logo {
   position: absolute;
-  left: 17px;
-  top: 15px;
+  left: 7px;
+  top: 7px;
 }
 
 #site-name {
   position: absolute;
-  left: 57px;
-  top: 22px;
+  left: 45px;
+  top: 15px;
   font-weight: bold;
-  font-size: 170%;
+  font-size: 150%;
   color: #ffffff;
   text-shadow: 1px 1px #444444;
 }
 
-#header-right {
-  position: absolute;
-  right: 17px;
-  top: 24px;
-  text-align: right;
-  color: #dddddd;
-  font-size: 9pt;
-}
-
-#header-right a {
-  color: #f2f2f2;
-}
-
-#header-right a:hover, #header-right a:active {
-  color: #ffffff;
-}
-
-#infobar-left {
-  position: absolute;
-  left: 0;
-  top: 55px;
-  min-width: 70px;
-  height: 25px;
-  background: transparent url(images/bg-infobar-left.png) no-repeat;
-  padding: 13px 0 0 25px;
-  color: #bbbbbb;
-}
-
-#infobar-right {
-  position: absolute;
-  right: 0;
-  top: 55px;
-  min-width: 70px;
-  height: 25px;
-  background: transparent url(images/bg-infobar-right.png) no-repeat 100% 0;
-  padding: 13px 25px 0 0;
-  text-align: right;
-  color: #bbbbbb;
-}
-
-#infobar-left a, #infobar-right a {
-  color: #dddddd;
-}
-
-#infobar-left a:hover, #infobar-left a:active, #infobar-right a:hover, #infobar-right a:active {
-  color: #eeeeee;
-}
-
 #body {
-  width: 100%;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+}
+
+.fixed-block, .message-block {
+  margin: 10px auto 10px auto;
+  padding: 0.75em;
+  background: #ffffff url(images/bg-block.png) repeat-x;
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 3px #bbbbbb;
 }
 
 .fixed-block {
-  position: relative;
-  margin: 25px auto 20px auto;
-  padding: 0.75em;
-  background: #ffffff url(images/bg-block.png) repeat-x;
-  border: 1px solid #cccccc;
-  box-shadow: 1px 1px 3px #bbbbbb;
-  width: 800px;
+  max-width: 800px;
 }
 
 .message-block {
-  position: relative;
-  margin: 75px auto 20px auto;
-  padding: 0.75em;
-  background: #ffffff url(images/bg-block.png) repeat-x;
-  border: 1px solid #cccccc;
-  box-shadow: 1px 1px 3px #bbbbbb;
-  width: 400px;
+  max-width: 400px;
 }
 
 .debug {
-  margin: 25px 10px 0 10px;
+  margin: 25px 0 0 0;
   font-size: 0.9em;
 }
 
@@ -183,6 +132,180 @@ dl dd {
 
 ul {
   list-style-type: circle;
+}
+
+/* dynamic elements */
+
+.hamburger, .cross {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 45px;
+  padding: 0px 10px;
+  color: #ffffff;
+  border: 0;
+  font-size: 2.2em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #dddddd;
+  box-shadow: 1px 1px 3px #bbbbbb;
+  z-index: 20;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu li {
+  padding: 10px 10px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.menu a:hover {
+  text-decoration: none;
+}
+
+.menu a:hover li {
+  background: #d8d8d8;
+}
+
+.pane-wrapper {
+  width: 100%;
+  margin: 10px 0;
+  background: #ffffff url(images/bg-block.png) repeat-x;
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 3px #bbbbbb;
+}
+
+.pane-header {
+  position: relative;
+  cursor: pointer;
+  padding: 0.75em;
+}
+
+.pane-header h2 {
+  margin-bottom: 0;
+  margin-right: 36px;
+}
+
+.ellipsis {
+  display: none;
+  color: #aaaaaa;
+}
+
+.pane-header .hamburger, .pane-header .cross {
+  top: 50%;
+  margin-top: -17px;
+  line-height: 34px;
+  font-size: 1.8em;
+  color: #494949;
+}
+
+.pane-wrapper .menu {
+  left: 0.75em;
+  right: 0.75em;
+  background: #eeeeee;
+}
+
+.pane-wrapper .menu ul {
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+
+.pane-wrapper .menu li {
+  border-bottom: 1px solid #dddddd;
+}
+
+.pane-wrapper .menu a:hover li {
+  background: #e8e8e8;
+}
+
+.pane-body {
+  padding: 0 0.75em 0.75em 0.75em;
+}
+
+h3 {
+  position: relative;
+}
+
+h3 .hamburger, h3 .cross {
+  top: -5px;
+  right: -5px;
+  line-height: 150%;
+  font-size: 130%;
+  color: #494949;
+}
+
+.history-links {
+  position: relative;
+}
+
+.history-links .hamburger, .history-links .cross {
+  top: -2px;
+  right: -5px;
+  line-height: 130%;
+  font-size: 160%;
+  color: #494949;
+}
+
+.grid {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.grid .row, .grid .parent, .grid .child {
+  margin: 0;
+  padding: 0.75em 0.25em;
+  border-top: 1px solid #dddddd;
+}
+
+.grid .parent {
+  position: relative;
+  background: #f8f8f8;
+}
+
+.grid .parent .hamburger, .grid .parent .cross {
+  line-height: 190%;
+  font-size: 160%;
+  color: #494949;
+}
+
+.grid .child {
+  padding-left: 3em;
+}
+
+.grid a:hover {
+  text-decoration: none;
+}
+
+.grid a:hover .row, .grid a:hover .child {
+  background: #fcfcfc;
+}
+
+.grid .selected {
+  background: #e2e2ff;
+}
+
+.grid a:hover .row.selected, .grid a:hover .child.selected {
+  background: #e0e0fc;
+}
+
+.grid .expandable {
+  cursor: pointer;
 }
 
 /* forms */
@@ -281,7 +404,12 @@ textarea {
 }
 
 .form-inline {
-  margin: 0 0 0.8em;
+  margin: 0 3em 0.8em 0;
+  float: left;
+}
+
+.form-inline-right {
+  margin-right: 0;
 }
 
 .form-inline .form-field {
@@ -346,49 +474,6 @@ table.info-list tr td {
   margin: 0.8em 0;
 }
 
-table.grid {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border-collapse: collapse;
-  border-bottom: 1px solid #cccccc;
-}
-
-table.grid th {
-  margin: 0;
-  padding: 0.2em 0.25em;
-  background: #eeeeee;
-  border-top: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
-  vertical-align: top;
-  text-align: left;
-}
-
-table.grid td {
-  margin: 0;
-  padding: 0.2em 0.25em;
-  border-top: 1px solid #dddddd;
-  vertical-align: top;
-}
-
-table.grid tr.parent {
-  background: #f8f8f8;
-}
-
-table.grid tr.parent td {
-  border-top: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
-}
-
-table.grid tr.child td.first-column {
-  padding-left: 3em;
-}
-
-table.grid tr.selected
-{
-  background: #e2e2ff;
-}
-
 .icon {
   vertical-align: -3px;
   margin-right: 0.1em;
@@ -419,84 +504,58 @@ table.grid tr.selected
 }
 
 .pager {
-  text-align: center;
-  margin-top: 0.75em;
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
 }
 
 .pager a {
   padding: 0.5em;
+  border: 1px solid #dddddd;
+}
+
+.pager a:hover {
+  text-decoration: none;
+  background: #fcfcfc;
+}
+
+.pager-previous {
+  float: left;
+}
+
+.pager-next {
+  float: right;
 }
 
 .pager-current {
+  width: 50%;
   padding: 0.5em;
+  margin: 0 auto;
+  text-align: center;
 }
 
 a img {
   border: none;
 }
 
-table.pane-layout {
-  width: 100%;
-  margin: -0.3em 0 0 0;
-  padding: 0;
-  border: none;
-  border-collapse: separate;
-  border-spacing: 1em 1.3em;
-}
-
-table.pane-layout td.left-pane, table.pane-layout td.top-pane, table.pane-layout td.bottom-pane {
-  margin: 0;
-  background: #ffffff url(images/bg-block.png) repeat-x;
-  border: 1px solid #cccccc;
-  box-shadow: 1px 1px 3px #bbbbbb;
-  padding: 0.75em;
-  vertical-align: top;
-}
-
-table.pane-layout td.left-pane {
-  width: 250px;
-}
-
-.sub-pane-wrapper {
-  margin: -0.75em -0.75em -0.75em -0.75em;
-}
-
-table.sub-pane-layout {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-collapse: separate;
-  border-spacing: 0.75em;
-}
-
-table.sub-pane-layout td.top-sub-pane, table.sub-pane-layout td.bottom-sub-pane {
-  margin: 0;
-  vertical-align: top;
-}
-
-table.sub-pane-layout td.top-sub-pane {
-  width: 50%;
-}
-
-.history-item {
+.description, .history, .history-item {
   margin: 1em 0 0 0;
 }
 
 ul.changes {
   margin-top: 0.5em;
   margin-bottom: 0.75em;
+  padding-left: 2em;
 }
 
 .edited {
   font-size: 8pt;
   font-weight: normal;
   color: #888888;
+  margin-bottom: 0.5em;
 }
 
 .history-links {
-  float: right;
-  margin-top: -2px
+  margin-bottom: 0.5em;
 }
 
 .comment-text {
@@ -512,7 +571,7 @@ ul.changes {
 }
 
 .quote {
-  margin: 0.2em 1em;
+  margin: 0.2em 0.5em;
   padding: 0.3em 0.5em;
   border: 1px dashed #dddddd;
 }
