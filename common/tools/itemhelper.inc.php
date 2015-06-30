@@ -20,11 +20,16 @@
 
 if ( !defined( 'WI_VERSION' ) ) die( -1 );
 
-class Client_Tools_ItemHelper extends System_Web_Base
+class Common_Tools_ItemHelper extends System_Web_Base
 {
+    private $prefix = '';
+
     public function __construct()
     {
         parent::__construct();
+
+        if ( $this->request->isRelativePathUnder( '/mobile' ) )
+            $this->prefix = '/mobile';
     }
 
     public function findItem( $itemId )
@@ -34,7 +39,7 @@ class Client_Tools_ItemHelper extends System_Web_Base
         $issueId = $issueManager->findItem( $itemId );
 
         if ( $itemId == $issueId )
-            $this->response->redirect( $this->appendQueryString( '/client/index.php', array( 'issue' => $issueId ) ) );
+            $this->response->redirect( $this->appendQueryString( $this->prefix . '/client/index.php', array( 'issue' => $issueId ) ) );
 
         $issue = $issueManager->getIssue( $issueId );
 
@@ -66,6 +71,6 @@ class Client_Tools_ItemHelper extends System_Web_Base
         if ( $page == 1 )
             $page = null;
 
-        $this->response->redirect( $this->appendQueryString( '/client/index.php', array( 'issue' => $issueId, 'hpg' => $page ) ) . '#item' . $itemId );
+        $this->response->redirect( $this->appendQueryString( $this->prefix . '/client/index.php', array( 'issue' => $issueId, 'hpg' => $page ) ) . '#item' . $itemId );
     }
 }

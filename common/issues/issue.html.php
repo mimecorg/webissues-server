@@ -29,8 +29,8 @@
 <?php endif ?>
 
 <?php if ( !empty( $attributes ) ): ?>
-<fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Attributes' ) ?></legend>
+<div class="form-fieldset">
+<div class="form-legend"><?php echo $this->tr( 'Attributes' ) ?></div>
 
 <?php
     foreach ( $attributes as $attributeId => $attribute ):
@@ -44,7 +44,7 @@
     endforeach
 ?>
 
-</fieldset>
+</div>
 <?php endif ?>
 
 <?php if ( !empty( $showDescription ) ): ?>

@@ -36,6 +36,7 @@ class Common_Application extends System_Web_Application
         if ( !$this->request->isRelativePath( '/index.php' )
                 && !$this->request->isRelativePath( '/register.php' )
                 && !$this->request->isRelativePath( '/mobile/index.php' )
+                && !$this->request->isRelativePath( '/mobile/register.php' )
                 && !$this->request->isRelativePathUnder( '/admin/setup' )
                 && !$this->request->isRelativePathUnder( '/common/errors' ) ) {
             $principal = System_Api_Principal::getCurrent();
@@ -44,10 +45,13 @@ class Common_Application extends System_Web_Application
                 $redirect = true;
 
                 if ( $this->request->isRelativePath( '/client/index.php' )
-                        || $this->request->isRelativePath( '/mobile/client/index.php' )
                         || $this->request->isRelativePath( '/client/tools/index.php' )
                         || $this->request->isRelativePath( '/client/tools/gotoitem.php' )
-                        || $this->request->isRelativePath( '/client/tools/about.php' ) ) {
+                        || $this->request->isRelativePath( '/client/tools/about.php' )
+                        || $this->request->isRelativePath( '/mobile/client/index.php' )
+                        || $this->request->isRelativePath( '/mobile/client/tools/index.php' )
+                        || $this->request->isRelativePath( '/mobile/client/tools/gotoitem.php' )
+                        || $this->request->isRelativePath( '/mobile/client/tools/about.php' ) ) {
                     $serverManager = new System_Api_ServerManager();
                     if ( $serverManager->getSetting( 'anonymous_access' ) == 1 ) {
                         $this->isAnonymous = true;

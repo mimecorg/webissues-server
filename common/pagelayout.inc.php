@@ -118,7 +118,6 @@ class Common_PageLayout extends System_Web_Component
         $this->cssFiles[] = '/common/theme/style.css';
 
         $this->cssConditional[ 'lt IE 8' ] = '/common/theme/ie7.css';
-        $this->cssConditional[ 'lt IE 9' ] = '/common/theme/ie8.css';
 
         $inlineCode = $this->view->getSlot( 'inline_code' );
         if ( !empty( $inlineCode ) )

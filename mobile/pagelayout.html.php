@@ -21,8 +21,14 @@
 <body>
 
 <div id="header">
+<?php if ( $isAuthenticated || $isAnonymous ): ?>
+<a href="<?php echo $this->url( '/mobile/client/index.php' ) ?>">
+<?php endif ?>
   <img id="site-logo" src="<?php echo $this->url( '/common/images/webissues-logo.png' )?>" alt="WebIssues">
   <div id="site-name"><?php echo $siteName ?></div>
+<?php if ( $isAuthenticated || $isAnonymous ): ?>
+</a>
+<?php endif ?>
   <button class="hamburger">&equiv;</button>
   <button class="cross">&times;</button>
 </div>

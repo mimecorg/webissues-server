@@ -29,7 +29,10 @@ class Common_FixedBlock extends System_Web_Component
 
     protected function execute()
     {
-        $this->view->setDecoratorClass( 'Common_PageLayout' );
+        if ( $this->request->isRelativePathUnder( '/mobile' ) )
+            $this->view->setDecoratorClass( 'Mobile_PageLayout' );
+        else
+            $this->view->setDecoratorClass( 'Common_PageLayout' );
 
         $this->header = $this->view->getSlot( 'header', $this->view->getSlot( 'page_title', $this->tr( 'Untitled block' ) ) );
     }

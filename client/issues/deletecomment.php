@@ -20,40 +20,4 @@
 
 require_once( '../../system/bootstrap.inc.php' );
 
-class Client_Issues_DeleteComment extends System_Web_Component
-{
-    protected function __construct()
-    {
-        parent::__construct();
-    }
-
-    protected function execute()
-    {
-        $issueManager = new System_Api_IssueManager();
-        $commentId = (int)$this->request->getQueryString( 'id' );
-        $comment = $issueManager->getComment( $commentId, System_Api_IssueManager::RequireAdministratorOrOwner );
-        $issue = $issueManager->getIssue( $comment[ 'issue_id' ] );
-
-        $this->commentId = '#' . $comment[ 'comment_id' ];
-
-        $this->view->setDecoratorClass( 'Common_MessageBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'Delete Comment' ) );
-
-        $breadcrumbs = new Common_Breadcrumbs( $this );
-        $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $issue );
-
-        $this->form = new System_Web_Form( 'issues', $this );
-
-        if ( $this->form->loadForm() ) {
-            if ( $this->form->isSubmittedWith( 'cancel' ) )
-                $this->response->redirect( $breadcrumbs->getParentUrl() );
-
-            if ( $this->form->isSubmittedWith( 'ok' ) ) {
-                $issueManager->deleteComment( $comment );
-                $this->response->redirect( $breadcrumbs->getParentUrl() );
-            }
-        }
-    }
-}
-
-System_Bootstrap::run( 'Common_Application', 'Client_Issues_DeleteComment' );
+System_Bootstrap::run( 'Common_Application', 'Common_Issues_DeleteComment' );

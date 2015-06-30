@@ -310,10 +310,14 @@ class System_Web_JavaScript extends System_Web_Base
         
         $options = preg_replace( '/\\W/', '_', $textAreaSelector ) . '_options';
 
+        $baseUrl = WI_BASE_URL;
+        if ( $this->request->isRelativePathUnder( '/mobile' ) )
+            $baseUrl .= '/mobile';
+
         $this->registerCode( "
             var $options = {
                 resizeHandle: false,
-                previewParserPath: '" . WI_BASE_URL. "/client/issues/preview.php',
+                previewParserPath: '" . $baseUrl. "/client/issues/preview.php',
                 previewInElement: '$previewSelector',
                 previewAutoRefresh: false,
                 onTab: { keepDefault: false, replaceWith: '\\t' },

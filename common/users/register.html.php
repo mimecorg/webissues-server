@@ -14,17 +14,17 @@ case 'register': ?>
 ?>
 </p>
 
-<fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'User Name' ) ?></legend>
+<div class="form-fieldset">
+<div class="form-legend"><?php echo $this->tr( 'User Name' ) ?></div>
 
 <p><?php echo $this->tr( 'Enter the user name that will be visible to other users.' ) ?></p>
 
 <?php $form->renderText( $this->tr( 'Name:' ), 'userName', array( 'size' => 40 ) ); ?>
 
-</fieldset>
+</div>
 
-<fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Credentials' ) ?></legend>
+<div class="form-fieldset">
+<div class="form-legend"><?php echo $this->tr( 'Credentials' ) ?></div>
 
 <p><?php echo $this->tr( 'Enter login and password for your new account.' ) ?></p>
 
@@ -32,16 +32,16 @@ case 'register': ?>
 <?php $form->renderPassword( $this->tr( 'Password:' ), 'password', array( 'size' => 40 ) ) ?>
 <?php $form->renderPassword( $this->tr( 'Confirm password:' ), 'passwordConfirm', array( 'size' => 40 ) ) ?>
 
-</fieldset>
+</div>
 
-<fieldset class="form-fieldset">
-<legend><?php echo $this->tr( 'Email Address' ) ?></legend>
+<div class="form-fieldset">
+<div class="form-legend"><?php echo $this->tr( 'Email Address' ) ?></div>
 
 <?php $form->renderText( $this->tr( 'Email address:' ), 'email', array( 'size' => 40 ) ); ?>
 
 <p><?php echo $this->tr( 'This address will only be visible to the system administrator. An activation email will be sent to this address.' ) ?></p>
 
-</fieldset>
+</div>
 
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'Register' ), 'register' ) ?>

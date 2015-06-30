@@ -41,8 +41,11 @@ class Common_Breadcrumbs extends System_Web_Base
     const UserProjects = 14;
     const RegistrationRequests = 15;
     const ProjectsArchive = 16;
+    const Mobile = 17;
 
     private $page = null;
+
+    private $prefix = '';
 
     private $urls = array();
     private $names = array();
@@ -56,6 +59,9 @@ class Common_Breadcrumbs extends System_Web_Base
         parent::__construct();
 
         $this->page = $page;
+
+        if ( $this->request->isRelativePathUnder( '/mobile' ) )
+            $this->prefix = '/mobile';
     }
 
     /**
@@ -137,23 +143,23 @@ class Common_Breadcrumbs extends System_Web_Base
                 break;
 
             case self::Project:
-                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'project' => $object[ 'project_id' ] ) );
+                $this->urls[] = $this->filterQueryString( $this->prefix . '/client/index.php', array( 'ps', 'po', 'ppg' ), array( 'project' => $object[ 'project_id' ] ) );
                 $this->names[] = $object[ 'project_name' ];
                 break;
 
             case self::ProjectMembers:
                 $this->append( self::ManageProjects );
-                $this->urls[] = $this->filterQueryString( '/client/projects/members.php', array( 'project', 'sort', 'order', 'page', 'msort', 'morder', 'mpage' ) );
+                $this->urls[] = $this->filterQueryString( $this->prefix . '/client/projects/members.php', array( 'project', 'sort', 'order', 'page', 'msort', 'morder', 'mpage' ) );
                 $this->names[] = $this->tr( 'Manage Permissions' );
                 break;
 
             case self::Folder:
                 if ( (int)$this->request->getQueryString( 'type' ) ) {
-                    $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ), array( 'type' => $object[ 'type_id' ] ) );
+                    $this->urls[] = $this->filterQueryString( $this->prefix . '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ), array( 'type' => $object[ 'type_id' ] ) );
                     $this->names[] = $object[ 'type_name' ];
                 } else {
                     $this->append( self::Project, $object );
-                    $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ), array( 'folder' => $object[ 'folder_id' ] ) );
+                    $this->urls[] = $this->filterQueryString( $this->prefix . '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ), array( 'folder' => $object[ 'folder_id' ] ) );
                     $this->names[] = $object[ 'folder_name' ];
                 }
                 break;
@@ -172,12 +178,17 @@ class Common_Breadcrumbs extends System_Web_Base
 
             case self::Issue:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'hpg', 'hflt', 'unread', 'type' ), array( 'issue' => $object[ 'issue_id' ] ) );
+                $this->urls[] = $this->filterQueryString( $this->prefix . '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'hpg', 'hflt', 'unread', 'type' ), array( 'issue' => $object[ 'issue_id' ] ) );
                 $this->names[] = $object[ 'issue_name' ];
                 break;
 
             case self::Tools:
                 $this->urls[] = '/client/tools/index.php';
+                $this->names[] = $this->tr( 'Tools' );
+                break;
+
+            case self::Mobile:
+                $this->urls[] = '/mobile/client/index.php';
                 $this->names[] = $this->tr( 'Tools' );
                 break;
 

@@ -20,7 +20,7 @@
 
 if ( !defined( 'WI_VERSION' ) ) die( -1 );
 
-class Client_Issues_Issue extends System_Web_Component
+class Common_Issues_Issue extends System_Web_Component
 {
     private $issue = null;
     private $folder = null;
@@ -359,11 +359,16 @@ class Client_Issues_Issue extends System_Web_Component
                 $projectManager = new System_Api_ProjectManager();
                 $this->folder = $projectManager->getFolder( $this->targetFolder );
             }
+
             $issueId = $issueManager->addIssue( $this->folder, $this->issueName, $this->oldValues );
             $this->issue = $issueManager->getIssue( $issueId );
             if ( $this->descriptionText != '' )
                 $issueManager->addDescription( $this->issue, $this->descriptionText, $this->format );
-            $this->parentUrl = $this->mergeQueryString( '/client/index.php', array( 'issue' => $issueId, 'folder' => null ) );
+
+            if ( $this->request->isRelativePathUnder( '/mobile' ) )
+                $this->parentUrl = $this->mergeQueryString( '/mobile/client/index.php', array( 'issue' => $issueId, 'folder' => null ) );
+            else
+                $this->parentUrl = $this->mergeQueryString( '/client/index.php', array( 'issue' => $issueId, 'folder' => null ) );
         } else {
             if ( $this->issueName !== $this->oldIssueName )
                 $issueManager->renameIssue( $this->issue, $this->issueName );

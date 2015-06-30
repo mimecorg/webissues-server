@@ -17,6 +17,10 @@ body {
   height: 45px;
 }
 
+#header a {
+  text-decoration: none;
+}
+
 #site-logo {
   position: absolute;
   left: 7px;
@@ -132,6 +136,7 @@ dl dd {
 
 ul {
   list-style-type: circle;
+  padding-left: 2em;
 }
 
 /* dynamic elements */
@@ -321,15 +326,17 @@ input, button, select, textarea {
 }
 
 textarea {
-  width: 790px;
+  width: 100%;
   height: 300px;
   padding: 3px;
+  box-sizing: border-box;
   white-space: pre-wrap;
 }
 
 .form-fieldset textarea {
-  width: 772px;
+  max-width: 100%;
   height: 100px;
+  box-sizing: border-box;
 }
 
 .form-field {
@@ -344,28 +351,34 @@ textarea {
   background-color: #f8f8f8;
   border: 1px solid #cccccc;
   margin: 0.2em 0 0;
-  height: 1.5em;
-}
-
-.form-field input[type=file] {
-  height: 1.9em;
+  padding: 4px 3px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .form-field select {
   margin: 0.2em 0 0;
-  height: 1.85em;
+  max-width: 100%;
+  height: 2.5em;
+  box-sizing: border-box;
 }
 
 .form-fieldset {
   background: #ffffff url(images/bg-fieldset.png) repeat-x 0 -1px;
-  margin: 0.4em 0 0.8em;
-  border: 1px solid #cccccc;  
+  margin: 1.8em 0 0.8em;
+  border: 1px solid #cccccc;
+  padding: 0.75em;
+  position: relative;
 }
 
-.form-fieldset legend {
+.form-legend, .form-fieldset legend {
+  background: transparent url(images/bg-fieldset.png) repeat-x 0 8px;
   font-weight: bold;
   color: #494949;
   padding: 0 0.5em;
+  position: absolute;
+  top: -9px;
+  left: 0.5em;
 }
 
 .form-fieldset dl {
@@ -399,7 +412,7 @@ textarea {
 
 .form-button {
   width: 120px;
-  height: 2.25em;
+  height: 2.75em;
   margin: 0 0 0 0.75em;
 }
 
@@ -428,6 +441,7 @@ textarea {
   width: auto;
   height: auto;
   margin: 0 0 0 0.5em;
+  padding: 4px 10px;
 }
 
 .form-inline td {
@@ -481,8 +495,8 @@ table.info-list tr td {
 
 .ui-datepicker-trigger, .ui-autocomplete-trigger {
   position: relative;
-  left: -18px;
-  top: 0.2em;
+  margin-left: -20px;
+  top: 3px;
 }
 
 .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary {
@@ -544,7 +558,6 @@ a img {
 ul.changes {
   margin-top: 0.5em;
   margin-bottom: 0.75em;
-  padding-left: 2em;
 }
 
 .edited {
@@ -640,6 +653,6 @@ code, .code {
 
 .input-prompt {
   position: absolute;
-  margin: 0.4em 0 0 0.3em;
+  margin: 7px 0 0 4px;
   color: #aaaaaa;
 }

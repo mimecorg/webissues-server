@@ -8,6 +8,10 @@ case 'login': ?>
 <?php $form->renderText( $this->tr( 'Login:' ), 'login', array( 'size' => 40 ) ) ?>
 <?php $form->renderPassword( $this->tr( 'Password:' ), 'password', array( 'size' => 40 ) ) ?>
 
+<?php if ( !$toolBar->isEmpty() ): ?>
+<p><?php $toolBar->render() ?></p>
+<?php endif ?>
+
 <div class="form-submit">
 <?php $form->renderSubmit( $this->tr( 'Log in' ), 'login' ) ?>
 </div>

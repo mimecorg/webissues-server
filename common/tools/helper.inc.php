@@ -32,6 +32,8 @@ class Common_Tools_Helper extends System_Web_Base
         $breadcrumbs = new Common_Breadcrumbs( $page );
         if ( $this->request->isRelativePathUnder( '/admin' ) )
             $breadcrumbs->initialize( Common_Breadcrumbs::UserAccounts );
+        else if ( $this->request->isRelativePathUnder( '/mobile' ) )
+            $breadcrumbs->initialize( Common_Breadcrumbs::Mobile );
         else
             $breadcrumbs->initialize( Common_Breadcrumbs::Tools );
         return $breadcrumbs;

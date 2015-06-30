@@ -235,14 +235,20 @@ textarea {
 
 .form-fieldset {
   background: #ffffff url(images/bg-fieldset.png) repeat-x 0 -1px;
-  margin: 0.4em 0 0.8em;
-  border: 1px solid #cccccc;  
+  margin: 1.8em 0 0.8em;
+  border: 1px solid #cccccc;
+  padding: 0.75em;
+  position: relative;
 }
 
-.form-fieldset legend {
+.form-legend, .form-fieldset legend {
+  background: transparent url(images/bg-fieldset.png) repeat-x 0 8px;
   font-weight: bold;
   color: #494949;
   padding: 0 0.5em;
+  position: absolute;
+  top: -9px;
+  left: 0.5em;
 }
 
 .form-fieldset dl {

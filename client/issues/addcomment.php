@@ -20,4 +20,4 @@
 
 require_once( '../../system/bootstrap.inc.php' );
 
-System_Bootstrap::run( 'Common_Application', 'Client_Issues_Comment' );
+System_Bootstrap::run( 'Common_Application', 'Common_Issues_Comment' );

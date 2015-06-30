@@ -33,7 +33,7 @@ class Mobile_Client_Index extends System_Web_Component
 
         $itemId = (int)$this->request->getQueryString( 'item' );
         if ( $itemId ) {
-            $helper = new Client_Tools_ItemHelper();
+            $helper = new Common_Tools_ItemHelper();
             $helper->findItem( $itemId );
         }
 

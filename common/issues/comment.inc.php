@@ -18,9 +18,9 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 **************************************************************************/
 
-require_once( '../../system/bootstrap.inc.php' );
+if ( !defined( 'WI_VERSION' ) ) die( -1 );
 
-class Client_Issues_Comment extends System_Web_Component
+class Common_Issues_Comment extends System_Web_Component
 {
     private $comment = null;
     private $issue = null;

@@ -20,39 +20,4 @@
 
 require_once( '../../system/bootstrap.inc.php' );
 
-class Client_Issues_Unsubscribe extends System_Web_Component
-{
-    protected function __construct()
-    {
-        parent::__construct();
-    }
-
-    protected function execute()
-    {
-        $issueManager = new System_Api_IssueManager();
-        $issueId = (int)$this->request->getQueryString( 'issue' );
-        $this->issue = $issueManager->getIssue( $issueId );
-
-        $this->view->setDecoratorClass( 'Common_MessageBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'Unsubscribe From Issue' ) );
-
-        $breadcrumbs = new Common_Breadcrumbs( $this );
-        $breadcrumbs->initialize( Common_Breadcrumbs::Issue, $this->issue );
-
-        $this->form = new System_Web_Form( 'issues', $this );
-
-        if ( $this->form->loadForm() ) {
-            if ( $this->form->isSubmittedWith( 'cancel' ) )
-                $this->response->redirect( $breadcrumbs->getParentUrl() );
-
-            if ( $this->form->isSubmittedWith( 'ok' ) ) {
-                $subscriptionManager = new System_Api_SubscriptionManager();
-                $subscription = $subscriptionManager->getSubscriptionForIssue( $this->issue );
-                $subscriptionManager->deleteSubscription( $subscription );
-                $this->response->redirect( $breadcrumbs->getParentUrl() );
-            }
-        }
-    }
-}
-
-System_Bootstrap::run( 'Common_Application', 'Client_Issues_Unsubscribe' );
+System_Bootstrap::run( 'Common_Application', 'Common_Issues_Unsubscribe' );
