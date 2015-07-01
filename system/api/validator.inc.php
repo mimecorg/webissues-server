@@ -604,6 +604,9 @@ class System_Api_Validator
             case 'project_page_size':
             case 'folder_page_size':
             case 'history_page_size':
+            case 'project_page_mobile':
+            case 'folder_page_mobile':
+            case 'history_page_mobile':
                 $this->checkDecimalNumber( $value, 0, 1, 100 );
                 break;
 

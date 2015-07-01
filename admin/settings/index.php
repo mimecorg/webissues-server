@@ -36,6 +36,9 @@ class Admin_Settings_Index extends System_Web_Component
         Common_Tools_PageSize::registerFields( $fields );
         Common_Tools_ViewSettings::registerFields( $fields );
         Common_Tools_Editing::registerFields( $fields );
+        $fields[ 'project_page_mobile' ] = 'projectPageMobile';
+        $fields[ 'folder_page_mobile' ] = 'folderPageMobile';
+        $fields[ 'history_page_mobile' ] = 'historyPageMobile';
         $fields[ 'anonymous_access' ] = 'anonymousAccess';
         $fields[ 'self_register' ] = 'selfRegister';
         $fields[ 'register_auto_approve' ] = 'registerAutoApprove';
@@ -67,6 +70,18 @@ class Admin_Settings_Index extends System_Web_Component
         } else {
             $settingHelper->loadSettings( $fields );
         }
+
+        $this->projectOptions = array();
+        foreach ( array( 5, 10, 15, 20, 25, 30 ) as $i )
+            $this->projectOptions[ $i ] = $i;
+
+        $this->folderOptions = array();
+        foreach ( array( 5, 10, 15, 20, 25, 30 ) as $i )
+            $this->folderOptions[ $i ] = $i;
+
+        $this->historyOptions = array();
+        foreach ( array( 10, 20, 30, 40, 50 ) as $i )
+            $this->historyOptions[ $i ] = $i;
 
         $this->commentOptions = array();
         foreach ( array( 1000, 2000, 5000, 10000, 20000, 50000, 100000 ) as $i )

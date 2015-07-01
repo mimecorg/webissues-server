@@ -105,7 +105,7 @@ class Mobile_Client_IssueDetails extends System_Web_Component
         if ( $this->historyFilter === null )
             $this->historyFilter = $this->defaultFilter;
 
-        $pageSize = $preferencesManager->getPreferenceOrSetting( 'history_page_size' );
+        $pageSize = $serverManager->getSetting( 'history_page_mobile' );
 
         $this->pager = new System_Web_Grid();
         $this->pager->setPageSize( $pageSize );

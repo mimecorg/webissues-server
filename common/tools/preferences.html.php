@@ -10,7 +10,9 @@
 
 <?php $this->insertComponent( 'Common_Tools_Locale', $form ) ?>
 
+<?php if ( !$this->request->isRelativePathUnder( '/mobile' ) ): ?>
 <?php $this->insertComponent( 'Common_Tools_PageSize', $form ) ?>
+<?php endif ?>
 
 <?php $this->insertComponent( 'Common_Tools_ViewSettings', $form ) ?>
 

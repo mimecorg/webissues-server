@@ -54,8 +54,8 @@ class Mobile_Client_ProjectsTree extends System_Web_Component
             $this->projectName = $this->tr( 'All Projects' );
         }
 
-        $preferencesManager = new System_Api_PreferencesManager();
-        $pageSize = $preferencesManager->getPreferenceOrSetting( 'project_page_size' );
+        $serverManager = new System_Api_ServerManager();
+        $pageSize = $serverManager->getSetting( 'project_page_mobile' );
 
         $this->grid = new System_Web_Grid();
         $this->grid->setPageSize( $pageSize );

@@ -146,8 +146,8 @@ class Mobile_Client_IssuesList extends System_Web_Component
 
         $javaScript->registerSearchOptions( $this->searchForm->getFieldSelector( 'searchBox' ), $this->searchForm->getFieldSelector( 'searchOption' ), $searchOptions );
 
-        $preferencesManager = new System_Api_PreferencesManager();
-        $pageSize = $preferencesManager->getPreferenceOrSetting( 'folder_page_size' );
+        $serverManager = new System_Api_ServerManager();
+        $pageSize = $serverManager->getSetting( 'folder_page_mobile' );
 
         $this->grid = new System_Web_Grid();
         $this->grid->setPageSize( $pageSize );
@@ -168,7 +168,6 @@ class Mobile_Client_IssuesList extends System_Web_Component
         $page = $connection->queryPageArgs( $query, $this->grid->getOrderBy(), $this->grid->getPageSize(),
             $this->grid->getOffset(), $queryGenerator->getQueryArguments() );
 
-        $serverManager = new System_Api_ServerManager();
         $this->emailEngine = $serverManager->getSetting( 'email_engine' ) != '';
 
         $formatter = new System_Api_Formatter();
