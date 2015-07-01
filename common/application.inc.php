@@ -33,6 +33,28 @@ class Common_Application extends System_Web_Application
     {
         parent::preparePage();
 
+        if ( ( $this->request->isRelativePath( '/index.php' ) && $this->request->getQueryString( 'url' ) == null )
+                || $this->request->isRelativePath( '/register.php' )
+                || $this->request->isRelativePath( '/client/index.php' ) ) {
+            if ( $this->isMobileDevice() ) {
+                $redirect = false;
+
+                if ( $this->request->isRelativePath( '/client/index.php' ) ) {
+                    $principal = System_Api_Principal::getCurrent();
+                    if ( !$principal->isAuthenticated() ) {
+                        $serverManager = new System_Api_ServerManager();
+                        if ( $serverManager->getSetting( 'anonymous_access' ) != 1 )
+                            $redirect = true;
+                    }
+                }
+
+                if ( $redirect )
+                    $this->response->redirect( '/mobile/index.php?url=' . urlencode( '/mobile' . $this->getRelativeUrl() ) );
+                else
+                    $this->response->redirect( '/mobile' . $this->getRelativeUrl() );
+            }
+        }
+
         if ( !$this->request->isRelativePath( '/index.php' )
                 && !$this->request->isRelativePath( '/register.php' )
                 && !$this->request->isRelativePath( '/mobile/index.php' )
@@ -79,6 +101,16 @@ class Common_Application extends System_Web_Application
 
     public function getLoginPageUrl()
     {
+        $url = $this->getRelativeUrl();
+
+        if ( $this->request->isRelativePathUnder( '/mobile' ) )
+            return '/mobile/index.php?url=' . urlencode( $url );
+        else
+            return '/index.php?url=' . urlencode( $url );
+    }
+
+    public function getRelativeUrl()
+    {
         $url = $this->request->getRelativePath();
         $args = array();
         foreach ( $this->request->getQueryStrings() as $key => $value ) {
@@ -87,11 +119,7 @@ class Common_Application extends System_Web_Application
         }
         if ( !empty( $args ) )
             $url .= '?' . join( '&', $args );
-
-        if ( $this->request->isRelativePathUnder( '/mobile' ) )
-            return '/mobile/index.php?url=' . urlencode( $url );
-        else
-            return '/index.php?url=' . urlencode( $url );
+        return $url;
     }
 
     protected function handleSetupException( $exception )
@@ -153,5 +181,20 @@ class Common_Application extends System_Web_Application
         }
 
         return '/doc/en/index.html';
+    }
+
+    private function isMobileDevice()
+    {
+        $client = $this->session->getCookie( 'wi_client' );
+
+        if ( $client == 'mobile' )
+            return true;
+        else if ( $client == 'full' )
+            return false;
+
+        include_once( WI_ROOT_DIR . '/system/web/mobiledetect.inc.php' );
+        $mobileDetect = new Mobile_Detect();
+
+        return $mobileDetect->isMobile() && !$mobileDetect->isTablet();
     }
 }

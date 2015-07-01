@@ -33,7 +33,7 @@
         endif;
         echo $this->link( '/client/index.php', $this->tr( 'Web Client' ) ) . ' | ';
     endif;
-    echo $this->link( $mobileVersionUrl, $this->tr( 'Mobile Version' ) ) . ' | ';
+    echo $this->link( $mobileVersionUrl, $this->tr( 'Mobile Version' ), array( 'class' => 'switch-client' ) ) . ' | ';
     echo $this->tr( 'WebIssues %1', null, WI_VERSION ) . ' | ';
     echo $this->link( $manualUrl, $this->tr( 'Manual' ), array( 'target' => '_blank' ) );
 ?>

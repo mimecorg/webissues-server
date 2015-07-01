@@ -30,7 +30,6 @@ class System_Web_JavaScript extends System_Web_Base
         'ba-bbq' => 'jquery.ba-bbq.js',
         'bgiframe' =>  'jquery.bgiframe.js',
         'blockui' => 'jquery.blockui.js',
-        'cookie' => 'jquery.cookie.js',
         'datetimepicker' => 'datetimepicker.js',
         'expandcookie' => 'expandcookie.js',
         'expandmobile' => 'expandmobile.js',
@@ -169,7 +168,7 @@ class System_Web_JavaScript extends System_Web_Base
     */
     public function registerExpandCookie( $cookieName )
     {
-        $this->registerScripts( array( 'cookie', 'expandcookie' ) );
+        $this->registerScripts( array( 'expandcookie' ) );
 
         $session = System_Core_Application::getInstance()->getSession();
         $path = $session->getCookiePath();
@@ -186,7 +185,7 @@ class System_Web_JavaScript extends System_Web_Base
     */
     public function registerExpandMobile( $cookieName )
     {
-        $this->registerScripts( array( 'cookie', 'expandmobile' ) );
+        $this->registerScripts( array( 'expandmobile' ) );
 
         $session = System_Core_Application::getInstance()->getSession();
         $path = $session->getCookiePath();

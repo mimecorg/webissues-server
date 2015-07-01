@@ -58,7 +58,7 @@
     if ( $isAuthenticated || $canLogIn ):
         echo $this->imageAndTextLinkItem( '/mobile/client/tools/about.php', '/common/images/about-16.png', $this->tr( 'About WebIssues' ) );
     endif;
-    echo $this->linkItem( $fullVersionUrl, $this->tr( 'Full Version' ) );
+    echo $this->linkItem( $fullVersionUrl, $this->tr( 'Full Version' ), array( 'class' => 'switch-client' ) );
     echo $this->linkItem( $manualUrl, $this->tr( 'Manual' ) );
 ?>
   </ul>

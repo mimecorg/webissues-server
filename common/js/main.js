@@ -69,6 +69,11 @@ WebIssues.autoalign = function() {
     }
 }
 
+WebIssues.switchClient = function( client, options ) {
+    $( '.switch-client' ).click( function() {
+        $.cookie( 'wi_client', client, options );
+    } );
+}
 
 $( function() {
     WebIssues.autofocus();

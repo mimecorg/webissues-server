@@ -73,6 +73,7 @@ class Mobile_PageLayout extends System_Web_Component
         $scriptFiles = $this->view->getSlot( 'script_files' );
 
         $this->scriptFiles[] = '/common/js/jquery.js';
+        $this->scriptFiles[] = '/common/js/jquery.cookie.js';
         $this->scriptFiles[] = '/common/js/main.js';
         $this->scriptFiles[] = '/common/js/mobile.js';
 
@@ -93,9 +94,16 @@ class Mobile_PageLayout extends System_Web_Component
 
         $this->cssFiles[] = '/common/theme/mobile.css';
 
-        $inlineCode = $this->view->getSlot( 'inline_code' );
-        if ( !empty( $inlineCode ) )
-            $this->inlineCode = new System_Web_RawValue( "    $( function() {" . join( '', $inlineCode ) . "\n    } );\n" );
+        $inlineCode = $this->view->getSlot( 'inline_code', array() );
+
+        $session = System_Core_Application::getInstance()->getSession();
+        $path = $session->getCookiePath();
+        $secure = $session->isCookieSecure() ? 'true' : 'false';
+
+        array_unshift( $inlineCode, "
+            WebIssues.switchClient( 'full', { path: '$path', expires: 90, secure: $secure, raw: true } );" );
+
+        $this->inlineCode = new System_Web_RawValue( "    $( function() {" . join( '', $inlineCode ) . "\n    } );\n" );
 
         $this->icon = '/common/images/webissues.ico';
 
