@@ -63,7 +63,9 @@ class Common_PageLayout extends System_Web_Component
             $application->handleException( $ex );
         }
 
-        if ( $this->isAuthenticated || $this->canLogIn )
+        if ( $this->request->isRelativePath( '/client/index.php' ) )
+            $this->mobileVersionUrl = new System_Web_RawValue( $this->filterQueryString( '/mobile/client/index.php', array( 'project', 'folder', 'type', 'issue' ) ) );
+        else if ( $this->isAuthenticated || $this->canLogIn )
             $this->mobileVersionUrl = '/mobile/client/index.php';
         else
             $this->mobileVersionUrl = '/mobile/index.php';

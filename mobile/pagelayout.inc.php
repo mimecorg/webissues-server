@@ -63,7 +63,9 @@ class Mobile_PageLayout extends System_Web_Component
             $application->handleException( $ex );
         }
 
-        if ( $this->isAuthenticated || $this->canLogIn )
+        if ( $this->request->isRelativePath( '/mobile/client/index.php' ) )
+            $this->fullVersionUrl = new System_Web_RawValue( $this->filterQueryString( '/client/index.php', array( 'project', 'folder', 'type', 'issue' ) ) );
+        else if ( $this->isAuthenticated || $this->canLogIn )
             $this->fullVersionUrl = '/client/index.php';
         else
             $this->fullVersionUrl = '/index.php';
