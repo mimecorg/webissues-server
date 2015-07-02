@@ -20,7 +20,7 @@
 
 require_once( '../../system/bootstrap.inc.php' );
 
-class Admin_Settings_Index extends System_Web_Component
+class Admin_Settings_Access extends System_Web_Component
 {
     protected function __construct()
     {
@@ -30,15 +30,12 @@ class Admin_Settings_Index extends System_Web_Component
     protected function execute()
     {
         $this->view->setDecoratorClass( 'Common_FixedBlock' );
-        $this->view->setSlot( 'page_title', $this->tr( 'Server Settings' ) );
+        $this->view->setSlot( 'page_title', $this->tr( 'Access Settings' ) );
 
-        Common_Tools_Locale::registerFields( $fields );
-        Common_Tools_PageSize::registerFields( $fields );
-        Common_Tools_ViewSettings::registerFields( $fields );
-        Common_Tools_Editing::registerFields( $fields );
-        $fields[ 'project_page_mobile' ] = 'projectPageMobile';
-        $fields[ 'folder_page_mobile' ] = 'folderPageMobile';
-        $fields[ 'history_page_mobile' ] = 'historyPageMobile';
+        $fields[ 'anonymous_access' ] = 'anonymousAccess';
+        $fields[ 'self_register' ] = 'selfRegister';
+        $fields[ 'register_auto_approve' ] = 'registerAutoApprove';
+        $fields[ 'register_notify_email' ] = 'registerNotifyEmail';
 
         $this->form = new System_Web_Form( 'settings', $this );
         foreach ( $fields as $field )
@@ -59,19 +56,7 @@ class Admin_Settings_Index extends System_Web_Component
         } else {
             $settingHelper->loadSettings( $fields );
         }
-
-        $this->projectOptions = array();
-        foreach ( array( 5, 10, 15, 20, 25, 30 ) as $i )
-            $this->projectOptions[ $i ] = $i;
-
-        $this->folderOptions = array();
-        foreach ( array( 5, 10, 15, 20, 25, 30 ) as $i )
-            $this->folderOptions[ $i ] = $i;
-
-        $this->historyOptions = array();
-        foreach ( array( 10, 20, 30, 40, 50 ) as $i )
-            $this->historyOptions[ $i ] = $i;
     }
 }
 
-System_Bootstrap::run( 'Common_Application', 'Admin_Settings_Index' );
+System_Bootstrap::run( 'Common_Application', 'Admin_Settings_Access' );

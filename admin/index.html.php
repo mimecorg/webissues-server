@@ -18,10 +18,14 @@
 <dl>
 <dt><?php echo $this->imageAndTextlink( '/admin/settings/index.php', '/common/images/configure-16.png', $this->tr( 'Server Settings' ) ) ?></dt>
 <dd><?php echo $this->tr( 'Configure default language and other settings for this server.' ) ?></dd>
+<dt><?php echo $this->imageAndTextlink( '/admin/settings/access.php', '/common/images/edit-access-16.png', $this->tr( 'Access Settings' ) ) ?></dt>
+<dd><?php echo $this->tr( 'Configure anonymous access and user self-registration.' ) ?></dd>
 <dt><?php echo $this->imageAndTextlink( '/admin/settings/mail.php', '/common/images/alert-16.png', $this->tr( 'Email Settings' ) ) ?></dt>
 <dd><?php echo $this->tr( 'Configure notification email settings.' ) ?></dd>
 <dt><?php echo $this->imageAndTextlink( '/admin/settings/inbox.php', '/common/images/inbox-16.png', $this->tr( 'Inbox Settings' ) ) ?></dt>
 <dd><?php echo $this->tr( 'Configure email inbox settings.' ) ?></dd>
+<dt><?php echo $this->imageAndTextlink( '/admin/settings/advanced.php', '/common/images/gear-16.png', $this->tr( 'Advanced Settings' ) ) ?></dt>
+<dd><?php echo $this->tr( 'Configure advanced settings for this server.' ) ?></dd>
 </dl>
 
 </fieldset>
