@@ -38,8 +38,10 @@ class Common_Errors_Setup extends System_Web_Component
             case System_Core_SetupException::SiteConfigNotFound:
                 $this->view->setSlot( 'page_title', $this->tr( 'Server Not Configured' ) );
                 $this->infoMessage = $this->tr( 'This WebIssues Server has not been configured yet.' );
-                $this->linkMessage = $this->tr( 'Go to the %1 page to configure this server.', null,
-                    $this->link( '/admin/setup/install.php', $this->tr( 'Server Configuration' ) ) );
+                if ( !$this->request->isRelativePathUnder( '/mobile' ) ) {
+                    $this->linkMessage = $this->tr( 'Go to the %1 page to configure this server.', null,
+                        $this->link( '/admin/setup/install.php', $this->tr( 'Server Configuration' ) ) );
+                }
                 break;
 
             case System_Core_SetupException::DatabaseNotCompatible:
@@ -51,8 +53,10 @@ class Common_Errors_Setup extends System_Web_Component
             case System_Core_SetupException::DatabaseNotUpdated:
                 $this->view->setSlot( 'page_title', $this->tr( 'Database Not Updated' ) );
                 $this->infoMessage = $this->tr( 'The database of this WebIssues Server has not been updated yet.' );
-                $this->linkMessage = $this->tr( 'Go to the %1 page to update the database.', null,
-                    $this->link( '/admin/setup/update.php', $this->tr( 'Server Update' ) ) );
+                if ( !$this->request->isRelativePathUnder( '/mobile' ) ) {
+                    $this->linkMessage = $this->tr( 'Go to the %1 page to update the database.', null,
+                        $this->link( '/admin/setup/update.php', $this->tr( 'Server Update' ) ) );
+                }
                 break;
         }
    }
