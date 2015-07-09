@@ -57,37 +57,97 @@ class System_Api_DefinitionInfo
 
         $patternNumber = '-?\d+';
         $patternString = '"(?:\\\\["\\\\nt]|[^"\\\\])*"';
-        $patternArray = "\{(?:$patternString(?:,$patternString)*)?}";
         $patternKey = '[a-z0-9]+(?:-[a-z0-9]+)*';
-        $patternKeyAndValue = "($patternKey)=($patternNumber|$patternString|$patternArray)";
 
-        if ( !preg_match( "/^([A-Z]+)(( $patternKeyAndValue)*)$/", $string, $parts ) )
+        if ( !preg_match( '/^([A-Z]+)(.*)$/', $string, $parts ) )
             throw new System_Api_Error( System_Api_Error::InvalidDefinition );
 
         $info = new System_Api_DefinitionInfo();
         $info->type = $parts[ 1 ];
         $info->metadata = array();
 
-        $count = preg_match_all( "/$patternKeyAndValue/", $parts[ 2 ], $matches );
+        $tokens = preg_split( '/(' . $patternKey . '|' . $patternNumber . '|' . $patternString . '|[ ={},])/', $parts[ 2 ], -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
+        $state = 'start';
 
-        for ( $i = 0; $i < $count; $i++ ) {
-            $value = $matches[ 2 ][ $i ];
-            $letter = $value[ 0 ];
-            if ( $letter == '"' ) {
-                $value = stripcslashes( substr( $value, 1, -1 ) );
-            } else if ( $letter == '{' ) {
-                preg_match_all( "/$patternString/", $value, $items );
-                $value = array();
-                foreach ( $items[ 0 ] as $item )
-                    $value[] = stripcslashes( substr( $item, 1, -1 ) );
-            } else {
-                $integer = (int)$value;
-                if ( $integer != $value )
-                    throw new System_Api_Error( System_Api_Error::InvalidDefinition );
-                $value = $integer;
+        foreach ( $tokens as $token ) {
+            switch ( $state ) {
+                case 'start':
+                    if ( $token == ' ' )
+                        $state = 'space';
+                    else
+                        throw new System_Api_Error( System_Api_Error::InvalidDefinition );
+                    break;
+
+                case 'space':
+                    if ( preg_match( '/^' . $patternKey . '$/', $token ) ) {
+                        $key = $token;
+                        $state = 'key';
+                    } else {
+                        throw new System_Api_Error( System_Api_Error::InvalidDefinition );
+                    }
+                    break;
+
+                case 'key':
+                    if ( $token == '=' )
+                        $state = 'eq';
+                    else
+                        throw new System_Api_Error( System_Api_Error::InvalidDefinition );
+                    break;
+
+                case 'eq':
+                    if ( $token == '{' ) {
+                        $items = array();
+                        $state = 'array';
+                    } else if ( preg_match( '/^' . $patternNumber . '$/', $token ) ) {
+                        $integer = (int)$token;
+                        if ( $integer != $token )
+                            throw new System_Api_Error( System_Api_Error::InvalidDefinition );
+                        $info->metadata[ $key ] = $integer;
+                        $state = 'start';
+                    } else if ( preg_match( '/^' . $patternString . '$/', $token ) ) {
+                        $info->metadata[ $key ] = stripcslashes( substr( $token, 1, -1 ) );
+                        $state = 'start';
+                    } else {
+                        throw new System_Api_Error( System_Api_Error::InvalidDefinition );
+                    }
+                    break;
+
+                case 'array':
+                    if ( $token == '}' ) {
+                        $info->metadata[ $key ] = $items;
+                        $state = 'start';
+                    } else if ( preg_match( '/^' . $patternString . '$/', $token ) ) {
+                        $items[] = stripcslashes( substr( $token, 1, -1 ) );
+                        $state = 'item';
+                    } else {
+                        throw new System_Api_Error( System_Api_Error::InvalidDefinition );
+                    }
+                    break;
+
+                case 'item':
+                    if ( $token == ',' ) {
+                        $state = 'comma';
+                    } else if ( $token == '}' ) {
+                        $info->metadata[ $key ] = $items;
+                        $state = 'start';
+                    } else {
+                        throw new System_Api_Error( System_Api_Error::InvalidDefinition );
+                    }
+                    break;
+
+                case 'comma':
+                    if ( preg_match( '/^' . $patternString . '$/', $token ) ) {
+                        $items[] = stripcslashes( substr( $token, 1, -1 ) );
+                        $state = 'item';
+                    } else {
+                        throw new System_Api_Error( System_Api_Error::InvalidDefinition );
+                    }
+                    break;
             }
-            $info->metadata[ $matches[ 1 ][ $i ] ] = $value;
         }
+
+        if ( $state != 'start' )
+            throw new System_Api_Error( System_Api_Error::InvalidDefinition );
 
         self::$cache[ $string ] = $info;
 
