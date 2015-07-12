@@ -25,11 +25,15 @@ Documentation License, Version 1.3
 Icons based on the KDE Crystal theme copyright (C) 2002 and following
 years KDE Artists
 
-Includes PHPMailer copyright (C) 2013 Marcus Bointon
+Includes PHPMailer copyright (C) 2012-2014 Marcus Bointon
 
-Includes jQuery JavaScript Library copyright (C) 2011 John Resig
+Includes Mobile Detect Library copyright (C) 2011-2015 Serban Ghita,
+Nick Ilyin and contributors
 
-Includes jQuery UI copyright (C) 2011 jQuery UI Authors
+Includes jQuery JavaScript Library copyright (C) 2005, 2015 jQuery
+Foundation, Inc.
+
+Includes jQuery UI copyright (C) 2015 jQuery Foundation, Inc.
 
 Includes markItUp! copyright (C) 2007-2012 Jay Salvat
 
