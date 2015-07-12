@@ -97,6 +97,6 @@ class Mobile_Client_ProjectsTree extends System_Web_Component
             $this->types[ $type[ 'type_id' ] ] = $type;
 
         $javaScript = new System_Web_JavaScript( $this->view );
-        $javaScript->registerExpandMobile( 'wi_projects' );
+        $javaScript->registerMobileExpandCookie( 'wi_projects' );
     }
 }

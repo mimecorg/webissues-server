@@ -26,30 +26,16 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 class System_Web_JavaScript extends System_Web_Base
 {
     private $scriptFiles = array(
-        'autocompletebutton'  => 'autocompletebutton.js',
-        'ba-bbq' => 'jquery.ba-bbq.js',
-        'bgiframe' =>  'jquery.bgiframe.js',
         'blockui' => 'jquery.blockui.js',
-        'datetimepicker' => 'datetimepicker.js',
-        'expandcookie' => 'expandcookie.js',
-        'expandmobile' => 'expandmobile.js',
-        'markitup' => 'jquery.markitup.js',
+        'jquery-ui' => 'jquery-ui.js',
+        'markitup' => 'jquery.markitup.min.js',
         'prettify' => 'prettify.js',
-        'searchoptions' => 'searchoptions.js',
-        'selection' => 'selection.js',
-        'ui.autocomplete' => 'ui/jquery.ui.autocomplete.js',
-        'ui.core' => 'ui/jquery.ui.core.js',
-        'ui.datepicker' => 'ui/jquery.ui.datepicker.js',
-        'ui.position' => 'ui/jquery.ui.position.js',
-        'ui.widget' => 'ui/jquery.ui.widget.js'
+        'webissues-ui' => 'webissues-ui.min.js'
         );
 
     private $cssFiles = array(
-        'markitup' => 'markitup.css',
-        'ui.autocomplete' => 'ui/jquery.ui.autocomplete.css',
-        'ui.core' => 'ui/jquery.ui.core.css',
-        'ui.datepicker' => 'ui/jquery.ui.datepicker.css',
-        'ui.theme' => 'ui/jquery.ui.theme.css'
+        'jquery-ui' => 'jquery-ui.css',
+        'markitup' => 'markitup.css'
         );
 
     private $view = null;
@@ -90,8 +76,8 @@ class System_Web_JavaScript extends System_Web_Base
     */
     public function registerDatePicker( $selector, $flags = 0 )
     {
-        $this->registerScripts( array( 'ui.core', 'ui.widget', 'ui.datepicker', 'datetimepicker' ) );
-        $this->registerCss( array( 'ui.datepicker' ) );
+        $this->registerScripts( array( 'jquery-ui', 'webissues-ui' ) );
+        $this->registerCss( array( 'jquery-ui' ) );
 
         $locale = new System_Api_Locale();
         $localeHelper = new System_Web_LocaleHelper();
@@ -131,8 +117,8 @@ class System_Web_JavaScript extends System_Web_Base
     */
     public function registerAutocomplete( $selector, $items, $flags = 0 )
     {
-        $this->registerScripts( array( 'bgiframe', 'ui.core', 'ui.widget', 'ui.position', 'ui.autocomplete', 'autocompletebutton' ) );
-        $this->registerCss( array( 'ui.autocomplete' ) );
+        $this->registerScripts( array( 'jquery-ui', 'webissues-ui' ) );
+        $this->registerCss( array( 'jquery-ui' ) );
 
         $this->registerCode( "
             $( '$selector' ).autocompletebutton( {
@@ -150,8 +136,8 @@ class System_Web_JavaScript extends System_Web_Base
     */
     public function registerSearchOptions( $selector, $hiddenSelector, $items )
     {
-        $this->registerScripts( array( 'bgiframe', 'ui.core', 'ui.widget', 'ui.position', 'ui.autocomplete', 'searchoptions' ) );
-        $this->registerCss( array( 'ui.autocomplete' ) );
+        $this->registerScripts( array( 'jquery-ui', 'webissues-ui' ) );
+        $this->registerCss( array( 'jquery-ui' ) );
 
         $this->registerCode( "
             $( '$selector' ).searchoptions( {
@@ -168,8 +154,6 @@ class System_Web_JavaScript extends System_Web_Base
     */
     public function registerExpandCookie( $cookieName )
     {
-        $this->registerScripts( array( 'expandcookie' ) );
-
         $session = System_Core_Application::getInstance()->getSession();
         $path = $session->getCookiePath();
         $secure = $session->isCookieSecure() ? 'true' : 'false';
@@ -183,16 +167,14 @@ class System_Web_JavaScript extends System_Web_Base
     * @param $cookieName Name of the cookie that stores item ids that
     * are expanded.
     */
-    public function registerExpandMobile( $cookieName )
+    public function registerMobileExpandCookie( $cookieName )
     {
-        $this->registerScripts( array( 'expandmobile' ) );
-
         $session = System_Core_Application::getInstance()->getSession();
         $path = $session->getCookiePath();
         $secure = $session->isCookieSecure() ? 'true' : 'false';
 
         $this->registerCode( "
-            WebIssues.expandMobile( '$cookieName', { path: '$path', expires: 90, secure: $secure, raw: true } );" );
+            WebIssues.mobileExpandCookie( '$cookieName', { path: '$path', expires: 90, secure: $secure, raw: true } );" );
     }
 
     /**
@@ -233,8 +215,6 @@ class System_Web_JavaScript extends System_Web_Base
     */
     public function registerSelection( $toolBar )
     {
-        $this->registerScripts( array( 'ba-bbq', 'selection' ) );
-
         $this->registerCode( "
             WebIssues.initSelection( [" );
         foreach ( $toolBar->getCommands() as $command ) {

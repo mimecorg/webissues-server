@@ -76,8 +76,8 @@ class Mobile_PageLayout extends System_Web_Component
 
         $this->scriptFiles[] = '/common/js/jquery.js';
         $this->scriptFiles[] = '/common/js/jquery.cookie.js';
-        $this->scriptFiles[] = '/common/js/main.js';
-        $this->scriptFiles[] = '/common/js/mobile.js';
+        $this->scriptFiles[] = '/common/js/webissues.min.js';
+        $this->scriptFiles[] = '/common/js/webissues-mobile.min.js';
 
         if ( !empty( $scriptFiles ) ) {
             foreach ( $scriptFiles as $file )
@@ -85,9 +85,6 @@ class Mobile_PageLayout extends System_Web_Component
         }
 
         $cssFiles = $this->view->getSlot( 'css_files' );
-
-        $this->cssFiles[] = '/common/theme/ui/jquery.ui.core.css';
-        $this->cssFiles[] = '/common/theme/ui/jquery.ui.theme.css';
 
         if ( !empty( $cssFiles ) ) {
             foreach ( $cssFiles as $file )
