@@ -138,7 +138,10 @@ class System_Bootstrap
         if ( defined( 'WI_SCRIPT_PATH' ) )
             return WI_SCRIPT_PATH;
 
-        $path = realpath( $_SERVER[ 'SCRIPT_FILENAME' ] );
+        $path = $_SERVER[ 'SCRIPT_FILENAME' ];
+        $real = realpath( $path );
+        if ( $real )
+            $path = $real;
         $path = str_replace( '\\', '/', $path );
 
         return $path;
@@ -152,7 +155,10 @@ class System_Bootstrap
         if ( defined( 'WI_ROOT_DIR' ) )
             return WI_ROOT_DIR;
 
-        $dir = realpath( dirname( dirname( __FILE__ ) ) );
+        $dir = dirname( dirname( __FILE__ ) );
+        $real = realpath( $dir );
+        if ( $real )
+            $dir = $real;
         $dir = str_replace( '\\', '/', $dir );
         $dir = rtrim( $dir, '/' );
 
