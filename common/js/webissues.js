@@ -122,6 +122,7 @@ var WebIssues = WebIssues || {};
             }
             expandedIds = result;
             $.cookie( cookieName, expandedIds.join( '|' ), options );
+            return false;
         } );
     };
 
