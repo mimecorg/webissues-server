@@ -32,17 +32,17 @@
 <context>
     <name>Admin_Archive_Description</name>
     <message>
-        <location filename="../../../admin/archive/description.html.php" line="4"/>
+        <location filename="../../../admin/archive/description.html.php" line="6"/>
         <source>Last Edited:</source>
         <translation>Son Düzenleme:</translation>
     </message>
     <message>
-        <location filename="../../../admin/archive/description.html.php" line="7"/>
+        <location filename="../../../admin/archive/description.html.php" line="5"/>
         <source>Description</source>
         <translation>Açıklama</translation>
     </message>
     <message>
-        <location filename="../../../admin/archive/description.html.php" line="14"/>
+        <location filename="../../../admin/archive/description.html.php" line="15"/>
         <source>OK</source>
         <translation>TAMAM</translation>
     </message>
@@ -154,27 +154,27 @@
         <translation>Öncelik:</translation>
     </message>
     <message>
-        <location filename="../../../admin/events/event.html.php" line="18"/>
+        <location filename="../../../admin/events/event.html.php" line="15"/>
         <source>Date:</source>
         <translation>Tarih:</translation>
     </message>
     <message>
-        <location filename="../../../admin/events/event.html.php" line="22"/>
+        <location filename="../../../admin/events/event.html.php" line="19"/>
         <source>Message:</source>
         <translation>Mesaj:</translation>
     </message>
     <message>
-        <location filename="../../../admin/events/event.html.php" line="26"/>
+        <location filename="../../../admin/events/event.html.php" line="23"/>
         <source>User name:</source>
         <translation>Kullanıcı Adı:</translation>
     </message>
     <message>
-        <location filename="../../../admin/events/event.html.php" line="30"/>
+        <location filename="../../../admin/events/event.html.php" line="27"/>
         <source>Host name:</source>
         <translation>Host Adı:</translation>
     </message>
     <message>
-        <location filename="../../../admin/events/event.html.php" line="36"/>
+        <location filename="../../../admin/events/event.html.php" line="33"/>
         <source>OK</source>
         <translation>TAMAM</translation>
     </message>
@@ -294,46 +294,66 @@
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="21"/>
+        <source>Access Settings</source>
+        <translation>Erişim Ayarları</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="22"/>
+        <source>Configure anonymous access and user self-registration.</source>
+        <translation>Anonim erişim ve kullanıcıların kendi kendine kayıtlarının yapılandırılması.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="23"/>
         <source>Email Settings</source>
         <translation>Mail Ayarları</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="22"/>
+        <location filename="../../../admin/index.html.php" line="24"/>
         <source>Configure notification email settings.</source>
         <translation>Mail Bildirim seçeneklerini ayarlayın.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="23"/>
+        <location filename="../../../admin/index.html.php" line="25"/>
         <source>Inbox Settings</source>
         <translation>Gelen Kutusu Ayarları</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="24"/>
+        <location filename="../../../admin/index.html.php" line="26"/>
         <source>Configure email inbox settings.</source>
         <translation>Gelen kutusu seçeneklerini ayarlayın.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="30"/>
+        <location filename="../../../admin/index.html.php" line="27"/>
+        <source>Advanced Settings</source>
+        <translation>Gelişmiş Ayarlar</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="28"/>
+        <source>Configure advanced settings for this server.</source>
+        <translation>Bu sunucuya ait gelişmiş seçenekleri yapılandırma.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="34"/>
         <source>Management</source>
         <translation>Yönetim</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="34"/>
+        <location filename="../../../admin/index.html.php" line="38"/>
         <source>Create and edit user accounts.</source>
         <translation>Kullanıcı ekle ve düzenle</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="41"/>
+        <location filename="../../../admin/index.html.php" line="45"/>
         <source>Projects Archive</source>
         <translation>Arşivlenmiş Projeler</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="42"/>
+        <location filename="../../../admin/index.html.php" line="46"/>
         <source>Restore and delete archived projects.</source>
         <translation>Arşivlenmiş projeleri geri yükle ve sil.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="33"/>
+        <location filename="../../../admin/index.html.php" line="37"/>
         <source>User Accounts</source>
         <translation>Kullanıcı Hesapları</translation>
     </message>
@@ -343,22 +363,22 @@
         <translation>Bilgi</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="36"/>
+        <location filename="../../../admin/index.html.php" line="40"/>
         <source>Registration Requests</source>
         <translation>Kayıt İstekleri</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="37"/>
+        <location filename="../../../admin/index.html.php" line="41"/>
         <source>Approve and reject pending user registration requests.</source>
         <translation>Yeni kullanıcı onayı.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="39"/>
+        <location filename="../../../admin/index.html.php" line="43"/>
         <source>Issue Types</source>
         <translation>Konu Türleri</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="40"/>
+        <location filename="../../../admin/index.html.php" line="44"/>
         <source>Create and edit issue types.</source>
         <translation>Olay türlerini oluştur ve düzenle.</translation>
     </message>
@@ -836,6 +856,219 @@
     </message>
 </context>
 <context>
+    <name>Admin_Settings_Access</name>
+    <message>
+        <location filename="../../../admin/settings/access.php" line="33"/>
+        <source>Access Settings</source>
+        <translation>Erişim Ayarları</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="6"/>
+        <source>Anonymous Access</source>
+        <translation>Anonim Erişim</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="8"/>
+        <source>This option enables read-only access to public projects without logging in.</source>
+        <translation>Bu seçenek herkese açık projelere kullanıcı girişi yapmadan salt okunur erişilebilmeyi sağlar.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="10"/>
+        <source>Enable anonymous access</source>
+        <translation>Anonim erişimi aktifleştir</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="15"/>
+        <source>User Registration</source>
+        <translation>Kullanıcı Kaydı</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="17"/>
+        <source>This option allows users to self-register. Sending emails needs to be enabled.</source>
+        <translation>Bu seçenek otomatik kullanıcı kaydını aktifleştirir. Mail gönderme özelliğinine ihtiyaç duyar.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="19"/>
+        <source>Enable user registration</source>
+        <translation>Kullanıcı kaydını aktifleştir</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="21"/>
+        <source>This option allows users to register without administrator&apos;s approval. Registered users only have access to public projects by default.</source>
+        <translation>Bu seçenek admin onayına gerek kalmadan kullanıcıların kayıt olabilmesine izin verir. Kayıtlı kullanıcılar varsayılan olarak herkese açık projelere erişebilir.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="23"/>
+        <source>Enable automatic approval</source>
+        <translation>Otomatik onayı aktifleştir</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="25"/>
+        <source>Optionally send email notifications about pending registration requests to this address. Requires the cron job to be running.</source>
+        <translation>Tercihe bağlı olarak bekleyen kullanıcı kayıt istekleriyle ilgili bildirimler bu adrese gönderilir. Cron job çalışmasını gerektirir.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="27"/>
+        <source>Email address:</source>
+        <translation>E-posta adresi:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="32"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="33"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Settings_Advanced</name>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="33"/>
+        <source>Advanced Settings</source>
+        <translation>Gelişmiş Ayarlar</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="69"/>
+        <location filename="../../../admin/settings/advanced.php" line="76"/>
+        <source>%1 kB</source>
+        <translation>%1 kB</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="71"/>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="74"/>
+        <source>Never</source>
+        <translation>Asla</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="77"/>
+        <source>Always</source>
+        <translation>Her zaman</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="81"/>
+        <source>%1 minutes</source>
+        <translation>%1 dakika</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="82"/>
+        <source>1 hour</source>
+        <translation>1 saat</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="84"/>
+        <location filename="../../../admin/settings/advanced.php" line="93"/>
+        <source>%1 hours</source>
+        <translation>%1 saat</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="87"/>
+        <source>1 day</source>
+        <translation>1 gün</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="89"/>
+        <source>%1 days</source>
+        <translation>%1 gün</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="96"/>
+        <source>Use cron job</source>
+        <translation>Cron job kullan</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="6"/>
+        <source>Limits</source>
+        <translation>Limit</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="8"/>
+        <source>The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.</source>
+        <translation>Yorumlar ve açıklamalar için izin verilen en fazla karakter sayısı ve eklentiler için izin verilen en fazla boyut (byte cinsinden).</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="10"/>
+        <source>Maximum text length:</source>
+        <translation>En fazla metin uzunluğu:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="11"/>
+        <source>Maximum attachment size:</source>
+        <translation>En fazla eklenti boyutu:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="16"/>
+        <source>Attachment Storage</source>
+        <translation>Eklenti Deposu</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="18"/>
+        <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
+        <translation>Veritabanına kaydedilecek dosyaların boyutu (en fazla). Daha büyük olanlar dosya sistemine kaydedilecek.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="20"/>
+        <source>Maximum database storage size:</source>
+        <translation>İzin verilen en fazla veritabanı boyutu:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="25"/>
+        <source>Maximum Lifetime</source>
+        <translation>Yaşam Süresi</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="27"/>
+        <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
+        <translation>Olay günlüğündeki olay ve pasif oturumların silinme süresi.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="29"/>
+        <source>Session lifetime:</source>
+        <translation>Oturum zaman aşımı süresi:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="30"/>
+        <source>Event log lifetime:</source>
+        <translation>Olay günlüğü yaşam ömrü:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="31"/>
+        <source>Inactive user registration request lifetime:</source>
+        <translation>Pasif kullanıcı kayıt isteği yaşam ömrü:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="36"/>
+        <source>Garbage Collection</source>
+        <translation>Yıkıcı</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="38"/>
+        <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
+        <translation>Her istekten sonra isteklerin kuyrukta bekleme/gitmeme ihtimali var. Eğer Cron kullanıyorsanız Cron&apos;un çalıştığından emin olun.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="40"/>
+        <source>GC probability:</source>
+        <translation>GC Olasılığı:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="45"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="46"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
     <name>Admin_Settings_Inbox</name>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="32"/>
@@ -1050,189 +1283,37 @@
         <translation>Sunucu Ayarları</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="77"/>
-        <location filename="../../../admin/settings/index.php" line="84"/>
-        <source>%1 kB</source>
-        <translation>%1 kB</translation>
+        <location filename="../../../admin/settings/index.html.php" line="10"/>
+        <source>Mobile Page Size</source>
+        <translation>Mobil Sayfa Boyutu</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="79"/>
-        <source>%1 MB</source>
-        <translation>%1 MB</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="82"/>
-        <source>Never</source>
-        <translation>Asla</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="85"/>
-        <source>Always</source>
-        <translation>Her zaman</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="89"/>
-        <source>%1 minutes</source>
-        <translation>%1 dakika</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="90"/>
-        <source>1 hour</source>
-        <translation>1 saat</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="92"/>
-        <location filename="../../../admin/settings/index.php" line="101"/>
-        <source>%1 hours</source>
-        <translation>%1 saat</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="95"/>
-        <source>1 day</source>
-        <translation>1 gün</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="97"/>
-        <source>%1 days</source>
-        <translation>%1 gün</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="104"/>
-        <source>Use cron job</source>
-        <translation>Cron job kullan</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="23"/>
-        <source>User Registration</source>
-        <translation>Kullanıcı Kaydı</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="27"/>
-        <source>Enable user registration</source>
-        <translation>Kullanıcı kaydını aktifleştir</translation>
+        <location filename="../../../admin/settings/index.html.php" line="12"/>
+        <source>The maximum number of projects, issues and items in history which are displayed in the mobile version.</source>
+        <translation>Geçmişteki projelerin, konuların ve öğelerin, mobil sürümde bir sayfada en fazla kaç tane gösterileceği.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="14"/>
-        <source>Anonymous Access</source>
-        <translation>Anonim Erişim</translation>
+        <source>Projects tree:</source>
+        <translation>Proje ağacı:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="15"/>
+        <source>List of issues:</source>
+        <translation>Olay listesi:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="16"/>
-        <source>This option enables read-only access to public projects without logging in.</source>
-        <translation>Bu seçenek herkese açık projelere kullanıcı girişi yapmadan salt okunur erişilebilmeyi sağlar.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="18"/>
-        <source>Enable anonymous access</source>
-        <translation>Anonim erişimi aktifleştir</translation>
+        <source>Issue history:</source>
+        <translation>Olay tarihçesi:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="25"/>
-        <source>This option allows users to self-register. Sending emails needs to be enabled.</source>
-        <translation>Bu seçenek otomatik kullanıcı kaydını aktifleştirir. Mail gönderme özelliğinine ihtiyaç duyar.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="29"/>
-        <source>This option allows users to register without administrator&apos;s approval. Registered users only have access to public projects by default.</source>
-        <translation>Bu seçenek admin onayına gerek kalmadan kullanıcıların kayıt olabilmesine izin verir. Kayıtlı kullanıcılar varsayılan olarak herkese açık projelere erişebilir.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="31"/>
-        <source>Enable automatic approval</source>
-        <translation>Otomatik onayı aktifleştir</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="33"/>
-        <source>Optionally send email notifications about pending registration requests to this address. Requires the cron job to be running.</source>
-        <translation>Tercihe bağlı olarak bekleyen kullanıcı kayıt istekleriyle ilgili bildirimler bu adrese gönderilir. Cron job çalışmasını gerektirir.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="35"/>
-        <source>Email address:</source>
-        <translation>E-posta adresi:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="40"/>
-        <source>Limits</source>
-        <translation>Limit</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="42"/>
-        <source>The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.</source>
-        <translation>Yorumlar ve açıklamalar için izin verilen en fazla karakter sayısı ve eklentiler için izin verilen en fazla boyut (byte cinsinden).</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="44"/>
-        <source>Maximum text length:</source>
-        <translation>En fazla metin uzunluğu:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="45"/>
-        <source>Maximum attachment size:</source>
-        <translation>En fazla eklenti boyutu:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="50"/>
-        <source>Attachment Storage</source>
-        <translation>Eklenti Deposu</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="52"/>
-        <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
-        <translation>Veritabanına kaydedilecek dosyaların boyutu (en fazla). Daha büyük olanlar dosya sistemine kaydedilecek.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="54"/>
-        <source>Maximum database storage size:</source>
-        <translation>İzin verilen en fazla veritabanı boyutu:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="59"/>
-        <source>Maximum Lifetime</source>
-        <translation>Yaşam Süresi</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="61"/>
-        <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
-        <translation>Olay günlüğündeki olay ve pasif oturumların silinme süresi</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="63"/>
-        <source>Session lifetime:</source>
-        <translation>Oturum zaman aşımı süresi:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="64"/>
-        <source>Event log lifetime:</source>
-        <translation>Olay günlüğü yaşam ömrü:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="65"/>
-        <source>Inactive user registration request lifetime:</source>
-        <translation>Pasif kullanıcı kayıt isteği yaşam ömrü:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="70"/>
-        <source>Garbage Collection</source>
-        <translation>Yıkıcı</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="72"/>
-        <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
-        <translation>Her istekten sonra isteklerin kuyrukta bekleme/gitmeme ihtimali var. Eğer Cron kullanıyorsanız Cron&apos;un çalıştığından emin olun.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="74"/>
-        <source>GC probability:</source>
-        <translation>GC Olasılığı</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="79"/>
         <source>OK</source>
         <translation>TAMAM</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="80"/>
+        <location filename="../../../admin/settings/index.html.php" line="26"/>
         <source>Cancel</source>
         <translation>Vazgeç</translation>
     </message>
@@ -1580,7 +1661,7 @@
     <message>
         <location filename="../../../admin/setup/install.html.php" line="77"/>
         <source>Select if you want to install a new server or recreate the configuration file for an existing server:</source>
-        <translation>Yeni bir sunucu kurulumu mu yapmak istiyorsunuz yoksa varolan bir sunucu için yapılandırma dosyasını yeniden mi oluşturmak istiyorsunuz seçin.</translation>
+        <translation>Yeni bir sunucu kurulumu mu yapmak istiyorsunuz yoksa varolan bir sunucu için yapılandırma dosyasını yeniden mi oluşturmak istiyorsunuz seçin:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="84"/>
@@ -1697,200 +1778,200 @@
         <translation>Yönetici</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="339"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="342"/>
         <source>Forum</source>
         <translation>Forum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="345"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="348"/>
         <source>Bugs</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="348"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="351"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation>Atandı</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="355"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
         <source>Status</source>
         <comment>bug</comment>
         <translation>Durum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="360"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="400"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="408"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="416"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="403"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="411"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
         <source>Active</source>
         <comment>bug</comment>
         <translation>Aktif</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="423"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="426"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translation>Çözüldü</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translation>Kapandı</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="364"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Reason</source>
         <translation>Sebep</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Fixed</source>
         <translation>Onarıldı</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Obsolete</source>
         <translation>Geçersiz</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Duplicate</source>
         <translation>Çift</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="368"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>As Designed</source>
         <translation>Tasarlandığı Gibi</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="368"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>Unable To Reproduce</source>
         <translation>Tekrarlanabilir Değil</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="368"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>Test Failed</source>
         <translation>Test Başarısız Oldu</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="372"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="375"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translation>Önem</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="385"/>
         <source>Version</source>
         <translation>Versiyon</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="390"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="393"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translation>Ben Oluşturdum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="400"/>
         <source>Active Bugs</source>
         <translation>Aktif Hatalar</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="404"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="407"/>
         <source>My Active Bugs</source>
         <translation>Aktif Hatalarım</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="412"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="415"/>
         <source>Unassigned Bugs</source>
         <translation>Atanmamış Hatalar</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="420"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="423"/>
         <source>Resolved Bugs</source>
         <translation>Çözülmüş Hatalar</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="429"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="432"/>
         <source>Tasks</source>
         <translation>Görevler</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="432"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="435"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translation>Atandı</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="439"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
         <source>Status</source>
         <comment>task</comment>
         <translation>Durumu</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="444"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="484"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="492"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="500"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="487"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="495"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="503"/>
         <source>Active</source>
         <comment>task</comment>
         <translation>Aktif</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
         <source>Closed</source>
         <comment>task</comment>
         <translation>Kapandı</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="448"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="451"/>
         <source>Priority</source>
         <comment>task</comment>
         <translation>Öncelik</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="458"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="461"/>
         <source>Progress</source>
         <translation>Aşama</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="466"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="469"/>
         <source>Due Date</source>
         <translation>Bitiş Tarihi</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="474"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="477"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translation>Ben Oluşturdum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="481"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="484"/>
         <source>Active Tasks</source>
         <translation>Aktif Görevler</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="488"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="491"/>
         <source>My Active Tasks</source>
         <translation>Aktif Görevlerim</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="496"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="499"/>
         <source>Unassigned Tasks</source>
         <translation>Atanmamış Görevler</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="504"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="507"/>
         <source>Completed Tasks</source>
         <translation>Tamamlanmış Görevler</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="507"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="510"/>
         <source>Completed</source>
         <comment>task</comment>
         <translation>Tamamlandı</translation>
@@ -2095,7 +2176,7 @@
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="85"/>
         <source>Enter one dropdown list item per line.</source>
-        <translation>Her satıra açılır menü öğelerinden birini girin</translation>
+        <translation>Her satıra açılır menü öğelerinden birini girin.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="87"/>
@@ -3363,72 +3444,72 @@
 <context>
     <name>Client_IssueDetails</name>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="96"/>
+        <location filename="../../../client/issuedetails.inc.php" line="97"/>
         <source>Only Comments</source>
         <translation>Sadece Yorumlar</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="97"/>
+        <location filename="../../../client/issuedetails.inc.php" line="98"/>
         <source>Only Attachments</source>
         <translation>Sadece Eklentiler</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="98"/>
+        <location filename="../../../client/issuedetails.inc.php" line="99"/>
         <source>Comments &amp; Attachments</source>
         <translation>Yorumlar &amp; Eklentiler</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="168"/>
+        <location filename="../../../client/issuedetails.inc.php" line="170"/>
         <source>Edit Attributes</source>
         <translation>Nitelikleri Düzenle</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="169"/>
+        <location filename="../../../client/issuedetails.inc.php" line="171"/>
         <source>Add Comment</source>
         <translation>Yorum Ekle</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="170"/>
+        <location filename="../../../client/issuedetails.inc.php" line="172"/>
         <source>Add Attachment</source>
         <translation>Eklenti Ekle</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="172"/>
+        <location filename="../../../client/issuedetails.inc.php" line="174"/>
         <source>Add Description</source>
         <translation>Açıklama Ekle</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="173"/>
+        <location filename="../../../client/issuedetails.inc.php" line="175"/>
         <source>Clone Issue</source>
         <translation>Konuyu Kopyala</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="175"/>
+        <location filename="../../../client/issuedetails.inc.php" line="177"/>
         <source>Move Issue</source>
         <translation>Konuyu Taşı</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="176"/>
+        <location filename="../../../client/issuedetails.inc.php" line="178"/>
         <source>Delete Issue</source>
         <translation>Konuyu Sil</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="179"/>
+        <location filename="../../../client/issuedetails.inc.php" line="181"/>
         <source>Mark As Unread</source>
         <translation>Okunmadı Olarak İşaretle</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="181"/>
+        <location filename="../../../client/issuedetails.inc.php" line="183"/>
         <source>Mark As Read</source>
         <translation>Okundu Olarak İşaretle</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="184"/>
+        <location filename="../../../client/issuedetails.inc.php" line="186"/>
         <source>Unsubscribe</source>
         <translation>Aboneliği Bırak</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="186"/>
+        <location filename="../../../client/issuedetails.inc.php" line="188"/>
         <source>Subscribe</source>
         <translation>Abone Ol</translation>
     </message>
@@ -3443,64 +3524,64 @@
         <translation>Tür:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="95"/>
+        <location filename="../../../client/issuedetails.inc.php" line="96"/>
         <source>All History</source>
         <translation>Tüm Geçmiş</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="65"/>
-        <location filename="../../../client/issuedetails.html.php" line="108"/>
+        <location filename="../../../client/issuedetails.html.php" line="64"/>
+        <location filename="../../../client/issuedetails.html.php" line="111"/>
         <location filename="../../../client/issuedetails.html.php" line="125"/>
         <source>Edit</source>
         <translation>Düzenle</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="66"/>
-        <location filename="../../../client/issuedetails.html.php" line="110"/>
+        <location filename="../../../client/issuedetails.html.php" line="65"/>
+        <location filename="../../../client/issuedetails.html.php" line="113"/>
         <location filename="../../../client/issuedetails.html.php" line="127"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="196"/>
-        <location filename="../../../client/issuedetails.html.php" line="197"/>
+        <location filename="../../../client/issuedetails.html.php" line="201"/>
+        <location filename="../../../client/issuedetails.html.php" line="202"/>
         <source>Unknown Folder</source>
         <translation>Bilinmeyen Klasör</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="219"/>
+        <location filename="../../../client/issuedetails.html.php" line="224"/>
         <source>There are no comments.</source>
         <translation>Yorum yok.</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="221"/>
+        <location filename="../../../client/issuedetails.html.php" line="226"/>
         <source>There are no attachments.</source>
         <translation>Eklenti yok.</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="223"/>
+        <location filename="../../../client/issuedetails.html.php" line="228"/>
         <source>There are no comments or attachments.</source>
         <translation>Eklenti ya da yorum yok.</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="85"/>
+        <location filename="../../../client/issuedetails.html.php" line="91"/>
         <source>Issue History</source>
         <translation>Konu geçmişi</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="151"/>
-        <location filename="../../../client/issuedetails.html.php" line="154"/>
+        <location filename="../../../client/issuedetails.html.php" line="156"/>
+        <location filename="../../../client/issuedetails.html.php" line="159"/>
         <source>Name</source>
         <translation>İsim</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="157"/>
-        <location filename="../../../client/issuedetails.html.php" line="158"/>
+        <location filename="../../../client/issuedetails.html.php" line="162"/>
+        <location filename="../../../client/issuedetails.html.php" line="163"/>
         <source>empty</source>
         <translation>boş</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="102"/>
+        <location filename="../../../client/issuedetails.html.php" line="105"/>
         <source>Comment %1</source>
         <translation>Yorum %1</translation>
     </message>
@@ -3520,20 +3601,19 @@
         <translation>Son Değiştirme:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="60"/>
-        <location filename="../../../client/issuedetails.html.php" line="100"/>
-        <location filename="../../../client/issuedetails.html.php" line="120"/>
+        <location filename="../../../client/issuedetails.html.php" line="74"/>
+        <location filename="../../../client/issuedetails.html.php" line="138"/>
         <source>Last Edited:</source>
         <translation>Son Düzenleme:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="62"/>
-        <location filename="../../../client/issuedetails.html.php" line="104"/>
+        <location filename="../../../client/issuedetails.html.php" line="61"/>
+        <location filename="../../../client/issuedetails.html.php" line="107"/>
         <source>Reply</source>
         <translation>Cevap Ver</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="71"/>
+        <location filename="../../../client/issuedetails.html.php" line="72"/>
         <source>Description</source>
         <translation>Açıklama</translation>
     </message>
@@ -3543,7 +3623,7 @@
         <translation>Eklenti %1</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="198"/>
+        <location filename="../../../client/issuedetails.html.php" line="203"/>
         <source>Issue moved from %1 to %2</source>
         <translation>Konu %1&apos;den %2&apos;ye taşındı</translation>
     </message>
@@ -3647,310 +3727,6 @@
     </message>
 </context>
 <context>
-    <name>Client_Issues_AddAttachment</name>
-    <message>
-        <location filename="../../../client/issues/addattachment.php" line="40"/>
-        <source>Add Attachment</source>
-        <translation>Eklenti Ekle</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.php" line="74"/>
-        <source>No file uploaded</source>
-        <translation>Dosya yüklenmedi</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.php" line="76"/>
-        <source>An error occurred while uploading the file</source>
-        <translation>Dosya yüklerken hata oluştu</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.php" line="80"/>
-        <source>File too large</source>
-        <translation>Dosya çok büyük</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.php" line="88"/>
-        <source>Invalid file name</source>
-        <translation>Dosya adı hatalı</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.html.php" line="3"/>
-        <source>Add an attachment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna eklenti ekle.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.html.php" line="7"/>
-        <source>File:</source>
-        <translation>Dosya:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.html.php" line="9"/>
-        <source>Description:</source>
-        <translation>Açıklama:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.html.php" line="12"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.html.php" line="13"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_Comment</name>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="49"/>
-        <source>Description</source>
-        <translation>Açıklama</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="55"/>
-        <source>Comment %1</source>
-        <translation>Yorum %1</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="67"/>
-        <source>Add Comment</source>
-        <translation>Yorum Ekle</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="84"/>
-        <source>Edit Comment</source>
-        <translation>Yorum Düzenle</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="95"/>
-        <source>Plain Text</source>
-        <translation>Salt Metin</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="96"/>
-        <source>Text with Markup</source>
-        <translation>Biçimlendirilmiş Metin</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="4"/>
-        <source>Add comment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna yorum ekle.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="6"/>
-        <source>Edit comment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; yorumunu düzenle.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="11"/>
-        <source>Comment:</source>
-        <translation>Yorum:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="15"/>
-        <source>Text format:</source>
-        <translation>Metin formatı:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="18"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="19"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_DeleteAttachment</name>
-    <message>
-        <location filename="../../../client/issues/deleteattachment.php" line="38"/>
-        <source>Delete Attachment</source>
-        <translation>Eklentiyi Sil</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteattachment.html.php" line="3"/>
-        <source>Are you sure you want to delete attachment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; eklentisini silmek istediğinize emin misiniz?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteattachment.html.php" line="8"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteattachment.html.php" line="9"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_DeleteComment</name>
-    <message>
-        <location filename="../../../client/issues/deletecomment.php" line="40"/>
-        <source>Delete Comment</source>
-        <translation>Yorum Sil</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletecomment.html.php" line="3"/>
-        <source>Are you sure you want to delete comment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; yorumunu silmek istediğinize emin misiniz?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletecomment.html.php" line="8"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletecomment.html.php" line="9"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_DeleteDescription</name>
-    <message>
-        <location filename="../../../client/issues/deletedescription.php" line="41"/>
-        <source>Delete Description</source>
-        <translation>Açıklama Sil</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletedescription.html.php" line="3"/>
-        <source>Are you sure you want to delete description for issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konu açıklamasını silmek istediğinize emin misiniz?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletedescription.html.php" line="8"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletedescription.html.php" line="9"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_DeleteIssue</name>
-    <message>
-        <location filename="../../../client/issues/deleteissue.php" line="37"/>
-        <source>Delete Issue</source>
-        <translation>Konuyu Sil</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteissue.html.php" line="3"/>
-        <source>Are you sure you want to delete issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunu silmek istediğinize emin misiniz?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteissue.html.php" line="5"/>
-        <source>&lt;strong&gt;Warning:&lt;/strong&gt; The entire issue history will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Uyarı:&lt;/strong&gt; Tüm konu geçmişi kalıcı olarak silinecek.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteissue.html.php" line="10"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteissue.html.php" line="11"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_Description</name>
-    <message>
-        <location filename="../../../client/issues/description.inc.php" line="53"/>
-        <source>Add Description</source>
-        <translation>Açıklama Ekle</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.inc.php" line="64"/>
-        <source>Edit Description</source>
-        <translation>Açıklamayı Düzenle</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.inc.php" line="75"/>
-        <source>Plain Text</source>
-        <translation>Salt Metin</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.inc.php" line="76"/>
-        <source>Text with Markup</source>
-        <translation>Biçimlendirilmiş Metin</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="4"/>
-        <source>Add description to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna açıklama ekle.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="6"/>
-        <source>Edit description of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunun açıklamasını düzenle.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="11"/>
-        <source>Description:</source>
-        <translation>Açıklama:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="15"/>
-        <source>Text format:</source>
-        <translation>Metin formatı:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="18"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="19"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_EditAttachment</name>
-    <message>
-        <location filename="../../../client/issues/editattachment.php" line="40"/>
-        <source>Edit Attachment</source>
-        <translation>Eklentiyi Düzenle</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.php" line="59"/>
-        <source>Invalid file name</source>
-        <translation>Dosya adı hatalı</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.html.php" line="3"/>
-        <source>Edit attachment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; eklentisini düzenle.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.html.php" line="7"/>
-        <source>Name:</source>
-        <translation>Ad:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.html.php" line="9"/>
-        <source>Description:</source>
-        <translation>Açıklama:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.html.php" line="12"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.html.php" line="13"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
     <name>Client_Issues_ExportCsv</name>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="45"/>
@@ -3989,275 +3765,6 @@
     </message>
 </context>
 <context>
-    <name>Client_Issues_Issue</name>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="54"/>
-        <source>Edit Attributes</source>
-        <translation>Nitelikleri Düzenle</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="106"/>
-        <source>Clone Issue</source>
-        <translation>Konuyu Kopyala</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="78"/>
-        <source>Add Issue</source>
-        <translation>Konu Ekle</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="146"/>
-        <source>Please Select</source>
-        <translation>Seçin</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="167"/>
-        <source>Plain Text</source>
-        <translation>Salt Metin</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="168"/>
-        <source>Text with Markup</source>
-        <translation>Biçimlendirilmiş Metin</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="331"/>
-        <source>No folder selected.</source>
-        <translation>Klasör seçilmedi.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="5"/>
-        <source>Some of the values you entered are incorrect.</source>
-        <translation>Girdiğiniz bazı değerlerde hata var.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="10"/>
-        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in the selected folder.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunu seçili klasöre yeni konu olarak kopyala.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="12"/>
-        <source>Create a new issue in folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasöründe yeni bir konu oluştur.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="14"/>
-        <source>Edit attributes of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusu için nitelikleri düzenle.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="16"/>
-        <source>Create a new issue in the selected folder.</source>
-        <translation>Seçili klasörde yeni bir konu oluştur.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="23"/>
-        <source>Name:</source>
-        <translation>Ad:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="27"/>
-        <source>Folder:</source>
-        <translation>Klasör:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="33"/>
-        <source>Attributes</source>
-        <translation>Nitelikler</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="37"/>
-        <source>%1:</source>
-        <translation>%1:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="51"/>
-        <source>Description:</source>
-        <translation>Açıklama:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="55"/>
-        <source>Text format:</source>
-        <translation>Metin formatı:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="59"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="60"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="66"/>
-        <source>There are no available folders of this type.</source>
-        <translation>Bu türde kullanılabilir klasör yok.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="68"/>
-        <source>There are no available project members to assign to the issue.</source>
-        <translation>Konuya atanabilecek proje üyesi yok.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="72"/>
-        <source>Close</source>
-        <translation>Kapat</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_MarkAll</name>
-    <message>
-        <location filename="../../../client/issues/markall.php" line="50"/>
-        <source>Mark All As Read</source>
-        <translation>Hepsi Okundu Olarak İşaretle</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.php" line="52"/>
-        <source>Mark All As Unread</source>
-        <translation>Hepsini Okunmadı Olarak İşaretle</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="5"/>
-        <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasöründeki tüm konuları okundu olarak işaretlemek istediğinize emin misiniz?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="7"/>
-        <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasöründeki tüm konuları okunmadı olarak işaretlemek istediğinize emin misiniz?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="11"/>
-        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; türündeki tüm konuları okundu olarak işaretlemek istediğinize emin misiniz?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="13"/>
-        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; türündeki tüm konuları okunmadı olarak işaretlemek istediğinize emin misiniz?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="20"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="21"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_MoveIssue</name>
-    <message>
-        <location filename="../../../client/issues/moveissue.php" line="69"/>
-        <source>Move Issue</source>
-        <translation>Konuyu Taşı</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/moveissue.html.php" line="3"/>
-        <source>Move issue &lt;strong&gt;%1&lt;/strong&gt; to another folder of the same type.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunu aynı türdeki diğer klasöre taşı.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/moveissue.html.php" line="9"/>
-        <source>Folder:</source>
-        <translation>Klasör:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/moveissue.html.php" line="12"/>
-        <location filename="../../../client/issues/moveissue.html.php" line="21"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/moveissue.html.php" line="13"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/moveissue.html.php" line="18"/>
-        <source>There are no available destination folders.</source>
-        <translation>Kullanılabilir hedef klasör yok.</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_Preview</name>
-    <message>
-        <location filename="../../../client/issues/preview.php" line="53"/>
-        <source>Error: %1.</source>
-        <translation>Hata: %1.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/preview.php" line="55"/>
-        <source>An unexpected error occured while processing the request.</source>
-        <translation>İsteği gerçekleştirirken beklenmedik bir hata oluştu.</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_Subscribe</name>
-    <message>
-        <location filename="../../../client/issues/subscribe.php" line="37"/>
-        <source>Subscribe To Issue</source>
-        <translation>Konuya Abone Ol</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="3"/>
-        <source>You are about to subscribe to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna abone olmak üzeresiniz.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="5"/>
-        <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
-        <translation>Başka birisi bu konuyu değiştirdiğinde, yorum veya dosya eklediğinde mail bildirimi alacaksınız.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="8"/>
-        <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
-        <translation>Uyarı: Tercihlerinize e-posta adresinizi girene kadar mail almayacaksınız.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="14"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="15"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_Unsubscribe</name>
-    <message>
-        <location filename="../../../client/issues/unsubscribe.php" line="37"/>
-        <source>Unsubscribe From Issue</source>
-        <translation>Konu Aboneliğinden .Çık</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/unsubscribe.html.php" line="3"/>
-        <source>You are about to unsubscribe from issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunun aboneliğinden çıkmak üzeresiniz.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/unsubscribe.html.php" line="5"/>
-        <source>You will no longer receive email notifications for this issue.</source>
-        <translation>Bundan sonra bu konu için mail bildirimi almayacaksınız.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/unsubscribe.html.php" line="10"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/unsubscribe.html.php" line="11"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
     <name>Client_Project</name>
     <message>
         <location filename="../../../client/project.inc.php" line="59"/>
@@ -4265,22 +3772,22 @@
         <translation>Açıklama Ekle</translation>
     </message>
     <message>
-        <location filename="../../../client/project.html.php" line="12"/>
+        <location filename="../../../client/project.html.php" line="22"/>
         <source>Last Edited:</source>
         <translation>Son Düzenleme:</translation>
     </message>
     <message>
-        <location filename="../../../client/project.html.php" line="14"/>
+        <location filename="../../../client/project.html.php" line="13"/>
         <source>Edit</source>
         <translation>Düzenle</translation>
     </message>
     <message>
-        <location filename="../../../client/project.html.php" line="15"/>
+        <location filename="../../../client/project.html.php" line="14"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="../../../client/project.html.php" line="20"/>
+        <location filename="../../../client/project.html.php" line="21"/>
         <source>Description</source>
         <translation>Açıklama</translation>
     </message>
@@ -4978,152 +4485,6 @@
     </message>
 </context>
 <context>
-    <name>Client_Tools_About</name>
-    <message>
-        <location filename="../../../client/tools/about.php" line="33"/>
-        <source>About WebIssues</source>
-        <translation>WebIssues Hakkında</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="5"/>
-        <source>WebIssues %1</source>
-        <translation>WebIssues %1</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="7"/>
-        <source>Issue tracking and team collaboration system.</source>
-        <translation>Olay takip ve takım işbirliği sistemi.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="12"/>
-        <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</source>
-        <translation>Bu program ücretsiz bir yazılımdır: Özgür Yazılım Vakfı tarafından yayınlanan GNU Affero Genel Kamu Lisansı (3 veya daha sonraki bir sürüm) kapsamında düzenleyebilir veya dağıtabilirsiniz.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="14"/>
-        <source>Copyright &amp;copy; 2006 Michał Męciński</source>
-        <translation>Copyright &amp;copy; 2006 Michał Męciński</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="15"/>
-        <source>Copyright &amp;copy; 2007-2015 WebIssues Team</source>
-        <translation>Copyright &amp;copy; 2007-2015 WebIssues Team</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="18"/>
-        <source>Help</source>
-        <translation>Yardım</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="20"/>
-        <source>Open the WebIssues Manual for help.</source>
-        <translation>Yardım için WebIssues Kılavuzunu Aç.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="23"/>
-        <source>Manual</source>
-        <translation>Kılavuz</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="29"/>
-        <source>Website</source>
-        <translation>Website</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="31"/>
-        <source>Visit %1 for more information about WebIssues.</source>
-        <translation>WebIssues hakkında daha fazla bilgi için %1 adresini ziyaret edin.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="36"/>
-        <source>Donations</source>
-        <translation>Bağış</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="38"/>
-        <source>If you like this program, your donation will help us dedicate more time for it, support it and implement new features.</source>
-        <translation>Programı beğendiyseniz, bağışınız bizim daha fazla zaman ayırmamızı sağlayacak ve yeni özellikler eklememiz için bizi destekleyecektir.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="41"/>
-        <source>Donate</source>
-        <translation>Bağış Yap</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="49"/>
-        <source>Latest Version</source>
-        <translation>Son Sürüm</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="56"/>
-        <source>Your version of WebIssues is up to date.</source>
-        <translation>WebIssues sürümü güncel</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="63"/>
-        <source>The latest version of WebIssues is %1.</source>
-        <translation>WebIssues&apos;in son sürümü %1.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="66"/>
-        <source>Release Notes</source>
-        <translation>Yayın Notları</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="67"/>
-        <source>Download</source>
-        <translation>İndir</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="75"/>
-        <source>Checking for latest version failed.</source>
-        <translation>Son sürüm kontrolü başarısız oldu.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="82"/>
-        <source>Check for latest version of WebIssues.</source>
-        <translation>WebIssues&apos;i son sürüm için kontrol et.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="85"/>
-        <source>Check</source>
-        <translation>Kontrol Et.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="98"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Tools_GoToItem</name>
-    <message>
-        <location filename="../../../client/tools/gotoitem.php" line="33"/>
-        <source>Go To Item</source>
-        <translation>Öğeye Git</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/gotoitem.html.php" line="3"/>
-        <source>Enter the identifier of an issue, comment or attachment.</source>
-        <translation>Konu, yorum veya ekli dosya için bir tanımlayıcı girin.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/gotoitem.html.php" line="7"/>
-        <source>ID:</source>
-        <translation>ID:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/gotoitem.html.php" line="10"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/gotoitem.html.php" line="11"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
     <name>Client_Tools_Index</name>
     <message>
         <location filename="../../../client/tools/index.php" line="33"/>
@@ -5245,63 +4606,64 @@
 <context>
     <name>Common_Breadcrumbs</name>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="99"/>
+        <location filename="../../breadcrumbs.inc.php" line="105"/>
         <source>General Information</source>
         <translation>Genel</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="104"/>
+        <location filename="../../breadcrumbs.inc.php" line="110"/>
         <source>Event Log</source>
         <translation>Olay Günlüğü</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="109"/>
+        <location filename="../../breadcrumbs.inc.php" line="115"/>
         <source>User Accounts</source>
         <translation>Kullanıcı Hesapları</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="120"/>
+        <location filename="../../breadcrumbs.inc.php" line="126"/>
         <source>Registration Requests</source>
         <translation>Kayıt İstekleri</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="125"/>
+        <location filename="../../breadcrumbs.inc.php" line="131"/>
         <source>Issue Types</source>
         <translation>Konu Türleri</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="131"/>
+        <location filename="../../breadcrumbs.inc.php" line="137"/>
         <source>View Settings</source>
         <translation>Ayarları Göster</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="115"/>
-        <location filename="../../breadcrumbs.inc.php" line="147"/>
+        <location filename="../../breadcrumbs.inc.php" line="121"/>
+        <location filename="../../breadcrumbs.inc.php" line="153"/>
         <source>Manage Permissions</source>
         <translation>Yetkileri Yönet</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="136"/>
+        <location filename="../../breadcrumbs.inc.php" line="142"/>
         <source>Projects Archive</source>
         <translation>Arşivlenmiş Projeler</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="164"/>
+        <location filename="../../breadcrumbs.inc.php" line="170"/>
         <source>Manage Views</source>
         <translation>Görünümleri Yönet</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="170"/>
+        <location filename="../../breadcrumbs.inc.php" line="176"/>
         <source>Manage Alerts</source>
         <translation>Uyarıları Yönet</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="181"/>
+        <location filename="../../breadcrumbs.inc.php" line="187"/>
+        <location filename="../../breadcrumbs.inc.php" line="192"/>
         <source>Tools</source>
         <translation>Araçlar</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="186"/>
+        <location filename="../../breadcrumbs.inc.php" line="197"/>
         <source>Manage Projects</source>
         <translation>Projeleri Yönet</translation>
     </message>
@@ -5329,7 +4691,7 @@
     <message>
         <location filename="../../errors/general.html.php" line="6"/>
         <source>Reason: %1.</source>
-        <translation>Sebep: %1</translation>
+        <translation>Sebep: %1.</translation>
     </message>
     <message>
         <location filename="../../errors/general.inc.php" line="33"/>
@@ -5404,42 +4766,42 @@
         <translation>WebIssues Sunucusu henüz yapılandırılmamış.</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="41"/>
+        <location filename="../../errors/setup.inc.php" line="42"/>
         <source>Go to the %1 page to configure this server.</source>
         <translation>Bu sunucuyu yapılandırmak için %1 sayfasına gidiniz.</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="42"/>
+        <location filename="../../errors/setup.inc.php" line="43"/>
         <source>Server Configuration</source>
         <translation>Sunucu Ayarları</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="46"/>
+        <location filename="../../errors/setup.inc.php" line="48"/>
         <source>Wrong Database Version</source>
         <translation>Hatalı Veritabanı Sürümü</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="48"/>
+        <location filename="../../errors/setup.inc.php" line="50"/>
         <source>Current version of the database is not compatible with this version of WebIssues Server.</source>
         <translation>Veritabanının güncel sürümü WebIssues Sunucusu&apos;nun bu sürümü ile uyumlu değildir.</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="52"/>
+        <location filename="../../errors/setup.inc.php" line="54"/>
         <source>Database Not Updated</source>
         <translation>Veritabanı Güncellenmedi</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="53"/>
+        <location filename="../../errors/setup.inc.php" line="55"/>
         <source>The database of this WebIssues Server has not been updated yet.</source>
         <translation>WebIssues Hizmeti&apos;nin veritabanı henüz güncellenmedi.</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="54"/>
+        <location filename="../../errors/setup.inc.php" line="57"/>
         <source>Go to the %1 page to update the database.</source>
         <translation>Veritabanı güncellemesi için %1 sayfasına gidiniz.</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="55"/>
+        <location filename="../../errors/setup.inc.php" line="58"/>
         <source>Server Update</source>
         <translation>Sunucu Güncellemesi</translation>
     </message>
@@ -5447,9 +4809,582 @@
 <context>
     <name>Common_FixedBlock</name>
     <message>
-        <location filename="../../fixedblock.inc.php" line="34"/>
+        <location filename="../../fixedblock.inc.php" line="37"/>
         <source>Untitled block</source>
         <translation>Başlıksız blok</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_AddAttachment</name>
+    <message>
+        <location filename="../../issues/addattachment.inc.php" line="40"/>
+        <source>Add Attachment</source>
+        <translation>Eklenti Ekle</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.inc.php" line="74"/>
+        <source>No file uploaded</source>
+        <translation>Dosya yüklenmedi</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.inc.php" line="76"/>
+        <source>An error occurred while uploading the file</source>
+        <translation>Dosya yüklerken hata oluştu</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.inc.php" line="80"/>
+        <source>File too large</source>
+        <translation>Dosya çok büyük</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.inc.php" line="88"/>
+        <source>Invalid file name</source>
+        <translation>Dosya adı hatalı</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.html.php" line="3"/>
+        <source>Add an attachment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna eklenti ekle.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.html.php" line="7"/>
+        <source>File:</source>
+        <translation>Dosya:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.html.php" line="9"/>
+        <source>Description:</source>
+        <translation>Açıklama:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.html.php" line="12"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.html.php" line="13"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Comment</name>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="49"/>
+        <source>Description</source>
+        <translation>Açıklama</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="55"/>
+        <source>Comment %1</source>
+        <translation>Yorum %1</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="67"/>
+        <source>Add Comment</source>
+        <translation>Yorum Ekle</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="84"/>
+        <source>Edit Comment</source>
+        <translation>Yorum Düzenle</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="95"/>
+        <source>Plain Text</source>
+        <translation>Salt Metin</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="96"/>
+        <source>Text with Markup</source>
+        <translation>Biçimlendirilmiş Metin</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="4"/>
+        <source>Add comment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna yorum ekle.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="6"/>
+        <source>Edit comment &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; yorumunu düzenle.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="11"/>
+        <source>Comment:</source>
+        <translation>Yorum:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="15"/>
+        <source>Text format:</source>
+        <translation>Metin formatı:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="18"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="19"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_DeleteAttachment</name>
+    <message>
+        <location filename="../../issues/deleteattachment.inc.php" line="38"/>
+        <source>Delete Attachment</source>
+        <translation>Eklentiyi Sil</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteattachment.html.php" line="3"/>
+        <source>Are you sure you want to delete attachment &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; eklentisini silmek istediğinize emin misiniz?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteattachment.html.php" line="8"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteattachment.html.php" line="9"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_DeleteComment</name>
+    <message>
+        <location filename="../../issues/deletecomment.inc.php" line="40"/>
+        <source>Delete Comment</source>
+        <translation>Yorum Sil</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletecomment.html.php" line="3"/>
+        <source>Are you sure you want to delete comment &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; yorumunu silmek istediğinize emin misiniz?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletecomment.html.php" line="8"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletecomment.html.php" line="9"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_DeleteDescription</name>
+    <message>
+        <location filename="../../issues/deletedescription.inc.php" line="41"/>
+        <source>Delete Description</source>
+        <translation>Açıklama Sil</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletedescription.html.php" line="3"/>
+        <source>Are you sure you want to delete description for issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konu açıklamasını silmek istediğinize emin misiniz?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletedescription.html.php" line="8"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletedescription.html.php" line="9"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_DeleteIssue</name>
+    <message>
+        <location filename="../../issues/deleteissue.inc.php" line="35"/>
+        <source>Delete Issue</source>
+        <translation>Konuyu Sil</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteissue.html.php" line="3"/>
+        <source>Are you sure you want to delete issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunu silmek istediğinize emin misiniz?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteissue.html.php" line="5"/>
+        <source>&lt;strong&gt;Warning:&lt;/strong&gt; The entire issue history will be permanently deleted.</source>
+        <translation>&lt;strong&gt;Uyarı:&lt;/strong&gt; Tüm konu geçmişi kalıcı olarak silinecek.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteissue.html.php" line="10"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteissue.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Description</name>
+    <message>
+        <location filename="../../issues/description.inc.php" line="53"/>
+        <source>Add Description</source>
+        <translation>Açıklama Ekle</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.inc.php" line="64"/>
+        <source>Edit Description</source>
+        <translation>Açıklamayı Düzenle</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.inc.php" line="75"/>
+        <source>Plain Text</source>
+        <translation>Salt Metin</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.inc.php" line="76"/>
+        <source>Text with Markup</source>
+        <translation>Biçimlendirilmiş Metin</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="4"/>
+        <source>Add description to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna açıklama ekle.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="6"/>
+        <source>Edit description of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunun açıklamasını düzenle.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="11"/>
+        <source>Description:</source>
+        <translation>Açıklama:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="15"/>
+        <source>Text format:</source>
+        <translation>Metin formatı:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="18"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="19"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_EditAttachment</name>
+    <message>
+        <location filename="../../issues/editattachment.inc.php" line="40"/>
+        <source>Edit Attachment</source>
+        <translation>Eklentiyi Düzenle</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.inc.php" line="59"/>
+        <source>Invalid file name</source>
+        <translation>Dosya adı hatalı</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.html.php" line="3"/>
+        <source>Edit attachment &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; eklentisini düzenle.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.html.php" line="7"/>
+        <source>Name:</source>
+        <translation>Ad:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.html.php" line="9"/>
+        <source>Description:</source>
+        <translation>Açıklama:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.html.php" line="12"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.html.php" line="13"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Issue</name>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="54"/>
+        <source>Edit Attributes</source>
+        <translation>Nitelikleri Düzenle</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="78"/>
+        <source>Add Issue</source>
+        <translation>Konu Ekle</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="106"/>
+        <source>Clone Issue</source>
+        <translation>Konuyu Kopyala</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="146"/>
+        <source>Please Select</source>
+        <translation>Seçin</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="167"/>
+        <source>Plain Text</source>
+        <translation>Salt Metin</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="168"/>
+        <source>Text with Markup</source>
+        <translation>Biçimlendirilmiş Metin</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="331"/>
+        <source>No folder selected.</source>
+        <translation>Klasör seçilmedi.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="5"/>
+        <source>Some of the values you entered are incorrect.</source>
+        <translation>Girdiğiniz bazı değerlerde hata var.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="10"/>
+        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in the selected folder.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunu seçili klasöre yeni konu olarak kopyala.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="12"/>
+        <source>Create a new issue in folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasöründe yeni bir konu oluştur.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="14"/>
+        <source>Edit attributes of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusu için nitelikleri düzenle.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="16"/>
+        <source>Create a new issue in the selected folder.</source>
+        <translation>Seçili klasörde yeni bir konu oluştur.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="23"/>
+        <source>Name:</source>
+        <translation>Ad:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="27"/>
+        <source>Folder:</source>
+        <translation>Klasör:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="33"/>
+        <source>Attributes</source>
+        <translation>Nitelikler</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="37"/>
+        <source>%1:</source>
+        <translation>%1:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="51"/>
+        <source>Description:</source>
+        <translation>Açıklama:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="55"/>
+        <source>Text format:</source>
+        <translation>Metin formatı:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="59"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="60"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="66"/>
+        <source>There are no available folders of this type.</source>
+        <translation>Bu türde kullanılabilir klasör yok.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="68"/>
+        <source>There are no available project members to assign to the issue.</source>
+        <translation>Konuya atanabilecek proje üyesi yok.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="72"/>
+        <source>Close</source>
+        <translation>Kapat</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_MarkAll</name>
+    <message>
+        <location filename="../../issues/markall.inc.php" line="50"/>
+        <source>Mark All As Read</source>
+        <translation>Hepsi Okundu Olarak İşaretle</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.inc.php" line="52"/>
+        <source>Mark All As Unread</source>
+        <translation>Hepsini Okunmadı Olarak İşaretle</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="5"/>
+        <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasöründeki tüm konuları okundu olarak işaretlemek istediğinize emin misiniz?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="7"/>
+        <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; klasöründeki tüm konuları okunmadı olarak işaretlemek istediğinize emin misiniz?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="11"/>
+        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türündeki tüm konuları okundu olarak işaretlemek istediğinize emin misiniz?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="13"/>
+        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; türündeki tüm konuları okunmadı olarak işaretlemek istediğinize emin misiniz?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="20"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="21"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_MoveIssue</name>
+    <message>
+        <location filename="../../issues/moveissue.inc.php" line="69"/>
+        <source>Move Issue</source>
+        <translation>Konuyu Taşı</translation>
+    </message>
+    <message>
+        <location filename="../../issues/moveissue.html.php" line="3"/>
+        <source>Move issue &lt;strong&gt;%1&lt;/strong&gt; to another folder of the same type.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunu aynı türdeki diğer klasöre taşı.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/moveissue.html.php" line="9"/>
+        <source>Folder:</source>
+        <translation>Klasör:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/moveissue.html.php" line="12"/>
+        <location filename="../../issues/moveissue.html.php" line="21"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/moveissue.html.php" line="13"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+    <message>
+        <location filename="../../issues/moveissue.html.php" line="18"/>
+        <source>There are no available destination folders.</source>
+        <translation>Kullanılabilir hedef klasör yok.</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Preview</name>
+    <message>
+        <location filename="../../issues/preview.inc.php" line="53"/>
+        <source>Error: %1.</source>
+        <translation>Hata: %1.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/preview.inc.php" line="55"/>
+        <source>An unexpected error occured while processing the request.</source>
+        <translation>İsteği gerçekleştirirken beklenmedik bir hata oluştu.</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Subscribe</name>
+    <message>
+        <location filename="../../issues/subscribe.inc.php" line="35"/>
+        <source>Subscribe To Issue</source>
+        <translation>Konuya Abone Ol</translation>
+    </message>
+    <message>
+        <location filename="../../issues/subscribe.html.php" line="3"/>
+        <source>You are about to subscribe to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusuna abone olmak üzeresiniz.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/subscribe.html.php" line="5"/>
+        <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
+        <translation>Başka birisi bu konuyu değiştirdiğinde, yorum veya dosya eklediğinde mail bildirimi alacaksınız.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/subscribe.html.php" line="8"/>
+        <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
+        <translation>Uyarı: Tercihlerinize e-posta adresinizi girene kadar mail almayacaksınız.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/subscribe.html.php" line="14"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/subscribe.html.php" line="15"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Unsubscribe</name>
+    <message>
+        <location filename="../../issues/unsubscribe.inc.php" line="37"/>
+        <source>Unsubscribe From Issue</source>
+        <translation>Konu Aboneliğinden .Çık</translation>
+    </message>
+    <message>
+        <location filename="../../issues/unsubscribe.html.php" line="3"/>
+        <source>You are about to unsubscribe from issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt; konusunun aboneliğinden çıkmak üzeresiniz.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/unsubscribe.html.php" line="5"/>
+        <source>You will no longer receive email notifications for this issue.</source>
+        <translation>Bundan sonra bu konu için mail bildirimi almayacaksınız.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/unsubscribe.html.php" line="10"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../issues/unsubscribe.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -5520,7 +5455,7 @@
     <message>
         <location filename="../../mail/issuecreated.html.php" line="18"/>
         <source>You can also %1 in the WebIssues Server.</source>
-        <translation>Siz ayrıca WebIssues Sunucusunda %1</translation>
+        <translation>Siz ayrıca WebIssues Sunucusunda %1.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="18"/>
@@ -5566,12 +5501,18 @@
         <translation>Son Değiştirme:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="100"/>
+        <location filename="../../mail/notification.html.php" line="102"/>
         <source>Description</source>
         <translation>Açıklama</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="185"/>
+        <location filename="../../mail/notification.html.php" line="104"/>
+        <location filename="../../mail/notification.html.php" line="132"/>
+        <source>Last Edited:</source>
+        <translation>Son Düzenleme:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="197"/>
         <source>Issue moved from %1 to %2</source>
         <translation>Konu %1&apos;den %2&apos;ye taşındı</translation>
     </message>
@@ -5581,30 +5522,30 @@
         <translation>Nitelikler</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="113"/>
+        <location filename="../../mail/notification.html.php" line="120"/>
         <source>Issue History</source>
         <translation>Konu geçmişi</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="138"/>
-        <location filename="../../mail/notification.html.php" line="141"/>
+        <location filename="../../mail/notification.html.php" line="150"/>
+        <location filename="../../mail/notification.html.php" line="153"/>
         <source>Name</source>
         <translation>İsim</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="144"/>
-        <location filename="../../mail/notification.html.php" line="145"/>
+        <location filename="../../mail/notification.html.php" line="156"/>
+        <location filename="../../mail/notification.html.php" line="157"/>
         <source>empty</source>
         <translation>boş</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="183"/>
-        <location filename="../../mail/notification.html.php" line="184"/>
+        <location filename="../../mail/notification.html.php" line="195"/>
+        <location filename="../../mail/notification.html.php" line="196"/>
         <source>Unknown Folder</source>
         <translation>Bilinmeyen Klasör</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="212"/>
+        <location filename="../../mail/notification.html.php" line="224"/>
         <source>This is an alert email from the WebIssues Server.</source>
         <translation>Bu e-posta, WebIssues Hizmeti&apos;nden gelen bir uyarı e-postasıdır.</translation>
     </message>
@@ -5825,7 +5766,7 @@
 <context>
     <name>Common_MessageBlock</name>
     <message>
-        <location filename="../../messageblock.inc.php" line="34"/>
+        <location filename="../../messageblock.inc.php" line="37"/>
         <source>Untitled message</source>
         <translation>Başlıksız ileti</translation>
     </message>
@@ -5838,21 +5779,26 @@
         <translation>WebIssues</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="66"/>
+        <location filename="../../pagelayout.inc.php" line="73"/>
         <source>Untitled page</source>
         <translation>Başlıksız sayfa</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="70"/>
-        <location filename="../../pagelayout.html.php" line="35"/>
+        <location filename="../../pagelayout.inc.php" line="77"/>
+        <location filename="../../pagelayout.html.php" line="34"/>
         <source>Web Client</source>
         <translation>Web İstemcisi</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="73"/>
-        <location filename="../../pagelayout.html.php" line="33"/>
+        <location filename="../../pagelayout.inc.php" line="80"/>
+        <location filename="../../pagelayout.html.php" line="32"/>
         <source>Administration Panel</source>
         <translation>Yönetim Paneli</translation>
+    </message>
+    <message>
+        <location filename="../../pagelayout.html.php" line="36"/>
+        <source>Mobile Version</source>
+        <translation>Mobil Sürüm</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="37"/>
@@ -5899,6 +5845,124 @@
     </message>
 </context>
 <context>
+    <name>Common_Tools_About</name>
+    <message>
+        <location filename="../../tools/about.inc.php" line="33"/>
+        <source>About WebIssues</source>
+        <translation>WebIssues Hakkında</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="5"/>
+        <source>WebIssues %1</source>
+        <translation>WebIssues %1</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="7"/>
+        <source>Issue tracking and team collaboration system.</source>
+        <translation>Olay takip ve takım işbirliği sistemi.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="12"/>
+        <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</source>
+        <translation>Bu program ücretsiz bir yazılımdır: Özgür Yazılım Vakfı tarafından yayınlanan GNU Affero Genel Kamu Lisansı (3 veya daha sonraki bir sürüm) kapsamında düzenleyebilir veya dağıtabilirsiniz.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="14"/>
+        <source>Copyright &amp;copy; 2006 Michał Męciński</source>
+        <translation>Copyright &amp;copy; 2006 Michał Męciński</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="15"/>
+        <source>Copyright &amp;copy; 2007-2015 WebIssues Team</source>
+        <translation>Copyright &amp;copy; 2007-2015 WebIssues Team</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="18"/>
+        <source>Help</source>
+        <translation>Yardım</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="20"/>
+        <source>Open the WebIssues Manual for help.</source>
+        <translation>Yardım için WebIssues Kılavuzunu Aç.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="23"/>
+        <source>Manual</source>
+        <translation>Kılavuz</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="29"/>
+        <source>Website</source>
+        <translation>Website</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="31"/>
+        <source>Visit %1 for more information about WebIssues.</source>
+        <translation>WebIssues hakkında daha fazla bilgi için %1 adresini ziyaret edin.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="36"/>
+        <source>Donations</source>
+        <translation>Bağış</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="38"/>
+        <source>If you like this program, your donation will help us dedicate more time for it, support it and implement new features.</source>
+        <translation>Programı beğendiyseniz, bağışınız bizim daha fazla zaman ayırmamızı sağlayacak ve yeni özellikler eklememiz için bizi destekleyecektir.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="41"/>
+        <source>Donate</source>
+        <translation>Bağış Yap</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="49"/>
+        <source>Latest Version</source>
+        <translation>Son Sürüm</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="56"/>
+        <source>Your version of WebIssues is up to date.</source>
+        <translation>WebIssues sürümü güncel.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="63"/>
+        <source>The latest version of WebIssues is %1.</source>
+        <translation>WebIssues&apos;in son sürümü %1.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="66"/>
+        <source>Release Notes</source>
+        <translation>Yayın Notları</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="67"/>
+        <source>Download</source>
+        <translation>İndir</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="75"/>
+        <source>Checking for latest version failed.</source>
+        <translation>Son sürüm kontrolü başarısız oldu.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="82"/>
+        <source>Check for latest version of WebIssues.</source>
+        <translation>WebIssues&apos;i son sürüm için kontrol et.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="85"/>
+        <source>Check</source>
+        <translation>Kontrol Et</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="98"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+</context>
+<context>
     <name>Common_Tools_Editing</name>
     <message>
         <location filename="../../tools/editing.inc.php" line="42"/>
@@ -5930,6 +5994,34 @@
         <location filename="../../tools/editing.html.php" line="8"/>
         <source>Default text format:</source>
         <translation>Varsayılan metin biçimi:</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Tools_GoToItem</name>
+    <message>
+        <location filename="../../tools/gotoitem.inc.php" line="33"/>
+        <source>Go To Item</source>
+        <translation>Öğeye Git</translation>
+    </message>
+    <message>
+        <location filename="../../tools/gotoitem.html.php" line="3"/>
+        <source>Enter the identifier of an issue, comment or attachment.</source>
+        <translation>Konu, yorum veya ekli dosya için bir tanımlayıcı girin.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/gotoitem.html.php" line="7"/>
+        <source>ID:</source>
+        <translation>ID:</translation>
+    </message>
+    <message>
+        <location filename="../../tools/gotoitem.html.php" line="10"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../tools/gotoitem.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
     </message>
 </context>
 <context>
@@ -6107,37 +6199,37 @@
         <translation>&lt;strong&gt;%1&lt;/strong&gt; kullanıcısı için özellikleri yapılandır.</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="21"/>
+        <location filename="../../tools/preferences.html.php" line="23"/>
         <source>Notifications</source>
         <translation>Bildirimler</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="23"/>
+        <location filename="../../tools/preferences.html.php" line="25"/>
         <source>Email address:</source>
         <translation>E-posta adresi:</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="26"/>
+        <location filename="../../tools/preferences.html.php" line="28"/>
         <source>This address will only be visible to the system administrator. You will not receive notifications if you leave this field empty.</source>
         <translation>Bu adres sadece sistem yöneticisi tarafından görülebilir. Bu alanı boş bırakırsanız bildirim e-postası alamayacaksınız.</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="28"/>
+        <location filename="../../tools/preferences.html.php" line="30"/>
         <source>Include issue details in notifications and summary reports</source>
         <translation>Konu detaylarını uyarılarda ve özet raporlarda dahil et</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="29"/>
+        <location filename="../../tools/preferences.html.php" line="31"/>
         <source>Do not notify about issues that I have already read</source>
         <translation>Zaten okumuş olduğum konular için beni bilgilendirme</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="35"/>
+        <location filename="../../tools/preferences.html.php" line="37"/>
         <source>OK</source>
         <translation>TAMAM</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="36"/>
+        <location filename="../../tools/preferences.html.php" line="38"/>
         <source>Cancel</source>
         <translation>Vazgeç</translation>
     </message>
@@ -6210,6 +6302,165 @@
         <location filename="../../tools/viewsettings.html.php" line="16"/>
         <source>Default filter in issue history:</source>
         <translation>Olay tarihçesinde varsayılan filtre:</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Users_Login</name>
+    <message>
+        <location filename="../../users/login.inc.php" line="35"/>
+        <source>Log in to WebIssues</source>
+        <translation>WebIssues&apos;e Giriş Yap</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.inc.php" line="82"/>
+        <source>Anonymous Access</source>
+        <translation>Anonim Erişim</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.inc.php" line="85"/>
+        <source>Register New Account</source>
+        <translation>Yeni Hesabı Kaydet</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="8"/>
+        <source>Login:</source>
+        <translation>Giriş:</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="9"/>
+        <source>Password:</source>
+        <translation>Şifre:</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="16"/>
+        <location filename="../../users/login.html.php" line="27"/>
+        <source>Log in</source>
+        <translation>Giriş</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="22"/>
+        <source>You have to enter a new password in order to log in.</source>
+        <translation>Giriş yapmak için yeni bir şifre girmeniz gerekli.</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="23"/>
+        <source>New password:</source>
+        <translation>Yeni şifre:</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="24"/>
+        <source>Confirm password:</source>
+        <translation>Şifre (Tekrar):</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="28"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Users_Register</name>
+    <message>
+        <location filename="../../users/register.inc.php" line="39"/>
+        <source>Register New Account</source>
+        <translation>Yeni Hesabı Kaydet</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="10"/>
+        <source>Fill the information below to begin registration.</source>
+        <translation>Kayıt işlemine başlamak için aşağıdaki bilgileri doldurun.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="12"/>
+        <source>Note that administrator&apos;s approval is required before you can log in.</source>
+        <translation>Giriş yapabilmeniz için yönetici onayı gerektiğini not edin.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="18"/>
+        <source>User Name</source>
+        <translation>Kullanıcı Adı</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="20"/>
+        <source>Enter the user name that will be visible to other users.</source>
+        <translation>Diğer kullanıcılara görünecek kullanıcı adını girin.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="22"/>
+        <source>Name:</source>
+        <translation>Ad:</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="27"/>
+        <source>Credentials</source>
+        <translation>Hesap bilgileri</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="29"/>
+        <source>Enter login and password for your new account.</source>
+        <translation>Yeni hesabınız için kullanıcı adı ve şifre bilgilerini girin.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="31"/>
+        <source>Login:</source>
+        <translation>Giriş:</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="32"/>
+        <source>Password:</source>
+        <translation>Şifre:</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="33"/>
+        <source>Confirm password:</source>
+        <translation>Şifre (Tekrar):</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="38"/>
+        <source>Email Address</source>
+        <translation>E-posta Adresi</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="40"/>
+        <source>Email address:</source>
+        <translation>E-posta adresi:</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="42"/>
+        <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
+        <translation>Bu adres, sadece sistem yöneticisi tarafından görülebilir. Bu adrese bir aktivasyon e-postası gönderilecek.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="47"/>
+        <source>Register</source>
+        <translation>Kaydol</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="48"/>
+        <source>Cancel</source>
+        <translation>Vazgeç</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="54"/>
+        <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
+        <translation>Kayıt olduğunuz için teşekkürler. Kısa süre sonra üyeliğinizi nasıl tamamlayacağınıza dair aktivasyon e-postası alacaksınız.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="57"/>
+        <location filename="../../users/register.html.php" line="66"/>
+        <location filename="../../users/register.html.php" line="75"/>
+        <source>OK</source>
+        <translation>TAMAM</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="63"/>
+        <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
+        <translation>Üyelik kaydınız alındı. Üyeliğiniz yönetici tarafından onaylandığında bilgilendirme e-postası alacaksınız.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="72"/>
+        <source>Your registration request was activated. You can now log in to the server using your login and password.</source>
+        <translation>Üyelik kaydınız alındı. Kullanıcı adı ve parolanızla birlikte sisteme giriş yapabilirsiniz.</translation>
     </message>
 </context>
 <context>
@@ -6605,12 +6856,12 @@
     <message>
         <location filename="../../../cron/job.php" line="384"/>
         <source>Ignored inbox email from &quot;%1&quot;</source>
-        <translation>&quot;%1&quot; e-posta adresi yoksayıldı.</translation>
+        <translation>&quot;%1&quot; e-posta adresi yoksayıldı</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="396"/>
         <source>Ignored inbox email from unknown address &quot;%1&quot;</source>
-        <translation>&quot;%1&quot; bilinmeyen adresinden gelen e-posta&apos;lar yoksayıldı.</translation>
+        <translation>&quot;%1&quot; bilinmeyen adresinden gelen e-posta&apos;lar yoksayıldı</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="415"/>
@@ -6643,47 +6894,47 @@
         <translation>&quot;%1&quot; dan gelen e-posta yoksayıldı, çünkü klasör eşleştirilemedi</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="492"/>
+        <location filename="../../../cron/job.php" line="495"/>
         <source>No subject</source>
         <translation>Konusuz</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="531"/>
+        <location filename="../../../cron/job.php" line="534"/>
         <source>Attachment for message %1 from &quot;%2&quot; exceeded maximum size</source>
         <translation>&quot;%2&quot; dan gelen %1 mesajındaki ekli dosya için maksimum dosya boyutunu aşıldı</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="537"/>
+        <location filename="../../../cron/job.php" line="540"/>
         <source>HTML message for email %1</source>
         <translation>Eposta %1 için HTML ileti</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="541"/>
+        <location filename="../../../cron/job.php" line="544"/>
         <source>Attachment for email %1</source>
         <translation>%1 e-postası için ekli dosya</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="584"/>
+        <location filename="../../../cron/job.php" line="587"/>
         <source>Processed %1 inbox emails</source>
         <translation>Gelen kutusundaki %1 posta işlendi</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="614"/>
+        <location filename="../../../cron/job.php" line="617"/>
         <source>From:</source>
         <translation>Kimden:</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="620"/>
+        <location filename="../../../cron/job.php" line="623"/>
         <source>To:</source>
         <translation>Kime:</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="627"/>
+        <location filename="../../../cron/job.php" line="630"/>
         <source>CC:</source>
         <translation>CC:</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="630"/>
+        <location filename="../../../cron/job.php" line="633"/>
         <source>Subject:</source>
         <translation>Konu:</translation>
     </message>
@@ -6694,162 +6945,376 @@
     </message>
 </context>
 <context>
-    <name>Index</name>
+    <name>Mobile_Client_Index</name>
     <message>
-        <location filename="../../../index.php" line="35"/>
-        <source>Log in to WebIssues</source>
-        <translation>WebIssues&apos;e Giriş Yap</translation>
+        <location filename="../../../mobile/client/index.php" line="48"/>
+        <source>Web Client</source>
+        <translation>Web İstemcisi</translation>
+    </message>
+</context>
+<context>
+    <name>Mobile_Client_IssueDetails</name>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="93"/>
+        <source>All History</source>
+        <translation>Tüm Geçmiş</translation>
     </message>
     <message>
-        <location filename="../../../index.php" line="77"/>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="94"/>
+        <source>Only Comments</source>
+        <translation>Sadece Yorumlar</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="95"/>
+        <source>Only Attachments</source>
+        <translation>Sadece Eklentiler</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="96"/>
+        <source>Comments &amp; Attachments</source>
+        <translation>Yorumlar &amp; Eklentiler</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="167"/>
+        <source>Edit Attributes</source>
+        <translation>Nitelikleri Düzenle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="168"/>
+        <source>Add Comment</source>
+        <translation>Yorum Ekle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="169"/>
+        <source>Add Attachment</source>
+        <translation>Eklenti Ekle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="171"/>
+        <source>Add Description</source>
+        <translation>Açıklama Ekle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="172"/>
+        <source>Clone Issue</source>
+        <translation>Konuyu Kopyala</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="174"/>
+        <source>Move Issue</source>
+        <translation>Konuyu Taşı</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="175"/>
+        <source>Delete Issue</source>
+        <translation>Konuyu Sil</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="178"/>
+        <source>Mark As Unread</source>
+        <translation>Okunmadı Olarak İşaretle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="180"/>
+        <source>Mark As Read</source>
+        <translation>Okundu Olarak İşaretle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="183"/>
+        <source>Unsubscribe</source>
+        <translation>Aboneliği Bırak</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="185"/>
+        <source>Subscribe</source>
+        <translation>Abone Ol</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="23"/>
+        <source>ID:</source>
+        <translation>ID:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="27"/>
+        <source>Type:</source>
+        <translation>Tür:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="31"/>
+        <source>Location:</source>
+        <translation>Yer:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="35"/>
+        <source>Created:</source>
+        <translation>Oluşturuldu:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="39"/>
+        <source>Last Modified:</source>
+        <translation>Son Değiştirme:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="54"/>
+        <source>Description</source>
+        <translation>Açıklama</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="66"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="128"/>
+        <source>Reply</source>
+        <translation>Cevap Ver</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="69"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="132"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="156"/>
+        <source>Edit</source>
+        <translation>Düzenle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="70"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="134"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="158"/>
+        <source>Delete</source>
+        <translation>Sil</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="78"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="110"/>
+        <source>Last Edited:</source>
+        <translation>Son Düzenleme:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="89"/>
+        <source>Issue History</source>
+        <translation>Konu geçmişi</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="116"/>
+        <source>Comment %1</source>
+        <translation>Yorum %1</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="144"/>
+        <source>Attachment %1</source>
+        <translation>Eklenti %1</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="179"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="182"/>
+        <source>Name</source>
+        <translation>İsim</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="185"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="186"/>
+        <source>empty</source>
+        <translation>boş</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="224"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="225"/>
+        <source>Unknown Folder</source>
+        <translation>Bilinmeyen Klasör</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="226"/>
+        <source>Issue moved from %1 to %2</source>
+        <translation>Konu %1&apos;den %2&apos;ye taşındı</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="247"/>
+        <source>There are no comments.</source>
+        <translation>Yorum yok.</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="249"/>
+        <source>There are no attachments.</source>
+        <translation>Eklenti yok.</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="251"/>
+        <source>There are no comments or attachments.</source>
+        <translation>Eklenti ya da yorum yok.</translation>
+    </message>
+</context>
+<context>
+    <name>Mobile_Client_IssuesList</name>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="81"/>
+        <source>All Issues</source>
+        <translation>Tüm Konular</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="83"/>
+        <source>Personal Views</source>
+        <translation>Kişisel Görünümler</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="85"/>
+        <source>Public Views</source>
+        <translation>Herkese Açık Görünümler</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="193"/>
+        <source>Add Issue</source>
+        <translation>Konu Ekle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="194"/>
+        <source>Mark All As Read</source>
+        <translation>Hepsi Okundu Olarak İşaretle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="195"/>
+        <source>Mark All As Unread</source>
+        <translation>Hepsini Okunmadı Olarak İşaretle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="22"/>
+        <source>View:</source>
+        <translation>Görünüm:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="23"/>
+        <source>Go</source>
+        <translation>Git</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="29"/>
+        <source>Search</source>
+        <translation>Ara</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="75"/>
+        <source>There are no issues matching the search criteria.</source>
+        <translation>Arama kriterine uygun konu bulunamadı.</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="79"/>
+        <source>There are no issues matching the selected view.</source>
+        <translation>Seçili görünümle eşleşen konu bulunamadı.</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="83"/>
+        <source>There are no issues of this type.</source>
+        <translation>Bu türde konu mevcut değil.</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="87"/>
+        <source>There are no issues in this folder.</source>
+        <translation>Bu klasörde konu yok.</translation>
+    </message>
+</context>
+<context>
+    <name>Mobile_Client_Project</name>
+    <message>
+        <location filename="../../../mobile/client/project.html.php" line="11"/>
+        <source>Description</source>
+        <translation>Açıklama</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/project.html.php" line="13"/>
+        <source>Last Edited:</source>
+        <translation>Son Düzenleme:</translation>
+    </message>
+</context>
+<context>
+    <name>Mobile_Client_ProjectsTree</name>
+    <message>
+        <location filename="../../../mobile/client/projectstree.inc.php" line="54"/>
+        <location filename="../../../mobile/client/projectstree.html.php" line="16"/>
+        <source>All Projects</source>
+        <translation>Tüm Projeler</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/projectstree.html.php" line="4"/>
+        <source>Projects</source>
+        <translation>Projeler</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/projectstree.html.php" line="61"/>
+        <source>View Description</source>
+        <translation>Açıklamaları Görüntüle</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/projectstree.html.php" line="88"/>
+        <source>There are no projects.</source>
+        <translation>Proje yok.</translation>
+    </message>
+</context>
+<context>
+    <name>Mobile_PageLayout</name>
+    <message>
+        <location filename="../../../mobile/pagelayout.inc.php" line="44"/>
+        <source>WebIssues</source>
+        <translation>WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.inc.php" line="73"/>
+        <source>Untitled page</source>
+        <translation>Başlıksız sayfa</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.html.php" line="39"/>
+        <source>Logged in as: %1</source>
+        <translation>Şu kullanıcı ile giriş yapıldı: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.html.php" line="41"/>
+        <source>Log In</source>
+        <translation>Oturum Aç</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.html.php" line="44"/>
         <source>Anonymous Access</source>
         <translation>Anonim Erişim</translation>
     </message>
     <message>
-        <location filename="../../../index.php" line="80"/>
-        <source>Register New Account</source>
-        <translation>Yeni Hesabı Kaydet</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="8"/>
-        <source>Login:</source>
-        <translation>Giriş:</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="9"/>
-        <source>Password:</source>
-        <translation>Şifre:</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="14"/>
-        <location filename="../../../index.html.php" line="25"/>
-        <source>Log in</source>
-        <translation>Giriş</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="20"/>
-        <source>You have to enter a new password in order to log in.</source>
-        <translation>Giriş yapmak için yeni bir şifre girmeniz gerekli.</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="21"/>
-        <source>New password:</source>
-        <translation>Yeni şifre:</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="22"/>
-        <source>Confirm password:</source>
-        <translation>Şifre (Tekrar):</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="26"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
-    </message>
-</context>
-<context>
-    <name>Register</name>
-    <message>
-        <location filename="../../../register.html.php" line="10"/>
-        <source>Fill the information below to begin registration.</source>
-        <translation>Kayıt işlemine başlamak için aşağıdaki bilgileri doldurun.</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="12"/>
-        <source>Note that administrator&apos;s approval is required before you can log in.</source>
-        <translation>Giriş yapabilmeniz için yönetici onayı gerektiğini not edin.</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="18"/>
-        <source>User Name</source>
-        <translation>Kullanıcı Adı</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="20"/>
-        <source>Enter the user name that will be visible to other users.</source>
-        <translation>Diğer kullanıcılara görünecek kullanıcı adını girin.</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="22"/>
-        <source>Name:</source>
-        <translation>Ad:</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="27"/>
-        <source>Credentials</source>
-        <translation>Hesap bilgileri</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="29"/>
-        <source>Enter login and password for your new account.</source>
-        <translation>Yeni hesabınız için kullanıcı adı ve şifre bilgilerini girin.</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="31"/>
-        <source>Login:</source>
-        <translation>Giriş:</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="32"/>
-        <source>Password:</source>
-        <translation>Şifre:</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="33"/>
-        <source>Confirm password:</source>
-        <translation>Şifre (Tekrar):</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="38"/>
-        <source>Email Address</source>
-        <translation>E-posta Adresi</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="40"/>
-        <source>Email address:</source>
-        <translation>E-posta adresi:</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="42"/>
-        <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
-        <translation>Bu adres, sadece sistem yöneticisi tarafından görülebilir. Bu adrese bir aktivasyon e-postası gönderilecek.</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="47"/>
+        <location filename="../../../mobile/pagelayout.html.php" line="47"/>
         <source>Register</source>
         <translation>Kaydol</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="48"/>
-        <source>Cancel</source>
-        <translation>Vazgeç</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="50"/>
+        <source>Go To Item</source>
+        <translation>Öğeye Git</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="54"/>
-        <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
-        <translation>Kayıt olduğunuz için teşekkürler. Kısa süre sonra üyeliğinizi nasıl tamamlayacağınıza dair aktivasyon e-postası alacaksınız.</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="53"/>
+        <source>Change Password</source>
+        <translation>Şifreyi Değiştir</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="57"/>
-        <location filename="../../../register.html.php" line="66"/>
-        <location filename="../../../register.html.php" line="75"/>
-        <source>OK</source>
-        <translation>TAMAM</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="54"/>
+        <source>User Preferences</source>
+        <translation>Kullanıcı Tercihleri</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="63"/>
-        <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
-        <translation>Üyelik kaydınız alındı. Üyeliğiniz yönetici tarafından onaylandığında bilgilendirme e-postası alacaksınız.</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="55"/>
+        <source>Log Out</source>
+        <translation>Oturumu Kapat</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="72"/>
-        <source>Your registration request was activated. You can now log in to the server using your login and password.</source>
-        <translation>Üyelik kaydınız alındı. Kullanıcı adı ve parolanızla birlikte sisteme giriş yapabilirsiniz.</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="57"/>
+        <source>WebIssues %1</source>
+        <translation>WebIssues %1</translation>
     </message>
     <message>
-        <location filename="../../../register.php" line="41"/>
-        <source>Register New Account</source>
-        <translation>Yeni Hesabı Kaydet</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="59"/>
+        <source>About WebIssues</source>
+        <translation>WebIssues Hakkında</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.html.php" line="61"/>
+        <source>Full Version</source>
+        <translation>Tam Sürüm</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.html.php" line="62"/>
+        <source>Manual</source>
+        <translation>Kılavuz</translation>
     </message>
 </context>
 <context>
@@ -7216,7 +7681,7 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="56"/>
         <source>Incorrect value: %1.</source>
-        <translation>Yanlış değer: %1</translation>
+        <translation>Yanlış değer: %1.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="67"/>
@@ -7391,7 +7856,7 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="171"/>
         <source>You must change your password</source>
-        <translation>Şifrenizi değiştirin.</translation>
+        <translation>Şifrenizi değiştirin</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="173"/>
@@ -7478,47 +7943,54 @@
 <context>
     <name>System_Web_Grid</name>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="255"/>
+        <location filename="../../../system/web/grid.inc.php" line="264"/>
         <source>Ascending</source>
         <translation>Artan</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="255"/>
+        <location filename="../../../system/web/grid.inc.php" line="264"/>
         <source>Decending</source>
         <translation>Azalan</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="296"/>
+        <location filename="../../../system/web/grid.inc.php" line="305"/>
         <source>&amp;laquo; first</source>
         <translation>&amp;laquo; ilk</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="297"/>
+        <location filename="../../../system/web/grid.inc.php" line="306"/>
+        <location filename="../../../system/web/grid.inc.php" line="344"/>
         <source>&amp;lt; previous</source>
         <translation>&amp;lt; önceki</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="314"/>
+        <location filename="../../../system/web/grid.inc.php" line="323"/>
+        <location filename="../../../system/web/grid.inc.php" line="347"/>
         <source>next &amp;gt;</source>
         <translation>sonraki &amp;gt;</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="315"/>
+        <location filename="../../../system/web/grid.inc.php" line="324"/>
         <source>last &amp;raquo;</source>
         <translation>son &amp;raquo;</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="358"/>
+        <location filename="../../../system/web/grid.inc.php" line="349"/>
+        <source>%1 of %2</source>
+        <translation>%1 / %2</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/grid.inc.php" line="399"/>
         <source>Expand</source>
         <translation>Genişlet</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="359"/>
+        <location filename="../../../system/web/grid.inc.php" line="400"/>
         <source>Collapse</source>
         <translation>Daralt</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="361"/>
+        <location filename="../../../system/web/grid.inc.php" line="402"/>
         <source>Blank</source>
         <translation>Boşluk</translation>
     </message>
@@ -7526,89 +7998,89 @@
 <context>
     <name>System_Web_JavaScript</name>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="109"/>
-        <location filename="../../../system/web/javascript.inc.php" line="139"/>
+        <location filename="../../../system/web/javascript.inc.php" line="95"/>
+        <location filename="../../../system/web/javascript.inc.php" line="125"/>
         <source>Choose</source>
         <translation>Seç</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="115"/>
+        <location filename="../../../system/web/javascript.inc.php" line="101"/>
         <source>Next</source>
         <translation>Sonraki</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="116"/>
+        <location filename="../../../system/web/javascript.inc.php" line="102"/>
         <source>Previous</source>
         <translation>Önceki</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="303"/>
+        <location filename="../../../system/web/javascript.inc.php" line="304"/>
         <source>Bold</source>
         <translation>Kalın</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="304"/>
+        <location filename="../../../system/web/javascript.inc.php" line="305"/>
         <source>Italic</source>
         <translation>Yatık</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="305"/>
+        <location filename="../../../system/web/javascript.inc.php" line="306"/>
         <source>Monospace</source>
         <translation>Tek aralıklı</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="307"/>
+        <location filename="../../../system/web/javascript.inc.php" line="308"/>
         <source>Hyperlink</source>
         <translation>Bağlantı</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="307"/>
+        <location filename="../../../system/web/javascript.inc.php" line="308"/>
         <source>Enter link URL:</source>
         <translation>Bağlantı URL&apos;ini giriniz:</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="308"/>
+        <location filename="../../../system/web/javascript.inc.php" line="309"/>
         <source>Link text</source>
         <translation>Bağlantı metni</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="310"/>
+        <location filename="../../../system/web/javascript.inc.php" line="311"/>
         <source>Bullet List</source>
         <translation>Madde İmli Liste</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="311"/>
+        <location filename="../../../system/web/javascript.inc.php" line="312"/>
         <source>Quote Block</source>
         <translation>Alıntı Bloğu</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="312"/>
+        <location filename="../../../system/web/javascript.inc.php" line="313"/>
         <source>Code Block</source>
         <translation>Kod Bloğu</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="313"/>
+        <location filename="../../../system/web/javascript.inc.php" line="314"/>
         <source>Right-To-Left Text</source>
         <translation>Sağdan-Sola Metin</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="315"/>
+        <location filename="../../../system/web/javascript.inc.php" line="316"/>
         <source>Preview</source>
         <translation>Öngörünüm</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="101"/>
-        <location filename="../../../system/web/javascript.inc.php" line="117"/>
+        <location filename="../../../system/web/javascript.inc.php" line="87"/>
+        <location filename="../../../system/web/javascript.inc.php" line="103"/>
         <source>Today</source>
         <translation>Bugün</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="119"/>
+        <location filename="../../../system/web/javascript.inc.php" line="105"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="158"/>
+        <location filename="../../../system/web/javascript.inc.php" line="144"/>
         <source>Search Options</source>
         <translation>Arama Ayarları</translation>
     </message>

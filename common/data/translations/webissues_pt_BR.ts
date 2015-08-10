@@ -32,17 +32,17 @@
 <context>
     <name>Admin_Archive_Description</name>
     <message>
-        <location filename="../../../admin/archive/description.html.php" line="4"/>
+        <location filename="../../../admin/archive/description.html.php" line="6"/>
         <source>Last Edited:</source>
         <translation>Última Edição:</translation>
     </message>
     <message>
-        <location filename="../../../admin/archive/description.html.php" line="7"/>
+        <location filename="../../../admin/archive/description.html.php" line="5"/>
         <source>Description</source>
         <translation>Descrição</translation>
     </message>
     <message>
-        <location filename="../../../admin/archive/description.html.php" line="14"/>
+        <location filename="../../../admin/archive/description.html.php" line="15"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -52,12 +52,12 @@
     <message>
         <location filename="../../../admin/archive/index.php" line="33"/>
         <source>Projects Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Projetos Arquivados</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="64"/>
         <source>Restore Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar Projeto</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="65"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../../../admin/archive/index.php" line="67"/>
         <source>View Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Ver Descrição</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.html.php" line="11"/>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../../../admin/archive/index.html.php" line="30"/>
         <source>There are no archived projects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Não há projetos arquivados.</translation>
     </message>
 </context>
 <context>
@@ -118,12 +118,12 @@
     <message>
         <location filename="../../../admin/archive/restore.php" line="37"/>
         <source>Restore Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar Projeto</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/restore.html.php" line="3"/>
         <source>Are you sure you want to restore project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Você tem certeza que quer restaurar o projeto &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/restore.html.php" line="8"/>
@@ -154,27 +154,27 @@
         <translation>Severidade:</translation>
     </message>
     <message>
-        <location filename="../../../admin/events/event.html.php" line="18"/>
+        <location filename="../../../admin/events/event.html.php" line="15"/>
         <source>Date:</source>
         <translation>Data:</translation>
     </message>
     <message>
-        <location filename="../../../admin/events/event.html.php" line="22"/>
+        <location filename="../../../admin/events/event.html.php" line="19"/>
         <source>Message:</source>
         <translation>Mensagem:</translation>
     </message>
     <message>
-        <location filename="../../../admin/events/event.html.php" line="26"/>
+        <location filename="../../../admin/events/event.html.php" line="23"/>
         <source>User name:</source>
         <translation>Nome de Usuário:</translation>
     </message>
     <message>
-        <location filename="../../../admin/events/event.html.php" line="30"/>
+        <location filename="../../../admin/events/event.html.php" line="27"/>
         <source>Host name:</source>
         <translation>Nome do Host:</translation>
     </message>
     <message>
-        <location filename="../../../admin/events/event.html.php" line="36"/>
+        <location filename="../../../admin/events/event.html.php" line="33"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
@@ -294,46 +294,66 @@
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="21"/>
+        <source>Access Settings</source>
+        <translation>Configurações de Acesso</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="22"/>
+        <source>Configure anonymous access and user self-registration.</source>
+        <translation>Configurar acesso anônimo e auto-registro de usuário.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="23"/>
         <source>Email Settings</source>
         <translation>Configurações de  Email</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="22"/>
+        <location filename="../../../admin/index.html.php" line="24"/>
         <source>Configure notification email settings.</source>
         <translation>Configurar definições de e-mail de notificação.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="23"/>
+        <location filename="../../../admin/index.html.php" line="25"/>
         <source>Inbox Settings</source>
         <translation>Configurações da Caixa de Entrada</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="24"/>
+        <location filename="../../../admin/index.html.php" line="26"/>
         <source>Configure email inbox settings.</source>
         <translation>Configurar email da caixa de entrada.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="30"/>
+        <location filename="../../../admin/index.html.php" line="27"/>
+        <source>Advanced Settings</source>
+        <translation>Configurações Avançadas </translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="28"/>
+        <source>Configure advanced settings for this server.</source>
+        <translation>Definir configurações avançadas para este servidor.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/index.html.php" line="34"/>
         <source>Management</source>
         <translation>Gerenciamento</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="34"/>
+        <location filename="../../../admin/index.html.php" line="38"/>
         <source>Create and edit user accounts.</source>
         <translation>Criar e editar contas de usuários.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="41"/>
+        <location filename="../../../admin/index.html.php" line="45"/>
         <source>Projects Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Projetos Arquivados</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="42"/>
+        <location filename="../../../admin/index.html.php" line="46"/>
         <source>Restore and delete archived projects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar e apagar os projetos arquivados</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="33"/>
+        <location filename="../../../admin/index.html.php" line="37"/>
         <source>User Accounts</source>
         <translation>Contas de Usuários</translation>
     </message>
@@ -343,22 +363,22 @@
         <translation>Informação</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="36"/>
+        <location filename="../../../admin/index.html.php" line="40"/>
         <source>Registration Requests</source>
         <translation>Requisitos de Registro</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="37"/>
+        <location filename="../../../admin/index.html.php" line="41"/>
         <source>Approve and reject pending user registration requests.</source>
         <translation>Aprova e rejeita requisições de registros pendentes.</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="39"/>
+        <location filename="../../../admin/index.html.php" line="43"/>
         <source>Issue Types</source>
         <translation>Tipos de Ocorrências</translation>
     </message>
     <message>
-        <location filename="../../../admin/index.html.php" line="40"/>
+        <location filename="../../../admin/index.html.php" line="44"/>
         <source>Create and edit issue types.</source>
         <translation>Criar e editar tipos de ocorrência.</translation>
     </message>
@@ -836,6 +856,219 @@
     </message>
 </context>
 <context>
+    <name>Admin_Settings_Access</name>
+    <message>
+        <location filename="../../../admin/settings/access.php" line="33"/>
+        <source>Access Settings</source>
+        <translation>Configurações de Acesso</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="6"/>
+        <source>Anonymous Access</source>
+        <translation>Acesso Anônimo</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="8"/>
+        <source>This option enables read-only access to public projects without logging in.</source>
+        <translation>Esta opção permite o acesso somente leitura aos projectos públicos sem efetuar login.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="10"/>
+        <source>Enable anonymous access</source>
+        <translation>Habilitar acesso anônimo</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="15"/>
+        <source>User Registration</source>
+        <translation>Registro de usuário</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="17"/>
+        <source>This option allows users to self-register. Sending emails needs to be enabled.</source>
+        <translation>Esta opção permite que aos usuários o auto-registo. O envio de e-mails precisa ser ativado.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="19"/>
+        <source>Enable user registration</source>
+        <translation>Habilitar registro de usuário</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="21"/>
+        <source>This option allows users to register without administrator&apos;s approval. Registered users only have access to public projects by default.</source>
+        <translation>Esta opção permite que os usuários se registrem sem a aprovação do administrador. Usuários Registrados têm acesso apenas aos projectos públicos por padrão.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="23"/>
+        <source>Enable automatic approval</source>
+        <translation>Habilitar aprovação automática</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="25"/>
+        <source>Optionally send email notifications about pending registration requests to this address. Requires the cron job to be running.</source>
+        <translation>Opcionalmente enviar notificações por email sobre pendentes pedidos de registro para este endereço. Requer que trabalho cron seja executado.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="27"/>
+        <source>Email address:</source>
+        <translation>Endereço de email:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="32"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/access.html.php" line="33"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Admin_Settings_Advanced</name>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="33"/>
+        <source>Advanced Settings</source>
+        <translation>Configurações Avançadas </translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="69"/>
+        <location filename="../../../admin/settings/advanced.php" line="76"/>
+        <source>%1 kB</source>
+        <translation>%1 kB</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="71"/>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="74"/>
+        <source>Never</source>
+        <translation>Nunca</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="77"/>
+        <source>Always</source>
+        <translation>Sempre</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="81"/>
+        <source>%1 minutes</source>
+        <translation>%1 minutos</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="82"/>
+        <source>1 hour</source>
+        <translation>1 hora</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="84"/>
+        <location filename="../../../admin/settings/advanced.php" line="93"/>
+        <source>%1 hours</source>
+        <translation>%1 horas</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="87"/>
+        <source>1 day</source>
+        <translation>1 dia</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="89"/>
+        <source>%1 days</source>
+        <translation>%1 dias</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.php" line="96"/>
+        <source>Use cron job</source>
+        <translation>Cron job do usuário</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="6"/>
+        <source>Limits</source>
+        <translation>Limites</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="8"/>
+        <source>The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.</source>
+        <translation>O máximo comprimento (em caracteres) de comentários e descrições e o máximo tamanho (em bytes) de arquivos anexos permitidos.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="10"/>
+        <source>Maximum text length:</source>
+        <translation>Máximo comprimento do texto:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="11"/>
+        <source>Maximum attachment size:</source>
+        <translation>Tamanho máximo do anexo:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="16"/>
+        <source>Attachment Storage</source>
+        <translation>Armazenar Anexo</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="18"/>
+        <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
+        <translation>O tamanho máximo (em bytes) de arquivos que serão armazenados no banco de dados. Os arquivos maiores serão armazenados no sistema de arquivos.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="20"/>
+        <source>Maximum database storage size:</source>
+        <translation>O tamanho máximo de armazenamento de banco de dados:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="25"/>
+        <source>Maximum Lifetime</source>
+        <translation>Vida Máxima</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="27"/>
+        <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
+        <translation>O tempo máximo depois do qual as sessões inativas e eventos no log de eventos são suprimidos.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="29"/>
+        <source>Session lifetime:</source>
+        <translation>Vida da Seção:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="30"/>
+        <source>Event log lifetime:</source>
+        <translation>Vida do log de eventos:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="31"/>
+        <source>Inactive user registration request lifetime:</source>
+        <translation>Desativar requisição de registro de usuários por tempo indeterminado:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="36"/>
+        <source>Garbage Collection</source>
+        <translation>Coleta de Lixo</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="38"/>
+        <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
+        <translation>A probabilidade de coleta de lixo após cada solicitação. Se a tarefa do cron job é usada para coleta de lixo, verifique se ele está sendo executado.</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="40"/>
+        <source>GC probability:</source>
+        <translation>GC probabilidade:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="45"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/advanced.html.php" line="46"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
     <name>Admin_Settings_Inbox</name>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="32"/>
@@ -1050,189 +1283,37 @@
         <translation>Configurações do Servidor</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="77"/>
-        <location filename="../../../admin/settings/index.php" line="84"/>
-        <source>%1 kB</source>
-        <translation>%1 kB</translation>
+        <location filename="../../../admin/settings/index.html.php" line="10"/>
+        <source>Mobile Page Size</source>
+        <translation>Tamanho da Página Móvel</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.php" line="79"/>
-        <source>%1 MB</source>
-        <translation>%1 MB</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="82"/>
-        <source>Never</source>
-        <translation>Nunca</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="85"/>
-        <source>Always</source>
-        <translation>Sempre</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="89"/>
-        <source>%1 minutes</source>
-        <translation>%1 minutos</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="90"/>
-        <source>1 hour</source>
-        <translation>1 hora</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="92"/>
-        <location filename="../../../admin/settings/index.php" line="101"/>
-        <source>%1 hours</source>
-        <translation>%1 horas</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="95"/>
-        <source>1 day</source>
-        <translation>1 dia</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="97"/>
-        <source>%1 days</source>
-        <translation>%1 dias</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.php" line="104"/>
-        <source>Use cron job</source>
-        <translation>Cron job do usuário</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="23"/>
-        <source>User Registration</source>
-        <translation>Registro de usuário</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="27"/>
-        <source>Enable user registration</source>
-        <translation>Habilitar registro de usuário</translation>
+        <location filename="../../../admin/settings/index.html.php" line="12"/>
+        <source>The maximum number of projects, issues and items in history which are displayed in the mobile version.</source>
+        <translation>O número máximo de projetos, questões e itens na história que são exibidos na versão móvel.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="14"/>
-        <source>Anonymous Access</source>
-        <translation>Acesso Anônimo</translation>
+        <source>Projects tree:</source>
+        <translation>Árvore de projetos:</translation>
+    </message>
+    <message>
+        <location filename="../../../admin/settings/index.html.php" line="15"/>
+        <source>List of issues:</source>
+        <translation>Lista de ocorrências:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="16"/>
-        <source>This option enables read-only access to public projects without logging in.</source>
-        <translation>Esta opção permite o acesso somente leitura aos projectos públicos sem efetuar login.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="18"/>
-        <source>Enable anonymous access</source>
-        <translation>Habilitar acesso anônimo</translation>
+        <source>Issue history:</source>
+        <translation>Histórico de ocorrências:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="25"/>
-        <source>This option allows users to self-register. Sending emails needs to be enabled.</source>
-        <translation>Esta opção permite que aos usuários o auto-registo. O envio de e-mails precisa ser ativado.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="29"/>
-        <source>This option allows users to register without administrator&apos;s approval. Registered users only have access to public projects by default.</source>
-        <translation>Esta opção permite que os usuários se registrem sem a aprovação do administrador. Usuários Registrados têm acesso apenas aos projectos públicos por padrão.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="31"/>
-        <source>Enable automatic approval</source>
-        <translation>Habilitar aprovação automática</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="33"/>
-        <source>Optionally send email notifications about pending registration requests to this address. Requires the cron job to be running.</source>
-        <translation>Opcionalmente enviar notificações por email sobre pendentes pedidos de registro para este endereço. Requer que trabalho cron seja executado.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="35"/>
-        <source>Email address:</source>
-        <translation>Endereço de email:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="40"/>
-        <source>Limits</source>
-        <translation>Limites</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="42"/>
-        <source>The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.</source>
-        <translation>O máximo comprimento (em caracteres) de comentários e descrições e o máximo tamanho (em bytes) de arquivos anexos permitidos.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="44"/>
-        <source>Maximum text length:</source>
-        <translation>Máximo comprimento do texto:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="45"/>
-        <source>Maximum attachment size:</source>
-        <translation>Tamanho máximo do anexo:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="50"/>
-        <source>Attachment Storage</source>
-        <translation>Armazenar Anexo</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="52"/>
-        <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
-        <translation>O tamanho máximo (em bytes) de arquivos que serão armazenados no banco de dados. Os arquivos maiores serão armazenados no sistema de arquivos.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="54"/>
-        <source>Maximum database storage size:</source>
-        <translation>O tamanho máximo de armazenamento de banco de dados:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="59"/>
-        <source>Maximum Lifetime</source>
-        <translation>Vida Máxima</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="61"/>
-        <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
-        <translation>O tempo máximo depois do qual as sessões inativas e eventos no log de eventos são suprimidos.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="63"/>
-        <source>Session lifetime:</source>
-        <translation>Vida da Seção:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="64"/>
-        <source>Event log lifetime:</source>
-        <translation>Vida do log de eventos:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="65"/>
-        <source>Inactive user registration request lifetime:</source>
-        <translation>Desativar requisição de registro de usuários por tempo indeterminado:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="70"/>
-        <source>Garbage Collection</source>
-        <translation>Coleta de Lixo</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="72"/>
-        <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
-        <translation>A probabilidade de coleta de lixo após cada solicitação. Se a tarefa do cron job é usada para coleta de lixo, verifique se ele está sendo executado.</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="74"/>
-        <source>GC probability:</source>
-        <translation>GC probabilidade:</translation>
-    </message>
-    <message>
-        <location filename="../../../admin/settings/index.html.php" line="79"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../../admin/settings/index.html.php" line="80"/>
+        <location filename="../../../admin/settings/index.html.php" line="26"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -1697,200 +1778,200 @@
         <translation>Administrador</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="339"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="342"/>
         <source>Forum</source>
         <translation>Forum</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="345"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="348"/>
         <source>Bugs</source>
         <translation>Bugs</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="348"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="351"/>
         <source>Assigned To</source>
         <comment>bug</comment>
         <translation>Atribuído A</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="355"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
         <source>Status</source>
         <comment>bug</comment>
         <translation>Status</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="360"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="400"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="408"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="416"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="363"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="403"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="411"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="419"/>
         <source>Active</source>
         <comment>bug</comment>
         <translation>Ativo</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="423"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="426"/>
         <source>Resolved</source>
         <comment>bug</comment>
         <translation>Resolvido</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="358"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="361"/>
         <source>Closed</source>
         <comment>bug</comment>
         <translation>Fechado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="364"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Reason</source>
         <translation>Razão</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Fixed</source>
         <translation>Resolvido</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Obsolete</source>
         <translation>Obsoleto</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="367"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Duplicate</source>
         <translation>Duplicado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="368"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>As Designed</source>
         <translation>Como Designado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="368"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>Unable To Reproduce</source>
         <translation>Não é possível reproduzir</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="368"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>Test Failed</source>
         <translation>Falha de teste</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="372"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="375"/>
         <source>Severity</source>
         <comment>bug</comment>
         <translation>Severidade</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="382"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="385"/>
         <source>Version</source>
         <translation>Versão</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="390"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="393"/>
         <source>Created By Me</source>
         <comment>bug</comment>
         <translation>Criado Por Mim</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="397"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="400"/>
         <source>Active Bugs</source>
         <translation>Bugs Ativos</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="404"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="407"/>
         <source>My Active Bugs</source>
         <translation>Meus Bugs Ativos</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="412"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="415"/>
         <source>Unassigned Bugs</source>
         <translation>Bugs não Designados</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="420"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="423"/>
         <source>Resolved Bugs</source>
         <translation>Bugs Resolvidos</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="429"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="432"/>
         <source>Tasks</source>
         <translation>Tarefas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="432"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="435"/>
         <source>Assigned To</source>
         <comment>task</comment>
         <translation>Designado Para</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="439"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
         <source>Status</source>
         <comment>task</comment>
         <translation>Status</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="444"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="484"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="492"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="500"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="447"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="487"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="495"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="503"/>
         <source>Active</source>
         <comment>task</comment>
         <translation>Ativo</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
         <source>Closed</source>
         <comment>task</comment>
         <translation>Fechado</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="448"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="451"/>
         <source>Priority</source>
         <comment>task</comment>
         <translation>Prioridade</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="458"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="461"/>
         <source>Progress</source>
         <translation>Progresso</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="466"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="469"/>
         <source>Due Date</source>
         <translation>Data de Vencimento</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="474"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="477"/>
         <source>Created By Me</source>
         <comment>task</comment>
         <translation>Criado Por Mim</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="481"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="484"/>
         <source>Active Tasks</source>
         <translation>Tarefas Ativas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="488"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="491"/>
         <source>My Active Tasks</source>
         <translation>Minhas Tarefas Ativas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="496"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="499"/>
         <source>Unassigned Tasks</source>
         <translation>Terefas Não Designadas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="504"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="507"/>
         <source>Completed Tasks</source>
         <translation>Tarefas Finalizadas</translation>
     </message>
     <message>
-        <location filename="../../../admin/setup/installer.inc.php" line="442"/>
-        <location filename="../../../admin/setup/installer.inc.php" line="507"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="445"/>
+        <location filename="../../../admin/setup/installer.inc.php" line="510"/>
         <source>Completed</source>
         <comment>task</comment>
         <translation>Finalizada</translation>
@@ -3363,72 +3444,72 @@
 <context>
     <name>Client_IssueDetails</name>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="96"/>
+        <location filename="../../../client/issuedetails.inc.php" line="97"/>
         <source>Only Comments</source>
         <translation>Somente Comentários</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="97"/>
+        <location filename="../../../client/issuedetails.inc.php" line="98"/>
         <source>Only Attachments</source>
         <translation>Apenas Anexos</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="98"/>
+        <location filename="../../../client/issuedetails.inc.php" line="99"/>
         <source>Comments &amp; Attachments</source>
         <translation>Comentários &amp; Anexos</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="168"/>
+        <location filename="../../../client/issuedetails.inc.php" line="170"/>
         <source>Edit Attributes</source>
         <translation>Editar Atributos</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="169"/>
+        <location filename="../../../client/issuedetails.inc.php" line="171"/>
         <source>Add Comment</source>
         <translation>Adicionar Comentário</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="170"/>
+        <location filename="../../../client/issuedetails.inc.php" line="172"/>
         <source>Add Attachment</source>
         <translation>Adicionar Anexo</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="172"/>
+        <location filename="../../../client/issuedetails.inc.php" line="174"/>
         <source>Add Description</source>
         <translation>Adicionar Descrição</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="173"/>
+        <location filename="../../../client/issuedetails.inc.php" line="175"/>
         <source>Clone Issue</source>
         <translation>Clonar Conteúdo</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="175"/>
+        <location filename="../../../client/issuedetails.inc.php" line="177"/>
         <source>Move Issue</source>
         <translation>Mover Ocorrência</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="176"/>
+        <location filename="../../../client/issuedetails.inc.php" line="178"/>
         <source>Delete Issue</source>
         <translation>Excluir Ocorrência</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="179"/>
+        <location filename="../../../client/issuedetails.inc.php" line="181"/>
         <source>Mark As Unread</source>
         <translation>Marcar como Não Lida</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="181"/>
+        <location filename="../../../client/issuedetails.inc.php" line="183"/>
         <source>Mark As Read</source>
         <translation>Marcar como Lida</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="184"/>
+        <location filename="../../../client/issuedetails.inc.php" line="186"/>
         <source>Unsubscribe</source>
         <translation>Eliminar Subscrição</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="186"/>
+        <location filename="../../../client/issuedetails.inc.php" line="188"/>
         <source>Subscribe</source>
         <translation>Subscrever</translation>
     </message>
@@ -3443,64 +3524,64 @@
         <translation>Tipo:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.inc.php" line="95"/>
+        <location filename="../../../client/issuedetails.inc.php" line="96"/>
         <source>All History</source>
         <translation>Toda a História</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="65"/>
-        <location filename="../../../client/issuedetails.html.php" line="108"/>
+        <location filename="../../../client/issuedetails.html.php" line="64"/>
+        <location filename="../../../client/issuedetails.html.php" line="111"/>
         <location filename="../../../client/issuedetails.html.php" line="125"/>
         <source>Edit</source>
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="66"/>
-        <location filename="../../../client/issuedetails.html.php" line="110"/>
+        <location filename="../../../client/issuedetails.html.php" line="65"/>
+        <location filename="../../../client/issuedetails.html.php" line="113"/>
         <location filename="../../../client/issuedetails.html.php" line="127"/>
         <source>Delete</source>
         <translation>Excluir</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="196"/>
-        <location filename="../../../client/issuedetails.html.php" line="197"/>
+        <location filename="../../../client/issuedetails.html.php" line="201"/>
+        <location filename="../../../client/issuedetails.html.php" line="202"/>
         <source>Unknown Folder</source>
         <translation>Pasta Desconhecida</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="219"/>
+        <location filename="../../../client/issuedetails.html.php" line="224"/>
         <source>There are no comments.</source>
         <translation>Não existe nenum comentário.</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="221"/>
+        <location filename="../../../client/issuedetails.html.php" line="226"/>
         <source>There are no attachments.</source>
         <translation>Não existe nenhum anexo.</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="223"/>
+        <location filename="../../../client/issuedetails.html.php" line="228"/>
         <source>There are no comments or attachments.</source>
         <translation>Não existem comentários ou anexos.</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="85"/>
+        <location filename="../../../client/issuedetails.html.php" line="91"/>
         <source>Issue History</source>
         <translation>Histórico do Caso</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="151"/>
-        <location filename="../../../client/issuedetails.html.php" line="154"/>
+        <location filename="../../../client/issuedetails.html.php" line="156"/>
+        <location filename="../../../client/issuedetails.html.php" line="159"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="157"/>
-        <location filename="../../../client/issuedetails.html.php" line="158"/>
+        <location filename="../../../client/issuedetails.html.php" line="162"/>
+        <location filename="../../../client/issuedetails.html.php" line="163"/>
         <source>empty</source>
         <translation>vazio</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="102"/>
+        <location filename="../../../client/issuedetails.html.php" line="105"/>
         <source>Comment %1</source>
         <translation>Comentário %1</translation>
     </message>
@@ -3520,20 +3601,19 @@
         <translation>Última Modificação:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="60"/>
-        <location filename="../../../client/issuedetails.html.php" line="100"/>
-        <location filename="../../../client/issuedetails.html.php" line="120"/>
+        <location filename="../../../client/issuedetails.html.php" line="74"/>
+        <location filename="../../../client/issuedetails.html.php" line="138"/>
         <source>Last Edited:</source>
         <translation>Última Edição:</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="62"/>
-        <location filename="../../../client/issuedetails.html.php" line="104"/>
+        <location filename="../../../client/issuedetails.html.php" line="61"/>
+        <location filename="../../../client/issuedetails.html.php" line="107"/>
         <source>Reply</source>
         <translation>Responder</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="71"/>
+        <location filename="../../../client/issuedetails.html.php" line="72"/>
         <source>Description</source>
         <translation>Descrição</translation>
     </message>
@@ -3543,7 +3623,7 @@
         <translation>Anexo %1</translation>
     </message>
     <message>
-        <location filename="../../../client/issuedetails.html.php" line="198"/>
+        <location filename="../../../client/issuedetails.html.php" line="203"/>
         <source>Issue moved from %1 to %2</source>
         <translation>Ocorrência movida de %1 para %2</translation>
     </message>
@@ -3647,310 +3727,6 @@
     </message>
 </context>
 <context>
-    <name>Client_Issues_AddAttachment</name>
-    <message>
-        <location filename="../../../client/issues/addattachment.php" line="40"/>
-        <source>Add Attachment</source>
-        <translation>Adicionar Anexo</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.php" line="74"/>
-        <source>No file uploaded</source>
-        <translation>Nenhum arquivo enviado</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.php" line="76"/>
-        <source>An error occurred while uploading the file</source>
-        <translation>Um erro ocorreu enquanto enviava o arquivo</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.php" line="80"/>
-        <source>File too large</source>
-        <translation>Arquivo muito grande</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.php" line="88"/>
-        <source>Invalid file name</source>
-        <translation>Nome de arquivo inválido</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.html.php" line="3"/>
-        <source>Add an attachment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Adicionar anexo a ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.html.php" line="7"/>
-        <source>File:</source>
-        <translation>Arquivo:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.html.php" line="9"/>
-        <source>Description:</source>
-        <translation>Descrição:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.html.php" line="12"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/addattachment.html.php" line="13"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_Comment</name>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="49"/>
-        <source>Description</source>
-        <translation>Descrição</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="55"/>
-        <source>Comment %1</source>
-        <translation>Comentário %1</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="67"/>
-        <source>Add Comment</source>
-        <translation>Adicionar Comentário</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="84"/>
-        <source>Edit Comment</source>
-        <translation>Editar Comentário</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="95"/>
-        <source>Plain Text</source>
-        <translation>Texto Plano</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.inc.php" line="96"/>
-        <source>Text with Markup</source>
-        <translation>Texto com Marcas</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="4"/>
-        <source>Add comment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Adicionar comentário a ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="6"/>
-        <source>Edit comment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Editar comentário &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="11"/>
-        <source>Comment:</source>
-        <translation>Comentário:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="15"/>
-        <source>Text format:</source>
-        <translation>Formato do Texto:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="18"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/comment.html.php" line="19"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_DeleteAttachment</name>
-    <message>
-        <location filename="../../../client/issues/deleteattachment.php" line="38"/>
-        <source>Delete Attachment</source>
-        <translation>Eliminar Anexo</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteattachment.html.php" line="3"/>
-        <source>Are you sure you want to delete attachment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Tem certeza de que deseja excluir anexo &lt;strong&gt;%1&lt;/strong&gt;?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteattachment.html.php" line="8"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteattachment.html.php" line="9"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_DeleteComment</name>
-    <message>
-        <location filename="../../../client/issues/deletecomment.php" line="40"/>
-        <source>Delete Comment</source>
-        <translation>Eliminar Comentário</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletecomment.html.php" line="3"/>
-        <source>Are you sure you want to delete comment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Tem certeza de que deseja excluir comentário &lt;strong&gt;%1&lt;/strong&gt;?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletecomment.html.php" line="8"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletecomment.html.php" line="9"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_DeleteDescription</name>
-    <message>
-        <location filename="../../../client/issues/deletedescription.php" line="41"/>
-        <source>Delete Description</source>
-        <translation>Eliminar Descrição</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletedescription.html.php" line="3"/>
-        <source>Are you sure you want to delete description for issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Você tem certeza que quer eliminar a descrição para a ocorrência &lt;strong&gt;%1&lt;/strong&gt;?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletedescription.html.php" line="8"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deletedescription.html.php" line="9"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_DeleteIssue</name>
-    <message>
-        <location filename="../../../client/issues/deleteissue.php" line="37"/>
-        <source>Delete Issue</source>
-        <translation>Eliminar Ocorrência</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteissue.html.php" line="3"/>
-        <source>Are you sure you want to delete issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Tem certeza de que deseja excluir ocorrência &lt;strong&gt;%1&lt;/strong&gt;?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteissue.html.php" line="5"/>
-        <source>&lt;strong&gt;Warning:&lt;/strong&gt; The entire issue history will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Aviso:&lt;/strong&gt; Toda a  história desta ocorrência será permanentemente excluída.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteissue.html.php" line="10"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/deleteissue.html.php" line="11"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_Description</name>
-    <message>
-        <location filename="../../../client/issues/description.inc.php" line="53"/>
-        <source>Add Description</source>
-        <translation>Adicionar Descrição</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.inc.php" line="64"/>
-        <source>Edit Description</source>
-        <translation>Editar Descrição</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.inc.php" line="75"/>
-        <source>Plain Text</source>
-        <translation>Texto Plano</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.inc.php" line="76"/>
-        <source>Text with Markup</source>
-        <translation>Texto com Marcas</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="4"/>
-        <source>Add description to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Adicionar descrição a ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="6"/>
-        <source>Edit description of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Editar descrição da ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="11"/>
-        <source>Description:</source>
-        <translation>Descrição:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="15"/>
-        <source>Text format:</source>
-        <translation>Formato do Texto:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="18"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/description.html.php" line="19"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_EditAttachment</name>
-    <message>
-        <location filename="../../../client/issues/editattachment.php" line="40"/>
-        <source>Edit Attachment</source>
-        <translation>Editar Anexo</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.php" line="59"/>
-        <source>Invalid file name</source>
-        <translation>Nome de arquivo inválido</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.html.php" line="3"/>
-        <source>Edit attachment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Editar anexo &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.html.php" line="7"/>
-        <source>Name:</source>
-        <translation>Nome:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.html.php" line="9"/>
-        <source>Description:</source>
-        <translation>Descrição:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.html.php" line="12"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/editattachment.html.php" line="13"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
     <name>Client_Issues_ExportCsv</name>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="45"/>
@@ -3989,275 +3765,6 @@
     </message>
 </context>
 <context>
-    <name>Client_Issues_Issue</name>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="54"/>
-        <source>Edit Attributes</source>
-        <translation>Adicionar Atributos</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="106"/>
-        <source>Clone Issue</source>
-        <translation>Clonar Ocorrência</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="78"/>
-        <source>Add Issue</source>
-        <translation>Adicionar Ocorrência</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="146"/>
-        <source>Please Select</source>
-        <translation>Por Favor Selecione</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="167"/>
-        <source>Plain Text</source>
-        <translation>Texto Plano</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="168"/>
-        <source>Text with Markup</source>
-        <translation>Texto com Marcas</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.inc.php" line="331"/>
-        <source>No folder selected.</source>
-        <translation>Nenhuma pasta selecionada.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="5"/>
-        <source>Some of the values you entered are incorrect.</source>
-        <translation>Alguns dos valores digitados estão incorretos.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="10"/>
-        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in the selected folder.</source>
-        <translation>Clonar ocorrência &lt;strong&gt;%1&lt;/strong&gt; como uma nova ocorrência na pasta selecionada.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="12"/>
-        <source>Create a new issue in folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Criar uma nova ocorrência na pasta &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="14"/>
-        <source>Edit attributes of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Editar atributos da ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="16"/>
-        <source>Create a new issue in the selected folder.</source>
-        <translation>Criar uma nova ocorrência na pasta selecionada.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="23"/>
-        <source>Name:</source>
-        <translation>Nome:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="27"/>
-        <source>Folder:</source>
-        <translation>Pasta:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="33"/>
-        <source>Attributes</source>
-        <translation>Atributos</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="37"/>
-        <source>%1:</source>
-        <translation>%1:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="51"/>
-        <source>Description:</source>
-        <translation>Descrição:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="55"/>
-        <source>Text format:</source>
-        <translation>Formato do Texto:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="59"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="60"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="66"/>
-        <source>There are no available folders of this type.</source>
-        <translation>Não existe pasta disponível para este tipo.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="68"/>
-        <source>There are no available project members to assign to the issue.</source>
-        <translation>Não há membros do projeto disponível para atribuir esta ocorrência.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/issue.html.php" line="72"/>
-        <source>Close</source>
-        <translation>Fechar</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_MarkAll</name>
-    <message>
-        <location filename="../../../client/issues/markall.php" line="50"/>
-        <source>Mark All As Read</source>
-        <translation>Marcar todas como Lidas</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.php" line="52"/>
-        <source>Mark All As Unread</source>
-        <translation>Marcar todas como Não Lidas</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="5"/>
-        <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>Tem certeza que quer marcar todas as ocorrências  na pasta &lt;strong&gt;%1&lt;/strong&gt; como lidas?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="7"/>
-        <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>Tem certeza que quer marcar todas as ocorrências na pasta &lt;strong&gt;%1&lt;/strong&gt; como não lidas?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="11"/>
-        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>Você tem certeza que deseja marcar todas as ocorrências deste tipo &lt;strong&gt;%1&lt;/strong&gt; como lidas?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="13"/>
-        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>Você tem certeza que deseja marcar todas as ocorrências deste tipo &lt;strong&gt;%1&lt;/strong&gt; como não lidas?</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="20"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/markall.html.php" line="21"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_MoveIssue</name>
-    <message>
-        <location filename="../../../client/issues/moveissue.php" line="69"/>
-        <source>Move Issue</source>
-        <translation>Mover Ocorrência</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/moveissue.html.php" line="3"/>
-        <source>Move issue &lt;strong&gt;%1&lt;/strong&gt; to another folder of the same type.</source>
-        <translation>Mover ocorrência &lt;strong&gt;%1&lt;/strobg&gt; para outra pasta do mesmo tipo.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/moveissue.html.php" line="9"/>
-        <source>Folder:</source>
-        <translation>Pasta:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/moveissue.html.php" line="12"/>
-        <location filename="../../../client/issues/moveissue.html.php" line="21"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/moveissue.html.php" line="13"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/moveissue.html.php" line="18"/>
-        <source>There are no available destination folders.</source>
-        <translation>Não há pastas de destino disponíveis.</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_Preview</name>
-    <message>
-        <location filename="../../../client/issues/preview.php" line="53"/>
-        <source>Error: %1.</source>
-        <translation>Erro: %1.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/preview.php" line="55"/>
-        <source>An unexpected error occured while processing the request.</source>
-        <translation>Um erro inesperado ocorreu ao processar o pedido.</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_Subscribe</name>
-    <message>
-        <location filename="../../../client/issues/subscribe.php" line="37"/>
-        <source>Subscribe To Issue</source>
-        <translation>Subscrever-se a Ocorrência</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="3"/>
-        <source>You are about to subscribe to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Você está para  subscrever-se a ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="5"/>
-        <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
-        <translation>Você irá rececer emails de notificação quando algeum modificar esta ocorrência, adicionar comentário ou anexos.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="8"/>
-        <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
-        <translation>Aviso: Voce não irá receber nenhum email até que forneça um endereçe de email de sua preferência.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="14"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/subscribe.html.php" line="15"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Issues_Unsubscribe</name>
-    <message>
-        <location filename="../../../client/issues/unsubscribe.php" line="37"/>
-        <source>Unsubscribe From Issue</source>
-        <translation>Eliminar Subscrição desta Ocorrência</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/unsubscribe.html.php" line="3"/>
-        <source>You are about to unsubscribe from issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Você está para eliminar a subscrição desta ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/unsubscribe.html.php" line="5"/>
-        <source>You will no longer receive email notifications for this issue.</source>
-        <translation>Você não mais irá receber email de notificações para esta ocorrência.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/unsubscribe.html.php" line="10"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/issues/unsubscribe.html.php" line="11"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
     <name>Client_Project</name>
     <message>
         <location filename="../../../client/project.inc.php" line="59"/>
@@ -4265,22 +3772,22 @@
         <translation>Adicionar Descrição</translation>
     </message>
     <message>
-        <location filename="../../../client/project.html.php" line="12"/>
+        <location filename="../../../client/project.html.php" line="22"/>
         <source>Last Edited:</source>
         <translation>Última Edição:</translation>
     </message>
     <message>
-        <location filename="../../../client/project.html.php" line="14"/>
+        <location filename="../../../client/project.html.php" line="13"/>
         <source>Edit</source>
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="../../../client/project.html.php" line="15"/>
+        <location filename="../../../client/project.html.php" line="14"/>
         <source>Delete</source>
         <translation>Excluir</translation>
     </message>
     <message>
-        <location filename="../../../client/project.html.php" line="20"/>
+        <location filename="../../../client/project.html.php" line="21"/>
         <source>Description</source>
         <translation>Descrição</translation>
     </message>
@@ -4505,17 +4012,17 @@
     <message>
         <location filename="../../../client/projects/archiveproject.php" line="40"/>
         <source>Archive Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivar Projeto</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="3"/>
         <source>Are you sure you want to move project &lt;strong&gt;%1&lt;/strong&gt; to the archive?</source>
-        <translation type="unfinished"></translation>
+        <translation>Você tem certeza que quer arquivar o projeto &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="5"/>
         <source>You can unarchive the project later by going to the Projects Archive in the Administration Panel.</source>
-        <translation type="unfinished"></translation>
+        <translation>Você pode desarquivar o projeto mais tarde indo até Projetos Arquivados no Painel de Administração.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="10"/>
@@ -4695,7 +4202,7 @@
     <message>
         <location filename="../../../client/projects/index.php" line="96"/>
         <source>Archive Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivar Projeto</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="97"/>
@@ -4978,152 +4485,6 @@
     </message>
 </context>
 <context>
-    <name>Client_Tools_About</name>
-    <message>
-        <location filename="../../../client/tools/about.php" line="33"/>
-        <source>About WebIssues</source>
-        <translation>Sobre o WebIssues</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="5"/>
-        <source>WebIssues %1</source>
-        <translation>WebIssues %1</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="7"/>
-        <source>Issue tracking and team collaboration system.</source>
-        <translation>Acompanhamento de ocorrências e sistema de colaboração em equipe.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="12"/>
-        <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</source>
-        <translation>Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da licença GNU Affero General Public License conforme publicada pela Free Software Foundation, tanto a versão 3 da Licença, ou (a seu critério) qualquer versão posterior.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="14"/>
-        <source>Copyright &amp;copy; 2006 Michał Męciński</source>
-        <translation>Copyright &amp;copy; 2006 Michał Męciński</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="15"/>
-        <source>Copyright &amp;copy; 2007-2015 WebIssues Team</source>
-        <translation>Copyright &amp;copy; 2007-2015 WebIssues Team</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="18"/>
-        <source>Help</source>
-        <translation>Ajuda</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="20"/>
-        <source>Open the WebIssues Manual for help.</source>
-        <translation>Abra o Manual WebIssues para obter ajuda.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="23"/>
-        <source>Manual</source>
-        <translation>Manual</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="29"/>
-        <source>Website</source>
-        <translation>Website</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="31"/>
-        <source>Visit %1 for more information about WebIssues.</source>
-        <translation>Visite %1 para obter mais informações sobre WebIssues.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="36"/>
-        <source>Donations</source>
-        <translation>Doações</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="38"/>
-        <source>If you like this program, your donation will help us dedicate more time for it, support it and implement new features.</source>
-        <translation>Se você gosta deste programa, a sua doação vai nos ajudar a dedicar mais tempo para ele, desenvolve-lo e implementar novas funcionalidades.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="41"/>
-        <source>Donate</source>
-        <translation>Doar</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="49"/>
-        <source>Latest Version</source>
-        <translation>Última Versão</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="56"/>
-        <source>Your version of WebIssues is up to date.</source>
-        <translation>Sua versão do WebIssues está atualizada.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="63"/>
-        <source>The latest version of WebIssues is %1.</source>
-        <translation>A última versão do WebIssues é %1.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="66"/>
-        <source>Release Notes</source>
-        <translation>Notas de Lançamento</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="67"/>
-        <source>Download</source>
-        <translation>Baixar</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="75"/>
-        <source>Checking for latest version failed.</source>
-        <translation>Verificação de versão mais recente falhou.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="82"/>
-        <source>Check for latest version of WebIssues.</source>
-        <translation>Verificar por versão mais recente do WebIssues.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="85"/>
-        <source>Check</source>
-        <translation>Verificar</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/about.html.php" line="98"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-</context>
-<context>
-    <name>Client_Tools_GoToItem</name>
-    <message>
-        <location filename="../../../client/tools/gotoitem.php" line="33"/>
-        <source>Go To Item</source>
-        <translation>Ir para o Item</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/gotoitem.html.php" line="3"/>
-        <source>Enter the identifier of an issue, comment or attachment.</source>
-        <translation>Digite o identificador de uma ocorrência, comentário ou anexo.</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/gotoitem.html.php" line="7"/>
-        <source>ID:</source>
-        <translation>ID:</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/gotoitem.html.php" line="10"/>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <location filename="../../../client/tools/gotoitem.html.php" line="11"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
     <name>Client_Tools_Index</name>
     <message>
         <location filename="../../../client/tools/index.php" line="33"/>
@@ -5245,63 +4606,64 @@
 <context>
     <name>Common_Breadcrumbs</name>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="99"/>
+        <location filename="../../breadcrumbs.inc.php" line="105"/>
         <source>General Information</source>
         <translation>Informação Geral</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="104"/>
+        <location filename="../../breadcrumbs.inc.php" line="110"/>
         <source>Event Log</source>
         <translation>Log de Evento</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="109"/>
+        <location filename="../../breadcrumbs.inc.php" line="115"/>
         <source>User Accounts</source>
         <translation>Contas de Usuários</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="120"/>
+        <location filename="../../breadcrumbs.inc.php" line="126"/>
         <source>Registration Requests</source>
         <translation>Requisições de Registro</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="125"/>
+        <location filename="../../breadcrumbs.inc.php" line="131"/>
         <source>Issue Types</source>
         <translation>Tipos de Conteúdos</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="131"/>
+        <location filename="../../breadcrumbs.inc.php" line="137"/>
         <source>View Settings</source>
         <translation>Ver Configurações</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="115"/>
-        <location filename="../../breadcrumbs.inc.php" line="147"/>
+        <location filename="../../breadcrumbs.inc.php" line="121"/>
+        <location filename="../../breadcrumbs.inc.php" line="153"/>
         <source>Manage Permissions</source>
         <translation>Gerenciar Permissões</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="136"/>
+        <location filename="../../breadcrumbs.inc.php" line="142"/>
         <source>Projects Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Projetos Arquivados</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="164"/>
+        <location filename="../../breadcrumbs.inc.php" line="170"/>
         <source>Manage Views</source>
         <translation>Gerenciar Visualizaçãoes</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="170"/>
+        <location filename="../../breadcrumbs.inc.php" line="176"/>
         <source>Manage Alerts</source>
         <translation>Gerenciar Alertas</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="181"/>
+        <location filename="../../breadcrumbs.inc.php" line="187"/>
+        <location filename="../../breadcrumbs.inc.php" line="192"/>
         <source>Tools</source>
         <translation>Ferramentas</translation>
     </message>
     <message>
-        <location filename="../../breadcrumbs.inc.php" line="186"/>
+        <location filename="../../breadcrumbs.inc.php" line="197"/>
         <source>Manage Projects</source>
         <translation>Gerenciar Projetos</translation>
     </message>
@@ -5404,42 +4766,42 @@
         <translation>Este servidor WebIssues não foi configurado ainda.</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="41"/>
+        <location filename="../../errors/setup.inc.php" line="42"/>
         <source>Go to the %1 page to configure this server.</source>
         <translation>Ir à página %1 para configurar o servidor.</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="42"/>
+        <location filename="../../errors/setup.inc.php" line="43"/>
         <source>Server Configuration</source>
         <translation>Configuração do Servidor</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="46"/>
+        <location filename="../../errors/setup.inc.php" line="48"/>
         <source>Wrong Database Version</source>
         <translation>Versão errada do Banco de Dados</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="48"/>
+        <location filename="../../errors/setup.inc.php" line="50"/>
         <source>Current version of the database is not compatible with this version of WebIssues Server.</source>
         <translation>A versão atual do banco de dados não é compatível com esta versão do Servidor WebIssues.</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="52"/>
+        <location filename="../../errors/setup.inc.php" line="54"/>
         <source>Database Not Updated</source>
         <translation>Banco de Dados Não Atualizado</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="53"/>
+        <location filename="../../errors/setup.inc.php" line="55"/>
         <source>The database of this WebIssues Server has not been updated yet.</source>
         <translation>O banco de dados deste pojeto ainda não foi atualizado.</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="54"/>
+        <location filename="../../errors/setup.inc.php" line="57"/>
         <source>Go to the %1 page to update the database.</source>
         <translation>Ir para a página %1 para atualizar o banco de dados.</translation>
     </message>
     <message>
-        <location filename="../../errors/setup.inc.php" line="55"/>
+        <location filename="../../errors/setup.inc.php" line="58"/>
         <source>Server Update</source>
         <translation>Atualizar Servidor</translation>
     </message>
@@ -5447,9 +4809,582 @@
 <context>
     <name>Common_FixedBlock</name>
     <message>
-        <location filename="../../fixedblock.inc.php" line="34"/>
+        <location filename="../../fixedblock.inc.php" line="37"/>
         <source>Untitled block</source>
         <translation>Bloco sem título</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_AddAttachment</name>
+    <message>
+        <location filename="../../issues/addattachment.inc.php" line="40"/>
+        <source>Add Attachment</source>
+        <translation>Adicionar Anexo</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.inc.php" line="74"/>
+        <source>No file uploaded</source>
+        <translation>Nenhum arquivo enviado</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.inc.php" line="76"/>
+        <source>An error occurred while uploading the file</source>
+        <translation>Um erro ocorreu enquanto enviava o arquivo</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.inc.php" line="80"/>
+        <source>File too large</source>
+        <translation>Arquivo muito grande</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.inc.php" line="88"/>
+        <source>Invalid file name</source>
+        <translation>Nome de arquivo inválido</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.html.php" line="3"/>
+        <source>Add an attachment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Adicionar anexo a ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.html.php" line="7"/>
+        <source>File:</source>
+        <translation>Arquivo:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.html.php" line="9"/>
+        <source>Description:</source>
+        <translation>Descrição:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.html.php" line="12"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/addattachment.html.php" line="13"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Comment</name>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="49"/>
+        <source>Description</source>
+        <translation>Descrição</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="55"/>
+        <source>Comment %1</source>
+        <translation>Comentário %1</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="67"/>
+        <source>Add Comment</source>
+        <translation>Adicionar Comentário</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="84"/>
+        <source>Edit Comment</source>
+        <translation>Editar Comentário</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="95"/>
+        <source>Plain Text</source>
+        <translation>Texto Plano</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.inc.php" line="96"/>
+        <source>Text with Markup</source>
+        <translation>Texto com Marcas</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="4"/>
+        <source>Add comment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Adicionar comentário a ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="6"/>
+        <source>Edit comment &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Editar comentário &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="11"/>
+        <source>Comment:</source>
+        <translation>Comentário:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="15"/>
+        <source>Text format:</source>
+        <translation>Formato do Texto:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="18"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/comment.html.php" line="19"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_DeleteAttachment</name>
+    <message>
+        <location filename="../../issues/deleteattachment.inc.php" line="38"/>
+        <source>Delete Attachment</source>
+        <translation>Eliminar Anexo</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteattachment.html.php" line="3"/>
+        <source>Are you sure you want to delete attachment &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Tem certeza de que deseja excluir anexo &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteattachment.html.php" line="8"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteattachment.html.php" line="9"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_DeleteComment</name>
+    <message>
+        <location filename="../../issues/deletecomment.inc.php" line="40"/>
+        <source>Delete Comment</source>
+        <translation>Eliminar Comentário</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletecomment.html.php" line="3"/>
+        <source>Are you sure you want to delete comment &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Tem certeza de que deseja excluir comentário &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletecomment.html.php" line="8"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletecomment.html.php" line="9"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_DeleteDescription</name>
+    <message>
+        <location filename="../../issues/deletedescription.inc.php" line="41"/>
+        <source>Delete Description</source>
+        <translation>Eliminar Descrição</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletedescription.html.php" line="3"/>
+        <source>Are you sure you want to delete description for issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Você tem certeza que quer eliminar a descrição para a ocorrência &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletedescription.html.php" line="8"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deletedescription.html.php" line="9"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_DeleteIssue</name>
+    <message>
+        <location filename="../../issues/deleteissue.inc.php" line="35"/>
+        <source>Delete Issue</source>
+        <translation>Eliminar Ocorrência</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteissue.html.php" line="3"/>
+        <source>Are you sure you want to delete issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation>Tem certeza de que deseja excluir ocorrência &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteissue.html.php" line="5"/>
+        <source>&lt;strong&gt;Warning:&lt;/strong&gt; The entire issue history will be permanently deleted.</source>
+        <translation>&lt;strong&gt;Aviso:&lt;/strong&gt; Toda a  história desta ocorrência será permanentemente excluída.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteissue.html.php" line="10"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/deleteissue.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Description</name>
+    <message>
+        <location filename="../../issues/description.inc.php" line="53"/>
+        <source>Add Description</source>
+        <translation>Adicionar Descrição</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.inc.php" line="64"/>
+        <source>Edit Description</source>
+        <translation>Editar Descrição</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.inc.php" line="75"/>
+        <source>Plain Text</source>
+        <translation>Texto Plano</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.inc.php" line="76"/>
+        <source>Text with Markup</source>
+        <translation>Texto com Marcas</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="4"/>
+        <source>Add description to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Adicionar descrição a ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="6"/>
+        <source>Edit description of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Editar descrição da ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="11"/>
+        <source>Description:</source>
+        <translation>Descrição:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="15"/>
+        <source>Text format:</source>
+        <translation>Formato do Texto:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="18"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/description.html.php" line="19"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_EditAttachment</name>
+    <message>
+        <location filename="../../issues/editattachment.inc.php" line="40"/>
+        <source>Edit Attachment</source>
+        <translation>Editar Anexo</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.inc.php" line="59"/>
+        <source>Invalid file name</source>
+        <translation>Nome de arquivo inválido</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.html.php" line="3"/>
+        <source>Edit attachment &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Editar anexo &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.html.php" line="7"/>
+        <source>Name:</source>
+        <translation>Nome:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.html.php" line="9"/>
+        <source>Description:</source>
+        <translation>Descrição:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.html.php" line="12"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/editattachment.html.php" line="13"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Issue</name>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="54"/>
+        <source>Edit Attributes</source>
+        <translation>Adicionar Atributos</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="78"/>
+        <source>Add Issue</source>
+        <translation>Adicionar Ocorrência</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="106"/>
+        <source>Clone Issue</source>
+        <translation>Clonar Ocorrência</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="146"/>
+        <source>Please Select</source>
+        <translation>Por Favor Selecione</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="167"/>
+        <source>Plain Text</source>
+        <translation>Texto Plano</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="168"/>
+        <source>Text with Markup</source>
+        <translation>Texto com Marcas</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="331"/>
+        <source>No folder selected.</source>
+        <translation>Nenhuma pasta selecionada.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="5"/>
+        <source>Some of the values you entered are incorrect.</source>
+        <translation>Alguns dos valores digitados estão incorretos.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="10"/>
+        <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in the selected folder.</source>
+        <translation>Clonar ocorrência &lt;strong&gt;%1&lt;/strong&gt; como uma nova ocorrência na pasta selecionada.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="12"/>
+        <source>Create a new issue in folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Criar uma nova ocorrência na pasta &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="14"/>
+        <source>Edit attributes of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Editar atributos da ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="16"/>
+        <source>Create a new issue in the selected folder.</source>
+        <translation>Criar uma nova ocorrência na pasta selecionada.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="23"/>
+        <source>Name:</source>
+        <translation>Nome:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="27"/>
+        <source>Folder:</source>
+        <translation>Pasta:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="33"/>
+        <source>Attributes</source>
+        <translation>Atributos</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="37"/>
+        <source>%1:</source>
+        <translation>%1:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="51"/>
+        <source>Description:</source>
+        <translation>Descrição:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="55"/>
+        <source>Text format:</source>
+        <translation>Formato do Texto:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="59"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="60"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="66"/>
+        <source>There are no available folders of this type.</source>
+        <translation>Não existe pasta disponível para este tipo.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="68"/>
+        <source>There are no available project members to assign to the issue.</source>
+        <translation>Não há membros do projeto disponível para atribuir esta ocorrência.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.html.php" line="72"/>
+        <source>Close</source>
+        <translation>Fechar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_MarkAll</name>
+    <message>
+        <location filename="../../issues/markall.inc.php" line="50"/>
+        <source>Mark All As Read</source>
+        <translation>Marcar todas como Lidas</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.inc.php" line="52"/>
+        <source>Mark All As Unread</source>
+        <translation>Marcar todas como Não Lidas</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="5"/>
+        <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
+        <translation>Tem certeza que quer marcar todas as ocorrências  na pasta &lt;strong&gt;%1&lt;/strong&gt; como lidas?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="7"/>
+        <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
+        <translation>Tem certeza que quer marcar todas as ocorrências na pasta &lt;strong&gt;%1&lt;/strong&gt; como não lidas?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="11"/>
+        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
+        <translation>Você tem certeza que deseja marcar todas as ocorrências deste tipo &lt;strong&gt;%1&lt;/strong&gt; como lidas?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="13"/>
+        <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
+        <translation>Você tem certeza que deseja marcar todas as ocorrências deste tipo &lt;strong&gt;%1&lt;/strong&gt; como não lidas?</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="20"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/markall.html.php" line="21"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_MoveIssue</name>
+    <message>
+        <location filename="../../issues/moveissue.inc.php" line="69"/>
+        <source>Move Issue</source>
+        <translation>Mover Ocorrência</translation>
+    </message>
+    <message>
+        <location filename="../../issues/moveissue.html.php" line="3"/>
+        <source>Move issue &lt;strong&gt;%1&lt;/strong&gt; to another folder of the same type.</source>
+        <translation>Mover ocorrência &lt;strong&gt;%1&lt;/strobg&gt; para outra pasta do mesmo tipo.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/moveissue.html.php" line="9"/>
+        <source>Folder:</source>
+        <translation>Pasta:</translation>
+    </message>
+    <message>
+        <location filename="../../issues/moveissue.html.php" line="12"/>
+        <location filename="../../issues/moveissue.html.php" line="21"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/moveissue.html.php" line="13"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+    <message>
+        <location filename="../../issues/moveissue.html.php" line="18"/>
+        <source>There are no available destination folders.</source>
+        <translation>Não há pastas de destino disponíveis.</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Preview</name>
+    <message>
+        <location filename="../../issues/preview.inc.php" line="53"/>
+        <source>Error: %1.</source>
+        <translation>Erro: %1.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/preview.inc.php" line="55"/>
+        <source>An unexpected error occured while processing the request.</source>
+        <translation>Um erro inesperado ocorreu ao processar o pedido.</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Subscribe</name>
+    <message>
+        <location filename="../../issues/subscribe.inc.php" line="35"/>
+        <source>Subscribe To Issue</source>
+        <translation>Subscrever-se a Ocorrência</translation>
+    </message>
+    <message>
+        <location filename="../../issues/subscribe.html.php" line="3"/>
+        <source>You are about to subscribe to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Você está para  subscrever-se a ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/subscribe.html.php" line="5"/>
+        <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
+        <translation>Você irá rececer emails de notificação quando algeum modificar esta ocorrência, adicionar comentário ou anexos.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/subscribe.html.php" line="8"/>
+        <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
+        <translation>Aviso: Voce não irá receber nenhum email até que forneça um endereçe de email de sua preferência.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/subscribe.html.php" line="14"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/subscribe.html.php" line="15"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Issues_Unsubscribe</name>
+    <message>
+        <location filename="../../issues/unsubscribe.inc.php" line="37"/>
+        <source>Unsubscribe From Issue</source>
+        <translation>Eliminar Subscrição desta Ocorrência</translation>
+    </message>
+    <message>
+        <location filename="../../issues/unsubscribe.html.php" line="3"/>
+        <source>You are about to unsubscribe from issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <translation>Você está para eliminar a subscrição desta ocorrência &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/unsubscribe.html.php" line="5"/>
+        <source>You will no longer receive email notifications for this issue.</source>
+        <translation>Você não mais irá receber email de notificações para esta ocorrência.</translation>
+    </message>
+    <message>
+        <location filename="../../issues/unsubscribe.html.php" line="10"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../issues/unsubscribe.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
     </message>
 </context>
 <context>
@@ -5566,12 +5501,18 @@
         <translation>Última Modificação:</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="100"/>
+        <location filename="../../mail/notification.html.php" line="102"/>
         <source>Description</source>
         <translation>Descrição</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="185"/>
+        <location filename="../../mail/notification.html.php" line="104"/>
+        <location filename="../../mail/notification.html.php" line="132"/>
+        <source>Last Edited:</source>
+        <translation>Última Edição:</translation>
+    </message>
+    <message>
+        <location filename="../../mail/notification.html.php" line="197"/>
         <source>Issue moved from %1 to %2</source>
         <translation>Ocorrência movida de %1 para %2</translation>
     </message>
@@ -5581,30 +5522,30 @@
         <translation>Atributos</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="113"/>
+        <location filename="../../mail/notification.html.php" line="120"/>
         <source>Issue History</source>
         <translation>Histórico do Caso</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="138"/>
-        <location filename="../../mail/notification.html.php" line="141"/>
+        <location filename="../../mail/notification.html.php" line="150"/>
+        <location filename="../../mail/notification.html.php" line="153"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="144"/>
-        <location filename="../../mail/notification.html.php" line="145"/>
+        <location filename="../../mail/notification.html.php" line="156"/>
+        <location filename="../../mail/notification.html.php" line="157"/>
         <source>empty</source>
         <translation>vazio</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="183"/>
-        <location filename="../../mail/notification.html.php" line="184"/>
+        <location filename="../../mail/notification.html.php" line="195"/>
+        <location filename="../../mail/notification.html.php" line="196"/>
         <source>Unknown Folder</source>
         <translation>Pasta Desconhecida</translation>
     </message>
     <message>
-        <location filename="../../mail/notification.html.php" line="212"/>
+        <location filename="../../mail/notification.html.php" line="224"/>
         <source>This is an alert email from the WebIssues Server.</source>
         <translation>Isto é um email de alerta do servidor Webissues.</translation>
     </message>
@@ -5825,7 +5766,7 @@
 <context>
     <name>Common_MessageBlock</name>
     <message>
-        <location filename="../../messageblock.inc.php" line="34"/>
+        <location filename="../../messageblock.inc.php" line="37"/>
         <source>Untitled message</source>
         <translation>Mensagem sem título</translation>
     </message>
@@ -5838,21 +5779,26 @@
         <translation>WebIssues</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="66"/>
+        <location filename="../../pagelayout.inc.php" line="73"/>
         <source>Untitled page</source>
         <translation>Página sem título</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="70"/>
-        <location filename="../../pagelayout.html.php" line="35"/>
+        <location filename="../../pagelayout.inc.php" line="77"/>
+        <location filename="../../pagelayout.html.php" line="34"/>
         <source>Web Client</source>
         <translation>Cliente Web</translation>
     </message>
     <message>
-        <location filename="../../pagelayout.inc.php" line="73"/>
-        <location filename="../../pagelayout.html.php" line="33"/>
+        <location filename="../../pagelayout.inc.php" line="80"/>
+        <location filename="../../pagelayout.html.php" line="32"/>
         <source>Administration Panel</source>
         <translation>Painel de Administração</translation>
+    </message>
+    <message>
+        <location filename="../../pagelayout.html.php" line="36"/>
+        <source>Mobile Version</source>
+        <translation>Versão Móvel</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="37"/>
@@ -5899,6 +5845,124 @@
     </message>
 </context>
 <context>
+    <name>Common_Tools_About</name>
+    <message>
+        <location filename="../../tools/about.inc.php" line="33"/>
+        <source>About WebIssues</source>
+        <translation>Sobre o WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="5"/>
+        <source>WebIssues %1</source>
+        <translation>WebIssues %1</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="7"/>
+        <source>Issue tracking and team collaboration system.</source>
+        <translation>Acompanhamento de ocorrências e sistema de colaboração em equipe.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="12"/>
+        <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</source>
+        <translation>Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da licença GNU Affero General Public License conforme publicada pela Free Software Foundation, tanto a versão 3 da Licença, ou (a seu critério) qualquer versão posterior.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="14"/>
+        <source>Copyright &amp;copy; 2006 Michał Męciński</source>
+        <translation>Copyright &amp;copy; 2006 Michał Męciński</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="15"/>
+        <source>Copyright &amp;copy; 2007-2015 WebIssues Team</source>
+        <translation>Copyright &amp;copy; 2007-2015 WebIssues Team</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="18"/>
+        <source>Help</source>
+        <translation>Ajuda</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="20"/>
+        <source>Open the WebIssues Manual for help.</source>
+        <translation>Abra o Manual WebIssues para obter ajuda.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="23"/>
+        <source>Manual</source>
+        <translation>Manual</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="29"/>
+        <source>Website</source>
+        <translation>Website</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="31"/>
+        <source>Visit %1 for more information about WebIssues.</source>
+        <translation>Visite %1 para obter mais informações sobre WebIssues.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="36"/>
+        <source>Donations</source>
+        <translation>Doações</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="38"/>
+        <source>If you like this program, your donation will help us dedicate more time for it, support it and implement new features.</source>
+        <translation>Se você gosta deste programa, a sua doação vai nos ajudar a dedicar mais tempo para ele, desenvolve-lo e implementar novas funcionalidades.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="41"/>
+        <source>Donate</source>
+        <translation>Doar</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="49"/>
+        <source>Latest Version</source>
+        <translation>Última Versão</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="56"/>
+        <source>Your version of WebIssues is up to date.</source>
+        <translation>Sua versão do WebIssues está atualizada.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="63"/>
+        <source>The latest version of WebIssues is %1.</source>
+        <translation>A última versão do WebIssues é %1.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="66"/>
+        <source>Release Notes</source>
+        <translation>Notas de Lançamento</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="67"/>
+        <source>Download</source>
+        <translation>Baixar</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="75"/>
+        <source>Checking for latest version failed.</source>
+        <translation>Verificação de versão mais recente falhou.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="82"/>
+        <source>Check for latest version of WebIssues.</source>
+        <translation>Verificar por versão mais recente do WebIssues.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="85"/>
+        <source>Check</source>
+        <translation>Verificar</translation>
+    </message>
+    <message>
+        <location filename="../../tools/about.html.php" line="98"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+</context>
+<context>
     <name>Common_Tools_Editing</name>
     <message>
         <location filename="../../tools/editing.inc.php" line="42"/>
@@ -5930,6 +5994,34 @@
         <location filename="../../tools/editing.html.php" line="8"/>
         <source>Default text format:</source>
         <translation>Formato padrão de texto:</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Tools_GoToItem</name>
+    <message>
+        <location filename="../../tools/gotoitem.inc.php" line="33"/>
+        <source>Go To Item</source>
+        <translation>Ir para o Item</translation>
+    </message>
+    <message>
+        <location filename="../../tools/gotoitem.html.php" line="3"/>
+        <source>Enter the identifier of an issue, comment or attachment.</source>
+        <translation>Digite o identificador de uma ocorrência, comentário ou anexo.</translation>
+    </message>
+    <message>
+        <location filename="../../tools/gotoitem.html.php" line="7"/>
+        <source>ID:</source>
+        <translation>ID:</translation>
+    </message>
+    <message>
+        <location filename="../../tools/gotoitem.html.php" line="10"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../tools/gotoitem.html.php" line="11"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
     </message>
 </context>
 <context>
@@ -6107,37 +6199,37 @@
         <translation>Configurar preferências para o usuário &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="21"/>
+        <location filename="../../tools/preferences.html.php" line="23"/>
         <source>Notifications</source>
         <translation>Notificações</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="23"/>
+        <location filename="../../tools/preferences.html.php" line="25"/>
         <source>Email address:</source>
         <translation>Endereço de email:</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="26"/>
+        <location filename="../../tools/preferences.html.php" line="28"/>
         <source>This address will only be visible to the system administrator. You will not receive notifications if you leave this field empty.</source>
         <translation>Este endereço só será visível para o administrador do sistema. Você não receberá notificações se você deixar este campo vazio.</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="28"/>
+        <location filename="../../tools/preferences.html.php" line="30"/>
         <source>Include issue details in notifications and summary reports</source>
         <translation>Incluir detalhe de ocorrência em notificações e relatório sumário</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="29"/>
+        <location filename="../../tools/preferences.html.php" line="31"/>
         <source>Do not notify about issues that I have already read</source>
         <translation>Não notificar sobre ocorrências que já li</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="35"/>
+        <location filename="../../tools/preferences.html.php" line="37"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../tools/preferences.html.php" line="36"/>
+        <location filename="../../tools/preferences.html.php" line="38"/>
         <source>Cancel</source>
         <translation>Cacelar</translation>
     </message>
@@ -6210,6 +6302,165 @@
         <location filename="../../tools/viewsettings.html.php" line="16"/>
         <source>Default filter in issue history:</source>
         <translation>Filtro padrão na história de ocorrências:</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Users_Login</name>
+    <message>
+        <location filename="../../users/login.inc.php" line="35"/>
+        <source>Log in to WebIssues</source>
+        <translation>Entrar no WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.inc.php" line="82"/>
+        <source>Anonymous Access</source>
+        <translation>Acesso Anônimo</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.inc.php" line="85"/>
+        <source>Register New Account</source>
+        <translation>Registrar Nova Conta</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="8"/>
+        <source>Login:</source>
+        <translation>Nome:</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="9"/>
+        <source>Password:</source>
+        <translation>Senha:</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="16"/>
+        <location filename="../../users/login.html.php" line="27"/>
+        <source>Log in</source>
+        <translation>Entrar</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="22"/>
+        <source>You have to enter a new password in order to log in.</source>
+        <translation>Você tem que digitar uma nova senha para log in.</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="23"/>
+        <source>New password:</source>
+        <translation>Nova senha:</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="24"/>
+        <source>Confirm password:</source>
+        <translation>Confirmar senha:</translation>
+    </message>
+    <message>
+        <location filename="../../users/login.html.php" line="28"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>Common_Users_Register</name>
+    <message>
+        <location filename="../../users/register.inc.php" line="39"/>
+        <source>Register New Account</source>
+        <translation>Registrar Nova Conta</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="10"/>
+        <source>Fill the information below to begin registration.</source>
+        <translation>Preencher informações abaixo para iniciar registro.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="12"/>
+        <source>Note that administrator&apos;s approval is required before you can log in.</source>
+        <translation>Note que aprovação do administrador é requerida antes de você se conectar.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="18"/>
+        <source>User Name</source>
+        <translation>Nome do Usuário</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="20"/>
+        <source>Enter the user name that will be visible to other users.</source>
+        <translation>Digite o nome de usuário que será visível para outros usuários.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="22"/>
+        <source>Name:</source>
+        <translation>Nome:</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="27"/>
+        <source>Credentials</source>
+        <translation>Credenciais</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="29"/>
+        <source>Enter login and password for your new account.</source>
+        <translation>Digite login e senha para a sua nova conta.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="31"/>
+        <source>Login:</source>
+        <translation>Login:</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="32"/>
+        <source>Password:</source>
+        <translation>Senha:</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="33"/>
+        <source>Confirm password:</source>
+        <translation>Confirmar senha:</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="38"/>
+        <source>Email Address</source>
+        <translation>Endereço de Email</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="40"/>
+        <source>Email address:</source>
+        <translation>Endereço de email:</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="42"/>
+        <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
+        <translation>Este endereço só será visível para o administrador do sistema. Um e-mail de ativação será enviado para este endereço.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="47"/>
+        <source>Register</source>
+        <translation>Registrar</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="48"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="54"/>
+        <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
+        <translation>Obrigado por se registar. Você receberá um email de ativação em breve com instruções de como concluir o registro.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="57"/>
+        <location filename="../../users/register.html.php" line="66"/>
+        <location filename="../../users/register.html.php" line="75"/>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="63"/>
+        <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
+        <translation>Seu pedido de registro foi ativado. Você receberá um email de notificação quando o administrador aprovar sua solicitação.</translation>
+    </message>
+    <message>
+        <location filename="../../users/register.html.php" line="72"/>
+        <source>Your registration request was activated. You can now log in to the server using your login and password.</source>
+        <translation>Seu pedido de registro foi ativado. Você pode agora se conectar ao servidor usando seu nome de usuário e senha.</translation>
     </message>
 </context>
 <context>
@@ -6643,47 +6894,47 @@
         <translation>Ignorado caixa de entrada de e-mail de &quot;%1&quot; porque pasta não pode ser mapeada</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="492"/>
+        <location filename="../../../cron/job.php" line="495"/>
         <source>No subject</source>
         <translation>Sem assunto</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="531"/>
+        <location filename="../../../cron/job.php" line="534"/>
         <source>Attachment for message %1 from &quot;%2&quot; exceeded maximum size</source>
         <translation>Anexo para mensagem %1 de &quot;%2&quot; excedeu o tamanho máximo</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="537"/>
+        <location filename="../../../cron/job.php" line="540"/>
         <source>HTML message for email %1</source>
         <translation>Mensagem HTML para e-mail %1</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="541"/>
+        <location filename="../../../cron/job.php" line="544"/>
         <source>Attachment for email %1</source>
         <translation>Anexo para email %1</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="584"/>
+        <location filename="../../../cron/job.php" line="587"/>
         <source>Processed %1 inbox emails</source>
         <translation>Processado caixa de endra de email %1</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="614"/>
+        <location filename="../../../cron/job.php" line="617"/>
         <source>From:</source>
         <translation>De:</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="620"/>
+        <location filename="../../../cron/job.php" line="623"/>
         <source>To:</source>
         <translation>Para:</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="627"/>
+        <location filename="../../../cron/job.php" line="630"/>
         <source>CC:</source>
         <translation>CC:</translation>
     </message>
     <message>
-        <location filename="../../../cron/job.php" line="630"/>
+        <location filename="../../../cron/job.php" line="633"/>
         <source>Subject:</source>
         <translation>Assunto:</translation>
     </message>
@@ -6694,162 +6945,376 @@
     </message>
 </context>
 <context>
-    <name>Index</name>
+    <name>Mobile_Client_Index</name>
     <message>
-        <location filename="../../../index.php" line="35"/>
-        <source>Log in to WebIssues</source>
-        <translation>Entrar no WebIssues</translation>
+        <location filename="../../../mobile/client/index.php" line="48"/>
+        <source>Web Client</source>
+        <translation>Client Web</translation>
+    </message>
+</context>
+<context>
+    <name>Mobile_Client_IssueDetails</name>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="93"/>
+        <source>All History</source>
+        <translation>Toda a História</translation>
     </message>
     <message>
-        <location filename="../../../index.php" line="77"/>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="94"/>
+        <source>Only Comments</source>
+        <translation>Somente Comentários</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="95"/>
+        <source>Only Attachments</source>
+        <translation>Apenas Anexos</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="96"/>
+        <source>Comments &amp; Attachments</source>
+        <translation>Comentários &amp; Anexos</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="167"/>
+        <source>Edit Attributes</source>
+        <translation>Editar Atributos</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="168"/>
+        <source>Add Comment</source>
+        <translation>Adicionar Comentário</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="169"/>
+        <source>Add Attachment</source>
+        <translation>Adicionar Anexo</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="171"/>
+        <source>Add Description</source>
+        <translation>Adicionar Descrição</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="172"/>
+        <source>Clone Issue</source>
+        <translation>Clonar Conteúdo</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="174"/>
+        <source>Move Issue</source>
+        <translation>Mover Ocorrência</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="175"/>
+        <source>Delete Issue</source>
+        <translation>Excluir Ocorrência</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="178"/>
+        <source>Mark As Unread</source>
+        <translation>Marcar como Não Lida</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="180"/>
+        <source>Mark As Read</source>
+        <translation>Marcar como Lida</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="183"/>
+        <source>Unsubscribe</source>
+        <translation>Eliminar Subscrição</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.inc.php" line="185"/>
+        <source>Subscribe</source>
+        <translation>Subscrever</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="23"/>
+        <source>ID:</source>
+        <translation>ID:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="27"/>
+        <source>Type:</source>
+        <translation>Tipo:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="31"/>
+        <source>Location:</source>
+        <translation>Local:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="35"/>
+        <source>Created:</source>
+        <translation>Criado:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="39"/>
+        <source>Last Modified:</source>
+        <translation>Última Modificação:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="54"/>
+        <source>Description</source>
+        <translation>Descrição</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="66"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="128"/>
+        <source>Reply</source>
+        <translation>Responder</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="69"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="132"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="156"/>
+        <source>Edit</source>
+        <translation>Editar</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="70"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="134"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="158"/>
+        <source>Delete</source>
+        <translation>Excluir</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="78"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="110"/>
+        <source>Last Edited:</source>
+        <translation>Última Edição:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="89"/>
+        <source>Issue History</source>
+        <translation>Histórico do Caso</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="116"/>
+        <source>Comment %1</source>
+        <translation>Comentário %1</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="144"/>
+        <source>Attachment %1</source>
+        <translation>Anexo %1</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="179"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="182"/>
+        <source>Name</source>
+        <translation>Nome</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="185"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="186"/>
+        <source>empty</source>
+        <translation>vazio</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="224"/>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="225"/>
+        <source>Unknown Folder</source>
+        <translation>Pasta Desconhecida</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="226"/>
+        <source>Issue moved from %1 to %2</source>
+        <translation>Ocorrência movida de %1 para %2</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="247"/>
+        <source>There are no comments.</source>
+        <translation>Não existe nenum comentário.</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="249"/>
+        <source>There are no attachments.</source>
+        <translation>Não existe nenhum anexo.</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issuedetails.html.php" line="251"/>
+        <source>There are no comments or attachments.</source>
+        <translation>Não existem comentários ou anexos.</translation>
+    </message>
+</context>
+<context>
+    <name>Mobile_Client_IssuesList</name>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="81"/>
+        <source>All Issues</source>
+        <translation>Todas as Ocorrências</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="83"/>
+        <source>Personal Views</source>
+        <translation>Visualizações Pessoais</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="85"/>
+        <source>Public Views</source>
+        <translation>Visualizações Públicas</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="193"/>
+        <source>Add Issue</source>
+        <translation>Adicionar Ocorrência</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="194"/>
+        <source>Mark All As Read</source>
+        <translation>Marcar todas como Lidas</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.inc.php" line="195"/>
+        <source>Mark All As Unread</source>
+        <translation>Marcar todas como Não Lidas</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="22"/>
+        <source>View:</source>
+        <translation>Visualizar:</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="23"/>
+        <source>Go</source>
+        <translation>Ir</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="29"/>
+        <source>Search</source>
+        <translation>Pesquisar</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="75"/>
+        <source>There are no issues matching the search criteria.</source>
+        <translation>Não há ocorrências que correspondam aos critérios de pesquisa.</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="79"/>
+        <source>There are no issues matching the selected view.</source>
+        <translation>Não há ocorrência que corresponda com a exibição selecionada.</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="83"/>
+        <source>There are no issues of this type.</source>
+        <translation>Não existe ocorrência neste tipo.</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/issueslist.html.php" line="87"/>
+        <source>There are no issues in this folder.</source>
+        <translation>Não há ocorrências nesta pasta.</translation>
+    </message>
+</context>
+<context>
+    <name>Mobile_Client_Project</name>
+    <message>
+        <location filename="../../../mobile/client/project.html.php" line="11"/>
+        <source>Description</source>
+        <translation>Descrição</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/project.html.php" line="13"/>
+        <source>Last Edited:</source>
+        <translation>Última Edição:</translation>
+    </message>
+</context>
+<context>
+    <name>Mobile_Client_ProjectsTree</name>
+    <message>
+        <location filename="../../../mobile/client/projectstree.inc.php" line="54"/>
+        <location filename="../../../mobile/client/projectstree.html.php" line="16"/>
+        <source>All Projects</source>
+        <translation>Todos os Projetos</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/projectstree.html.php" line="4"/>
+        <source>Projects</source>
+        <translation>Projetos</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/projectstree.html.php" line="61"/>
+        <source>View Description</source>
+        <translation>Ver Descrição</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/client/projectstree.html.php" line="88"/>
+        <source>There are no projects.</source>
+        <translation>Não existe nenhum projeto.</translation>
+    </message>
+</context>
+<context>
+    <name>Mobile_PageLayout</name>
+    <message>
+        <location filename="../../../mobile/pagelayout.inc.php" line="44"/>
+        <source>WebIssues</source>
+        <translation>WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.inc.php" line="73"/>
+        <source>Untitled page</source>
+        <translation>Página sem título</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.html.php" line="39"/>
+        <source>Logged in as: %1</source>
+        <translation>Conectado como: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.html.php" line="41"/>
+        <source>Log In</source>
+        <translation>Entrar</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.html.php" line="44"/>
         <source>Anonymous Access</source>
         <translation>Acesso Anônimo</translation>
     </message>
     <message>
-        <location filename="../../../index.php" line="80"/>
-        <source>Register New Account</source>
-        <translation>Registrar Nova Conta</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="8"/>
-        <source>Login:</source>
-        <translation>Nome:</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="9"/>
-        <source>Password:</source>
-        <translation>Senha:</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="14"/>
-        <location filename="../../../index.html.php" line="25"/>
-        <source>Log in</source>
-        <translation>Entrar</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="20"/>
-        <source>You have to enter a new password in order to log in.</source>
-        <translation>Você tem que digitar uma nova senha para log in.</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="21"/>
-        <source>New password:</source>
-        <translation>Nova senha:</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="22"/>
-        <source>Confirm password:</source>
-        <translation>Confirmar senha:</translation>
-    </message>
-    <message>
-        <location filename="../../../index.html.php" line="26"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
-    </message>
-</context>
-<context>
-    <name>Register</name>
-    <message>
-        <location filename="../../../register.html.php" line="10"/>
-        <source>Fill the information below to begin registration.</source>
-        <translation>Preencher informações abaixo para iniciar registro.</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="12"/>
-        <source>Note that administrator&apos;s approval is required before you can log in.</source>
-        <translation>Note que aprovação do administrador é requerida antes de você se conectar.</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="18"/>
-        <source>User Name</source>
-        <translation>Nome do Usuário</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="20"/>
-        <source>Enter the user name that will be visible to other users.</source>
-        <translation>Digite o nome de usuário que será visível para outros usuários.</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="22"/>
-        <source>Name:</source>
-        <translation>Nome:</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="27"/>
-        <source>Credentials</source>
-        <translation>Credenciais</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="29"/>
-        <source>Enter login and password for your new account.</source>
-        <translation>Digite login e senha para a sua nova conta.</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="31"/>
-        <source>Login:</source>
-        <translation>Login:</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="32"/>
-        <source>Password:</source>
-        <translation>Senha:</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="33"/>
-        <source>Confirm password:</source>
-        <translation>Confirmar senha:</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="38"/>
-        <source>Email Address</source>
-        <translation>Endereço de Email</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="40"/>
-        <source>Email address:</source>
-        <translation>Endereço de email:</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="42"/>
-        <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
-        <translation>Este endereço só será visível para o administrador do sistema. Um e-mail de ativação será enviado para este endereço.</translation>
-    </message>
-    <message>
-        <location filename="../../../register.html.php" line="47"/>
+        <location filename="../../../mobile/pagelayout.html.php" line="47"/>
         <source>Register</source>
         <translation>Registrar</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="48"/>
-        <source>Cancel</source>
-        <translation>Cancelar</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="50"/>
+        <source>Go To Item</source>
+        <translation>Ir para o Item</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="54"/>
-        <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
-        <translation>Obrigado por se registar. Você receberá um email de ativação em breve com instruções de como concluir o registro.</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="53"/>
+        <source>Change Password</source>
+        <translation>Trocar Senha</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="57"/>
-        <location filename="../../../register.html.php" line="66"/>
-        <location filename="../../../register.html.php" line="75"/>
-        <source>OK</source>
-        <translation>OK</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="54"/>
+        <source>User Preferences</source>
+        <translation>Preferências do Usuário</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="63"/>
-        <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
-        <translation>Seu pedido de registro foi ativado. Você receberá um email de notificação quando o administrador aprovar sua solicitação.</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="55"/>
+        <source>Log Out</source>
+        <translation>Sair</translation>
     </message>
     <message>
-        <location filename="../../../register.html.php" line="72"/>
-        <source>Your registration request was activated. You can now log in to the server using your login and password.</source>
-        <translation>Seu pedido de registro foi ativado. Você pode agora se conectar ao servidor usando seu nome de usuário e senha.</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="57"/>
+        <source>WebIssues %1</source>
+        <translation>WebIssues %1</translation>
     </message>
     <message>
-        <location filename="../../../register.php" line="41"/>
-        <source>Register New Account</source>
-        <translation>Registrar Nova Conta</translation>
+        <location filename="../../../mobile/pagelayout.html.php" line="59"/>
+        <source>About WebIssues</source>
+        <translation>Sobre WebIssues</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.html.php" line="61"/>
+        <source>Full Version</source>
+        <translation>Versão Completa</translation>
+    </message>
+    <message>
+        <location filename="../../../mobile/pagelayout.html.php" line="62"/>
+        <source>Manual</source>
+        <translation>Manual</translation>
     </message>
 </context>
 <context>
@@ -6885,12 +7350,12 @@
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="385"/>
         <source>Archived project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivou o projeto &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="404"/>
         <source>Restored project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurou o projeto &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="445"/>
@@ -7478,47 +7943,54 @@
 <context>
     <name>System_Web_Grid</name>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="255"/>
+        <location filename="../../../system/web/grid.inc.php" line="264"/>
         <source>Ascending</source>
         <translation>Ascendente</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="255"/>
+        <location filename="../../../system/web/grid.inc.php" line="264"/>
         <source>Decending</source>
         <translation>Descendente</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="296"/>
+        <location filename="../../../system/web/grid.inc.php" line="305"/>
         <source>&amp;laquo; first</source>
         <translation>&amp;laquo; primeiro</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="297"/>
+        <location filename="../../../system/web/grid.inc.php" line="306"/>
+        <location filename="../../../system/web/grid.inc.php" line="344"/>
         <source>&amp;lt; previous</source>
         <translation>&amp;lt; anterior</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="314"/>
+        <location filename="../../../system/web/grid.inc.php" line="323"/>
+        <location filename="../../../system/web/grid.inc.php" line="347"/>
         <source>next &amp;gt;</source>
         <translation>próximo &amp;gt;</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="315"/>
+        <location filename="../../../system/web/grid.inc.php" line="324"/>
         <source>last &amp;raquo;</source>
         <translation>último &amp;raquo;</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="358"/>
+        <location filename="../../../system/web/grid.inc.php" line="349"/>
+        <source>%1 of %2</source>
+        <translation>%1 de %2</translation>
+    </message>
+    <message>
+        <location filename="../../../system/web/grid.inc.php" line="399"/>
         <source>Expand</source>
         <translation>Expandir</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="359"/>
+        <location filename="../../../system/web/grid.inc.php" line="400"/>
         <source>Collapse</source>
         <translation>Contrair</translation>
     </message>
     <message>
-        <location filename="../../../system/web/grid.inc.php" line="361"/>
+        <location filename="../../../system/web/grid.inc.php" line="402"/>
         <source>Blank</source>
         <translation>Vazio</translation>
     </message>
@@ -7526,89 +7998,89 @@
 <context>
     <name>System_Web_JavaScript</name>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="109"/>
-        <location filename="../../../system/web/javascript.inc.php" line="139"/>
+        <location filename="../../../system/web/javascript.inc.php" line="95"/>
+        <location filename="../../../system/web/javascript.inc.php" line="125"/>
         <source>Choose</source>
         <translation>Escolha</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="115"/>
+        <location filename="../../../system/web/javascript.inc.php" line="101"/>
         <source>Next</source>
         <translation>Próxima</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="116"/>
+        <location filename="../../../system/web/javascript.inc.php" line="102"/>
         <source>Previous</source>
         <translation>Anterior</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="303"/>
+        <location filename="../../../system/web/javascript.inc.php" line="304"/>
         <source>Bold</source>
         <translation>Negrito</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="304"/>
+        <location filename="../../../system/web/javascript.inc.php" line="305"/>
         <source>Italic</source>
         <translation>Itálico</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="305"/>
+        <location filename="../../../system/web/javascript.inc.php" line="306"/>
         <source>Monospace</source>
         <translation>Espaço simples</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="307"/>
+        <location filename="../../../system/web/javascript.inc.php" line="308"/>
         <source>Hyperlink</source>
         <translation>Hyperlink</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="307"/>
+        <location filename="../../../system/web/javascript.inc.php" line="308"/>
         <source>Enter link URL:</source>
         <translation>Entrar link URL:</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="308"/>
+        <location filename="../../../system/web/javascript.inc.php" line="309"/>
         <source>Link text</source>
         <translation>Texto link</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="310"/>
+        <location filename="../../../system/web/javascript.inc.php" line="311"/>
         <source>Bullet List</source>
         <translation>Lista azul</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="311"/>
+        <location filename="../../../system/web/javascript.inc.php" line="312"/>
         <source>Quote Block</source>
         <translation>Bloco Quota</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="312"/>
+        <location filename="../../../system/web/javascript.inc.php" line="313"/>
         <source>Code Block</source>
         <translation>Código Bloco</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="313"/>
+        <location filename="../../../system/web/javascript.inc.php" line="314"/>
         <source>Right-To-Left Text</source>
         <translation>Texto Da-Direita-Para-A-Esquerda</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="315"/>
+        <location filename="../../../system/web/javascript.inc.php" line="316"/>
         <source>Preview</source>
         <translation>Prever</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="101"/>
-        <location filename="../../../system/web/javascript.inc.php" line="117"/>
+        <location filename="../../../system/web/javascript.inc.php" line="87"/>
+        <location filename="../../../system/web/javascript.inc.php" line="103"/>
         <source>Today</source>
         <translation>Hoje</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="119"/>
+        <location filename="../../../system/web/javascript.inc.php" line="105"/>
         <source>Close</source>
         <translation>Fechar</translation>
     </message>
     <message>
-        <location filename="../../../system/web/javascript.inc.php" line="158"/>
+        <location filename="../../../system/web/javascript.inc.php" line="144"/>
         <source>Search Options</source>
         <translation>Opções de Pesquisa</translation>
     </message>
