@@ -738,7 +738,7 @@ class System_Api_QueryGenerator extends System_Api_Base
 
     private function escapeLike( $value )
     {
-        return str_replace( array( '%', '_', '[', ']', '!' ), array( '!%', '!_', '![', '!]', '!!' ), $value );
+        return str_replace( array( '!', '%', '_', '[', ']' ), array( '!!', '!%', '!_', '![', '!]' ), $value );
     }
 
     private function getLocalTimeZone()
