@@ -107,7 +107,7 @@ class System_Web_MarkupProcessor
 
             if ( $token[ 0 ] == '[' ) {
                 $index = strcspn( $token, " \t]" );
-                $this->value = strtolower( substr( $token, 1, $index - 1 ) );
+                $this->value = substr( $token, 1, $index - 1 );
                 $this->extra = trim( substr( $token, $index, strrpos( $token, ']' ) - $index ), " \t" );
 
                 $tag = strtolower( $this->value );
