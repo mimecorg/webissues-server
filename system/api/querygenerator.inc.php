@@ -88,6 +88,8 @@ class System_Api_QueryGenerator extends System_Api_Base
         $this->typeId = $type[ 'type_id' ];
 
         $this->loadAttributes( $type );
+
+        $this->columns = array_merge( array_slice( $this->columns, 0, 2 ), array( System_Api_Column::Location ), array_slice( $this->columns, 2 ) );
     }
 
     private function loadAttributes( $type )
