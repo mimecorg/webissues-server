@@ -59,18 +59,24 @@ class System_Api_ProjectManager extends System_Api_Base
     {
         $principal = System_Api_Principal::getCurrent();
 
-        if ( !$principal->isAdministrator() ) {
+        if ( !$principal->isAuthenticated() ) {
+            if ( $flags & self::RequireAdministrator )
+                throw new System_Api_Error( System_Api_Error::AccessDenied );
+            $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.is_public, %3d AS project_access FROM {projects} AS p'
+                . ' WHERE p.is_archived = 0 AND p.is_public = 1';
+        } else if ( !$principal->isAdministrator() ) {
             $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.is_public, r.project_access FROM {projects} AS p'
                 . ' JOIN {effective_rights} AS r ON r.project_id = p.project_id AND r.user_id = %1d';
             if ( $flags & self::RequireAdministrator )
                 $query .= ' AND r.project_access = %2d';
+            $query .= ' WHERE p.is_archived = 0';
         } else {
-            $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.is_public, %2d AS project_access FROM {projects} AS p';
+            $query = 'SELECT p.project_id, p.project_name, p.stamp_id, p.is_public, %2d AS project_access FROM {projects} AS p'
+                . ' WHERE p.is_archived = 0';
         }
-        $query .= ' WHERE p.is_archived = 0'
-            . ' ORDER BY p.project_name COLLATE LOCALE';
+        $query .= ' ORDER BY p.project_name COLLATE LOCALE';
 
-        return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::AdministratorAccess );
+        return $this->connection->queryTable( $query, $principal->getUserId(), System_Const::AdministratorAccess, System_Const::NormalAccess );
     }
 
     /**
