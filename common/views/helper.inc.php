@@ -287,7 +287,7 @@ class Common_Views_Helper extends System_Web_Base
         }
 
         $sortColumn = $info->getMetadata( 'sort-column' );
-        if ( isset( $this->selectedColumns[ $sortColumn ] ) ) {
+        if ( isset( $this->selectedColumns[ $sortColumn ] ) || isset( $this->fixedColumns[ $sortColumn ] ) ) {
             $this->sortColumn = $sortColumn;
             $this->sortOrder = $info->getMetadata( 'sort-desc', 0 );
         }
