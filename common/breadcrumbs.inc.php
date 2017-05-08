@@ -155,7 +155,7 @@ class Common_Breadcrumbs extends System_Web_Base
 
             case self::Folder:
                 if ( (int)$this->request->getQueryString( 'type' ) ) {
-                    $this->urls[] = $this->filterQueryString( $this->prefix . '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ), array( 'type' => $object[ 'type_id' ] ) );
+                    $this->urls[] = $this->filterQueryString( $this->prefix . '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'project' ), array( 'type' => $object[ 'type_id' ] ) );
                     $this->names[] = $object[ 'type_name' ];
                 } else {
                     $this->append( self::Project, $object );
@@ -166,19 +166,19 @@ class Common_Breadcrumbs extends System_Web_Base
 
             case self::ManageViews:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/views/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'folder', 'type', 'vsort', 'vorder', 'vpage' ) );
+                $this->urls[] = $this->filterQueryString( '/client/views/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'project', 'folder', 'type', 'vsort', 'vorder', 'vpage' ) );
                 $this->names[] = $this->tr( 'Manage Views' );
                 break;
 
             case self::ManageAlerts:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( '/client/alerts/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'folder', 'type', 'asort', 'aorder', 'apage' ) );
+                $this->urls[] = $this->filterQueryString( '/client/alerts/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'project', 'folder', 'type', 'asort', 'aorder', 'apage' ) );
                 $this->names[] = $this->tr( 'Manage Alerts' );
                 break;
 
             case self::Issue:
                 $this->append( self::Folder, $object );
-                $this->urls[] = $this->filterQueryString( $this->prefix . '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'hpg', 'hflt', 'unread', 'type' ), array( 'issue' => $object[ 'issue_id' ] ) );
+                $this->urls[] = $this->filterQueryString( $this->prefix . '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'project', 'hpg', 'hflt', 'unread', 'type' ), array( 'issue' => $object[ 'issue_id' ] ) );
                 $this->names[] = $object[ 'issue_name' ];
                 break;
 

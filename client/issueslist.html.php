@@ -15,6 +15,12 @@
 </div>
 
 <div style="float: right">
+<?php if ( !empty( $projectOptions ) ): ?>
+<?php $projectForm->renderFormOpen( null, array( 'class' => 'form-inline form-inline-space' ) ) ?>
+<?php $projectForm->renderSelect( $this->tr( 'Project:' ), 'projectSelect', $projectOptions, array( 'style' => 'width: 15em;' ) ) ?>
+<?php $projectForm->renderSubmit( $this->tr( 'Go' ), 'go' ) ?>
+<?php $projectForm->renderFormClose() ?>
+<?php endif ?>
 <?php $searchForm->renderFormOpen( null, array( 'class' => 'form-inline' ) ) ?>
 <?php $searchForm->renderText( null, 'searchBox', array( 'style' => 'width: 15em;' ) ) ?>
 <?php $searchForm->renderText( null, 'searchOption', array( 'type' => 'hidden' ) ) ?>

@@ -113,7 +113,7 @@ class Client_IssuesList extends System_Web_Component
         $this->searchForm->addField( 'searchOption', $queryColumn );
 
         if ( $this->searchForm->loadForm() ) {
-            $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'view' ), array( $key => $id, 'q' => $this->searchBox, 'qc' => $this->searchOption ) );
+            $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'view', 'project' ), array( $key => $id, 'q' => $this->searchBox, 'qc' => $this->searchOption ) );
             $this->response->redirect( $url );
         }
 
@@ -121,11 +121,42 @@ class Client_IssuesList extends System_Web_Component
         $javaScript->registerAutoSubmit( $this->viewForm->getFormSelector(), $this->viewForm->getFieldSelector( 'viewSelect' ),
             $this->viewForm->getSubmitSelector( 'go' ) );
 
+        $projectParam = (int)$this->request->getQueryString( 'project' );
+        $selectedProject = null;
+
+        if ( $typeId ) {
+            $this->projectForm = new System_Web_Form( 'project', $this );
+            $this->projectForm->addField( 'projectSelect', $projectParam );
+
+            $projects = $projectManager->getProjects();
+
+            $this->projectOptions[ '' ] = $this->tr( 'All Projects' );
+            foreach ( $projects as $project )
+                $this->projectOptions[ $project[ 'project_id' ] ] = $project[ 'project_name' ];
+
+            if ( $this->projectForm->loadForm() ) {
+                if ( $this->projectSelect != '' )
+                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'view', 'q', 'qc' ), array( $key => $id, 'project' => $this->projectSelect ) );
+                else
+                    $url = $this->filterQueryString( '/client/index.php', array( 'ps', 'po', 'ppg', 'sort', 'order', 'view', 'q', 'qc' ), array( $key => $id ) );
+                $this->response->redirect( $url );
+            }
+
+            $javaScript->registerAutoSubmit( $this->projectForm->getFormSelector(), $this->projectForm->getFieldSelector( 'projectSelect' ),
+                $this->projectForm->getSubmitSelector( 'go' ) );
+
+            if ( $projectParam )
+                $selectedProject = $projectManager->getProject( $projectParam );
+        }
+
         $queryGenerator = new System_Api_QueryGenerator();
         if ( $folder )
             $queryGenerator->setFolder( $folder );
         else
             $queryGenerator->setIssueType( $type );
+
+        if ( $selectedProject )
+            $queryGenerator->setProject( $selectedProject );
 
         $personalViewId = 0;
 
@@ -225,7 +256,7 @@ class Client_IssuesList extends System_Web_Component
         $principal = System_Api_Principal::getCurrent();
 
         $this->toolBar = new System_Web_ToolBar();
-        $this->toolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ) );
+        $this->toolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'project' ) );
 
         if ( $principal->isAuthenticated() ) {
             $this->toolBar->addFixedCommand( '/client/issues/addissue.php', '/common/images/issue-new-16.png', $this->tr( 'Add Issue' ), array( $key => $id ) );
@@ -237,7 +268,7 @@ class Client_IssuesList extends System_Web_Component
         }
 
         $this->viewToolBar = new System_Web_ToolBar();
-        $this->viewToolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc' ) );
+        $this->viewToolBar->setFilterParameters( array( 'ps', 'po', 'ppg', 'sort', 'order', 'page', 'view', 'q', 'qc', 'project' ) );
 
         if ( $principal->isAuthenticated() ) {
             $this->viewToolBar->addFixedCommand( '/client/views/add.php', '/common/images/view-new-16.png', $this->tr( 'Add View' ), array( $key => $id, 'direct' => 1 ) );

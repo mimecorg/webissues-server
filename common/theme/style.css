@@ -290,6 +290,10 @@ textarea {
   margin: 0 0 0.8em;
 }
 
+form.form-inline {
+  display: inline-block;
+}
+
 .form-inline .form-field {
   display: inline;
 }
@@ -314,6 +318,10 @@ textarea {
 
 .form-inline td p {
   margin: 0.4em 0 0.2em 0;
+}
+
+.form-inline-space {
+  margin-right: 1em;
 }
 
 /* various styles */

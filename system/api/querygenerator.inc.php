@@ -34,6 +34,7 @@ class System_Api_QueryGenerator extends System_Api_Base
 
     private $folderId = 0;
     private $typeId = 0;
+    private $projectId = 0;
     private $attributes = array();
 
     private $columns = array();
@@ -168,6 +169,14 @@ class System_Api_QueryGenerator extends System_Api_Base
         $info->setMetadata( 'value', $text );
 
         $this->filters[] = $info;
+    }
+
+    /**
+    * Only include issues from specified project.
+    */
+    public function setProject( $project )
+    {
+        $this->projectId = $project[ 'project_id' ];
     }
 
     /**
@@ -515,6 +524,11 @@ class System_Api_QueryGenerator extends System_Api_Base
                 $conditions[] = 'p.is_public = 1';
 
             $conditions[] = 'p.is_archived = 0';
+        }
+
+        if ( $this->projectId != 0 ) {
+            $conditions[] = 'p.project_id = %d';
+            $this->arguments[] = $this->projectId;
         }
 
         if ( $this->sinceStamp != null ) {
