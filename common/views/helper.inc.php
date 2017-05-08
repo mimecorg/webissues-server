@@ -230,8 +230,8 @@ class Common_Views_Helper extends System_Web_Base
         if ( $definition != null ) {
             $this->loadView( $definition );
         } else {
-            $this->selectedColumns[ System_Api_Column::ModifiedBy ] = $this->columns[ System_Api_Column::ModifiedBy ];
             $this->selectedColumns[ System_Api_Column::ModifiedDate ] = $this->columns[ System_Api_Column::ModifiedDate ];
+            $this->selectedColumns[ System_Api_Column::ModifiedBy ] = $this->columns[ System_Api_Column::ModifiedBy ];
         }
         $result[ 'columns' ] = $this->getViewColumnsAsString();
         $result[ 'sort' ] = $this->getSortAsString();

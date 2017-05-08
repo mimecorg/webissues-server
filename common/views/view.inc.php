@@ -162,8 +162,8 @@ class Common_Views_View extends System_Web_Component
                 $this->helper->loadView( $definition );
                 $this->processDefinition();
             } else {
-                $this->selectedColumns[ System_Api_Column::ModifiedBy ] = $this->columns[ System_Api_Column::ModifiedBy ];
                 $this->selectedColumns[ System_Api_Column::ModifiedDate ] = $this->columns[ System_Api_Column::ModifiedDate ];
+                $this->selectedColumns[ System_Api_Column::ModifiedBy ] = $this->columns[ System_Api_Column::ModifiedBy ];
             }
 
             $this->populateSortOptions();
