@@ -168,8 +168,11 @@ class System_Api_HistoryProvider
         $query = 'SELECT ch.change_id, ch.change_type, ch.stamp_id,'
             . ' sc.stamp_time AS created_date, uc.user_id AS created_user, uc.user_name AS created_by,'
             . ' sm.stamp_time AS modified_date, um.user_id AS modified_user, um.user_name AS modified_by';
-        if ( $itemType == self::AllHistory )
-            $query .= ', ch.attr_id, ch.value_old, ch.value_new, a.attr_name, a.attr_def, ff.folder_name AS from_folder_name, tf.folder_name AS to_folder_name';
+        if ( $itemType == self::AllHistory ) {
+            $query .= ', ch.attr_id, ch.value_old, ch.value_new, a.attr_name, a.attr_def,'
+                . ' fp.project_name AS from_project_name, ff.folder_name AS from_folder_name,'
+                . ' tp.project_name AS to_project_name, tf.folder_name AS to_folder_name';
+        }
         if ( $itemType == self::AllHistory || $itemType == self::Comments || $itemType == self::CommentsAndFiles )
             $query .= ', c.comment_text, c.comment_format';
         if ( $itemType == self::AllHistory || $itemType == self::Files || $itemType == self::CommentsAndFiles )
@@ -181,16 +184,18 @@ class System_Api_HistoryProvider
             . ' JOIN {users} AS um ON um.user_id = sm.user_id';
         if ( $itemType == self::AllHistory ) {
             $query .= ' LEFT OUTER JOIN {attr_types} AS a ON a.attr_id = ch.attr_id'
-                . ' LEFT OUTER JOIN {folders} AS ff ON ff.folder_id = ch.from_folder_id';
+                . ' LEFT OUTER JOIN {folders} AS ff ON ff.folder_id = ch.from_folder_id'
+                . ' LEFT OUTER JOIN {projects} AS fp ON fp.project_id = ff.project_id';
             if ( !$principal->isAuthenticated() )
-                $query .= ' AND ff.project_id IN ( SELECT project_id FROM {projects} WHERE is_public = 1 )';
+                $query .= ' AND fp.is_public = 1';
             else if ( !$principal->isAdministrator() )
-                $query .= ' AND ff.project_id IN ( SELECT project_id FROM {effective_rights} WHERE user_id = %4d )';
-            $query .= ' LEFT OUTER JOIN {folders} AS tf ON tf.folder_id = ch.to_folder_id';
+                $query .= ' AND fp.project_id IN ( SELECT project_id FROM {effective_rights} WHERE user_id = %4d )';
+            $query .= ' LEFT OUTER JOIN {folders} AS tf ON tf.folder_id = ch.to_folder_id'
+                . ' LEFT OUTER JOIN {projects} AS tp ON tp.project_id = tf.project_id';
             if ( !$principal->isAuthenticated() )
-                $query .= ' AND tf.project_id IN ( SELECT project_id FROM {projects} WHERE is_public = 1 )';
+                $query .= ' AND tp.is_public = 1';
             else if ( !$principal->isAdministrator() )
-                $query .= ' AND tf.project_id IN ( SELECT project_id FROM {effective_rights} WHERE user_id = %4d )';
+                $query .= ' AND tp.project_id IN ( SELECT project_id FROM {effective_rights} WHERE user_id = %4d )';
         }
         if ( $itemType == self::AllHistory || $itemType == self::Comments || $itemType == self::CommentsAndFiles ) {
             if ( $itemType == self::AllHistory || $itemType == self::CommentsAndFiles )

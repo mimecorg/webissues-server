@@ -198,8 +198,8 @@
 <ul class="changes">
 <li>
 <?php
-    $from = ( $item[ 'from_folder_name' ] == '' ) ? $this->tr( 'Unknown Folder' ) : '"' . $item[ 'from_folder_name' ] . '"';
-    $to = ( $item[ 'to_folder_name' ] == '' ) ? $this->tr( 'Unknown Folder' ) : '"' . $item[ 'to_folder_name' ] . '"';
+    $from = ( $item[ 'from_project_name' ] == '' ) ? $this->tr( 'Unknown Folder' ) : '"' . $item[ 'from_project_name' ] . ' &mdash; ' . $item[ 'from_folder_name' ] . '"';
+    $to = ( $item[ 'to_project_name' ] == '' ) ? $this->tr( 'Unknown Folder' ) : '"' . $item[ 'to_project_name' ] . ' &mdash; ' . $item[ 'to_folder_name' ] . '"';
     echo $this->tr( 'Issue moved from %1 to %2', null, $from, $to );
 ?>
 </li>
