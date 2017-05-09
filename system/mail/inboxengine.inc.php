@@ -230,6 +230,9 @@ class System_Mail_InboxEngine
         if ( $structure->ifdisposition && ( strtoupper( $structure->disposition ) == 'ATTACHMENT' || strtoupper( $structure->disposition ) == 'INLINE' ) ) {
             $result[ 'type' ] = 'attachment';
             $result[ 'name' ] = $this->getParameter( $structure, 'NAME' );
+        } else if ( $structure->type == 5 && $structure->ifid ) { // inline images without disposition
+            $result[ 'type' ] = 'attachment';
+            $result[ 'name' ] = $this->getParameter( $structure, 'NAME' );
         } else if ( $structure->type == 0 && $structure->ifsubtype && strtoupper( $structure->subtype ) == 'PLAIN' ) {
             $result[ 'type' ] = 'plain';
             $result[ 'charset' ] = $this->getParameter( $structure, 'CHARSET' );
