@@ -19,12 +19,12 @@
 <div class="pane-body">
 
 <?php $viewForm->renderFormOpen( null, array( 'class' => 'form-inline' ) ) ?>
-<?php $viewForm->renderSelect( $this->tr( 'View:' ), 'viewSelect', $viewOptions, array( 'style' => 'width: 15em;' ) ) ?>
+<?php $viewForm->renderSelect( $this->tr( 'View:' ), 'viewSelect', $viewOptions, array( 'style' => 'width: 10em;' ) ) ?>
 <?php $viewForm->renderSubmit( $this->tr( 'Go' ), 'go' ) ?>
 <?php $viewForm->renderFormClose() ?>
 
 <?php $searchForm->renderFormOpen( null, array( 'class' => 'form-inline form-inline-right' ) ) ?>
-<?php $searchForm->renderText( null, 'searchBox', array( 'style' => 'width: 15em;' ) ) ?>
+<?php $searchForm->renderText( null, 'searchBox', array( 'style' => 'width: 10em;' ) ) ?>
 <?php $searchForm->renderText( null, 'searchOption', array( 'type' => 'hidden' ) ) ?>
 <?php $searchForm->renderSubmit( $this->tr( 'Search' ), 'search' ) ?>
 <?php $searchForm->renderFormClose() ?>
