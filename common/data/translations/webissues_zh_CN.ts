@@ -52,12 +52,12 @@
     <message>
         <location filename="../../../admin/archive/index.php" line="33"/>
         <source>Projects Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>项目归档</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="64"/>
         <source>Restore Project</source>
-        <translation type="unfinished"></translation>
+        <translation>还原项目</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="65"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../../../admin/archive/index.php" line="67"/>
         <source>View Description</source>
-        <translation type="unfinished"></translation>
+        <translation>查看描述</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.html.php" line="11"/>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../../../admin/archive/index.html.php" line="30"/>
         <source>There are no archived projects.</source>
-        <translation type="unfinished"></translation>
+        <translation>没有已归档的项目。</translation>
     </message>
 </context>
 <context>
@@ -118,12 +118,12 @@
     <message>
         <location filename="../../../admin/archive/restore.php" line="37"/>
         <source>Restore Project</source>
-        <translation type="unfinished"></translation>
+        <translation>还原项目</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/restore.html.php" line="3"/>
         <source>Are you sure you want to restore project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation type="unfinished"></translation>
+        <translation>你确定要还原项目&lt;strong&gt;%1&lt;/strong&gt;吗？</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/restore.html.php" line="8"/>
@@ -295,12 +295,12 @@
     <message>
         <location filename="../../../admin/index.html.php" line="21"/>
         <source>Access Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>访问设置</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="22"/>
         <source>Configure anonymous access and user self-registration.</source>
-        <translation type="unfinished"></translation>
+        <translation>配置匿名访问和用户自我注册。</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="23"/>
@@ -325,12 +325,12 @@
     <message>
         <location filename="../../../admin/index.html.php" line="27"/>
         <source>Advanced Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>高级设置</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="28"/>
         <source>Configure advanced settings for this server.</source>
-        <translation type="unfinished"></translation>
+        <translation>配置此服务器的高级设置。</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="34"/>
@@ -345,12 +345,12 @@
     <message>
         <location filename="../../../admin/index.html.php" line="45"/>
         <source>Projects Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>项目归档</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="46"/>
         <source>Restore and delete archived projects.</source>
-        <translation type="unfinished"></translation>
+        <translation>还原和删除归档项目。</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="37"/>
@@ -860,7 +860,7 @@
     <message>
         <location filename="../../../admin/settings/access.php" line="33"/>
         <source>Access Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>访问设置</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="6"/>
@@ -928,7 +928,7 @@
     <message>
         <location filename="../../../admin/settings/advanced.php" line="33"/>
         <source>Advanced Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>高级设置</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.php" line="69"/>
@@ -1285,12 +1285,12 @@
     <message>
         <location filename="../../../admin/settings/index.html.php" line="10"/>
         <source>Mobile Page Size</source>
-        <translation type="unfinished"></translation>
+        <translation>移动端页面大小</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="12"/>
         <source>The maximum number of projects, issues and items in history which are displayed in the mobile version.</source>
-        <translation type="unfinished"></translation>
+        <translation>在移动版本历史中显示的项目、缺陷和条目的数量。</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="14"/>
@@ -3646,47 +3646,52 @@
         <translation>公开视图</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="231"/>
+        <location filename="../../../client/issueslist.inc.php" line="133"/>
+        <source>All Projects</source>
+        <translation>所有项目</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.inc.php" line="262"/>
         <source>Add Issue</source>
         <translation>添加工作项</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="232"/>
+        <location filename="../../../client/issueslist.inc.php" line="263"/>
         <source>Mark All As Read</source>
         <translation>标记所有为已读</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="233"/>
+        <location filename="../../../client/issueslist.inc.php" line="264"/>
         <source>Mark All As Unread</source>
         <translation>标记所有为未读</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="235"/>
+        <location filename="../../../client/issueslist.inc.php" line="266"/>
         <source>Manage Alerts</source>
         <translation>管理警告</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="236"/>
+        <location filename="../../../client/issueslist.inc.php" line="267"/>
         <source>Export To CSV</source>
         <translation>导出为CSV</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="243"/>
+        <location filename="../../../client/issueslist.inc.php" line="274"/>
         <source>Add View</source>
         <translation>管理视图</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="245"/>
+        <location filename="../../../client/issueslist.inc.php" line="276"/>
         <source>Modify View</source>
         <translation>修改视图</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="247"/>
+        <location filename="../../../client/issueslist.inc.php" line="278"/>
         <source>Clone View</source>
         <translation>复制视图</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="234"/>
+        <location filename="../../../client/issueslist.inc.php" line="265"/>
         <source>Manage Views</source>
         <translation>管理视图</translation>
     </message>
@@ -3697,31 +3702,37 @@
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="12"/>
+        <location filename="../../../client/issueslist.html.php" line="21"/>
         <source>Go</source>
         <translation>执行</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="21"/>
+        <location filename="../../../client/issueslist.html.php" line="20"/>
+        <source>Project:</source>
+        <translation>项目：</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.html.php" line="27"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="81"/>
+        <location filename="../../../client/issueslist.html.php" line="87"/>
         <source>There are no issues matching the search criteria.</source>
         <translation>没有相符的工作项。</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="85"/>
+        <location filename="../../../client/issueslist.html.php" line="91"/>
         <source>There are no issues matching the selected view.</source>
         <translation>没有相符的视图。</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="89"/>
+        <location filename="../../../client/issueslist.html.php" line="95"/>
         <source>There are no issues of this type.</source>
         <translation>此类型没有工作项。</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="93"/>
+        <location filename="../../../client/issueslist.html.php" line="99"/>
         <source>There are no issues in this folder.</source>
         <translation>此目录没有条目。</translation>
     </message>
@@ -4012,17 +4023,17 @@
     <message>
         <location filename="../../../client/projects/archiveproject.php" line="40"/>
         <source>Archive Project</source>
-        <translation type="unfinished"></translation>
+        <translation>项目归档</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="3"/>
         <source>Are you sure you want to move project &lt;strong&gt;%1&lt;/strong&gt; to the archive?</source>
-        <translation type="unfinished"></translation>
+        <translation>你确定你想移动项目&lt;strong&gt;%1&lt;/strong&gt;到档案中？</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="5"/>
         <source>You can unarchive the project later by going to the Projects Archive in the Administration Panel.</source>
-        <translation type="unfinished"></translation>
+        <translation>你可以在稍后到管理员面板中的项目归档中恢复本项目。</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="10"/>
@@ -4202,7 +4213,7 @@
     <message>
         <location filename="../../../client/projects/index.php" line="96"/>
         <source>Archive Project</source>
-        <translation type="unfinished"></translation>
+        <translation>项目归档</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="97"/>
@@ -4644,7 +4655,7 @@
     <message>
         <location filename="../../breadcrumbs.inc.php" line="142"/>
         <source>Projects Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>项目归档</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="170"/>
@@ -5126,14 +5137,14 @@
         <translation>编辑属性</translation>
     </message>
     <message>
-        <location filename="../../issues/issue.inc.php" line="106"/>
-        <source>Clone Issue</source>
-        <translation>复制工作项</translation>
-    </message>
-    <message>
         <location filename="../../issues/issue.inc.php" line="78"/>
         <source>Add Issue</source>
         <translation>添加工作项</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="106"/>
+        <source>Clone Issue</source>
+        <translation>复制工作项</translation>
     </message>
     <message>
         <location filename="../../issues/issue.inc.php" line="146"/>
@@ -5798,7 +5809,7 @@
     <message>
         <location filename="../../pagelayout.html.php" line="36"/>
         <source>Mobile Version</source>
-        <translation type="unfinished"></translation>
+        <translation>移动版本</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="37"/>
@@ -7236,7 +7247,7 @@
     <message>
         <location filename="../../../mobile/client/projectstree.html.php" line="61"/>
         <source>View Description</source>
-        <translation type="unfinished"></translation>
+        <translation>查看描述</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/projectstree.html.php" line="88"/>
@@ -7309,7 +7320,7 @@
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="61"/>
         <source>Full Version</source>
-        <translation type="unfinished"></translation>
+        <translation>完整版本</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="62"/>
@@ -7328,67 +7339,67 @@
 <context>
     <name>System_Api_ProjectManager</name>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="299"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="305"/>
         <source>Added project &quot;%1&quot;</source>
         <translation>已经添加项目“%1”</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="337"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="343"/>
         <source>Renamed project &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>已重命名项目“%1”为“%2”</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="362"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="368"/>
         <source>Enabled public access for project &quot;%1&quot;</source>
         <translation>允许&quot;%1&quot;项目的公共接入</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="365"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="371"/>
         <source>Disabled public access for project &quot;%1&quot;</source>
         <translation>禁止“%1”项目的公共接入</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="385"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="391"/>
         <source>Archived project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>已归档项目 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="404"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="410"/>
         <source>Restored project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>还原项目 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="445"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="451"/>
         <source>Deleted project &quot;%1&quot; with folders</source>
         <translation>项目“%1”及目录已经删除</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="448"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="454"/>
         <source>Deleted project &quot;%1&quot;</source>
         <translation>项目“%1”已经删除</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="503"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="509"/>
         <source>Added folder &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>已经在项目“%2”添加目录“%1”</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="542"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="548"/>
         <source>Renamed folder &quot;%1&quot; to &quot;%2&quot; in project &quot;%3&quot;</source>
         <translation>已经在项目“%3”中重命名目录“%1”为“%2”</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="582"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="588"/>
         <source>Deleted folder &quot;%1&quot; with issues from project &quot;%2&quot;</source>
         <translation>已经从项目“%2”中删除目录“%1”及工作项</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="585"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="591"/>
         <source>Deleted folder &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation>已经从项目“%2”中删除目录“%1”</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="642"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="648"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
         <translation>已经从项目“%2”中移动目录“%1”到“%3”</translation>
     </message>
@@ -7556,22 +7567,22 @@
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../../../system/web/columnhelper.inc.php" line="44"/>
+        <location filename="../../../system/web/columnhelper.inc.php" line="45"/>
         <source>Created By</source>
         <translation>创建人</translation>
     </message>
     <message>
-        <location filename="../../../system/web/columnhelper.inc.php" line="45"/>
+        <location filename="../../../system/web/columnhelper.inc.php" line="44"/>
         <source>Created Date</source>
         <translation>创建日期</translation>
     </message>
     <message>
-        <location filename="../../../system/web/columnhelper.inc.php" line="46"/>
+        <location filename="../../../system/web/columnhelper.inc.php" line="47"/>
         <source>Modified By</source>
         <translation>修改人</translation>
     </message>
     <message>
-        <location filename="../../../system/web/columnhelper.inc.php" line="47"/>
+        <location filename="../../../system/web/columnhelper.inc.php" line="46"/>
         <source>Modified Date</source>
         <translation>修改时间</translation>
     </message>
@@ -7977,7 +7988,7 @@
     <message>
         <location filename="../../../system/web/grid.inc.php" line="349"/>
         <source>%1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%2 的 %1</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="399"/>

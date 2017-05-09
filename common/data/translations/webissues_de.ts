@@ -3646,47 +3646,52 @@
         <translation>Öffentliche Ansichten</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="231"/>
+        <location filename="../../../client/issueslist.inc.php" line="133"/>
+        <source>All Projects</source>
+        <translation>Alle Projekte</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.inc.php" line="262"/>
         <source>Add Issue</source>
         <translation>Aufgabe hinzufügen</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="232"/>
+        <location filename="../../../client/issueslist.inc.php" line="263"/>
         <source>Mark All As Read</source>
         <translation>Alles als gelesen markieren</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="233"/>
+        <location filename="../../../client/issueslist.inc.php" line="264"/>
         <source>Mark All As Unread</source>
         <translation>Als ungelesen markieren</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="235"/>
+        <location filename="../../../client/issueslist.inc.php" line="266"/>
         <source>Manage Alerts</source>
         <translation>Alarme verwalten</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="236"/>
+        <location filename="../../../client/issueslist.inc.php" line="267"/>
         <source>Export To CSV</source>
         <translation>Nach CSV exportieren</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="243"/>
+        <location filename="../../../client/issueslist.inc.php" line="274"/>
         <source>Add View</source>
         <translation>Ansicht hinzufügen</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="245"/>
+        <location filename="../../../client/issueslist.inc.php" line="276"/>
         <source>Modify View</source>
         <translation>Ansicht ändern</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="247"/>
+        <location filename="../../../client/issueslist.inc.php" line="278"/>
         <source>Clone View</source>
         <translation>Ansicht klonen</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.inc.php" line="234"/>
+        <location filename="../../../client/issueslist.inc.php" line="265"/>
         <source>Manage Views</source>
         <translation>Ansichten verwalten</translation>
     </message>
@@ -3697,31 +3702,37 @@
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="12"/>
+        <location filename="../../../client/issueslist.html.php" line="21"/>
         <source>Go</source>
         <translation>Los</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="21"/>
+        <location filename="../../../client/issueslist.html.php" line="20"/>
+        <source>Project:</source>
+        <translation>Projekt:</translation>
+    </message>
+    <message>
+        <location filename="../../../client/issueslist.html.php" line="27"/>
         <source>Search</source>
         <translation>Suchen</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="81"/>
+        <location filename="../../../client/issueslist.html.php" line="87"/>
         <source>There are no issues matching the search criteria.</source>
         <translation>Es sind keine Aufgaben vorhanden, die die Suchkriterien erfüllen.</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="85"/>
+        <location filename="../../../client/issueslist.html.php" line="91"/>
         <source>There are no issues matching the selected view.</source>
         <translation>Es sind keine Aufgaben vorhanden, die mit der ausgewählten Ansicht übereinstimmt.</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="89"/>
+        <location filename="../../../client/issueslist.html.php" line="95"/>
         <source>There are no issues of this type.</source>
         <translation>Es sind keine Aufgaben von diesem Typ vorhanden.</translation>
     </message>
     <message>
-        <location filename="../../../client/issueslist.html.php" line="93"/>
+        <location filename="../../../client/issueslist.html.php" line="99"/>
         <source>There are no issues in this folder.</source>
         <translation>Dieser Ordner enthält keine Aufgaben.</translation>
     </message>
@@ -7328,67 +7339,67 @@
 <context>
     <name>System_Api_ProjectManager</name>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="299"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="305"/>
         <source>Added project &quot;%1&quot;</source>
         <translation>Projekt &quot;%1&quot; hinzugefügt</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="337"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="343"/>
         <source>Renamed project &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>Projekt &quot;%1&quot; in &quot;%2&quot; unbenannt</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="362"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="368"/>
         <source>Enabled public access for project &quot;%1&quot;</source>
         <translation>Öffentlichen Zugriff auf Projekt &quot;%1&quot; aktiviert</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="365"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="371"/>
         <source>Disabled public access for project &quot;%1&quot;</source>
         <translation>Öffentlichen Zugriff auf Projekt &quot;%1&quot; deaktiviert</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="385"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="391"/>
         <source>Archived project &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="404"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="410"/>
         <source>Restored project &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="445"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="451"/>
         <source>Deleted project &quot;%1&quot; with folders</source>
         <translation>Projekt &quot;%1&quot; inkl. Ordnern gelöscht</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="448"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="454"/>
         <source>Deleted project &quot;%1&quot;</source>
         <translation>Projekt &quot;%1&quot; gelöscht</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="503"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="509"/>
         <source>Added folder &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Ordner &quot;%1&quot; zum Projekt &quot;%2&quot; hinzufügt</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="542"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="548"/>
         <source>Renamed folder &quot;%1&quot; to &quot;%2&quot; in project &quot;%3&quot;</source>
         <translation>Ordner &quot;%1&quot; im Projekt &quot;%3&quot; in &quot;%2&quot; umbenannt</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="582"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="588"/>
         <source>Deleted folder &quot;%1&quot; with issues from project &quot;%2&quot;</source>
         <translation>Ordner &quot;%1&quot; inkl. Aufgaben vom Projekt &quot;%2&quot; gelöscht</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="585"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="591"/>
         <source>Deleted folder &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation>Ordner &quot;%1&quot; aus Projekt &quot;%2&quot; gelöscht</translation>
     </message>
     <message>
-        <location filename="../../../system/api/projectmanager.inc.php" line="642"/>
+        <location filename="../../../system/api/projectmanager.inc.php" line="648"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
         <translation>Ordner &quot;%1&quot; von Projekt &quot;%2&quot; zu Projekt &quot;%3&quot; verschoben</translation>
     </message>
@@ -7556,22 +7567,22 @@
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../../../system/web/columnhelper.inc.php" line="44"/>
+        <location filename="../../../system/web/columnhelper.inc.php" line="45"/>
         <source>Created By</source>
         <translation>Erstellt von</translation>
     </message>
     <message>
-        <location filename="../../../system/web/columnhelper.inc.php" line="45"/>
+        <location filename="../../../system/web/columnhelper.inc.php" line="44"/>
         <source>Created Date</source>
         <translation>Erstellungsdatum</translation>
     </message>
     <message>
-        <location filename="../../../system/web/columnhelper.inc.php" line="46"/>
+        <location filename="../../../system/web/columnhelper.inc.php" line="47"/>
         <source>Modified By</source>
         <translation>Geändert von</translation>
     </message>
     <message>
-        <location filename="../../../system/web/columnhelper.inc.php" line="47"/>
+        <location filename="../../../system/web/columnhelper.inc.php" line="46"/>
         <source>Modified Date</source>
         <translation>Änderungsdatum</translation>
     </message>

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pl">
+<TS version="2.0" language="sr">
 <context>
     <name>Admin_Archive_Delete</name>
     <message>
         <location filename="../../../admin/archive/delete.php" line="37"/>
         <source>Delete Project</source>
-        <translation>Usuń projekt</translation>
+        <translation>Obriši projekat</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/delete.html.php" line="3"/>
         <source>Are you sure you want to delete project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć projekt &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete projekat &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/delete.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues in this project will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Uwaga:&lt;/strong&gt; Wszystkie foldery i sprawy w tym projekcie zostaną trwale usunięte.</translation>
+        <translation>&lt;strong&gt;Pažnja:&lt;/strong&gt; Sve fascikle i problemi u obom projektu će biti trajno obrisani.</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/delete.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/delete.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../../../admin/archive/description.html.php" line="6"/>
         <source>Last Edited:</source>
-        <translation>Ostatnio zmieniony:</translation>
+        <translation>Poslednja izmena:</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/description.html.php" line="5"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../../../admin/archive/description.html.php" line="15"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
 </context>
 <context>
@@ -52,37 +52,37 @@
     <message>
         <location filename="../../../admin/archive/index.php" line="33"/>
         <source>Projects Archive</source>
-        <translation>Archiwum projektów</translation>
+        <translation>Arhiva projekta</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="64"/>
         <source>Restore Project</source>
-        <translation>Przywróć projekt</translation>
+        <translation>Povrati projekat</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="65"/>
         <source>Rename Project</source>
-        <translation>Zmień nazwę projektu</translation>
+        <translation>Promeni ime projekta</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="66"/>
         <source>Delete Project</source>
-        <translation>Usuń projekt</translation>
+        <translation>Obriši projekat</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.php" line="67"/>
         <source>View Description</source>
-        <translation>Wyświetl opis</translation>
+        <translation>Opis pregleda</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.html.php" line="11"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/index.html.php" line="30"/>
         <source>There are no archived projects.</source>
-        <translation>Nie ma zarchiwizowanych projektów.</translation>
+        <translation>Nema arhiviranih projekata.</translation>
     </message>
 </context>
 <context>
@@ -90,27 +90,27 @@
     <message>
         <location filename="../../../admin/archive/rename.php" line="37"/>
         <source>Rename Project</source>
-        <translation>Zmień nazwę projektu</translation>
+        <translation>Promeni ime projekta</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/rename.html.php" line="3"/>
         <source>Enter the new name of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Podaj nową nazwę projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Unesi novo ime projekta &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/rename.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/rename.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/rename.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -118,22 +118,22 @@
     <message>
         <location filename="../../../admin/archive/restore.php" line="37"/>
         <source>Restore Project</source>
-        <translation>Przywróć projekt</translation>
+        <translation>Povrati projekat</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/restore.html.php" line="3"/>
         <source>Are you sure you want to restore project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz przywrócić projekt &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da povratite projekat &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/restore.html.php" line="8"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/archive/restore.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -141,42 +141,42 @@
     <message>
         <location filename="../../../admin/events/event.php" line="33"/>
         <source>Event Details</source>
-        <translation>Szczegóły zdarzenia</translation>
+        <translation>Detalji događaja</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="7"/>
         <source>Type:</source>
-        <translation>Typ:</translation>
+        <translation>Tip:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="11"/>
         <source>Severity:</source>
-        <translation>Poziom:</translation>
+        <translation>Ozbiljnost:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="15"/>
         <source>Date:</source>
-        <translation>Data:</translation>
+        <translation>Datum:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="19"/>
         <source>Message:</source>
-        <translation>Komunikat:</translation>
+        <translation>Poruka:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="23"/>
         <source>User name:</source>
-        <translation>Nazwa użytkownika:</translation>
+        <translation>Korisničko ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="27"/>
         <source>Host name:</source>
-        <translation>Nazwa hosta:</translation>
+        <translation>Server:</translation>
     </message>
     <message>
         <location filename="../../../admin/events/event.html.php" line="33"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
 </context>
 <context>
@@ -184,37 +184,37 @@
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Information</source>
-        <translation>Informacja</translation>
+        <translation>Informacije</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Warning</source>
-        <translation>Ostrzeżenie</translation>
+        <translation>Upozorenje</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="40"/>
         <source>Error</source>
-        <translation>Błąd</translation>
+        <translation>Greška</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="49"/>
         <source>Errors</source>
-        <translation>Błędy</translation>
+        <translation>Greške</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="50"/>
         <source>Access</source>
-        <translation>Dostęp</translation>
+        <translation>Pristup</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="51"/>
         <source>Audit</source>
-        <translation>Audyt</translation>
+        <translation>Revizija</translation>
     </message>
     <message>
         <location filename="../../../admin/events/helper.inc.php" line="52"/>
         <source>Cron</source>
-        <translation>Zadania</translation>
+        <translation>Cron</translation>
     </message>
 </context>
 <context>
@@ -222,32 +222,32 @@
     <message>
         <location filename="../../../admin/events/index.php" line="33"/>
         <source>Event Log</source>
-        <translation>Dziennik zdarzeń</translation>
+        <translation>Dnevnik događaja</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="4"/>
         <source>All Events</source>
-        <translation>Wszystkie zdarzenia</translation>
+        <translation>Svi događaji</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="12"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Tip</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="13"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="14"/>
         <source>Message</source>
-        <translation>Komunikat</translation>
+        <translation>Poruka</translation>
     </message>
     <message>
         <location filename="../../../admin/events/index.html.php" line="33"/>
         <source>There are no events of the selected type.</source>
-        <translation>Nie ma zdarzeń wybranego typu.</translation>
+        <translation>Nema događaja izabranog tipa</translation>
     </message>
 </context>
 <context>
@@ -255,132 +255,132 @@
     <message>
         <location filename="../../../admin/index.php" line="33"/>
         <source>Administration Panel</source>
-        <translation>Panel administracyjny</translation>
+        <translation>Administrativni panel</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="7"/>
         <source>General Information</source>
-        <translation>Ogólne informacje</translation>
+        <translation>Opšte informacije</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="8"/>
         <source>Show information about this server.</source>
-        <translation>Pokaż informacje o tym serwerze.</translation>
+        <translation>Prikaži informacije o ovom serveru.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="9"/>
         <source>Event Log</source>
-        <translation>Dziennik zdarzeń</translation>
+        <translation>Dnevnik događaja</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="10"/>
         <source>Show recent entries from the event log.</source>
-        <translation>Pokaż ostatnie zdarzenia z dziennika zdarzeń.</translation>
+        <translation>Prikaži nedavne unose u dnevnik događaja.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="16"/>
         <source>Configuration</source>
-        <translation>Konfiguracja</translation>
+        <translation>Podešavanja</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="19"/>
         <source>Server Settings</source>
-        <translation>Ustawienia serwera</translation>
+        <translation>Podešavanja servera</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="20"/>
         <source>Configure default language and other settings for this server.</source>
-        <translation>Zmień domyślny język i inne ustawienia tego serwera.</translation>
+        <translation>Podesi podražumevani jezik i druge opcije za ovaj server.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="21"/>
         <source>Access Settings</source>
-        <translation>Ustawienia dostępu</translation>
+        <translation>Podešavanje pristupa</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="22"/>
         <source>Configure anonymous access and user self-registration.</source>
-        <translation>Zmień ustawienia dostępu anonimowego i rejestracji użytkowników.</translation>
+        <translation>Podesi anonimni pristup i registraciju korisnika</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="23"/>
         <source>Email Settings</source>
-        <translation>Ustawienia e-maili</translation>
+        <translation>Email podešavanja</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="24"/>
         <source>Configure notification email settings.</source>
-        <translation>Zmień ustawienia powiadomień mailowych.</translation>
+        <translation>Podesi email obaveštenja</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="25"/>
         <source>Inbox Settings</source>
-        <translation>Ustawienia skrzynki odbiorczej</translation>
+        <translation>Podešavanje Inbox-a</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="26"/>
         <source>Configure email inbox settings.</source>
-        <translation>Zmień ustawienia skrzynki odbiorczej.</translation>
+        <translation>Podesi email inbox.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="27"/>
         <source>Advanced Settings</source>
-        <translation>Ustawienia zaawansowane</translation>
+        <translation>Napredna podešavanja</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="28"/>
         <source>Configure advanced settings for this server.</source>
-        <translation>Zmień zaawansowane ustawienia tego serwera.</translation>
+        <translation>Podesi napredna podešavanja za ovaj server.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="34"/>
         <source>Management</source>
-        <translation>Zarządzanie</translation>
+        <translation>Upravljanje</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="38"/>
         <source>Create and edit user accounts.</source>
-        <translation>Twórz i zmieniaj konta użytkowników.</translation>
+        <translation>Kreiraj i izmeni korisničke naloge.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="45"/>
         <source>Projects Archive</source>
-        <translation>Archiwum projektów</translation>
+        <translation>Arhiva projekata</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="46"/>
         <source>Restore and delete archived projects.</source>
-        <translation>Przywracaj i usuwaj zarchiwizowane projekty.</translation>
+        <translation>Povrati i briši arhivirane projekte.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="37"/>
         <source>User Accounts</source>
-        <translation>Konta użytkowników</translation>
+        <translation>Korisnički nalozi</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="4"/>
         <source>Information</source>
-        <translation>Informacje</translation>
+        <translation>Informacije</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="40"/>
         <source>Registration Requests</source>
-        <translation>Zgłoszenia rejestracji</translation>
+        <translation>Zahtevi za registraciju</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="41"/>
         <source>Approve and reject pending user registration requests.</source>
-        <translation>Zatwierdzaj i odrzucaj zgłoszenia rejestracji użytkowników.</translation>
+        <translation>Odobri i odbij zahteve za registraciju korisnika na čekanju.</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="43"/>
         <source>Issue Types</source>
-        <translation>Typy spraw</translation>
+        <translation>Tipovi problema</translation>
     </message>
     <message>
         <location filename="../../../admin/index.html.php" line="44"/>
         <source>Create and edit issue types.</source>
-        <translation>Twórz i zmieniaj typy spraw.</translation>
+        <translation>Kreiraj i menjaj tipove problema.</translation>
     </message>
 </context>
 <context>
@@ -388,27 +388,27 @@
     <message>
         <location filename="../../../admin/info/database.html.php" line="4"/>
         <source>Database Configuration</source>
-        <translation>Konfiguracja bazy danych</translation>
+        <translation>Podešavanje baze podataka</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="8"/>
         <source>Database server:</source>
-        <translation>Serwer bazy danych:</translation>
+        <translation>Server baze:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="12"/>
         <source>Host name:</source>
-        <translation>Nazwa hosta:</translation>
+        <translation>Naziv host-a:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="16"/>
         <source>Database name:</source>
-        <translation>Nazwa bazy danych:</translation>
+        <translation>Naziv baze:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/database.html.php" line="20"/>
         <source>Table prefix:</source>
-        <translation>Prefiks tabel:</translation>
+        <translation>Prefix tabela:</translation>
     </message>
 </context>
 <context>
@@ -416,32 +416,32 @@
     <message>
         <location filename="../../../admin/info/generateuuid.php" line="33"/>
         <source>Generate New Unique ID</source>
-        <translation>Wygeneruj nowy unikalny ID</translation>
+        <translation>Kreiraj novi unikatni ID</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="3"/>
         <source>A new, random unique identifier will be assigned to this server.</source>
-        <translation>Nowy, losowy, unikalny identyfikator zostanie przypisany do tego serwera.</translation>
+        <translation>Novi, slučajni unikatni identifikator će biti dodeljen ovom serveru.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="9"/>
         <source>Current ID:</source>
-        <translation>Obecny ID:</translation>
+        <translation>Trenutni ID:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="13"/>
         <source>New ID:</source>
-        <translation>Nowy ID:</translation>
+        <translation>Novi ID:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="19"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/info/generateuuid.html.php" line="20"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -449,153 +449,153 @@
     <message>
         <location filename="../../../admin/info/index.php" line="33"/>
         <source>General Information</source>
-        <translation>Ogólne informacje</translation>
+        <translation>Opšte informacije</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="41"/>
         <source>enabled</source>
         <comment>anonymous access</comment>
-        <translation>włączony</translation>
+        <translation>omogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="43"/>
         <source>disabled</source>
         <comment>anonymous access</comment>
-        <translation>wyłączony</translation>
+        <translation>onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="47"/>
         <source>enabled</source>
         <comment>user registration</comment>
-        <translation>włączona</translation>
+        <translation>omogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="49"/>
         <source>disabled</source>
         <comment>user registration</comment>
-        <translation>wyłączona</translation>
+        <translation>onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="53"/>
         <source>standard PHP mailer</source>
-        <translation>standardowy mailer PHP</translation>
+        <translation>standardni PHP mailer</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="55"/>
         <source>SMTP server</source>
-        <translation>serwer SMTP</translation>
+        <translation>SMTP server</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="57"/>
         <source>disabled</source>
         <comment>sending emails</comment>
-        <translation>wyłączone</translation>
+        <translation>onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="66"/>
         <source>POP3 server</source>
-        <translation>serwer POP3</translation>
+        <translation>POP3 server</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="68"/>
         <source>IMAP server</source>
-        <translation>serwer IMAP</translation>
+        <translation>IMAP server</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="70"/>
         <source>disabled</source>
         <comment>email inbox</comment>
-        <translation>wyłączona</translation>
+        <translation>onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="90"/>
         <source>User self-registration requires sending emails to be configured.</source>
-        <translation>Rejestracja użytkowników wymaga włączenia wysyłania e-maili.</translation>
+        <translation>Samostalna registracija korisnika zahteva da se konfiguriše slanje email-ova.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="93"/>
         <source>Sending or receiving emails requires the cron job to be running.</source>
-        <translation>Wysyłanie lub odbieranie e-maili wymaga uruchomionego zadania cyklicznego.</translation>
+        <translation>Slanje i primanje mailova zahteva da je cron zadatak pokrenut.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="99"/>
         <source>%1 seconds ago</source>
-        <translation>%1 sekund temu</translation>
+        <translation>pre %1 sekundi</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="103"/>
         <source>%1 minutes ago</source>
-        <translation>%1 minut temu</translation>
+        <translation>pre %1 minuta</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="107"/>
         <source>%1 hours ago</source>
-        <translation>%1 godzin temu</translation>
+        <translation>pre %1 sati</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="109"/>
         <source>more than %1 hours ago</source>
-        <translation>więcej niż %1 godzin temu</translation>
+        <translation>pre više od  %1 sati</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.php" line="87"/>
         <source>never</source>
-        <translation>nigdy</translation>
+        <translation>nikad</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="4"/>
         <source>About WebIssues</source>
-        <translation>O programie WebIssues</translation>
+        <translation>O WebIssues</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="10"/>
         <source>Server Configuration</source>
-        <translation>Konfiguracja serwera</translation>
+        <translation>Konfiguracija servera</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="14"/>
         <source>Anonymous access:</source>
-        <translation>Dostęp anonimowy:</translation>
+        <translation>Anonimni pristup:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="18"/>
         <source>User registration:</source>
-        <translation>Rejestracja użytkowników:</translation>
+        <translation>Registracija korisnika:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="23"/>
         <source>Sending emails:</source>
-        <translation>Wysyłanie e-maili:</translation>
+        <translation>Slanje mailova:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="28"/>
         <source>Outgoing address:</source>
-        <translation>Adres nadawczy:</translation>
+        <translation>Odlazna adresa:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="34"/>
         <source>Outgoing server:</source>
-        <translation>Serwer nadawczy:</translation>
+        <translation>Odlazni server:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="40"/>
         <source>Email inbox:</source>
-        <translation>Skrzynka odbiorcza:</translation>
+        <translation>Email inbox:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="45"/>
         <source>Inbox address:</source>
-        <translation>Adres skrzynki odbiorczej:</translation>
+        <translation>Adresa inbox-a:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="51"/>
         <source>Inbox server:</source>
-        <translation>Serwer skrzynki odbiorczej:</translation>
+        <translation>Inbox server:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/index.html.php" line="57"/>
         <source>Cron last started:</source>
-        <translation>Zadanie cykliczne ostatnio uruchomione:</translation>
+        <translation>Cron poslednji put startovan:</translation>
     </message>
 </context>
 <context>
@@ -603,27 +603,27 @@
     <message>
         <location filename="../../../admin/info/renameserver.php" line="33"/>
         <source>Rename Server</source>
-        <translation>Zmień nazwę serwera</translation>
+        <translation>Preimenuj server</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="3"/>
         <source>Enter the new server name.</source>
-        <translation>Podaj nową nazwę serwera.</translation>
+        <translation>Unesite novo ime servera.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/info/renameserver.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -631,32 +631,32 @@
     <message>
         <location filename="../../../admin/info/server.inc.php" line="37"/>
         <source>Rename Server</source>
-        <translation>Zmień nazwę serwera</translation>
+        <translation>Preimenuj server</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.inc.php" line="38"/>
         <source>Generate New Unique ID</source>
-        <translation>Wygeneruj nowy unikalny ID</translation>
+        <translation>Kreiraj novi unikatni ID</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="4"/>
         <source>Server Information</source>
-        <translation>Informacje o serwerze</translation>
+        <translation>Informacije o serveru</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="14"/>
         <source>Database version:</source>
-        <translation>Wersja bazy danych:</translation>
+        <translation>Verzija baze podataka:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="18"/>
         <source>Server name:</source>
-        <translation>Nazwa serwera:</translation>
+        <translation>Naziv servera:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/server.html.php" line="22"/>
         <source>Unique ID:</source>
-        <translation>Unikalny ID:</translation>
+        <translation>Unikatni ID:</translation>
     </message>
 </context>
 <context>
@@ -665,85 +665,85 @@
         <location filename="../../../admin/info/site.inc.php" line="53"/>
         <location filename="../../../admin/info/site.inc.php" line="55"/>
         <source>Cannot access directory &apos;%1&apos;.</source>
-        <translation>Brak dostępu do katalogu &apos;%1&apos;.</translation>
+        <translation>Ne mogu pristupiti direktorijumu &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.inc.php" line="57"/>
         <source>Cannot access file &apos;%1&apos;.</source>
-        <translation>Brak dostępu do pliku &apos;%1&apos;.</translation>
+        <translation>Ne mogu pristupiti datoteci &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="12"/>
         <source>Base URL address:</source>
-        <translation>Podstawowy adres URL:</translation>
+        <translation>Osnovna URL adresa:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="4"/>
         <source>Site Configuration</source>
-        <translation>Konfiguracja instancji</translation>
+        <translation>Podešavanje lokacije</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="8"/>
         <source>Site name:</source>
-        <translation>Nazwa instancji:</translation>
+        <translation>Naziv lokacije:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="16"/>
         <source>Site directory:</source>
-        <translation>Katalog instancji:</translation>
+        <translation>Direktorijum lokacije:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="20"/>
         <source>Debugging log file:</source>
-        <translation>Plik logu debugowania:</translation>
+        <translation>Datoteka dnevnika debagovanja:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="21"/>
         <source>disabled</source>
         <comment>log file</comment>
-        <translation>wyłączony</translation>
+        <translation>onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="24"/>
         <source>Debugging information:</source>
-        <translation>Informacje debugowania:</translation>
+        <translation>Debugging informacije:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="25"/>
         <source>enabled</source>
         <comment>debug info</comment>
-        <translation>włączone</translation>
+        <translation>omogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="25"/>
         <source>disabled</source>
         <comment>debug info</comment>
-        <translation>wyłączone</translation>
+        <translation>onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="34"/>
         <source>Environment Information</source>
-        <translation>Informacje o środowisku</translation>
+        <translation>Informacije o okruženju</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="38"/>
         <source>PHP version:</source>
-        <translation>Wersja PHP:</translation>
+        <translation>PHP verzija:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="42"/>
         <source>Web server:</source>
-        <translation>Serwer WWW:</translation>
+        <translation>Web server:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="46"/>
         <source>Operating system:</source>
-        <translation>System operacyjny:</translation>
+        <translation>Operativni sistem:</translation>
     </message>
     <message>
         <location filename="../../../admin/info/site.html.php" line="50"/>
         <source>Host name:</source>
-        <translation>Nazwa hosta:</translation>
+        <translation>Naziv računara:</translation>
     </message>
 </context>
 <context>
@@ -751,42 +751,42 @@
     <message>
         <location filename="../../../admin/register/approve.php" line="50"/>
         <source>Approve Request</source>
-        <translation>Zatwierdź zgłoszenie</translation>
+        <translation>Odobri zahtev</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="6"/>
         <source>Select All</source>
-        <translation>Zaznacz wszystkie</translation>
+        <translation>Selektuj sve</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>Odznacz wszystkie</translation>
+        <translation>Deselektuj sve</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="14"/>
         <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt; and add the user to the selected projects.</source>
-        <translation>Zatwierdź zgłoszenie rejestracji dla użytkownika &lt;strong&gt;%1&lt;/strong&gt; i dodaj użytkownika do wybranych projektów.</translation>
+        <translation>Odobri registracioni zahtev za korisnika &lt;strong&gt;%1&lt;/strong&gt; i dodaj korisnika odabarnom projektu.</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="16"/>
         <source>Approve registration request for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zatwierdź zgłoszenie rejestracji dla użytkownika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Odobri registracioni zahtev korisnika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="24"/>
         <source>Projects</source>
-        <translation>Projekty</translation>
+        <translation>Projekti</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="40"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/register/approve.html.php" line="41"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -794,42 +794,42 @@
     <message>
         <location filename="../../../admin/register/index.php" line="33"/>
         <source>Registration Requests</source>
-        <translation>Zgłoszenia rejestracji</translation>
+        <translation>Zahtevi za registraciju</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.php" line="61"/>
         <source>Approve Request</source>
-        <translation>Zatwierdź zgłoszenie</translation>
+        <translation>Odobri registraciju</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.php" line="62"/>
         <source>Reject Request</source>
-        <translation>Odrzuć zgłoszenie</translation>
+        <translation>Odbij zahtev</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="11"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Ime</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="12"/>
         <source>Login</source>
-        <translation>Login</translation>
+        <translation>Prijava</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="13"/>
         <source>Email</source>
-        <translation>E-mail</translation>
+        <translation>Email</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="14"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <location filename="../../../admin/register/index.html.php" line="38"/>
         <source>There are no pending registration requests.</source>
-        <translation>Nie ma zgłoszeń rejestracji do zatwierdzenia.</translation>
+        <translation>Nema registracionih zahteva na čekanju.</translation>
     </message>
 </context>
 <context>
@@ -837,22 +837,22 @@
     <message>
         <location filename="../../../admin/register/reject.php" line="37"/>
         <source>Reject Request</source>
-        <translation>Odrzuć zgłoszenie</translation>
+        <translation>Odbij zahtev</translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="3"/>
         <source>Do you want to reject registration request for user &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy chcesz odrzucić zgłoszenie rejestracji dla użytkownika &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li želite da odbijete registracioni zahtev korisnika &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="8"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/register/reject.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -860,67 +860,67 @@
     <message>
         <location filename="../../../admin/settings/access.php" line="33"/>
         <source>Access Settings</source>
-        <translation>Ustawienia dostępu</translation>
+        <translation>Podešavanje pristupa</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="6"/>
         <source>Anonymous Access</source>
-        <translation>Dostęp anonimowy</translation>
+        <translation>Anonimni pristup</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="8"/>
         <source>This option enables read-only access to public projects without logging in.</source>
-        <translation>Ta opcja włącza dostęp tylko do odczytu do publicznych projektów bez konieczności logowania.</translation>
+        <translation>Ova opcija uključuje pristup samo-za-čitanje javnim projektima bez prijave na sistem.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="10"/>
         <source>Enable anonymous access</source>
-        <translation>Włącz dostęp anonimowy</translation>
+        <translation>Omogući anonimni pristup</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="15"/>
         <source>User Registration</source>
-        <translation>Rejestracja użytkowników</translation>
+        <translation>Registracija korisnika</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="17"/>
         <source>This option allows users to self-register. Sending emails needs to be enabled.</source>
-        <translation>Ta opcja umożliwia użytkownikom samodzielną rejestrację. Wysyłanie e-maili musi być włączone.</translation>
+        <translation>Ova opcija omogućava korisnicima da se sami registruju. Slanje mailova mora biti omogućeno.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="19"/>
         <source>Enable user registration</source>
-        <translation>Włącz rejestrację użytkowników</translation>
+        <translation>Omogući korisničku registraciju</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="21"/>
         <source>This option allows users to register without administrator&apos;s approval. Registered users only have access to public projects by default.</source>
-        <translation>Ta opcja umożliwia rejestrację użytkowników bez zatwierdzania przez administratora. Zarejestrowani użytkownicy domyślnie mają dostęp tylko do publicznych projektów.</translation>
+        <translation>Ova opcija dozvoljava korisnicima da se registruju bez odobrenja administrator. Registrovani korisnici podrazumevano imaju pristup samo javnim projektima.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="23"/>
         <source>Enable automatic approval</source>
-        <translation>Włącz automatyczne zatwierdzanie</translation>
+        <translation>Omogući automatsko odobravanje</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="25"/>
         <source>Optionally send email notifications about pending registration requests to this address. Requires the cron job to be running.</source>
-        <translation>Opcjonalnie wysyłaj powiadomienia mailowe o zgłoszeniach czekających na zatwierdzenie na ten adres. Wymaga uruchomionego zadania cyklicznego.</translation>
+        <translation>Opciono šalji email obaveštenje o čekajućim zahtevima za registraciju na ovu adresu. Zahteva da je cron zadatak pokrenut.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="27"/>
         <source>Email address:</source>
-        <translation>Adres e-mail:</translation>
+        <translation>Email adresa:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="32"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/access.html.php" line="33"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -928,13 +928,13 @@
     <message>
         <location filename="../../../admin/settings/advanced.php" line="33"/>
         <source>Advanced Settings</source>
-        <translation>Ustawienia zaawansowane</translation>
+        <translation>Napredna podešavanja</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.php" line="69"/>
         <location filename="../../../admin/settings/advanced.php" line="76"/>
         <source>%1 kB</source>
-        <translation>%1 KB</translation>
+        <translation>%1 kB</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.php" line="71"/>
@@ -944,128 +944,128 @@
     <message>
         <location filename="../../../admin/settings/advanced.php" line="74"/>
         <source>Never</source>
-        <translation>Nigdy</translation>
+        <translation>Nikad</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.php" line="77"/>
         <source>Always</source>
-        <translation>Zawsze</translation>
+        <translation>Uvek</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.php" line="81"/>
         <source>%1 minutes</source>
-        <translation>%1 minut</translation>
+        <translation>%1 minuta</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.php" line="82"/>
         <source>1 hour</source>
-        <translation>1 godzina</translation>
+        <translation>1 sat</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.php" line="84"/>
         <location filename="../../../admin/settings/advanced.php" line="93"/>
         <source>%1 hours</source>
-        <translation>%1 godzin(y)</translation>
+        <translation>%1 sati</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.php" line="87"/>
         <source>1 day</source>
-        <translation>1 dzień</translation>
+        <translation>1 dan</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.php" line="89"/>
         <source>%1 days</source>
-        <translation>%1 dni</translation>
+        <translation>%1 dana</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.php" line="96"/>
         <source>Use cron job</source>
-        <translation>Użyj zadania cyklicznego</translation>
+        <translation>Koristi cron zadatak</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="6"/>
         <source>Limits</source>
-        <translation>Ograniczenia</translation>
+        <translation>Ograničenja</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="8"/>
         <source>The maximum length (in characters) of comments and descriptions and the maximum size (in bytes) of attached files that are allowed.</source>
-        <translation>Maksymalna długość (w znakach) komentrzy i opisów oraz maksymalny rozmiar (w bajtach) załączonych plików.</translation>
+        <translation>Maksimalna dužina (u karakterima) komentara i opisa i maksimalna veličina (u bajtovima) zakačenih datoteka koje su dozvoljene.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="10"/>
         <source>Maximum text length:</source>
-        <translation>Maksymalna długość tekstu:</translation>
+        <translation>Maksimalna dužina teksta:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="11"/>
         <source>Maximum attachment size:</source>
-        <translation>Maksymalna wielkość załącznika:</translation>
+        <translation>Maksimalna veličina attachment-a:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="16"/>
         <source>Attachment Storage</source>
-        <translation>Przechowywanie załączników</translation>
+        <translation>Skladište attachmenta</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="18"/>
         <source>The maximum size (in bytes) of files which will be stored in the database. Larger files will be stored in the file system.</source>
-        <translation>Maksymalny rozmiar (w bajtach) plików, które są przechowywane w bazie danych. Większe pliki będą przechowywane w systemie plików.</translation>
+        <translation>Maksimalna veličina (u bajtovima) fajlova koji će biti pohranjeni u bazi. Veći fajlovi će biti sačuvani u fajl sistemu.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="20"/>
         <source>Maximum database storage size:</source>
-        <translation>Maksymalny rozmiar plików w bazie danych:</translation>
+        <translation>Maksimalna veličina za pohranu u bazi:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="25"/>
         <source>Maximum Lifetime</source>
-        <translation>Maksymalny czas życia</translation>
+        <translation>Maksimalan životni vek</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="27"/>
         <source>The maximum time after which inactive sessions and events in the event log are deleted.</source>
-        <translation>Maksymalny czas, po którym usuwane są nieaktywne sesje i zdarzenia w dzienniku zdarzeń.</translation>
+        <translation>Maksimalno vreme nakon koga će neaktivne sesije i događaji u dnevniku događaja biti obrisani.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="29"/>
         <source>Session lifetime:</source>
-        <translation>Czas życia sesji:</translation>
+        <translation>Životni vek sesije:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="30"/>
         <source>Event log lifetime:</source>
-        <translation>Czas życia zdarzeń:</translation>
+        <translation>Životni vek dnevnika događaja:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="31"/>
         <source>Inactive user registration request lifetime:</source>
-        <translation>Czas życia nieaktywnych zgłoszeń rejestracji:</translation>
+        <translation>Životni vek registracionog zahteva neaktivnog korisnika:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="36"/>
         <source>Garbage Collection</source>
-        <translation>Usuwanie śmieci</translation>
+        <translation>Prikupljanje đubreta</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="38"/>
         <source>The probability of garbage collection after each request. If the cron job is used for garbage collection, make sure that it is running.</source>
-        <translation>Prawdopodobieństwo usuwania śmieci po każdym żądaniu. Jeśli zadanie cykliczne jest używane do usuwania śmieci, upewnij się, że jest ono uruchomione.</translation>
+        <translation>Verovatnoća prikupljanja đubreta nakon svakog zahteva. Ako se za prikupljanje đubreta koristi cron zadatak, postarajte se da je pokrenut.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="40"/>
         <source>GC probability:</source>
-        <translation>Prawdopodobieństwo:</translation>
+        <translation>Verovatnoća:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="45"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/advanced.html.php" line="46"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -1073,206 +1073,206 @@
     <message>
         <location filename="../../../admin/settings/inbox.php" line="32"/>
         <source>Inbox Settings</source>
-        <translation>Ustawienia skrzynki odbiorczej</translation>
+        <translation>Podešavanje inbox-a</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="92"/>
         <source>Disabled</source>
-        <translation>Wyłączona</translation>
+        <translation>Onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="93"/>
         <source>IMAP server</source>
-        <translation>Serwer IMAP</translation>
+        <translation>IMAP server</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="94"/>
         <source>POP3 server</source>
-        <translation>Serwer POP3</translation>
+        <translation>POP3 server</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="97"/>
         <source>None</source>
         <comment>encryption</comment>
-        <translation>Brak</translation>
+        <translation>Ništa</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="104"/>
         <source>None</source>
         <comment>user</comment>
-        <translation>Brak</translation>
+        <translation>Ništa</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="113"/>
         <source>None</source>
         <comment>folder</comment>
-        <translation>Brak</translation>
+        <translation>Ništa</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="140"/>
         <source>Cannot leave messages on the server in POP3 mode.</source>
-        <translation>Nie można zostawiać wiadomości na serwerze w trybie POP3.</translation>
+        <translation>Nemoguće ostaviti poruke na serveru u POP3 režimu.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.php" line="152"/>
         <source>Please select the method of receiving emails to test connection.</source>
-        <translation>Proszę wybrać metodę odbierania e-maili aby przetestować połączenie.</translation>
+        <translation>Molim, odaberite metod za prijem mailova zarad testiranja konekcije.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="7"/>
         <source>Inbox settings are not avaiable because the &apos;IMAP&apos; extension is missing or disabled.</source>
-        <translation>Ustawienia skrzynki odbiorczej są niedostępne, ponieważ rozszerzenie &apos;IMAP&apos; jest wyłączone.</translation>
+        <translation>Podešavanje inboxa nije dostupno, zato što nedostaje &apos;IMAP&apos; ekstenzija ili je onemogućena.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="10"/>
         <location filename="../../../admin/settings/inbox.html.php" line="85"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="16"/>
         <source>General</source>
-        <translation>Ogólne</translation>
+        <translation>Opšte</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="18"/>
         <source>Method of receiving emails:</source>
-        <translation>Metoda odbierania e-maili:</translation>
+        <translation>Metoda za prijem mailova:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="21"/>
         <source>Inbox email address:</source>
-        <translation>Adres skrzynki odbiorczej:</translation>
+        <translation>Inbox email adresa:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="23"/>
         <source>If receiving emails is enabled, make sure that the cron job is running.</source>
-        <translation>Jeśli odbieranie e-maili jest włączone, upewnij się, że zadanie cykliczne jest uruchomione.</translation>
+        <translation>Ako je prijem mailova omogućen, postarajte se da je cron zadatak pokrenut.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="28"/>
         <source>Inbox Server</source>
-        <translation>Serwer skrzynki odbiorczej</translation>
+        <translation>Inbox server</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="30"/>
         <source>Fill the information below to configure the IMAP or POP3 server.</source>
-        <translation>Podaj poniższe informacje aby skonfigurować serwer IMAP lub POP3.</translation>
+        <translation>Popunite informacije ispod da konfigurišete IMAP ili POP3 server.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="32"/>
         <source>Server name:</source>
-        <translation>Nazwa serwera:</translation>
+        <translation>Ime servera:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="33"/>
         <source>Port number:</source>
-        <translation>Numer portu:</translation>
+        <translation>Port:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="34"/>
         <source>Encryption mode:</source>
-        <translation>Tryb szyfrowania:</translation>
+        <translation>Tip enkripcije:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="35"/>
         <source>User name:</source>
-        <translation>Nazwa użytkownika:</translation>
+        <translation>Korisničko ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="36"/>
         <source>Password:</source>
-        <translation>Hasło:</translation>
+        <translation>Lozinka:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="37"/>
         <source>Mailbox name:</source>
-        <translation>Nazwa skrzynki pocztowej:</translation>
+        <translation>Naziv mailbox-a:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="39"/>
         <source>Do not validate server certificate</source>
-        <translation>Nie sprawdzaj certyfikatu serwera</translation>
+        <translation>Ne validiraj sertifikat servera</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="40"/>
         <source>Leave processed messages on the server</source>
-        <translation>Pozostaw przetworzone wiadomości na serwerze</translation>
+        <translation>Ostavi obrađene poruke na serveru</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="45"/>
         <source>Connection to the inbox server was successful.</source>
-        <translation>Połączenie z serwerem skrzynki odbiorczej zakończone pomyślnie.</translation>
+        <translation>Uspešno povezivanje na Inbox server.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="49"/>
         <source>Test Connection</source>
-        <translation>Testuj połączenie</translation>
+        <translation>Testiraj povezivanje</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="55"/>
         <source>External Users</source>
-        <translation>Zewnętrzni użytkownicy</translation>
+        <translation>Spoljni korisnici</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="57"/>
         <source>This option enables receiving emails from addresses which are not assigned to any user in the system.</source>
-        <translation>Ta opcja umożliwia odbieranie e-maili z adresów nieprzypisanych do żadnego użytkownika w systemie.</translation>
+        <translation>Ova opcija omogućava prijem mailova sa adresa koje nisu dodeljene ni jednom korisniku sistema.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="59"/>
         <source>Accept messages from external users</source>
-        <translation>Akceptuj wiadomości od zewnętrznych użytkowników</translation>
+        <translation>Prihvati poruke spoljnih korisnika</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="60"/>
         <source>Robot user account:</source>
-        <translation>Konto użytkownika robota:</translation>
+        <translation>Robot korisnički nalog:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="65"/>
         <source>Folder Mapping</source>
-        <translation>Mapowanie folderów</translation>
+        <translation>Mapiranje fascikli</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="67"/>
         <source>This option enables mapping the inbox email address extensions to project and folder name.</source>
-        <translation>Ta opcja umożliwia mapowanie rozrzerzeń adresu skrzynki odbiorczej do nazw projektu i folderu.</translation>
+        <translation>Ova opcija omogućava mapiranje ekstenzije Inbox email adrese na projekat i naziv fascikle.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="69"/>
         <source>Map address extensions to project and folder</source>
-        <translation>Mapuj rozszerzenia adresu do projektu i folderu</translation>
+        <translation>Mapiraj ekstenziju adrese na projekat i fasciklu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="70"/>
         <source>Default folder:</source>
-        <translation>Domyślny folder:</translation>
+        <translation>Podrazumevana fascikla:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="75"/>
         <source>Sending Emails</source>
-        <translation>Wysyłanie e-maili</translation>
+        <translation>Slanje mailova</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="77"/>
         <source>These options enable responses and automatic subscriptions for issues created through the inbox. Sending emails needs to be enabled.</source>
-        <translation>Te opcje włączają wysyłanie odpowiedzi i automatyczne subskrybcje dla spraw utworzonych przez skrzynkę odbiorczą. Wysyłanie e-maili musi być włączone. </translation>
+        <translation>Ove opcije omogućavaju odgovore i automatske pretplate na probleme kreirane kroz Inbox. Slanje mailova mora biti omogućeno.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="79"/>
         <source>Send responses when issues are created</source>
-        <translation>Wysyłaj odpowiedź gdy sprawa jest utworzona</translation>
+        <translation>Šalji odgovore kada su problemi kreirani</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="80"/>
         <source>Subscribe senders to created issues</source>
-        <translation>Subskrybuj nadawcę do utworzonych spraw</translation>
+        <translation>Pretplati pošiljaoce na kreirane probleme</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/inbox.html.php" line="86"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -1280,42 +1280,42 @@
     <message>
         <location filename="../../../admin/settings/index.php" line="33"/>
         <source>Server Settings</source>
-        <translation>Ustawienia serwera</translation>
+        <translation>Podešavanje servera</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="10"/>
         <source>Mobile Page Size</source>
-        <translation>Rozmiar strony mobilnej</translation>
+        <translation>Veličina mobine strane</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="12"/>
         <source>The maximum number of projects, issues and items in history which are displayed in the mobile version.</source>
-        <translation>Maksymalna liczba projektów, spraw i elementów w historii, które są wyświetlone w wersji mobilnej.</translation>
+        <translation>Maksimalan broj projekata, problema i stavki u istoriji koji su prikazani u mobilnoj verziji.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="14"/>
         <source>Projects tree:</source>
-        <translation>Drzewo projektów:</translation>
+        <translation>Drvo projekata:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="15"/>
         <source>List of issues:</source>
-        <translation>Lista spraw:</translation>
+        <translation>Lista problema:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="16"/>
         <source>Issue history:</source>
-        <translation>Historia sprawy:</translation>
+        <translation>Istorija problema:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="25"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/index.html.php" line="26"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -1323,127 +1323,127 @@
     <message>
         <location filename="../../../admin/settings/mail.php" line="33"/>
         <source>Email Settings</source>
-        <translation>Ustawienia e-maili</translation>
+        <translation>Podešavanje emaila</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="74"/>
         <source>Disabled</source>
-        <translation>Wyłączony</translation>
+        <translation>Onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="75"/>
         <source>Standard PHP mailer</source>
-        <translation>Standardowy mailer PHP</translation>
+        <translation>Standardni PHP mailer</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="76"/>
         <source>Custom SMTP server</source>
-        <translation>Własny serwer SMTP</translation>
+        <translation>Prilagođeni SMTP server</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="79"/>
         <source>None</source>
-        <translation>Brak</translation>
+        <translation>Ništa</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.php" line="103"/>
         <source>Please select the SMTP method of sending emails to test connection.</source>
-        <translation>Wybierz metodę wysyłania e-maili przez SMTP aby przetestować połączenie.</translation>
+        <translation>Molim, izaberite SMTP metod slanja mailova zarad testiranja konekcije.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="6"/>
         <source>General</source>
-        <translation>Ogólne</translation>
+        <translation>Opšte</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="8"/>
         <source>Method of sending emails:</source>
-        <translation>Metoda wysyłania e-maili:</translation>
+        <translation>Metoda slanja mailova:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="11"/>
         <source>Email address of the server:</source>
-        <translation>Adres e-mail serwera:</translation>
+        <translation>Email adresa servera:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="13"/>
         <source>If sending emails is enabled, make sure that the cron job is running.</source>
-        <translation>Jeśli wysyłanie e-maili jest włączone, upewnij się, że zadanie cykliczne jest uruchomione.</translation>
+        <translation>Ako je slanje mailova omogućeno, postarajte se da je cron zadatak pokrenut.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="18"/>
         <source>SMTP Server</source>
-        <translation>Serwer SMTP</translation>
+        <translation>SMTP server</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="20"/>
         <source>Fill the information below when using a custom SMTP server.</source>
-        <translation>Podaj poniższe informacje, jeśli używasz własnego serwera SMTP.</translation>
+        <translation>Popunite informacije ispod kada koristite prilagođeni SMTP server.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="22"/>
         <source>Server name:</source>
-        <translation>Nazwa serwera:</translation>
+        <translation>Naziv servera:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="23"/>
         <source>Port number:</source>
-        <translation>Numer portu:</translation>
+        <translation>Port:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="24"/>
         <source>Encryption mode:</source>
-        <translation>Tryb szyfrowania:</translation>
+        <translation>Tip enkripcije:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="25"/>
         <source>User name:</source>
-        <translation>Nazwa użytkownika:</translation>
+        <translation>Korisničko ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="26"/>
         <source>Password:</source>
-        <translation>Hasło:</translation>
+        <translation>Lozinka:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="31"/>
         <source>Connection to the SMTP server was successful.</source>
-        <translation>Połączenie z serwerem SMTP zakończone pomyślnie.</translation>
+        <translation>Uspešno povezivanje na SMTP server.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="35"/>
         <source>Test Connection</source>
-        <translation>Testuj połączenie</translation>
+        <translation>Testiraj konekciju</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="41"/>
         <source>Hyperlinks</source>
-        <translation>Odnośniki</translation>
+        <translation>Hiperveze</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="43"/>
         <source>Enter the base URL of the server, with the trailing slash, to enable hyperlinks in emails.</source>
-        <translation>Podaj bazowy adres URL serwera, wraz z końcowym znakiem &quot;/&quot;, aby włączyć odnośniki w e-mailach.</translation>
+        <translation>Unesite osnovnu URL adresu servera, sa pratećim &apos;/&apos; da omogućite hiperveze u mailovima.</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="45"/>
         <source>Server URL:</source>
-        <translation>URL serwera:</translation>
+        <translation>Server URL:</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="48"/>
         <source>Detect</source>
-        <translation>Wykryj</translation>
+        <translation>Otkrij</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="54"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/settings/mail.html.php" line="55"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -1451,323 +1451,323 @@
     <message>
         <location filename="../../../admin/setup/install.php" line="237"/>
         <source>No supported database engines are available in this PHP installation.</source>
-        <translation>Ta instalacja PHP nie obsługuje wspieranych baz danych.</translation>
+        <translation>Nema podržanih baza podataka na ovoj PHP instalaciji.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="78"/>
         <location filename="../../../admin/setup/install.html.php" line="9"/>
         <source>Server Configuration</source>
-        <translation>Konfiguracja serwera</translation>
+        <translation>Konfiguracija servera</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="79"/>
         <source>Configure your WebIssues Server</source>
-        <translation>Skonfiguruj swój serwer WebIssues</translation>
+        <translation>Podesite vaš WebIssues server</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="213"/>
         <source>My WebIssues Server</source>
-        <translation>Mój serwer WebIssues</translation>
+        <translation>Moj WebIssues server</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="259"/>
         <source>Install a new server</source>
-        <translation>Zainstaluj nowy serwer</translation>
+        <translation>Instaliraj novi server</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="260"/>
         <source>Use an existing server</source>
-        <translation>Użyj istniejącego serwera</translation>
+        <translation>Koristi postojeći server</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="269"/>
         <source>Do not install any issue types</source>
-        <translation>Nie instaluj żadnych typów spraw</translation>
+        <translation>Ne instaliraj ni jedan tip problema</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="270"/>
         <source>Install the default set of issue types</source>
-        <translation>Zainstaluj domyślny zestaw typów spraw</translation>
+        <translation>Instaliraj podrazumevani set tipova problema</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="344"/>
         <location filename="../../../admin/setup/install.php" line="351"/>
         <location filename="../../../admin/setup/install.php" line="358"/>
         <source>The &apos;%1&apos; extension is missing or disabled.</source>
-        <translation>Brakujące lub wyłączone rozszerzenie &apos;%1&apos;.</translation>
+        <translation>Ekstenzija &apos;%1&apos; nedostaje ili je onemogućena.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="294"/>
         <source>Could not connect to database. Please check connection details and try again.</source>
-        <translation>Nie można połączyć się z bazą danych. Sprawdź dane połączenia i spróbuj ponownie.</translation>
+        <translation>Nemoguće povezivanje na bazu podataka. Molim, proverite detalje konekcije i pokušajte ponovo.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="310"/>
         <source>The WebIssues tables were not found in the database. Make sure the table prefix is correct and try again.</source>
-        <translation>Tabele systemu WebIssues nie zostały znalezione w bazie danych. Upewnij się że prefiks jest poprawny i spróbuj ponownie.</translation>
+        <translation>WebIssues tabele nisu pronađeneu bazi podataka. Postarajte se da je prefiks tabela tačan i pokušajte ponovo.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="319"/>
         <source>The existing version of the database cannot be used with this version of WebIssues Server.</source>
-        <translation>Istniejąca wersja bazy danych nie może być użyta z tą wersją serwera WebIssues.</translation>
+        <translation>Postojeća verzija baze podataka ne može biti korišćena sa ovom verzijom WebIssues servera.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="327"/>
         <source>The WebIssues tables already exist in the database. Drop them first or use a different table prefix and try again.</source>
-        <translation>Tabele systemu WebIssues już istnieją w bazie danych. Usuń je lub użyj innego prefiksu i spróbuj ponownie.</translation>
+        <translation>WebIssues tabele već postoje u bazi podataka. Obrišite ih prvo, ili koristite drugi prefiks tabela i pokušajte ponovo.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="335"/>
         <source>Could not retrieve information from the database.</source>
-        <translation>Nie można pobrać informacji z bazy danych.</translation>
+        <translation>Nemoguće pročitati informacije iz baze podataka.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="377"/>
         <source>Database does not support InnoDB storage which is required by WebIssues Server.</source>
-        <translation>Baza danych nie obsługuje mechanizmu InnoDB wymaganego przez serwer WebIssues.</translation>
+        <translation>Baza podataka ne podržava InnoDB pohranu koja je neophodna za WebIssues server.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="403"/>
         <source>Database version %1 is older than minimum required version %2.</source>
-        <translation>Wersja bazy danych %1 jest starsza niż minimalna wymagana wersja %2.</translation>
+        <translation>Verzija baze podataka %1 je starija od minimalno podržane verzije %2.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="430"/>
         <source>Completed the installation of the server</source>
-        <translation>Zakończono instalację serwera</translation>
+        <translation>Kompleriraj instalaciju servera.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="464"/>
         <source>Updated database to version %1</source>
-        <translation>Zaktualizowano bazę danych do wersji %1</translation>
+        <translation>Baza podataka ažurirana na verziju %1</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.php" line="491"/>
         <source>The configuration file could not be written.</source>
-        <translation>Nie można zapisać pliku ustawień.</translation>
+        <translation>Nemoguć upis u konfiguracioni fajl.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="17"/>
         <source>Administration Panel</source>
-        <translation>Panelu administracyjnego</translation>
+        <translation>Panel za administraciju</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="37"/>
         <source>Select language used during the installation.</source>
-        <translation>Wybierz język używany podczas instalacji.</translation>
+        <translation>Izaberite jezik korišćen tokom instalacije.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="39"/>
         <source>Language:</source>
-        <translation>Język:</translation>
+        <translation>Jezik:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="6"/>
         <source>The configuration file of this WebIssues Server already exists.</source>
-        <translation>Istnieje już plik konfiguracyjny tego serwera WebIssues.</translation>
+        <translation>Konfiguraciona datoteka ovog WebIssues servera već postoji.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="8"/>
         <source>For security reasons, you must first delete the server configuration file and then run the %1 page again.</source>
-        <translation>Ze względów bezpieczeństwa musisz najpierw usunąć plik konfiguracyjny serwera i uruchomić stronę %1 ponownie.</translation>
+        <translation>Iz bezbednosnih razloga, prvo morate obrisati konfiguracionu datoteku servera, pa onda pokrenuti %1 stranu ponovo.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="14"/>
         <source>Installation of your WebIssues Server was successfully completed.</source>
-        <translation>Instalacja twojego serwera WebIssues została zakończona pomyślnie.</translation>
+        <translation>Instalacija WebIssues servera završena uspešno.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="16"/>
         <source>Go to the %1 to continue the configuration of this server.</source>
-        <translation>Przejdź do %1 aby kontynuować konfigurację serwera.</translation>
+        <translation>Idite na %1 da nastavite sa konfigurisanjem ovog servera.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="54"/>
         <source>Database Engine</source>
-        <translation>Typ bazy danych</translation>
+        <translation>Mašina baze podataka</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="95"/>
         <source>Please enter the parameters of the new server.</source>
-        <translation>Podaj parametry nowego serwera.</translation>
+        <translation>Molim, unesite parametre novog servera.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="100"/>
         <source>Enter the name of this server.</source>
-        <translation>Podaj nazwę tego serwera.</translation>
+        <translation>Unesite naziv ovog servera.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="109"/>
         <source>The Administrator user account will be created allowing you to log in to the server and change its settings.</source>
-        <translation>Zostanie utworzone konto użytkownika Administrator abyś mógł się zalogować do serwera i zmieniać jego ustawienia.</translation>
+        <translation>Administratorski korisnički nalog će biti kreiran, dozvoljavajući prijavu na server i izmenu podešavanja.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="98"/>
         <location filename="../../../admin/setup/install.html.php" line="132"/>
         <source>Server Information</source>
-        <translation>Informacje o serwerze</translation>
+        <translation>Informacije o serveru</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="51"/>
         <source>Please enter information required to connect to the database.</source>
-        <translation>Podaj informacje konieczne do połączenia z bazą danych.</translation>
+        <translation>Molim, unesite informacije potrebne za povezivanje na bazu podataka.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="26"/>
         <source>Installation failed with the following fatal error:</source>
-        <translation>Instalacja nie powiodła się z powodu następującego błędu:</translation>
+        <translation>Instalacija nije uspela, fatalna greška:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="44"/>
         <source>This wizard will help you configure the WebIssues Server.</source>
-        <translation>Ten kreator pomoże ci skonfigurować serwer WebIssues.</translation>
+        <translation>Ovaj čarobnjak će vam pomoći da podesite WebIssues server.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="56"/>
         <source>Select the type of the database to use:</source>
-        <translation>Wybierz rodzaj używanej bazy danych:</translation>
+        <translation>Izaberite tip baze podataka:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="63"/>
         <source>Connection Details</source>
-        <translation>Szczegóły połączenia</translation>
+        <translation>Detalji konekcije</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="65"/>
         <source>Host name:</source>
-        <translation>Nazwa hosta:</translation>
+        <translation>Server:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="66"/>
         <source>Database name:</source>
-        <translation>Nazwa bazy danych:</translation>
+        <translation>Naziv baze podataka:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="67"/>
         <source>User name:</source>
-        <translation>Nazwa użytkownika:</translation>
+        <translation>Korisničko ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="68"/>
         <location filename="../../../admin/setup/install.html.php" line="112"/>
         <source>Password:</source>
-        <translation>Hasło:</translation>
+        <translation>Lozinka:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="75"/>
         <source>Mode</source>
-        <translation>Tryb</translation>
+        <translation>Režim</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="77"/>
         <source>Select if you want to install a new server or recreate the configuration file for an existing server:</source>
-        <translation>Wybierz czy chcesz zainstalować nowy serwer, czy utworzyć ponownie plik konfiguracyjny dla istniejącego serwera:</translation>
+        <translation>Odaberite da li želite da instalirate novi server ili rekreirate konfiguracionu datoteku postojećeg servera:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="84"/>
         <source>Table Prefix</source>
-        <translation>Prefiks tabel</translation>
+        <translation>Prefiks tabele</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="140"/>
         <source>Initial configuration:</source>
-        <translation>Początkowa konfiguracja:</translation>
+        <translation>Inicijalna konfiguracija:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="141"/>
         <source>Default issue types</source>
-        <translation>Domyślne typy spraw</translation>
+        <translation>Podrazumevani tipovi problema</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="141"/>
         <source>No issue types</source>
-        <translation>Bez typów spraw</translation>
+        <translation>Bez tipova problema</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="171"/>
         <source>&amp;lt; Back</source>
-        <translation>&amp;lt; Wstecz</translation>
+        <translation>&amp;lt; Nazad</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="186"/>
         <source>Installation in progress...</source>
-        <translation>Instalacja w toku...</translation>
+        <translation>Instalacija u toku...</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="86"/>
         <source>You can enter an optional prefix for table names. This allows installing multiple servers using the same database.</source>
-        <translation>Możesz podać opcjonalny prefiks dla nazw tabel. Pozwala to zainstalować wiele serwerów używając tej samej bazy danych.</translation>
+        <translation>Možete uneti opcioni prefiks za imena tabela. Ovo dozvoljava instalaciju više servera na istoj bazi podataka.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="20"/>
         <source>Do not forget to copy attachments stored in the file system from the old version of the server.</source>
-        <translation>Nie zapomnij skopiować załączników przechowywanych w systemie plików ze starej wersji serwera.</translation>
+        <translation>Ne zaboravite da kopirate attachmente uskladištene na fajl sistemu iz stare verzije servera.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="88"/>
         <source>Table prefix:</source>
-        <translation>Prefiks tabel:</translation>
+        <translation>Prefiks tabela:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="102"/>
         <location filename="../../../admin/setup/install.html.php" line="136"/>
         <source>Server name:</source>
-        <translation>Nazwa serwera:</translation>
+        <translation>Naziv servera:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="107"/>
         <source>Administrator Account</source>
-        <translation>Konto administratora</translation>
+        <translation>Administratorski nalog</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="111"/>
         <source>Login:</source>
-        <translation>Login:</translation>
+        <translation>Prijava:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="113"/>
         <source>Confirm password:</source>
-        <translation>Potwierdź hasło:</translation>
+        <translation>Potvrdi lozinku:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="118"/>
         <source>Initial Configuration</source>
-        <translation>Początkowa konfiguracja</translation>
+        <translation>Inicijalna konfiguracija</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="120"/>
         <source>Select the initial configuration of this server:</source>
-        <translation>Wybierz początkową konfigurację tego serwera:</translation>
+        <translation>Izaberite inicijalnu konfiguraciju ovog servera:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="129"/>
         <source>The new server will be installed in the selected database.</source>
-        <translation>Nowy serwer zotanie zainstalowany w wybranej bazie danych.</translation>
+        <translation>Novi server će biti instaliran u odabranu bazu podataka.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="153"/>
         <source>The database of this WebIssues Server will be updated to version %1.</source>
-        <translation>Baza danych tego serwera WebIssues zostanie zaktualizowana do wersji %1.</translation>
+        <translation>Baza podataka ovog WebIssues servera će biti ažurirana na verziju %1.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="155"/>
         <source>The server is already configured. It will not be modified during the installation.</source>
-        <translation>Ten serwer jest już skonfigurowany. Nie zostanie on zmodyfikowany podczas instalacji.</translation>
+        <translation>Server je već podešen. Neće biti modifikovan tokom instalacije.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="168"/>
         <source>Refresh</source>
-        <translation>Odśwież</translation>
+        <translation>Osveži</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="174"/>
         <source>Next &amp;gt;</source>
-        <translation>Dalej &amp;gt;</translation>
+        <translation>Sledeći &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/install.html.php" line="177"/>
         <source>Install</source>
-        <translation>Zainstaluj</translation>
+        <translation>Instaliraj</translation>
     </message>
 </context>
 <context>
@@ -1785,19 +1785,19 @@
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="348"/>
         <source>Bugs</source>
-        <translation>Błędy</translation>
+        <translation>Greške</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="351"/>
         <source>Assigned To</source>
         <comment>bug</comment>
-        <translation>Przypisany do</translation>
+        <translation>Dodeljeno</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="358"/>
         <source>Status</source>
         <comment>bug</comment>
-        <translation>Status</translation>
+        <translation>Stanje</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="361"/>
@@ -1807,109 +1807,109 @@
         <location filename="../../../admin/setup/installer.inc.php" line="419"/>
         <source>Active</source>
         <comment>bug</comment>
-        <translation>Aktywny</translation>
+        <translation>Aktivno</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="361"/>
         <location filename="../../../admin/setup/installer.inc.php" line="426"/>
         <source>Resolved</source>
         <comment>bug</comment>
-        <translation>Rozwiązany</translation>
+        <translation>Rešeno</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="361"/>
         <source>Closed</source>
         <comment>bug</comment>
-        <translation>Zamknięty</translation>
+        <translation>Zatvoreno</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="367"/>
         <source>Reason</source>
-        <translation>Powód</translation>
+        <translation>Razlog</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Fixed</source>
-        <translation>Naprawiony</translation>
+        <translation>Popravljeno</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Obsolete</source>
-        <translation>Nieaktualny</translation>
+        <translation>Zastarelo</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="370"/>
         <source>Duplicate</source>
-        <translation>Powielony</translation>
+        <translation>Duplikat</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>As Designed</source>
-        <translation>Zgodny z projektem</translation>
+        <translation>Tako predviđeno</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>Unable To Reproduce</source>
-        <translation>Nie można zreprodukować</translation>
+        <translation>Nemoguće reprodukovati</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="371"/>
         <source>Test Failed</source>
-        <translation>Test nie powiódł się</translation>
+        <translation>Test zakazao</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="375"/>
         <source>Severity</source>
         <comment>bug</comment>
-        <translation>Krytyczność</translation>
+        <translation>Ozbiljnost</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="385"/>
         <source>Version</source>
-        <translation>Wersja</translation>
+        <translation>Verzija</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="393"/>
         <source>Created By Me</source>
         <comment>bug</comment>
-        <translation>Utworzone przeze mnie</translation>
+        <translation>Ja kreirao</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="400"/>
         <source>Active Bugs</source>
-        <translation>Aktywne błędy</translation>
+        <translation>Aktivne greške</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="407"/>
         <source>My Active Bugs</source>
-        <translation>Moje aktywne błędy</translation>
+        <translation>Moje aktivne greške</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="415"/>
         <source>Unassigned Bugs</source>
-        <translation>Nieprzypisane błędy</translation>
+        <translation>Nedodeljene greške</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="423"/>
         <source>Resolved Bugs</source>
-        <translation>Rozwiązanie błędy</translation>
+        <translation>Rešene greške</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="432"/>
         <source>Tasks</source>
-        <translation>Zadania</translation>
+        <translation>Zadaci</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="435"/>
         <source>Assigned To</source>
         <comment>task</comment>
-        <translation>Przypisane do</translation>
+        <translation>Dodeljeno</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="442"/>
         <source>Status</source>
         <comment>task</comment>
-        <translation>Status</translation>
+        <translation>Stanje</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="445"/>
@@ -1919,62 +1919,62 @@
         <location filename="../../../admin/setup/installer.inc.php" line="503"/>
         <source>Active</source>
         <comment>task</comment>
-        <translation>Aktywne</translation>
+        <translation>Aktivno</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="445"/>
         <source>Closed</source>
         <comment>task</comment>
-        <translation>Zamknięte</translation>
+        <translation>Zatvoreno</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="451"/>
         <source>Priority</source>
         <comment>task</comment>
-        <translation>Priorytet</translation>
+        <translation>Prioritet</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="461"/>
         <source>Progress</source>
-        <translation>Postęp</translation>
+        <translation>Napredak</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="469"/>
         <source>Due Date</source>
-        <translation>Termin</translation>
+        <translation>Rešiti do</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="477"/>
         <source>Created By Me</source>
         <comment>task</comment>
-        <translation>Utworzone przeze mnie</translation>
+        <translation>Ja kreirao</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="484"/>
         <source>Active Tasks</source>
-        <translation>Aktywne zadania</translation>
+        <translation>Aktivni zadaci</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="491"/>
         <source>My Active Tasks</source>
-        <translation>Moje aktywne zadania</translation>
+        <translation>Moji aktivni zadaci</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="499"/>
         <source>Unassigned Tasks</source>
-        <translation>Nieprzypisane zadania</translation>
+        <translation>Nedodeljeni zadaci</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="507"/>
         <source>Completed Tasks</source>
-        <translation>Zakończone zadania</translation>
+        <translation>Završeni zadaci</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/installer.inc.php" line="445"/>
         <location filename="../../../admin/setup/installer.inc.php" line="510"/>
         <source>Completed</source>
         <comment>task</comment>
-        <translation>Zakończone</translation>
+        <translation>Završeno</translation>
     </message>
 </context>
 <context>
@@ -1982,82 +1982,82 @@
     <message>
         <location filename="../../../admin/setup/update.php" line="50"/>
         <source>Server Update</source>
-        <translation>Aktualizacja serwera</translation>
+        <translation>Ažuriranje servera</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.php" line="51"/>
         <source>Update your WebIssues Server</source>
-        <translation>Zaktualizuj swój serwer WebIssues</translation>
+        <translation>Ažuriraj WebIssues server</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.php" line="126"/>
         <source>Updated database to version %1</source>
-        <translation>Zaktualizowano bazę danych do wersji %1</translation>
+        <translation>Baza podataka ažurirana na verziju %1</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="6"/>
         <source>The database of this WebIssues Server is already up to date.</source>
-        <translation>Baza danych tego serwera WebIssues jest już aktualna.</translation>
+        <translation>Baza podataka ovog WebIssues servera je već ažurirana.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="11"/>
         <source>Update of your WebIssues Server was successfully completed.</source>
-        <translation>Aktualizacja twojego serwera WebIssues została zakończona pomyślnie.</translation>
+        <translation>Ažuriranje WebIssues servera je uspešno završeno.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="13"/>
         <source>Go to the %1 to continue the configuration of this server.</source>
-        <translation>Przejdź do %1 aby kontynuować konfigurację serwera.</translation>
+        <translation>Idite na %1 da nastavite da podešavate ovaj server.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="14"/>
         <source>Administration Panel</source>
-        <translation>Panelu administracyjnego</translation>
+        <translation>Administrativni panel</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="19"/>
         <source>Update failed with the following fatal error:</source>
-        <translation>Aktualizacja nie powiodła się z powodu następującego błędu:</translation>
+        <translation>Ažuriranje nije uspelo, fatalna greška:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="30"/>
         <source>Log in as administrator in order to update the server.</source>
-        <translation>Zaloguj się jako administrator aby zaktualizować serwer.</translation>
+        <translation>Prijavite se kao administrator da bi ste ažurirali server.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="32"/>
         <source>Login:</source>
-        <translation>Login:</translation>
+        <translation>Prijava:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="33"/>
         <source>Password:</source>
-        <translation>Hasło:</translation>
+        <translation>Lozinka:</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="38"/>
         <source>The database of this WebIssues Server will be updated to version %1.</source>
-        <translation>Baza danych tego serwera WebIssues zostanie zaktualizowana do wersji %1.</translation>
+        <translation>Baza podataka WebIssues servera će biti ažurirana na verziju %1.</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="50"/>
         <source>&amp;lt; Back</source>
-        <translation>&amp;lt; Wstecz</translation>
+        <translation>&amp;lt; Nazad</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="53"/>
         <source>Next &amp;gt;</source>
-        <translation>Dalej &amp;gt;</translation>
+        <translation>Napred &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="56"/>
         <source>Update</source>
-        <translation>Aktualizuj</translation>
+        <translation>Ažuriranje</translation>
     </message>
     <message>
         <location filename="../../../admin/setup/update.html.php" line="65"/>
         <source>Update in progress...</source>
-        <translation>Aktualizacja w toku...</translation>
+        <translation>Ažuriranje u toku...</translation>
     </message>
 </context>
 <context>
@@ -2065,22 +2065,22 @@
     <message>
         <location filename="../../../admin/types/addtype.php" line="33"/>
         <source>Add Type</source>
-        <translation>Dodaj typ</translation>
+        <translation>Dodaj tip</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="5"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="8"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/types/addtype.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -2088,177 +2088,177 @@
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="45"/>
         <source>Issue Types</source>
-        <translation>Typy spraw</translation>
+        <translation>Tipovi problema</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="62"/>
         <source>Modify Attribute</source>
-        <translation>Zmień atrybut</translation>
+        <translation>Izmeni atribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="74"/>
         <source>Add Attribute</source>
-        <translation>Dodaj atrybut</translation>
+        <translation>Dodaj atribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="81"/>
         <source>Allow entering custom values</source>
-        <translation>Zezwól na podawanie własnych wartości</translation>
+        <translation>Dozvoli unos prilagođenih vrednosti</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="320"/>
         <source>Date only</source>
-        <translation>Tylko data</translation>
+        <translation>Samo datum</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="321"/>
         <source>Date and time without time zone conversion</source>
-        <translation>Data i czas bez konwersji strefy czasowej</translation>
+        <translation>Datum i vreme bez zonske konverzije</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="322"/>
         <source>Date and time using local time zone</source>
-        <translation>Data i czas w lokalnej strefie czasowej</translation>
+        <translation>Datum i vreme po lokalnoj vremenskoj zoni</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.inc.php" line="438"/>
         <source>Invalid value</source>
-        <translation>Nieprawidłowa wartość</translation>
+        <translation>Neispravna vrednost</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Niektóre z podanych wartości są niepoprawne.</translation>
+        <translation>Neke od unetih vrednosti su neispravne.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="15"/>
         <source>Create a new attribute in type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Utwórz nowy atrybut dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Kreiraj novi atribut u tipu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="17"/>
         <source>Modify attribute &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień atrybut &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmeni atribut &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="126"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="21"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Naziv:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="35"/>
         <location filename="../../../admin/types/attribute.html.php" line="68"/>
         <source>Attribute Details</source>
-        <translation>Szczegóły atrybutu</translation>
+        <translation>Detalji atributa</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="65"/>
         <source>Specify details of &lt;strong&gt;%1&lt;/strong&gt; attribute.</source>
-        <translation>Podaj szczegóły atrybutu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Odredi detalje &lt;strong&gt;%1&lt;/strong&gt; atributa.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="75"/>
         <location filename="../../../admin/types/attribute.html.php" line="91"/>
         <source>Minimum length:</source>
-        <translation>Minimalna długość:</translation>
+        <translation>Minimalna dužina:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="76"/>
         <location filename="../../../admin/types/attribute.html.php" line="92"/>
         <source>Maximum length:</source>
-        <translation>Maksymalna długość:</translation>
+        <translation>Maksimalna dužina:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="85"/>
         <source>Enter one dropdown list item per line.</source>
-        <translation>Podaj każdy element listy w osobnej linii.</translation>
+        <translation>Uneti samo jednu stavku liste po liniji.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="87"/>
         <source>Dropdown list items:</source>
-        <translation>Lista wartości:</translation>
+        <translation>Stavke u listi:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="97"/>
         <source>Decimal places:</source>
-        <translation>Miejsca dziesiętne:</translation>
+        <translation>Decimalnih mesta:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="98"/>
         <source>Minimum value:</source>
-        <translation>Minimalna wartość:</translation>
+        <translation>Minimalna vrendnost:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="99"/>
         <source>Maximum value:</source>
-        <translation>Maksymalna wartość:</translation>
+        <translation>Maksimalna vrednost:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="100"/>
         <source>Strip trailing decimal zeros</source>
-        <translation>Usuń końcowe zera dziesiętne</translation>
+        <translation>Ukloni decimalne nule sa kraja</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="48"/>
         <source>Common Settings</source>
-        <translation>Wspólne ustawienia</translation>
+        <translation>Zajednička podešavanja</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="25"/>
         <source>Attribute Type</source>
-        <translation>Typ atrybutu</translation>
+        <translation>Tip atributa</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="29"/>
         <source>Go</source>
-        <translation>Przejdź</translation>
+        <translation>Kreni</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="38"/>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Izmeni</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="50"/>
         <source>Attribute is required</source>
-        <translation>Atrybut jest wymagany</translation>
+        <translation>Atribut je obavezan</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="54"/>
         <location filename="../../../admin/types/attribute.html.php" line="56"/>
         <source>Default value:</source>
-        <translation>Domyślna wartość:</translation>
+        <translation>Podrazumevana vrednost:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="73"/>
         <source>Allow entering multiple lines of text</source>
-        <translation>Zezwól na wprowadzanie wielu linii tekstu</translation>
+        <translation>Dozvoli unos više linija teksta</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="83"/>
         <location filename="../../../admin/types/attribute.html.php" line="112"/>
         <source>Allow selecting multiple items</source>
-        <translation>Zezwól na wybieranie wielu wartości</translation>
+        <translation>Dozvoli izbor više stavki</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="89"/>
         <source>The following settings can only be used when entering custom values is allowed and selecting multiple items is not allowed.</source>
-        <translation>Następujące ustawienia mogą być użyte tylko jeśli wprowadzanie własnych wartości jest dozwolone i wybieranie wielu wartości nie jest dozwolone.</translation>
+        <translation>Sledeće osobine se mogu koristiti samo ako je unos prilagođenih vrednosti dozvoljen i ako nije dozvoljen izbor više stavki iz liste.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="110"/>
         <source>Allow selecting only project members</source>
-        <translation>Zezwól tylko na wybieranie członków projektu</translation>
+        <translation>Dozvoli izbor samo članova projekta</translation>
     </message>
     <message>
         <location filename="../../../admin/types/attribute.html.php" line="125"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
 </context>
 <context>
@@ -2266,27 +2266,27 @@
     <message>
         <location filename="../../../admin/types/deleteattribute.php" line="33"/>
         <source>Delete Attribute</source>
-        <translation>Usuń atrybut</translation>
+        <translation>Obriši atribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="3"/>
         <source>Are you sure you want to delete attribute &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć atrybut &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete atribut &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All current and historical values of this attribute will be deleted.</source>
-        <translation>&lt;strong&gt;Uwaga:&lt;/strong&gt; Wszystkie bieżące i historyczne wartości tego atrybutu zostaną ununięte.</translation>
+        <translation>&lt;strong&gt;Upozorenje:&lt;/strong&gt; Sve trenutne i vrednosti iz istorije za ovaj atribut će biti obrisane.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deleteattribute.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -2294,27 +2294,27 @@
     <message>
         <location filename="../../../admin/types/deletetype.php" line="33"/>
         <source>Delete Type</source>
-        <translation>Usuń typ</translation>
+        <translation>Obriši tip</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="3"/>
         <source>Are you sure you want to delete type &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć typ &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete tip &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues of this type will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Uwaga:&lt;/strong&gt; Wszystkie foldery i sprawy tego typu zostaną trwale usunięte.</translation>
+        <translation>&lt;strong&gt;Upozorenje:&lt;/strong&gt; Sve fascikle i problemi ovog tipa će biti trajno obrisani.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/types/deletetype.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -2327,90 +2327,90 @@
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="132"/>
         <source>Dropdown list</source>
-        <translation>Lista wyboru</translation>
+        <translation>Padajuća lista</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="134"/>
         <source>Date &amp; time</source>
-        <translation>Data i czas</translation>
+        <translation>Datum i vreme</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="133"/>
         <source>Numeric</source>
-        <translation>Liczba</translation>
+        <translation>Brojčano</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="69"/>
         <source>Multiple lines</source>
-        <translation>Wiele linii</translation>
+        <translation>Više linija</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="72"/>
         <location filename="../../../admin/types/helper.inc.php" line="88"/>
         <source>Min. length: %1</source>
-        <translation>Min. długość: %1</translation>
+        <translation>Min. dužina: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="75"/>
         <location filename="../../../admin/types/helper.inc.php" line="91"/>
         <source>Max. length: %1</source>
-        <translation>Maks. długość: %1</translation>
+        <translation>Max. dužina: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="80"/>
         <source>Editable</source>
-        <translation>Edytowalny</translation>
+        <translation>Izmenljivo</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="82"/>
         <location filename="../../../admin/types/helper.inc.php" line="120"/>
         <source>Multiple selection</source>
-        <translation>Wielokrotny wybór</translation>
+        <translation>Višestruki izbor</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="85"/>
         <source>Items: %1</source>
-        <translation>Elementy: %1</translation>
+        <translation>Stavki: 1%</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="98"/>
         <source>Decimal places: %1</source>
-        <translation>Miejsca dziesiętne: %1</translation>
+        <translation>Decimalnih mesta: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="101"/>
         <source>Min. value: %1</source>
-        <translation>Min. wartość: %1</translation>
+        <translation>Min. vrednost: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="104"/>
         <source>Max. value: %1</source>
-        <translation>Maks. wartość: %1</translation>
+        <translation>Max. vrednost: %1</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="106"/>
         <source>Strip zeros</source>
-        <translation>Usuń zera</translation>
+        <translation>Ukloni nule</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="111"/>
         <source>With time</source>
-        <translation>Z czasem</translation>
+        <translation>Sa vremenom</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="113"/>
         <source>Local time zone</source>
-        <translation>Czas lokalny</translation>
+        <translation>Lokalna vremenska zona</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="118"/>
         <source>Members only</source>
-        <translation>Tylko członkowie</translation>
+        <translation>Samo članovi</translation>
     </message>
     <message>
         <location filename="../../../admin/types/helper.inc.php" line="135"/>
         <source>User</source>
-        <translation>Użytkownik</translation>
+        <translation>Korisnik</translation>
     </message>
 </context>
 <context>
@@ -2418,87 +2418,87 @@
     <message>
         <location filename="../../../admin/types/index.php" line="33"/>
         <source>Issue Types</source>
-        <translation>Typy spraw</translation>
+        <translation>Tipovi problema</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="60"/>
         <source>Yes</source>
-        <translation>Tak</translation>
+        <translation>Da</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="60"/>
         <source>No</source>
-        <translation>Nie</translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="87"/>
         <source>Rename Type</source>
-        <translation>Zmień nazwę typu</translation>
+        <translation>Preimenuj tip</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="88"/>
         <source>Delete Type</source>
-        <translation>Usuń typ</translation>
+        <translation>Obriši tip</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="90"/>
         <source>Rename Attribute</source>
-        <translation>Zmień nazwę atrybutu</translation>
+        <translation>Preimenuj atribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="91"/>
         <source>Delete Attribute</source>
-        <translation>Usuń atrybut</translation>
+        <translation>Obriši atribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="85"/>
         <source>Add Type</source>
-        <translation>Dodaj typ</translation>
+        <translation>Dodaj tip</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="11"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="12"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Tip</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="13"/>
         <source>Default Value</source>
-        <translation>Domyślna wartość</translation>
+        <translation>Podrazumevana vrednost</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="14"/>
         <source>Required</source>
-        <translation>Wymagany</translation>
+        <translation>Obavezno</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="15"/>
         <source>Details</source>
-        <translation>Szczegóły</translation>
+        <translation>Detalji</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.html.php" line="52"/>
         <source>There are no issue types.</source>
-        <translation>Nie ma typów spraw.</translation>
+        <translation>Nema tipova problema.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="86"/>
         <source>Add Attribute</source>
-        <translation>Dodaj atrybut</translation>
+        <translation>Dodaj atribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="92"/>
         <source>View Settings</source>
-        <translation>Ustawienia widoków</translation>
+        <translation>Podešavanja pregleda</translation>
     </message>
     <message>
         <location filename="../../../admin/types/index.php" line="89"/>
         <source>Modify Attribute</source>
-        <translation>Zmień atrybut</translation>
+        <translation>Izmeni atribut</translation>
     </message>
 </context>
 <context>
@@ -2506,27 +2506,27 @@
     <message>
         <location filename="../../../admin/types/renameattribute.php" line="33"/>
         <source>Rename Attribute</source>
-        <translation>Zmień nazwę atrybutu</translation>
+        <translation>Preimenuj atribut</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="3"/>
         <source>Enter the new name of attribute &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Podaj nową nazwę atrybutu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Unesite novo ime atributa &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renameattribute.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -2534,27 +2534,27 @@
     <message>
         <location filename="../../../admin/types/renametype.php" line="33"/>
         <source>Rename Type</source>
-        <translation>Zmień nazwę typu</translation>
+        <translation>Preimenuj tip</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="3"/>
         <source>Enter the new name of type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Podaj nową nazwę typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Unesite novo ime tipa &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/types/renametype.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -2562,37 +2562,37 @@
     <message>
         <location filename="../../../admin/users/access.php" line="33"/>
         <source>Global Access</source>
-        <translation>Dostęp globalny</translation>
+        <translation>Globalni pristup</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="51"/>
         <source>Regular user</source>
-        <translation>Zwykły użytkownik</translation>
+        <translation>Redovan korisnik</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="52"/>
         <source>System administrator</source>
-        <translation>Administrator systemu</translation>
+        <translation>Sistem administrator</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.php" line="50"/>
         <source>Disabled</source>
-        <translation>Wyłączony</translation>
+        <translation>Onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="3"/>
         <source>Change global access for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień dostęp globalny dla użytkownika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmena globalnog pristupa za korisnika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/users/access.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -2600,42 +2600,42 @@
     <message>
         <location filename="../../../admin/users/add.php" line="33"/>
         <source>Add User</source>
-        <translation>Dodaj użytkownika</translation>
+        <translation>Dodaj korisnika</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="5"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="6"/>
         <source>Login:</source>
-        <translation>Login:</translation>
+        <translation>Prijava:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="7"/>
         <source>Password:</source>
-        <translation>Hasło:</translation>
+        <translation>Lozinka:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="8"/>
         <source>Confirm password:</source>
-        <translation>Potwierdź hasło:</translation>
+        <translation>Potvrdi lozinku:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="9"/>
         <source>User must change password at next logon.</source>
-        <translation>Użytkownik musi zmienić hasło przy następnym logowaniu.</translation>
+        <translation>Korisnik mora promeniti lozinku tokom sledeće prijave.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/users/add.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -2643,62 +2643,62 @@
     <message>
         <location filename="../../../admin/users/addprojects.php" line="59"/>
         <source>Add Projects</source>
-        <translation>Dodaj projekty</translation>
+        <translation>Dodaj projekte</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.php" line="62"/>
         <source>Regular member</source>
-        <translation>Zwykły członek</translation>
+        <translation>Običan član</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.php" line="63"/>
         <source>Project administrator</source>
-        <translation>Administrator projektu</translation>
+        <translation>Administrator projekta</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="6"/>
         <source>Select All</source>
-        <translation>Zaznacz wszystkie</translation>
+        <translation>Selektuj sve</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>Odznacz wszystkie</translation>
+        <translation>Deselektuj sve</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="13"/>
         <source>Add user &lt;strong&gt;%1&lt;/strong&gt; to the selected projects.</source>
-        <translation>Dodaj użytkownika &lt;strong&gt;%1&lt;/strong&gt; do wybranych projektów.</translation>
+        <translation>Dodaj korisnika &lt;strong&gt;%1&lt;/strong&gt; odabranim projektima.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="20"/>
         <source>Projects</source>
-        <translation>Projekty</translation>
+        <translation>Projekti</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="36"/>
         <source>Access</source>
-        <translation>Dostęp</translation>
+        <translation>Pristup</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="41"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="42"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="47"/>
         <source>There are no more available projects to add.</source>
-        <translation>Nie ma więcej dostępnych projektów.</translation>
+        <translation>Nema više dostupnih projekata za dodavanje.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/addprojects.html.php" line="50"/>
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zatvori</translation>
     </message>
 </context>
 <context>
@@ -2706,89 +2706,89 @@
     <message>
         <location filename="../../../admin/users/index.php" line="33"/>
         <source>User Accounts</source>
-        <translation>Konta użytkowników</translation>
+        <translation>Korisnički nalozi</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="40"/>
         <source>Active</source>
-        <translation>Aktywni</translation>
+        <translation>Aktivno</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="83"/>
         <source>Add User</source>
-        <translation>Dodaj użytkownika</translation>
+        <translation>Dodaj korisnika</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="86"/>
         <source>Manage Permissions</source>
-        <translation>Zarządzaj uprawnieniami</translation>
+        <translation>Upravljaj dozvolama</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="4"/>
         <source>All Users</source>
-        <translation>Wszyscy użytkownicy</translation>
+        <translation>Svi korisnici</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="16"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="17"/>
         <source>Login</source>
-        <translation>Login</translation>
+        <translation>Prijava</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="19"/>
         <source>Email</source>
-        <translation>E-mail</translation>
+        <translation>Email</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="21"/>
         <source>Access</source>
-        <translation>Dostęp</translation>
+        <translation>Pristup</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.html.php" line="54"/>
         <source>There are no disabled users.</source>
-        <translation>Nie ma wyłączonych użytkowników.</translation>
+        <translation>Nema onemogućenih korisnika.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="65"/>
         <source>Regular user</source>
-        <translation>Zwykły użytkownik</translation>
+        <translation>Redovan korisnik</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="66"/>
         <source>System administrator</source>
-        <translation>Administrator systemu</translation>
+        <translation>Sistem administrator</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="85"/>
         <source>Rename User</source>
-        <translation>Zmień nazwę użytkownika</translation>
+        <translation>Preimenuj korisnika</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="84"/>
         <source>Change Password</source>
-        <translation>Zmień hasło</translation>
+        <translation>Promeni lozinku</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="41"/>
         <source>Disabled</source>
         <comment>filter</comment>
-        <translation>Wyłączeni</translation>
+        <translation>Onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="64"/>
         <source>Disabled</source>
         <comment>user</comment>
-        <translation>Wyłączony</translation>
+        <translation>Onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/users/index.php" line="87"/>
         <source>User Preferences</source>
-        <translation>Ustawienia użytkownika</translation>
+        <translation>Korisnička podešavanja</translation>
     </message>
 </context>
 <context>
@@ -2796,32 +2796,32 @@
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="37"/>
         <source>Project Access</source>
-        <translation>Dostęp do projektu</translation>
+        <translation>Pristup projektu</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="52"/>
         <source>Regular member</source>
-        <translation>Zwykły członek</translation>
+        <translation>Običan član</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.php" line="53"/>
         <source>Project administrator</source>
-        <translation>Administrator projektu</translation>
+        <translation>Administrator projekta</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="4"/>
         <source>Change access to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Zmień dostęp do projektu &lt;strong&gt;%1&lt;/strong&gt; dla użytkownika &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <translation>Promena pristupa projektu &lt;strong&gt;%1&lt;/strong&gt; za korisnika &lt;strong&gt;%2&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="11"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projectaccess.html.php" line="12"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -2829,82 +2829,82 @@
     <message>
         <location filename="../../../admin/users/projects.php" line="37"/>
         <source>Manage Permissions</source>
-        <translation>Zarządzaj uprawnieniami</translation>
+        <translation>Upravljaj dozvolama</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="58"/>
         <source>Disabled</source>
-        <translation>Wyłączony</translation>
+        <translation>Onemogućeno</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="59"/>
         <source>Regular user</source>
-        <translation>Zwykły użytkownik</translation>
+        <translation>Redovan korisnik</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="60"/>
         <source>System administrator</source>
-        <translation>Administrator systemu</translation>
+        <translation>Sistem administrator</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="69"/>
         <source>Regular member</source>
-        <translation>Zwykły członek</translation>
+        <translation>Običan član</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="70"/>
         <source>Project administrator</source>
-        <translation>Administrator projektu</translation>
+        <translation>Administrator projekta</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="87"/>
         <source>Add Projects</source>
-        <translation>Dodaj projekty</translation>
+        <translation>Dodaj projekte</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="88"/>
         <source>Change Access</source>
-        <translation>Zmień dostęp</translation>
+        <translation>Promeni pristup</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.php" line="89"/>
         <source>Remove Project</source>
-        <translation>Usuń projekt</translation>
+        <translation>Ukloni projekat</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="28"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="3"/>
         <source>Edit permissions of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Edytuj uprawnienia użytkownika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmeni dozvole za korisnika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="8"/>
         <source>Global Access</source>
-        <translation>Dostęp globalny</translation>
+        <translation>Globalni pristup</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="12"/>
         <source>Change</source>
-        <translation>Zmień</translation>
+        <translation>Promeni</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="29"/>
         <source>Access</source>
-        <translation>Dostęp</translation>
+        <translation>Pristup</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="55"/>
         <source>This user is not a member of any project.</source>
-        <translation>Ten użytkownik nie jest członkiem żadnego projektu.</translation>
+        <translation>Ovaj korisnik nije član ni jednog projekta.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/projects.html.php" line="60"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
 </context>
 <context>
@@ -2912,22 +2912,22 @@
     <message>
         <location filename="../../../admin/users/removeproject.php" line="37"/>
         <source>Remove Project</source>
-        <translation>Usuń projekt</translation>
+        <translation>Ukloni projekat</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="4"/>
         <source>Do you want to remove user &lt;strong&gt;%1&lt;/strong&gt; from project &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>Czy chcesz usunąć użytkownika &lt;strong&gt;%1&lt;/strong&gt; z projektu &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+        <translation>Da li želite da uklonite korisnika &lt;strong&gt;%1&lt;/strong&gt; iz projekta &lt;strong&gt;%2&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="9"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/users/removeproject.html.php" line="10"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -2935,27 +2935,27 @@
     <message>
         <location filename="../../../admin/users/rename.php" line="33"/>
         <source>Rename User</source>
-        <translation>Zmień nazwę użytkownika</translation>
+        <translation>Preimenuj korisnika</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="3"/>
         <source>Enter the new name of user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Podaj nową nazwę użytkownika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Unesite novo ime za korisnika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/users/rename.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -2963,74 +2963,74 @@
     <message>
         <location filename="../../../admin/views/index.php" line="33"/>
         <source>View Settings</source>
-        <translation>Ustawienia widoków</translation>
+        <translation>Podešavanja pregleda</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="3"/>
         <source>Edit public view settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Edytuj publiczne ustawienia widoków dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmeni podešavanja javnog pregleda za tip &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="9"/>
         <source>Order of Attributes</source>
-        <translation>Kojelność atrybutów</translation>
+        <translation>Redosled atributa</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="12"/>
         <location filename="../../../admin/views/index.html.php" line="24"/>
         <location filename="../../../admin/views/index.html.php" line="44"/>
         <source>Modify</source>
-        <translation>Zmień</translation>
+        <translation>Izmeni</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="21"/>
         <source>Default View</source>
-        <translation>Domyślny widok</translation>
+        <translation>Podrazumevani pregled</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="29"/>
         <source>Columns:</source>
-        <translation>Kolumny:</translation>
+        <translation>Kolone:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="33"/>
         <source>Sort By:</source>
-        <translation>Sortowanie:</translation>
+        <translation>Sortiraj po:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="41"/>
         <source>Initial View</source>
-        <translation>Początkowy widok</translation>
+        <translation>Inicijalni pregled</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="59"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="60"/>
         <source>Columns</source>
-        <translation>Kolumny</translation>
+        <translation>Kolone</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="61"/>
         <source>Sort By</source>
-        <translation>Sortowanie</translation>
+        <translation>Sortiraj po</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="62"/>
         <source>Filter</source>
-        <translation>Filtr</translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="83"/>
         <source>This type has no public views.</source>
-        <translation>Ten typ nie ma publicznych widoków.</translation>
+        <translation>Ovaj tip nema javnih pregleda.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="88"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
 </context>
 <context>
@@ -3038,32 +3038,32 @@
     <message>
         <location filename="../../../admin/views/initial.php" line="33"/>
         <source>Initial View</source>
-        <translation>Początkowy widok</translation>
+        <translation>Inicijalni pregled</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.php" line="46"/>
         <source>All Issues</source>
-        <translation>Wszystkie sprawy</translation>
+        <translation>Svi problemi</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="3"/>
         <source>Select the initial view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Wybierz początkowy widok dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izaberite inicijalni pregled za tip &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="7"/>
         <source>Initial view:</source>
-        <translation>Początkowy widok:</translation>
+        <translation>Inicijalni pregled:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -3071,42 +3071,42 @@
     <message>
         <location filename="../../../admin/views/order.php" line="33"/>
         <source>Order of Attributes</source>
-        <translation>Kojelność atrybutów</translation>
+        <translation>Redosled atributa</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="3"/>
         <source>Modify the order of attributes for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień kolejność atrybutów dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmena redosleda atributa za tip &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="8"/>
         <source>Attributes</source>
-        <translation>Atrybuty</translation>
+        <translation>Atributi</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="12"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="13"/>
         <source>Order</source>
-        <translation>Kolejność</translation>
+        <translation>Redosled</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="24"/>
         <source>Update</source>
-        <translation>Odśwież</translation>
+        <translation>Ažuriranje</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="30"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/views/order.html.php" line="31"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -3114,27 +3114,27 @@
     <message>
         <location filename="../../../admin/views/unpublish.php" line="33"/>
         <source>Unpublish View</source>
-        <translation>Cofnij publikację widoku</translation>
+        <translation>Javni u privatni pregled</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="4"/>
         <source>Are you sure you want to convert public view &lt;strong&gt;%1&lt;/strong&gt; to your personal view?</source>
-        <translation>Czy na pewno chcesz skonwertować publiczny widok &lt;strong&gt;%1&lt;/strong&gt; na swój widok prywatny?</translation>
+        <translation>Da li ste sigurni da želite da konvertujete javni pregled &lt;strong&gt;%1&lt;/strong&gt; u vaš lični?</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="6"/>
         <source>View &lt;strong&gt;%1&lt;/strong&gt; cannot be unpublished.</source>
-        <translation>Nie można cofnąć publikacji widoku &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Pregled &lt;strong&gt;%1&lt;/strong&gt; se ne može biti  učiniti privatnim.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../admin/views/unpublish.html.php" line="14"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -3144,139 +3144,139 @@
         <location filename="../../../client/alerts/alert.inc.php" line="89"/>
         <location filename="../../../client/alerts/alert.inc.php" line="94"/>
         <source>All Issues</source>
-        <translation>Wszystkie sprawy</translation>
+        <translation>Svi problemi</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="100"/>
         <source>Personal Views</source>
-        <translation>Prywatne widoki</translation>
+        <translation>Lični pregledi</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="103"/>
         <source>Public Views</source>
-        <translation>Publiczne widoki</translation>
+        <translation>Javni pregledi</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="158"/>
         <source>Add Public Alert</source>
-        <translation>Dodaj publiczny alert</translation>
+        <translation>Dodaj javno upozorenje</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="160"/>
         <source>Add Personal Alert</source>
-        <translation>Dodaj prywatny alert</translation>
+        <translation>Dodaj lično upozorenje</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="163"/>
         <source>Modify Alert</source>
-        <translation>Zmień alert</translation>
+        <translation>Izmeni upozorenje</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="226"/>
         <source>No days selected</source>
-        <translation>Nie wybrano dni</translation>
+        <translation>Nema odabranih dana</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.inc.php" line="238"/>
         <source>No hours selected</source>
-        <translation>Nie wybrano godzin</translation>
+        <translation>Nema odabranih sati</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="7"/>
         <source>Modify public alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień publiczny alert &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmeni javno upozorenje &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="9"/>
         <source>Create a new public alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Utwórz nowy publiczny alert dla folderu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Napravi novo javno obaveštenje za fasciklu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="11"/>
         <source>Create a new public alert for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Utwórz nowy publiczny alert dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Napravi novo javno obaveštenje za tip &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="15"/>
         <source>Modify your personal alert &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień swój prywatny alert &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmena vašeg ličnog obaveštenja &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="17"/>
         <source>Create a new personal alert for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Utwórz nowy prywatny alert dla folderu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Napravi novo lično obaveštenje za fasciklu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="19"/>
         <source>Create a new personal alert for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Utwórz nowy prywatny alert dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Napravi novo lično obaveštenje za tip &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="30"/>
         <source>View:</source>
-        <translation>Widok:</translation>
+        <translation>Pregled:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="36"/>
         <source>Email Type</source>
-        <translation>Typ e-maili</translation>
+        <translation>Tip email-a</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="38"/>
         <source>Send the following type of emails for this alert:</source>
-        <translation>Wysyłaj e-maile następującego typu dla tego alertu:</translation>
+        <translation>Poslati sledeći tip email-ova za ovo upozorenje:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="42"/>
         <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
-        <translation>Uwaga: Nie będziesz otrzymywać e-maili dopóki nie podasz adresu w swoich ustawieniach użytkownika. </translation>
+        <translation>Upozorenje: Nećete primati email-ove dok ne unesete email adresu u vašim podešavanjima.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="48"/>
         <source>Summary Schedule</source>
-        <translation>Harmonogram podsumowań</translation>
+        <translation>Pregled rasporeda</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="51"/>
         <location filename="../../../client/alerts/alert.html.php" line="76"/>
         <source>Select All</source>
-        <translation>Zaznacz wszystkie</translation>
+        <translation>Selektuj sve</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="53"/>
         <location filename="../../../client/alerts/alert.html.php" line="78"/>
         <source>Unselect All</source>
-        <translation>Odznacz wszystkie</translation>
+        <translation>Deselektuj sve</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="55"/>
         <source>Send summary emails on the following days:</source>
-        <translation>Wysyłaj e-maile podsumowań w następujące dni:</translation>
+        <translation>Šalji zbirne email-ove sledećim danima:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="81"/>
         <source>Send summary emails at the following hours:</source>
-        <translation>Wysyłaj e-maile podsumowań o następujących godzinach:</translation>
+        <translation>Šalji zbirne mailove sledećim satima:</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="99"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="100"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="105"/>
         <source>There are no more available views to use.</source>
-        <translation>Nie ma więcej dostępnych widoków.</translation>
+        <translation>Nema više raspoloživih pregleda za korišćenje.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/alert.html.php" line="108"/>
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zatvori</translation>
     </message>
 </context>
 <context>
@@ -3284,32 +3284,32 @@
     <message>
         <location filename="../../../client/alerts/delete.php" line="43"/>
         <source>Delete Alert</source>
-        <translation>Usuń alert</translation>
+        <translation>Obriši upozorenje</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.php" line="56"/>
         <source>All Issues</source>
-        <translation>Wszystkie sprawy</translation>
+        <translation>Svi problemi</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="4"/>
         <source>Are you sure you want to delete public alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć publiczny alert &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete javno obaveštenje &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="6"/>
         <source>Are you sure you want to delete your personal alert &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć swój prywatny alert &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete lično obaveštenje &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/delete.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -3317,22 +3317,22 @@
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="39"/>
         <source>None</source>
-        <translation>Brak</translation>
+        <translation>Ništa</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="40"/>
         <source>Immediate notifications</source>
-        <translation>Natychmiastowe powiadomienia</translation>
+        <translation>Momentalna obaveštenja</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="41"/>
         <source>Summary of notifications</source>
-        <translation>Podsumowanie powiadomień</translation>
+        <translation>Pregled obaveštenja</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/helper.inc.php" line="42"/>
         <source>Summary reports</source>
-        <translation>Raporty podsumowujące</translation>
+        <translation>Pregled izveštaja</translation>
     </message>
 </context>
 <context>
@@ -3340,97 +3340,97 @@
     <message>
         <location filename="../../../client/alerts/index.php" line="50"/>
         <source>Manage Alerts</source>
-        <translation>Zarządzaj alertami</translation>
+        <translation>Upravljaj upozorenjima</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="95"/>
         <source>All Issues</source>
-        <translation>Wszystkie sprawy</translation>
+        <translation>Svi problemi</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="122"/>
         <source>Add Alert</source>
-        <translation>Dodaj alert</translation>
+        <translation>Dodaj upozorenje</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="124"/>
         <source>Add Public Alert</source>
-        <translation>Dodaj publiczny alert</translation>
+        <translation>Dodaj javno upozorenje</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="126"/>
         <source>Modify Alert</source>
-        <translation>Zmień alert</translation>
+        <translation>Izmeni upozorenje</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.php" line="127"/>
         <source>Delete Alert</source>
-        <translation>Usuń alert</translation>
+        <translation>Obriši upozorenje</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="4"/>
         <source>Edit alert settings for folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień ustawienia alertów dla folderu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmeni podešavanja obaveštenja za fasciklu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="6"/>
         <source>Edit alert settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień ustawienia alertów dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmeni podešavanja obaveštenja za tip &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="19"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="20"/>
         <source>Total</source>
-        <translation>Łącznie</translation>
+        <translation>Ukupno</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="21"/>
         <source>Unread</source>
-        <translation>Nieprzeczytane</translation>
+        <translation>Nepročitano</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="22"/>
         <source>Modified</source>
-        <translation>Zmienione</translation>
+        <translation>Izmenjeno</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="24"/>
         <source>Email Type</source>
-        <translation>Typ e-maili</translation>
+        <translation>Tip email-a</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="26"/>
         <source>Is Public</source>
-        <translation>Publiczny</translation>
+        <translation>Je javno</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="56"/>
         <source>Yes</source>
-        <translation>Tak</translation>
+        <translation>Da</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="56"/>
         <source>No</source>
-        <translation>Nie</translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="68"/>
         <source>This folder has no alerts.</source>
-        <translation>Ten folder nie ma alertów.</translation>
+        <translation>Ova fascikla nema upozorenja.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="70"/>
         <source>This type has no alerts.</source>
-        <translation>Ten typ nie ma alertów.</translation>
+        <translation>Ovaj tip nema upozorenja.</translation>
     </message>
     <message>
         <location filename="../../../client/alerts/index.html.php" line="76"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
 </context>
 <context>
@@ -3438,7 +3438,7 @@
     <message>
         <location filename="../../../client/index.php" line="48"/>
         <source>Web Client</source>
-        <translation>Klient WWW</translation>
+        <translation>Web klijent</translation>
     </message>
 </context>
 <context>
@@ -3446,32 +3446,32 @@
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="97"/>
         <source>Only Comments</source>
-        <translation>Tylko komentarze</translation>
+        <translation>Samo komentari</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="98"/>
         <source>Only Attachments</source>
-        <translation>Tylko załączniki</translation>
+        <translation>Samo priključci</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="99"/>
         <source>Comments &amp; Attachments</source>
-        <translation>Komentarze i załączniki</translation>
+        <translation>Komentari i priključci</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="170"/>
         <source>Edit Attributes</source>
-        <translation>Edytuj atrybuty</translation>
+        <translation>Izmeni atribute</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="171"/>
         <source>Add Comment</source>
-        <translation>Dodaj komentarz</translation>
+        <translation>Dodaj komentar</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="172"/>
         <source>Add Attachment</source>
-        <translation>Dodaj załącznik</translation>
+        <translation>Dodaj priključak</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="174"/>
@@ -3481,37 +3481,37 @@
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="175"/>
         <source>Clone Issue</source>
-        <translation>Sklonuj sprawę</translation>
+        <translation>Kloniraj problem</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="177"/>
         <source>Move Issue</source>
-        <translation>Przenieś sprawę</translation>
+        <translation>Premesti problem</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="178"/>
         <source>Delete Issue</source>
-        <translation>Usuń sprawę</translation>
+        <translation>Obriši problem</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="181"/>
         <source>Mark As Unread</source>
-        <translation>Oznacz jako nieprzeczytaną</translation>
+        <translation>Obeleži kao nepročitano</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="183"/>
         <source>Mark As Read</source>
-        <translation>Oznacz jako przeczytaną</translation>
+        <translation>Obeleži kao pročitano</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="186"/>
         <source>Unsubscribe</source>
-        <translation>Usuń subskrypcję</translation>
+        <translation>Odjavi se</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="188"/>
         <source>Subscribe</source>
-        <translation>Subskrybuj</translation>
+        <translation>Prijavi se</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="17"/>
@@ -3521,96 +3521,96 @@
     <message>
         <location filename="../../../client/issuedetails.html.php" line="21"/>
         <source>Type:</source>
-        <translation>Typ:</translation>
+        <translation>Tip:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.inc.php" line="96"/>
         <source>All History</source>
-        <translation>Cała historia</translation>
+        <translation>Cela istorija</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="64"/>
         <location filename="../../../client/issuedetails.html.php" line="111"/>
         <location filename="../../../client/issuedetails.html.php" line="125"/>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Izmeni</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="65"/>
         <location filename="../../../client/issuedetails.html.php" line="113"/>
         <location filename="../../../client/issuedetails.html.php" line="127"/>
         <source>Delete</source>
-        <translation>Usuń</translation>
+        <translation>Obriši</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="201"/>
         <location filename="../../../client/issuedetails.html.php" line="202"/>
         <source>Unknown Folder</source>
-        <translation>Nieznany folder</translation>
+        <translation>Nepoznata fascikla</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="224"/>
         <source>There are no comments.</source>
-        <translation>Nie ma komentarzy.</translation>
+        <translation>Nema komentara.</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="226"/>
         <source>There are no attachments.</source>
-        <translation>Nie ma załączników.</translation>
+        <translation>Nema priključaka.</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="228"/>
         <source>There are no comments or attachments.</source>
-        <translation>Nie ma komentarzy ani załączników.</translation>
+        <translation>Nema komentara ili priključaka.</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="91"/>
         <source>Issue History</source>
-        <translation>Historia sprawy</translation>
+        <translation>Istorija problema</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="156"/>
         <location filename="../../../client/issuedetails.html.php" line="159"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="162"/>
         <location filename="../../../client/issuedetails.html.php" line="163"/>
         <source>empty</source>
-        <translation>pusty</translation>
+        <translation>prazno</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="105"/>
         <source>Comment %1</source>
-        <translation>Komentarz %1</translation>
+        <translation>Komentar %1</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="25"/>
         <source>Location:</source>
-        <translation>Lokalizacja:</translation>
+        <translation>Lokacija:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="29"/>
         <source>Created:</source>
-        <translation>Utworzona:</translation>
+        <translation>Kreirano:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="33"/>
         <source>Last Modified:</source>
-        <translation>Ostatnio zmieniona:</translation>
+        <translation>Menjano:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="74"/>
         <location filename="../../../client/issuedetails.html.php" line="138"/>
         <source>Last Edited:</source>
-        <translation>Ostatnio zmieniony:</translation>
+        <translation>Poslednja izmena:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="61"/>
         <location filename="../../../client/issuedetails.html.php" line="107"/>
         <source>Reply</source>
-        <translation>Odpowiedz</translation>
+        <translation>Odgovori</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="72"/>
@@ -3620,12 +3620,12 @@
     <message>
         <location filename="../../../client/issuedetails.html.php" line="122"/>
         <source>Attachment %1</source>
-        <translation>Załącznik %1</translation>
+        <translation>Priključak %1</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="203"/>
         <source>Issue moved from %1 to %2</source>
-        <translation>Sprawa przeniesiona z %1 do %2</translation>
+        <translation>Problem premešten iz %1 u %2</translation>
     </message>
 </context>
 <context>
@@ -3633,108 +3633,108 @@
     <message>
         <location filename="../../../client/issueslist.inc.php" line="86"/>
         <source>All Issues</source>
-        <translation>Wszystkie sprawy</translation>
+        <translation>Svi problemi</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="88"/>
         <source>Personal Views</source>
-        <translation>Prywatne widoki</translation>
+        <translation>Lični pregledi</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="90"/>
         <source>Public Views</source>
-        <translation>Publiczne widoki</translation>
+        <translation>Javni pregledi</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="133"/>
         <source>All Projects</source>
-        <translation>Wszystkie projekty</translation>
+        <translation>Svi projekti</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="262"/>
         <source>Add Issue</source>
-        <translation>Dodaj sprawę</translation>
+        <translation>Dodaj problem</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="263"/>
         <source>Mark All As Read</source>
-        <translation>Oznacz jako przeczytane</translation>
+        <translation>Obeleži sve kao pročitano</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="264"/>
         <source>Mark All As Unread</source>
-        <translation>Oznacz jako  nieprzeczytane</translation>
+        <translation>Obeleži sve kao nepročitano</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="266"/>
         <source>Manage Alerts</source>
-        <translation>Zarządzaj alertami</translation>
+        <translation>Upravljaj upozorenjima</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="267"/>
         <source>Export To CSV</source>
-        <translation>Eksportuj jako CSV</translation>
+        <translation>Izvoz u CSV</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="274"/>
         <source>Add View</source>
-        <translation>Dodaj widok</translation>
+        <translation>Dodaj pregled</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="276"/>
         <source>Modify View</source>
-        <translation>Zmień widok</translation>
+        <translation>Izmeni pregled</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="278"/>
         <source>Clone View</source>
-        <translation>Sklonuj widok</translation>
+        <translation>Kloniraj pregled</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.inc.php" line="265"/>
         <source>Manage Views</source>
-        <translation>Zarządzaj widokami</translation>
+        <translation>Upravljaj pregledima</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="11"/>
         <source>View:</source>
-        <translation>Widok:</translation>
+        <translation>Pregled:</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="12"/>
         <location filename="../../../client/issueslist.html.php" line="21"/>
         <source>Go</source>
-        <translation>Przejdź</translation>
+        <translation>Kreni</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="20"/>
         <source>Project:</source>
-        <translation>Projekt:</translation>
+        <translation>Projekat:</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="27"/>
         <source>Search</source>
-        <translation>Szukaj</translation>
+        <translation>Traži</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="87"/>
         <source>There are no issues matching the search criteria.</source>
-        <translation>Nie ma spraw spełniających kryteria wyszukiwania.</translation>
+        <translation>Nema problema koji odgovaraju kriterijumima pretrage.</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="91"/>
         <source>There are no issues matching the selected view.</source>
-        <translation>Nie ma spraw w wybranym widoku.</translation>
+        <translation>Nema problema koji odgovaraju odabranom pregledu.</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="95"/>
         <source>There are no issues of this type.</source>
-        <translation>Nie ma spraw tego typu.</translation>
+        <translation>Nema problema ovog tipa.</translation>
     </message>
     <message>
         <location filename="../../../client/issueslist.html.php" line="99"/>
         <source>There are no issues in this folder.</source>
-        <translation>Nie ma spraw w tym folderze.</translation>
+        <translation>Nema problema u ovoj fascikli.</translation>
     </message>
 </context>
 <context>
@@ -3742,37 +3742,37 @@
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="45"/>
         <source>Export To CSV</source>
-        <translation>Eksportuj jako CSV</translation>
+        <translation>Izvoz u CSV</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="57"/>
         <source>Table with visible columns only</source>
-        <translation>Tabela tylko z widocznymi kolumnami</translation>
+        <translation>Tabela sa samo vidljivim kolonama</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="58"/>
         <source>Table with all system and user columns</source>
-        <translation>Tabela ze wszystkimi kolumnami systemowymi i użytkownika</translation>
+        <translation>Tabela sa svim sistemskim i korisničkim kolonama</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.php" line="73"/>
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zatvori</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.html.php" line="3"/>
         <source>Export list of issues to CSV file.</source>
-        <translation>Eksportuj listę spraw jako plik CSV.</translation>
+        <translation>Izvoz liste problema u CSV datoteku.</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/issues/exportcsv.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -3785,17 +3785,17 @@
     <message>
         <location filename="../../../client/project.html.php" line="22"/>
         <source>Last Edited:</source>
-        <translation>Ostatnio zmieniony:</translation>
+        <translation>Poslednja izmena:</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="13"/>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Izmeni</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="14"/>
         <source>Delete</source>
-        <translation>Usuń</translation>
+        <translation>Obriši</translation>
     </message>
     <message>
         <location filename="../../../client/project.html.php" line="21"/>
@@ -3808,32 +3808,32 @@
     <message>
         <location filename="../../../client/projectstree.html.php" line="7"/>
         <source>Projects</source>
-        <translation>Projekty</translation>
+        <translation>Projekti</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="13"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="14"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Tip</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="23"/>
         <source>All Projects</source>
-        <translation>Wszystkie projekty</translation>
+        <translation>Svi projekti</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.html.php" line="79"/>
         <source>There are no projects.</source>
-        <translation>Nie ma projektów.</translation>
+        <translation>Nema projekata.</translation>
     </message>
     <message>
         <location filename="../../../client/projectstree.inc.php" line="103"/>
         <source>Manage Projects</source>
-        <translation>Zarządzaj projektami</translation>
+        <translation>Upravljaj projektima</translation>
     </message>
 </context>
 <context>
@@ -3841,32 +3841,32 @@
     <message>
         <location filename="../../../client/projects/access.php" line="37"/>
         <source>User Access</source>
-        <translation>Dostęp użytkownika</translation>
+        <translation>Korisnički pristup</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.php" line="56"/>
         <source>Regular member</source>
-        <translation>Zwykły członek</translation>
+        <translation>Običan član</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.php" line="57"/>
         <source>Project administrator</source>
-        <translation>Administrator projektu</translation>
+        <translation>Administrator projekta</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="4"/>
         <source>Change access to project &lt;strong&gt;%1&lt;/strong&gt; for user &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Zmień dostęp do projektu &lt;strong&gt;%1&lt;/strong&gt; dla użytkownika &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <translation>Promena pristupa projektu &lt;strong&gt;%1&lt;/strong&gt; za korisnika &lt;strong&gt;%2&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="11"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/access.html.php" line="12"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -3874,42 +3874,42 @@
     <message>
         <location filename="../../../client/projects/addfolder.php" line="57"/>
         <source>Add Folder</source>
-        <translation>Dodaj folder</translation>
+        <translation>Dodaj fasciklu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="3"/>
         <source>Create a new folder in project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Utwórz nowy folder w projekcie &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Kreiraj novu fasciklu u projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="9"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="11"/>
         <source>Type:</source>
-        <translation>Typ:</translation>
+        <translation>Tip:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="14"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="20"/>
         <source>There are no available issue types to use.</source>
-        <translation>Nie ma dostępnych typów spraw.</translation>
+        <translation>Nema raspoloživih tipova problema za korišćenje.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addfolder.html.php" line="23"/>
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zatvori</translation>
     </message>
 </context>
 <context>
@@ -3917,62 +3917,62 @@
     <message>
         <location filename="../../../client/projects/addmembers.php" line="59"/>
         <source>Add Members</source>
-        <translation>Dodaj członków</translation>
+        <translation>Dodaj članove</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.php" line="62"/>
         <source>Regular member</source>
-        <translation>Zwykły członek</translation>
+        <translation>Običan član</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.php" line="63"/>
         <source>Project administrator</source>
-        <translation>Administrator projektu</translation>
+        <translation>Administrator projekta</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="6"/>
         <source>Select All</source>
-        <translation>Zaznacz wszystkich</translation>
+        <translation>Selektuj sve</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="8"/>
         <source>Unselect All</source>
-        <translation>Odznacz wszystkich</translation>
+        <translation>Deselektuj sve</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="13"/>
         <source>Add new members to project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Dodaj nowych członków do projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Dodavanje bovih članova projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="20"/>
         <source>Users</source>
-        <translation>Użytkownicy</translation>
+        <translation>Korisnici</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="36"/>
         <source>Access</source>
-        <translation>Dostęp</translation>
+        <translation>Pristup</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="41"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="42"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="47"/>
         <source>There are no more available users to add.</source>
-        <translation>Nie ma więcej dostępnych użytkowników.</translation>
+        <translation>Nema više dostupnih korisnika za dodavanje.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addmembers.html.php" line="50"/>
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zatvori</translation>
     </message>
 </context>
 <context>
@@ -3980,22 +3980,22 @@
     <message>
         <location filename="../../../client/projects/addproject.php" line="42"/>
         <source>Add Project</source>
-        <translation>Dodaj projekt</translation>
+        <translation>Dodaj projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.php" line="48"/>
         <source>Plain Text</source>
-        <translation>Zwykły tekst</translation>
+        <translation>Čist tekst</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.php" line="49"/>
         <source>Text with Markup</source>
-        <translation>Tekst ze znacznikami</translation>
+        <translation>HTML tekst</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="5"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="7"/>
@@ -4005,17 +4005,17 @@
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="11"/>
         <source>Text format:</source>
-        <translation>Format tekstu:</translation>
+        <translation>Format teksta:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="14"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/addproject.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4023,27 +4023,27 @@
     <message>
         <location filename="../../../client/projects/archiveproject.php" line="40"/>
         <source>Archive Project</source>
-        <translation>Archiwizuj projekt</translation>
+        <translation>Arhiviraj projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="3"/>
         <source>Are you sure you want to move project &lt;strong&gt;%1&lt;/strong&gt; to the archive?</source>
-        <translation>Czy na pewno chcesz przenieść projekt &lt;strong&gt;%1&lt;/strong&gt; do archiwum?</translation>
+        <translation>Da li ste sigurni da želite da prebacite projekat &lt;strong&gt;%1&lt;/strong&gt; u arhivu?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="5"/>
         <source>You can unarchive the project later by going to the Projects Archive in the Administration Panel.</source>
-        <translation>Możesz przywrócić ten projekt później otwieracją Archiwum projektów w Panelu administracyjnym.</translation>
+        <translation>Možete vratiti projekat iz arhive kroz  &apos;Arhiva projekata&apos; u administrativnom panelu.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/archiveproject.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4051,22 +4051,22 @@
     <message>
         <location filename="../../../client/projects/deletedescription.php" line="41"/>
         <source>Delete Description</source>
-        <translation>Usuń opis</translation>
+        <translation>Obriši opis</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="3"/>
         <source>Are you sure you want to delete description for project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć opis projektu &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete opis projekta &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="8"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletedescription.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4074,27 +4074,27 @@
     <message>
         <location filename="../../../client/projects/deletefolder.php" line="37"/>
         <source>Delete Folder</source>
-        <translation>Usuń folder</translation>
+        <translation>Obriši fasciklu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="3"/>
         <source>Are you sure you want to delete folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete fasciklu &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All issues in this folder will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Uwaga:&lt;/strong&gt; Wszystkie sprawy w tym folderze zostaną trwale usunięte.</translation>
+        <translation>&lt;strong&gt;Upozorenje:&lt;/strong&gt; Svi problemi u ovoj fascikli će biti trajno obrisani.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deletefolder.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4102,27 +4102,27 @@
     <message>
         <location filename="../../../client/projects/deleteproject.php" line="40"/>
         <source>Delete Project</source>
-        <translation>Usuń projekt</translation>
+        <translation>Obriši projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="3"/>
         <source>Are you sure you want to delete project &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć projekt &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete projekat &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="6"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; All folders and issues in this project will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Uwaga:&lt;/strong&gt; Wszystkie foldery i sprawy w tym projekcie zostaną trwale usunięte.</translation>
+        <translation>&lt;strong&gt;Pažnja:&lt;/strong&gt; Sve fascikle i problemi u obom projektu će biti trajno obrisani.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/deleteproject.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4135,27 +4135,27 @@
     <message>
         <location filename="../../../client/projects/description.inc.php" line="64"/>
         <source>Edit Description</source>
-        <translation>Edytuj opis</translation>
+        <translation>Izmeni opis</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="75"/>
         <source>Plain Text</source>
-        <translation>Zwykły tekst</translation>
+        <translation>Čist tekst</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.inc.php" line="76"/>
         <source>Text with Markup</source>
-        <translation>Tekst ze znacznikami</translation>
+        <translation>HTML tekst</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="4"/>
         <source>Add description to project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Dodaj opis do projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Dodavanje opisa projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="6"/>
         <source>Edit description of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Edytuj opis projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmeni opis projekta &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="11"/>
@@ -4165,17 +4165,17 @@
     <message>
         <location filename="../../../client/projects/description.html.php" line="15"/>
         <source>Text format:</source>
-        <translation>Format tekstu:</translation>
+        <translation>Format teksta:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="18"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/description.html.php" line="19"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4183,92 +4183,92 @@
     <message>
         <location filename="../../../client/projects/index.php" line="33"/>
         <source>Manage Projects</source>
-        <translation>Zarządzaj projektami</translation>
+        <translation>Upravljaj projektima</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="56"/>
         <source>Regular project</source>
-        <translation>Zwykły projekt</translation>
+        <translation>Redovan projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="57"/>
         <source>Public project</source>
-        <translation>Publiczny projekt</translation>
+        <translation>Javni projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="92"/>
         <source>Add Project</source>
-        <translation>Dodaj projekt</translation>
+        <translation>Dodaj projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="93"/>
         <source>Add Folder</source>
-        <translation>Dodaj folder</translation>
+        <translation>Dodaj fasciklu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="95"/>
         <source>Rename Project</source>
-        <translation>Zmień nazwę projektu</translation>
+        <translation>Promeni ime projekta</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="96"/>
         <source>Archive Project</source>
-        <translation>Archiwizuj projekt</translation>
+        <translation>Arhiviraj projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="97"/>
         <source>Delete Project</source>
-        <translation>Usuń projekt</translation>
+        <translation>Obriši projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="99"/>
         <source>Rename Folder</source>
-        <translation>Zmień nazwę folderu</translation>
+        <translation>Preimenuj fasciklu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="100"/>
         <source>Move Folder</source>
-        <translation>Przenieś folder</translation>
+        <translation>Premesti fasciklu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="101"/>
         <source>Delete Folder</source>
-        <translation>Usuń folder</translation>
+        <translation>Obriši fasciklu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.php" line="102"/>
         <source>Manage Permissions</source>
-        <translation>Zarządzaj uprawnieniami</translation>
+        <translation>Upravljaj dozvolama</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="13"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="14"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Tip</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="15"/>
         <source>Access</source>
-        <translation>Dostęp</translation>
+        <translation>Pristup</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="55"/>
         <source>There are no projects.</source>
-        <translation>Nie ma projektów.</translation>
+        <translation>Nema projekata.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="59"/>
         <source>There are no projects that you can manage.</source>
-        <translation>Nie ma projektów, którymi możesz zarządzać.</translation>
+        <translation>Nema projekata kojima možete upravljati.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/index.html.php" line="64"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
 </context>
 <context>
@@ -4276,77 +4276,77 @@
     <message>
         <location filename="../../../client/projects/members.php" line="94"/>
         <source>Add Members</source>
-        <translation>Dodaj członków</translation>
+        <translation>Dodaj članove</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="26"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="3"/>
         <source>Edit permissions of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Edytuj uprawnienia projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmena dozvola za projekat &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="8"/>
         <source>Global Access</source>
-        <translation>Dostęp globalny</translation>
+        <translation>Globalni pristup</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="11"/>
         <source>Change</source>
-        <translation>Zmień</translation>
+        <translation>Promeni</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="27"/>
         <source>Access</source>
-        <translation>Dostęp</translation>
+        <translation>Pristup</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="53"/>
         <source>This project has no members.</source>
-        <translation>Ten projekt nie ma członków.</translation>
+        <translation>Projekat nema članova.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.html.php" line="58"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="37"/>
         <source>Manage Permissions</source>
-        <translation>Zarządzaj uprawnieniami</translation>
+        <translation>Upravljaj dozvolama</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="60"/>
         <source>Regular project</source>
-        <translation>Zwykły projekt</translation>
+        <translation>Redovan projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="61"/>
         <source>Public project</source>
-        <translation>Publiczny projekt</translation>
+        <translation>Javni projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="67"/>
         <source>Regular member</source>
-        <translation>Zwykły członek</translation>
+        <translation>Običan član</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="68"/>
         <source>Project administrator</source>
-        <translation>Administrator projektu</translation>
+        <translation>Administrator projekta</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="95"/>
         <source>Change Access</source>
-        <translation>Zmień dostęp</translation>
+        <translation>Promeni pristup</translation>
     </message>
     <message>
         <location filename="../../../client/projects/members.php" line="96"/>
         <source>Remove Member</source>
-        <translation>Usuń członka</translation>
+        <translation>Ukloni člana</translation>
     </message>
 </context>
 <context>
@@ -4354,33 +4354,33 @@
     <message>
         <location filename="../../../client/projects/movefolder.php" line="59"/>
         <source>Move Folder</source>
-        <translation>Przenieś folder</translation>
+        <translation>Premesti fasciklu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="3"/>
         <source>Move folder &lt;strong&gt;%1&lt;/strong&gt; to another project.</source>
-        <translation>Przenieś folder &lt;strong&gt;%1&lt;/strong&gt; do innego projektu.</translation>
+        <translation>Premeštanje fascikle  &lt;strong&gt;%1&lt;/strong&gt; u drugi projekat.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="9"/>
         <source>Project:</source>
-        <translation>Projekt:</translation>
+        <translation>Projekat:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="12"/>
         <location filename="../../../client/projects/movefolder.html.php" line="21"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../../../client/projects/movefolder.html.php" line="18"/>
         <source>There are no available destination projects.</source>
-        <translation>Nie ma dostępnych projektów docelowych.</translation>
+        <translation>Nema raspoloživih destinacija.</translation>
     </message>
 </context>
 <context>
@@ -4388,32 +4388,32 @@
     <message>
         <location filename="../../../client/projects/projectaccess.php" line="37"/>
         <source>Global Access</source>
-        <translation>Dostęp globalny</translation>
+        <translation>Globalni pristup</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.php" line="46"/>
         <source>Regular project</source>
-        <translation>Zwykły projekt</translation>
+        <translation>Redovan projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.php" line="47"/>
         <source>Public project</source>
-        <translation>Publiczny projekt</translation>
+        <translation>Javni projekat</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.html.php" line="3"/>
         <source>Change global access for project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień dostęp globalny dla projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Promeni globalni pristup projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/projectaccess.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4421,22 +4421,22 @@
     <message>
         <location filename="../../../client/projects/removemember.php" line="37"/>
         <source>Remove Member</source>
-        <translation>Usuń członka</translation>
+        <translation>Ukloni člana</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="4"/>
         <source>Do you want to remove user &lt;strong&gt;%1&lt;/strong&gt; from project &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>Czy chcesz usunąć użytkownika &lt;strong&gt;%1&lt;/strong&gt; z projektu &lt;strong&gt;%2&lt;/strong&gt;?</translation>
+        <translation>Da li želite da uklonite korisnika &lt;strong&gt;%1&lt;/strong&gt; iz projekta &lt;strong&gt;%2&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="9"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/removemember.html.php" line="10"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4444,27 +4444,27 @@
     <message>
         <location filename="../../../client/projects/renamefolder.php" line="37"/>
         <source>Rename Folder</source>
-        <translation>Zmień nazwę folderu</translation>
+        <translation>Preimenuj fasciklu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="3"/>
         <source>Enter the new name of folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Podaj nową nazwę folderu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Unesite novo ime fascikle &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renamefolder.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4472,27 +4472,27 @@
     <message>
         <location filename="../../../client/projects/renameproject.php" line="40"/>
         <source>Rename Project</source>
-        <translation>Zmień nazwę projektu</translation>
+        <translation>Promeni ime projekta</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="3"/>
         <source>Enter the new name of project &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Podaj nową nazwę projektu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Unesi novo ime projekta &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/projects/renameproject.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4500,47 +4500,47 @@
     <message>
         <location filename="../../../client/tools/index.php" line="33"/>
         <source>Tools</source>
-        <translation>Narzędzia</translation>
+        <translation>Alati</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="4"/>
         <source>Go To Item</source>
-        <translation>Idź do elementu</translation>
+        <translation>Idi na stavku</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="5"/>
         <source>Go to item with given identifier.</source>
-        <translation>Idź do elementu o podanym identifykatorze.</translation>
+        <translation>Idi na stavku sa zadatim identifikatorom.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="7"/>
         <source>Change Password</source>
-        <translation>Zmień hasło</translation>
+        <translation>Promeni lozinku</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="8"/>
         <source>Change your password.</source>
-        <translation>Zmień swoje hasło.</translation>
+        <translation>Promenite vašu lozinku.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="9"/>
         <source>User Preferences</source>
-        <translation>Ustawienia użytkownika</translation>
+        <translation>Korisnička podešavanja</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="10"/>
         <source>Configure your user preferences.</source>
-        <translation>Zmień swoje ustawienia użytkownika.</translation>
+        <translation>Podesite vaše preference.</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="12"/>
         <source>About WebIssues</source>
-        <translation>O programie WebIssues</translation>
+        <translation>O WebIssues</translation>
     </message>
     <message>
         <location filename="../../../client/tools/index.html.php" line="13"/>
         <source>Show information about WebIssues.</source>
-        <translation>Pokaż informacje o programie WebIssues.</translation>
+        <translation>Prikaži informacije o WebIssues.</translation>
     </message>
 </context>
 <context>
@@ -4548,42 +4548,42 @@
     <message>
         <location filename="../../../client/views/index.php" line="33"/>
         <source>Manage Views</source>
-        <translation>Zarządzaj widokami</translation>
+        <translation>Upravljaj pregledima</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="3"/>
         <source>Edit personal view settings for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień prywatne  ustawienia widoków dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmena podešavanja ličnog pregleda za tip &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="15"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="16"/>
         <source>Columns</source>
-        <translation>Kolumny</translation>
+        <translation>Kolone</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="17"/>
         <source>Sort By</source>
-        <translation>Sortowanie</translation>
+        <translation>Sortiraj po</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="18"/>
         <source>Filter</source>
-        <translation>Filtr</translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="39"/>
         <source>This type has no personal views.</source>
-        <translation>Ten typ nie ma prywatnych widoków.</translation>
+        <translation>Ovaj tip nema ličnih pregleda.</translation>
     </message>
     <message>
         <location filename="../../../client/views/index.html.php" line="44"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
 </context>
 <context>
@@ -4591,27 +4591,27 @@
     <message>
         <location filename="../../../client/views/publish.php" line="36"/>
         <source>Publish View</source>
-        <translation>Opublikuj widok</translation>
+        <translation>Objavi pregled</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="4"/>
         <source>Are you sure you want to convert your personal view &lt;strong&gt;%1&lt;/strong&gt; to a public view?</source>
-        <translation>Czy na pewno chcesz skonwertować swój prywatny widok &lt;strong&gt;%1&lt;/strong&gt; na widok publiczny?</translation>
+        <translation>Da li ste sigurni da želite da pretvorite vaš lični pregled &lt;strong&gt;%1&lt;/strong&gt; u javnim pregled?</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="6"/>
         <source>View &lt;strong&gt;%1&lt;/strong&gt; cannot be published.</source>
-        <translation>Nie można opublikować widoku &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Pregled &lt;strong&gt;%1&lt;/strong&gt; nemože biti objavljen.</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../../client/views/publish.html.php" line="14"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4619,64 +4619,64 @@
     <message>
         <location filename="../../breadcrumbs.inc.php" line="105"/>
         <source>General Information</source>
-        <translation>Ogólne informacje</translation>
+        <translation>Opšte informacije</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="110"/>
         <source>Event Log</source>
-        <translation>Dziennik zdarzeń</translation>
+        <translation>Dnevnik događaja</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="115"/>
         <source>User Accounts</source>
-        <translation>Konta użytkowników</translation>
+        <translation>Korisnički nalozi</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="126"/>
         <source>Registration Requests</source>
-        <translation>Zgłoszenia rejestracji</translation>
+        <translation>Zahtevi za registraciju</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="131"/>
         <source>Issue Types</source>
-        <translation>Typy spraw</translation>
+        <translation>Tipovi problema</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="137"/>
         <source>View Settings</source>
-        <translation>Ustawienia widoków</translation>
+        <translation>Vidi podešavanja</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="121"/>
         <location filename="../../breadcrumbs.inc.php" line="153"/>
         <source>Manage Permissions</source>
-        <translation>Zarządzaj uprawnieniami</translation>
+        <translation>Upravljaj dozvolama</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="142"/>
         <source>Projects Archive</source>
-        <translation>Archiwum projektów</translation>
+        <translation>Arhiva projekta</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="170"/>
         <source>Manage Views</source>
-        <translation>Zarządzaj widokami</translation>
+        <translation>Upravljaj pregledima</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="176"/>
         <source>Manage Alerts</source>
-        <translation>Zarządzaj alertami</translation>
+        <translation>Upravljaj upozorenjima</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="187"/>
         <location filename="../../breadcrumbs.inc.php" line="192"/>
         <source>Tools</source>
-        <translation>Narzędzia</translation>
+        <translation>Alati</translation>
     </message>
     <message>
         <location filename="../../breadcrumbs.inc.php" line="197"/>
         <source>Manage Projects</source>
-        <translation>Zarządzaj projektami</translation>
+        <translation>Upravljaj projektima</translation>
     </message>
 </context>
 <context>
@@ -4684,12 +4684,12 @@
     <message>
         <location filename="../../errors/debug.html.php" line="3"/>
         <source>The following error(s) occured while processing the request:</source>
-        <translation>Następujące błędy wystąpiły podczas wykonywania żądania:</translation>
+        <translation>Sledeća greška(e) su nastale tokom obrade zahteva:</translation>
     </message>
     <message>
         <location filename="../../errors/debug.inc.php" line="33"/>
         <source>Unexpected Error</source>
-        <translation>Nieoczekiwany błąd</translation>
+        <translation>Neočekivana greška</translation>
     </message>
 </context>
 <context>
@@ -4697,17 +4697,17 @@
     <message>
         <location filename="../../errors/general.html.php" line="3"/>
         <source>An unexpected error occured while processing the request.</source>
-        <translation>Podczas wykonywania żądania wystąpił nieoczekiwany błąd.</translation>
+        <translation>Neočekivana greška tokom obrade zahteva.</translation>
     </message>
     <message>
         <location filename="../../errors/general.html.php" line="6"/>
         <source>Reason: %1.</source>
-        <translation>Powód: %1.</translation>
+        <translation>Razlog: %1.</translation>
     </message>
     <message>
         <location filename="../../errors/general.inc.php" line="33"/>
         <source>Unexpected Error</source>
-        <translation>Nieoczekiwany błąd</translation>
+        <translation>Neočekivana greška</translation>
     </message>
 </context>
 <context>
@@ -4715,17 +4715,17 @@
     <message>
         <location filename="../../errors/handle401.php" line="35"/>
         <source>Unauthorized</source>
-        <translation>Błąd autoryzacji</translation>
+        <translation>Neodobreno</translation>
     </message>
     <message>
         <location filename="../../errors/handle401.php" line="45"/>
         <source>Unauthorized: %1</source>
-        <translation>Błąd autoryzacji: %1</translation>
+        <translation>Neodobreno: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle401.html.php" line="3"/>
         <source>You have no permission to access the requested page.</source>
-        <translation>Nie masz dostępu do żądanej strony.</translation>
+        <translation>Nemate ovlašćenja da pristupite traženoj strani.</translation>
     </message>
 </context>
 <context>
@@ -4733,17 +4733,17 @@
     <message>
         <location filename="../../errors/handle403.php" line="35"/>
         <source>Access Forbidden</source>
-        <translation>Dostęp zabroniony</translation>
+        <translation>Pristup zabranjen</translation>
     </message>
     <message>
         <location filename="../../errors/handle403.php" line="45"/>
         <source>Access forbidden: %1</source>
-        <translation>Dostęp zabroniony: %1</translation>
+        <translation>Pristup zabranjen: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle403.html.php" line="3"/>
         <source>You have no permission to access the requested page.</source>
-        <translation>Nie masz dostępu do żądanej strony.</translation>
+        <translation>Nemate ovlašćenja da pristupite traženoj strani.</translation>
     </message>
 </context>
 <context>
@@ -4751,17 +4751,17 @@
     <message>
         <location filename="../../errors/handle404.php" line="35"/>
         <source>Page Not Found</source>
-        <translation>Nie znaleziono strony</translation>
+        <translation>Strana nije pronađena</translation>
     </message>
     <message>
         <location filename="../../errors/handle404.php" line="45"/>
         <source>Page not found: %1</source>
-        <translation>Nie znaleziono strony: %1</translation>
+        <translation>Strana nije pronađena: %1</translation>
     </message>
     <message>
         <location filename="../../errors/handle404.html.php" line="3"/>
         <source>The requested page was not found.</source>
-        <translation>Żądana strona nie została znaleziona.</translation>
+        <translation>Tražena strana nije pronađena.</translation>
     </message>
 </context>
 <context>
@@ -4769,52 +4769,52 @@
     <message>
         <location filename="../../errors/setup.inc.php" line="39"/>
         <source>Server Not Configured</source>
-        <translation>Serwer nie skonfigurowany</translation>
+        <translation>Server nije podešen</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="40"/>
         <source>This WebIssues Server has not been configured yet.</source>
-        <translation>Ten serwer WebIssues nie został jeszcze skonfigurowany.</translation>
+        <translation>Ovaj WebIssues server još nije podešen.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="42"/>
         <source>Go to the %1 page to configure this server.</source>
-        <translation>Przejdź do strony %1 aby skonfigurować ten serwer.</translation>
+        <translation>Idite na %1 stranu da podesite ovaj server.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="43"/>
         <source>Server Configuration</source>
-        <translation>Konfiguracja serwera</translation>
+        <translation>Konfiguracija servera</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="48"/>
         <source>Wrong Database Version</source>
-        <translation>Zła wersja bazy danych</translation>
+        <translation>Pogrešna verzija baze podataka</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="50"/>
         <source>Current version of the database is not compatible with this version of WebIssues Server.</source>
-        <translation>Obecna wersja bazy danych nie jest zgodna z tą wersją serwera.</translation>
+        <translation>Trenutne verzija baze podataka nije kompatibilna sa ovom verzijom WebIssues servera.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="54"/>
         <source>Database Not Updated</source>
-        <translation>Baza danych nie zaktualizowana</translation>
+        <translation>Baza podataka nije ažurirana</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="55"/>
         <source>The database of this WebIssues Server has not been updated yet.</source>
-        <translation>Baza danych tego serwera WebIssues nie została jeszcze zaktualizowana.</translation>
+        <translation>Baza podataka ovog WebIssues servera još uvek nije ažurirana.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="57"/>
         <source>Go to the %1 page to update the database.</source>
-        <translation>Przejdź do strony %1 aby zaktualizować bazę danych.</translation>
+        <translation>Idite na %1 stranu da ažurirate bazu podataka.</translation>
     </message>
     <message>
         <location filename="../../errors/setup.inc.php" line="58"/>
         <source>Server Update</source>
-        <translation>Aktualizacji serwera</translation>
+        <translation>Ažuriranje servera</translation>
     </message>
 </context>
 <context>
@@ -4822,7 +4822,7 @@
     <message>
         <location filename="../../fixedblock.inc.php" line="37"/>
         <source>Untitled block</source>
-        <translation>Blok bez tytułu</translation>
+        <translation>Nenaslovljen blok</translation>
     </message>
 </context>
 <context>
@@ -4830,37 +4830,37 @@
     <message>
         <location filename="../../issues/addattachment.inc.php" line="40"/>
         <source>Add Attachment</source>
-        <translation>Dodaj załącznik</translation>
+        <translation>Dodaj priključak</translation>
     </message>
     <message>
         <location filename="../../issues/addattachment.inc.php" line="74"/>
         <source>No file uploaded</source>
-        <translation>Nie wybrano pliku</translation>
+        <translation>Nema datoteka</translation>
     </message>
     <message>
         <location filename="../../issues/addattachment.inc.php" line="76"/>
         <source>An error occurred while uploading the file</source>
-        <translation>Wystąpił błąd przy przesyłaniu pliku</translation>
+        <translation>Greška tokom slanja datoteke</translation>
     </message>
     <message>
         <location filename="../../issues/addattachment.inc.php" line="80"/>
         <source>File too large</source>
-        <translation>Plik zbyt duży</translation>
+        <translation>Datoteka prevelika</translation>
     </message>
     <message>
         <location filename="../../issues/addattachment.inc.php" line="88"/>
         <source>Invalid file name</source>
-        <translation>Nieprawidłowa nazwa pliku</translation>
+        <translation>Neispravan naziv datoteke</translation>
     </message>
     <message>
         <location filename="../../issues/addattachment.html.php" line="3"/>
         <source>Add an attachment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Dodaj załącznik do sprawy &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Dodavanje priključka problemu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../issues/addattachment.html.php" line="7"/>
         <source>File:</source>
-        <translation>Plik:</translation>
+        <translation>Datoteka:</translation>
     </message>
     <message>
         <location filename="../../issues/addattachment.html.php" line="9"/>
@@ -4870,12 +4870,12 @@
     <message>
         <location filename="../../issues/addattachment.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/addattachment.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4888,57 +4888,57 @@
     <message>
         <location filename="../../issues/comment.inc.php" line="55"/>
         <source>Comment %1</source>
-        <translation>Komentarz %1</translation>
+        <translation>Komentar %1</translation>
     </message>
     <message>
         <location filename="../../issues/comment.inc.php" line="67"/>
         <source>Add Comment</source>
-        <translation>Dodaj komentarz</translation>
+        <translation>Dodaj komentar</translation>
     </message>
     <message>
         <location filename="../../issues/comment.inc.php" line="84"/>
         <source>Edit Comment</source>
-        <translation>Edytuj komentarz</translation>
+        <translation>Izmeni komentar</translation>
     </message>
     <message>
         <location filename="../../issues/comment.inc.php" line="95"/>
         <source>Plain Text</source>
-        <translation>Zwykły tekst</translation>
+        <translation>Čist tekst</translation>
     </message>
     <message>
         <location filename="../../issues/comment.inc.php" line="96"/>
         <source>Text with Markup</source>
-        <translation>Tekst ze znacznikami</translation>
+        <translation>HTML tekst</translation>
     </message>
     <message>
         <location filename="../../issues/comment.html.php" line="4"/>
         <source>Add comment to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Dodaj komentarz do sprawy &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Dodaj komentar problemu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../issues/comment.html.php" line="6"/>
         <source>Edit comment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Edytuj komentarz &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmeni komentar &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../issues/comment.html.php" line="11"/>
         <source>Comment:</source>
-        <translation>Komentarz:</translation>
+        <translation>Komentar:</translation>
     </message>
     <message>
         <location filename="../../issues/comment.html.php" line="15"/>
         <source>Text format:</source>
-        <translation>Format tekstu:</translation>
+        <translation>Format teksta:</translation>
     </message>
     <message>
         <location filename="../../issues/comment.html.php" line="18"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/comment.html.php" line="19"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4946,22 +4946,22 @@
     <message>
         <location filename="../../issues/deleteattachment.inc.php" line="38"/>
         <source>Delete Attachment</source>
-        <translation>Usuń załącznik</translation>
+        <translation>Izbriši priključak</translation>
     </message>
     <message>
         <location filename="../../issues/deleteattachment.html.php" line="3"/>
         <source>Are you sure you want to delete attachment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć załącznik &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete priključak &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../issues/deleteattachment.html.php" line="8"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/deleteattachment.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4969,22 +4969,22 @@
     <message>
         <location filename="../../issues/deletecomment.inc.php" line="40"/>
         <source>Delete Comment</source>
-        <translation>Usuń komentarz</translation>
+        <translation>Obriši komentar</translation>
     </message>
     <message>
         <location filename="../../issues/deletecomment.html.php" line="3"/>
         <source>Are you sure you want to delete comment &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć komentarz &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete komentar &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../issues/deletecomment.html.php" line="8"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/deletecomment.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -4992,22 +4992,22 @@
     <message>
         <location filename="../../issues/deletedescription.inc.php" line="41"/>
         <source>Delete Description</source>
-        <translation>Usuń opis</translation>
+        <translation>Obriši opis </translation>
     </message>
     <message>
         <location filename="../../issues/deletedescription.html.php" line="3"/>
         <source>Are you sure you want to delete description for issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć opis sprawy &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete opis problema &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../issues/deletedescription.html.php" line="8"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/deletedescription.html.php" line="9"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -5015,27 +5015,27 @@
     <message>
         <location filename="../../issues/deleteissue.inc.php" line="35"/>
         <source>Delete Issue</source>
-        <translation>Usuń sprawę</translation>
+        <translation>Obriši problem</translation>
     </message>
     <message>
         <location filename="../../issues/deleteissue.html.php" line="3"/>
         <source>Are you sure you want to delete issue &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć sprawę &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete problem &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../issues/deleteissue.html.php" line="5"/>
         <source>&lt;strong&gt;Warning:&lt;/strong&gt; The entire issue history will be permanently deleted.</source>
-        <translation>&lt;strong&gt;Uwaga:&lt;/strong&gt; Cała historia tej sprawy zostanie trwale usunięta.</translation>
+        <translation>&lt;strong&gt;Upozorenje:&lt;/strong&gt; Istorija celog problema će biti trajno obrisana.</translation>
     </message>
     <message>
         <location filename="../../issues/deleteissue.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/deleteissue.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -5048,27 +5048,27 @@
     <message>
         <location filename="../../issues/description.inc.php" line="64"/>
         <source>Edit Description</source>
-        <translation>Edytuj opis</translation>
+        <translation>Izmeni opis</translation>
     </message>
     <message>
         <location filename="../../issues/description.inc.php" line="75"/>
         <source>Plain Text</source>
-        <translation>Zwykły tekst</translation>
+        <translation>Čist tekst</translation>
     </message>
     <message>
         <location filename="../../issues/description.inc.php" line="76"/>
         <source>Text with Markup</source>
-        <translation>Tekst ze znacznikami</translation>
+        <translation>HTML tekst</translation>
     </message>
     <message>
         <location filename="../../issues/description.html.php" line="4"/>
         <source>Add description to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Dodaj opis do sprawy &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Dodavanje opisa problemu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../issues/description.html.php" line="6"/>
         <source>Edit description of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Edytuj opis sprawy &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmena opisa problema &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../issues/description.html.php" line="11"/>
@@ -5078,17 +5078,17 @@
     <message>
         <location filename="../../issues/description.html.php" line="15"/>
         <source>Text format:</source>
-        <translation>Format tekstu:</translation>
+        <translation>Format teksta:</translation>
     </message>
     <message>
         <location filename="../../issues/description.html.php" line="18"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/description.html.php" line="19"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -5096,22 +5096,22 @@
     <message>
         <location filename="../../issues/editattachment.inc.php" line="40"/>
         <source>Edit Attachment</source>
-        <translation>Edytuj załącznik</translation>
+        <translation>Izmena priključka</translation>
     </message>
     <message>
         <location filename="../../issues/editattachment.inc.php" line="59"/>
         <source>Invalid file name</source>
-        <translation>Nieprawidłowa nazwa pliku</translation>
+        <translation>Neispravan naziv datoteke</translation>
     </message>
     <message>
         <location filename="../../issues/editattachment.html.php" line="3"/>
         <source>Edit attachment &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Edytuj załącznik &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmena priključka &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../issues/editattachment.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../issues/editattachment.html.php" line="9"/>
@@ -5121,12 +5121,12 @@
     <message>
         <location filename="../../issues/editattachment.html.php" line="12"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/editattachment.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -5134,77 +5134,77 @@
     <message>
         <location filename="../../issues/issue.inc.php" line="54"/>
         <source>Edit Attributes</source>
-        <translation>Edytuj atrybuty</translation>
-    </message>
-    <message>
-        <location filename="../../issues/issue.inc.php" line="106"/>
-        <source>Clone Issue</source>
-        <translation>Sklonuj sprawę</translation>
+        <translation>Izmeni atribute</translation>
     </message>
     <message>
         <location filename="../../issues/issue.inc.php" line="78"/>
         <source>Add Issue</source>
-        <translation>Dodaj sprawę</translation>
+        <translation>Dodaj problem</translation>
+    </message>
+    <message>
+        <location filename="../../issues/issue.inc.php" line="106"/>
+        <source>Clone Issue</source>
+        <translation>Kloniraj problem</translation>
     </message>
     <message>
         <location filename="../../issues/issue.inc.php" line="146"/>
         <source>Please Select</source>
-        <translation>Proszę wybrać</translation>
+        <translation>Molim odaberite</translation>
     </message>
     <message>
         <location filename="../../issues/issue.inc.php" line="167"/>
         <source>Plain Text</source>
-        <translation>Zwykły tekst</translation>
+        <translation>Čist tekst</translation>
     </message>
     <message>
         <location filename="../../issues/issue.inc.php" line="168"/>
         <source>Text with Markup</source>
-        <translation>Tekst ze znacznikami</translation>
+        <translation>HTML tekst</translation>
     </message>
     <message>
         <location filename="../../issues/issue.inc.php" line="331"/>
         <source>No folder selected.</source>
-        <translation>Nie wybrano folderu.</translation>
+        <translation>Nijedna fascikla nije odabrana.</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Niektóre z podanych wartości są niepoprawne.</translation>
+        <translation>Neke od unetih vrednosti su neispravne.</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="10"/>
         <source>Clone issue &lt;strong&gt;%1&lt;/strong&gt; as a new issue in the selected folder.</source>
-        <translation>Sklonuj sprawę &lt;strong&gt;%1&lt;/strong&gt; jako nową sprawę w wybranym folderze.</translation>
+        <translation>Kloniranje problema &lt;strong&gt;%1&lt;/strong&gt; kao novi problem u izabranoj fascikli.</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="12"/>
         <source>Create a new issue in folder &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Utwórz nową sprawę w folderze &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Kreiranje novog problema u fascikli &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="14"/>
         <source>Edit attributes of issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Edytuj atrybuty sprawy &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmena atributa problema &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="16"/>
         <source>Create a new issue in the selected folder.</source>
-        <translation>Utwórz nową sprawę w wybranym folderze.</translation>
+        <translation>Kreiranje novog problema u odabranoj fascikli.</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="23"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="27"/>
         <source>Folder:</source>
-        <translation>Folder:</translation>
+        <translation>Fascikla:</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="33"/>
         <source>Attributes</source>
-        <translation>Atrybuty</translation>
+        <translation>Atributi</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="37"/>
@@ -5219,32 +5219,32 @@
     <message>
         <location filename="../../issues/issue.html.php" line="55"/>
         <source>Text format:</source>
-        <translation>Format tekstu:</translation>
+        <translation>Format teksta:</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="59"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="60"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="66"/>
         <source>There are no available folders of this type.</source>
-        <translation>Nie ma dostępnych folderów tego typu.</translation>
+        <translation>Nema raspoloživih fascikli ovog tipa.</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="68"/>
         <source>There are no available project members to assign to the issue.</source>
-        <translation>Nie ma dostępnych członków projektu aby przypisać do tej sprawy.</translation>
+        <translation>Nema raspoloživih članova projekta kojima problem može biti dodeljen.</translation>
     </message>
     <message>
         <location filename="../../issues/issue.html.php" line="72"/>
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zatvori</translation>
     </message>
 </context>
 <context>
@@ -5252,42 +5252,42 @@
     <message>
         <location filename="../../issues/markall.inc.php" line="50"/>
         <source>Mark All As Read</source>
-        <translation>Oznacz wszystkie jako przeczytane</translation>
+        <translation>Obeleži sve kao pročitano</translation>
     </message>
     <message>
         <location filename="../../issues/markall.inc.php" line="52"/>
         <source>Mark All As Unread</source>
-        <translation>Oznacz wszystkie jako nieprzeczytane</translation>
+        <translation>Obeleži sve kao nepročitano</translation>
     </message>
     <message>
         <location filename="../../issues/markall.html.php" line="5"/>
         <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>Czy na pewno chcesz zaznaczyć wszystkie sprawy w folderze &lt;strong&gt;%1&lt;/strong&gt; jako przeczytane?</translation>
+        <translation>Da li ste sigurni da želite da obeležite sve probleme u fascikli &lt;strong&gt;%1&lt;/strong&gt; kao pročitane?</translation>
     </message>
     <message>
         <location filename="../../issues/markall.html.php" line="7"/>
         <source>Are you sure you want to mark all issues in folder &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>Czy na pewno chcesz zaznaczyć wszystkie sprawy w folderze &lt;strong&gt;%1&lt;/strong&gt; jako nieprzeczytane?</translation>
+        <translation>Da li ste sigurni da želite da obeležite sve probleme u fascikli &lt;strong&gt;%1&lt;/strong&gt; kao neproitane?</translation>
     </message>
     <message>
         <location filename="../../issues/markall.html.php" line="11"/>
         <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as read?</source>
-        <translation>Czy na pewno chcesz zaznaczyć wszystkie sprawy typu &lt;strong&gt;%1&lt;/strong&gt; jako przeczytane?</translation>
+        <translation>Da li ste sigurni da želite da obeležite sve probleme tipa &lt;strong&gt;%1&lt;/strong&gt; kao pročitane?</translation>
     </message>
     <message>
         <location filename="../../issues/markall.html.php" line="13"/>
         <source>Are you sure you want to mark all issues of type &lt;strong&gt;%1&lt;/strong&gt; as unread?</source>
-        <translation>Czy na pewno chcesz zaznaczyć wszystkie sprawy typu &lt;strong&gt;%1&lt;/strong&gt; jako nieprzeczytane?</translation>
+        <translation>Da li ste sigurni da želite da obeležite sve probleme tipa &lt;strong&gt;%1&lt;/strong&gt; kao neproitane?</translation>
     </message>
     <message>
         <location filename="../../issues/markall.html.php" line="20"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/markall.html.php" line="21"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -5295,33 +5295,33 @@
     <message>
         <location filename="../../issues/moveissue.inc.php" line="69"/>
         <source>Move Issue</source>
-        <translation>Przenieś sprawę</translation>
+        <translation>Premesti problem</translation>
     </message>
     <message>
         <location filename="../../issues/moveissue.html.php" line="3"/>
         <source>Move issue &lt;strong&gt;%1&lt;/strong&gt; to another folder of the same type.</source>
-        <translation>Przenieś sprawę &lt;strong&gt;%1&lt;/strong&gt; do innego folderu tego samego typu.</translation>
+        <translation>Premesti problem &lt;strong&gt;%1&lt;/strong&gt; u drugu fasciklu istog tipa.</translation>
     </message>
     <message>
         <location filename="../../issues/moveissue.html.php" line="9"/>
         <source>Folder:</source>
-        <translation>Folder:</translation>
+        <translation>Fascikla:</translation>
     </message>
     <message>
         <location filename="../../issues/moveissue.html.php" line="12"/>
         <location filename="../../issues/moveissue.html.php" line="21"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/moveissue.html.php" line="13"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../../issues/moveissue.html.php" line="18"/>
         <source>There are no available destination folders.</source>
-        <translation>Nie ma dostępnych folderów docelowych.</translation>
+        <translation>Nema raspoloživih destinacionih fascikli.</translation>
     </message>
 </context>
 <context>
@@ -5329,12 +5329,12 @@
     <message>
         <location filename="../../issues/preview.inc.php" line="53"/>
         <source>Error: %1.</source>
-        <translation>Błąd: %1.</translation>
+        <translation>Greška: %1</translation>
     </message>
     <message>
         <location filename="../../issues/preview.inc.php" line="55"/>
         <source>An unexpected error occured while processing the request.</source>
-        <translation>Podczas wykonywania żądania wystąpił nieoczekiwany błąd.</translation>
+        <translation>Neočekivana greška tokom obrade zahteva.</translation>
     </message>
 </context>
 <context>
@@ -5342,32 +5342,32 @@
     <message>
         <location filename="../../issues/subscribe.inc.php" line="35"/>
         <source>Subscribe To Issue</source>
-        <translation>Subskrybuj sprawę</translation>
+        <translation>Prijavi na problem</translation>
     </message>
     <message>
         <location filename="../../issues/subscribe.html.php" line="3"/>
         <source>You are about to subscribe to issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zamierzasz subskrybować sprawę &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Upravo ćete se prijaviti na problem &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../issues/subscribe.html.php" line="5"/>
         <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
-        <translation>Będziesz otrzymywał powiadomienia mailowe gdy ktoś inny zmodyfikuje tą sprawę, doda komentarz lub załącznik.</translation>
+        <translation>Primaćete emailove obaveštenja kada neko izmeni ovaj problem, doda komentar ili priključak.</translation>
     </message>
     <message>
         <location filename="../../issues/subscribe.html.php" line="8"/>
         <source>Warning: You will not receive any emails until you enter an email address in your preferences.</source>
-        <translation>Uwaga: Nie będziesz otrzymywać e-maili dopóki nie podasz adresu w swoich ustawieniach użytkownika.</translation>
+        <translation>Upozorenje: Nećete primati email-ove dok ne unesete email adresu u vašim podešavanjima.</translation>
     </message>
     <message>
         <location filename="../../issues/subscribe.html.php" line="14"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/subscribe.html.php" line="15"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -5375,27 +5375,27 @@
     <message>
         <location filename="../../issues/unsubscribe.inc.php" line="37"/>
         <source>Unsubscribe From Issue</source>
-        <translation>Usuń subskrypcję sprawy</translation>
+        <translation>Odjavi sa problema</translation>
     </message>
     <message>
         <location filename="../../issues/unsubscribe.html.php" line="3"/>
         <source>You are about to unsubscribe from issue &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zamierzasz usunąć subskrybcję sprawy &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Upravo ćete se odjaviti sa problema &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../issues/unsubscribe.html.php" line="5"/>
         <source>You will no longer receive email notifications for this issue.</source>
-        <translation>Nie będziesz już otrzymywał powiadomień mailowych dla tej sprawy.</translation>
+        <translation>Nećete više dobijati obaveštenja mailom o ovom problemu.</translation>
     </message>
     <message>
         <location filename="../../issues/unsubscribe.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../issues/unsubscribe.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -5403,37 +5403,37 @@
     <message>
         <location filename="../../mail/approve.inc.php" line="37"/>
         <source>WebIssues Server registration approved</source>
-        <translation>Rejestracja na serwerze WebIssues zatwierdzona</translation>
+        <translation>Registracija na WebIssues server odobrena</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="3"/>
         <source>Your registration request on the WebIssues Server was approved by the administrator.</source>
-        <translation>Twoje zgłoszenie rejestracji na serwerze WebIssues zostało zatwierdzone przez administratora.</translation>
+        <translation>Vaš zahtev za registraciju na WebIssues server je odobren od strane administratora.</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="5"/>
         <source>You can now %1 using your login and password.</source>
-        <translation>Możesz teraz %1 używając swojego loginu i hasła.</translation>
+        <translation>Sada možete %1 koristeći svoje korisničko ime i lozinku.</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="5"/>
         <source>log in to the server</source>
-        <translation>zalogować się na serwerze</translation>
+        <translation>da se prijavite na server</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="8"/>
         <source>User name: %1</source>
-        <translation>Nazwa użytkownika: %1</translation>
+        <translation>Korisničko ime: %1</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="9"/>
         <source>Login: %1</source>
-        <translation>Login: %1</translation>
+        <translation>Prijava: %1</translation>
     </message>
     <message>
         <location filename="../../mail/approve.html.php" line="10"/>
         <source>Email address: %1</source>
-        <translation>Adres e-mail: %1</translation>
+        <translation>Email adresa: %1</translation>
     </message>
 </context>
 <context>
@@ -5441,7 +5441,7 @@
     <message>
         <location filename="../../mail/issuecreated.html.php" line="3"/>
         <source>Your email was successfully registered on the WebIssues Server as the following issue:</source>
-        <translation>Twój e-mail został pomyślnie zarejestrowany na serwerze WebIssues jako następująca sprawa:</translation>
+        <translation>Vaš email je uspešno registrovan na WebIssues serveru kao sledeći problem:</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="6"/>
@@ -5451,27 +5451,27 @@
     <message>
         <location filename="../../mail/issuecreated.html.php" line="7"/>
         <source>Name: %1</source>
-        <translation>Nazwa: %1</translation>
+        <translation>Ime: %1</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="11"/>
         <source>You can add comments and attachments to this issue by responding to this email. Include %1 in the subject when sending emails regarding this issue.</source>
-        <translation>Możesz dodawać komentarze i załączniki do tej sprawy, odpowiadając na tą wiadomość. Zamieść %1 w temacie wysyłając wiadomości dotyczące tej sprawy.</translation>
+        <translation>Možete dodavati komentare i priključke ovom problemu odgovarajući na ovaj email. Uključite %1 u naslov kada šaljete mailove povodom ovog problema.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="14"/>
         <source>You will receive email notifications when someone else modifies this issue, adds a comment or attachment.</source>
-        <translation>Będziesz otrzymywał powiadomienia mailowe gdy ktoś inny zmodyfikuje tą sprawę, doda komentarz lub załącznik.</translation>
+        <translation>Primaćete emailove obaveštenja kada neko izmeni ovaj problem, doda komentar ili priključak.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="18"/>
         <source>You can also %1 in the WebIssues Server.</source>
-        <translation>Możesz również %1 w serwerze WebIssues.</translation>
+        <translation>Takođe možete %1 u WebIssues serveru.</translation>
     </message>
     <message>
         <location filename="../../mail/issuecreated.html.php" line="18"/>
         <source>view this issue</source>
-        <translation>wyświetlić tą sprawę</translation>
+        <translation>pogledati ovaj problem</translation>
     </message>
 </context>
 <context>
@@ -5479,12 +5479,12 @@
     <message>
         <location filename="../../mail/notification.inc.php" line="73"/>
         <source>All Issues</source>
-        <translation>Wszystkie sprawy</translation>
+        <translation>Svi problemi</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="52"/>
         <source>Properties</source>
-        <translation>Właściwości</translation>
+        <translation>Osobine</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="56"/>
@@ -5494,22 +5494,22 @@
     <message>
         <location filename="../../mail/notification.html.php" line="60"/>
         <source>Type:</source>
-        <translation>Typ:</translation>
+        <translation>Tip:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="64"/>
         <source>Location:</source>
-        <translation>Lokalizacja:</translation>
+        <translation>Lokacija:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="68"/>
         <source>Created:</source>
-        <translation>Utworzona:</translation>
+        <translation>Kreirano:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="72"/>
         <source>Last Modified:</source>
-        <translation>Ostatnio zmieniona:</translation>
+        <translation>Menjano:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="102"/>
@@ -5520,45 +5520,45 @@
         <location filename="../../mail/notification.html.php" line="104"/>
         <location filename="../../mail/notification.html.php" line="132"/>
         <source>Last Edited:</source>
-        <translation>Ostatnio zmieniony:</translation>
+        <translation>Poslednja izmena:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="197"/>
         <source>Issue moved from %1 to %2</source>
-        <translation>Sprawa przeniesiona z %1 do %2</translation>
+        <translation>Problem premešten iz %1 u %2</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="81"/>
         <source>Attributes</source>
-        <translation>Atrybuty</translation>
+        <translation>Atributi</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="120"/>
         <source>Issue History</source>
-        <translation>Historia sprawy</translation>
+        <translation>Istorija problema</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="150"/>
         <location filename="../../mail/notification.html.php" line="153"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="156"/>
         <location filename="../../mail/notification.html.php" line="157"/>
         <source>empty</source>
-        <translation>pusty</translation>
+        <translation>prazno</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="195"/>
         <location filename="../../mail/notification.html.php" line="196"/>
         <source>Unknown Folder</source>
-        <translation>Nieznany folder</translation>
+        <translation>Nepoznata fascikla</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="224"/>
         <source>This is an alert email from the WebIssues Server.</source>
-        <translation>To jest e-mail alertu serwera WebIssues.</translation>
+        <translation>Ovo je email upozorenja sa WebIssues servera.</translation>
     </message>
 </context>
 <context>
@@ -5566,37 +5566,37 @@
     <message>
         <location filename="../../mail/register.inc.php" line="37"/>
         <source>WebIssues Server email verification</source>
-        <translation>Weryfikacja adresu e-mail na serwerze WebIssues</translation>
+        <translation>WebIssues server email verifikacija</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="3"/>
         <source>Thank you for registering on the WebIssues Server.</source>
-        <translation>Dziękujemy za rejestrację na serwerze WebIssues.</translation>
+        <translation>Hvala Vam na registraciji na WebIssues server.</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="5"/>
         <source>To activate your registration request, please visit the following URL:</source>
-        <translation>Aby aktywować swoje zgłoszenie rejestracji, odwiedź następujący URL:</translation>
+        <translation>Da aktivirate Vaš registracioni zahtev, molim idite na sledeću adresu:</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="10"/>
         <source>User name: %1</source>
-        <translation>Nazwa użytkownika: %1</translation>
+        <translation>Korisničko ime: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="11"/>
         <source>Login: %1</source>
-        <translation>Login: %1</translation>
+        <translation>Prijava: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="12"/>
         <source>Email address: %1</source>
-        <translation>Adres e-mail: %1</translation>
+        <translation>Email adresa: %1</translation>
     </message>
     <message>
         <location filename="../../mail/register.html.php" line="15"/>
         <source>If you didn&apos;t register, please ignore this email.</source>
-        <translation>Jeśli nie zarejestrowałeś się, zignoruj tą wiadomość.</translation>
+        <translation>Ako se niste prijavili, molim ignorišite ovaj email.</translation>
     </message>
 </context>
 <context>
@@ -5604,37 +5604,37 @@
     <message>
         <location filename="../../mail/registernotification.html.php" line="3"/>
         <source>You have the following new %1 on the WebIssues Server pending for approval:</source>
-        <translation>Masz następujące nowe %1 na serwerze WebIssues czekające na aprobatę:</translation>
+        <translation>Imate sledećih novih %1 na WebIssues serveru koji čekaju na odobrenje:</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="3"/>
         <source>registration requests</source>
-        <translation>zgłoszenia rejestracji</translation>
+        <translation>registracionih zahteva</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="7"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="8"/>
         <source>Login</source>
-        <translation>Login</translation>
+        <translation>Prijava</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="9"/>
         <source>Email</source>
-        <translation>E-mail</translation>
+        <translation>Email</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.html.php" line="10"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <location filename="../../mail/registernotification.inc.php" line="37"/>
         <source>WebIssues Server registration requests</source>
-        <translation>Zgłoszenia rejestracji na serwerze WebIssues</translation>
+        <translation>WebIssues server registracioni zahtevi</translation>
     </message>
 </context>
 <context>
@@ -5642,27 +5642,27 @@
     <message>
         <location filename="../../mail/reject.inc.php" line="37"/>
         <source>WebIssues Server registration rejected</source>
-        <translation>Rejestracja na serwerze WebIssues odrzucona</translation>
+        <translation>WebIssues server odbijene registracije</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="3"/>
         <source>Sorry, your registration request on the WebIssues Server was rejected by the administrator.</source>
-        <translation>Niestety, twoje zgłoszenie rejsestracji na serwerze WebIssues zostało odrzucone przez administratora.</translation>
+        <translation>Izvinjavamo se, vaš registracioni zahtev na WebIssues server je odbijen od strane administratora.</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="6"/>
         <source>User name: %1</source>
-        <translation>Nazwa użytkownika: %1</translation>
+        <translation>Korisničko ime: %1</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="7"/>
         <source>Login: %1</source>
-        <translation>Login: %1</translation>
+        <translation>Prijava: %1</translation>
     </message>
     <message>
         <location filename="../../mail/reject.html.php" line="8"/>
         <source>Email address: %1</source>
-        <translation>Adres e-mail: %1</translation>
+        <translation>Email adresa: %1</translation>
     </message>
 </context>
 <context>
@@ -5670,17 +5670,17 @@
     <message>
         <location filename="../../mail/subscription.html.php" line="4"/>
         <source>Include your response above this line</source>
-        <translation>Zamieść swoją odpowiedź powyżej</translation>
+        <translation>Uključi vaš odgovor iznad ove linije</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="6"/>
         <source>You can add comments and attachments to this issue by responding to this email. Include %1 in the subject when sending emails regarding this issue.</source>
-        <translation>Możesz dodawać komentarze i załączniki do tej sprawy, odpowiadając na tą wiadomość. Zamieść %1 w temacie wysyłając wiadomości dotyczące tej sprawy.</translation>
+        <translation>Možete dodavati komentare i priključke ovom problemu odgovarajući na ovaj email. Uključite %1 u naslov kada šaljete mailove povodom ovog problema.</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="19"/>
         <source>Properties</source>
-        <translation>Właściwości</translation>
+        <translation>Osobine</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="23"/>
@@ -5690,27 +5690,27 @@
     <message>
         <location filename="../../mail/subscription.html.php" line="27"/>
         <source>Type:</source>
-        <translation>Typ:</translation>
+        <translation>Tip:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="31"/>
         <source>Location:</source>
-        <translation>Lokalizacja:</translation>
+        <translation>Lokacija:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="35"/>
         <source>Created:</source>
-        <translation>Utworzona:</translation>
+        <translation>Kreirano:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="39"/>
         <source>Last Modified:</source>
-        <translation>Ostatnio zmieniona:</translation>
+        <translation>Menjano:</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="48"/>
         <source>Attributes</source>
-        <translation>Atrybuty</translation>
+        <translation>Atributi</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="67"/>
@@ -5720,35 +5720,35 @@
     <message>
         <location filename="../../mail/subscription.html.php" line="79"/>
         <source>Issue History</source>
-        <translation>Historia sprawy</translation>
+        <translation>Istorija problema</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="104"/>
         <location filename="../../mail/subscription.html.php" line="107"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="110"/>
         <location filename="../../mail/subscription.html.php" line="111"/>
         <source>empty</source>
-        <translation>pusty</translation>
+        <translation>prazno</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="149"/>
         <location filename="../../mail/subscription.html.php" line="150"/>
         <source>Unknown Folder</source>
-        <translation>Nieznany folder</translation>
+        <translation>Nepoznata fascikla</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="151"/>
         <source>Issue moved from %1 to %2</source>
-        <translation>Sprawa przeniesiona z %1 do %2</translation>
+        <translation>Problem premešten iz %1 u %2</translation>
     </message>
     <message>
         <location filename="../../mail/subscription.html.php" line="175"/>
         <source>This is a subscription email from the WebIssues Server.</source>
-        <translation>To jest e-mail subscrypcji serwera WebIssues.</translation>
+        <translation>Ovo je email pretplate na WebIssues server.</translation>
     </message>
 </context>
 <context>
@@ -5756,17 +5756,17 @@
     <message>
         <location filename="../../mail/testconnection.inc.php" line="37"/>
         <source>Test message from WebIssues Server</source>
-        <translation>Wiadomość testowa serwera WebIssues</translation>
+        <translation>Test poruka sa WebIssues servera</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="3"/>
         <source>This email was sent by the WebIssues Server to test connection to the SMTP server.</source>
-        <translation>Ten e-mail został wysłany przez serwer WebIssues w celu przetestowania ustawień serwera SMTP.</translation>
+        <translation>Ovaj email je poslat od strane WebIssues servera radi testiranaj konekcije na SMTP server.</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="6"/>
         <source>Server name: %1</source>
-        <translation>Nazwa serwera: %1</translation>
+        <translation>Ime servera: %1</translation>
     </message>
     <message>
         <location filename="../../mail/testconnection.html.php" line="7"/>
@@ -5779,7 +5779,7 @@
     <message>
         <location filename="../../messageblock.inc.php" line="37"/>
         <source>Untitled message</source>
-        <translation>Wiadomość bez tytułu</translation>
+        <translation>Nenaslovljena poruka</translation>
     </message>
 </context>
 <context>
@@ -5792,24 +5792,24 @@
     <message>
         <location filename="../../pagelayout.inc.php" line="73"/>
         <source>Untitled page</source>
-        <translation>Strona bez tytułu</translation>
+        <translation>Nenaslovljena strana</translation>
     </message>
     <message>
         <location filename="../../pagelayout.inc.php" line="77"/>
         <location filename="../../pagelayout.html.php" line="34"/>
         <source>Web Client</source>
-        <translation>Klient WWW</translation>
+        <translation>Web klijent</translation>
     </message>
     <message>
         <location filename="../../pagelayout.inc.php" line="80"/>
         <location filename="../../pagelayout.html.php" line="32"/>
         <source>Administration Panel</source>
-        <translation>Panel administracyjny</translation>
+        <translation>Administrativni panel</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="36"/>
         <source>Mobile Version</source>
-        <translation>Wersja mobilna</translation>
+        <translation>Mobilna verzija</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="37"/>
@@ -5819,32 +5819,32 @@
     <message>
         <location filename="../../pagelayout.html.php" line="38"/>
         <source>Manual</source>
-        <translation>Podręcznik</translation>
+        <translation>Uputstvo</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="52"/>
         <source>Logged in as: %1</source>
-        <translation>Zalogowany jako: %1</translation>
+        <translation>Prijavljen kao: %1</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="55"/>
         <source>Tools</source>
-        <translation>Narzędzia</translation>
+        <translation>Alati</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="58"/>
         <source>Log Out</source>
-        <translation>Wyloguj</translation>
+        <translation>Odjava</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="60"/>
         <source>Log In</source>
-        <translation>Zaloguj</translation>
+        <translation>Prijava</translation>
     </message>
     <message>
         <location filename="../../pagelayout.html.php" line="62"/>
         <source>Register</source>
-        <translation>Zarejestruj</translation>
+        <translation>Registracija</translation>
     </message>
 </context>
 <context>
@@ -5852,7 +5852,7 @@
     <message>
         <location filename="../../singlepane.inc.php" line="34"/>
         <source>Untitled page</source>
-        <translation>Strona bez tytułu</translation>
+        <translation>Nenaslovljena strana</translation>
     </message>
 </context>
 <context>
@@ -5860,7 +5860,7 @@
     <message>
         <location filename="../../tools/about.inc.php" line="33"/>
         <source>About WebIssues</source>
-        <translation>O programie WebIssues</translation>
+        <translation>O WebIssues</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="5"/>
@@ -5870,12 +5870,12 @@
     <message>
         <location filename="../../tools/about.html.php" line="7"/>
         <source>Issue tracking and team collaboration system.</source>
-        <translation>System wspierający śledzenie spraw i pracę zespołową.</translation>
+        <translation>Sistem za praćenje problema i timsku kolaboraciju.</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="12"/>
         <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</source>
-        <translation>Niniejszy program jest wolnym oprogramowaniem; możesz go rozprowadzać dalej i/lub modyfikować na warunkach Powszechnej Licencji Publicznej Affero GNU, wydanej przez Fundację Wolnego Oprogramowania - według wersji 3-ciej tej Licencji lub (według twojego wyboru) którejś z późniejszych wersji.</translation>
+        <translation>Ovaj program je besplatan: možete ga redistributirati i/ili modifikovati pod uslovima GNU Affero General Public Licence kako je objavljena od strane Free Software Foundation-a, ili pod verzijom 3 Licence, ili (po Vašem izboru) bilo kojom narednom verzijom.</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="14"/>
@@ -5885,92 +5885,92 @@
     <message>
         <location filename="../../tools/about.html.php" line="15"/>
         <source>Copyright &amp;copy; 2007-2015 WebIssues Team</source>
-        <translation>Copyright &amp;copy; 2007-2015 Zespół WebIssues</translation>
+        <translation>Copyright &amp;copy; 2007-2015 WebIssues Team</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="18"/>
         <source>Help</source>
-        <translation>Pomoc</translation>
+        <translation>Pomo</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="20"/>
         <source>Open the WebIssues Manual for help.</source>
-        <translation>Otwórz Podręcznik WebIssues, aby uzyskać pomoc.</translation>
+        <translation>Otvaranje WebIssues uputstva za pomoć.</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="23"/>
         <source>Manual</source>
-        <translation>Podręcznik</translation>
+        <translation>Uputstvo</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="29"/>
         <source>Website</source>
-        <translation>Strona internetowa</translation>
+        <translation>Web sajt</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="31"/>
         <source>Visit %1 for more information about WebIssues.</source>
-        <translation>Odwiedź %1, aby uzyskać więcej informacji na temat programu WebIssues.</translation>
+        <translation>Posetit %1 za više informacija o WebIssues.</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="36"/>
         <source>Donations</source>
-        <translation>Darowizny</translation>
+        <translation>Donacije</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="38"/>
         <source>If you like this program, your donation will help us dedicate more time for it, support it and implement new features.</source>
-        <translation>Jeśli lubisz ten program, twoja dotacja pomoże nam poświęcić mu więcej czasu, wspierać go i wprowadzać nowe funkcje.</translation>
+        <translation>Ako Vam se dopada ovaj program, Vaša donacija će nam pomoći da posvetimo više vremena istom, pružamo podršku i razvijamo nove mogućnosti.</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="41"/>
         <source>Donate</source>
-        <translation>Przekaż</translation>
+        <translation>Doniraj</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="49"/>
         <source>Latest Version</source>
-        <translation>Najnowsza wersja</translation>
+        <translation>Poslednja verzija</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="56"/>
         <source>Your version of WebIssues is up to date.</source>
-        <translation>Twoja wersja programu WebIssues jest aktualna.</translation>
+        <translation>Vaša verzija WebIssues je ažurna.</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="63"/>
         <source>The latest version of WebIssues is %1.</source>
-        <translation>Najnowsza wersja programu WebIssues to %1.</translation>
+        <translation>Poslednja verzija WebIssues je %1.</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="66"/>
         <source>Release Notes</source>
-        <translation>Informacje</translation>
+        <translation>Primedbe o izdanju</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="67"/>
         <source>Download</source>
-        <translation>Pobierz</translation>
+        <translation>Preuzimanje</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="75"/>
         <source>Checking for latest version failed.</source>
-        <translation>Sprawdzanie najnowszej wersji nie powiodło się.</translation>
+        <translation>Proveravanje najnovije verzije neuspešno.</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="82"/>
         <source>Check for latest version of WebIssues.</source>
-        <translation>Sprawdź najnowszą wersję programu WebIssues.</translation>
+        <translation>Provera najsvežije verzije WebIssues-a.</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="85"/>
         <source>Check</source>
-        <translation>Sprawdź</translation>
+        <translation>Provera</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="98"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
 </context>
 <context>
@@ -5978,33 +5978,33 @@
     <message>
         <location filename="../../tools/editing.inc.php" line="42"/>
         <source>Plain Text</source>
-        <translation>Zwykły tekst</translation>
+        <translation>Čist tekst</translation>
     </message>
     <message>
         <location filename="../../tools/editing.inc.php" line="43"/>
         <source>Text with Markup</source>
-        <translation>Tekst ze znacznikami</translation>
+        <translation>HTML tekst</translation>
     </message>
     <message>
         <location filename="../../tools/editing.inc.php" line="48"/>
         <source>Default (%1)</source>
         <comment>format</comment>
-        <translation>Domyślny (%1)</translation>
+        <translation>Podrazumevano (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="4"/>
         <source>Editing</source>
-        <translation>Edycja</translation>
+        <translation>Ispravljanje</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="6"/>
         <source>The default format used for new comments and descriptions.</source>
-        <translation>Domyślny format używany dla nowych komentarzy i opisów.</translation>
+        <translation>Podrazumevani format korišćen u novim komentarima i opisima.</translation>
     </message>
     <message>
         <location filename="../../tools/editing.html.php" line="8"/>
         <source>Default text format:</source>
-        <translation>Domyślny format tekstu:</translation>
+        <translation>Podrazumevani format teksta:</translation>
     </message>
 </context>
 <context>
@@ -6012,12 +6012,12 @@
     <message>
         <location filename="../../tools/gotoitem.inc.php" line="33"/>
         <source>Go To Item</source>
-        <translation>Idź do elementu</translation>
+        <translation>Idi na stavku</translation>
     </message>
     <message>
         <location filename="../../tools/gotoitem.html.php" line="3"/>
         <source>Enter the identifier of an issue, comment or attachment.</source>
-        <translation>Podaj identyfikator sprawy, komentarza lub załącznika.</translation>
+        <translation>Unesite identifikator problema, komentara ili priključka.</translation>
     </message>
     <message>
         <location filename="../../tools/gotoitem.html.php" line="7"/>
@@ -6027,12 +6027,12 @@
     <message>
         <location filename="../../tools/gotoitem.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../tools/gotoitem.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -6041,7 +6041,7 @@
         <location filename="../../tools/locale.inc.php" line="55"/>
         <source>Default (%1)</source>
         <comment>language</comment>
-        <translation>Domyślny (%1)</translation>
+        <translation>Podrazumevano (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="60"/>
@@ -6049,64 +6049,64 @@
         <location filename="../../tools/locale.inc.php" line="74"/>
         <source>Default</source>
         <comment>format</comment>
-        <translation>Domyślny</translation>
+        <translation>Podrazumevano</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="82"/>
         <source>Default</source>
         <comment>day of week</comment>
-        <translation>Domyślny</translation>
+        <translation>Podrazumevano</translation>
     </message>
     <message>
         <location filename="../../tools/locale.inc.php" line="98"/>
         <source>Default (%1)</source>
         <comment>time zone</comment>
-        <translation>Domyślna (%1)</translation>
+        <translation>Podrazumevano (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="4"/>
         <source>Regional Options</source>
-        <translation>Ustawienia regionalne</translation>
+        <translation>Regionalne opcije</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="6"/>
         <source>Language:</source>
-        <translation>Język:</translation>
+        <translation>Jezik:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="12"/>
         <source>Formats</source>
-        <translation>Formaty</translation>
+        <translation>Formati</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="14"/>
         <source>Customize the format of numbers, date and time. Default formats depend on the selected language.</source>
-        <translation>Dostosuj format liczb, daty i czasu. Domyślne formaty zależą od wybranego języka.</translation>
+        <translation>Prilagodi format brojeva, datuma i vremena. Podrazumevani formati zavise od odabranog jezika.</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="16"/>
         <source>Number format:</source>
-        <translation>Format liczb:</translation>
+        <translation>Format brojeva:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="17"/>
         <source>Date format:</source>
-        <translation>Format daty:</translation>
+        <translation>Format datuma:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="18"/>
         <source>Time format:</source>
-        <translation>Format czasu:</translation>
+        <translation>Format vremena:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="19"/>
         <source>First day of week:</source>
-        <translation>Pierwszy dzień tygodnia:</translation>
+        <translation>Prvi dan u nedelji:</translation>
     </message>
     <message>
         <location filename="../../tools/locale.html.php" line="7"/>
         <source>Time zone:</source>
-        <translation>Strefa czasowa:</translation>
+        <translation>Vremenska zona:</translation>
     </message>
 </context>
 <context>
@@ -6116,32 +6116,32 @@
         <location filename="../../tools/pagesize.inc.php" line="51"/>
         <location filename="../../tools/pagesize.inc.php" line="57"/>
         <source>Default (%1)</source>
-        <translation>Domyślny (%1)</translation>
+        <translation>Podrazumevano (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="4"/>
         <source>Page Size</source>
-        <translation>Rozmiar strony</translation>
+        <translation>Veličina strane</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="6"/>
         <source>The maximum number of projects, issues and items in history which are displayed on a single page.</source>
-        <translation>Maksymalna liczba projektów, spraw i elementów w historii, które są wyświetlone na jednej stronie.</translation>
+        <translation>Maksimalan broj projekata, problema i stavki u istoriji koji su prikazani na jednoj strani.</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="8"/>
         <source>Projects tree:</source>
-        <translation>Drzewo projektów:</translation>
+        <translation>Drvo projekata:</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="9"/>
         <source>List of issues:</source>
-        <translation>Lista spraw:</translation>
+        <translation>Lista problema:</translation>
     </message>
     <message>
         <location filename="../../tools/pagesize.html.php" line="10"/>
         <source>Issue history:</source>
-        <translation>Historia sprawy:</translation>
+        <translation>Istorija problema:</translation>
     </message>
 </context>
 <context>
@@ -6149,47 +6149,47 @@
     <message>
         <location filename="../../tools/password.inc.php" line="33"/>
         <source>Change Password</source>
-        <translation>Zmień hasło</translation>
+        <translation>Promeni lozinku</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="4"/>
         <source>Enter your new password.</source>
-        <translation>Podaj swoje nowe hasło.</translation>
+        <translation>Unesite Vašu novu lozinku:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="6"/>
         <source>Enter the new password for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Podaj nowe hasło dla użytkownika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Unos nove lozinku za korisnika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="12"/>
         <source>Current password:</source>
-        <translation>Obecne hasło:</translation>
+        <translation>Tekuća lozinka:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="15"/>
         <source>New password:</source>
-        <translation>Nowe hasło:</translation>
+        <translation>Nova lozinka:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="16"/>
         <source>Confirm password:</source>
-        <translation>Potwierdź hasło:</translation>
+        <translation>Potvrdi lozinku:</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="19"/>
         <source>User must change password at next logon.</source>
-        <translation>Użytkownik musi zmienić hasło przy następnym logowaniu.</translation>
+        <translation>Korisnik mora promeniti lozinku tokom sledeće prijave.</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="23"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../tools/password.html.php" line="24"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -6197,52 +6197,52 @@
     <message>
         <location filename="../../tools/preferences.inc.php" line="33"/>
         <source>User Preferences</source>
-        <translation>Ustawienia użytkownika</translation>
+        <translation>Korisnička podešavanja</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="4"/>
         <source>Configure your user preferences.</source>
-        <translation>Zmień swoje ustawienia użytkownika.</translation>
+        <translation>Podesite vaše preference.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="6"/>
         <source>Configure preferences for user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień ustawienia dla użytkownika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Podešavanje preferenci za korisnika &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="23"/>
         <source>Notifications</source>
-        <translation>Powiadomienia</translation>
+        <translation>Obaveštenja</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="25"/>
         <source>Email address:</source>
-        <translation>Adres e-mail:</translation>
+        <translation>Email adresa:</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="28"/>
         <source>This address will only be visible to the system administrator. You will not receive notifications if you leave this field empty.</source>
-        <translation>Ten adres będzie widoczny tylko dla administratora systemu. Nie będziesz otrzymywać powiadomień, jeśli pozostawisz to pole puste.</translation>
+        <translation>Ova adresa je vidljiva samo sistem administratoru. Nećete dobijati obaveštenja ako ostavite ovo polje prazno.</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="30"/>
         <source>Include issue details in notifications and summary reports</source>
-        <translation>Załącz szczegóły spraw w powiadomieniach i raportach podsumowujących</translation>
+        <translation>Uključi detalje problema u obaveštenjima i konačnim izveštajima</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="31"/>
         <source>Do not notify about issues that I have already read</source>
-        <translation>Nie powiadamiaj o sprawach, które przeczytałem</translation>
+        <translation>Ne obaveštavaj o problemima koje sam već pročitao</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="37"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../tools/preferences.html.php" line="38"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -6250,69 +6250,69 @@
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="43"/>
         <source>Oldest First</source>
-        <translation>Najpierw najstarsze</translation>
+        <translation>Prvo najstariji</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="44"/>
         <source>Newest First</source>
-        <translation>Najpierw najnowsze</translation>
+        <translation>Prvo najnoviji</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="48"/>
         <source>All History</source>
-        <translation>Cała historia</translation>
+        <translation>Cela istorija</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="49"/>
         <source>Comments &amp; Attachments</source>
-        <translation>Komentarze i załączniki</translation>
+        <translation>Komentari i priključci</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="54"/>
         <source>Default (%1)</source>
         <comment>order</comment>
-        <translation>Domyślna (%1)</translation>
+        <translation>Podrazumevano (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="60"/>
         <source>Default (%1)</source>
         <comment>filter</comment>
-        <translation>Domyślny (%1)</translation>
+        <translation>Podrazumevano (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="4"/>
         <source>View Settings</source>
-        <translation>Ustawienia widoków</translation>
+        <translation>Vidi podešavanja</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="7"/>
         <source>Global view settings that affect all users and issue types.</source>
-        <translation>Globalne ustawienia widoków dla wszystkich użytkowników i typów spraw.</translation>
+        <translation>Podešavanja globalnog pregleda koja utiču na sve korisnike i tipove problema.</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="9"/>
         <source>Hide the ID column</source>
-        <translation>Ukryj kolumnę ID</translation>
+        <translation>Sakrij ID kolonu</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="10"/>
         <source>Hide attributes with empty values</source>
-        <translation>Ukryj atrybuty z pustymi wartościami</translation>
+        <translation>Sakrij atribute sa praznim vrednostima</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="12"/>
         <source>Global view settings that affect all issue types.</source>
-        <translation>Globalne ustawienia widoków dla wszystkich typów spraw.</translation>
+        <translation>Podešavanja globalnog pregleda koja utiču na sve tipove problema.</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="15"/>
         <source>Order of issue history:</source>
-        <translation>Kolejność historii sprawy:</translation>
+        <translation>Redosled istorije problema:</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="16"/>
         <source>Default filter in issue history:</source>
-        <translation>Domyślny filtr w historii sprawy:</translation>
+        <translation>Podrazumevani filter u istoriji problema:</translation>
     </message>
 </context>
 <context>
@@ -6320,53 +6320,53 @@
     <message>
         <location filename="../../users/login.inc.php" line="35"/>
         <source>Log in to WebIssues</source>
-        <translation>Zaloguj się do WebIssues</translation>
+        <translation>Prijava na WebIssues</translation>
     </message>
     <message>
         <location filename="../../users/login.inc.php" line="82"/>
         <source>Anonymous Access</source>
-        <translation>Dostęp anonimowy</translation>
+        <translation>Anonimni pristup</translation>
     </message>
     <message>
         <location filename="../../users/login.inc.php" line="85"/>
         <source>Register New Account</source>
-        <translation>Zarejestruj nowe konto</translation>
+        <translation>Registruj novi nalog</translation>
     </message>
     <message>
         <location filename="../../users/login.html.php" line="8"/>
         <source>Login:</source>
-        <translation>Login:</translation>
+        <translation>Prijava:</translation>
     </message>
     <message>
         <location filename="../../users/login.html.php" line="9"/>
         <source>Password:</source>
-        <translation>Hasło:</translation>
+        <translation>Lozinka:</translation>
     </message>
     <message>
         <location filename="../../users/login.html.php" line="16"/>
         <location filename="../../users/login.html.php" line="27"/>
         <source>Log in</source>
-        <translation>Zaloguj</translation>
+        <translation>Prijava</translation>
     </message>
     <message>
         <location filename="../../users/login.html.php" line="22"/>
         <source>You have to enter a new password in order to log in.</source>
-        <translation>Musisz podać nowe hasło aby się zalogować.</translation>
+        <translation>Morate uneti novu lozinku kako bi ste se prijavili.</translation>
     </message>
     <message>
         <location filename="../../users/login.html.php" line="23"/>
         <source>New password:</source>
-        <translation>Nowe hasło:</translation>
+        <translation>Nova lozinka:</translation>
     </message>
     <message>
         <location filename="../../users/login.html.php" line="24"/>
         <source>Confirm password:</source>
-        <translation>Potwierdź hasło:</translation>
+        <translation>Potvrdi lozinku:</translation>
     </message>
     <message>
         <location filename="../../users/login.html.php" line="28"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -6374,104 +6374,104 @@
     <message>
         <location filename="../../users/register.inc.php" line="39"/>
         <source>Register New Account</source>
-        <translation>Zarejestruj nowe konto</translation>
+        <translation>Registruj novi nalog</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="10"/>
         <source>Fill the information below to begin registration.</source>
-        <translation>Podaj poniższe informacje aby rozpocząć rejestrację.</translation>
+        <translation>Popunite informacije ispod da bi ste započeli registraciju.</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="12"/>
         <source>Note that administrator&apos;s approval is required before you can log in.</source>
-        <translation>Pamiętaj, że konieczne jest zatwierdzenie przez administratora zanim będziesz mógł się zalogować.</translation>
+        <translation>Odobrenje administratora je neophodno, pre nego što budete mogli da se prijavite.</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="18"/>
         <source>User Name</source>
-        <translation>Nazwa użytkownika</translation>
+        <translation>Korisničko ime</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="20"/>
         <source>Enter the user name that will be visible to other users.</source>
-        <translation>Podaj nazwę użytkownika widoczną dla innych użytkowników.</translation>
+        <translation>Unesite korisničko ime koje će biti vidljivo drugim korisnicima.</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="22"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="27"/>
         <source>Credentials</source>
-        <translation>Dane uwierzytelniające</translation>
+        <translation>Kredencijali</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="29"/>
         <source>Enter login and password for your new account.</source>
-        <translation>Podaj login i hasło dla nowego konta.</translation>
+        <translation>Unesite ime za prijavu i lozinku za Vaš novi nalog.</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="31"/>
         <source>Login:</source>
-        <translation>Login:</translation>
+        <translation>Prijava:</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="32"/>
         <source>Password:</source>
-        <translation>Hasło:</translation>
+        <translation>Lozinka:</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="33"/>
         <source>Confirm password:</source>
-        <translation>Potwierdź hasło:</translation>
+        <translation>Potvrdi lozinku:</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="38"/>
         <source>Email Address</source>
-        <translation>Adres e-mail</translation>
+        <translation>Email adresa</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="40"/>
         <source>Email address:</source>
-        <translation>Adres e-mail:</translation>
+        <translation>Email adresa:</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="42"/>
         <source>This address will only be visible to the system administrator. An activation email will be sent to this address.</source>
-        <translation>Ten adres będzie widoczny tylko dla administratora systemu. Na ten adres zostanie wysłany e-mail aktywacyjny.</translation>
+        <translation>Ova adresa će biti vidljiva samo administratoru sistema. Aktivacioni email će biti poslat na ovu adresu.</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="47"/>
         <source>Register</source>
-        <translation>Zarejestruj</translation>
+        <translation>Registracija</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="48"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="54"/>
         <source>Thank you for registering. You will receive an activation email shortly with instructions how to complete registration.</source>
-        <translation>Dziękujemy za rejestrację. Wkrótce otrzymasz e-mail aktywacyjny z instrukcjami, jak zakończyć rejestrację.</translation>
+        <translation>Hvala na registraciji. Uskoro ćete primiti aktivacionu poruku sa uputstvima kako da dovršite registraciju.</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="57"/>
         <location filename="../../users/register.html.php" line="66"/>
         <location filename="../../users/register.html.php" line="75"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="63"/>
         <source>Your registration request was activated. You will receive a notification email when the administrator approves your request.</source>
-        <translation>Twoje zgłoszenie rejestracji zostało aktywowane. Otrzymasz e-mail z powiadomieniem, gdy administrator zatwierdzi twoje zgłoszenie.</translation>
+        <translation>Vaš registracioni zahtev je aktiviran. Primićete obaveštenje email-om kada administrator odobri Vaš zahtev.</translation>
     </message>
     <message>
         <location filename="../../users/register.html.php" line="72"/>
         <source>Your registration request was activated. You can now log in to the server using your login and password.</source>
-        <translation>Twoje zgłoszenie rejestracji zostało aktywowane. Możesz teraz zalogować się używając swojego loginu i hasła.</translation>
+        <translation>Vaš registracioni zahtev je aktiviran. Možete se prijaviti na server korišćenjem vašeg korisničkom imena i lozinke.</translation>
     </message>
 </context>
 <context>
@@ -6479,27 +6479,27 @@
     <message>
         <location filename="../../views/delete.inc.php" line="33"/>
         <source>Delete View</source>
-        <translation>Usuń widok</translation>
+        <translation>Obriši pregled</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="6"/>
         <source>Are you sure you want to delete public view &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć publiczny widok &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete javni pregled &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="8"/>
         <source>Are you sure you want to delete your personal view &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Czy na pewno chcesz usunąć swój prywatny widok &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+        <translation>Da li ste sigurni da želite da obrišete privatni pregled &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="16"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../views/delete.html.php" line="17"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -6507,101 +6507,101 @@
     <message>
         <location filename="../../views/helper.inc.php" line="110"/>
         <source>begins with</source>
-        <translation>zaczyna się od</translation>
+        <translation>počinje sa</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="111"/>
         <source>contains</source>
-        <translation>zawiera</translation>
+        <translation>sadrži</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="112"/>
         <source>ends with</source>
-        <translation>kończy się na</translation>
+        <translation>završava sa</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="113"/>
         <source>in</source>
-        <translation>w</translation>
+        <translation>u</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="255"/>
         <source>All Issues</source>
-        <translation>Wszystkie sprawy</translation>
+        <translation>Svi problemi</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="366"/>
         <source>Add Public View</source>
-        <translation>Dodaj publiczny widok</translation>
+        <translation>Dodaj javni pregled</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="367"/>
         <location filename="../../views/helper.inc.php" line="375"/>
         <source>Modify View</source>
-        <translation>Zmień widok</translation>
+        <translation>Izmeni pregled</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="368"/>
         <location filename="../../views/helper.inc.php" line="376"/>
         <source>Clone View</source>
-        <translation>Sklonuj widok</translation>
+        <translation>Kloniraj pregled</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="369"/>
         <location filename="../../views/helper.inc.php" line="377"/>
         <source>Rename View</source>
-        <translation>Zmień nazwę widoku</translation>
+        <translation>Preimenuj pregled</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="370"/>
         <location filename="../../views/helper.inc.php" line="378"/>
         <source>Delete View</source>
-        <translation>Usuń widok</translation>
+        <translation>Obriši pregled</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="371"/>
         <source>Unpublish View</source>
-        <translation>Cofnij publikację widoku</translation>
+        <translation>Neobjavljen pregled</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="372"/>
         <source>Manage Personal Views</source>
-        <translation>Zarządzaj prywatnymi widokami</translation>
+        <translation>Upravljanje ličnim pregledima</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="374"/>
         <source>Add Personal View</source>
-        <translation>Dodaj prywatny widok</translation>
+        <translation>Dodaj lični pregled</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="381"/>
         <source>Publish View</source>
-        <translation>Opublikuj widok</translation>
+        <translation>Objavi pregled</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="382"/>
         <source>Public View Settings</source>
-        <translation>Publiczne ustawienia widoków</translation>
+        <translation>Podešavanje javnog pregleda</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="451"/>
         <source>ascending</source>
-        <translation>rosnąco</translation>
+        <translation>rastuće</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="451"/>
         <source>descending</source>
-        <translation>malejąco</translation>
+        <translation>opadajuće</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="464"/>
         <source>empty</source>
-        <translation>pusty</translation>
+        <translation>prazno</translation>
     </message>
     <message>
         <location filename="../../views/helper.inc.php" line="470"/>
         <source>AND</source>
-        <translation>ORAZ</translation>
+        <translation>I</translation>
     </message>
 </context>
 <context>
@@ -6609,27 +6609,27 @@
     <message>
         <location filename="../../views/rename.inc.php" line="33"/>
         <source>Rename View</source>
-        <translation>Zmień nazwę widoku</translation>
+        <translation>Preimenuj pregled</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="3"/>
         <source>Enter the new name for view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Podaj nową nazwę widoku &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Unos novog imena za pregled &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="7"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="10"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../views/rename.html.php" line="11"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -6637,204 +6637,204 @@
     <message>
         <location filename="../../views/view.inc.php" line="56"/>
         <source>Modify Personal View</source>
-        <translation>Zmień prywatny widok</translation>
+        <translation>Izmeni lični pregled</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="59"/>
         <location filename="../../views/view.inc.php" line="76"/>
         <source>Clone View</source>
-        <translation>Sklonuj widok</translation>
+        <translation>Kloniraj pregled</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="62"/>
         <source>Add Personal View</source>
-        <translation>Dodaj prywatny widok</translation>
+        <translation>Dodaj lični pregled</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="70"/>
         <source>Default View</source>
-        <translation>Domyślny widok</translation>
+        <translation>Podrazumevani pregled</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="73"/>
         <source>Modify Public View</source>
-        <translation>Zmień publiczny widok</translation>
+        <translation>Izmeni javni pregled</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="79"/>
         <source>Add Public View</source>
-        <translation>Dodaj publiczny widok</translation>
+        <translation>Dodaj javni pregled</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="291"/>
         <source>Ascending</source>
-        <translation>Rosnąco</translation>
+        <translation>Rastuće</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="291"/>
         <source>Descending</source>
-        <translation>Malejąco</translation>
+        <translation>Opadajuće</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="329"/>
         <source>is equal to</source>
-        <translation>jest równy</translation>
+        <translation>je jednako</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="330"/>
         <source>is not equal to</source>
-        <translation>nie jest równy</translation>
+        <translation>nije jednako</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="337"/>
         <source>begins with</source>
-        <translation>zaczyna się od</translation>
+        <translation>počinje sa</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="338"/>
         <source>contains</source>
-        <translation>zawiera</translation>
+        <translation>sadrži</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="339"/>
         <source>ends with</source>
-        <translation>kończy się na</translation>
+        <translation>završava sa</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="340"/>
         <source>in list</source>
-        <translation>w liście</translation>
+        <translation>u listi</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="345"/>
         <source>is less than</source>
-        <translation>jest mniejszy niż</translation>
+        <translation>je manje od</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="346"/>
         <source>is less than or equal to</source>
-        <translation>jest mniejszy lub równy</translation>
+        <translation>je manje ili jednako</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="347"/>
         <source>is greater than</source>
-        <translation>jest większy niż</translation>
+        <translation>je veće od</translation>
     </message>
     <message>
         <location filename="../../views/view.inc.php" line="348"/>
         <source>is greater than or equal to</source>
-        <translation>jest większy lub równy</translation>
+        <translation>je veće ili jednako</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="5"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Niektóre z podanych wartości są niepoprawne.</translation>
+        <translation>Neke od unetih vrednosti su neispravne.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="12"/>
         <source>Modify the default view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień domyślny widok dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmeni podrazumevani pregled za tip &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="15"/>
         <source>Clone view &lt;strong&gt;%1&lt;/strong&gt; as a new public view.</source>
-        <translation>Sklonuj widok &lt;strong&gt;%1&lt;/strong&gt; jako nowy publiczny widok.</translation>
+        <translation>Kloniraj pregleda &lt;strong&gt;%1&lt;/strong&gt; kao novi javni pregled.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="17"/>
         <source>Modify the public view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień publiczny widok &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmeni javni pregled &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="19"/>
         <source>Create a new public view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Utwórz nowy publiczny widok dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Napravi novi javni pregled za tip &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="23"/>
         <source>Clone view &lt;strong&gt;%1&lt;/strong&gt; as a new personal view.</source>
-        <translation>Sklonuj widok &lt;strong&gt;%1&lt;/strong&gt; jako nowy prywatny widok.</translation>
+        <translation>Kloniraj pregled &lt;strong&gt;%1&lt;/strong&gt; kao novi lični pregled.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="25"/>
         <source>Modify your personal view &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Zmień swój prywatny widok &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Izmenite Vaš lični pregled &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="27"/>
         <source>Create a new personal view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Utwórz nowy prywatny widok dla typu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Napravi novi lični pregled za tip &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="36"/>
         <source>Name:</source>
-        <translation>Nazwa:</translation>
+        <translation>Ime:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="40"/>
         <source>Columns</source>
-        <translation>Kolumny</translation>
+        <translation>Kolone</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="44"/>
         <source>Selected columns:</source>
-        <translation>Wybrane kolumny:</translation>
+        <translation>Odabrane kolone:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="45"/>
         <source>Order</source>
-        <translation>Kolejność</translation>
+        <translation>Redosled</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="61"/>
         <source>Available columns:</source>
-        <translation>Dostępne kolumny:</translation>
+        <translation>Raspoložive kolone:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="74"/>
         <location filename="../../views/view.html.php" line="123"/>
         <source>Update</source>
-        <translation>Odśwież</translation>
+        <translation>Ažuriranje</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="80"/>
         <source>Sort Order</source>
-        <translation>Sortowanie</translation>
+        <translation>Redosled sortiranja</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="82"/>
         <source>Column:</source>
-        <translation>Kolumna:</translation>
+        <translation>Kolona:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="83"/>
         <source>Order:</source>
-        <translation>Porządek:</translation>
+        <translation>Redosled:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="91"/>
         <source>Filter</source>
-        <translation>Filtr</translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="96"/>
         <source>Active conditions:</source>
-        <translation>Aktywne warunki:</translation>
+        <translation>Aktivni uslovi:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="109"/>
         <source>Available conditions:</source>
-        <translation>Dostępne warunki:</translation>
+        <translation>Raspoloživi uslovi:</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="131"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
     </message>
     <message>
         <location filename="../../views/view.html.php" line="132"/>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Otkaži</translation>
     </message>
 </context>
 <context>
@@ -6842,92 +6842,92 @@
     <message>
         <location filename="../../../cron/job.php" line="56"/>
         <source>Previous cron job timed out</source>
-        <translation>Poprzednie zadanie cykliczne przekroczyło czas</translation>
+        <translation>Prethodni cron zadatak istekao</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="64"/>
         <source>Cron job started</source>
-        <translation>Zadanie cykliczne rozpoczęte</translation>
+        <translation>Cron zadatak započeo</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="96"/>
         <source>Cron job finished with error</source>
-        <translation>Zadanie cykliczne zakończone z błędem</translation>
+        <translation>Cron zadatak završen sa greškom</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="98"/>
         <source>Previous cron job is still running</source>
-        <translation>Poprzednie zadanie cykliczne jest wciąż uruchomione</translation>
+        <translation>Prethodni cron zadatak još teče</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="321"/>
         <source>Sent %1 notification emails</source>
-        <translation>Wysłano %1 powiadomień mailowych</translation>
+        <translation>Poslato %1 emailova obaveštenja</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="384"/>
         <source>Ignored inbox email from &quot;%1&quot;</source>
-        <translation>Zignorowano wiadomość w skrzynce odbiorczej od &quot;%1&quot;</translation>
+        <translation>Ignorisan primljeni email od &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="396"/>
         <source>Ignored inbox email from unknown address &quot;%1&quot;</source>
-        <translation>Zignorowano wiadomość w skrzynce odbiorczej od nieznanego adresu &quot;%1&quot;</translation>
+        <translation>Ignorisan primljeni email sa nepoznate adrese &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="415"/>
         <source>Ignored inbox email from &quot;%1&quot; because issue %2 is inaccessible</source>
-        <translation>Zignorowano wiadomość w skrzynce odbiorczej od &quot;%1&quot; ponieważ sprawa %2 jest niedostępna</translation>
+        <translation>Ignorisan primljeni email od &quot;%1&quot; zato što je problem %2 nedostupan</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="434"/>
         <source>Ambiguous folder for inbox email address &quot;%1&quot;</source>
-        <translation>Niejednoznaczny folder dla adresu skrzynki odbiorczej &quot;%1&quot;</translation>
+        <translation>Dvosmislena fascikla za email adresu &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="436"/>
         <source>No matching folder for inbox email address &quot;%1&quot;</source>
-        <translation>Brak pasującego folderu dla adresu skrzynki odbiorczej &quot;%1&quot;</translation>
+        <translation>Nema odgovarajućih fascikli za email adresu &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="445"/>
         <source>Ignored inbox email from &quot;%1&quot; to &quot;%2&quot; because folder is inaccessible</source>
-        <translation>Zignorowano wiadomość w skrzynce odbiorczej od &quot;%1&quot; do &quot;%2&quot; ponieważ folder jest niedostępny</translation>
+        <translation>Ignorisan primljeni email od &quot;%1&quot; za &quot;%2&quot; zato što je fascikla nedostupna</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="451"/>
         <source>Ignored inbox email from &quot;%1&quot; because default folder is inaccessible</source>
-        <translation>Zignorowano wiadomość w skrzynce odbiorczej od &quot;%1&quot; ponieważ domyślny folder jest niedostępny</translation>
+        <translation>Ignorisan primljeni email od &quot;%1&quot; zato što podrazumevana fascikla nije dostupna</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="454"/>
         <source>Ignored inbox email from &quot;%1&quot; because folder cannot be mapped</source>
-        <translation>Zignorowano wiadomość w skrzynce odbiorczej od &quot;%1&quot; ponieważ nie można zmapować folderu</translation>
+        <translation>Ignorisan primljen email od &quot;%1&quot; zato što fascikla ne može biti mapirana</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="495"/>
         <source>No subject</source>
-        <translation>Brak tematu</translation>
+        <translation>Nema teme</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="534"/>
         <source>Attachment for message %1 from &quot;%2&quot; exceeded maximum size</source>
-        <translation>Załącznik wiadomości %1 od &quot;%2&quot; przekroczył maksymalny rozmiar</translation>
+        <translation>Priključak za poruku %1 od &quot;%2&quot; prevazilazi maksimalnu veličinu</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="540"/>
         <source>HTML message for email %1</source>
-        <translation>Wiadomość HTML dla e-maila %1</translation>
+        <translation>HTML poruka za email %1</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="544"/>
         <source>Attachment for email %1</source>
-        <translation>Załącznik do e-maila %1</translation>
+        <translation>Priključak za email %1</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="587"/>
         <source>Processed %1 inbox emails</source>
-        <translation>Przetworzono %1 wiadomości w skrzynce odbiorczej</translation>
+        <translation>Obrađeno %1 primljenih emailova</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="617"/>
@@ -6937,22 +6937,22 @@
     <message>
         <location filename="../../../cron/job.php" line="623"/>
         <source>To:</source>
-        <translation>Do:</translation>
+        <translation>Za:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="630"/>
         <source>CC:</source>
-        <translation>DW:</translation>
+        <translation>CC:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="633"/>
         <source>Subject:</source>
-        <translation>Temat:</translation>
+        <translation>Tema:</translation>
     </message>
     <message>
         <location filename="../../../cron/job.php" line="100"/>
         <source>Cron job finished</source>
-        <translation>Zadanie cykliczne zakończone</translation>
+        <translation>Cron zadatak završen</translation>
     </message>
 </context>
 <context>
@@ -6960,7 +6960,7 @@
     <message>
         <location filename="../../../mobile/client/index.php" line="48"/>
         <source>Web Client</source>
-        <translation>Klient WWW</translation>
+        <translation>Web klijent</translation>
     </message>
 </context>
 <context>
@@ -6968,37 +6968,37 @@
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="93"/>
         <source>All History</source>
-        <translation>Cała historia</translation>
+        <translation>Cela istorija</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="94"/>
         <source>Only Comments</source>
-        <translation>Tylko komentarze</translation>
+        <translation>Samo komentari</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="95"/>
         <source>Only Attachments</source>
-        <translation>Tylko załączniki</translation>
+        <translation>Samo priključci</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="96"/>
         <source>Comments &amp; Attachments</source>
-        <translation>Komentarze i załączniki</translation>
+        <translation>Komentari i priključci</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="167"/>
         <source>Edit Attributes</source>
-        <translation>Edytuj atrybuty</translation>
+        <translation>Izmeni atribute</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="168"/>
         <source>Add Comment</source>
-        <translation>Dodaj komentarz</translation>
+        <translation>Dodaj komentar</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="169"/>
         <source>Add Attachment</source>
-        <translation>Dodaj załącznik</translation>
+        <translation>Dodaj priključak</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="171"/>
@@ -7008,37 +7008,37 @@
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="172"/>
         <source>Clone Issue</source>
-        <translation>Sklonuj sprawę</translation>
+        <translation>Kloniraj problem</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="174"/>
         <source>Move Issue</source>
-        <translation>Przenieś sprawę</translation>
+        <translation>Premesti problem</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="175"/>
         <source>Delete Issue</source>
-        <translation>Usuń sprawę</translation>
+        <translation>Obriši problem</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="178"/>
         <source>Mark As Unread</source>
-        <translation>Oznacz jako nieprzeczytaną</translation>
+        <translation>Obeleži kao nepročitano</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="180"/>
         <source>Mark As Read</source>
-        <translation>Oznacz jako przeczytaną</translation>
+        <translation>Obeleži kao pročitano</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="183"/>
         <source>Unsubscribe</source>
-        <translation>Usuń subskrypcję</translation>
+        <translation>Odjavi se</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.inc.php" line="185"/>
         <source>Subscribe</source>
-        <translation>Subskrybuj</translation>
+        <translation>Prijavi se</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="23"/>
@@ -7048,22 +7048,22 @@
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="27"/>
         <source>Type:</source>
-        <translation>Typ:</translation>
+        <translation>Tip:</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="31"/>
         <source>Location:</source>
-        <translation>Lokalizacja:</translation>
+        <translation>Lokacija:</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="35"/>
         <source>Created:</source>
-        <translation>Utworzona:</translation>
+        <translation>Kreirano:</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="39"/>
         <source>Last Modified:</source>
-        <translation>Ostatnio zmieniona:</translation>
+        <translation>Menjano:</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="54"/>
@@ -7074,80 +7074,80 @@
         <location filename="../../../mobile/client/issuedetails.html.php" line="66"/>
         <location filename="../../../mobile/client/issuedetails.html.php" line="128"/>
         <source>Reply</source>
-        <translation>Odpowiedz</translation>
+        <translation>Odgovori</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="69"/>
         <location filename="../../../mobile/client/issuedetails.html.php" line="132"/>
         <location filename="../../../mobile/client/issuedetails.html.php" line="156"/>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Izmeni</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="70"/>
         <location filename="../../../mobile/client/issuedetails.html.php" line="134"/>
         <location filename="../../../mobile/client/issuedetails.html.php" line="158"/>
         <source>Delete</source>
-        <translation>Usuń</translation>
+        <translation>Obriši</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="78"/>
         <location filename="../../../mobile/client/issuedetails.html.php" line="110"/>
         <source>Last Edited:</source>
-        <translation>Ostatnio zmieniony:</translation>
+        <translation>Poslednja izmena:</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="89"/>
         <source>Issue History</source>
-        <translation>Historia sprawy</translation>
+        <translation>Istorija problema</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="116"/>
         <source>Comment %1</source>
-        <translation>Komentarz %1</translation>
+        <translation>Komentar %1</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="144"/>
         <source>Attachment %1</source>
-        <translation>Załącznik %1</translation>
+        <translation>Priključak %1</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="179"/>
         <location filename="../../../mobile/client/issuedetails.html.php" line="182"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="185"/>
         <location filename="../../../mobile/client/issuedetails.html.php" line="186"/>
         <source>empty</source>
-        <translation>pusty</translation>
+        <translation>prazno</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="224"/>
         <location filename="../../../mobile/client/issuedetails.html.php" line="225"/>
         <source>Unknown Folder</source>
-        <translation>Nieznany folder</translation>
+        <translation>Nepoznata fascikla</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="226"/>
         <source>Issue moved from %1 to %2</source>
-        <translation>Sprawa przeniesiona z %1 do %2</translation>
+        <translation>Problem premešten iz %1 u %2</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="247"/>
         <source>There are no comments.</source>
-        <translation>Nie ma komentarzy.</translation>
+        <translation>Nema komentara.</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="249"/>
         <source>There are no attachments.</source>
-        <translation>Nie ma załączników.</translation>
+        <translation>Nema priključaka.</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issuedetails.html.php" line="251"/>
         <source>There are no comments or attachments.</source>
-        <translation>Nie ma komentarzy ani załączników.</translation>
+        <translation>Nema komentara ili priključaka.</translation>
     </message>
 </context>
 <context>
@@ -7155,67 +7155,67 @@
     <message>
         <location filename="../../../mobile/client/issueslist.inc.php" line="81"/>
         <source>All Issues</source>
-        <translation>Wszystkie sprawy</translation>
+        <translation>Svi problemi</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.inc.php" line="83"/>
         <source>Personal Views</source>
-        <translation>Prywatne widoki</translation>
+        <translation>Lični pregledi</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.inc.php" line="85"/>
         <source>Public Views</source>
-        <translation>Publiczne widoki</translation>
+        <translation>Javni pregledi</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.inc.php" line="193"/>
         <source>Add Issue</source>
-        <translation>Dodaj sprawę</translation>
+        <translation>Dodaj problem</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.inc.php" line="194"/>
         <source>Mark All As Read</source>
-        <translation>Oznacz jako przeczytane</translation>
+        <translation>Obeleži sve kao pročitano</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.inc.php" line="195"/>
         <source>Mark All As Unread</source>
-        <translation>Oznacz jako  nieprzeczytane</translation>
+        <translation>Obeleži sve kao nepročitano</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.html.php" line="22"/>
         <source>View:</source>
-        <translation>Widok:</translation>
+        <translation>Pregled:</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.html.php" line="23"/>
         <source>Go</source>
-        <translation>Przejdź</translation>
+        <translation>Kreni</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.html.php" line="29"/>
         <source>Search</source>
-        <translation>Szukaj</translation>
+        <translation>Traži</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.html.php" line="75"/>
         <source>There are no issues matching the search criteria.</source>
-        <translation>Nie ma spraw spełniających kryteria wyszukiwania.</translation>
+        <translation>Nema problema koji odgovaraju kriterijumima pretrage.</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.html.php" line="79"/>
         <source>There are no issues matching the selected view.</source>
-        <translation>Nie ma spraw w wybranym widoku.</translation>
+        <translation>Nema problema koji odgovaraju odabranom pregledu.</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.html.php" line="83"/>
         <source>There are no issues of this type.</source>
-        <translation>Nie ma spraw tego typu.</translation>
+        <translation>Nema problema ovog tipa.</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/issueslist.html.php" line="87"/>
         <source>There are no issues in this folder.</source>
-        <translation>Nie ma spraw w tym folderze.</translation>
+        <translation>Nema problema u ovoj fascikli.</translation>
     </message>
 </context>
 <context>
@@ -7228,7 +7228,7 @@
     <message>
         <location filename="../../../mobile/client/project.html.php" line="13"/>
         <source>Last Edited:</source>
-        <translation>Ostatnio zmieniony:</translation>
+        <translation>Poslednja izmena:</translation>
     </message>
 </context>
 <context>
@@ -7237,22 +7237,22 @@
         <location filename="../../../mobile/client/projectstree.inc.php" line="54"/>
         <location filename="../../../mobile/client/projectstree.html.php" line="16"/>
         <source>All Projects</source>
-        <translation>Wszystkie projekty</translation>
+        <translation>Svi projekti</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/projectstree.html.php" line="4"/>
         <source>Projects</source>
-        <translation>Projekty</translation>
+        <translation>Projekti</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/projectstree.html.php" line="61"/>
         <source>View Description</source>
-        <translation>Wyświetl opis</translation>
+        <translation>Opis pregleda</translation>
     </message>
     <message>
         <location filename="../../../mobile/client/projectstree.html.php" line="88"/>
         <source>There are no projects.</source>
-        <translation>Nie ma projektów.</translation>
+        <translation>Nema projekata.</translation>
     </message>
 </context>
 <context>
@@ -7265,47 +7265,47 @@
     <message>
         <location filename="../../../mobile/pagelayout.inc.php" line="73"/>
         <source>Untitled page</source>
-        <translation>Strona bez tytułu</translation>
+        <translation>Nenaslovljena strana</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="39"/>
         <source>Logged in as: %1</source>
-        <translation>Zalogowany jako: %1</translation>
+        <translation>Prijavljen kao: %1</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="41"/>
         <source>Log In</source>
-        <translation>Zaloguj</translation>
+        <translation>Prijava</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="44"/>
         <source>Anonymous Access</source>
-        <translation>Dostęp anonimowy</translation>
+        <translation>Anonimni pristup</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="47"/>
         <source>Register</source>
-        <translation>Zarejestruj</translation>
+        <translation>Registracija</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="50"/>
         <source>Go To Item</source>
-        <translation>Idź do elementu</translation>
+        <translation>Idi na stavku</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="53"/>
         <source>Change Password</source>
-        <translation>Zmień hasło</translation>
+        <translation>Promeni lozinku</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="54"/>
         <source>User Preferences</source>
-        <translation>Ustawienia użytkownika</translation>
+        <translation>Korisnička podešavanja</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="55"/>
         <source>Log Out</source>
-        <translation>Wyloguj</translation>
+        <translation>Odjava</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="57"/>
@@ -7315,17 +7315,17 @@
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="59"/>
         <source>About WebIssues</source>
-        <translation>O programie WebIssues</translation>
+        <translation>O WebIssues</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="61"/>
         <source>Full Version</source>
-        <translation>Pełna wersja</translation>
+        <translation>Puna verzija</translation>
     </message>
     <message>
         <location filename="../../../mobile/pagelayout.html.php" line="62"/>
         <source>Manual</source>
-        <translation>Podręcznik</translation>
+        <translation>Uputstvo</translation>
     </message>
 </context>
 <context>
@@ -7333,7 +7333,7 @@
     <message>
         <location filename="../../../system/api/issuemanager.inc.php" line="759"/>
         <source>Deleted issue &quot;%1&quot; from folder &quot;%2&quot;</source>
-        <translation>Usunięto sprawę &quot;%1&quot; z folderu &quot;%2&quot;</translation>
+        <translation>Obrisan problem &quot;%1&quot; iz fascikle &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -7341,67 +7341,67 @@
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="305"/>
         <source>Added project &quot;%1&quot;</source>
-        <translation>Dodano projekt &quot;%1&quot;</translation>
+        <translation>Dodat projekat &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="343"/>
         <source>Renamed project &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Zmieniono nazwę projektu &quot;%1&quot; na &quot;%2&quot;</translation>
+        <translation>Preimenovan projekat &quot;%1&quot; u &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="368"/>
         <source>Enabled public access for project &quot;%1&quot;</source>
-        <translation>Włączono publiczny dostęp dla projektu &quot;%1&quot;</translation>
+        <translation>Omogućen javni pristup projektu &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="371"/>
         <source>Disabled public access for project &quot;%1&quot;</source>
-        <translation>Wyłączono publiczny dostęp dla projektu &quot;%1&quot;</translation>
+        <translation>Onemogućen javni pristup projektu &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="391"/>
         <source>Archived project &quot;%1&quot;</source>
-        <translation>Zarchiwizowano projekt &quot;%1&quot;</translation>
+        <translation>Arhiviran projekat &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="410"/>
         <source>Restored project &quot;%1&quot;</source>
-        <translation>Przywrócono projekt &quot;%1&quot;</translation>
+        <translation>Vraćen projekat &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="451"/>
         <source>Deleted project &quot;%1&quot; with folders</source>
-        <translation>Usunięto projekt &quot;%1&quot; wraz z folderami</translation>
+        <translation>Obrisan projekat &quot;%1&quot; sa fasciklama</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="454"/>
         <source>Deleted project &quot;%1&quot;</source>
-        <translation>Usunięto projekt &quot;%1&quot;</translation>
+        <translation>Obrisan projekat &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="509"/>
         <source>Added folder &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Dodano folder &quot;%1&quot; do projektu &quot;%2&quot;</translation>
+        <translation>Dodata fascikla &quot;%1&quot; projektu &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="548"/>
         <source>Renamed folder &quot;%1&quot; to &quot;%2&quot; in project &quot;%3&quot;</source>
-        <translation>Zmieniono nazwę folderu &quot;%1&quot; na &quot;%2&quot; w projekcie &quot;%3&quot;</translation>
+        <translation>Preimenovana fascikla &quot;%1&quot; u &quot;%2&quot; projekta &quot;%3&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="588"/>
         <source>Deleted folder &quot;%1&quot; with issues from project &quot;%2&quot;</source>
-        <translation>Usunięto folder &quot;%1&quot; wraz ze sprawami z projektu &quot;%2&quot;</translation>
+        <translation>Obrisana fascikla &quot;%1&quot; sa problemima iz projekta &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="591"/>
         <source>Deleted folder &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation>Usunięto folder &quot;%1&quot; z projektu &quot;%2&quot;</translation>
+        <translation>Obrisana fascikla &quot;%1&quot; iz projekta &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/projectmanager.inc.php" line="648"/>
         <source>Moved folder &quot;%1&quot; from project &quot;%2&quot; to &quot;%3&quot;</source>
-        <translation>Przeniesiono folder &quot;%1&quot; z projektu &quot;%2&quot; do &quot;%3&quot;</translation>
+        <translation>Premeštena fascikla &quot;%1&quot; iz projekta &quot;%2&quot; u &quot;%3&quot;</translation>
     </message>
 </context>
 <context>
@@ -7409,22 +7409,22 @@
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="171"/>
         <source>User &quot;%1&quot; registered</source>
-        <translation>Użytkownik &quot;%1&quot; zarejestrował się</translation>
+        <translation>Korisnik &quot;%1&quot; registrovan</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="194"/>
         <source>Registration request for user &quot;%1&quot; activated</source>
-        <translation>Aktywowano zgłoszenie rejestracji dla użytkownika &quot;%1&quot;</translation>
+        <translation>Registracioni zahtev za korisnika &quot;%1&quot; aktiviran</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="238"/>
         <source>Registration request for user &quot;%1&quot; approved</source>
-        <translation>Zatwierdzono zgłoszenie rejestracji dla użytkownika &quot;%1&quot;</translation>
+        <translation>Registracioni zahtev za korisnika &quot;%1&quot; odobren</translation>
     </message>
     <message>
         <location filename="../../../system/api/registrationmanager.inc.php" line="257"/>
         <source>Registration request for user &quot;%1&quot; rejected</source>
-        <translation>Odrzucono zgłoszenie rejestracji dla użytkownika &quot;%1&quot;</translation>
+        <translation>Registracioni zahtev za korisnika &quot;%1&quot; odbijen</translation>
     </message>
 </context>
 <context>
@@ -7432,12 +7432,12 @@
     <message>
         <location filename="../../../system/api/servermanager.inc.php" line="78"/>
         <source>Renamed the server from &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Zmieniono nazwę serwera z &quot;%1&quot; na &quot;%2&quot;</translation>
+        <translation>Preimenovan server iz &quot;%1&quot; u &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/servermanager.inc.php" line="103"/>
         <source>Changed the unique identifier of the server</source>
-        <translation>Zmieniono unikalny identyfikator serwera</translation>
+        <translation>Promenjen unikatni identifikator servera</translation>
     </message>
 </context>
 <context>
@@ -7445,12 +7445,12 @@
     <message>
         <location filename="../../../system/api/sessionmanager.inc.php" line="187"/>
         <source>Incorrect login attempt for user &quot;%1&quot;</source>
-        <translation>Nieudana próba logowania dla użytkownika &quot;%1&quot;</translation>
+        <translation>Neuspešan pokušaj prijave za korisnika &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/sessionmanager.inc.php" line="203"/>
         <source>Session opened for user &quot;%1&quot;</source>
-        <translation>Otwarto sesję dla użytkownika &quot;%1&quot;</translation>
+        <translation>Sesija otvorena za korisnika &quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -7458,47 +7458,47 @@
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="317"/>
         <source>Added issue type &quot;%1&quot;</source>
-        <translation>Dodano typ spraw &quot;%1&quot;</translation>
+        <translation>Dodat tip problema &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="355"/>
         <source>Renamed issue type &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Zmieniono nazwę typu spraw &quot;%1&quot; na &quot;%2&quot;</translation>
+        <translation>Preimenovan tip problema &quot;%1&quot; u &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="396"/>
         <source>Deleted issue type &quot;%1&quot; with folders</source>
-        <translation>Usunięto typ spraw &quot;%1&quot; wraz z folderami</translation>
+        <translation>Obrisan tip problema &quot;%1&quot; sa fasciklama</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="399"/>
         <source>Deleted issue type &quot;%1&quot;</source>
-        <translation>Usunięto typ spraw &quot;%1&quot;</translation>
+        <translation>Obrisan tip problema &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="453"/>
         <source>Added attribute &quot;%1&quot; to issue type &quot;%2&quot;</source>
-        <translation>Dodano atrybut &quot;%1&quot; do typu spraw &quot;%2&quot;</translation>
+        <translation>Dodat atribut &quot;%1&quot; tipu problema &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="492"/>
         <source>Renamed attribute &quot;%1&quot; to &quot;%2&quot; of issue type &quot;%3&quot;</source>
-        <translation>Zmieniono nazwę atrybutu &quot;%1&quot; na &quot;%2&quot; w typie sprawy &quot;%3&quot;</translation>
+        <translation>Preimenovan atribut &quot;%1&quot; u &quot;%2&quot; za tip problema &quot;%3&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="516"/>
         <source>Modified attribute &quot;%1&quot; of issue type &quot;%2&quot;</source>
-        <translation>Zmodyfikowano atrybut &quot;%1&quot; typu spraw &quot;%2&quot;</translation>
+        <translation>Izmenjen atribut &quot;%1&quot; tipa problema &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="550"/>
         <source>Deleted attribute &quot;%1&quot; with values from issue type &quot;%2&quot;</source>
-        <translation>Usunięto atrybut &quot;%1&quot; wraz z wartościami z typu spraw &quot;%2&quot;</translation>
+        <translation>Obrisan atribut &quot;%1&quot; sa vrednostima iz tipa problema &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/typemanager.inc.php" line="553"/>
         <source>Deleted attribute &quot;%1&quot; from issue type &quot;%2&quot;</source>
-        <translation>Usunięto atrybut &quot;%1&quot; z typu spraw &quot;%2&quot;</translation>
+        <translation>Obrisan atribut &quot;%1&quot; iz tipa problema &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -7506,52 +7506,52 @@
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="369"/>
         <source>Added user &quot;%1&quot;</source>
-        <translation>Dodano użytkownika &quot;%1&quot;</translation>
+        <translation>Dodat korisnik &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="399"/>
         <source>Changed password for user &quot;%1&quot;</source>
-        <translation>Zmieniono hasło dla użytkownika &quot;%1&quot;</translation>
+        <translation>Promenjena lozinka korisnika &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="444"/>
         <source>User &quot;%1&quot; changed own password</source>
-        <translation>Użytkownik &quot;%1&quot; zmienił własne hasło</translation>
+        <translation>Korisnik &quot;%1&quot; promenio svoju lozinku</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="482"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
-        <translation>Zmieniono nazwę użytkownika &quot;%1&quot; na &quot;%2&quot;</translation>
+        <translation>Preimenovan korisnik &quot;%1&quot; u &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="514"/>
         <source>Disabled access for user &quot;%1&quot;</source>
-        <translation>Wyłączono dostęp dla użytkownika &quot;%1&quot;</translation>
+        <translation>Onemogućen pristup korinsiku &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="518"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
-        <translation>Nadano zwykły dostęp dla użytkownika &quot;%1&quot;</translation>
+        <translation>Dopušten redovan pristup korisniku &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="522"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
-        <translation>Nadano dostęp administratora systemu dla użytkownika &quot;%1&quot;</translation>
+        <translation>Dozvoljen administratorski pristup korisniku &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="577"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
-        <translation>Usunięto użytkownika &quot;%1&quot; z projektu &quot;%2&quot;</translation>
+        <translation>Uklonjen korisnik &quot;%1&quot; iz projekta &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="581"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Nadano zwykły dostęp użytkownikowi &quot;%1&quot; do projektu &quot;%2&quot;</translation>
+        <translation>Dozvoljen redovan pristup korisniku &quot;%1&quot; za projekat &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../system/api/usermanager.inc.php" line="585"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
-        <translation>Nadano dostęp administratora projektu użytkownikowi &quot;%1&quot; do projektu &quot;%2&quot;</translation>
+        <translation>Dozvoljen administratorski pristup korisniku &quot;%1&quot; za projekat &quot;%2&quot;</translation>
     </message>
 </context>
 <context>
@@ -7564,32 +7564,32 @@
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="43"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation>Naziv</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="45"/>
         <source>Created By</source>
-        <translation>Utworzona przez</translation>
+        <translation>Kreirao</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="44"/>
         <source>Created Date</source>
-        <translation>Data utworzenia</translation>
+        <translation>Kreirano</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="47"/>
         <source>Modified By</source>
-        <translation>Zmieniona przez</translation>
+        <translation>Izmenio</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="46"/>
         <source>Modified Date</source>
-        <translation>Data zmiany</translation>
+        <translation>Izmenjeno</translation>
     </message>
     <message>
         <location filename="../../../system/web/columnhelper.inc.php" line="48"/>
         <source>Location</source>
-        <translation>Lokalizacja</translation>
+        <translation>Lokacija</translation>
     </message>
 </context>
 <context>
@@ -7597,342 +7597,342 @@
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="71"/>
         <source>Invalid login or password</source>
-        <translation>Nieprawidłowy login lub hasło</translation>
+        <translation>Neispravna prijava ili lozinka</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="89"/>
         <source>A project with this name already exists</source>
-        <translation>Projekt o tej nazwie już istnieje</translation>
+        <translation>Projekat pod ovim imenom već postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="91"/>
         <source>A folder with this name already exists</source>
-        <translation>Folder o tej nazwie już istnieje</translation>
+        <translation>Fascikla sa ovim imenom već postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="93"/>
         <source>A user with this login or name already exists</source>
-        <translation>Użytkownik o tym loginie lub tej nazwie już istnieje</translation>
+        <translation>Korisnik sa ovom prijavom ili imenom već postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="95"/>
         <source>A type with this name already exists</source>
-        <translation>Typ o tej nazwie już istnieje</translation>
+        <translation>Tip sa ovim imenom već postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="97"/>
         <source>An attribute with this name already exists</source>
-        <translation>Atrybut o tej nazwie już istnieje</translation>
+        <translation>Atribut sa ovim imenom već postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="117"/>
         <source>Required value is missing</source>
-        <translation>Brak wymaganej wartości</translation>
+        <translation>Zahtevana vrednost fali</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="119"/>
         <source>Text is too short</source>
-        <translation>Tekst jest za krótki</translation>
+        <translation>Tekst je previše kratak</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="121"/>
         <source>Text is too long</source>
-        <translation>Tekst jest za długi</translation>
+        <translation>Tekst je previše dug</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="123"/>
         <source>Number is too small</source>
-        <translation>Liczba jest zbyt mała</translation>
+        <translation>Broj je previše mali</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="125"/>
         <source>Number is too big</source>
-        <translation>Liczba jest zbyt duża</translation>
+        <translation>Broj je previše velik</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="131"/>
         <source>Value has incorrect format</source>
-        <translation>Wartośc ma niepoprawny format</translation>
+        <translation>Vrednost ima neispravan format</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="133"/>
         <source>Date is not correct</source>
-        <translation>Data jest niepoprawna</translation>
+        <translation>Datum nije ispravan</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="135"/>
         <source>Time is not correct</source>
-        <translation>Czas jest niepoprawny</translation>
+        <translation>Vreme nije ispravno</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="137"/>
         <source>Email address is invalid</source>
-        <translation>Adres e-mail jest niepoprawny</translation>
+        <translation>Email adresa nije ispravna </translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="139"/>
         <source>No matching item is selected</source>
-        <translation>Nie wybrano pasującej opcji</translation>
+        <translation>Nema odgovarajućih izabranih stavki</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="141"/>
         <source>Duplicate items are entered</source>
-        <translation>Podano zduplikowane opcje</translation>
+        <translation>Unete su duplicirane stavke</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="127"/>
         <source>Number has too many decimal digits</source>
-        <translation>Liczba ma zbyt wiele cyfr dziesiętnych</translation>
+        <translation>Broj ima previše decimalnih brojki</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="54"/>
         <source>Some of the values you entered are incorrect.</source>
-        <translation>Niektóre z podanych wartości są niepoprawne.</translation>
+        <translation>Neke od unetih vrednosti su neispravne.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="56"/>
         <source>Incorrect value: %1.</source>
-        <translation>Niepoprawna wartość: %1.</translation>
+        <translation>Neispravna vrednost: %1.</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="67"/>
         <source>Your session has expired; please reconnect</source>
-        <translation>Twoja sesja wygasła; zaloguj się ponownie</translation>
+        <translation>Vaša sesija je istekla; molim, ponovo se povežite</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="69"/>
         <source>You have no permission to perform this operation</source>
-        <translation>Nie masz uprawnienia do wykonania tej operacji</translation>
+        <translation>Nemate ovlašćenja da izvršite ovu operaciju</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="73"/>
         <source>Project does not exist</source>
-        <translation>Projekt nie istnieje</translation>
+        <translation>Projekat ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="75"/>
         <source>Folder does not exist</source>
-        <translation>Folder nie istnieje</translation>
+        <translation>Fascikla ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="77"/>
         <source>Issue does not exist</source>
-        <translation>Sprawa nie istnieje</translation>
+        <translation>Problem ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="79"/>
         <source>Attachment does not exist</source>
-        <translation>Załącznik nie istnieje</translation>
+        <translation>Priključak ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="81"/>
         <source>User does not exist</source>
-        <translation>Użytkownik nie istnieje</translation>
+        <translation>Korisnik ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="83"/>
         <source>Type does not exist</source>
-        <translation>Typ nie istnieje</translation>
+        <translation>Tip ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="85"/>
         <source>Attribute does not exist</source>
-        <translation>Atrybut nie istnieje</translation>
+        <translation>Atribut ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="87"/>
         <source>Event does not exist</source>
-        <translation>Zdarzenie nie istnieje</translation>
+        <translation>Događaj ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="99"/>
         <source>Project cannot be deleted</source>
-        <translation>Nie można usunąć projektu</translation>
+        <translation>Projekat ne može biti obrisan</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="101"/>
         <source>Folder cannot be deleted</source>
-        <translation>Nie można usunąć folderu</translation>
+        <translation>Fascikla ne može biti obrisana</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="103"/>
         <source>Type cannot be deleted</source>
-        <translation>Nie można usunąć typu</translation>
+        <translation>Tip ne može biti obrisan</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="105"/>
         <source>Text contains invalid characters</source>
-        <translation>Tekst zawiera niedozwolone znaki</translation>
+        <translation>Tekst sadrži neispravne karaktere</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="107"/>
         <source>Access level is invalid</source>
-        <translation>Poziom dostępu jest niepoprawny</translation>
+        <translation>Nivo pristupa je neispravan</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="109"/>
         <source>Value is invalid</source>
-        <translation>Niepoprawna wartość</translation>
+        <translation>Vrednost je neispravna</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="111"/>
         <source>Definition is invalid</source>
-        <translation>Definicja jest niepoprawna</translation>
+        <translation>Definicija je neispravna</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="113"/>
         <source>Invalid preference value</source>
-        <translation>Nieprawidłowa wartość ustawienia</translation>
+        <translation>Neispravna vrednost preference</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="115"/>
         <source>Invalid setting value</source>
-        <translation>Niepoprawna wartość ustawienia</translation>
+        <translation>Neispravna vrednost podešavanja</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="129"/>
         <source>Number has too many digits</source>
-        <translation>Liczba ma zbyt wiele cyfr</translation>
+        <translation>Broj ima previše cifara</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="143"/>
         <source>Minimum value is greater than maximum value</source>
-        <translation>Wartość minimalna jest większa od maksymalnej</translation>
+        <translation>Minimalna vrednost je veća od maksimalne vrednosti</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="145"/>
         <source>Incompatible attribute type</source>
-        <translation>Niezgodny typ atrybutu</translation>
+        <translation>Nekompatibilan tip atributa</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="147"/>
         <source>View does not exist</source>
-        <translation>Widok nie istnieje</translation>
+        <translation>Pregled ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="149"/>
         <source>Column does not exist</source>
-        <translation>Kolumna nie istnieje</translation>
+        <translation>Kolona ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="151"/>
         <source>A view with this name already exists</source>
-        <translation>Widok o tej nazwie już istnieje</translation>
+        <translation>Pregled pod ovim imenom već postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="153"/>
         <source>A required column is missing</source>
-        <translation>Brak wymaganej kolumny</translation>
+        <translation>Fali zahtevana kolona </translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="155"/>
         <source>An attribute is missing</source>
-        <translation>Brak atrybutu</translation>
+        <translation>Fali atribut</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="157"/>
         <source>No items are specified</source>
-        <translation>Nie podano opcji</translation>
+        <translation>Nije određena ni jedna stavka</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="159"/>
         <source>Passwords do not match; please retype them</source>
-        <translation>Hasła się nie zgadzają, wpisz je ponownie</translation>
+        <translation>Lozinke se ne poklapaju; molim, unesite ponovo</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="161"/>
         <source>Alert does not exist</source>
-        <translation>Alert nie istnieje</translation>
+        <translation>Upozorenje ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="163"/>
         <source>Alert already exists</source>
-        <translation>Alert już istnieje</translation>
+        <translation>Upozorenje već postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="165"/>
         <source>Invalid alert email setting</source>
-        <translation>Nieprawidłowe ustawienie alertu</translation>
+        <translation>Neispravno podešavanje emaila upozorenja</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="167"/>
         <source>Comment does not exist</source>
-        <translation>Komentarz nie istnieje</translation>
+        <translation>Komentar ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="169"/>
         <source>Attribute cannot be deleted</source>
-        <translation>Nie można usunąć atrybutu</translation>
+        <translation>Atribut ne može biti obrisan</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="171"/>
         <source>You must change your password</source>
-        <translation>Musisz zmienić hasło</translation>
+        <translation>Morate promeniti Vašu lozinku</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="173"/>
         <source>Cannot reuse password; choose different password</source>
-        <translation>Nie można użyć ponownie hasła; wybierz inne hasło</translation>
+        <translation>Nemožete koristiti istu lozinku; molim odaberite drugu</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="175"/>
         <source>The specified item was not found</source>
-        <translation>Podany element nie został znaleziony</translation>
+        <translation>Odabrana stavka nije pronađena</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="177"/>
         <source>Value cannot contain a comma</source>
-        <translation>Wartość nie może zawierać przecinka</translation>
+        <translation>Vrednost ne može sadržati zarez</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="179"/>
         <source>Concurrency error; please try again</source>
-        <translation>Błąd współbieżności; spróbuj ponownie</translation>
+        <translation>Greška u pristupu; molim pokušajte ponovo</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="181"/>
         <source>One of the dependent objects no longer exists</source>
-        <translation>Jeden z zależnych obiektów już nie istnieje</translation>
+        <translation>Jedan od zavisnih objekata više ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="183"/>
         <source>Another user already uses this email address</source>
-        <translation>Inny użytkownik używa tego adresu e-mail</translation>
+        <translation>Drugi korisnik trenutno koristi ovu email adresu</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="189"/>
         <source>Description does not exist</source>
-        <translation>Opis nie istnieje</translation>
+        <translation>Opis ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="191"/>
         <source>Description already exists</source>
-        <translation>Opis już istnieje</translation>
+        <translation>Opis već postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="193"/>
         <source>Text format is invalid</source>
-        <translation>Format tekstu jest niepoprawny</translation>
+        <translation>Format teksta je neispravan</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="195"/>
         <source>Subscription does not exist</source>
-        <translation>Subskrypcja nie istnieje</translation>
+        <translation>Pretplata ne postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="197"/>
         <source>Subscription already exists</source>
-        <translation>Subskrypcja już istnieje</translation>
+        <translation>Pretplata već postoji</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="185"/>
         <source>The activation key is invalid</source>
-        <translation>Klusz aktywacyjny jest nieprawidłowy</translation>
+        <translation>Aktivacioni ključ je neispravan</translation>
     </message>
     <message>
         <location filename="../../../system/web/errorhelper.inc.php" line="187"/>
         <source>Request does not exist</source>
-        <translation>Zgłoszenie nie istnieje</translation>
+        <translation>Zahtev ne postoji</translation>
     </message>
 </context>
 <context>
@@ -7948,7 +7948,7 @@
         <location filename="../../../system/web/expressionhelper.inc.php" line="46"/>
         <location filename="../../../system/web/expressionhelper.inc.php" line="81"/>
         <source>Today</source>
-        <translation>Dzisiaj</translation>
+        <translation>Danas</translation>
     </message>
 </context>
 <context>
@@ -7956,54 +7956,54 @@
     <message>
         <location filename="../../../system/web/grid.inc.php" line="264"/>
         <source>Ascending</source>
-        <translation>Rosnąco</translation>
+        <translation>Rastuće</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="264"/>
         <source>Decending</source>
-        <translation>Malejąco</translation>
+        <translation>Opadajuće</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="305"/>
         <source>&amp;laquo; first</source>
-        <translation>&amp;laquo; pierwsza</translation>
+        <translation>&amp;laquo; prvi</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="306"/>
         <location filename="../../../system/web/grid.inc.php" line="344"/>
         <source>&amp;lt; previous</source>
-        <translation>&amp;lt; poprzednia</translation>
+        <translation>&amp;lt; prethodni</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="323"/>
         <location filename="../../../system/web/grid.inc.php" line="347"/>
         <source>next &amp;gt;</source>
-        <translation>następna &amp;gt;</translation>
+        <translation>sledeći &amp;gt;</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="324"/>
         <source>last &amp;raquo;</source>
-        <translation>ostatnia &amp;raquo;</translation>
+        <translation>poslednji &amp;raquo;</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="349"/>
         <source>%1 of %2</source>
-        <translation>%1 z %2</translation>
+        <translation>%1 od %2</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="399"/>
         <source>Expand</source>
-        <translation>Rozwiń</translation>
+        <translation>Proširi</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="400"/>
         <source>Collapse</source>
-        <translation>Zwiń</translation>
+        <translation>Skupi</translation>
     </message>
     <message>
         <location filename="../../../system/web/grid.inc.php" line="402"/>
         <source>Blank</source>
-        <translation>Pusty</translation>
+        <translation>Prazno</translation>
     </message>
 </context>
 <context>
@@ -8012,88 +8012,88 @@
         <location filename="../../../system/web/javascript.inc.php" line="95"/>
         <location filename="../../../system/web/javascript.inc.php" line="125"/>
         <source>Choose</source>
-        <translation>Wybierz</translation>
+        <translation>Izaberi</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="101"/>
         <source>Next</source>
-        <translation>Następny</translation>
+        <translation>Sledeće</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="102"/>
         <source>Previous</source>
-        <translation>Poprzedni</translation>
+        <translation>Prethodno</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="304"/>
         <source>Bold</source>
-        <translation>Pogrubienie</translation>
+        <translation>Podebljano</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="305"/>
         <source>Italic</source>
-        <translation>Kursywa</translation>
+        <translation>Nakošeno</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="306"/>
         <source>Monospace</source>
-        <translation>Czcionka maszynowa</translation>
+        <translation>Monospace</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="308"/>
         <source>Hyperlink</source>
-        <translation>Odnośnik</translation>
+        <translation>Hiper veza</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="308"/>
         <source>Enter link URL:</source>
-        <translation>Podaj adres URL:</translation>
+        <translation>Unesite URL:</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="309"/>
         <source>Link text</source>
-        <translation>Tekst odnośnika</translation>
+        <translation>Tekst veze</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="311"/>
         <source>Bullet List</source>
-        <translation>Lista wypunktowana</translation>
+        <translation>Lista</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="312"/>
         <source>Quote Block</source>
-        <translation>Cytat</translation>
+        <translation>Blok citata</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="313"/>
         <source>Code Block</source>
-        <translation>Blok kodu</translation>
+        <translation>Blok koda</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="314"/>
         <source>Right-To-Left Text</source>
-        <translation>Tekst od prawej do lewej</translation>
+        <translation>Tekst sa-desna-na-levo</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="316"/>
         <source>Preview</source>
-        <translation>Podgląd</translation>
+        <translation>Pregled</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="87"/>
         <location filename="../../../system/web/javascript.inc.php" line="103"/>
         <source>Today</source>
-        <translation>Dzisiaj</translation>
+        <translation>Danas</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="105"/>
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zatvori</translation>
     </message>
     <message>
         <location filename="../../../system/web/javascript.inc.php" line="144"/>
         <source>Search Options</source>
-        <translation>Opcje wyszukiwania</translation>
+        <translation>Opcije pretrage</translation>
     </message>
 </context>
 <context>
@@ -8101,57 +8101,57 @@
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="42"/>
         <source>Sunday</source>
-        <translation>Niedziela</translation>
+        <translation>Nedelja</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="43"/>
         <source>Monday</source>
-        <translation>Poniedziałek</translation>
+        <translation>Ponedeljak</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="44"/>
         <source>Tuesday</source>
-        <translation>Wtorek</translation>
+        <translation>Utorak</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="45"/>
         <source>Wednesday</source>
-        <translation>Środa</translation>
+        <translation>Sreda</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="46"/>
         <source>Thursday</source>
-        <translation>Czwartek</translation>
+        <translation>Četvrtak</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="47"/>
         <source>Friday</source>
-        <translation>Piątek</translation>
+        <translation>Petak</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="48"/>
         <source>Saturday</source>
-        <translation>Sobota</translation>
+        <translation>Subota</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="68"/>
         <source>January</source>
-        <translation>Styczeń</translation>
+        <translation>Januar</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="69"/>
         <source>February</source>
-        <translation>Luty</translation>
+        <translation>Februar</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="70"/>
         <source>March</source>
-        <translation>Marzec</translation>
+        <translation>Mart</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="71"/>
         <source>April</source>
-        <translation>Kwiecień</translation>
+        <translation>April</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="72"/>
@@ -8161,47 +8161,47 @@
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="73"/>
         <source>June</source>
-        <translation>Czerwiec</translation>
+        <translation>Jun</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="74"/>
         <source>July</source>
-        <translation>Lipiec</translation>
+        <translation>Jul</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="75"/>
         <source>August</source>
-        <translation>Sierpień</translation>
+        <translation>Avgust</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="76"/>
         <source>September</source>
-        <translation>Wrzesień</translation>
+        <translation>Septembar</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="77"/>
         <source>October</source>
-        <translation>Październik</translation>
+        <translation>Oktobar</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="78"/>
         <source>November</source>
-        <translation>Listopad</translation>
+        <translation>Novembar</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="79"/>
         <source>December</source>
-        <translation>Grudzień</translation>
+        <translation>Decembar</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="103"/>
         <source>%1 bytes</source>
-        <translation>%1 bajtów</translation>
+        <translation>%1 bajtova</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="107"/>
         <source>%1 kB</source>
-        <translation>%1 KB</translation>
+        <translation>%1 kB</translation>
     </message>
     <message>
         <location filename="../../../system/web/localehelper.inc.php" line="110"/>
