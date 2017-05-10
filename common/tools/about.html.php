@@ -12,7 +12,7 @@
     . " (at your option) any later version." ) ?></p>
 
 <p><?php echo $this->tr( 'Copyright &copy; 2006 Michał Męciński' ) ?><br>
-<?php echo $this->tr( 'Copyright &copy; 2007-2015 WebIssues Team' ) ?></p>
+<?php echo $this->tr( 'Copyright &copy; 2007-2017 WebIssues Team' ) ?></p>
 
 <fieldset class="form-fieldset">
 <legend><?php echo $this->imageAndText( '/common/images/help-16.png', $this->tr( 'Help' ) ) ?></legend>

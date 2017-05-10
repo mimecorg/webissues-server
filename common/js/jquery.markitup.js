@@ -1,7 +1,7 @@
 /**************************************************************************
 * This file is part of the WebIssues Server program
 * Copyright (C) 2006 Michał Męciński
-* Copyright (C) 2007-2015 WebIssues Team
+* Copyright (C) 2007-2017 WebIssues Team
 *
 * This file is based on the markItUp! Universal MarkUp Engine, JQuery plugin
 * Copyright (C) 2007-2012 Jay Salvat

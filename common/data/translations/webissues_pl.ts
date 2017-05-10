@@ -5884,8 +5884,8 @@
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="15"/>
-        <source>Copyright &amp;copy; 2007-2015 WebIssues Team</source>
-        <translation>Copyright &amp;copy; 2007-2015 Zespół WebIssues</translation>
+        <source>Copyright &amp;copy; 2007-2017 WebIssues Team</source>
+        <translation>Copyright &amp;copy; 2007-2017 Zespół WebIssues</translation>
     </message>
     <message>
         <location filename="../../tools/about.html.php" line="18"/>
