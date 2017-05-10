@@ -1,3 +1,13 @@
+1.1.5-rc1 (2017-05-10)
+    * added Hungarian, Norwegian and Serbian translations
+    * filtering by project in the global view
+    * displaying project names in history of move operations
+    * fixed input field font size in the mobile version
+    * fixed adding inline images from emails as issue attachments
+    * fixed problem with URLs in markup links converted to lowercase
+    * fixed displaying the location column in the global view
+    * fixed settings sort order in views
+
 1.1.4 (2015-08-10)
     * added a simple mobile version
     * updated the theme for a more modern look
