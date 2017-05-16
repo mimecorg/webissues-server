@@ -282,6 +282,21 @@ class System_Api_UserManager extends System_Api_Base
         return $this->connection->queryTable( $query, $principal->getUserId() );
     }
 
+    public function getVisibleUsers()
+    {
+        $principal = System_Api_Principal::getCurrent();
+
+        $query = 'SELECT u.user_id, u.user_login, u.user_name, u.user_access'
+            . ' FROM {users} AS u'
+            . ' WHERE u.user_id IN ('
+            . ' SELECT r1.user_id FROM {rights} AS r1'
+            . ' INNER JOIN {effective_rights} AS r2 ON r2.project_id = r1.project_id'
+            . ' WHERE r2.user_id = %d )'
+            . ' ORDER BY u.user_name COLLATE LOCALE';
+
+        return $this->connection->queryTable( $query, $principal->getUserId() );
+    }
+
     /**
     * Check if the value is a valid user name. This is a helper method for
     * System_Api_Validator.

@@ -272,8 +272,12 @@ class Common_Issues_Issue extends System_Web_Component
 
                 case 'USER':
                     if ( $allUsers === null ) {
+                        $principal = System_Api_Principal::getCurrent();
                         $userManager = new System_Api_UserManager();
-                        $users = $userManager->getUsers();
+                        if ( $principal->isAdministrator() )
+                            $users = $userManager->getUsers();
+                        else
+                            $users = $userManager->getVisibleUsers();
                         $allUsers = array();
                         foreach ( $users as $user )
                             $allUsers[ $user[ 'user_id' ] ] = $user[ 'user_name' ];

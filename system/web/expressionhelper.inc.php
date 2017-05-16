@@ -90,11 +90,18 @@ class System_Web_ExpressionHelper extends System_Web_Base
     */
     public function getUserItems()
     {
-        $items = array( 0 => '[' .$this->tr( 'Me' ) . ']' );
+        $principal = System_Api_Principal::getCurrent();
+
         $userManager = new System_Api_UserManager();
-        $users = $userManager->getUsers();
+        if ( $principal->isAdministrator() )
+            $users = $userManager->getUsers();
+        else
+            $users = $userManager->getVisibleUsers();
+
+        $items = array( 0 => '[' .$this->tr( 'Me' ) . ']' );
         foreach ( $users as $user )
             $items[ $user[ 'user_id' ] ] = $user[ 'user_name' ];
+
         return $items;
     }
 }
