@@ -1,7 +1,8 @@
-1.1.5-rc1 (2017-05-10)
+1.1.5 (2017-05-17)
     * added Hungarian, Norwegian and Serbian translations
     * filtering by project in the global view
     * displaying project names in history of move operations
+    * filtering the list of users for non-administrators
     * fixed input field font size in the mobile version
     * fixed adding inline images from emails as issue attachments
     * fixed problem with URLs in markup links converted to lowercase
