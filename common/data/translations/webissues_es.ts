@@ -5162,7 +5162,7 @@
         <translation>Texto con Marca</translation>
     </message>
     <message>
-        <location filename="../../issues/issue.inc.php" line="331"/>
+        <location filename="../../issues/issue.inc.php" line="335"/>
         <source>No folder selected.</source>
         <translation>No hay folder seleccionado.</translation>
     </message>
@@ -7504,52 +7504,52 @@
 <context>
     <name>System_Api_UserManager</name>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="369"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="384"/>
         <source>Added user &quot;%1&quot;</source>
         <translation>Usuario%1 agregado</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="399"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="414"/>
         <source>Changed password for user &quot;%1&quot;</source>
         <translation>La contraseña para el usuario %1 ha sido modificada</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="444"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="459"/>
         <source>User &quot;%1&quot; changed own password</source>
         <translation>El usario %1 ha cambiado su propio password</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="482"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="497"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>El usuario &quot;%1&quot; se ha renombrado por &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="514"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="529"/>
         <source>Disabled access for user &quot;%1&quot;</source>
         <translation>Acceso denegado para el usuario &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="518"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="533"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
         <translation>Se ha otorgado acceso normal para el usuario &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="522"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="537"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
         <translation>Se ha otorgado acceso de administrador para el usuario &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="577"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="592"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation>El usuario &quot;%1&quot; se ha quitado del proyecto &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="581"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="596"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Se ha otorgado acceso normal para el usuario &quot;%1&quot; en el proyecto &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="585"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="600"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Se ha otorgado acceso de administrador para el usuario &quot;%1&quot; en el proyecto &quot;%2&quot;</translation>
     </message>
@@ -7940,7 +7940,7 @@
     <message>
         <location filename="../../../system/web/expressionhelper.inc.php" line="45"/>
         <location filename="../../../system/web/expressionhelper.inc.php" line="79"/>
-        <location filename="../../../system/web/expressionhelper.inc.php" line="93"/>
+        <location filename="../../../system/web/expressionhelper.inc.php" line="101"/>
         <source>Me</source>
         <translation>Yo</translation>
     </message>

@@ -5162,7 +5162,7 @@
         <translation>HTML tekst</translation>
     </message>
     <message>
-        <location filename="../../issues/issue.inc.php" line="331"/>
+        <location filename="../../issues/issue.inc.php" line="335"/>
         <source>No folder selected.</source>
         <translation>Nijedna fascikla nije odabrana.</translation>
     </message>
@@ -7504,52 +7504,52 @@
 <context>
     <name>System_Api_UserManager</name>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="369"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="384"/>
         <source>Added user &quot;%1&quot;</source>
         <translation>Dodat korisnik &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="399"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="414"/>
         <source>Changed password for user &quot;%1&quot;</source>
         <translation>Promenjena lozinka korisnika &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="444"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="459"/>
         <source>User &quot;%1&quot; changed own password</source>
         <translation>Korisnik &quot;%1&quot; promenio svoju lozinku</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="482"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="497"/>
         <source>Renamed user &quot;%1&quot; to &quot;%2&quot;</source>
         <translation>Preimenovan korisnik &quot;%1&quot; u &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="514"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="529"/>
         <source>Disabled access for user &quot;%1&quot;</source>
         <translation>Onemogućen pristup korinsiku &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="518"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="533"/>
         <source>Granted regular access for user &quot;%1&quot;</source>
         <translation>Dopušten redovan pristup korisniku &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="522"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="537"/>
         <source>Granted system administrator access for user &quot;%1&quot;</source>
         <translation>Dozvoljen administratorski pristup korisniku &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="577"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="592"/>
         <source>Removed user &quot;%1&quot; from project &quot;%2&quot;</source>
         <translation>Uklonjen korisnik &quot;%1&quot; iz projekta &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="581"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="596"/>
         <source>Granted regular access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Dozvoljen redovan pristup korisniku &quot;%1&quot; za projekat &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../system/api/usermanager.inc.php" line="585"/>
+        <location filename="../../../system/api/usermanager.inc.php" line="600"/>
         <source>Granted project administrator access for user &quot;%1&quot; to project &quot;%2&quot;</source>
         <translation>Dozvoljen administratorski pristup korisniku &quot;%1&quot; za projekat &quot;%2&quot;</translation>
     </message>
@@ -7940,7 +7940,7 @@
     <message>
         <location filename="../../../system/web/expressionhelper.inc.php" line="45"/>
         <location filename="../../../system/web/expressionhelper.inc.php" line="79"/>
-        <location filename="../../../system/web/expressionhelper.inc.php" line="93"/>
+        <location filename="../../../system/web/expressionhelper.inc.php" line="101"/>
         <source>Me</source>
         <translation>Ja</translation>
     </message>
