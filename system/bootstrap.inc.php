@@ -2,7 +2,7 @@
 /**************************************************************************
 * This file is part of the WebIssues Server program
 * Copyright (C) 2006 Michał Męciński
-* Copyright (C) 2007-2012 WebIssues Team
+* Copyright (C) 2007-2013 WebIssues Team
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU Affero General Public License as published by
@@ -21,6 +21,9 @@
 if ( !function_exists( 'version_compare' ) || version_compare( PHP_VERSION, '5.2.1' ) < 0 )
     exit( "WebIssues Server requires PHP 5.2.1 or newer." );
 
+if ( !function_exists( 'mb_strlen' ) )
+    exit( "WebIssues Server requires the mbstring extension." );
+
 /*@{*/
 /**
 * @name Global Constants
@@ -30,7 +33,7 @@ if ( !function_exists( 'version_compare' ) || version_compare( PHP_VERSION, '5.2
 /**
 * Current version of WebIssues Server.
 */
-define( 'WI_VERSION', '1.0.4' );
+define( 'WI_VERSION', '1.0.5' );
 
 /**
 * Current version of the WebIssues protocol.

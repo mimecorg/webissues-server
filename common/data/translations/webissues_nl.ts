@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl_NL">
+<TS version="2.0" language="nl">
 <context>
     <name>Admin_Events_Event</name>
     <message>
@@ -2386,7 +2386,7 @@
     <message>
         <location filename="../../../admin/views/index.html.php" line="41"/>
         <source>Initial View</source>
-        <translation type="unfinished"></translation>
+        <translation>Initiele view</translation>
     </message>
     <message>
         <location filename="../../../admin/views/index.html.php" line="59"/>
@@ -2424,7 +2424,7 @@
     <message>
         <location filename="../../../admin/views/initial.php" line="33"/>
         <source>Initial View</source>
-        <translation type="unfinished"></translation>
+        <translation>Initiele view</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.php" line="46"/>
@@ -2434,12 +2434,12 @@
     <message>
         <location filename="../../../admin/views/initial.html.php" line="3"/>
         <source>Select the initial view for type &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecteer de initiele view voor type &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="7"/>
         <source>Initial view:</source>
-        <translation type="unfinished"></translation>
+        <translation>Initiele view:</translation>
     </message>
     <message>
         <location filename="../../../admin/views/initial.html.php" line="10"/>
@@ -2881,23 +2881,23 @@
     <message>
         <location filename="../../../client/issuedetails.html.php" line="27"/>
         <source>Location:</source>
-        <translation type="unfinished"></translation>
+        <translation>Locatie:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="31"/>
         <source>Created:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aangemaakt:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="35"/>
         <source>Last Modified:</source>
-        <translation type="unfinished"></translation>
+        <translation>Laatste aanpassing:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="78"/>
         <location filename="../../../client/issuedetails.html.php" line="95"/>
         <source>Last Edited:</source>
-        <translation type="unfinished"></translation>
+        <translation>Laatste wijziging:</translation>
     </message>
     <message>
         <location filename="../../../client/issuedetails.html.php" line="97"/>
@@ -2907,7 +2907,7 @@
     <message>
         <location filename="../../../client/issuedetails.html.php" line="173"/>
         <source>Issue moved from %1 to %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Issue van %1 naar %2 verplaatst</translation>
     </message>
 </context>
 <context>
@@ -3896,8 +3896,8 @@
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="15"/>
-        <source>Copyright &amp;copy; 2007-2012 WebIssues Team</source>
-        <translation>Copyright &amp;copy; 2007-2012 WebIssues Team</translation>
+        <source>Copyright &amp;copy; 2007-2013 WebIssues Team</source>
+        <translation>Copyright &amp;copy; 2007-2013 WebIssues Team</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="18"/>
@@ -4400,22 +4400,22 @@
     <message>
         <location filename="../../mail/notification.html.php" line="65"/>
         <source>Location:</source>
-        <translation type="unfinished"></translation>
+        <translation>Locatie:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="69"/>
         <source>Created:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aangemaakt:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="73"/>
         <source>Last Modified:</source>
-        <translation type="unfinished"></translation>
+        <translation>Laatste aanpassing:</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="175"/>
         <source>Issue moved from %1 to %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Issue van %1 naar %2 verplaatst</translation>
     </message>
     <message>
         <location filename="../../mail/notification.html.php" line="82"/>
@@ -4903,12 +4903,12 @@
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="43"/>
         <source>Oldest First</source>
-        <translation type="unfinished"></translation>
+        <translation>Oudste eerst</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="44"/>
         <source>Newest First</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieuwste eerst</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="48"/>
@@ -4924,12 +4924,14 @@
         <location filename="../../tools/viewsettings.inc.php" line="54"/>
         <source>Default (%1)</source>
         <comment>order</comment>
+        <translatorcomment>volgorde</translatorcomment>
         <translation>Standaard (%1)</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.inc.php" line="60"/>
         <source>Default (%1)</source>
         <comment>filter</comment>
+        <translatorcomment>filter</translatorcomment>
         <translation>Standaard (%1)</translation>
     </message>
     <message>
@@ -4950,22 +4952,22 @@
     <message>
         <location filename="../../tools/viewsettings.html.php" line="10"/>
         <source>Hide attributes with empty values</source>
-        <translation type="unfinished"></translation>
+        <translation>Verberg attributen met lege waarden</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="12"/>
         <source>Global view settings that affect all issue types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Globale view instellingen die betrekking hebben op alle issue soorten.</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="15"/>
         <source>Order of issue history:</source>
-        <translation type="unfinished"></translation>
+        <translation>Volgorde van de issue historie:</translation>
     </message>
     <message>
         <location filename="../../tools/viewsettings.html.php" line="16"/>
         <source>Default filter in issue history:</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard filter van de issue historie:</translation>
     </message>
 </context>
 <context>

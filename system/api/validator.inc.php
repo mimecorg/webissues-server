@@ -2,7 +2,7 @@
 /**************************************************************************
 * This file is part of the WebIssues Server program
 * Copyright (C) 2006 Michał Męciński
-* Copyright (C) 2007-2012 WebIssues Team
+* Copyright (C) 2007-2013 WebIssues Team
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU Affero General Public License as published by
@@ -197,12 +197,7 @@ class System_Api_Validator
     */
     public function checkEmailAddress( $value )
     {
-        $userPattern = '[a-zA-Z0-9_\-\.\+\^!#\$%&*+\/\=\?\`\|\{\}~\']+';
-        $domainPattern = '(?:(?:[a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.?)+';
-        $ipv4Pattern = '[0-9]{1,3}(\.[0-9]{1,3}){3}';
-        $ipv6Pattern = '[0-9a-fA-F]{1,4}(\:[0-9a-fA-F]{1,4}){7}';
-
-        if ( !preg_match( "/^$userPattern@($domainPattern|(\[($ipv4Pattern|$ipv6Pattern)\]))$/", $value ) )
+        if ( !preg_match( '/^[\w.%+-]+@[\w.-]+\.[a-z]{2,4}$/ui', $value ) )
             throw new System_Api_Error( System_Api_Error::InvalidEmail );
     }
 
@@ -728,7 +723,7 @@ class System_Api_Validator
 
     private function checkBaseUrl( $value )
     {
-        if ( !preg_match( '|^https?://.+/$|', $value ) )
+        if ( !preg_match( '/^https?:\/\/[\w+&@#\/\\\\%=~|$?!:,.()-]+\/$/ui', $value ) )
             throw new System_Api_Error( System_Api_Error::InvalidSetting );
     }
 

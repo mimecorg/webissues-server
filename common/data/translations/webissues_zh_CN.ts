@@ -3875,8 +3875,8 @@
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="15"/>
-        <source>Copyright &amp;copy; 2007-2012 WebIssues Team</source>
-        <translation>WebIssues团队版权所有 &amp;copy; 2007-2012</translation>
+        <source>Copyright &amp;copy; 2007-2013 WebIssues Team</source>
+        <translation>WebIssues团队版权所有 &amp;copy; 2007-2013</translation>
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="18"/>

@@ -2,7 +2,7 @@
 /**************************************************************************
 * This file is part of the WebIssues Server program
 * Copyright (C) 2006 Michał Męciński
-* Copyright (C) 2007-2012 WebIssues Team
+* Copyright (C) 2007-2013 WebIssues Team
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU Affero General Public License as published by
@@ -24,9 +24,8 @@ if ( !defined( 'WI_VERSION' ) ) die( -1 );
 * Helper methods for converting URLs into clickable links.
 *
 * The following items are recognized as links:
-*  - email addresses
-*  - URLs starting with mailto:, http://, https:// and ftp://
-*  - URLs without protocol starting with www. and ftp.
+*  - email addresses (optionally starting with mailto:)
+*  - URLs starting with http://, https://, ftp://, file://, www., ftp. and \\ (UNC paths)
 *  - links to issues, comments or attachments starting with #
 *
 * Also the special HTML characters are converted to entities.
@@ -41,50 +40,57 @@ class System_Web_LinkLocator
     */
     public static function convertToHtml( $text, $maxLength = null )
     {
-        $mail = "\\b\\w[^\\s@]*@[^\\s@]*\\w";
-        $url = "\\b(?:mailto:|https?://|ftp://|www\\.|ftp\\.)\\S*[\\w/]";
-        $pattern = "%($mail|$url|#\\d+\\b)%";
+        // regex for emails and URLs is based on:
+        //  - http://www.regular-expressions.info/email.html 
+        //  - http://www.regexguru.com/2008/11/detecting-urls-in-a-block-of-text/
+
+        $mail = '\b(?:mailto:)?[\w.%+-]+@[\w.-]+\.[a-z]{2,4}\b';
+        $url = '(?:\b(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)|\\\\\\\\)(?:\([\w+&@#\/\\\\%=~|$?!:,.-]*\)|[\w+&@#\/\\\\%=~|$?!:,.-])*(?:\([\w+&@#\/\\\\%=~|$?!:,.-]*\)|[\w+&@#\/\\\\%=~|$])';
+        $id = '#\d+\b';
+        $pattern = "/($mail|$url|$id)/ui";
 
         $matches = preg_split( $pattern, $text, -1, PREG_SPLIT_DELIM_CAPTURE );
 
         $result = array();
-        for ( $i = 0; $i < count( $matches ); $i++ ) {
-            $match = htmlspecialchars( $matches[ $i ] );
+        foreach ( $matches as $i => $match ) {
             if ( $i % 2 == 0 ) {
                 if ( $maxLength !== null ) {
                     $length = mb_strlen( $match );
                     if ( $length > $maxLength - 3 ) {
                         if ( $maxLength > 3 )
-                            $result[] = mb_substr( $match, 0, $maxLength - 3 );
+                            $result[] = htmlspecialchars( mb_substr( $match, 0, $maxLength - 3 ) );
                         $result[] = '...';
                         break;
                     }
                     $maxLength -= $length;
                 }
-                $result[] = $match;
+                $result[] = htmlspecialchars( $match );
             } else {
                 if ( $match[ 0 ] == '#' )
                     $url = WI_BASE_URL . '/client/index.php?item=' . substr( $match, 1 );
-                else if ( substr( $match, 0, 4 ) == 'www.' )
+                else if ( strtolower( substr( $match, 0, 4 ) ) == 'www.' )
                     $url = 'http://' . $match;
-                else if ( substr( $match, 0, 4 ) == 'ftp.' )
+                else if ( strtolower( substr( $match, 0, 4 ) ) == 'ftp.' )
                     $url = 'ftp://' . $match;
-                else if ( substr_count( $match, '@' ) == 1 && preg_match( "/^[^\\s@]*@[^\\s@]*$/", $match ) )
+                else if ( substr( $match, 0, 2 ) == '\\\\' )
+                    $url = 'file:///' . $match;
+                else if ( strpos( $match, ':' ) === false )
                     $url = 'mailto:' . $match;
                 else
                     $url = $match;
+                $url = htmlspecialchars( $url );
                 if ( $maxLength !== null ) {
                     $length = mb_strlen( $match );
                     if ( $length > $maxLength - 3 ) {
                         if ( $maxLength > 3 )
-                            $result[] = "<a href=\"$url\">" . mb_substr( $match, 0, $maxLength - 3 ) . '...</a>';
+                            $result[] = "<a href=\"$url\">" . htmlspecialchars( mb_substr( $match, 0, $maxLength - 3 ) ) . '...</a>';
                         else
                             $result[] = '...';
                         break;
                     }
                     $maxLength -= $length;
                 }
-                $result[] = "<a href=\"$url\">$match</a>";
+                $result[] = "<a href=\"$url\">" . htmlspecialchars( $match ) . '</a>';
             }
         }
 

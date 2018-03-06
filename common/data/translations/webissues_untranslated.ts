@@ -3875,7 +3875,7 @@
     </message>
     <message>
         <location filename="../../../client/tools/about.html.php" line="15"/>
-        <source>Copyright &amp;copy; 2007-2012 WebIssues Team</source>
+        <source>Copyright &amp;copy; 2007-2013 WebIssues Team</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
